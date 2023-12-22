@@ -1,5 +1,6 @@
-from data_loader import DataLoader
+import json
+
+from recommenders.similarity import SimilarityRecommender
 
 if __name__ == "__main__":
-    df = DataLoader.load()
-    print(df.head(5))
+    print(json.dumps(SimilarityRecommender.predict(), indent=4, ensure_ascii=False))
