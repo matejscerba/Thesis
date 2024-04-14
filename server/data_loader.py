@@ -1,4 +1,4 @@
-from typing import Dict, Set, Optional
+from typing import Dict, Set
 
 import pandas as pd
 

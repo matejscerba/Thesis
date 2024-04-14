@@ -1,13 +1,11 @@
-from typing import Dict, Any, ClassVar, Set
+from typing import Dict, Any, ClassVar
 
-import numpy as np
-
-from data_loader import DataLoader
-from recommenders.abstract import AbstractRecommender
-from users import Users
+from server.data_loader import DataLoader
+from server.recommenders.abstract import AbstractRecommender
+from server.users import Users
 
 
-class StatementsDoubleRecommender(AbstractRecommender):
+class StatementsSimpleRecommender(AbstractRecommender):
     smoothing: ClassVar[float] = 0.1
 
     @classmethod
@@ -18,7 +16,7 @@ class StatementsDoubleRecommender(AbstractRecommender):
 
         result = {}
 
-        ids_for_value = DataLoader.get_ids_for_value_compact(data=df)
+        ids_for_value = DataLoader.get_ids_for_value(data=df)
 
         data = df.to_numpy()
 
@@ -29,37 +27,23 @@ class StatementsDoubleRecommender(AbstractRecommender):
             candidates_set = set(user_data["items"]["candidates"])
             discarded_set = set()  # TODO: Add discarded ids
 
-            weights: Dict[str, Dict[str, float]] = {}
-            for i in range(len(ids_for_value.keys())):
-                key_i = list(ids_for_value.keys())[i]
-                if ":".join(key_i.split(":")[:-1]) not in important_set:
+            weights: Dict[str, Dict[float, float]] = {}
+            for attribute_name, attribute_ids in ids_for_value.items():
+                if attribute_name not in important_set:
+                    continue
+                weights[attribute_name] = {}
+                for value, value_ids in attribute_ids.items():
+                    value_candidates = value_ids.intersection(candidates_set)
+                    value_discarded = value_ids.intersection(discarded_set)
+                    weights[attribute_name][value] = (len(value_candidates) - len(value_discarded)) / (
+                        len(value_candidates) + len(value_discarded) + 1
+                    )
+
+            prob_values: Dict[int, Dict[str, Dict[float, float]]] = {}
+            for item_id in df["id"]:
+                if item_id in candidates_set.union(discarded_set):
                     continue
 
-                weights[key_i] = {}
-                for j in range(i + 1, len(ids_for_value.keys())):
-                    key_j = list(ids_for_value.keys())[j]
-                    if ":".join(key_j.split(":")[:-1]) not in important_set:
-                        continue
-
-                    key_i_ids = ids_for_value[key_i]
-                    key_j_ids = ids_for_value[key_j]
-                    both_ids = key_i_ids.intersection(key_j_ids)
-
-                    key_i_candidates = key_i_ids.intersection(candidates_set)
-                    both_candidates = both_ids.intersection(candidates_set)
-
-                    key_i_discarded = key_i_ids.intersection(discarded_set)
-                    both_discarded = both_ids.intersection(discarded_set)
-
-                    w_i = (len(key_i_candidates) - len(key_i_discarded)) / (
-                        len(key_i_candidates) + len(key_i_discarded) + 1
-                    )
-                    weights[key_i][key_j] = (len(both_candidates) - len(both_discarded)) / (
-                        len(both_candidates) + len(both_discarded) + 1
-                    ) - w_i
-
-            prob_values: Dict[int, Dict[str, Dict[str, float]]] = {}
-            for item_id in df["id"]:
                 prob_values[item_id] = {}
                 for attribute_name, attribute_ids in ids_for_value.items():
                     if attribute_name not in important_set:
@@ -90,6 +74,9 @@ class StatementsDoubleRecommender(AbstractRecommender):
 
             scores: Dict[int, float] = {}
             for item_id in df["id"]:
+                if item_id in candidates_set.union(discarded_set):
+                    continue
+
                 scores[item_id] = 0
                 for attribute_name, attribute_weights in weights_plus.items():
                     for value in attribute_weights.keys():

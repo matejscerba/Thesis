@@ -2,9 +2,9 @@ from typing import Dict, Any
 
 import numpy as np
 
-from data_loader import DataLoader
-from recommenders.abstract import AbstractRecommender
-from users import Users
+from server.data_loader import DataLoader
+from server.recommenders.abstract import AbstractRecommender
+from server.users import Users
 
 
 class SimilarityRecommender(AbstractRecommender):
