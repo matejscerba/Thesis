@@ -1,13 +1,16 @@
 [tool.poetry]
-name = "server"
+name = "app"
 version = "0.1.0"
 description = ""
 authors = ["Matěj Ščerba <m.scerba@seznam.cz>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "~3.11"
+python = "~3.12"
 pandas = "^2.2.2"
+flask = "^3.0.3"
+structlog = "^24.1.0"
 
 
 [build-system]

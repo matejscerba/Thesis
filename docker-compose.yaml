@@ -1,0 +1,10 @@
+name: thesis
+services:
+  server:
+    container_name: server
+    build:
+      context: ./server
+    env_file:
+      - ./server/.env
+    ports:
+      - 8086:8086
