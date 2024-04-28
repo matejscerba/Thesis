@@ -1,5 +1,7 @@
 from typing import Tuple, Any
 
+import flask
+
 from app.recommenders.statements_simple import StatementsSimpleRecommender
 
 
@@ -8,4 +10,4 @@ def view_healthcheck() -> Tuple[Any, ...]:
 
 
 def view_index() -> Tuple[Any, ...]:
-    return StatementsSimpleRecommender.predict(), 200
+    return flask.jsonify(StatementsSimpleRecommender.predict()), 200
