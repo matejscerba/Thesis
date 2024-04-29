@@ -14,6 +14,7 @@ structlog = {version = "*", source = "pypi"}
 flask-cors = {version = "*", source = "pypi"}
 pandas-stubs = {version = "*", source = "pypi"}
 types-flask-cors = {version = "*", source = "pypi"}
+pydantic = {version = "*", source = "pypi"}
 
 [tool.poetry.dev-dependencies]
 flake8 = {version = "*", source = "pypi"}

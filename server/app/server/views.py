@@ -1,18 +1,13 @@
-from typing import Tuple, Any
+from flask import request, Response, jsonify
 
-import flask
-
-from app.recommenders.statements_simple import StatementsSimpleRecommender
+from app.products.simple import SimpleProductHandler
 
 
-def view_healthcheck() -> Tuple[Any, ...]:
-    return "", 200
-
-
-def view_index() -> Tuple[Any, ...]:
-    return flask.jsonify(StatementsSimpleRecommender.predict()), 200
-
-
-def view_product_list() -> Tuple[Any, ...]:
-    category_name = flask.request.args.get("category")
-    return category_name, 200
+def view_category() -> Response:
+    name = request.args.get("name")
+    candidate_ids = request.json.get("candidates")
+    discarded_ids = request.json.get("discarded")
+    data = SimpleProductHandler.organize_category(
+        name=name, candidate_ids=candidate_ids, discarded_ids=discarded_ids
+    ).model_dump()
+    return jsonify(data)

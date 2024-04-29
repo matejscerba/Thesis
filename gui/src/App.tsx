@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import ProductList from "./pages/ProductList";
+import Category from "./pages/Category";
 
 function App() {
-  return <ProductList />;
+  return <Category name="laptops" />;
 }
 
 export default App;

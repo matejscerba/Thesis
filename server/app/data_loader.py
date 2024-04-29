@@ -1,12 +1,20 @@
+import json
 from typing import Dict, Set
 
 import pandas as pd
+
+from app.products.category import UnorganizedCategory
 
 
 class DataLoader:
     @classmethod
     def load(cls) -> pd.DataFrame:
         return pd.read_csv("data/laptops_numerical_with_price.csv", delimiter=";")
+
+    @classmethod
+    def load_products(cls, category: str) -> UnorganizedCategory:
+        with open(f"data/{category}/products.json") as file:
+            return UnorganizedCategory.from_raw_list(json.load(file))
 
     @classmethod
     def get_ids_for_value(cls, data: pd.DataFrame) -> Dict[str, Dict[float, Set[int]]]:

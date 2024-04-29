@@ -32,4 +32,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     root: true,
+    rules: {
+        "@typescript-eslint/no-explicit-any": "off",
+    }
 };
