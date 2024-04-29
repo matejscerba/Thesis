@@ -1,0 +1,30 @@
+repos:
+- repo: local
+  hooks:
+  - id: black
+    name: black
+    description: "Black: The uncompromising Python code formatter"
+    entry: black
+    language: python
+    minimum_pre_commit_version: '2.9.2'
+    require_serial: true
+    types_or: [python, pyi]
+    args: [ "server/app" ]
+  - id: flake8
+    name: flake8
+    description: '`flake8` is a command-line utility for enforcing style consistency across Python projects.'
+    entry: flake8
+    language: python
+    types: [ python ]
+    require_serial: true
+    args: [ "server/app" ]
+  - id: mypy
+    name: mypy
+    description: ''
+    entry: mypy
+    language: python
+    'types_or': [ python, pyi ]
+    args: [ "--ignore-missing-imports", "--scripts-are-modules", "server/app" ]
+    require_serial: true
+    additional_dependencies: [ ]
+    minimum_pre_commit_version: '2.9.2'

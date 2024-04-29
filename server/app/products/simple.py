@@ -1,4 +1,4 @@
-from typing import List, Optional, Union, ClassVar
+from typing import List, Optional, ClassVar
 
 from app.data_loader import DataLoader
 from app.products.category import Category, OrganizedCategory
