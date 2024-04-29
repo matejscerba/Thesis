@@ -12,21 +12,22 @@ class SimpleProductHandler:
         cls, name: str, candidate_ids: Optional[List[str]] = None, discarded_ids: Optional[List[str]] = None
     ) -> Category:
         category = DataLoader.load_products(category=name)
-        if candidate_ids is not None and discarded_ids is not None:
-            candidates = [category.pop(candidate_id) for candidate_id in candidate_ids]
-            discarded = [category.pop(discarded_id) for discarded_id in discarded_ids]
-            rest = category.products
-            if len(rest) < cls._alternatives_size:
-                alternatives = rest
-                unseen = []
-            else:
-                alternatives = rest[: cls._alternatives_size]
-                unseen = rest[cls._alternatives_size :]
+        if candidate_ids is None or discarded_ids is None:
+            return category
 
-            category = OrganizedCategory(
-                candidates=candidates,
-                alternatives=alternatives,
-                unseen=unseen,
-                discarded=discarded,
-            )
-        return category
+        candidates = [category.pop(candidate_id) for candidate_id in candidate_ids]
+        discarded = [category.pop(discarded_id) for discarded_id in discarded_ids]
+        rest = category.products
+        if len(rest) < cls._alternatives_size:
+            alternatives = rest
+            unseen = []
+        else:
+            alternatives = rest[: cls._alternatives_size]
+            unseen = rest[cls._alternatives_size :]
+
+        return OrganizedCategory(
+            candidates=candidates,
+            alternatives=alternatives,
+            unseen=unseen,
+            discarded=discarded,
+        )
