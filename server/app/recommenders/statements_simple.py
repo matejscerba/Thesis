@@ -1,4 +1,4 @@
-from typing import Dict, Any, ClassVar
+from typing import Dict, Any, ClassVar, Set
 
 from app.data_loader import DataLoader
 from app.recommenders.abstract import AbstractRecommender
@@ -25,7 +25,7 @@ class StatementsSimpleRecommender(AbstractRecommender):
         for user, user_data in sample_users.items():
             important_set = set(user_data["attributes"]["important"])
             candidates_set = set(user_data["items"]["candidates"])
-            discarded_set = set()  # TODO: Add discarded ids
+            discarded_set: Set[str] = set()  # TODO: Add discarded ids
 
             weights: Dict[str, Dict[float, float]] = {}
             for attribute_name, attribute_ids in ids_for_value.items():

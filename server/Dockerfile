@@ -10,6 +10,6 @@ COPY ./data ./data
 
 RUN pip install --upgrade pip poetry
 RUN poetry config virtualenvs.create false
-RUN poetry install
+RUN poetry install --without dev
 
 ENTRYPOINT ["python", "-m", "app.scripts.run_server"]

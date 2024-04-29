@@ -1,4 +1,4 @@
-from typing import Dict, Any, ClassVar
+from typing import Dict, Any, ClassVar, Set
 
 from app.data_loader import DataLoader
 from app.recommenders.abstract import AbstractRecommender
@@ -25,7 +25,7 @@ class StatementsDoubleRecommender(AbstractRecommender):
         for user, user_data in sample_users.items():
             important_set = set(user_data["attributes"]["important"])
             candidates_set = set(user_data["items"]["candidates"])
-            discarded_set = set()  # TODO: Add discarded ids
+            discarded_set: Set[str] = set()  # TODO: Add discarded ids
 
             weights: Dict[str, Dict[str, float]] = {}
             for i in range(len(ids_for_value.keys())):
@@ -63,7 +63,7 @@ class StatementsDoubleRecommender(AbstractRecommender):
                     if attribute_name not in important_set:
                         continue
                     prob_values[item_id][attribute_name] = {}
-                    for value, value_ids in attribute_ids.items():
+                    for value, value_ids in attribute_ids.items():  # type: ignore
                         w_t_i = 1 if item_id in value_ids else 0
                         prob_values[item_id][attribute_name][value] = (
                             w_t_i + cls.smoothing * len(value_ids) / num_items
@@ -76,7 +76,7 @@ class StatementsDoubleRecommender(AbstractRecommender):
                     continue
                 weights_plus[attribute_name] = {}
                 weights_minus[attribute_name] = {}
-                for value, value_ids in attribute_ids.items():
+                for value, value_ids in attribute_ids.items():  # type: ignore
                     if weights[attribute_name][value] > 0:
                         weights_plus[attribute_name][value] = weights[attribute_name][value]
                     else:

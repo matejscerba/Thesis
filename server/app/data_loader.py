@@ -10,17 +10,17 @@ class DataLoader:
 
     @classmethod
     def get_ids_for_value(cls, data: pd.DataFrame) -> Dict[str, Dict[float, Set[int]]]:
-        ids_for_value = {}
+        ids_for_value: Dict[str, Dict[float, Set[int]]] = {}
 
         for column in data:
             if column not in ["id", "Unnamed: 0"]:
                 unique_values = data[column].unique()
-                ids_for_value[column] = {}
+                ids_for_value[str(column)] = {}
                 for value in unique_values:
                     if pd.isna(value):
-                        ids_for_value[column][value] = set(data[data[column].isna()]["id"])
+                        ids_for_value[str(column)][value] = set(data[data[column].isna()]["id"])
                     else:
-                        ids_for_value[column][value] = set(data[data[column] == value]["id"])
+                        ids_for_value[str(column)][value] = set(data[data[column] == value]["id"])
 
         return ids_for_value
 

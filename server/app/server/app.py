@@ -7,7 +7,7 @@ from app.server.routes import add_routes
 def create_app() -> Flask:
     app = Flask("Server")
     CORS(app)
-    app.config['CORS_HEADERS'] = 'Content-Type'
+    app.config["CORS_HEADERS"] = "Content-Type"
 
     add_routes(app=app)
 

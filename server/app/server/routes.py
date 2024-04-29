@@ -1,9 +1,6 @@
 from flask import Flask
 
-from app.server.views import (
-    view_healthcheck,
-    view_index
-)
+from app.server.views import view_healthcheck, view_index
 
 
 def add_routes(app: Flask) -> None:
