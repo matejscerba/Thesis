@@ -1,6 +1,6 @@
 const SERVER_URL = "http://localhost:8086/";
 
-export function fetchJsonFromServer(
+export function fetchJsonFromServer<T>(
   url: string,
   params: { [key: string]: string } = {},
   method = "GET",
@@ -21,9 +21,9 @@ export function fetchJsonFromServer(
     method,
     headers: headers,
     body,
-  });
+  }).then((response) => response.json() as T);
 }
 
-export function fetchPost(url: string, data: { [key: string]: any }, params: { [key: string]: string }) {
-  return fetchJsonFromServer(url, params, "POST", data);
+export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string }) {
+  return fetchJsonFromServer<T>(url, params, "POST", data);
 }

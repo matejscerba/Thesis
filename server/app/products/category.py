@@ -22,8 +22,8 @@ class UnorganizedCategory(Category):
     def products(self) -> List[Product]:
         return list(self.data.values())
 
-    def pop(self, product_id: str) -> Product:
-        return self.data.pop(product_id)
+    def pop(self, product_id: int) -> Product:
+        return self.data.pop(str(product_id))
 
     @model_serializer(mode="wrap")
     def serialize_block_step(self, standard_serializer: SerializerFunctionWrapHandler) -> Dict[str, Any]:
@@ -36,5 +36,4 @@ class OrganizedCategory(Category):
     organized: bool = True
     candidates: List[Product]
     alternatives: List[Product]
-    unseen: List[Product]
-    discarded: List[Product]
+    unseen: List[Product]  # TODO: Return statistics

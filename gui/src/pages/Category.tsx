@@ -1,26 +1,29 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { fetchPost } from "../utils/api";
+import React from "react";
+import Typography from "@mui/material/Typography";
+import { capitalizeFirstLetter } from "../utils/tools";
+import ProductList from "../components/ProductList";
+import CategorySidebar from "../components/CategorySidebar";
 
-interface ICategoryProps {
+interface CategoryProps {
   name: string;
 }
 
-function Category({ name }: ICategoryProps) {
-  const [response, setResponse] = useState<{ [key: string]: any }>(undefined);
-  const [candidates] = useState<number[]>(undefined);
-  const [discarded] = useState<number[]>(undefined);
-
-  useEffect(() => {
-    fetchPost("category", { candidates, discarded }, { name })
-      .then((fetchResponse) => fetchResponse.json())
-      .then((json) => {
-        setResponse(json as { [key: string]: any });
-      })
-      .catch((e) => console.error(e));
-  }, [candidates, discarded]);
-
-  return <pre>{JSON.stringify(response)}</pre>;
+function Category({ name }: CategoryProps) {
+  return (
+    <div>
+      <Typography variant="h2" className="mb-3" align="center">
+        {capitalizeFirstLetter(name)}
+      </Typography>
+      <div className="category-layout">
+        <div className="category-sidebar">
+          <CategorySidebar name={name} />
+        </div>
+        <div className="category-content">
+          <ProductList name={name} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Category;
