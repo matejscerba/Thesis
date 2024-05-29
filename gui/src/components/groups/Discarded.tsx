@@ -15,7 +15,7 @@ function Discarded({ category, discarded, onMarkCandidate }: DiscardedProps) {
   const [data, setData] = useState<ProductModel[]>(undefined);
 
   useEffect(() => {
-    fetchPostJson<ProductModel[]>("discarded", { discarded }, { name: category })
+    fetchPostJson<ProductModel[]>("discarded", { discarded }, { category_name: category })
       .then((products) => {
         setData(products);
       })

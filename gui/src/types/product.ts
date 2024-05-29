@@ -4,4 +4,5 @@ export interface Product {
   price: number;
   price_no_vat: number;
   availability: string;
+  attributes: { [key: string]: any };
 }

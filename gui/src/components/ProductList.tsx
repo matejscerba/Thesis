@@ -5,13 +5,13 @@ import Candidates from "./groups/Candidates";
 import Typography from "@mui/material/Typography";
 import Alternatives from "./groups/Alternatives";
 import Discarded from "./groups/Discarded";
+import { AttributesContextProvider } from "../contexts/attributes";
 
 interface ProductListResponse {
   organized: boolean;
   products?: Product[];
   candidates?: Product[];
   alternatives?: Product[];
-  unseen?: Product[];
 }
 
 interface ProductListProps {
@@ -24,7 +24,7 @@ function ProductList({ name }: ProductListProps) {
   const [discarded, setDiscarded] = useState<number[]>([6, 7, 8, 9, 10]);
 
   useEffect(() => {
-    fetchPostJson<ProductListResponse>("category", { candidates, discarded }, { name })
+    fetchPostJson<ProductListResponse>("category", { candidates, discarded }, { category_name: name })
       .then((category) => {
         setData(category);
       })
@@ -54,29 +54,30 @@ function ProductList({ name }: ProductListProps) {
 
   return (
     <div>
-      <div className="mb-3">
-        <Candidates category={name} candidates={data.candidates} onDiscard={onDiscard} />
-      </div>
-      <div className="mb-3">
-        <Typography variant="h5" className="text-secondary mx-3">
-          Unseen
-        </Typography>
-        <Typography variant="body1" className="mx-3">
-          Here will be statistics about the unseen products
-        </Typography>
-        <pre className="mx-3">{JSON.stringify(data.unseen)}</pre>
-      </div>
-      <div className="mb-3">
-        <Alternatives
-          category={name}
-          alternatives={data.alternatives}
-          onDiscard={onDiscard}
-          onMarkCandidate={onMarkCandidate}
-        />
-      </div>
-      <div className="mb-3">
-        <Discarded category={name} discarded={discarded} onMarkCandidate={onMarkCandidate} />
-      </div>
+      <AttributesContextProvider category={name}>
+        <div className="mb-3">
+          <Candidates category={name} candidates={data.candidates} onDiscard={onDiscard} />
+        </div>
+        <div className="mb-3">
+          <Typography variant="h5" className="text-secondary mx-3">
+            Unseen
+          </Typography>
+          <Typography variant="body1" className="mx-3">
+            Here will be statistics about the unseen products
+          </Typography>
+        </div>
+        <div className="mb-3">
+          <Alternatives
+            category={name}
+            alternatives={data.alternatives}
+            onDiscard={onDiscard}
+            onMarkCandidate={onMarkCandidate}
+          />
+        </div>
+        <div className="mb-3">
+          <Discarded category={name} discarded={discarded} onMarkCandidate={onMarkCandidate} />
+        </div>
+      </AttributesContextProvider>
     </div>
   );
 }

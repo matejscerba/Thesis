@@ -9,8 +9,8 @@ class SimpleProductHandler:
     _alternatives_size: ClassVar[int] = 10
 
     @classmethod
-    def organize_category(cls, name: str, candidate_ids: List[int], discarded_ids: List[int]) -> Category:
-        category = DataLoader.load_products(category=name)
+    def organize_category(cls, category_name: str, candidate_ids: List[int], discarded_ids: List[int]) -> Category:
+        category = DataLoader.load_products(category_name=category_name)
         if len(candidate_ids) == 0 and len(discarded_ids) == 0:
             return category
 
@@ -20,18 +20,18 @@ class SimpleProductHandler:
         rest = category.products
         if len(rest) < cls._alternatives_size:
             alternatives = rest
-            unseen = []
+            # unseen = []
         else:
             alternatives = rest[: cls._alternatives_size]
-            unseen = rest[cls._alternatives_size :]
+            # unseen = rest[cls._alternatives_size :]
 
         return OrganizedCategory(
             candidates=candidates,
             alternatives=alternatives,
-            unseen=unseen,
+            # unseen=unseen,
         )
 
     @classmethod
-    def get_products(cls, name: str, ids: List[int]) -> List[Product]:
-        category = DataLoader.load_products(category=name)
+    def get_products(cls, category_name: str, ids: List[int]) -> List[Product]:
+        category = DataLoader.load_products(category_name=category_name)
         return [category.pop(id) for id in ids]
