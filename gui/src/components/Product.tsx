@@ -7,10 +7,10 @@ interface ProductProps {
   className?: string;
   product: ProductModel;
   category: string;
-  getMenu: (product: ProductModel) => React.ReactNode;
+  menu: React.ReactNode;
 }
 
-function Product({ className, product, category, getMenu }: ProductProps) {
+function Product({ className, product, category, menu }: ProductProps) {
   const priceText = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "CZK",
@@ -28,7 +28,7 @@ function Product({ className, product, category, getMenu }: ProductProps) {
           <Typography variant="h6">{product.name}</Typography>
           <Typography variant="body1">{priceText}</Typography>
         </div>
-        {getMenu(product)}
+        {menu}
       </div>
     </ListItem>
   );
