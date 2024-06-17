@@ -1,4 +1,4 @@
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, cast
 
 import pandas as pd
 from pydantic import BaseModel
@@ -17,9 +17,9 @@ class Product(BaseModel):
         data = {key: (None if pd.isna(value) else value) for key, value in row.items()}
         return Product(
             id=id,
-            name=data.pop("name"),
+            name=cast(str, data.pop("name")),
             price=data.pop("price"),
             price_no_vat=data.pop("price_no_vat"),
-            availability=data.pop("availability"),
-            attributes=data,
+            availability=cast(str, data.pop("availability")),
+            attributes=cast(Dict[str, Any], data),
         )

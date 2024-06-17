@@ -12,9 +12,13 @@ def view_category() -> Response:
     request_json = request.json or {}
     candidate_ids = request_json.get("candidates", [])
     discarded_ids = request_json.get("discarded", [])
+    important_attributes = request_json.get("important_attributes", [])
 
     data = SimpleProductHandler.organize_category(
-        category_name=category_name, candidate_ids=candidate_ids, discarded_ids=discarded_ids
+        category_name=category_name,
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
+        important_attributes=important_attributes,
     ).model_dump()
 
     return jsonify(data)

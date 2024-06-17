@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, Set
+from typing import Dict, Set, List, Optional
 
 import pandas as pd
 
@@ -14,11 +14,17 @@ class DataLoader:
         return pd.read_csv("data/laptops_numerical_with_price.csv", delimiter=";")
 
     @classmethod
-    def load_products(cls, category_name: str) -> UnorganizedCategory:
+    def load_products(cls, category_name: str, usecols: Optional[List[str]] = None) -> pd.DataFrame:
         filename = "products"
         if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
             filename = "mac_large"
-        return UnorganizedCategory.from_dataframe(pd.read_csv(f"data/{category_name}/{filename}.csv", sep=";"))
+        return pd.read_csv(
+            f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
+        )
+
+    @classmethod
+    def load_category(cls, category_name: str) -> UnorganizedCategory:
+        return UnorganizedCategory.from_dataframe(cls.load_products(category_name=category_name))
 
     @classmethod
     def load_attributes(cls, category_name: str) -> CategoryAttributes:

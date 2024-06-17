@@ -9,10 +9,12 @@ interface Attribute {
 
 interface AttributesContextInterface {
   attributes: Attribute[];
+  attributeIds: number[];
 }
 
 const AttributesContext = createContext<AttributesContextInterface>({
   attributes: undefined,
+  attributeIds: undefined,
 });
 
 interface AttributesResponse {
@@ -44,6 +46,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
         attributes: attributes
           ? importantAttributes.map((attributeIndex) => attributes[`${attributeIndex}`])
           : undefined,
+        attributeIds: importantAttributes,
       }}
     >
       {children}

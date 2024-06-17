@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../utils/tools";
 import ProductList from "../components/ProductList";
 import CategorySidebar from "../components/CategorySidebar";
+import { AttributesContextProvider } from "../contexts/attributes";
 
 interface CategoryProps {
   name: string;
@@ -10,19 +11,21 @@ interface CategoryProps {
 
 function Category({ name }: CategoryProps) {
   return (
-    <div>
-      <Typography variant="h2" className="mb-3" align="center">
-        {capitalizeFirstLetter(name)}
-      </Typography>
-      <div className="category-layout">
-        <div className="category-sidebar">
-          <CategorySidebar name={name} />
-        </div>
-        <div className="category-content">
-          <ProductList name={name} />
+    <AttributesContextProvider category={name}>
+      <div>
+        <Typography variant="h2" className="mb-3" align="center">
+          {capitalizeFirstLetter(name)}
+        </Typography>
+        <div className="category-layout">
+          <div className="category-sidebar">
+            <CategorySidebar name={name} />
+          </div>
+          <div className="category-content">
+            <ProductList name={name} />
+          </div>
         </div>
       </div>
-    </div>
+    </AttributesContextProvider>
   );
 }
 
