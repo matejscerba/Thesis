@@ -20,8 +20,8 @@ interface ProductListProps {
 
 function ProductList({ name }: ProductListProps) {
   const [data, setData] = useState<ProductListResponse>(undefined);
-  const [candidates, setCandidates] = useState<number[]>([1, 2, 3, 4, 5]);
-  const [discarded, setDiscarded] = useState<number[]>([6, 7, 8, 9, 10]);
+  const [candidates, setCandidates] = useState<number[]>([]);
+  const [discarded, setDiscarded] = useState<number[]>([]);
 
   useEffect(() => {
     fetchPostJson<ProductListResponse>("category", { candidates, discarded }, { category_name: name })

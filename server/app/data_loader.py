@@ -1,4 +1,5 @@
 import json
+import os
 from typing import Dict, Set
 
 import pandas as pd
@@ -14,7 +15,10 @@ class DataLoader:
 
     @classmethod
     def load_products(cls, category_name: str) -> UnorganizedCategory:
-        return UnorganizedCategory.from_dataframe(pd.read_csv(f"data/{category_name}/products.csv", sep=";"))
+        filename = "products"
+        if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
+            filename = "mac_large"
+        return UnorganizedCategory.from_dataframe(pd.read_csv(f"data/{category_name}/{filename}.csv", sep=";"))
 
     @classmethod
     def load_attributes(cls, category_name: str) -> CategoryAttributes:

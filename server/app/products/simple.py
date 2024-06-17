@@ -11,8 +11,8 @@ class SimpleProductHandler:
     @classmethod
     def organize_category(cls, category_name: str, candidate_ids: List[int], discarded_ids: List[int]) -> Category:
         category = DataLoader.load_products(category_name=category_name)
-        if len(candidate_ids) == 0 and len(discarded_ids) == 0:
-            return category
+        # if len(candidate_ids) == 0 and len(discarded_ids) == 0:
+        #     return category
 
         candidates = [category.pop(candidate_id) for candidate_id in candidate_ids]
         for discarded_id in discarded_ids:

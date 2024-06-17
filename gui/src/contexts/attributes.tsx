@@ -26,7 +26,7 @@ interface AttributesContextProviderProps {
 
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
-  const [importantAttributes] = useState<number[]>([0, 1, 12, 36, 27]);
+  const [importantAttributes] = useState<number[]>([11, 17, 24, 29]);
 
   useEffect(() => {
     if (attributes === undefined) {

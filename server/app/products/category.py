@@ -22,7 +22,7 @@ class UnorganizedCategory(Category):
     @classmethod
     def from_dataframe(cls, df: pd.DataFrame) -> "UnorganizedCategory":
         return UnorganizedCategory(
-            data={str(index): Product.from_dataframe_row(id=int(index), row=row) for index, row in df.iterrows()}
+            data={str(row["id"]): Product.from_dataframe_row(id=int(row["id"]), row=row) for _, row in df.iterrows()}
         )
 
     @property
