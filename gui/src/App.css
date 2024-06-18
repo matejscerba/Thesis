@@ -92,3 +92,34 @@
   flex-direction: column;
   align-items: center;
 }
+
+.attribute-range.readonly .MuiSlider-root {
+  cursor: default;
+}
+
+.attribute-range.readonly .MuiSlider-thumb, .attribute-range.readonly .MuiSlider-mark {
+  display: none;
+}
+
+.attribute-range.readonly .MuiSlider-rail {
+  background-color: var(--bs-secondary);
+}
+
+.attribute-range.readonly .MuiSlider-track {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+
+.clickable {
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.clickable:hover {
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.category-modal {
+  --bs-modal-width: 60% !important;
+}

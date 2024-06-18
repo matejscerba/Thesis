@@ -1,11 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { fetchPostJson } from "../utils/api";
-
-interface Attribute {
-  full_name: string;
-  name: string;
-  unit: string | null;
-}
+import { Attribute } from "../types/attribute";
 
 interface AttributesContextInterface {
   attributes: Attribute[];

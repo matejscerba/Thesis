@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { fetchPostJson } from "../utils/api";
 import { Product } from "../types/product";
 import Candidates from "./groups/Candidates";
-import Typography from "@mui/material/Typography";
 import Alternatives from "./groups/Alternatives";
 import Discarded from "./groups/Discarded";
 import { useAttributes } from "../contexts/attributes";
+import Unseen from "./groups/Unseen";
+import { GroupsContextProvider } from "../contexts/groups";
 
 interface ProductListResponse {
   organized: boolean;
@@ -64,12 +65,9 @@ function ProductList({ name }: ProductListProps) {
         <Candidates category={name} candidates={data.candidates} onDiscard={onDiscard} />
       </div>
       <div className="mb-3">
-        <Typography variant="h5" className="text-secondary mx-3">
-          Unseen
-        </Typography>
-        <Typography variant="body1" className="mx-3">
-          Here will be statistics about the unseen products
-        </Typography>
+        <GroupsContextProvider candidates={candidates} discarded={discarded}>
+          <Unseen category={name} onDiscard={onDiscard} onMarkCandidate={onMarkCandidate} />
+        </GroupsContextProvider>
       </div>
       <div className="mb-3">
         <Alternatives

@@ -1,9 +1,14 @@
 import React from "react";
 import "./App.css";
-import Category from "./pages/Category";
+import { ModalContextProvider } from "./contexts/modal";
+import Layout from "./Layout";
 
 function App() {
-  return <Category name="laptops" />;
+  return (
+    <ModalContextProvider>
+      <Layout />
+    </ModalContextProvider>
+  );
 }
 
 export default App;

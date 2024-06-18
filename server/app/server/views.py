@@ -24,6 +24,28 @@ def view_category() -> Response:
     return jsonify(data)
 
 
+def view_category_filter() -> Response:
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
+    request_json = request.json or {}
+    attribute = request_json.get("attribute")
+    value = request_json.get("value")
+    candidate_ids = request_json.get("candidates", [])
+    discarded_ids = request_json.get("discarded", [])
+
+    products = SimpleProductHandler.filter_category(
+        category_name=category_name,
+        attribute=attribute,
+        value=value,
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
+    )
+
+    return jsonify([product.model_dump() for product in products])
+
+
 def view_attributes() -> Response:
     category_name = request.args.get("category_name")
     if category_name is None:

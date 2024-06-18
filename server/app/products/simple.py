@@ -1,4 +1,4 @@
-from typing import List, ClassVar
+from typing import List, ClassVar, Dict, Any
 
 from app.data_loader import DataLoader
 from app.products.category import Category, OrganizedCategory
@@ -42,3 +42,30 @@ class SimpleProductHandler:
     def get_products(cls, category_name: str, ids: List[int]) -> List[Product]:
         category = DataLoader.load_category(category_name=category_name)
         return [category.pop(id) for id in ids]
+
+    @classmethod
+    def filter_category(
+        cls,
+        category_name: str,
+        attribute: str,
+        value: Dict[str, Any],
+        candidate_ids: List[int],
+        discarded_ids: List[int],
+    ) -> List[Product]:
+        products = DataLoader.load_products(category_name=category_name, usecols=[attribute])
+        products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
+        value_options = value.get("options")
+        lower_bound = value.get("lower_bound")
+        upper_bound = value.get("upper_bound")
+        if value_options is not None:
+            products = products[products[attribute]]
+        elif lower_bound is not None or upper_bound is not None:
+            if lower_bound is not None:
+                products = products[products[attribute] >= lower_bound]
+            if upper_bound is not None:
+                products = products[products[attribute] <= upper_bound]
+        else:
+            raise Exception("options, lower bound and upper bound missing in filter.")
+
+        category = DataLoader.load_category(category_name=category_name)
+        return [category.pop(id) for id in products["id"]]
