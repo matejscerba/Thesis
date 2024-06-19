@@ -58,7 +58,7 @@ class SimpleProductHandler:
         lower_bound = value.get("lower_bound")
         upper_bound = value.get("upper_bound")
         if value_options is not None:
-            products = products[products[attribute]]
+            products = products[products[attribute].apply(lambda x: x in value_options)]
         elif lower_bound is not None or upper_bound is not None:
             if lower_bound is not None:
                 products = products[products[attribute] >= lower_bound]

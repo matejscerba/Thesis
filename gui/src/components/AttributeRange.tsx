@@ -1,34 +1,34 @@
 import React from "react";
-import { Slider } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useModal } from "../contexts/modal";
 import FilteredProducts from "./FilteredProducts";
 import { Attribute } from "../types/attribute";
-import { valueToString } from "../utils/attributes";
 
 interface AttributeRangeProps {
   category: string;
   attribute: Attribute;
-  lowerBound: number;
-  upperBound: number;
+  value: {
+    lowerBound?: number;
+    upperBound?: number;
+    options?: any[];
+  };
   numProductsInRange: number;
   onDiscard: (id: number) => void;
   onMarkCandidate: (id: number) => void;
+  children: React.ReactNode;
 }
 
 function AttributeRange({
   category,
   attribute,
-  lowerBound,
-  upperBound,
+  value,
   numProductsInRange,
   onDiscard,
   onMarkCandidate,
+  children,
 }: AttributeRangeProps) {
   const { presentModal } = useModal();
 
-  const lowerBoundPosition = 1;
-  const upperBoundPosition = 4;
   return (
     <div className="px-3 py-2 attribute-range readonly">
       {numProductsInRange > 0 ? (
@@ -40,30 +40,21 @@ function AttributeRange({
               <FilteredProducts
                 category={category}
                 attribute={attribute}
-                value={{ lowerBound, upperBound }}
+                value={value}
                 onDiscard={onDiscard}
                 onMarkCandidate={onMarkCandidate}
               />,
             );
           }}
         >
-          {numProductsInRange} products in relevant range
+          {numProductsInRange} products with relevant value
         </Typography>
       ) : (
         <Typography className="text-center text-danger" variant="body1">
-          No products in relevant range
+          No products with relevant value
         </Typography>
       )}
-      <Slider
-        value={[lowerBoundPosition, upperBoundPosition]}
-        min={lowerBoundPosition - 1}
-        max={upperBoundPosition + 1}
-        valueLabelDisplay="auto"
-        marks={[
-          { value: lowerBoundPosition, label: valueToString(lowerBound, attribute) },
-          { value: upperBoundPosition, label: valueToString(upperBound, attribute) },
-        ]}
-      />
+      {children}
     </div>
   );
 }

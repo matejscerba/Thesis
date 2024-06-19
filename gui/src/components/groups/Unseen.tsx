@@ -1,7 +1,8 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
 import { useAttributes } from "../../contexts/attributes";
-import AttributeRange from "../AttributeRange";
+import NumericalAttributeRange from "../NumericalAttributeRange";
+import CategoricalAttributeRange from "../CategoricalAttributeRange";
 
 interface UnseenProps {
   category: string;
@@ -21,15 +22,26 @@ function Unseen({ category, onDiscard, onMarkCandidate }: UnseenProps) {
           <Typography variant="h6" className="mx-2">
             {attribute.name}
           </Typography>
-          <AttributeRange
-            category={category}
-            attribute={attribute}
-            lowerBound={8}
-            upperBound={16}
-            numProductsInRange={5}
-            onDiscard={onDiscard}
-            onMarkCandidate={onMarkCandidate}
-          />
+          {attribute.type === "categorical" ? (
+            <CategoricalAttributeRange
+              category={category}
+              attribute={attribute}
+              options={["5500M", "5300M"]}
+              numProductsInRange={5}
+              onDiscard={onDiscard}
+              onMarkCandidate={onMarkCandidate}
+            />
+          ) : (
+            <NumericalAttributeRange
+              category={category}
+              attribute={attribute}
+              lowerBound={8}
+              upperBound={16}
+              numProductsInRange={5}
+              onDiscard={onDiscard}
+              onMarkCandidate={onMarkCandidate}
+            />
+          )}
         </div>
       ))}
     </>

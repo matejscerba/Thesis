@@ -23,7 +23,7 @@ class SetBasedRecommender:
             important_attributes = [int(key) for key in attrs[: min(5, len(attrs))]]
 
         important_attributes_str = [
-            all_attributes.attributes[str(attribute_index)].full_name for attribute_index in important_attributes
+            all_attributes.attributes[attribute_index].full_name for attribute_index in important_attributes
         ]
 
         data = DataLoader.load_products(category_name=category_name, usecols=important_attributes_str)
