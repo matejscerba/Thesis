@@ -31,7 +31,13 @@ def view_category_filter() -> Response:
 
     request_json = request.json or {}
     attribute = request_json.get("attribute")
+    if attribute is None:
+        raise Exception("Attribute for filter not set.")
+
     value = request_json.get("value")
+    if value is None:
+        raise Exception("Value for filter not set.")
+
     candidate_ids = request_json.get("candidates", [])
     discarded_ids = request_json.get("discarded", [])
 
