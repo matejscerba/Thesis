@@ -1,6 +1,12 @@
+from enum import Enum
 from typing import Optional, Dict, Any, List
 
 from pydantic import BaseModel
+
+
+class AttributeType(str, Enum):
+    CATEGORICAL = "categorical"
+    NUMERICAL = "numerical"
 
 
 class Attribute(BaseModel):
@@ -8,7 +14,7 @@ class Attribute(BaseModel):
     name: str
     unit: Optional[str]
     group: str
-    type: str
+    type: AttributeType
 
     @classmethod
     def from_data(cls, value: Dict[str, Any]) -> "Attribute":
@@ -21,10 +27,10 @@ class Attribute(BaseModel):
 
 
 class CategoryAttributes(BaseModel):
-    attributes: Dict[int, Attribute]
+    attributes: Dict[str, Attribute]
 
     @classmethod
     def from_data(cls, data: List[Dict[str, Any]]) -> "CategoryAttributes":
         return CategoryAttributes(
-            attributes={attribute["id"]: Attribute.from_data(value=attribute) for attribute in data}
+            attributes={attribute["name"]: Attribute.from_data(value=attribute) for attribute in data}
         )

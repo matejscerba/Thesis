@@ -14,13 +14,18 @@ class DataLoader:
         return pd.read_csv("data/laptops_numerical_with_price.csv", delimiter=";")
 
     @classmethod
-    def load_products(cls, category_name: str, usecols: Optional[List[str]] = None) -> pd.DataFrame:
+    def load_products(
+        cls, category_name: str, usecols: Optional[List[str]] = None, userows: Optional[Set[int]] = None
+    ) -> pd.DataFrame:
         filename = "products"
         if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
             filename = "mac_large"
-        return pd.read_csv(
+        data = pd.read_csv(
             f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
         )
+        if userows:
+            data = data[data["id"].apply(lambda x: x in userows)]
+        return data
 
     @classmethod
     def load_category(cls, category_name: str) -> UnorganizedCategory:

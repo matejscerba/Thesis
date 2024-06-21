@@ -93,21 +93,8 @@
   align-items: center;
 }
 
-.attribute-range.readonly .MuiSlider-root {
-  cursor: default;
-}
-
-.attribute-range.readonly .MuiSlider-thumb, .attribute-range.readonly .MuiSlider-mark {
-  display: none;
-}
-
-.attribute-range.readonly .MuiSlider-rail {
+.attribute-range .MuiSlider-rail {
   background-color: var(--bs-secondary);
-}
-
-.attribute-range.readonly .MuiSlider-track {
-  background-color: var(--bs-success);
-  border-color: var(--bs-success);
 }
 
 .clickable {
@@ -127,10 +114,13 @@
 .categorical-options-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .categorical-option {
+  display: inline-block;
   text-align: center;
+  white-space: nowrap;
 }

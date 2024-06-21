@@ -1,5 +1,4 @@
-import random
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Set
 
 import numpy as np
 import pandas as pd
@@ -12,25 +11,15 @@ class SetBasedRecommender:
     def predict(
         cls,
         category_name: str,
-        candidate_ids: List[int],
-        discarded_ids: List[int],
-        important_attributes: List[int],
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+        important_attributes: List[str],
     ) -> List[int]:
-        all_attributes = DataLoader.load_attributes(category_name=category_name)
-        if len(important_attributes) == 0:
-            attrs = list(all_attributes.attributes.keys())
-            random.shuffle(attrs)
-            important_attributes = [int(key) for key in attrs[: min(5, len(attrs))]]
-
-        important_attributes_str = [
-            all_attributes.attributes[attribute_index].full_name for attribute_index in important_attributes
-        ]
-
-        data = DataLoader.load_products(category_name=category_name, usecols=important_attributes_str)
+        data = DataLoader.load_products(category_name=category_name, usecols=important_attributes)
 
         column_mapping: Dict[str, Any] = {}
         columns: List[str] = []
-        for attribute in important_attributes_str:
+        for attribute in important_attributes:
             values = data[attribute].unique()
             column_mapping[attribute] = {}
             for item in values:
@@ -47,7 +36,7 @@ class SetBasedRecommender:
                 rating = -1
             else:
                 continue
-            for attribute in important_attributes_str:
+            for attribute in important_attributes:
                 if pd.isna(row[attribute]):
                     continue
                 column_idx = column_mapping[attribute][row[attribute]]
@@ -58,7 +47,7 @@ class SetBasedRecommender:
 
         ratings = np.zeros((len(data), len(columns)))
         for idx, row in data.iterrows():
-            for attribute in important_attributes_str:
+            for attribute in important_attributes:
                 if pd.isna(row[attribute]):
                     continue
                 column_idx = column_mapping[attribute][row[attribute]]

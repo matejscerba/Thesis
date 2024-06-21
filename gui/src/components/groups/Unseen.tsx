@@ -1,43 +1,49 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
-import { useAttributes } from "../../contexts/attributes";
 import NumericalAttributeRange from "../NumericalAttributeRange";
 import CategoricalAttributeRange from "../CategoricalAttributeRange";
+import { AttributeType } from "../../types/attribute";
+import { UnseenStatistics } from "../../types/statistics";
 
 interface UnseenProps {
   category: string;
+  statistics: UnseenStatistics;
   onDiscard: (id: number) => void;
   onMarkCandidate: (id: number) => void;
 }
 
-function Unseen({ category, onDiscard, onMarkCandidate }: UnseenProps) {
-  const { attributes } = useAttributes();
+function Unseen({ category, statistics, onDiscard, onMarkCandidate }: UnseenProps) {
   return (
     <>
       <Typography variant="h5" className="text-secondary mx-3">
         Unseen
       </Typography>
-      {attributes.map((attribute) => (
-        <div key={attribute.name} className="m-3 border border-secondary rounded">
+      {statistics.attributes.map((stats) => (
+        <div key={stats.attribute.name} className="m-3 border border-secondary rounded">
           <Typography variant="h6" className="mx-2">
-            {attribute.name}
+            {stats.attribute.name}
           </Typography>
-          {attribute.type === "categorical" ? (
+          {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
             <CategoricalAttributeRange
               category={category}
-              attribute={attribute}
-              options={["5500M", "5300M"]}
-              numProductsInRange={5}
+              attribute={stats.attribute}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              selectedOptions={stats.selected_options}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              availableOptions={stats.available_options}
+              numProductsInRange={stats.num_products}
               onDiscard={onDiscard}
               onMarkCandidate={onMarkCandidate}
             />
-          ) : (
+          )}
+          {stats.attribute.type === AttributeType.NUMERICAL.valueOf() && (
             <NumericalAttributeRange
               category={category}
-              attribute={attribute}
-              lowerBound={8}
-              upperBound={16}
-              numProductsInRange={5}
+              attribute={stats.attribute}
+              lowerBoundIndex={stats.lower_bound_index}
+              upperBoundIndex={stats.upper_bound_index}
+              options={stats.options}
+              numProductsInRange={stats.num_products}
               onDiscard={onDiscard}
               onMarkCandidate={onMarkCandidate}
             />

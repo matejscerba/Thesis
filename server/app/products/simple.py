@@ -1,9 +1,19 @@
-from typing import List, ClassVar, Dict, Any
+from typing import List, ClassVar, Any, Optional, Set
+
+import pandas as pd
+from pydantic import BaseModel, Field
 
 from app.data_loader import DataLoader
 from app.products.category import Category, OrganizedCategory
 from app.products.product import Product
+from app.products.unseen_statistics import UnseenStatistics, AbstractAttributeStatistics
 from app.recommenders.set_based import SetBasedRecommender
+
+
+class FilterValue(BaseModel):
+    lower_bound: Optional[float] = Field(default=None)
+    upper_bound: Optional[float] = Field(default=None)
+    options: Optional[List[Any]] = Field(default=None)
 
 
 class SimpleProductHandler:
@@ -11,7 +21,7 @@ class SimpleProductHandler:
 
     @classmethod
     def organize_category(
-        cls, category_name: str, candidate_ids: List[int], discarded_ids: List[int], important_attributes: List[int]
+        cls, category_name: str, candidate_ids: Set[int], discarded_ids: Set[int], important_attributes: List[str]
     ) -> Category:
         alternative_ids = SetBasedRecommender.predict(
             category_name=category_name,
@@ -32,10 +42,29 @@ class SimpleProductHandler:
             alternative_ids = alternative_ids[: cls._alternatives_size]
         alternatives = [category.pop(alternative_id) for alternative_id in alternative_ids]
 
+        attribute_statistics = []
+        attributes = DataLoader.load_attributes(category_name=category_name)
+        for attribute_id in important_attributes:
+            attribute = attributes.attributes[attribute_id]
+            attribute_statistics.append(
+                AbstractAttributeStatistics.from_products(
+                    category_name=category_name,
+                    attribute=attribute,
+                    products=DataLoader.load_products(
+                        category_name=category_name,
+                        usecols=important_attributes,
+                    ),
+                    candidate_ids=candidate_ids,
+                    discarded_ids=discarded_ids,
+                )
+            )
+
+        unseen = UnseenStatistics(attributes=attribute_statistics)
+
         return OrganizedCategory(
             candidates=candidates,
             alternatives=alternatives,
-            # unseen=unseen,
+            unseen=unseen,
         )
 
     @classmethod
@@ -44,28 +73,44 @@ class SimpleProductHandler:
         return [category.pop(id) for id in ids]
 
     @classmethod
-    def filter_category(
+    def filter_dataframe(
         cls,
         category_name: str,
-        attribute: str,
-        value: Dict[str, Any],
-        candidate_ids: List[int],
-        discarded_ids: List[int],
-    ) -> List[Product]:
-        products = DataLoader.load_products(category_name=category_name, usecols=[attribute])
+        attribute_name: str,
+        value: FilterValue,
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+    ) -> pd.DataFrame:
+        products = DataLoader.load_products(category_name=category_name, usecols=[attribute_name])
         products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
-        value_options = value.get("options")
-        lower_bound = value.get("lower_bound")
-        upper_bound = value.get("upper_bound")
-        if value_options is not None:
-            products = products[products[attribute].apply(lambda x: x in value_options)]
-        elif lower_bound is not None or upper_bound is not None:
-            if lower_bound is not None:
-                products = products[products[attribute] >= lower_bound]
-            if upper_bound is not None:
-                products = products[products[attribute] <= upper_bound]
+        options = value.options
+        if options is not None:
+            products = products[products[attribute_name].apply(lambda x: x in options)]
+        elif value.lower_bound is not None or value.upper_bound is not None:
+            if value.lower_bound is not None:
+                products = products[products[attribute_name] >= value.lower_bound]
+            if value.upper_bound is not None:
+                products = products[products[attribute_name] <= value.upper_bound]
         else:
             raise Exception("options, lower bound and upper bound missing in filter.")
 
+        return products
+
+    @classmethod
+    def filter_category(
+        cls,
+        category_name: str,
+        attribute_name: str,
+        value: FilterValue,
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+    ) -> List[Product]:
+        products = cls.filter_dataframe(
+            category_name=category_name,
+            attribute_name=attribute_name,
+            value=value,
+            candidate_ids=candidate_ids,
+            discarded_ids=discarded_ids,
+        )
         category = DataLoader.load_category(category_name=category_name)
         return [category.pop(id) for id in products["id"]]

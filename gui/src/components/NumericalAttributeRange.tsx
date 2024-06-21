@@ -7,8 +7,9 @@ import AttributeRange from "./AttributeRange";
 interface NumericalAttributeRangeProps {
   category: string;
   attribute: Attribute;
-  lowerBound: number;
-  upperBound: number;
+  lowerBoundIndex: number;
+  upperBoundIndex: number;
+  options: number[];
   numProductsInRange: number;
   onDiscard: (id: number) => void;
   onMarkCandidate: (id: number) => void;
@@ -17,14 +18,16 @@ interface NumericalAttributeRangeProps {
 function NumericalAttributeRange({
   category,
   attribute,
-  lowerBound,
-  upperBound,
+  lowerBoundIndex,
+  upperBoundIndex,
+  options,
   numProductsInRange,
   onDiscard,
   onMarkCandidate,
 }: NumericalAttributeRangeProps) {
-  const lowerBoundPosition = 1;
-  const upperBoundPosition = 4;
+  const lowerBound = options[lowerBoundIndex];
+  const upperBound = options[upperBoundIndex];
+
   return (
     <AttributeRange
       category={category}
@@ -35,14 +38,15 @@ function NumericalAttributeRange({
       onMarkCandidate={onMarkCandidate}
     >
       <Slider
-        value={[lowerBoundPosition, upperBoundPosition]}
-        min={lowerBoundPosition - 1}
-        max={upperBoundPosition + 1}
-        valueLabelDisplay="auto"
+        value={[lowerBoundIndex, upperBoundIndex]}
+        min={0}
+        max={options.length - 1}
+        valueLabelDisplay="off"
         marks={[
-          { value: lowerBoundPosition, label: valueToString(lowerBound, attribute) },
-          { value: upperBoundPosition, label: valueToString(upperBound, attribute) },
+          { value: lowerBoundIndex, label: valueToString(lowerBound, attribute) },
+          { value: upperBoundIndex, label: valueToString(upperBound, attribute) },
         ]}
+        color="success"
       />
     </AttributeRange>
   );

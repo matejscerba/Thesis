@@ -16,8 +16,8 @@ def view_category() -> Response:
 
     data = SimpleProductHandler.organize_category(
         category_name=category_name,
-        candidate_ids=candidate_ids,
-        discarded_ids=discarded_ids,
+        candidate_ids=set(candidate_ids),
+        discarded_ids=set(discarded_ids),
         important_attributes=important_attributes,
     ).model_dump()
 
@@ -43,10 +43,10 @@ def view_category_filter() -> Response:
 
     products = SimpleProductHandler.filter_category(
         category_name=category_name,
-        attribute=attribute,
+        attribute_name=attribute,
         value=value,
-        candidate_ids=candidate_ids,
-        discarded_ids=discarded_ids,
+        candidate_ids=set(candidate_ids),
+        discarded_ids=set(discarded_ids),
     )
 
     return jsonify([product.model_dump() for product in products])

@@ -5,6 +5,7 @@ from pydantic import BaseModel, model_serializer
 from pydantic_core.core_schema import SerializerFunctionWrapHandler
 
 from app.products.product import Product
+from app.products.unseen_statistics import UnseenStatistics
 
 
 class Category(BaseModel):
@@ -43,4 +44,4 @@ class OrganizedCategory(Category):
     organized: bool = True
     candidates: List[Product]
     alternatives: List[Product]
-    # unseen: List[Product]  # TODO: Return statistics
+    unseen: UnseenStatistics

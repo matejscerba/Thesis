@@ -7,12 +7,14 @@ import Discarded from "./groups/Discarded";
 import { useAttributes } from "../contexts/attributes";
 import Unseen from "./groups/Unseen";
 import { GroupsContextProvider } from "../contexts/groups";
+import { UnseenStatistics } from "../types/statistics";
 
 interface ProductListResponse {
   organized: boolean;
   products?: Product[];
   candidates?: Product[];
   alternatives?: Product[];
+  unseen?: UnseenStatistics;
 }
 
 interface ProductListProps {
@@ -20,7 +22,7 @@ interface ProductListProps {
 }
 
 function ProductList({ name }: ProductListProps) {
-  const { attributeIds } = useAttributes();
+  const { attributeNames } = useAttributes();
 
   const [data, setData] = useState<ProductListResponse>(undefined);
   const [candidates, setCandidates] = useState<number[]>([387, 538, 1121, 1137]);
@@ -29,7 +31,7 @@ function ProductList({ name }: ProductListProps) {
   useEffect(() => {
     fetchPostJson<ProductListResponse>(
       "category",
-      { candidates, discarded, important_attributes: attributeIds },
+      { candidates, discarded, important_attributes: attributeNames },
       { category_name: name },
     )
       .then((category) => {
@@ -66,7 +68,7 @@ function ProductList({ name }: ProductListProps) {
       </div>
       <div className="mb-3">
         <GroupsContextProvider candidates={candidates} discarded={discarded}>
-          <Unseen category={name} onDiscard={onDiscard} onMarkCandidate={onMarkCandidate} />
+          <Unseen category={name} statistics={data.unseen} onDiscard={onDiscard} onMarkCandidate={onMarkCandidate} />
         </GroupsContextProvider>
       </div>
       <div className="mb-3">

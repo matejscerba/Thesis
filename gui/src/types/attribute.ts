@@ -5,3 +5,8 @@ export interface Attribute {
   group: string;
   type: string;
 }
+
+export enum AttributeType {
+  CATEGORICAL = "categorical",
+  NUMERICAL = "numerical",
+}

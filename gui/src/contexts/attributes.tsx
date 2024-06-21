@@ -4,12 +4,12 @@ import { Attribute } from "../types/attribute";
 
 interface AttributesContextInterface {
   attributes: Attribute[];
-  attributeIds: number[];
+  attributeNames: string[];
 }
 
 const AttributesContext = createContext<AttributesContextInterface>({
   attributes: undefined,
-  attributeIds: undefined,
+  attributeNames: undefined,
 });
 
 interface AttributesResponse {
@@ -23,7 +23,12 @@ interface AttributesContextProviderProps {
 
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
-  const [importantAttributes] = useState<number[]>([11, 17, 24, 29]);
+  const [importantAttributes] = useState<string[]>([
+    "Number of processor cores",
+    "Size of operational RAM [GB]",
+    "Model graphics cards",
+    "SSD capacity [GB]",
+  ]);
 
   useEffect(() => {
     if (attributes === undefined) {
@@ -38,10 +43,8 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   return (
     <AttributesContext.Provider
       value={{
-        attributes: attributes
-          ? importantAttributes.map((attributeIndex) => attributes[`${attributeIndex}`])
-          : undefined,
-        attributeIds: importantAttributes,
+        attributes: attributes ? importantAttributes.map((attributeName) => attributes[attributeName]) : undefined,
+        attributeNames: importantAttributes,
       }}
     >
       {children}
