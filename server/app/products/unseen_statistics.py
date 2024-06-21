@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from app.attributes.attribute import Attribute, AttributeType
 
 if TYPE_CHECKING:
-    from app.products.simple import SimpleProductHandler, FilterValue
+    from app.products.simple import FilterValue
 
 
 class AbstractAttributeStatistics(BaseModel):
