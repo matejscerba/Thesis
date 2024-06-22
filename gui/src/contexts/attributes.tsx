@@ -1,15 +1,17 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { fetchPostJson } from "../utils/api";
-import { Attribute } from "../types/attribute";
+import { Attribute, PRICE } from "../types/attribute";
 
 interface AttributesContextInterface {
   attributes: Attribute[];
   attributeNames: string[];
+  price: Attribute;
 }
 
 const AttributesContext = createContext<AttributesContextInterface>({
   attributes: undefined,
   attributeNames: undefined,
+  price: undefined,
 });
 
 interface AttributesResponse {
@@ -45,6 +47,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
       value={{
         attributes: attributes ? importantAttributes.map((attributeName) => attributes[attributeName]) : undefined,
         attributeNames: importantAttributes,
+        price: attributes?.[PRICE],
       }}
     >
       {children}

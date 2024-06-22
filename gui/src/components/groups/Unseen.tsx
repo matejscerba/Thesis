@@ -15,9 +15,6 @@ function Unseen() {
       </Typography>
       {unseen.attributes.map((stats) => (
         <div key={stats.attribute.name} className="m-3 border border-secondary rounded">
-          <Typography variant="h6" className="mx-2">
-            {stats.attribute.name}
-          </Typography>
           {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
             <CategoricalAttributeRange
               attribute={stats.attribute}

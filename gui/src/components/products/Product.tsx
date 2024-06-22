@@ -7,6 +7,7 @@ import { Divider } from "@mui/material";
 import Explanations from "./Explanations";
 import { useCategory } from "../../contexts/category";
 import { PRICE } from "../../types/attribute";
+import { valueToString } from "../../utils/attributes";
 
 interface ProductProps {
   className?: string;
@@ -16,16 +17,11 @@ interface ProductProps {
 }
 
 function Product({ className, product, menu, showExplanation }: ProductProps) {
-  const { attributes } = useAttributes();
+  const { attributes, price } = useAttributes();
   const { name } = useCategory();
 
-  const priceText = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "CZK",
-    maximumFractionDigits: 0,
-  })
-    .format(product.attributes[PRICE] as number)
-    .replace(/,/g, " ");
+  const priceText = valueToString(product.attributes[PRICE], price);
+
   return (
     <ListItem>
       <div className={`${className} product`}>

@@ -19,7 +19,10 @@ function AttributeRange({ attribute, value, numProductsInRange, children }: Attr
   const { presentModal } = useModal();
 
   return (
-    <div className="px-3 py-2 attribute-range readonly">
+    <div className="px-3 py-2 attribute-range">
+      <Typography variant="h6" className="text-center">
+        {attribute.name}
+      </Typography>
       {numProductsInRange > 0 ? (
         <Typography
           className="text-center text-success clickable"
