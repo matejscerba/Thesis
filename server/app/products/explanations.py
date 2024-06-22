@@ -7,11 +7,15 @@ from app.attributes.attribute import Attribute
 
 
 class ProductAttributePosition(str, Enum):
+    BETTER = "better"
     BEST = "best"
-    BEST_RATED = "best_rated"
     NEUTRAL = "neutral"
-    WORST_RATED = "worst_rated"
     WORST = "worst"
+    WORSE = "worse"
+    HIGHER_RATED = "higher_rated"
+    HIGHEST_RATED = "highest_rated"
+    LOWEST_RATED = "lowest_rated"
+    LOWER_RATED = "lower_rated"
 
 
 class ProductAttributeExplanation(BaseModel):

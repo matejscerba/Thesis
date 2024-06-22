@@ -96,8 +96,8 @@ def view_explanation() -> Response:
     explanation = SetBasedRecommender.explain(
         category_name=category_name,
         product_id=int(product_id),
-        candidate_ids=candidate_ids,
-        discarded_ids=discarded_ids,
+        candidate_ids=set(candidate_ids),
+        discarded_ids=set(discarded_ids),
         important_attributes=important_attributes,
     )
 

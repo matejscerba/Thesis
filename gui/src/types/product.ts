@@ -7,11 +7,15 @@ export interface Product {
 }
 
 export enum ProductAttributePosition {
+  BETTER = "better",
   BEST = "best",
-  BEST_RATED = "best_rated",
   NEUTRAL = "neutral",
-  WORST_RATED = "worst_rated",
   WORST = "worst",
+  WORSE = "worse",
+  HIGHER_RATED = "higher_rated",
+  HIGHEST_RATED = "highest_rated",
+  LOWEST_RATED = "lowest_rated",
+  LOWER_RATED = "lower_rated",
 }
 
 interface ProductAttributeExplanation {

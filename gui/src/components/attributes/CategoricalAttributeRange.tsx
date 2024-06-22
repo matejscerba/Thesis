@@ -12,12 +12,9 @@ interface CategoricalAttributeOptionProps {
 
 function CategoricalAttributeOption({ option, attribute, selected }: CategoricalAttributeOptionProps) {
   const bgColor = selected ? "success" : "secondary";
-  const textColor = selected ? "white" : "white";
   return (
-    <div className={`flex-item border border-${bgColor} rounded bg-${bgColor} m-1 px-2`}>
-      <Typography variant="body1" className={`text-${textColor}`}>
-        {valueToString(option, attribute)}
-      </Typography>
+    <div className={`flex-item border border-${bgColor} rounded text-bg-${bgColor} m-1 px-2`}>
+      <Typography variant="body1">{valueToString(option, attribute)}</Typography>
     </div>
   );
 }

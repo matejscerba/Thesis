@@ -4,9 +4,10 @@ import ListItem from "@mui/material/ListItem";
 import { Product as ProductModel, ProductExplanation } from "../../types/product";
 import { useAttributes } from "../../contexts/attributes";
 import { useCategory } from "../../contexts/category";
-import { getColor, valueToString } from "../../utils/attributes";
+import { getTextColor, valueToString } from "../../utils/attributes";
 import ExplanationAttribute from "./ExplanationAttribute";
 import { fetchPostJson } from "../../utils/api";
+import PositionTooltip from "./PositionTooltip";
 
 interface ProductProps {
   className?: string;
@@ -42,9 +43,11 @@ function Product({ className, product, menu }: ProductProps) {
           </div>
           <div className="product-main-info">
             <Typography variant="h6">{product.name}</Typography>
-            <Typography variant="body1" className={`text-${getColor(explanation?.price_position)}`}>
-              {valueToString(product.price, price)}
-            </Typography>
+            <PositionTooltip position={explanation?.price_position} attribute={price}>
+              <Typography variant="body1" className={`text-${getTextColor(explanation?.price_position)} fit-content`}>
+                {valueToString(product.price, price)}
+              </Typography>
+            </PositionTooltip>
           </div>
           {menu}
         </div>

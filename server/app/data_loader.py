@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, Set, List, Optional
+from typing import Dict, Set, List, Optional, Any
 
 import pandas as pd
 
@@ -43,6 +43,19 @@ class DataLoader:
     def load_attributes(cls, category_name: str) -> CategoryAttributes:
         with open(f"data/{category_name}/attributes.json", mode="r") as file:
             return CategoryAttributes.from_data(json.load(file))
+
+    @classmethod
+    def load_ratings(cls, category_name: str, attribute_name: str, values: pd.Series) -> pd.Series:
+        df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";")
+        df = df[df["attribute"] == attribute_name]
+        mapping = dict(zip(df["value"], df["rating"]))
+        return pd.Series([mapping[str(value)] for value in values])
+
+    @classmethod
+    def load_rating(cls, category_name: str, attribute_name: str, value: Any) -> float:
+        return cls.load_ratings(
+            category_name=category_name, attribute_name=attribute_name, values=pd.Series([value])
+        ).tolist()[0]
 
     @classmethod
     def get_ids_for_value(cls, data: pd.DataFrame) -> Dict[str, Dict[float, Set[int]]]:

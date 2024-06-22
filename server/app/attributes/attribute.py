@@ -17,6 +17,7 @@ class AttributeOrder(str, Enum):
 class AttributeName(str, Enum):
     NAME = "name"
     PRICE = "Price [CZK]"
+    RATING = "Rating"
 
 
 class Attribute(BaseModel):

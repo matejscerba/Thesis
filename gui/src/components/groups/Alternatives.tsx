@@ -10,13 +10,13 @@ function Alternatives() {
 
   return (
     <>
-      <Typography variant="h5" className="text-info mx-3">
+      <Typography variant="h5" className="text-primary mx-3">
         Alternatives
       </Typography>
       <List>
         {alternatives.map((product) => (
           <Product
-            className="border border-info rounded bg-white"
+            className="border border-primary rounded bg-white"
             key={`${product.id}`}
             product={product}
             menu={<AlternativeMenu product={product} />}
