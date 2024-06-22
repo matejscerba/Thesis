@@ -1,13 +1,15 @@
 import React from "react";
-import { Product } from "../types/product";
+import { Product } from "../../types/product";
 import { Tooltip } from "@mui/material";
+import { useCategory } from "../../contexts/category";
 
 interface CandidateMenuProps {
   product: Product;
-  onDiscard: (id: number) => void;
 }
 
-function CandidateMenu({ product, onDiscard }: CandidateMenuProps) {
+function CandidateMenu({ product }: CandidateMenuProps) {
+  const { onDiscard } = useCategory();
+
   return (
     <>
       <Tooltip title="Discard">

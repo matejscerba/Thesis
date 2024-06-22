@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { fetchPostJson } from "../utils/api";
-import { Product } from "../types/product";
-import Candidates from "./groups/Candidates";
-import Alternatives from "./groups/Alternatives";
-import Discarded from "./groups/Discarded";
-import { useAttributes } from "../contexts/attributes";
-import Unseen from "./groups/Unseen";
-import { GroupsContextProvider } from "../contexts/groups";
-import { UnseenStatistics } from "../types/statistics";
+import { fetchPostJson } from "../../utils/api";
+import { Product } from "../../types/product";
+import Candidates from "../groups/Candidates";
+import Alternatives from "../groups/Alternatives";
+import Discarded from "../groups/Discarded";
+import { useAttributes } from "../../contexts/attributes";
+import Unseen from "../groups/Unseen";
+import { CategoryContextProvider } from "../../contexts/category";
+import { UnseenStatistics } from "../../types/statistics";
+import { Modal } from "react-bootstrap";
+import { useModal } from "../../contexts/modal";
 
 interface ProductListResponse {
   organized: boolean;
@@ -23,6 +25,7 @@ interface ProductListProps {
 
 function ProductList({ name }: ProductListProps) {
   const { attributeNames } = useAttributes();
+  const { show, modalBody, hideModal } = useModal();
 
   const [data, setData] = useState<ProductListResponse>(undefined);
   const [candidates, setCandidates] = useState<number[]>([387, 538, 1121, 1137]);
@@ -63,25 +66,33 @@ function ProductList({ name }: ProductListProps) {
 
   return (
     <div>
-      <div className="mb-3">
-        <Candidates category={name} candidates={data.candidates} onDiscard={onDiscard} />
-      </div>
-      <div className="mb-3">
-        <GroupsContextProvider candidates={candidates} discarded={discarded}>
-          <Unseen category={name} statistics={data.unseen} onDiscard={onDiscard} onMarkCandidate={onMarkCandidate} />
-        </GroupsContextProvider>
-      </div>
-      <div className="mb-3">
-        <Alternatives
-          category={name}
-          alternatives={data.alternatives}
-          onDiscard={onDiscard}
-          onMarkCandidate={onMarkCandidate}
-        />
-      </div>
-      <div className="mb-3">
-        <Discarded category={name} discarded={discarded} onMarkCandidate={onMarkCandidate} />
-      </div>
+      <CategoryContextProvider
+        name={name}
+        candidates={data.candidates}
+        candidateIds={candidates}
+        discarded={discarded}
+        alternatives={data.alternatives}
+        unseen={data.unseen}
+        onDiscard={onDiscard}
+        onMarkCandidate={onMarkCandidate}
+      >
+        <div className="mb-3">
+          <Candidates />
+        </div>
+        <div className="mb-3">
+          <Unseen />
+        </div>
+        <div className="mb-3">
+          <Alternatives />
+        </div>
+        <div className="mb-3">
+          <Discarded />
+        </div>
+        <Modal show={show} onHide={hideModal} className="category-modal">
+          <Modal.Header closeButton />
+          <Modal.Body>{modalBody}</Modal.Body>
+        </Modal>
+      </CategoryContextProvider>
     </div>
   );
 }

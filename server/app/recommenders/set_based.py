@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any, Set, Optional
 
 import numpy as np
 import pandas as pd
@@ -59,3 +59,9 @@ class SetBasedRecommender:
         return [
             id for id in data["id"].to_numpy()[order].tolist() if id not in candidate_ids and id not in discarded_ids
         ]
+
+    @classmethod
+    def explain(
+        cls, category_name: str, product_id: int, candidate_ids: List[int], discarded_ids: List[int]
+    ) -> Optional[str]:
+        return "explanation"

@@ -1,19 +1,21 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
 import ListItem from "@mui/material/ListItem";
-import { Product as ProductModel } from "../types/product";
-import { useAttributes } from "../contexts/attributes";
+import { Product as ProductModel } from "../../types/product";
+import { useAttributes } from "../../contexts/attributes";
 import { Divider } from "@mui/material";
+import Explanations from "./Explanations";
+import { useCategory } from "../../contexts/category";
 
 interface ProductProps {
   className?: string;
   product: ProductModel;
-  category: string;
   menu: React.ReactNode;
 }
 
-function Product({ className, product, category, menu }: ProductProps) {
+function Product({ className, product, menu }: ProductProps) {
   const { attributes } = useAttributes();
+  const { name } = useCategory();
 
   const priceText = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -27,7 +29,7 @@ function Product({ className, product, category, menu }: ProductProps) {
       <div className={`${className} product`}>
         <div className="product-header">
           <div className="product-image-wrapper">
-            <img className="product-image" src={`media/products/${category}/${product.id}.jpeg`} />
+            <img className="product-image" src={`media/products/${name}/${product.id}.jpeg`} />
           </div>
           <div className="product-main-info">
             <Typography variant="h6">{product.name}</Typography>
@@ -56,6 +58,8 @@ function Product({ className, product, category, menu }: ProductProps) {
         ) : (
           <Typography variant="body1">Loading attributes...</Typography>
         )}
+        <Divider className="border border-top-0 border-secondary" />
+        <Explanations />
       </div>
     </ListItem>
   );

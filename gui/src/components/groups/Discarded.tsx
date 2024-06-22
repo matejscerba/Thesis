@@ -1,21 +1,18 @@
 import Typography from "@mui/material/Typography";
-import Product from "../Product";
+import Product from "../products/Product";
 import React, { useEffect, useState } from "react";
 import { Product as ProductModel } from "../../types/product";
-import DiscardedMenu from "../DiscardedMenu";
+import DiscardedMenu from "../menus/DiscardedMenu";
 import { fetchPostJson } from "../../utils/api";
+import { useCategory } from "../../contexts/category";
 
-interface DiscardedProps {
-  category: string;
-  discarded: number[];
-  onMarkCandidate: (id: number) => void;
-}
+function Discarded() {
+  const { name, discarded } = useCategory();
 
-function Discarded({ category, discarded, onMarkCandidate }: DiscardedProps) {
   const [data, setData] = useState<ProductModel[]>(undefined);
 
   useEffect(() => {
-    fetchPostJson<ProductModel[]>("discarded", { discarded }, { category_name: category })
+    fetchPostJson<ProductModel[]>("discarded", { discarded }, { category_name: name })
       .then((products) => {
         setData(products);
       })
@@ -35,8 +32,7 @@ function Discarded({ category, discarded, onMarkCandidate }: DiscardedProps) {
                 className="border border-danger rounded bg-white"
                 key={`${product.id}`}
                 product={product}
-                category={category}
-                menu={<DiscardedMenu product={product} onMarkCandidate={onMarkCandidate} />}
+                menu={<DiscardedMenu product={product} />}
               />
             ))
           ) : (

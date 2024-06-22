@@ -1,14 +1,15 @@
 import React from "react";
-import { Product } from "../types/product";
+import { Product } from "../../types/product";
 import { Tooltip } from "@mui/material";
+import { useCategory } from "../../contexts/category";
 
 interface AlternativeMenuProps {
   product: Product;
-  onDiscard: (id: number) => void;
-  onMarkCandidate: (id: number) => void;
 }
 
-function AlternativeMenu({ product, onDiscard, onMarkCandidate }: AlternativeMenuProps) {
+function AlternativeMenu({ product }: AlternativeMenuProps) {
+  const { onDiscard, onMarkCandidate } = useCategory();
+
   return (
     <>
       <Tooltip title="Move to candidates">

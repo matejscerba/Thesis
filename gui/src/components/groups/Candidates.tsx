@@ -1,17 +1,13 @@
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
-import Product from "../Product";
+import Product from "../products/Product";
 import React from "react";
-import CandidateMenu from "../CandidateMenu";
-import { Product as ProductModel } from "../../types/product";
+import CandidateMenu from "../menus/CandidateMenu";
+import { useCategory } from "../../contexts/category";
 
-interface CandidatesProps {
-  category: string;
-  candidates: ProductModel[];
-  onDiscard: (id: number) => void;
-}
+function Candidates() {
+  const { candidates } = useCategory();
 
-function Candidates({ category, candidates, onDiscard }: CandidatesProps) {
   return (
     <>
       <Typography variant="h5" className="text-success mx-3">
@@ -24,8 +20,7 @@ function Candidates({ category, candidates, onDiscard }: CandidatesProps) {
               className="border border-success rounded bg-white"
               key={`${product.id}`}
               product={product}
-              category={category}
-              menu={<CandidateMenu product={product} onDiscard={onDiscard} />}
+              menu={<CandidateMenu product={product} />}
             />
           ))}
         </List>

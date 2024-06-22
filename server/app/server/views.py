@@ -1,7 +1,9 @@
 from flask import request, Response, jsonify
 
 from app.data_loader import DataLoader
-from app.products.simple import SimpleProductHandler
+from app.products.simple import SimpleProductHandler, FilterValue
+from app.recommenders.set_based import SetBasedRecommender
+from app.server.response import stringify
 
 
 def view_category() -> Response:
@@ -44,7 +46,7 @@ def view_category_filter() -> Response:
     products = SimpleProductHandler.filter_category(
         category_name=category_name,
         attribute_name=attribute,
-        value=value,
+        value=FilterValue.model_validate(value),
         candidate_ids=set(candidate_ids),
         discarded_ids=set(discarded_ids),
     )
@@ -76,3 +78,26 @@ def view_discarded() -> Response:
     products = SimpleProductHandler.get_products(category_name=category_name, ids=discarded_ids)
 
     return jsonify([product.model_dump() for product in products])
+
+
+def view_explanation() -> Response:
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
+    product_id = request.args.get("product_id")
+    if product_id is None:
+        raise Exception("Product id not set.")
+
+    request_json = request.json or {}
+    candidate_ids = request_json.get("candidates", [])
+    discarded_ids = request_json.get("discarded", [])
+
+    explanation = SetBasedRecommender.explain(
+        category_name=category_name,
+        product_id=int(product_id),
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
+    )
+
+    return stringify(explanation)

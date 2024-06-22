@@ -1,13 +1,15 @@
 import React from "react";
-import { Product } from "../types/product";
+import { Product } from "../../types/product";
 import { Tooltip } from "@mui/material";
+import { useCategory } from "../../contexts/category";
 
 interface DiscardedMenuProps {
   product: Product;
-  onMarkCandidate: (id: number) => void;
 }
 
-function DiscardedMenu({ product, onMarkCandidate }: DiscardedMenuProps) {
+function DiscardedMenu({ product }: DiscardedMenuProps) {
+  const { onMarkCandidate } = useCategory();
+
   return (
     <Tooltip title="Put back to candidates">
       <button
