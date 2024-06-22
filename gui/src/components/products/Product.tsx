@@ -11,9 +11,10 @@ interface ProductProps {
   className?: string;
   product: ProductModel;
   menu: React.ReactNode;
+  showExplanation?: boolean;
 }
 
-function Product({ className, product, menu }: ProductProps) {
+function Product({ className, product, menu, showExplanation }: ProductProps) {
   const { attributes } = useAttributes();
   const { name } = useCategory();
 
@@ -58,8 +59,12 @@ function Product({ className, product, menu }: ProductProps) {
         ) : (
           <Typography variant="body1">Loading attributes...</Typography>
         )}
-        <Divider className="border border-top-0 border-secondary" />
-        <Explanations />
+        {showExplanation && (
+          <>
+            <Divider className="border border-top-0 border-secondary" />
+            <Explanations productId={product.id} />
+          </>
+        )}
       </div>
     </ListItem>
   );

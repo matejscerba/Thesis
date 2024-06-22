@@ -21,6 +21,7 @@ function Candidates() {
               key={`${product.id}`}
               product={product}
               menu={<CandidateMenu product={product} />}
+              showExplanation
             />
           ))}
         </List>

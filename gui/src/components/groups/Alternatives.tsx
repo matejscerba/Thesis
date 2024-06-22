@@ -20,6 +20,7 @@ function Alternatives() {
             key={`${product.id}`}
             product={product}
             menu={<AlternativeMenu product={product} />}
+            showExplanation
           />
         ))}
       </List>

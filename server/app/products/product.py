@@ -4,6 +4,10 @@ import pandas as pd
 from pydantic import BaseModel
 
 
+class ProductExplanation(BaseModel):
+    message: str
+
+
 class Product(BaseModel):
     id: int
     name: str

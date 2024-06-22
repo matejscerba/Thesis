@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 from app.data_loader import DataLoader
+from app.products.product import ProductExplanation
 
 
 class SetBasedRecommender:
@@ -62,6 +63,11 @@ class SetBasedRecommender:
 
     @classmethod
     def explain(
-        cls, category_name: str, product_id: int, candidate_ids: List[int], discarded_ids: List[int]
-    ) -> Optional[str]:
-        return "explanation"
+        cls,
+        category_name: str,
+        product_id: int,
+        candidate_ids: List[int],
+        discarded_ids: List[int],
+        important_attributes: List[str],
+    ) -> Optional[ProductExplanation]:
+        return ProductExplanation(message="explanation")

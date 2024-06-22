@@ -6,3 +6,7 @@ export interface Product {
   availability: string;
   attributes: { [key: string]: any };
 }
+
+export interface ProductExplanation {
+  message: string;
+}
