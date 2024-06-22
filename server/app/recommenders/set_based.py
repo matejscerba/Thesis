@@ -3,7 +3,7 @@ from typing import List, Dict, Any, Set, Optional
 import numpy as np
 import pandas as pd
 
-from app.attributes.attribute import Attribute, AttributeType, AttributeOrder, AttributeName
+from app.attributes.attribute import Attribute, AttributeType, AttributeOrder, AttributeName, CategoryAttributes
 from app.data_loader import DataLoader
 from app.products.explanations import ProductAttributePosition, ProductExplanation, ProductAttributeExplanation
 
@@ -63,7 +63,7 @@ class SetBasedRecommender:
         ]
 
     @classmethod
-    def calculate_attribute_position(
+    def calculate_attribute_position_candidate(
         cls,
         attribute: Attribute,
         value: Any,
@@ -71,7 +71,6 @@ class SetBasedRecommender:
         rating: Optional[float] = None,
         all_ratings: Optional[pd.Series] = None,
     ) -> ProductAttributePosition:
-        # TODO: non-candidates: params BEST x BETTER, ...
         unique_values = all_values.unique()
         if len(unique_values) <= 1:
             return ProductAttributePosition.NEUTRAL
@@ -109,6 +108,61 @@ class SetBasedRecommender:
     def _explain_candidate(
         cls,
         category_name: str,
+        product: pd.Series,
+        candidates: pd.DataFrame,
+        all_attributes: CategoryAttributes,
+        important_attributes: List[str],
+    ) -> ProductExplanation:
+        attributes = []
+        for attribute_name in important_attributes:
+            attribute = all_attributes.attributes[attribute_name]
+            position = ProductAttributePosition.NEUTRAL
+            value = product[attribute_name] if not pd.isna(product[attribute_name]) else None
+            if value is not None:
+                all_values = candidates[attribute_name].dropna()
+                all_ratings = DataLoader.load_ratings(
+                    category_name=category_name, attribute_name=attribute.full_name, values=all_values
+                )
+                rating = DataLoader.load_rating(
+                    category_name=category_name, attribute_name=attribute.full_name, value=value
+                )
+                position = cls.calculate_attribute_position_candidate(
+                    attribute=attribute,
+                    value=product[attribute_name],
+                    all_values=all_values,
+                    rating=rating,
+                    all_ratings=all_ratings,
+                )
+            attributes.append(
+                ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
+            )
+        return ProductExplanation(
+            message="explanation",
+            attributes=attributes,
+            price_position=cls.calculate_attribute_position_candidate(
+                attribute=all_attributes.attributes[AttributeName.PRICE.value],
+                value=product[AttributeName.PRICE.value],
+                all_values=candidates[AttributeName.PRICE.value].dropna(),
+            ),
+        )
+
+    @classmethod
+    def _explain_non_candidate(
+        cls,
+        category_name: str,
+        product: pd.Series,
+        candidates: pd.DataFrame,
+        all_attributes: CategoryAttributes,
+        important_attributes: List[str],
+    ) -> ProductExplanation:
+        return ProductExplanation(
+            message="non candidate", attributes=[], price_position=ProductAttributePosition.NEUTRAL
+        )
+
+    @classmethod
+    def explain(
+        cls,
+        category_name: str,
         product_id: int,
         candidate_ids: Set[int],
         discarded_ids: Set[int],
@@ -125,73 +179,18 @@ class SetBasedRecommender:
             usecols=[AttributeName.PRICE.value, *important_attributes],
         )
         all_attributes = DataLoader.load_attributes(category_name=category_name)
-        attributes = []
-        for attribute_name in important_attributes:
-            attribute = all_attributes.attributes[attribute_name]
-            position = ProductAttributePosition.NEUTRAL
-            value = product[attribute_name] if not pd.isna(product[attribute_name]) else None
-            if value is not None:
-                all_values = candidates[attribute_name].dropna()
-                all_ratings = DataLoader.load_ratings(
-                    category_name=category_name, attribute_name=attribute.full_name, values=all_values
-                )
-                rating = DataLoader.load_rating(
-                    category_name=category_name, attribute_name=attribute.full_name, value=value
-                )
-                position = cls.calculate_attribute_position(
-                    attribute=attribute,
-                    value=product[attribute_name],
-                    all_values=all_values,
-                    rating=rating,
-                    all_ratings=all_ratings,
-                )
-            attributes.append(
-                ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
-            )
-        return ProductExplanation(
-            message="explanation",
-            attributes=attributes,
-            price_position=cls.calculate_attribute_position(
-                attribute=all_attributes.attributes[AttributeName.PRICE.value],
-                value=product[AttributeName.PRICE.value],
-                all_values=candidates[AttributeName.PRICE.value].dropna(),
-            ),
-        )
-
-    @classmethod
-    def _explain_non_candidate(
-        cls,
-        category_name: str,
-        product_id: int,
-        candidate_ids: Set[int],
-        discarded_ids: Set[int],
-        important_attributes: List[str],
-    ) -> ProductExplanation:
-        return ProductExplanation(
-            message="non candidate", attributes=[], price_position=ProductAttributePosition.NEUTRAL
-        )
-
-    @classmethod
-    def explain(
-        cls,
-        category_name: str,
-        product_id: int,
-        candidate_ids: Set[int],
-        discarded_ids: Set[int],
-        important_attributes: List[str],
-    ) -> ProductExplanation:
         if product_id in candidate_ids:
             return cls._explain_candidate(
                 category_name=category_name,
-                product_id=product_id,
-                candidate_ids=candidate_ids,
-                discarded_ids=discarded_ids,
+                product=product,
+                candidates=candidates,
+                all_attributes=all_attributes,
                 important_attributes=important_attributes,
             )
         return cls._explain_non_candidate(
             category_name=category_name,
-            product_id=product_id,
-            candidate_ids=candidate_ids,
-            discarded_ids=discarded_ids,
+            product=product,
+            candidates=candidates,
+            all_attributes=all_attributes,
             important_attributes=important_attributes,
         )
