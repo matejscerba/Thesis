@@ -4,7 +4,7 @@ from typing import Dict, Set, List, Optional
 
 import pandas as pd
 
-from app.attributes.attribute import CategoryAttributes
+from app.attributes.attribute import CategoryAttributes, AttributeName
 from app.products.category import UnorganizedCategory
 
 
@@ -28,8 +28,16 @@ class DataLoader:
         return data
 
     @classmethod
+    def load_product(cls, category_name: str, product_id: int, usecols: Optional[List[str]] = None) -> pd.Series:
+        return cls.load_products(category_name=category_name, usecols=usecols, userows={product_id}).iloc[0]
+
+    @classmethod
     def load_category(cls, category_name: str) -> UnorganizedCategory:
-        return UnorganizedCategory.from_dataframe(cls.load_products(category_name=category_name))
+        return UnorganizedCategory.from_dataframe(
+            cls.load_products(
+                category_name=category_name, usecols=[AttributeName.NAME.value, AttributeName.PRICE.value]
+            )
+        )
 
     @classmethod
     def load_attributes(cls, category_name: str) -> CategoryAttributes:

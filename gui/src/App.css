@@ -83,16 +83,6 @@
   flex: 1;
 }
 
-.product-attributes {
-  display: flex;
-}
-
-.product-attribute-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .attribute-range .MuiSlider-rail {
   background-color: var(--bs-secondary);
 }
@@ -111,15 +101,17 @@
   --bs-modal-width: 60% !important;
 }
 
-.categorical-options-wrapper {
+.flex-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+}
+
+.flex-wrapper.center {
   justify-content: center;
 }
 
-.categorical-option {
+.flex-item {
   display: inline-block;
   text-align: center;
   white-space: nowrap;

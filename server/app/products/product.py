@@ -1,21 +1,14 @@
-from typing import Dict, Any, cast
-
 import pandas as pd
 from pydantic import BaseModel
 
-
-class ProductExplanation(BaseModel):
-    message: str
+from app.attributes.attribute import AttributeName
 
 
 class Product(BaseModel):
     id: int
-    attributes: Dict[str, Any]
+    name: str
+    price: float
 
     @classmethod
     def from_dataframe_row(cls, id: int, row: pd.Series) -> "Product":
-        data = {key: (None if pd.isna(value) else value) for key, value in row.items()}
-        return Product(
-            id=id,
-            attributes=cast(Dict[str, Any], data),
-        )
+        return Product(id=id, name=row[AttributeName.NAME], price=row[AttributeName.PRICE])

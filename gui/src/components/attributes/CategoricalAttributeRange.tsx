@@ -14,7 +14,7 @@ function CategoricalAttributeOption({ option, attribute, selected }: Categorical
   const bgColor = selected ? "success" : "secondary";
   const textColor = selected ? "white" : "white";
   return (
-    <div className={`categorical-option border border-${bgColor} rounded bg-${bgColor} m-1 px-2`}>
+    <div className={`flex-item border border-${bgColor} rounded bg-${bgColor} m-1 px-2`}>
       <Typography variant="body1" className={`text-${textColor}`}>
         {valueToString(option, attribute)}
       </Typography>
@@ -37,7 +37,7 @@ function CategoricalAttributeRange({
 }: CategoricalAttributeRangeProps) {
   return (
     <AttributeRange attribute={attribute} value={{ options: selectedOptions }} numProductsInRange={numProductsInRange}>
-      <div className="categorical-options-wrapper">
+      <div className="flex-wrapper center">
         {selectedOptions.map((option) => (
           <CategoricalAttributeOption
             key={valueToString(option, attribute)}

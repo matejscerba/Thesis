@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 from app.data_loader import DataLoader
-from app.products.product import ProductExplanation
+from app.products.explanations import ProductAttributePosition, ProductExplanation, ProductAttributeExplanation
 
 
 class SetBasedRecommender:
@@ -70,4 +70,18 @@ class SetBasedRecommender:
         discarded_ids: List[int],
         important_attributes: List[str],
     ) -> Optional[ProductExplanation]:
-        return ProductExplanation(message="explanation")
+        product = DataLoader.load_product(
+            category_name=category_name, product_id=product_id, usecols=important_attributes
+        )
+        all_attributes = DataLoader.load_attributes(category_name=category_name)
+        attributes = [
+            ProductAttributeExplanation(
+                attribute=all_attributes.attributes[attribute],
+                attribute_value=product[attribute] if not pd.isna(product[attribute]) else None,
+                position=ProductAttributePosition.WORST_RATED,
+            )
+            for attribute in important_attributes
+        ]
+        return ProductExplanation(
+            message="explanation", attributes=attributes, price_position=ProductAttributePosition.BEST_RATED
+        )

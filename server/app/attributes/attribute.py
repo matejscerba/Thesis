@@ -14,6 +14,11 @@ class AttributeOrder(str, Enum):
     DESCENDING = "desc"
 
 
+class AttributeName(str, Enum):
+    NAME = "name"
+    PRICE = "Price [CZK]"
+
+
 class Attribute(BaseModel):
     full_name: str
     name: str
