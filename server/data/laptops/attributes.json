@@ -1,583 +1,841 @@
 [
     {
-        "name": "Display size [\"]",
+        "name": "name",
         "id": 0,
+        "type": "categorical",
+        "full_name": "name",
+        "continuous": false
+    },
+    {
+        "name": "Price",
+        "id": 1,
+        "type": "numerical",
+        "full_name": "Price [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Price without VAT",
+        "id": 2,
+        "type": "numerical",
+        "full_name": "Price without VAT [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Rating",
+        "id": 3,
+        "type": "numerical",
+        "full_name": "Rating",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Display size",
+        "id": 4,
         "group": "Display",
         "feature": "Display size [\"]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Display size [\"]",
+        "unit": "\"",
+        "continuous": false
     },
     {
         "name": "Display resolution",
-        "id": 1,
+        "id": 5,
         "group": "Display",
         "feature": "Display resolution",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Display resolution",
+        "continuous": false
     },
     {
         "name": "Panel type",
-        "id": 2,
+        "id": 6,
         "group": "Display",
         "feature": "Panel type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Panel type",
+        "continuous": false
     },
     {
         "name": "Display type",
-        "id": 3,
+        "id": 7,
         "group": "Display",
         "feature": "Display type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Display type",
+        "continuous": false
     },
     {
         "name": "Aspect Ratio",
-        "id": 4,
+        "id": 8,
         "group": "Display",
         "feature": "Aspect Ratio",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Aspect Ratio",
+        "continuous": false
     },
     {
-        "name": "Display refresh rate [Hz]",
-        "id": 5,
+        "name": "Display refresh rate",
+        "id": 9,
         "group": "Display",
         "feature": "Display refresh rate [Hz]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Display refresh rate [Hz]",
+        "unit": "Hz",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Luminosity [Nits]",
-        "id": 6,
+        "name": "Luminosity",
+        "id": 10,
         "group": "Display",
         "feature": "Luminosity [Nits]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Luminosity [Nits]",
+        "unit": "Nits",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Colour coverage and certification",
-        "id": 7,
+        "id": 11,
         "group": "Display",
         "feature": "Colour coverage and certification",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Colour coverage and certification",
+        "continuous": false
     },
     {
         "name": "Processor type",
-        "id": 8,
+        "id": 12,
         "group": "Processor",
         "feature": "Processor type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Processor type",
+        "continuous": false
     },
     {
         "name": "AMD processor generation",
-        "id": 9,
+        "id": 13,
         "group": "Processor",
         "feature": "AMD processor generation",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "AMD processor generation",
+        "continuous": false
     },
     {
         "name": "Processor model number",
-        "id": 10,
+        "id": 14,
         "group": "Processor",
         "feature": "Processor model number",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Processor model number",
+        "continuous": false
     },
     {
         "name": "Number of processor cores",
-        "id": 11,
-        "group": "Processor",
-        "feature": "Number of processor cores",
-        "type": "numerical"
-    },
-    {
-        "name": "Processor frequency [GHz]",
-        "id": 12,
-        "group": "Processor",
-        "feature": "Processor frequency [GHz]",
-        "type": "numerical"
-    },
-    {
-        "name": "Core boost frequency [GHz]",
-        "id": 13,
-        "group": "Processor",
-        "feature": "Core boost frequency [GHz]",
-        "type": "numerical"
-    },
-    {
-        "name": "TDP [W]",
-        "id": 14,
-        "group": "Processor",
-        "feature": "TDP [W]",
-        "type": "numerical"
-    },
-    {
-        "name": "Cache processor [MB]",
         "id": 15,
         "group": "Processor",
+        "feature": "Number of processor cores",
+        "type": "numerical",
+        "full_name": "Number of processor cores",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Processor frequency",
+        "id": 16,
+        "group": "Processor",
+        "feature": "Processor frequency [GHz]",
+        "type": "numerical",
+        "full_name": "Processor frequency [GHz]",
+        "unit": "GHz",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Core boost frequency",
+        "id": 17,
+        "group": "Processor",
+        "feature": "Core boost frequency [GHz]",
+        "type": "numerical",
+        "full_name": "Core boost frequency [GHz]",
+        "unit": "GHz",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "TDP",
+        "id": 18,
+        "group": "Processor",
+        "feature": "TDP [W]",
+        "type": "numerical",
+        "full_name": "TDP [W]",
+        "unit": "W",
+        "continuous": false
+    },
+    {
+        "name": "Cache processor",
+        "id": 19,
+        "group": "Processor",
         "feature": "Cache processor [MB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Cache processor [MB]",
+        "unit": "MB",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "CPU features",
-        "id": 16,
+        "id": 20,
         "group": "Processor",
         "feature": "CPU features",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "CPU features",
+        "continuous": false
     },
     {
-        "name": "Size of operational RAM [GB]",
-        "id": 17,
+        "name": "Size of operational RAM",
+        "id": 21,
         "group": "Memory",
         "feature": "Size of operational RAM [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Size of operational RAM [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Memory type",
-        "id": 18,
+        "id": 22,
         "group": "Memory",
         "feature": "Memory type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Memory type",
+        "continuous": false
     },
     {
-        "name": "Memory frequency [MHz]",
-        "id": 19,
+        "name": "Memory frequency",
+        "id": 23,
         "group": "Memory",
         "feature": "Memory frequency [MHz]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Memory frequency [MHz]",
+        "unit": "MHz",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Number of installed slots",
-        "id": 20,
+        "id": 24,
         "group": "Memory",
         "feature": "Number of installed slots",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of installed slots",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Total number of slots",
-        "id": 21,
+        "id": 25,
         "group": "Memory",
         "feature": "Total number of slots",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Total number of slots",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Graphics card type",
-        "id": 22,
+        "id": 26,
         "group": "Graphics card",
         "feature": "Graphics card type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Graphics card type",
+        "continuous": false
     },
     {
         "name": "Graphics card brand",
-        "id": 23,
+        "id": 27,
         "group": "GPU brand/model",
         "feature": "Graphics card brand",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Graphics card brand",
+        "continuous": false
     },
     {
         "name": "Model graphics cards",
-        "id": 24,
+        "id": 28,
         "group": "GPU brand/model",
         "feature": "Model graphics cards",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Model graphics cards",
+        "continuous": false
     },
     {
         "name": "Operating system",
-        "id": 25,
+        "id": 29,
         "group": "Operating system",
         "feature": "Operating system",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Operating system",
+        "continuous": false
     },
     {
         "name": "Storage Type",
-        "id": 26,
+        "id": 30,
         "group": "Hard drive",
         "feature": "Storage Type",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Storage Type",
+        "continuous": false
     },
     {
-        "name": "Storage capacity [GB]",
-        "id": 27,
+        "name": "Storage capacity",
+        "id": 31,
         "group": "Hard drive",
         "feature": "Storage capacity [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Storage capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Drive interfaces",
-        "id": 28,
+        "id": 32,
         "group": "Hard drive",
         "feature": "Drive interfaces",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Drive interfaces",
+        "continuous": false
     },
     {
-        "name": "SSD capacity [GB]",
-        "id": 29,
+        "name": "SSD capacity",
+        "id": 33,
         "group": "Hard drive",
         "feature": "SSD capacity [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "SSD capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Number of occupied slots M.2",
-        "id": 30,
+        "id": 34,
         "group": "Hard drive",
         "feature": "Number of occupied slots M.2",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of occupied slots M.2",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Slots in total M.2",
-        "id": 31,
+        "id": 35,
         "group": "Hard drive",
         "feature": "Slots in total M.2",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Slots in total M.2",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Equipment",
-        "id": 32,
+        "id": 36,
         "group": "Equipment",
         "feature": "Equipment",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Equipment",
+        "continuous": false
     },
     {
         "name": "Webcam",
-        "id": 33,
+        "id": 37,
         "group": "Equipment",
         "feature": "Webcam",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Webcam",
+        "continuous": false
     },
     {
         "name": "USB-C charging",
-        "id": 34,
+        "id": 38,
         "group": "Battery",
         "feature": "USB-C charging",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "USB-C charging",
+        "continuous": false
     },
     {
         "name": "Charging connector",
-        "id": 35,
+        "id": 39,
         "group": "Battery",
         "feature": "Charging connector",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Charging connector",
+        "continuous": false
     },
     {
-        "name": "Battery capacity [Wh]",
-        "id": 36,
+        "name": "Battery capacity",
+        "id": 40,
         "group": "Battery",
         "feature": "Battery capacity [Wh]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Battery capacity [Wh]",
+        "unit": "Wh",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Charging power [W]",
-        "id": 37,
+        "name": "Charging power",
+        "id": 41,
         "group": "Battery",
         "feature": "Charging power [W]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Charging power [W]",
+        "unit": "W",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Maximum battery capacity [h]",
-        "id": 38,
+        "name": "Maximum battery capacity",
+        "id": 42,
         "group": "Battery",
         "feature": "Maximum battery capacity [h]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Maximum battery capacity [h]",
+        "unit": "h",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Construction material",
-        "id": 39,
+        "id": 43,
         "group": "Construction",
         "feature": "Construction material",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Construction material",
+        "continuous": false
     },
     {
         "name": "Convertibility",
-        "id": 40,
+        "id": 44,
         "group": "Construction",
         "feature": "Convertibility",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Convertibility",
+        "continuous": false
     },
     {
         "name": "Colour",
-        "id": 41,
+        "id": 45,
         "group": "Colour",
         "feature": "Colour",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Colour",
+        "continuous": false
     },
     {
-        "name": "Weight [kg]",
-        "id": 42,
+        "name": "Weight",
+        "id": 46,
         "group": "Weight",
         "feature": "Weight [kg]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Weight [kg]",
+        "unit": "kg",
+        "continuous": true
     },
     {
         "name": "Data",
-        "id": 43,
+        "id": 47,
         "group": "Interface",
         "feature": "Data",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Data",
+        "continuous": false
     },
     {
         "name": "Graphical output ports",
-        "id": 44,
+        "id": 48,
         "group": "Interface",
         "feature": "Graphical output ports",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Graphical output ports",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Network",
-        "id": 45,
+        "id": 49,
         "group": "Interface",
         "feature": "Network",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Network",
+        "continuous": false
     },
     {
         "name": "Audio",
-        "id": 46,
+        "id": 50,
         "group": "Interface",
         "feature": "Audio",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Audio",
+        "continuous": false
     },
     {
         "name": "USB-C",
-        "id": 47,
+        "id": 51,
         "group": "Interface",
         "feature": "USB-C",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "USB-C",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "USB 3.2 Gen 1 (USB 3.0)",
-        "id": 48,
+        "id": 52,
         "group": "Interface",
         "feature": "USB 3.2 Gen 1 (USB 3.0)",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "USB 3.2 Gen 1 (USB 3.0)",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Bluetooth",
-        "id": 49,
+        "id": 53,
         "group": "Interface",
         "feature": "Bluetooth",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Bluetooth",
+        "continuous": false
     },
     {
         "name": "WiFi",
-        "id": 50,
+        "id": 54,
         "group": "Interface",
         "feature": "WiFi",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "WiFi",
+        "continuous": false
     },
     {
         "name": "WiFi version",
-        "id": 51,
+        "id": 55,
         "group": "Interface",
         "feature": "WiFi version",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "WiFi version",
+        "continuous": false
     },
     {
         "name": "Optical drive",
-        "id": 52,
+        "id": 56,
         "group": "Interface",
         "feature": "Optical drive",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Optical drive",
+        "continuous": false
     },
     {
-        "name": "Width [mm]",
-        "id": 53,
+        "name": "Width",
+        "id": 57,
         "group": "Dimensions",
         "feature": "Width [mm]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Width [mm]",
+        "unit": "mm",
+        "continuous": true
     },
     {
-        "name": "Maximum height [mm]",
-        "id": 54,
+        "name": "Maximum height",
+        "id": 58,
         "group": "Dimensions",
         "feature": "Maximum height [mm]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Maximum height [mm]",
+        "unit": "mm",
+        "continuous": true
     },
     {
-        "name": "Depth [mm]",
-        "id": 55,
+        "name": "Depth",
+        "id": 59,
         "group": "Dimensions",
         "feature": "Depth [mm]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Depth [mm]",
+        "unit": "mm",
+        "continuous": true
     },
     {
         "name": "Keyboard language",
-        "id": 56,
+        "id": 60,
         "group": "Keyboard layout",
         "feature": "Keyboard language",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Keyboard language",
+        "continuous": false
     },
     {
         "name": "Laptop Series",
-        "id": 57,
+        "id": 61,
         "group": "Product series",
         "feature": "Laptop Series",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Laptop Series",
+        "continuous": false
     },
     {
         "name": "Certification",
-        "id": 58,
+        "id": 62,
         "group": "Certification",
         "feature": "Certification",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Certification",
+        "continuous": false
     },
     {
         "name": "Extended warranty",
-        "id": 59,
+        "id": 63,
         "group": "Warranty",
         "feature": "Extended warranty",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Extended warranty",
+        "continuous": false
     },
     {
         "name": "Package includes",
-        "id": 60,
+        "id": 64,
         "group": "Package contents",
         "feature": "Package includes",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Package includes",
+        "continuous": false
     },
     {
         "name": "Country",
-        "id": 61,
+        "id": 65,
         "group": "Power outlet type",
         "feature": "Country",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Country",
+        "continuous": false
     },
     {
         "name": "Special event",
-        "id": 62,
+        "id": 66,
         "group": "Digital Student",
         "feature": "Special event",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Special event",
+        "continuous": false
     },
     {
         "name": "Intel processor generation",
-        "id": 63,
+        "id": 67,
         "group": "Processor",
         "feature": "Intel processor generation",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Intel processor generation",
+        "continuous": false
     },
     {
-        "name": "Graphics card memory [GB]",
-        "id": 64,
+        "name": "Graphics card memory",
+        "id": 68,
         "group": "Graphics card",
         "feature": "Graphics card memory [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Graphics card memory [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Maximum Graphic Power (TGP) [W]",
-        "id": 65,
+        "name": "Maximum Graphic Power (TGP)",
+        "id": 69,
         "group": "Graphics card",
         "feature": "Maximum Graphic Power (TGP) [W]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Maximum Graphic Power (TGP) [W]",
+        "unit": "W",
+        "continuous": true
     },
     {
-        "name": "Boost clock [MHz]",
-        "id": 66,
+        "name": "Boost clock",
+        "id": 70,
         "group": "Graphics card",
         "feature": "Boost clock [MHz]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Boost clock [MHz]",
+        "unit": "MHz",
+        "order": "asc",
+        "continuous": true
     },
     {
         "name": "Number of occupied slots 2.5\"",
-        "id": 67,
+        "id": 71,
         "group": "Hard drive",
         "feature": "Number of occupied slots 2.5\"",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of occupied slots 2.5\"",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Slots in total 2.5\"",
-        "id": 68,
+        "id": 72,
         "group": "Hard drive",
         "feature": "Slots in total 2.5\"",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Slots in total 2.5\"",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Number of cells",
-        "id": 69,
+        "id": 73,
         "group": "Battery",
         "feature": "Number of cells",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of cells",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Thunderbolt / USB 4",
-        "id": 70,
+        "id": 74,
         "group": "Interface",
         "feature": "Thunderbolt / USB 4",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Thunderbolt / USB 4",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "USB 3.2 Gen 2",
-        "id": 71,
+        "id": 75,
         "group": "Interface",
         "feature": "USB 3.2 Gen 2",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "USB 3.2 Gen 2",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Standby time [h]",
-        "id": 72,
+        "name": "Standby time",
+        "id": 76,
         "group": "Battery",
         "feature": "Standby time [h]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Standby time [h]",
+        "unit": "h",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Lease",
-        "id": 73,
+        "id": 77,
         "group": "Lease",
         "feature": "Lease",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Lease",
+        "continuous": false
     },
     {
         "name": "Processor model",
-        "id": 74,
+        "id": 78,
         "group": "Processor model",
         "feature": "Processor model",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Processor model",
+        "continuous": false
     },
     {
         "name": "USB 2.0",
-        "id": 75,
+        "id": 79,
         "group": "Interface",
         "feature": "USB 2.0",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "USB 2.0",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Number of free slots",
-        "id": 76,
+        "id": 80,
         "group": "Hard drive",
         "feature": "Number of free slots",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of free slots",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Number of stream processors",
-        "id": 77,
+        "id": 81,
         "group": "Graphics card",
         "feature": "Number of stream processors",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Number of stream processors",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "GPU Passmark",
-        "id": 78,
+        "id": 82,
         "group": "Graphics card",
         "feature": "GPU Passmark",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "GPU Passmark",
+        "order": "asc",
+        "continuous": true
     },
     {
-        "name": "HDD capacity [GB]",
-        "id": 79,
+        "name": "HDD capacity",
+        "id": 83,
         "group": "Hard drive",
         "feature": "HDD capacity [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "HDD capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     },
     {
         "name": "Other interfaces",
-        "id": 80,
+        "id": 84,
         "group": "Interface",
         "feature": "Other interfaces",
-        "type": "categorical"
+        "type": "categorical",
+        "full_name": "Other interfaces",
+        "continuous": false
     },
     {
         "name": "USB 3.2 Gen 2x2",
-        "id": 81,
+        "id": 85,
         "group": "Interface",
         "feature": "USB 3.2 Gen 2x2",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "USB 3.2 Gen 2x2",
+        "order": "asc",
+        "continuous": false
     },
     {
-        "name": "Intel Optane [GB]",
-        "id": 82,
+        "name": "Intel Optane",
+        "id": 86,
         "group": "Memory",
         "feature": "Intel Optane [GB]",
-        "type": "numerical"
+        "type": "numerical",
+        "full_name": "Intel Optane [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
     }
 ]

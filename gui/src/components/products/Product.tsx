@@ -6,6 +6,7 @@ import { useAttributes } from "../../contexts/attributes";
 import { Divider } from "@mui/material";
 import Explanations from "./Explanations";
 import { useCategory } from "../../contexts/category";
+import { PRICE } from "../../types/attribute";
 
 interface ProductProps {
   className?: string;
@@ -23,7 +24,7 @@ function Product({ className, product, menu, showExplanation }: ProductProps) {
     currency: "CZK",
     maximumFractionDigits: 0,
   })
-    .format(product.price)
+    .format(product.attributes[PRICE] as number)
     .replace(/,/g, " ");
   return (
     <ListItem>
@@ -33,7 +34,7 @@ function Product({ className, product, menu, showExplanation }: ProductProps) {
             <img className="product-image" src={`media/products/${name}/${product.id}.jpeg`} />
           </div>
           <div className="product-main-info">
-            <Typography variant="h6">{product.name}</Typography>
+            <Typography variant="h6">{product.attributes.name}</Typography>
             <Typography variant="body1">{priceText}</Typography>
           </div>
           {menu}

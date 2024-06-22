@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Optional, Dict, Any, List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AttributeType(str, Enum):
@@ -9,21 +9,19 @@ class AttributeType(str, Enum):
     NUMERICAL = "numerical"
 
 
+class AttributeOrder(str, Enum):
+    ASCENDING = "asc"
+    DESCENDING = "desc"
+
+
 class Attribute(BaseModel):
     full_name: str
     name: str
-    unit: Optional[str]
-    group: str
+    unit: Optional[str] = Field(default=None)
+    group: Optional[str] = Field(default=None)
     type: AttributeType
-
-    @classmethod
-    def from_data(cls, value: Dict[str, Any]) -> "Attribute":
-        name = full_name = value["name"]
-        unit = None
-        if full_name.endswith("]"):
-            unit = full_name.split("[")[-1].split("]")[0]
-            name = "[".join(full_name.split("[")[:-1]).strip()
-        return Attribute(full_name=full_name, name=name, group=value["group"], type=value["type"], unit=unit)
+    order: Optional[AttributeOrder] = Field(default=None)
+    continuous: Optional[bool] = Field(default=None)
 
 
 class CategoryAttributes(BaseModel):
@@ -32,5 +30,5 @@ class CategoryAttributes(BaseModel):
     @classmethod
     def from_data(cls, data: List[Dict[str, Any]]) -> "CategoryAttributes":
         return CategoryAttributes(
-            attributes={attribute["name"]: Attribute.from_data(value=attribute) for attribute in data}
+            attributes={attribute["full_name"]: Attribute.model_validate(attribute) for attribute in data}
         )

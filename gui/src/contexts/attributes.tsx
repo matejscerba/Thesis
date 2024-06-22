@@ -27,7 +27,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     "Number of processor cores",
     "Size of operational RAM [GB]",
     "Model graphics cards",
-    "SSD capacity [GB]",
+    "Storage capacity [GB]",
   ]);
 
   useEffect(() => {
