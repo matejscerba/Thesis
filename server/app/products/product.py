@@ -1,4 +1,4 @@
-from typing import Optional, Dict, Any, cast
+from typing import Dict, Any, cast
 
 import pandas as pd
 from pydantic import BaseModel

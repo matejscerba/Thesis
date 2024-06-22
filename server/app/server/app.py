@@ -9,7 +9,7 @@ def create_app() -> Flask:
     app = Flask("Server")
     CORS(app)
     app.config["CORS_HEADERS"] = ["Content-Type", "Access-Control-Allow-Origin"]
-    app.json.default = json_default
+    app.json.default = json_default  # type: ignore[attr-defined]
 
     add_routes(app=app)
 
