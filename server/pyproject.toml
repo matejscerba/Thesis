@@ -21,6 +21,7 @@ flake8 = {version = "*", source = "pypi"}
 flake8-pyproject = {version = "*", source = "pypi"}
 black = {version = "*", source = "pypi"}
 mypy = {version = "*", source = "pypi"}
+pre-commit = {version = "*", source = "pypi"}
 
 [build-system]
 requires = ["poetry-core"]
