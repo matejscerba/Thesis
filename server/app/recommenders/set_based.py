@@ -63,6 +63,45 @@ class SetBasedRecommender:
         ]
 
     @classmethod
+    def calculate_attribute_position_non_candidate(
+        cls, category_name: str, attribute: Attribute, value: Any, candidates: pd.DataFrame
+    ) -> ProductAttributePosition:
+        if pd.isna(value):
+            return ProductAttributePosition.NEUTRAL
+
+        all_values = candidates[attribute.full_name].dropna()
+
+        if attribute.type == AttributeType.NUMERICAL and attribute.order is not None:
+            lowest = (
+                ProductAttributePosition.WORSE
+                if attribute.order == AttributeOrder.ASCENDING
+                else ProductAttributePosition.BETTER
+            )
+            highest = (
+                ProductAttributePosition.BETTER
+                if attribute.order == AttributeOrder.ASCENDING
+                else ProductAttributePosition.WORSE
+            )
+            if value < all_values.min():
+                return lowest
+            if value > all_values.max():
+                return highest
+        else:
+            all_ratings = DataLoader.load_ratings(
+                category_name=category_name, attribute_name=attribute.full_name, values=all_values
+            )
+            rating = DataLoader.load_rating(
+                category_name=category_name, attribute_name=attribute.full_name, value=value
+            )
+            if rating is not None and all_ratings is not None:
+                if rating < all_ratings.min():
+                    return ProductAttributePosition.LOWER_RATED
+                if rating > all_ratings.max():
+                    return ProductAttributePosition.HIGHER_RATED
+
+        return ProductAttributePosition.NEUTRAL
+
+    @classmethod
     def calculate_attribute_position_candidate(
         cls, category_name: str, attribute: Attribute, value: Any, candidates: pd.DataFrame
     ) -> ProductAttributePosition:
@@ -152,8 +191,28 @@ class SetBasedRecommender:
         all_attributes: CategoryAttributes,
         important_attributes: List[str],
     ) -> ProductExplanation:
+        attributes = []
+        for attribute_name in important_attributes:
+            attribute = all_attributes.attributes[attribute_name]
+            value = product[attribute_name] if not pd.isna(product[attribute_name]) else None
+            position = cls.calculate_attribute_position_non_candidate(
+                category_name=category_name,
+                attribute=all_attributes.attributes[attribute_name],
+                value=product[attribute_name],
+                candidates=candidates,
+            )
+            attributes.append(
+                ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
+            )
         return ProductExplanation(
-            message="non candidate", attributes=[], price_position=ProductAttributePosition.NEUTRAL
+            message="non candidate",
+            attributes=attributes,
+            price_position=cls.calculate_attribute_position_non_candidate(
+                category_name=category_name,
+                attribute=all_attributes.attributes[AttributeName.PRICE.value],
+                value=product[AttributeName.PRICE.value],
+                candidates=candidates,
+            ),
         )
 
     @classmethod
