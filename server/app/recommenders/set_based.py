@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Set, Optional
+from typing import List, Dict, Any, Set
 
 import numpy as np
 import pandas as pd
@@ -64,13 +64,12 @@ class SetBasedRecommender:
 
     @classmethod
     def calculate_attribute_position_candidate(
-        cls,
-        attribute: Attribute,
-        value: Any,
-        all_values: pd.Series,
-        rating: Optional[float] = None,
-        all_ratings: Optional[pd.Series] = None,
+        cls, category_name: str, attribute: Attribute, value: Any, candidates: pd.DataFrame
     ) -> ProductAttributePosition:
+        if pd.isna(value):
+            return ProductAttributePosition.NEUTRAL
+
+        all_values = candidates[attribute.full_name].dropna()
         unique_values = all_values.unique()
         if len(unique_values) <= 1:
             return ProductAttributePosition.NEUTRAL
@@ -91,16 +90,23 @@ class SetBasedRecommender:
                     return lowest
                 if value == all_values.max():
                     return highest
-        elif rating is not None and all_ratings is not None:
-            unique_ratings = all_ratings.unique()
-            if len(unique_ratings) <= 1:
-                return ProductAttributePosition.NEUTRAL
+        else:
+            all_ratings = DataLoader.load_ratings(
+                category_name=category_name, attribute_name=attribute.full_name, values=all_values
+            )
+            rating = DataLoader.load_rating(
+                category_name=category_name, attribute_name=attribute.full_name, value=value
+            )
+            if rating is not None and all_ratings is not None:
+                unique_ratings = all_ratings.unique()
+                if len(unique_ratings) <= 1:
+                    return ProductAttributePosition.NEUTRAL
 
-            if len(all_ratings[all_ratings == rating]) == 1:
-                if rating == all_ratings.min():
-                    return ProductAttributePosition.LOWEST_RATED
-                if rating == all_ratings.max():
-                    return ProductAttributePosition.HIGHEST_RATED
+                if len(all_ratings[all_ratings == rating]) == 1:
+                    if rating == all_ratings.min():
+                        return ProductAttributePosition.LOWEST_RATED
+                    if rating == all_ratings.max():
+                        return ProductAttributePosition.HIGHEST_RATED
 
         return ProductAttributePosition.NEUTRAL
 
@@ -116,23 +122,13 @@ class SetBasedRecommender:
         attributes = []
         for attribute_name in important_attributes:
             attribute = all_attributes.attributes[attribute_name]
-            position = ProductAttributePosition.NEUTRAL
-            value = product[attribute_name] if not pd.isna(product[attribute_name]) else None
-            if value is not None:
-                all_values = candidates[attribute_name].dropna()
-                all_ratings = DataLoader.load_ratings(
-                    category_name=category_name, attribute_name=attribute.full_name, values=all_values
-                )
-                rating = DataLoader.load_rating(
-                    category_name=category_name, attribute_name=attribute.full_name, value=value
-                )
-                position = cls.calculate_attribute_position_candidate(
-                    attribute=attribute,
-                    value=product[attribute_name],
-                    all_values=all_values,
-                    rating=rating,
-                    all_ratings=all_ratings,
-                )
+            value = product[attribute_name]
+            position = cls.calculate_attribute_position_candidate(
+                category_name=category_name,
+                attribute=all_attributes.attributes[attribute_name],
+                value=product[attribute_name],
+                candidates=candidates,
+            )
             attributes.append(
                 ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
             )
@@ -140,9 +136,10 @@ class SetBasedRecommender:
             message="explanation",
             attributes=attributes,
             price_position=cls.calculate_attribute_position_candidate(
+                category_name=category_name,
                 attribute=all_attributes.attributes[AttributeName.PRICE.value],
                 value=product[AttributeName.PRICE.value],
-                all_values=candidates[AttributeName.PRICE.value].dropna(),
+                candidates=candidates,
             ),
         )
 

@@ -48,7 +48,7 @@ class DataLoader:
     def load_ratings(cls, category_name: str, attribute_name: str, values: pd.Series) -> pd.Series:
         df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";")
         df = df[df["attribute"] == attribute_name]
-        mapping = dict(zip(df["value"], df["rating"]))
+        mapping = dict(zip(df["value"].astype(str), df["rating"]))
         return pd.Series([mapping[str(value)] for value in values])
 
     @classmethod
