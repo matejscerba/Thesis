@@ -14,12 +14,14 @@ export function getColor(position: string) {
   switch (position) {
     case ProductAttributePosition.BEST.valueOf():
     case ProductAttributePosition.BETTER.valueOf():
-      return "success";
+      return "info";
     case ProductAttributePosition.HIGHEST_RATED.valueOf():
     case ProductAttributePosition.HIGHER_RATED.valueOf():
       return "primary";
     case ProductAttributePosition.NEUTRAL.valueOf():
       return "secondary";
+    case ProductAttributePosition.RELEVANT.valueOf():
+      return "success";
     case ProductAttributePosition.LOWEST_RATED.valueOf():
     case ProductAttributePosition.LOWER_RATED.valueOf():
       return "warning";
@@ -32,10 +34,13 @@ export function getColor(position: string) {
 }
 
 export function getTextColor(position: string) {
-  if (position === ProductAttributePosition.NEUTRAL.valueOf()) {
-    return "dark";
+  switch (position) {
+    case ProductAttributePosition.NEUTRAL.valueOf():
+    case ProductAttributePosition.RELEVANT.valueOf():
+      return "dark";
+    default:
+      return getColor(position);
   }
-  return getColor(position);
 }
 
 export function getBgColor(position: string) {
@@ -88,6 +93,8 @@ export function getPositionText(position: string, override: string = "value", or
       return `Best${orderText} ${override} of all candidates`;
     case ProductAttributePosition.HIGHEST_RATED.valueOf():
       return `Highest-rated ${override} of all candidates`;
+    case ProductAttributePosition.RELEVANT.valueOf():
+      return `Relevant ${override}`;
     case ProductAttributePosition.LOWEST_RATED.valueOf():
       return `Lowest-rated ${override} of all candidates`;
     case ProductAttributePosition.WORST.valueOf():

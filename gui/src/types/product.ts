@@ -11,6 +11,7 @@ export enum ProductAttributePosition {
   BETTER = "better",
   BEST = "best",
   NEUTRAL = "neutral",
+  RELEVANT = "relevant",
   WORST = "worst",
   WORSE = "worse",
   HIGHER_RATED = "higher_rated",

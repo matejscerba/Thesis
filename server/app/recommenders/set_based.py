@@ -84,8 +84,10 @@ class SetBasedRecommender:
             )
             if value < all_values.min():
                 return lowest
-            if value > all_values.max():
+            elif value > all_values.max():
                 return highest
+            else:
+                return ProductAttributePosition.RELEVANT
         else:
             all_ratings = DataLoader.load_ratings(
                 category_name=category_name, attribute_name=attribute.full_name, values=all_values
