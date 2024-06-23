@@ -22,7 +22,7 @@ class DataLoader:
             filename = "mac_large"
         data = pd.read_csv(
             f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
-        )
+        ).replace({float("nan"): None})
         if userows:
             data = data[data["id"].apply(lambda x: x in userows)]
         return data
@@ -35,7 +35,8 @@ class DataLoader:
     def load_category(cls, category_name: str) -> UnorganizedCategory:
         return UnorganizedCategory.from_dataframe(
             cls.load_products(
-                category_name=category_name, usecols=[AttributeName.NAME.value, AttributeName.PRICE.value]
+                category_name=category_name,
+                usecols=[AttributeName.NAME.value, AttributeName.PRICE.value, AttributeName.RATING.value],
             )
         )
 
@@ -46,7 +47,7 @@ class DataLoader:
 
     @classmethod
     def load_ratings(cls, category_name: str, attribute_name: str, values: pd.Series) -> pd.Series:
-        df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";")
+        df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";").replace({float("nan"): None})
         df = df[df["attribute"] == attribute_name]
         mapping = dict(zip(df["value"].astype(str), df["rating"]))
         return pd.Series([mapping[str(value)] for value in values])

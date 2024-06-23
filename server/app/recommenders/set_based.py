@@ -194,7 +194,7 @@ class SetBasedRecommender:
         attributes = []
         for attribute_name in important_attributes:
             attribute = all_attributes.attributes[attribute_name]
-            value = product[attribute_name] if not pd.isna(product[attribute_name]) else None
+            value = product[attribute_name]
             position = cls.calculate_attribute_position_non_candidate(
                 category_name=category_name,
                 attribute=all_attributes.attributes[attribute_name],

@@ -44,10 +44,18 @@ function Product({ className, product, menu }: ProductProps) {
           <div className="product-main-info">
             <Typography variant="h6">{product.name}</Typography>
             <PositionTooltip position={explanation?.price_position} attribute={price}>
-              <Typography variant="body1" className={`text-${getTextColor(explanation?.price_position)} fit-content`}>
+              <Typography
+                variant="body1"
+                className={`text-${getTextColor(explanation?.price_position)} fit-content d-inline-block`}
+              >
                 {valueToString(product.price, price)}
               </Typography>
             </PositionTooltip>
+            {product.rating !== undefined && product.rating !== null && (
+              <Typography variant="body1" className="fit-content d-inline-block" sx={{ float: "right" }}>
+                {product.rating} <i className="bi bi-star-fill text-warning" />
+              </Typography>
+            )}
           </div>
           {menu}
         </div>
