@@ -5,7 +5,13 @@ import pandas as pd
 
 from app.attributes.attribute import Attribute, AttributeType, AttributeOrder, AttributeName, CategoryAttributes
 from app.data_loader import DataLoader
-from app.products.explanations import ProductAttributePosition, ProductExplanation, ProductAttributeExplanation
+from app.products.explanations import (
+    ProductAttributePosition,
+    ProductExplanation,
+    ProductAttributeExplanation,
+    ProductExplanationMessage,
+    ProductExplanationMessageCode,
+)
 
 
 class SetBasedRecommender:
@@ -174,7 +180,7 @@ class SetBasedRecommender:
                 ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
             )
         return ProductExplanation(
-            message="explanation",
+            message=ProductExplanationMessage(code=ProductExplanationMessageCode.NONE),
             attributes=attributes,
             price_position=cls.calculate_attribute_position_candidate(
                 category_name=category_name,
@@ -183,6 +189,41 @@ class SetBasedRecommender:
                 candidates=candidates,
             ),
         )
+
+    @classmethod
+    def _is_better_than_all_candidates(
+        cls,
+        product: pd.Series,
+        candidates: pd.DataFrame,
+        all_attributes: CategoryAttributes,
+    ) -> bool:
+        numerical_attributes = all_attributes.get_numerical_attributes(include_price=False)
+        numerical_columns = [col for col in candidates.columns if col in numerical_attributes]
+        if len(numerical_columns) == 0:
+            return False
+
+        columns_map = np.array(
+            [
+                1 if numerical_attributes[attribute].order == AttributeOrder.ASCENDING else -1
+                for attribute in numerical_columns
+            ]
+        )
+
+        numerical_product = product[numerical_columns] * columns_map
+        best_candidate = (candidates[numerical_columns] * columns_map).max(axis=0)
+        return (numerical_product > best_candidate).all()
+
+    @classmethod
+    def _generate_explanation_message_non_candidate(
+        cls,
+        product: pd.Series,
+        candidates: pd.DataFrame,
+        all_attributes: CategoryAttributes,
+    ) -> ProductExplanationMessage:
+        code = ProductExplanationMessageCode.NONE
+        if cls._is_better_than_all_candidates(product=product, candidates=candidates, all_attributes=all_attributes):
+            code = ProductExplanationMessageCode.BETTER_THAN_ALL_CANDIDATES
+        return ProductExplanationMessage(code=code)
 
     @classmethod
     def _explain_non_candidate(
@@ -207,7 +248,9 @@ class SetBasedRecommender:
                 ProductAttributeExplanation(attribute=attribute, attribute_value=value, position=position)
             )
         return ProductExplanation(
-            message="non candidate",
+            message=cls._generate_explanation_message_non_candidate(
+                product=product, candidates=candidates, all_attributes=all_attributes
+            ),
             attributes=attributes,
             price_position=cls.calculate_attribute_position_non_candidate(
                 category_name=category_name,

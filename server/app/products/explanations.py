@@ -19,13 +19,22 @@ class ProductAttributePosition(str, Enum):
     LOWER_RATED = "lower_rated"
 
 
+class ProductExplanationMessageCode(str, Enum):
+    NONE = "none"
+    BETTER_THAN_ALL_CANDIDATES = "better_than_all_candidates"
+
+
 class ProductAttributeExplanation(BaseModel):
     attribute: Attribute
     attribute_value: Any
     position: ProductAttributePosition
 
 
+class ProductExplanationMessage(BaseModel):
+    code: ProductExplanationMessageCode
+
+
 class ProductExplanation(BaseModel):
-    message: str
+    message: ProductExplanationMessage
     attributes: List[ProductAttributeExplanation]
     price_position: ProductAttributePosition

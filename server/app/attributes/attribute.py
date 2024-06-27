@@ -38,3 +38,11 @@ class CategoryAttributes(BaseModel):
         return CategoryAttributes(
             attributes={attribute["full_name"]: Attribute.model_validate(attribute) for attribute in data}
         )
+
+    def get_numerical_attributes(self, include_price: bool) -> Dict[str, Attribute]:
+        attributes = {
+            key: attribute for key, attribute in self.attributes.items() if attribute.type == AttributeType.NUMERICAL
+        }
+        if include_price is False:
+            _ = attributes.pop(AttributeName.PRICE, None)
+        return attributes

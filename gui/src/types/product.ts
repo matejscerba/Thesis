@@ -20,6 +20,15 @@ export enum ProductAttributePosition {
   LOWER_RATED = "lower_rated",
 }
 
+export enum ProductExplanationMessageCode {
+  NONE = "none",
+  BETTER_THAN_ALL_CANDIDATES = "better_than_all_candidates",
+}
+
+export interface ProductExplanationMessage {
+  code: string;
+}
+
 interface ProductAttributeExplanation {
   attribute: Attribute;
   attribute_value: any;
@@ -27,7 +36,7 @@ interface ProductAttributeExplanation {
 }
 
 export interface ProductExplanation {
-  message: string;
+  message: ProductExplanationMessage;
   attributes: ProductAttributeExplanation[];
   price_position: string;
 }

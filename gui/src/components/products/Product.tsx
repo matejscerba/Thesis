@@ -8,6 +8,8 @@ import { getTextColor, valueToString } from "../../utils/attributes";
 import ExplanationAttribute from "./ExplanationAttribute";
 import { fetchPostJson } from "../../utils/api";
 import PositionTooltip from "./PositionTooltip";
+import { getProductExplanationMessageInfo } from "../../utils/products";
+import { Tooltip } from "@mui/material";
 
 interface ProductProps {
   className?: string;
@@ -33,6 +35,8 @@ function Product({ className, product, menu }: ProductProps) {
       })
       .catch((e) => console.error(e));
   }, [candidateIds, discarded]);
+
+  const explanationInfo = getProductExplanationMessageInfo(explanation?.message);
 
   return (
     <ListItem>
@@ -72,9 +76,15 @@ function Product({ className, product, menu }: ProductProps) {
                 />
               ))}
             </div>
-            <div className="explanation-wrapper py-1 px-2">
-              <Typography variant="body1">{explanation.message}</Typography>
-            </div>
+            {explanationInfo && (
+              <div className="explanation-wrapper py-1 px-2">
+                <Tooltip title={explanationInfo.info}>
+                  <Typography variant="body1" className="text-center">
+                    {explanationInfo.text}
+                  </Typography>
+                </Tooltip>
+              </div>
+            )}
           </>
         )}
       </div>
