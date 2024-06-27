@@ -18,7 +18,7 @@ function Category({ name }: CategoryProps) {
         </Typography>
         <div className="category-layout">
           <div className="category-sidebar">
-            <CategorySidebar name={name} />
+            <CategorySidebar />
           </div>
           <div className="category-content">
             <ProductList name={name} />

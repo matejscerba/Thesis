@@ -120,3 +120,17 @@
 .fit-content {
   width: fit-content;
 }
+
+.removable, .addable {
+  cursor: pointer;
+}
+
+.removable:hover {
+  background-color: var(--bs-danger-bg-subtle) !important;
+  border-color: var(--bs-danger) !important;
+}
+
+.addable:hover {
+  background-color: var(--bs-success-bg-subtle) !important;
+  border-color: var(--bs-success) !important;
+}

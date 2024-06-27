@@ -6,12 +6,18 @@ interface AttributesContextInterface {
   attributes: Attribute[];
   attributeNames: string[];
   price: Attribute;
+  restAttributes: Attribute[];
+  addAttribute: (attribute: string) => void;
+  removeAttribute: (attribute: string) => void;
 }
 
 const AttributesContext = createContext<AttributesContextInterface>({
   attributes: undefined,
   attributeNames: undefined,
   price: undefined,
+  restAttributes: undefined,
+  addAttribute: undefined,
+  removeAttribute: undefined,
 });
 
 interface AttributesResponse {
@@ -25,7 +31,7 @@ interface AttributesContextProviderProps {
 
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
-  const [importantAttributes] = useState<string[]>([
+  const [importantAttributes, setImportantAttributes] = useState<string[]>([
     "Number of processor cores",
     "Size of operational RAM [GB]",
     "Model graphics cards",
@@ -48,6 +54,15 @@ export function AttributesContextProvider({ category, children }: AttributesCont
         attributes: attributes ? importantAttributes.map((attributeName) => attributes[attributeName]) : undefined,
         attributeNames: importantAttributes,
         price: attributes?.[PRICE],
+        restAttributes: Object.values(attributes ?? {})
+          .filter((attr) => !importantAttributes.includes(attr.full_name) && attr.full_name !== PRICE)
+          .sort(),
+        addAttribute: (attribute) => {
+          setImportantAttributes((prevState) => [...prevState, attribute]);
+        },
+        removeAttribute: (attribute) => {
+          setImportantAttributes((prevState) => prevState.filter((attr) => attr !== attribute));
+        },
       }}
     >
       {children}

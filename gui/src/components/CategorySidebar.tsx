@@ -1,11 +1,12 @@
 import React from "react";
+import ImportantAttributesMenu from "./menus/ImportantAttributesMenu";
 
-interface CategorySidebarProps {
-  name: string;
-}
-
-function CategorySidebar({ name }: CategorySidebarProps) {
-  return <div className="border border-secondary rounded bg-white p-2">Here will be menu for category {name}</div>;
+function CategorySidebar() {
+  return (
+    <div className="border border-secondary rounded bg-white p-2">
+      <ImportantAttributesMenu />
+    </div>
+  );
 }
 
 export default CategorySidebar;
