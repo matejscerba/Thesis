@@ -40,3 +40,10 @@ export interface ProductExplanation {
   attributes: ProductAttributeExplanation[];
   price_position: string;
 }
+
+export enum ProductGroupType {
+  CANDIDATES = "candidates",
+  ALTERNATIVES = "alternatives",
+  UNSEEN = "unseen",
+  DISCARDED = "discarded",
+}

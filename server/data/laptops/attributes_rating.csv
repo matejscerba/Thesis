@@ -55,9 +55,6 @@ Display refresh rate [Hz];240.0;4.596907216494845;97.0
 Display refresh rate [Hz];250.0;;0.0
 Display refresh rate [Hz];300.0;4.5;9.0
 Display refresh rate [Hz];360.0;4.25;8.0
-Luminosity [Nits];1.0;4.666666666666667;18.0
-Luminosity [Nits];1.1;4.7;10.0
-Luminosity [Nits];1.2;4.166666666666667;6.0
 Luminosity [Nits];200.0;1.0;1.0
 Luminosity [Nits];220.0;4.375;8.0
 Luminosity [Nits];250.0;4.483221476510067;596.0
@@ -76,6 +73,9 @@ Luminosity [Nits];500.0;4.747855530474041;443.0
 Luminosity [Nits];550.0;4.6;35.0
 Luminosity [Nits];600.0;4.1521739130434785;46.0
 Luminosity [Nits];800.0;;0.0
+Luminosity [Nits];1000.0;4.666666666666667;18.0
+Luminosity [Nits];1100.0;4.7;10.0
+Luminosity [Nits];1200.0;4.166666666666667;6.0
 Colour coverage and certification;['100% Adobe RGB', 'DisplayHDR'];;0.0
 Colour coverage and certification;['100% Adobe RGB'];;0.0
 Colour coverage and certification;['100% Adobe'];3.6666666666666665;3.0
@@ -333,8 +333,8 @@ Processor frequency [GHz];0.8;4.9;8.0
 Processor frequency [GHz];0.9;4.489247311827957;93.0
 Processor frequency [GHz];1.0;4.341666666666667;24.0
 Processor frequency [GHz];1.1;4.090647482014389;139.0
-Processor frequency [GHz];1.2;4.066666666666666;51.0
-Processor frequency [GHz];1.3;4.461290322580645;62.0
+Processor frequency [GHz];1.2;4.048;50.0
+Processor frequency [GHz];1.3;4.424137931034482;58.0
 Processor frequency [GHz];1.4;4.97029702970297;101.0
 Processor frequency [GHz];1.5;4.443589743589744;39.0
 Processor frequency [GHz];1.6;4.545454545454546;22.0
@@ -355,18 +355,32 @@ Processor frequency [GHz];2.9;4.866666666666666;12.0
 Processor frequency [GHz];3.0;3.7571428571428576;42.0
 Processor frequency [GHz];3.1;;0.0
 Processor frequency [GHz];3.2;4.545714285714285;140.0
-Processor frequency [GHz];3.3;4.280769230769231;156.0
+Processor frequency [GHz];3.3;4.287248322147651;149.0
 Processor frequency [GHz];3.4;3.9192307692307695;26.0
-Processor frequency [GHz];3.5;4.476470588235294;17.0
+Processor frequency [GHz];3.5;4.44375;16.0
 Processor frequency [GHz];3.6;3.888888888888889;9.0
 Processor frequency [GHz];3.7;4.2;10.0
 Processor frequency [GHz];3.8;4.85;20.0
-Processor frequency [GHz];3.9;5.0;9.0
+Processor frequency [GHz];3.9;5.0;8.0
 Processor frequency [GHz];4.0;4.707692307692307;13.0
 Processor frequency [GHz];4.1;;0.0
 Processor frequency [GHz];4.3;;0.0
 Processor frequency [GHz];4.4;4.0;2.0
 Processor frequency [GHz];4.7;;0.0
+Processor frequency [GHz];11.0;;0.0
+Processor frequency [GHz];12.0;5.0;1.0
+Processor frequency [GHz];13.0;5.0;4.0
+Processor frequency [GHz];15.0;;0.0
+Processor frequency [GHz];17.0;;0.0
+Processor frequency [GHz];18.0;;0.0
+Processor frequency [GHz];23.0;;0.0
+Processor frequency [GHz];24.0;;0.0
+Processor frequency [GHz];26.0;;0.0
+Processor frequency [GHz];27.0;;0.0
+Processor frequency [GHz];33.0;4.142857142857143;7.0
+Processor frequency [GHz];34.0;;0.0
+Processor frequency [GHz];35.0;5.0;1.0
+Processor frequency [GHz];39.0;5.0;1.0
 Core boost frequency [GHz];0.5;4.0;1.0
 Core boost frequency [GHz];2.0;4.585714285714286;7.0
 Core boost frequency [GHz];2.05;5.0;1.0
@@ -382,26 +396,37 @@ Core boost frequency [GHz];3.5;4.3625;8.0
 Core boost frequency [GHz];3.6;4.64;75.0
 Core boost frequency [GHz];3.7;3.8;5.0
 Core boost frequency [GHz];3.8;4.535416666666666;48.0
-Core boost frequency [GHz];3.9;4.953703703703703;108.0
+Core boost frequency [GHz];3.9;4.951923076923077;104.0
 Core boost frequency [GHz];4.0;4.617857142857143;56.0
 Core boost frequency [GHz];4.1;4.209183673469388;98.0
 Core boost frequency [GHz];4.2;4.2631147540983605;122.0
 Core boost frequency [GHz];4.3;4.462666666666666;75.0
-Core boost frequency [GHz];4.4;4.357746478873239;355.0
-Core boost frequency [GHz];4.5;4.464285714285714;336.0
+Core boost frequency [GHz];4.4;4.353276353276353;351.0
+Core boost frequency [GHz];4.5;4.469512195121951;328.0
 Core boost frequency [GHz];4.55;4.672727272727273;11.0
 Core boost frequency [GHz];4.6;4.53;60.0
-Core boost frequency [GHz];4.7;4.346060606060607;330.0
+Core boost frequency [GHz];4.7;4.344072948328267;329.0
 Core boost frequency [GHz];4.75;5.0;2.0
-Core boost frequency [GHz];4.8;3.8464285714285715;28.0
+Core boost frequency [GHz];4.8;3.803703703703704;27.0
 Core boost frequency [GHz];4.9;4.515384615384615;26.0
 Core boost frequency [GHz];5.0;4.625;108.0
 Core boost frequency [GHz];5.1;4.5;20.0
 Core boost frequency [GHz];5.2;4.199999999999999;26.0
 Core boost frequency [GHz];5.3;;0.0
-Core boost frequency [GHz];5.4;4.742857142857143;49.0
+Core boost frequency [GHz];5.4;4.7375;48.0
 Core boost frequency [GHz];5.5;4.8;5.0
 Core boost frequency [GHz];5.6;4.257142857142857;21.0
+Core boost frequency [GHz];34.0;;0.0
+Core boost frequency [GHz];39.0;5.0;4.0
+Core boost frequency [GHz];41.0;;0.0
+Core boost frequency [GHz];42.0;;0.0
+Core boost frequency [GHz];43.0;;0.0
+Core boost frequency [GHz];44.0;4.75;4.0
+Core boost frequency [GHz];45.0;4.25;8.0
+Core boost frequency [GHz];46.0;;0.0
+Core boost frequency [GHz];47.0;5.0;1.0
+Core boost frequency [GHz];48.0;5.0;1.0
+Core boost frequency [GHz];54.0;5.0;1.0
 TDP [W];4.0;4.7;41.0
 TDP [W];5.0;4.557142857142857;14.0
 TDP [W];6.0;4.217156862745098;204.0
@@ -482,38 +507,31 @@ Memory type;LPDDR4X;4.421374045801527;131.0
 Memory type;LPDDR5;4.336397058823529;272.0
 Memory type;LPDDR5x;4.416666666666667;12.0
 Memory frequency [MHz];0.0;5.0;4.0
-Memory frequency [MHz];1.6;;0.0
-Memory frequency [MHz];1.866;3.0;2.0
-Memory frequency [MHz];1.9;;0.0
-Memory frequency [MHz];2.0;;0.0
-Memory frequency [MHz];2.13;;0.0
-Memory frequency [MHz];2.133;4.763978494623656;186.0
-Memory frequency [MHz];2.2;;0.0
-Memory frequency [MHz];2.4;4.09140625;128.0
-Memory frequency [MHz];2.6;5.0;1.0
-Memory frequency [MHz];2.666;4.7153846153846155;52.0
-Memory frequency [MHz];2.933;4.446153846153846;26.0
-Memory frequency [MHz];3.2;4.449242424242424;792.0
-Memory frequency [MHz];3.6;5.0;1.0
-Memory frequency [MHz];3.733;4.972571428571428;175.0
-Memory frequency [MHz];4.266;4.454545454545454;44.0
-Memory frequency [MHz];4.267;;0.0
-Memory frequency [MHz];4.8;4.3590529247910865;359.0
-Memory frequency [MHz];5.2;4.54390243902439;82.0
-Memory frequency [MHz];5.5;4.6;15.0
-Memory frequency [MHz];5.6;4.937777777777778;45.0
-Memory frequency [MHz];6.0;5.0;1.0
-Memory frequency [MHz];6.4;4.5638297872340425;47.0
-Memory frequency [MHz];7.467;;0.0
-Memory frequency [MHz];7.5;;0.0
-Memory frequency [MHz];48.0;;0.0
+Memory frequency [MHz];1600.0;;0.0
+Memory frequency [MHz];1866.0;3.0;2.0
+Memory frequency [MHz];1900.0;;0.0
+Memory frequency [MHz];2000.0;;0.0
+Memory frequency [MHz];2130.0;;0.0
+Memory frequency [MHz];2133.0;4.763978494623656;186.0
 Memory frequency [MHz];2200.0;;0.0
-Memory frequency [MHz];3200.0;4.142857142857143;7.0
-Memory frequency [MHz];3733.0;4.793457943925233;107.0
-Memory frequency [MHz];4800.0;5.0;1.0
-Memory frequency [MHz];5200.0;;0.0
-Memory frequency [MHz];5600.0;5.0;1.0
-Memory frequency [MHz];6400.0;;0.0
+Memory frequency [MHz];2400.0;4.09140625;128.0
+Memory frequency [MHz];2600.0;5.0;1.0
+Memory frequency [MHz];2666.0;4.7153846153846155;52.0
+Memory frequency [MHz];2933.0;4.446153846153846;26.0
+Memory frequency [MHz];3200.0;4.4465581977471835;799.0
+Memory frequency [MHz];3600.0;5.0;1.0
+Memory frequency [MHz];3733.0;4.904609929078014;282.0
+Memory frequency [MHz];4266.0;4.454545454545454;44.0
+Memory frequency [MHz];4267.0;;0.0
+Memory frequency [MHz];4800.0;4.360833333333334;360.0
+Memory frequency [MHz];5200.0;4.54390243902439;82.0
+Memory frequency [MHz];5500.0;4.6;15.0
+Memory frequency [MHz];5600.0;4.939130434782609;46.0
+Memory frequency [MHz];6000.0;5.0;1.0
+Memory frequency [MHz];6400.0;4.5638297872340425;47.0
+Memory frequency [MHz];7467.0;;0.0
+Memory frequency [MHz];7500.0;;0.0
+Memory frequency [MHz];48000.0;;0.0
 Number of installed slots;0.0;4.292934782608696;184.0
 Number of installed slots;1.0;4.406084656084656;378.0
 Number of installed slots;2.0;4.496511627906977;688.0
@@ -1062,7 +1080,7 @@ Charging connector;MS Surface 6-pin;4.53939393939394;33.0
 Charging connector;USB-C;4.585121107266436;578.0
 Charging connector;USB-C, Apple MagSafe;5.0;12.0
 Battery capacity [Wh];3.0;;0.0
-Battery capacity [Wh];26.8;4.88;10.0
+Battery capacity [Wh];26.8;4.8;6.0
 Battery capacity [Wh];27.0;4.2625;8.0
 Battery capacity [Wh];29.0;;0.0
 Battery capacity [Wh];30.0;3.898591549295775;71.0
@@ -1071,7 +1089,7 @@ Battery capacity [Wh];36.0;3.9896551724137934;29.0
 Battery capacity [Wh];37.0;1.0;1.0
 Battery capacity [Wh];38.0;4.323880597014925;67.0
 Battery capacity [Wh];39.0;5.0;4.0
-Battery capacity [Wh];39.3;4.25;8.0
+Battery capacity [Wh];39.3;4.5;2.0
 Battery capacity [Wh];40.0;4.2625;16.0
 Battery capacity [Wh];41.0;4.440869565217391;115.0
 Battery capacity [Wh];42.0;4.3;158.0
@@ -1092,12 +1110,11 @@ Battery capacity [Wh];51.0;3.935294117647059;17.0
 Battery capacity [Wh];52.0;4.5;2.0
 Battery capacity [Wh];52.4;3.3333333333333335;3.0
 Battery capacity [Wh];52.5;4.661538461538462;26.0
-Battery capacity [Wh];52.6;5.0;9.0
+Battery capacity [Wh];52.6;5.0;7.0
 Battery capacity [Wh];52.8;;0.0
 Battery capacity [Wh];53.0;4.721794871794872;156.0
 Battery capacity [Wh];53.5;4.470149253731344;67.0
 Battery capacity [Wh];54.0;4.504545454545454;44.0
-Battery capacity [Wh];54.5;4.7;60.0
 Battery capacity [Wh];54.7;;0.0
 Battery capacity [Wh];55.0;4.4;8.0
 Battery capacity [Wh];56.0;4.245098039215686;51.0
@@ -1115,7 +1132,7 @@ Battery capacity [Wh];63.0;4.192592592592593;27.0
 Battery capacity [Wh];64.0;1.0;1.0
 Battery capacity [Wh];65.0;4.6;10.0
 Battery capacity [Wh];66.0;5.0;1.0
-Battery capacity [Wh];66.5;4.818181818181818;22.0
+Battery capacity [Wh];66.5;;0.0
 Battery capacity [Wh];67.0;;0.0
 Battery capacity [Wh];68.0;;0.0
 Battery capacity [Wh];69.0;;0.0
@@ -1148,6 +1165,12 @@ Battery capacity [Wh];99.0;4.714285714285714;7.0
 Battery capacity [Wh];99.9;4.5;14.0
 Battery capacity [Wh];99.99;4.4;5.0
 Battery capacity [Wh];100.0;4.916666666666667;36.0
+Battery capacity [Wh];268.0;5.0;4.0
+Battery capacity [Wh];393.0;4.166666666666667;6.0
+Battery capacity [Wh];525.0;;0.0
+Battery capacity [Wh];526.0;5.0;2.0
+Battery capacity [Wh];545.0;4.7;60.0
+Battery capacity [Wh];665.0;4.818181818181818;22.0
 Charging power [W];3.0;5.0;2.0
 Charging power [W];24.0;4.0814516129032254;124.0
 Charging power [W];30.0;4.853900709219858;141.0
@@ -1365,7 +1388,7 @@ Colour;['Yellow'];3.1;7.0
 Weight [kg];0.5;;0.0
 Weight [kg];0.51;4.7;3.0
 Weight [kg];0.52;5.0;1.0
-Weight [kg];0.54;4.586666666666667;15.0
+Weight [kg];0.54;4.4363636363636365;11.0
 Weight [kg];0.59;;0.0
 Weight [kg];0.75;4.0;1.0
 Weight [kg];0.77;5.0;1.0
@@ -1395,8 +1418,8 @@ Weight [kg];1.19;;0.0
 Weight [kg];1.2;4.564705882352941;34.0
 Weight [kg];1.21;1.0;1.0
 Weight [kg];1.23;3.0;4.0
-Weight [kg];1.24;4.75679012345679;162.0
-Weight [kg];1.25;4.901610738255033;745.0
+Weight [kg];1.24;4.767142857142857;140.0
+Weight [kg];1.25;4.9255186721991695;482.0
 Weight [kg];1.26;;0.0
 Weight [kg];1.27;;0.0
 Weight [kg];1.28;1.0;2.0
@@ -1411,8 +1434,8 @@ Weight [kg];1.36;5.0;4.0
 Weight [kg];1.37;4.867777777777778;180.0
 Weight [kg];1.38;4.0;3.0
 Weight [kg];1.39;4.578571428571428;56.0
-Weight [kg];1.4;4.7542168674698795;83.0
-Weight [kg];1.41;4.428571428571429;7.0
+Weight [kg];1.4;4.7250000000000005;56.0
+Weight [kg];1.41;4.5;6.0
 Weight [kg];1.42;5.0;1.0
 Weight [kg];1.43;5.0;1.0
 Weight [kg];1.44;5.0;1.0
@@ -1422,7 +1445,7 @@ Weight [kg];1.47;;0.0
 Weight [kg];1.48;4.0;4.0
 Weight [kg];1.49;4.720833333333333;24.0
 Weight [kg];1.5;4.374137931034483;58.0
-Weight [kg];1.51;4.818181818181818;22.0
+Weight [kg];1.51;;0.0
 Weight [kg];1.52;4.651020408163265;49.0
 Weight [kg];1.53;4.166666666666667;6.0
 Weight [kg];1.54;5.0;3.0
@@ -1431,7 +1454,7 @@ Weight [kg];1.56;5.0;1.0
 Weight [kg];1.57;5.0;1.0
 Weight [kg];1.58;5.0;1.0
 Weight [kg];1.59;4.664;25.0
-Weight [kg];1.6;3.86875;16.0
+Weight [kg];1.6;3.7933333333333334;15.0
 Weight [kg];1.61;3.857142857142857;7.0
 Weight [kg];1.62;4.705882352941177;17.0
 Weight [kg];1.63;4.373684210526316;38.0
@@ -1441,19 +1464,19 @@ Weight [kg];1.66;5.0;5.0
 Weight [kg];1.67;;0.0
 Weight [kg];1.68;3.9;8.0
 Weight [kg];1.69;3.736842105263158;19.0
-Weight [kg];1.7;4.347976878612716;173.0
+Weight [kg];1.7;4.346198830409357;171.0
 Weight [kg];1.71;;0.0
 Weight [kg];1.72;4.666666666666667;3.0
 Weight [kg];1.73;5.0;4.0
 Weight [kg];1.74;4.549122807017544;57.0
-Weight [kg];1.75;4.6125;16.0
+Weight [kg];1.75;4.557142857142857;14.0
 Weight [kg];1.76;4.8;5.0
 Weight [kg];1.77;4.144444444444445;18.0
 Weight [kg];1.78;4.533333333333333;6.0
 Weight [kg];1.79;3.3625;8.0
-Weight [kg];1.8;4.376;50.0
+Weight [kg];1.8;4.363265306122449;49.0
 Weight [kg];1.81;5.0;1.0
-Weight [kg];1.82;5.0;3.0
+Weight [kg];1.82;5.0;2.0
 Weight [kg];1.83;4.466666666666667;18.0
 Weight [kg];1.84;;0.0
 Weight [kg];1.85;4.422727272727273;22.0
@@ -1491,7 +1514,6 @@ Weight [kg];2.21;;0.0
 Weight [kg];2.22;;0.0
 Weight [kg];2.23;4.25;4.0
 Weight [kg];2.25;4.4222222222222225;72.0
-Weight [kg];2.26;;0.0
 Weight [kg];2.28;;0.0
 Weight [kg];2.29;4.0;1.0
 Weight [kg];2.3;4.2377777777777785;90.0
@@ -1534,10 +1556,31 @@ Weight [kg];2.99;;0.0
 Weight [kg];3.0;3.823529411764706;17.0
 Weight [kg];3.02;;0.0
 Weight [kg];3.1;4.2700000000000005;20.0
-Weight [kg];3.16;4.0;2.0
+Weight [kg];3.16;3.0;1.0
 Weight [kg];3.25;;0.0
 Weight [kg];3.29;;0.0
 Weight [kg];3.3;4.0;4.0
+Weight [kg];14.0;4.814814814814815;27.0
+Weight [kg];16.0;5.0;1.0
+Weight [kg];17.0;4.5;2.0
+Weight [kg];18.0;5.0;1.0
+Weight [kg];54.0;5.0;4.0
+Weight [kg];117.0;;0.0
+Weight [kg];124.0;4.690909090909091;22.0
+Weight [kg];125.0;4.857794676806084;263.0
+Weight [kg];137.0;;0.0
+Weight [kg];141.0;4.0;1.0
+Weight [kg];151.0;4.818181818181818;22.0
+Weight [kg];152.0;;0.0
+Weight [kg];173.0;;0.0
+Weight [kg];175.0;5.0;2.0
+Weight [kg];179.0;;0.0
+Weight [kg];181.0;;0.0
+Weight [kg];182.0;5.0;1.0
+Weight [kg];226.0;;0.0
+Weight [kg];242.0;;0.0
+Weight [kg];278.0;;0.0
+Weight [kg];316.0;5.0;1.0
 Data;Thunderbolt 3;4.908450704225352;355.0
 Data;Thunderbolt 4;4.438837209302326;430.0
 Data;USB-C;4.411929824561404;1140.0
@@ -1648,7 +1691,7 @@ Width [mm];301.7;;0.0
 Width [mm];301.76;;0.0
 Width [mm];302.0;4.9;8.0
 Width [mm];304.0;4.857472826086957;736.0
-Width [mm];304.1;4.936103896103896;385.0
+Width [mm];304.1;4.932044198895028;362.0
 Width [mm];305.0;3.8;16.0
 Width [mm];305.7;1.0;1.0
 Width [mm];305.8;;0.0
@@ -1700,7 +1743,7 @@ Width [mm];321.35;5.0;1.0
 Width [mm];321.5;5.0;2.0
 Width [mm];321.57;4.0;3.0
 Width [mm];321.69;5.0;1.0
-Width [mm];321.71;4.0;6.0
+Width [mm];321.71;3.8;5.0
 Width [mm];321.8;;0.0
 Width [mm];321.9;;0.0
 Width [mm];322.0;4.5625;8.0
@@ -1710,7 +1753,7 @@ Width [mm];322.79;4.0;1.0
 Width [mm];322.8;4.809523809523809;21.0
 Width [mm];323.0;4.2;5.0
 Width [mm];323.05;;0.0
-Width [mm];323.28;5.0;5.0
+Width [mm];323.28;5.0;2.0
 Width [mm];323.4;4.7;6.0
 Width [mm];323.5;;0.0
 Width [mm];323.6;;0.0
@@ -1741,7 +1784,7 @@ Width [mm];330.0;4.28;25.0
 Width [mm];338.8;;0.0
 Width [mm];339.5;3.0;1.0
 Width [mm];340.2;;0.0
-Width [mm];340.4;4.818181818181818;22.0
+Width [mm];340.4;;0.0
 Width [mm];344.4;1.0;1.0
 Width [mm];344.72;;0.0
 Width [mm];349.3;5.0;2.0
@@ -1790,12 +1833,12 @@ Width [mm];358.7;4.412820512820512;39.0
 Width [mm];358.9;3.9;15.0
 Width [mm];359.0;4.31764705882353;136.0
 Width [mm];359.2;4.372727272727273;22.0
-Width [mm];359.3;4.455172413793103;29.0
+Width [mm];359.3;4.435714285714285;28.0
 Width [mm];359.34;4.0;2.0
 Width [mm];359.4;4.404545454545455;22.0
 Width [mm];359.5;;0.0
 Width [mm];359.6;4.46271186440678;59.0
-Width [mm];359.7;4.468421052631578;57.0
+Width [mm];359.7;4.476785714285714;56.0
 Width [mm];359.8;4.4;84.0
 Width [mm];359.9;5.0;2.0
 Width [mm];360.0;4.4887500000000005;80.0
@@ -1859,19 +1902,33 @@ Width [mm];403.0;4.0;4.0
 Width [mm];403.5;4.11;10.0
 Width [mm];405.0;4.6;5.0
 Width [mm];406.0;;0.0
+Width [mm];2962.0;;0.0
+Width [mm];3041.0;5.0;23.0
+Width [mm];3177.0;;0.0
+Width [mm];3199.0;;0.0
+Width [mm];3404.0;4.818181818181818;22.0
+Width [mm];3561.0;;0.0
+Width [mm];3567.0;;0.0
+Width [mm];3593.0;5.0;1.0
+Width [mm];3597.0;4.0;1.0
+Width [mm];3602.0;;0.0
+Width [mm];3665.0;;0.0
+Width [mm];3971.0;;0.0
+Width [mm];32171.0;5.0;1.0
+Width [mm];32328.0;5.0;3.0
 Maximum height [mm];5.6;4.8;4.0
 Maximum height [mm];7.23;4.1;10.0
 Maximum height [mm];7.9;3.7750000000000004;4.0
 Maximum height [mm];8.0;4.7;3.0
-Maximum height [mm];8.3;4.6125;16.0
+Maximum height [mm];8.3;4.483333333333333;12.0
 Maximum height [mm];8.5;5.0;1.0
 Maximum height [mm];8.95;4.142857142857143;7.0
 Maximum height [mm];9.0;;0.0
 Maximum height [mm];9.3;4.3076923076923075;13.0
 Maximum height [mm];9.45;4.0;4.0
 Maximum height [mm];11.09;;0.0
-Maximum height [mm];11.3;4.75679012345679;162.0
-Maximum height [mm];11.5;4.818181818181818;22.0
+Maximum height [mm];11.3;4.767142857142857;140.0
+Maximum height [mm];11.5;;0.0
 Maximum height [mm];11.63;;0.0
 Maximum height [mm];11.8;5.0;2.0
 Maximum height [mm];12.0;5.0;4.0
@@ -1888,7 +1945,7 @@ Maximum height [mm];14.7;;0.0
 Maximum height [mm];14.75;;0.0
 Maximum height [mm];14.8;;0.0
 Maximum height [mm];14.84;;0.0
-Maximum height [mm];14.9;4.872832369942197;173.0
+Maximum height [mm];14.9;4.872093023255814;172.0
 Maximum height [mm];14.95;2.3333333333333335;3.0
 Maximum height [mm];15.0;3.8957894736842107;95.0
 Maximum height [mm];15.1;;0.0
@@ -1898,23 +1955,23 @@ Maximum height [mm];15.36;;0.0
 Maximum height [mm];15.5;5.0;3.0
 Maximum height [mm];15.53;;0.0
 Maximum height [mm];15.55;5.0;2.0
-Maximum height [mm];15.6;4.9168032786885245;488.0
+Maximum height [mm];15.6;4.948324022346369;358.0
 Maximum height [mm];15.65;5.0;3.0
 Maximum height [mm];15.69;;0.0
 Maximum height [mm];15.7;4.0;1.0
 Maximum height [mm];15.8;;0.0
-Maximum height [mm];15.9;4.448275862068965;29.0
+Maximum height [mm];15.9;4.428571428571429;28.0
 Maximum height [mm];15.95;4.771428571428571;21.0
 Maximum height [mm];15.99;4.5;4.0
 Maximum height [mm];16.0;5.0;3.0
-Maximum height [mm];16.1;4.897068403908795;307.0
+Maximum height [mm];16.1;4.894155844155844;154.0
 Maximum height [mm];16.14;;0.0
 Maximum height [mm];16.2;4.958333333333333;24.0
 Maximum height [mm];16.28;;0.0
 Maximum height [mm];16.3;1.0;2.0
 Maximum height [mm];16.4;;0.0
 Maximum height [mm];16.49;4.814285714285715;14.0
-Maximum height [mm];16.5;5.0;1.0
+Maximum height [mm];16.5;;0.0
 Maximum height [mm];16.7;;0.0
 Maximum height [mm];16.8;4.45;20.0
 Maximum height [mm];16.81;;0.0
@@ -1936,7 +1993,7 @@ Maximum height [mm];17.6;3.5;2.0
 Maximum height [mm];17.7;;0.0
 Maximum height [mm];17.75;;0.0
 Maximum height [mm];17.8;4.6;5.0
-Maximum height [mm];17.9;4.265296803652968;219.0
+Maximum height [mm];17.9;4.261926605504588;218.0
 Maximum height [mm];17.91;;0.0
 Maximum height [mm];17.95;4.818181818181818;11.0
 Maximum height [mm];17.99;4.6;5.0
@@ -1961,7 +2018,7 @@ Maximum height [mm];18.8;4.6;5.0
 Maximum height [mm];18.87;1.0;1.0
 Maximum height [mm];18.89;;0.0
 Maximum height [mm];18.9;4.56078431372549;102.0
-Maximum height [mm];18.94;5.0;5.0
+Maximum height [mm];18.94;5.0;2.0
 Maximum height [mm];18.95;4.5;2.0
 Maximum height [mm];18.99;4.1466666666666665;15.0
 Maximum height [mm];19.0;4.552380952380952;21.0
@@ -1969,7 +2026,7 @@ Maximum height [mm];19.1;5.0;1.0
 Maximum height [mm];19.2;4.0;4.0
 Maximum height [mm];19.25;3.0;2.0
 Maximum height [mm];19.33;;0.0
-Maximum height [mm];19.35;4.25;8.0
+Maximum height [mm];19.35;4.5;2.0
 Maximum height [mm];19.37;;0.0
 Maximum height [mm];19.4;4.666666666666667;3.0
 Maximum height [mm];19.48;4.666666666666667;3.0
@@ -1980,7 +2037,7 @@ Maximum height [mm];19.75;;0.0
 Maximum height [mm];19.8;4.0;3.0
 Maximum height [mm];19.83;4.0;1.0
 Maximum height [mm];19.85;5.0;1.0
-Maximum height [mm];19.9;4.344399999999999;250.0
+Maximum height [mm];19.9;4.34578313253012;249.0
 Maximum height [mm];19.93;;0.0
 Maximum height [mm];19.95;4.428571428571429;7.0
 Maximum height [mm];19.99;4.4;6.0
@@ -2048,7 +2105,7 @@ Maximum height [mm];26.7;;0.0
 Maximum height [mm];26.75;4.847368421052631;38.0
 Maximum height [mm];26.8;;0.0
 Maximum height [mm];26.85;4.705263157894737;19.0
-Maximum height [mm];26.9;3.3;10.0
+Maximum height [mm];26.9;3.111111111111111;9.0
 Maximum height [mm];27.0;5.0;6.0
 Maximum height [mm];27.2;4.3500000000000005;6.0
 Maximum height [mm];27.7;;0.0
@@ -2067,6 +2124,25 @@ Maximum height [mm];31.13;4.5;9.0
 Maximum height [mm];31.45;;0.0
 Maximum height [mm];32.4;;0.0
 Maximum height [mm];32.5;;0.0
+Maximum height [mm];83.0;5.0;4.0
+Maximum height [mm];113.0;4.690909090909091;22.0
+Maximum height [mm];115.0;4.818181818181818;22.0
+Maximum height [mm];118.0;;0.0
+Maximum height [mm];149.0;5.0;1.0
+Maximum height [mm];156.0;4.83;130.0
+Maximum height [mm];159.0;5.0;1.0
+Maximum height [mm];161.0;4.9;153.0
+Maximum height [mm];165.0;5.0;1.0
+Maximum height [mm];176.0;;0.0
+Maximum height [mm];179.0;5.0;1.0
+Maximum height [mm];199.0;4.0;1.0
+Maximum height [mm];227.0;;0.0
+Maximum height [mm];269.0;5.0;1.0
+Maximum height [mm];1395.0;;0.0
+Maximum height [mm];1799.0;;0.0
+Maximum height [mm];1894.0;5.0;3.0
+Maximum height [mm];1935.0;4.166666666666667;6.0
+Maximum height [mm];1985.0;;0.0
 Depth [mm];164.55;3.7000000000000006;3.0
 Depth [mm];167.2;4.7;3.0
 Depth [mm];168.2;;0.0
@@ -2109,11 +2185,11 @@ Depth [mm];210.6;;0.0
 Depth [mm];210.8;5.0;2.0
 Depth [mm];211.0;5.0;2.0
 Depth [mm];211.59;4.0;3.0
-Depth [mm];211.72;4.0;6.0
+Depth [mm];211.72;3.8;5.0
 Depth [mm];211.84;5.0;1.0
 Depth [mm];212.0;4.892857142857143;574.0
 Depth [mm];212.2;4.809523809523809;21.0
-Depth [mm];212.4;4.935602094240838;382.0
+Depth [mm];212.4;4.931476323119777;359.0
 Depth [mm];213.16;;0.0
 Depth [mm];213.3;2.3333333333333335;3.0
 Depth [mm];213.5;5.0;3.0
@@ -2135,7 +2211,6 @@ Depth [mm];215.9;;0.0
 Depth [mm];216.0;;0.0
 Depth [mm];216.3;5.0;2.0
 Depth [mm];216.5;;0.0
-Depth [mm];216.6;4.0;1.0
 Depth [mm];216.7;;0.0
 Depth [mm];216.8;;0.0
 Depth [mm];217.0;4.0;1.0
@@ -2195,12 +2270,12 @@ Depth [mm];227.6;4.0;4.0
 Depth [mm];227.9;5.0;2.0
 Depth [mm];228.0;4.033333333333333;6.0
 Depth [mm];228.12;4.0;1.0
-Depth [mm];228.32;5.0;5.0
+Depth [mm];228.32;5.0;2.0
 Depth [mm];228.4;;0.0
 Depth [mm];228.7;;0.0
 Depth [mm];229.0;;0.0
 Depth [mm];229.2;;0.0
-Depth [mm];229.4;4.142857142857143;7.0
+Depth [mm];229.4;4.0;6.0
 Depth [mm];229.75;;0.0
 Depth [mm];229.9;4.545454545454546;11.0
 Depth [mm];230.0;4.6;5.0
@@ -2218,7 +2293,6 @@ Depth [mm];233.9;4.404545454545455;22.0
 Depth [mm];234.0;;0.0
 Depth [mm];234.2;4.0;3.0
 Depth [mm];234.3;3.4;7.0
-Depth [mm];234.6;;0.0
 Depth [mm];235.0;4.44;75.0
 Depth [mm];235.3;4.927272727272728;11.0
 Depth [mm];235.4;;0.0
@@ -2233,7 +2307,7 @@ Depth [mm];236.9;5.0;1.0
 Depth [mm];237.0;;0.0
 Depth [mm];237.4;;0.0
 Depth [mm];237.5;4.433333333333334;12.0
-Depth [mm];237.6;4.818181818181818;22.0
+Depth [mm];237.6;;0.0
 Depth [mm];237.8;4.33;20.0
 Depth [mm];238.0;4.209999999999999;20.0
 Depth [mm];238.4;4.242105263157895;19.0
@@ -2253,14 +2327,13 @@ Depth [mm];241.26;3.3333333333333335;3.0
 Depth [mm];242.0;4.369090909090909;55.0
 Depth [mm];242.3;;0.0
 Depth [mm];242.5;;0.0
-Depth [mm];242.6;5.0;1.0
+Depth [mm];242.6;;0.0
 Depth [mm];243.0;4.666666666666667;9.0
 Depth [mm];243.5;3.1230769230769226;13.0
 Depth [mm];244.0;;0.0
 Depth [mm];244.2;3.5;4.0
 Depth [mm];244.82;4.0;2.0
 Depth [mm];245.0;4.0;1.0
-Depth [mm];245.25;4.0;1.0
 Depth [mm];245.3;4.7;3.0
 Depth [mm];245.7;;0.0
 Depth [mm];245.9;4.96;25.0
@@ -2383,12 +2456,27 @@ Depth [mm];297.97;;0.0
 Depth [mm];298.0;5.0;1.0
 Depth [mm];299.57;;0.0
 Depth [mm];300.0;4.571428571428571;7.0
-Depth [mm];311.61;4.0;2.0
+Depth [mm];311.61;3.0;1.0
 Depth [mm];330.0;4.0;4.0
 Depth [mm];349.5;5.0;2.0
 Depth [mm];350.0;3.8;4.0
 Depth [mm];355.0;5.0;1.0
 Depth [mm];399.9;5.0;1.0
+Depth [mm];2124.0;5.0;23.0
+Depth [mm];2163.0;;0.0
+Depth [mm];2166.0;4.0;1.0
+Depth [mm];2269.0;;0.0
+Depth [mm];2294.0;5.0;1.0
+Depth [mm];2299.0;;0.0
+Depth [mm];2346.0;;0.0
+Depth [mm];2376.0;4.818181818181818;22.0
+Depth [mm];2423.0;;0.0
+Depth [mm];2426.0;5.0;1.0
+Depth [mm];2477.0;;0.0
+Depth [mm];21172.0;5.0;1.0
+Depth [mm];22832.0;5.0;3.0
+Depth [mm];24525.0;4.0;1.0
+Depth [mm];31161.0;5.0;1.0
 Keyboard language;['CZ', 'SK', 'EN'];;0.0
 Keyboard language;['CZ', 'SK'];4.368890103881903;1829.0
 Keyboard language;['CZ'];4.8483380816714154;1053.0
@@ -2568,8 +2656,6 @@ Graphics card memory [GB];8.0;4.537057220708447;367.0
 Graphics card memory [GB];10.0;;0.0
 Graphics card memory [GB];12.0;4.375;16.0
 Graphics card memory [GB];16.0;4.051851851851852;27.0
-Maximum Graphic Power (TGP) [W];1.75;;0.0
-Maximum Graphic Power (TGP) [W];2.37;;0.0
 Maximum Graphic Power (TGP) [W];15.0;;0.0
 Maximum Graphic Power (TGP) [W];25.0;4.24;5.0
 Maximum Graphic Power (TGP) [W];28.0;;0.0
@@ -2597,90 +2683,89 @@ Maximum Graphic Power (TGP) [W];145.0;4.2;5.0
 Maximum Graphic Power (TGP) [W];150.0;4.648148148148148;27.0
 Maximum Graphic Power (TGP) [W];165.0;4.0;3.0
 Maximum Graphic Power (TGP) [W];175.0;4.2153846153846155;39.0
+Maximum Graphic Power (TGP) [W];1750.0;;0.0
+Maximum Graphic Power (TGP) [W];2370.0;;0.0
 Boost clock [MHz];0.0;4.15;28.0
-Boost clock [MHz];1.058;5.0;1.0
-Boost clock [MHz];1.15;5.0;1.0
-Boost clock [MHz];1.17;;0.0
-Boost clock [MHz];1.245;;0.0
-Boost clock [MHz];1.255;;0.0
-Boost clock [MHz];1.282;;0.0
-Boost clock [MHz];1.3;3.5;2.0
-Boost clock [MHz];1.32;;0.0
-Boost clock [MHz];1.345;5.0;2.0
-Boost clock [MHz];1.35;;0.0
 Boost clock [MHz];1.37;;0.0
-Boost clock [MHz];1.375;;0.0
-Boost clock [MHz];1.38;;0.0
-Boost clock [MHz];1.382;;0.0
-Boost clock [MHz];1.41;5.0;1.0
-Boost clock [MHz];1.44;;0.0
-Boost clock [MHz];1.445;;0.0
-Boost clock [MHz];1.452;3.2999999999999994;3.0
-Boost clock [MHz];1.46;;0.0
-Boost clock [MHz];1.47;2.3333333333333335;3.0
-Boost clock [MHz];1.477;4.333333333333333;3.0
-Boost clock [MHz];1.485;4.533333333333334;12.0
-Boost clock [MHz];1.492;4.0;1.0
-Boost clock [MHz];1.5;4.220000000000001;5.0
-Boost clock [MHz];1.525;4.0;1.0
-Boost clock [MHz];1.545;;0.0
-Boost clock [MHz];1.55;;0.0
-Boost clock [MHz];1.56;3.5;4.0
-Boost clock [MHz];1.58;;0.0
-Boost clock [MHz];1.585;5.0;6.0
-Boost clock [MHz];1.59;;0.0
-Boost clock [MHz];1.6;5.0;1.0
-Boost clock [MHz];1.605;;0.0
-Boost clock [MHz];1.62;4.5249999999999995;24.0
-Boost clock [MHz];1.625;4.7239130434782615;46.0
-Boost clock [MHz];1.652;;0.0
-Boost clock [MHz];1.656;5.0;2.0
-Boost clock [MHz];1.66;;0.0
-Boost clock [MHz];1.678;;0.0
-Boost clock [MHz];1.681;4.666666666666667;3.0
-Boost clock [MHz];1.687;5.0;2.0
-Boost clock [MHz];1.695;4.5;2.0
-Boost clock [MHz];1.702;4.355555555555556;9.0
-Boost clock [MHz];1.71;;0.0
-Boost clock [MHz];1.72;5.0;3.0
-Boost clock [MHz];1.732;5.0;1.0
-Boost clock [MHz];1.74;4.545454545454546;22.0
-Boost clock [MHz];1.75;;0.0
-Boost clock [MHz];1.752;4.3500000000000005;6.0
-Boost clock [MHz];1.79;4.4;9.0
-Boost clock [MHz];1.81;5.0;2.0
-Boost clock [MHz];1.815;;0.0
-Boost clock [MHz];1.865;;0.0
-Boost clock [MHz];1.93;;0.0
-Boost clock [MHz];1.98;5.0;2.0
-Boost clock [MHz];2.0;;0.0
-Boost clock [MHz];2.01;4.3;17.0
-Boost clock [MHz];2.03;5.0;4.0
-Boost clock [MHz];2.04;5.0;3.0
-Boost clock [MHz];2.08;5.0;2.0
-Boost clock [MHz];2.09;3.44;10.0
-Boost clock [MHz];2.1;;0.0
-Boost clock [MHz];2.115;;0.0
-Boost clock [MHz];2.13;;0.0
-Boost clock [MHz];2.175;4.928571428571429;14.0
-Boost clock [MHz];2.225;4.819999999999999;10.0
-Boost clock [MHz];2.25;4.9;19.0
-Boost clock [MHz];2.28;4.375;8.0
-Boost clock [MHz];2.3;4.8;5.0
-Boost clock [MHz];2.35;4.428571428571429;7.0
-Boost clock [MHz];2.37;4.672727272727273;88.0
-Boost clock [MHz];2.405;5.0;1.0
-Boost clock [MHz];2.42;4.616666666666666;30.0
-Boost clock [MHz];2.455;4.7;10.0
-Boost clock [MHz];2.5;;0.0
-Boost clock [MHz];2.505;4.0;2.0
 Boost clock [MHz];115.0;;0.0
 Boost clock [MHz];1057.5;4.927272727272728;11.0
+Boost clock [MHz];1058.0;5.0;1.0
 Boost clock [MHz];1107.5;5.0;4.0
-Boost clock [MHz];1150.0;5.0;1.0
-Boost clock [MHz];1560.0;;0.0
+Boost clock [MHz];1150.0;5.0;2.0
+Boost clock [MHz];1170.0;;0.0
+Boost clock [MHz];1245.0;;0.0
+Boost clock [MHz];1255.0;;0.0
+Boost clock [MHz];1282.0;;0.0
+Boost clock [MHz];1300.0;3.5;2.0
+Boost clock [MHz];1320.0;;0.0
+Boost clock [MHz];1345.0;5.0;2.0
+Boost clock [MHz];1350.0;;0.0
+Boost clock [MHz];1375.0;;0.0
+Boost clock [MHz];1380.0;;0.0
+Boost clock [MHz];1382.0;;0.0
+Boost clock [MHz];1410.0;5.0;1.0
+Boost clock [MHz];1440.0;;0.0
+Boost clock [MHz];1445.0;;0.0
+Boost clock [MHz];1452.0;3.2999999999999994;3.0
+Boost clock [MHz];1460.0;;0.0
+Boost clock [MHz];1470.0;2.3333333333333335;3.0
+Boost clock [MHz];1477.0;4.333333333333333;3.0
+Boost clock [MHz];1485.0;4.533333333333334;12.0
+Boost clock [MHz];1492.0;4.0;1.0
+Boost clock [MHz];1500.0;4.220000000000001;5.0
+Boost clock [MHz];1525.0;4.0;1.0
+Boost clock [MHz];1545.0;;0.0
+Boost clock [MHz];1550.0;;0.0
+Boost clock [MHz];1560.0;3.5;4.0
+Boost clock [MHz];1580.0;;0.0
+Boost clock [MHz];1585.0;5.0;6.0
+Boost clock [MHz];1590.0;;0.0
+Boost clock [MHz];1600.0;5.0;1.0
+Boost clock [MHz];1605.0;;0.0
+Boost clock [MHz];1620.0;4.5249999999999995;24.0
+Boost clock [MHz];1625.0;4.7239130434782615;46.0
+Boost clock [MHz];1652.0;;0.0
+Boost clock [MHz];1656.0;5.0;2.0
+Boost clock [MHz];1660.0;;0.0
+Boost clock [MHz];1678.0;;0.0
+Boost clock [MHz];1681.0;4.666666666666667;3.0
+Boost clock [MHz];1687.0;5.0;2.0
+Boost clock [MHz];1695.0;4.5;2.0
+Boost clock [MHz];1702.0;4.355555555555556;9.0
+Boost clock [MHz];1710.0;;0.0
+Boost clock [MHz];1720.0;5.0;3.0
+Boost clock [MHz];1732.0;5.0;1.0
+Boost clock [MHz];1740.0;4.545454545454546;22.0
+Boost clock [MHz];1750.0;;0.0
+Boost clock [MHz];1752.0;4.3500000000000005;6.0
 Boost clock [MHz];1770.0;;0.0
-Boost clock [MHz];2080.0;5.0;1.0
+Boost clock [MHz];1790.0;4.4;9.0
+Boost clock [MHz];1810.0;5.0;2.0
+Boost clock [MHz];1815.0;;0.0
+Boost clock [MHz];1865.0;;0.0
+Boost clock [MHz];1930.0;;0.0
+Boost clock [MHz];1980.0;5.0;2.0
+Boost clock [MHz];2000.0;;0.0
+Boost clock [MHz];2010.0;4.3;17.0
+Boost clock [MHz];2030.0;5.0;4.0
+Boost clock [MHz];2040.0;5.0;3.0
+Boost clock [MHz];2080.0;5.0;3.0
+Boost clock [MHz];2090.0;3.44;10.0
+Boost clock [MHz];2100.0;;0.0
+Boost clock [MHz];2115.0;;0.0
+Boost clock [MHz];2130.0;;0.0
+Boost clock [MHz];2175.0;4.928571428571429;14.0
+Boost clock [MHz];2225.0;4.819999999999999;10.0
+Boost clock [MHz];2250.0;4.9;19.0
+Boost clock [MHz];2280.0;4.375;8.0
+Boost clock [MHz];2300.0;4.8;5.0
+Boost clock [MHz];2350.0;4.428571428571429;7.0
+Boost clock [MHz];2370.0;4.672727272727273;88.0
+Boost clock [MHz];2405.0;5.0;1.0
+Boost clock [MHz];2420.0;4.616666666666666;30.0
+Boost clock [MHz];2455.0;4.7;10.0
+Boost clock [MHz];2500.0;;0.0
+Boost clock [MHz];2505.0;4.0;2.0
 "Number of occupied slots 2.5""";0.0;4.442162162162162;740.0
 "Slots in total 2.5""";0.0;4.47801652892562;605.0
 "Slots in total 2.5""";1.0;4.274857142857143;175.0
@@ -2699,20 +2784,20 @@ USB 3.2 Gen 2;2.0;4.383006535947713;153.0
 USB 3.2 Gen 2;3.0;4.26;20.0
 USB 3.2 Gen 2;4.0;;0.0
 Standby time [h];5.0;5.0;1.0
-Standby time [h];6.5;;0.0
-Standby time [h];6.75;;0.0
-Standby time [h];7.5;;0.0
-Standby time [h];8.5;;0.0
 Standby time [h];9.0;4.5;2.0
-Standby time [h];9.5;;0.0
 Standby time [h];10.0;5.0;3.0
-Standby time [h];10.25;4.0;1.0
 Standby time [h];11.0;5.0;4.0
 Standby time [h];14.0;;0.0
 Standby time [h];15.0;5.0;2.0
 Standby time [h];18.0;4.8409240924092405;303.0
 Standby time [h];19.0;5.0;2.0
 Standby time [h];20.0;5.0;21.0
+Standby time [h];65.0;;0.0
+Standby time [h];75.0;;0.0
+Standby time [h];85.0;;0.0
+Standby time [h];95.0;;0.0
+Standby time [h];675.0;;0.0
+Standby time [h];1025.0;4.0;1.0
 Lease;No;4.8;10.0
 Lease;Yes;4.8621584699453555;732.0
 Processor model;M1;4.915435356200528;758.0
@@ -2726,47 +2811,47 @@ USB 2.0;1.0;4.236896551724138;580.0
 USB 2.0;2.0;4.141538461538461;65.0
 USB 2.0;3.0;5.0;2.0
 Number of free slots;1.0;4.5;2.0
-Number of stream processors;1.024;4.3;3.0
-Number of stream processors;1.408;5.0;2.0
-Number of stream processors;1.536;5.0;5.0
-Number of stream processors;1.92;4.742857142857143;7.0
-Number of stream processors;2.304;4.5;9.0
-Number of stream processors;2.56;;0.0
-Number of stream processors;3.072;5.0;1.0
-Number of stream processors;3.84;4.04;5.0
-Number of stream processors;4.608;;0.0
-Number of stream processors;5.12;3.885714285714286;7.0
-Number of stream processors;6.144;;0.0
-Number of stream processors;7.424;;0.0
-Number of stream processors;9.728;5.0;1.0
 Number of stream processors;24.0;4.833333333333333;6.0
 Number of stream processors;48.0;;0.0
 Number of stream processors;80.0;5.0;2.0
 Number of stream processors;384.0;;0.0
 Number of stream processors;896.0;;0.0
-GPU Passmark;1.054;;0.0
-GPU Passmark;1.077;;0.0
-GPU Passmark;1.078;4.8;5.0
-GPU Passmark;2.192;;0.0
-GPU Passmark;2.58;;0.0
-GPU Passmark;3.015;4.7;3.0
-GPU Passmark;3.153;3.9;24.0
-GPU Passmark;3.166;5.0;2.0
-GPU Passmark;5.882;5.0;2.0
-GPU Passmark;6.118;;0.0
-GPU Passmark;6.459;5.0;3.0
-GPU Passmark;6.492;;0.0
-GPU Passmark;6.689;;0.0
-GPU Passmark;6.946;;0.0
-GPU Passmark;7.796;4.3;3.0
-GPU Passmark;12.369;5.0;2.0
-GPU Passmark;12.444;4.5;9.0
-GPU Passmark;13.987;5.0;1.0
-GPU Passmark;14.2;4.7;6.0
-GPU Passmark;14.732;;0.0
-GPU Passmark;18.114;;0.0
-GPU Passmark;18.123;;0.0
+Number of stream processors;1024.0;4.3;3.0
+Number of stream processors;1408.0;5.0;2.0
+Number of stream processors;1536.0;5.0;5.0
+Number of stream processors;1920.0;4.742857142857143;7.0
+Number of stream processors;2304.0;4.5;9.0
+Number of stream processors;2560.0;;0.0
+Number of stream processors;3072.0;5.0;1.0
+Number of stream processors;3840.0;4.04;5.0
+Number of stream processors;4608.0;;0.0
+Number of stream processors;5120.0;3.885714285714286;7.0
+Number of stream processors;6144.0;;0.0
+Number of stream processors;7424.0;;0.0
+Number of stream processors;9728.0;5.0;1.0
 GPU Passmark;760.0;5.0;1.0
+GPU Passmark;1054.0;;0.0
+GPU Passmark;1077.0;;0.0
+GPU Passmark;1078.0;4.8;5.0
+GPU Passmark;2192.0;;0.0
+GPU Passmark;2580.0;;0.0
+GPU Passmark;3015.0;4.7;3.0
+GPU Passmark;3153.0;3.9;24.0
+GPU Passmark;3166.0;5.0;2.0
+GPU Passmark;5882.0;5.0;2.0
+GPU Passmark;6118.0;;0.0
+GPU Passmark;6459.0;5.0;3.0
+GPU Passmark;6492.0;;0.0
+GPU Passmark;6689.0;;0.0
+GPU Passmark;6946.0;;0.0
+GPU Passmark;7796.0;4.3;3.0
+GPU Passmark;12369.0;5.0;2.0
+GPU Passmark;12444.0;4.5;9.0
+GPU Passmark;13987.0;5.0;1.0
+GPU Passmark;14200.0;4.7;6.0
+GPU Passmark;14732.0;;0.0
+GPU Passmark;18114.0;;0.0
+GPU Passmark;18123.0;;0.0
 HDD capacity [GB];1024.0;4.25;8.0
 Other interfaces;['Docking connector', 'SIM Card'];;0.0
 Other interfaces;['Docking connector'];4.1571428571428575;7.0

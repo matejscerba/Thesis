@@ -21,18 +21,27 @@ class SimpleProductHandler:
 
     @classmethod
     def organize_category(
-        cls, category_name: str, candidate_ids: Set[int], discarded_ids: Set[int], important_attributes: List[str]
+        cls,
+        category_name: str,
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+        important_attributes: List[str],
+        limit: Optional[int],
     ) -> Category:
+        category = DataLoader.load_category(category_name=category_name)
+        if len(candidate_ids) == 0:
+            for id in discarded_ids:
+                category.pop(id)
+            if limit is not None:
+                category.apply_limit(limit=limit)
+            return category
+
         alternative_ids = SetBasedRecommender.predict(
             category_name=category_name,
             candidate_ids=candidate_ids,
             discarded_ids=discarded_ids,
             important_attributes=important_attributes,
         )
-
-        category = DataLoader.load_category(category_name=category_name)
-        # if len(candidate_ids) == 0 and len(discarded_ids) == 0:
-        #     return category
 
         candidates = [category.pop(candidate_id) for candidate_id in candidate_ids]
         for discarded_id in discarded_ids:

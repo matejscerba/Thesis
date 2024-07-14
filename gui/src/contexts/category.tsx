@@ -43,7 +43,7 @@ export function CategoryContextProvider({
       value={{
         name,
         candidates,
-        candidateIds: candidates.map((candidate) => candidate.id),
+        candidateIds: candidates?.map((candidate) => candidate.id),
         discarded,
         alternatives,
         unseen,

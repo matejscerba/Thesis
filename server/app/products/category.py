@@ -15,6 +15,7 @@ class Category(BaseModel):
 class UnorganizedCategory(Category):
     organized: bool = False
     data: Dict[str, Product]
+    remaining: int = 0
 
     @classmethod
     def from_raw_list(cls, data: List[Dict[str, Any]]) -> "UnorganizedCategory":
@@ -34,10 +35,19 @@ class UnorganizedCategory(Category):
         return self.data.pop(str(product_id))
 
     @model_serializer(mode="wrap")
-    def serialize_block_step(self, standard_serializer: SerializerFunctionWrapHandler) -> Dict[str, Any]:
+    def serialize_category(self, standard_serializer: SerializerFunctionWrapHandler) -> Dict[str, Any]:
         result = standard_serializer(self)
         result["products"] = list(result.pop("data").values())
         return result
+
+    def apply_limit(self, limit: int) -> None:
+        if limit > len(self.data):
+            return
+
+        items_to_pop = list(self.data.keys())[limit:]
+        for id in items_to_pop:
+            self.data.pop(id)
+        self.remaining = len(items_to_pop)
 
 
 class OrganizedCategory(Category):

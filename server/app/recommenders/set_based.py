@@ -72,7 +72,7 @@ class SetBasedRecommender:
     def calculate_attribute_position_non_candidate(
         cls, category_name: str, attribute: Attribute, value: Any, candidates: pd.DataFrame
     ) -> ProductAttributePosition:
-        if pd.isna(value):
+        if pd.isna(value) or len(candidates) == 0:
             return ProductAttributePosition.NEUTRAL
 
         all_values = candidates[attribute.full_name].dropna()
@@ -95,6 +95,9 @@ class SetBasedRecommender:
             else:
                 return ProductAttributePosition.RELEVANT
         else:
+            if attribute.type == AttributeType.CATEGORICAL:
+                if value in all_values.values:
+                    return ProductAttributePosition.RELEVANT
             all_ratings = DataLoader.load_ratings(
                 category_name=category_name, attribute_name=attribute.full_name, values=all_values
             )

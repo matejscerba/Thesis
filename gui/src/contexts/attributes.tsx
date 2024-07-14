@@ -3,6 +3,7 @@ import { fetchPostJson } from "../utils/api";
 import { Attribute, PRICE } from "../types/attribute";
 
 interface AttributesContextInterface {
+  groups: string[];
   attributes: Attribute[];
   attributeNames: string[];
   price: Attribute;
@@ -12,6 +13,7 @@ interface AttributesContextInterface {
 }
 
 const AttributesContext = createContext<AttributesContextInterface>({
+  groups: undefined,
   attributes: undefined,
   attributeNames: undefined,
   price: undefined,
@@ -31,12 +33,7 @@ interface AttributesContextProviderProps {
 
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
-  const [importantAttributes, setImportantAttributes] = useState<string[]>([
-    "Number of processor cores",
-    "Size of operational RAM [GB]",
-    "Model graphics cards",
-    "Storage capacity [GB]",
-  ]);
+  const [importantAttributes, setImportantAttributes] = useState<string[]>([]);
 
   useEffect(() => {
     if (attributes === undefined) {
@@ -48,9 +45,16 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     }
   }, []);
 
+  if (attributes === undefined) {
+    return null;
+  }
+
+  const allGroups = attributes ? Object.values(attributes).map((attributes) => attributes.group) : undefined;
+
   return (
     <AttributesContext.Provider
       value={{
+        groups: allGroups ? allGroups.filter((group, index) => allGroups.indexOf(group) === index) : undefined,
         attributes: attributes ? importantAttributes.map((attributeName) => attributes[attributeName]) : undefined,
         attributeNames: importantAttributes,
         price: attributes?.[PRICE],

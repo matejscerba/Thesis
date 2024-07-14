@@ -34,7 +34,7 @@ function Product({ className, product, menu }: ProductProps) {
         setExplanation(result);
       })
       .catch((e) => console.error(e));
-  }, [candidateIds, discarded]);
+  }, [candidateIds, discarded, attributeNames]);
 
   const explanationInfo = getProductExplanationMessageInfo(explanation?.message);
 

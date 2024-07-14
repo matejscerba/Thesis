@@ -1,6 +1,6 @@
 import { Attribute } from "./attribute";
 
-interface AttributeStatistics {
+export interface AttributeStatistics {
   attribute: Attribute;
   num_products: number;
   lower_bound_index?: number;

@@ -23,7 +23,7 @@ class DataLoader:
         data = pd.read_csv(
             f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
         ).replace({float("nan"): None})
-        if userows:
+        if userows is not None:
             data = data[data["id"].apply(lambda x: x in userows)]
         return data
 

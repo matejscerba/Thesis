@@ -14,12 +14,14 @@ def view_category() -> Response:
     candidate_ids = request_json.get("candidates", [])
     discarded_ids = request_json.get("discarded", [])
     important_attributes = request_json.get("important_attributes", [])
+    limit = request_json.get("limit")
 
     data = SimpleProductHandler.organize_category(
         category_name=category_name,
         candidate_ids=set(candidate_ids),
         discarded_ids=set(discarded_ids),
         important_attributes=important_attributes,
+        limit=limit,
     )
 
     return jsonify(data)
@@ -59,6 +61,7 @@ def view_attributes() -> Response:
         raise Exception("Category name not set.")
 
     data = DataLoader.load_attributes(category_name=category_name)
+    data.drop_unused(category_name=category_name)
 
     return jsonify(data)
 

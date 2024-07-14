@@ -3,8 +3,7 @@
         "name": "name",
         "id": 0,
         "type": "categorical",
-        "full_name": "name",
-        "continuous": false
+        "full_name": "name"
     },
     {
         "name": "Price",
@@ -48,8 +47,7 @@
         "group": "Display",
         "feature": "Display resolution",
         "type": "categorical",
-        "full_name": "Display resolution",
-        "continuous": false
+        "full_name": "Display resolution"
     },
     {
         "name": "Panel type",
@@ -57,8 +55,7 @@
         "group": "Display",
         "feature": "Panel type",
         "type": "categorical",
-        "full_name": "Panel type",
-        "continuous": false
+        "full_name": "Panel type"
     },
     {
         "name": "Display type",
@@ -66,8 +63,7 @@
         "group": "Display",
         "feature": "Display type",
         "type": "categorical",
-        "full_name": "Display type",
-        "continuous": false
+        "full_name": "Display type"
     },
     {
         "name": "Aspect Ratio",
@@ -75,8 +71,7 @@
         "group": "Display",
         "feature": "Aspect Ratio",
         "type": "categorical",
-        "full_name": "Aspect Ratio",
-        "continuous": false
+        "full_name": "Aspect Ratio"
     },
     {
         "name": "Display refresh rate",
@@ -106,8 +101,7 @@
         "group": "Display",
         "feature": "Colour coverage and certification",
         "type": "categorical",
-        "full_name": "Colour coverage and certification",
-        "continuous": false
+        "full_name": "Colour coverage and certification"
     },
     {
         "name": "Processor type",
@@ -115,8 +109,7 @@
         "group": "Processor",
         "feature": "Processor type",
         "type": "categorical",
-        "full_name": "Processor type",
-        "continuous": false
+        "full_name": "Processor type"
     },
     {
         "name": "AMD processor generation",
@@ -124,8 +117,7 @@
         "group": "Processor",
         "feature": "AMD processor generation",
         "type": "categorical",
-        "full_name": "AMD processor generation",
-        "continuous": false
+        "full_name": "AMD processor generation"
     },
     {
         "name": "Processor model number",
@@ -133,8 +125,7 @@
         "group": "Processor",
         "feature": "Processor model number",
         "type": "categorical",
-        "full_name": "Processor model number",
-        "continuous": false
+        "full_name": "Processor model number"
     },
     {
         "name": "Number of processor cores",
@@ -195,8 +186,7 @@
         "group": "Processor",
         "feature": "CPU features",
         "type": "categorical",
-        "full_name": "CPU features",
-        "continuous": false
+        "full_name": "CPU features"
     },
     {
         "name": "Size of operational RAM",
@@ -215,8 +205,7 @@
         "group": "Memory",
         "feature": "Memory type",
         "type": "categorical",
-        "full_name": "Memory type",
-        "continuous": false
+        "full_name": "Memory type"
     },
     {
         "name": "Memory frequency",
@@ -255,8 +244,7 @@
         "group": "Graphics card",
         "feature": "Graphics card type",
         "type": "categorical",
-        "full_name": "Graphics card type",
-        "continuous": false
+        "full_name": "Graphics card type"
     },
     {
         "name": "Graphics card brand",
@@ -264,8 +252,7 @@
         "group": "GPU brand/model",
         "feature": "Graphics card brand",
         "type": "categorical",
-        "full_name": "Graphics card brand",
-        "continuous": false
+        "full_name": "Graphics card brand"
     },
     {
         "name": "Model graphics cards",
@@ -273,8 +260,7 @@
         "group": "GPU brand/model",
         "feature": "Model graphics cards",
         "type": "categorical",
-        "full_name": "Model graphics cards",
-        "continuous": false
+        "full_name": "Model graphics cards"
     },
     {
         "name": "Operating system",
@@ -282,8 +268,7 @@
         "group": "Operating system",
         "feature": "Operating system",
         "type": "categorical",
-        "full_name": "Operating system",
-        "continuous": false
+        "full_name": "Operating system"
     },
     {
         "name": "Storage Type",
@@ -291,8 +276,7 @@
         "group": "Hard drive",
         "feature": "Storage Type",
         "type": "categorical",
-        "full_name": "Storage Type",
-        "continuous": false
+        "full_name": "Storage Type"
     },
     {
         "name": "Storage capacity",
@@ -311,8 +295,7 @@
         "group": "Hard drive",
         "feature": "Drive interfaces",
         "type": "categorical",
-        "full_name": "Drive interfaces",
-        "continuous": false
+        "full_name": "Drive interfaces"
     },
     {
         "name": "SSD capacity",
@@ -351,8 +334,7 @@
         "group": "Equipment",
         "feature": "Equipment",
         "type": "categorical",
-        "full_name": "Equipment",
-        "continuous": false
+        "full_name": "Equipment"
     },
     {
         "name": "Webcam",
@@ -360,8 +342,7 @@
         "group": "Equipment",
         "feature": "Webcam",
         "type": "categorical",
-        "full_name": "Webcam",
-        "continuous": false
+        "full_name": "Webcam"
     },
     {
         "name": "USB-C charging",
@@ -369,8 +350,7 @@
         "group": "Battery",
         "feature": "USB-C charging",
         "type": "categorical",
-        "full_name": "USB-C charging",
-        "continuous": false
+        "full_name": "USB-C charging"
     },
     {
         "name": "Charging connector",
@@ -378,8 +358,7 @@
         "group": "Battery",
         "feature": "Charging connector",
         "type": "categorical",
-        "full_name": "Charging connector",
-        "continuous": false
+        "full_name": "Charging connector"
     },
     {
         "name": "Battery capacity",
@@ -420,8 +399,7 @@
         "group": "Construction",
         "feature": "Construction material",
         "type": "categorical",
-        "full_name": "Construction material",
-        "continuous": false
+        "full_name": "Construction material"
     },
     {
         "name": "Convertibility",
@@ -429,8 +407,7 @@
         "group": "Construction",
         "feature": "Convertibility",
         "type": "categorical",
-        "full_name": "Convertibility",
-        "continuous": false
+        "full_name": "Convertibility"
     },
     {
         "name": "Colour",
@@ -438,8 +415,7 @@
         "group": "Colour",
         "feature": "Colour",
         "type": "categorical",
-        "full_name": "Colour",
-        "continuous": false
+        "full_name": "Colour"
     },
     {
         "name": "Weight",
@@ -457,8 +433,7 @@
         "group": "Interface",
         "feature": "Data",
         "type": "categorical",
-        "full_name": "Data",
-        "continuous": false
+        "full_name": "Data"
     },
     {
         "name": "Graphical output ports",
@@ -476,8 +451,7 @@
         "group": "Interface",
         "feature": "Network",
         "type": "categorical",
-        "full_name": "Network",
-        "continuous": false
+        "full_name": "Network"
     },
     {
         "name": "Audio",
@@ -485,8 +459,7 @@
         "group": "Interface",
         "feature": "Audio",
         "type": "categorical",
-        "full_name": "Audio",
-        "continuous": false
+        "full_name": "Audio"
     },
     {
         "name": "USB-C",
@@ -514,8 +487,7 @@
         "group": "Interface",
         "feature": "Bluetooth",
         "type": "categorical",
-        "full_name": "Bluetooth",
-        "continuous": false
+        "full_name": "Bluetooth"
     },
     {
         "name": "WiFi",
@@ -523,8 +495,7 @@
         "group": "Interface",
         "feature": "WiFi",
         "type": "categorical",
-        "full_name": "WiFi",
-        "continuous": false
+        "full_name": "WiFi"
     },
     {
         "name": "WiFi version",
@@ -532,8 +503,7 @@
         "group": "Interface",
         "feature": "WiFi version",
         "type": "categorical",
-        "full_name": "WiFi version",
-        "continuous": false
+        "full_name": "WiFi version"
     },
     {
         "name": "Optical drive",
@@ -541,8 +511,7 @@
         "group": "Interface",
         "feature": "Optical drive",
         "type": "categorical",
-        "full_name": "Optical drive",
-        "continuous": false
+        "full_name": "Optical drive"
     },
     {
         "name": "Width",
@@ -580,8 +549,7 @@
         "group": "Keyboard layout",
         "feature": "Keyboard language",
         "type": "categorical",
-        "full_name": "Keyboard language",
-        "continuous": false
+        "full_name": "Keyboard language"
     },
     {
         "name": "Laptop Series",
@@ -589,8 +557,7 @@
         "group": "Product series",
         "feature": "Laptop Series",
         "type": "categorical",
-        "full_name": "Laptop Series",
-        "continuous": false
+        "full_name": "Laptop Series"
     },
     {
         "name": "Certification",
@@ -598,8 +565,7 @@
         "group": "Certification",
         "feature": "Certification",
         "type": "categorical",
-        "full_name": "Certification",
-        "continuous": false
+        "full_name": "Certification"
     },
     {
         "name": "Extended warranty",
@@ -607,8 +573,7 @@
         "group": "Warranty",
         "feature": "Extended warranty",
         "type": "categorical",
-        "full_name": "Extended warranty",
-        "continuous": false
+        "full_name": "Extended warranty"
     },
     {
         "name": "Package includes",
@@ -616,8 +581,7 @@
         "group": "Package contents",
         "feature": "Package includes",
         "type": "categorical",
-        "full_name": "Package includes",
-        "continuous": false
+        "full_name": "Package includes"
     },
     {
         "name": "Country",
@@ -625,8 +589,7 @@
         "group": "Power outlet type",
         "feature": "Country",
         "type": "categorical",
-        "full_name": "Country",
-        "continuous": false
+        "full_name": "Country"
     },
     {
         "name": "Special event",
@@ -634,8 +597,7 @@
         "group": "Digital Student",
         "feature": "Special event",
         "type": "categorical",
-        "full_name": "Special event",
-        "continuous": false
+        "full_name": "Special event"
     },
     {
         "name": "Intel processor generation",
@@ -643,8 +605,7 @@
         "group": "Processor",
         "feature": "Intel processor generation",
         "type": "categorical",
-        "full_name": "Intel processor generation",
-        "continuous": false
+        "full_name": "Intel processor generation"
     },
     {
         "name": "Graphics card memory",
@@ -745,8 +706,7 @@
         "group": "Lease",
         "feature": "Lease",
         "type": "categorical",
-        "full_name": "Lease",
-        "continuous": false
+        "full_name": "Lease"
     },
     {
         "name": "Processor model",
@@ -754,8 +714,7 @@
         "group": "Processor model",
         "feature": "Processor model",
         "type": "categorical",
-        "full_name": "Processor model",
-        "continuous": false
+        "full_name": "Processor model"
     },
     {
         "name": "USB 2.0",
@@ -814,8 +773,7 @@
         "group": "Interface",
         "feature": "Other interfaces",
         "type": "categorical",
-        "full_name": "Other interfaces",
-        "continuous": false
+        "full_name": "Other interfaces"
     },
     {
         "name": "USB 3.2 Gen 2x2",

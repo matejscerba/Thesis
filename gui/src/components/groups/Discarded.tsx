@@ -1,10 +1,9 @@
 import Typography from "@mui/material/Typography";
-import Product from "../products/Product";
 import React, { useEffect, useState } from "react";
-import { Product as ProductModel } from "../../types/product";
-import DiscardedMenu from "../menus/DiscardedMenu";
+import { Product as ProductModel, ProductGroupType } from "../../types/product";
 import { fetchPostJson } from "../../utils/api";
 import { useCategory } from "../../contexts/category";
+import ProductsGroup from "./ProductsGroup";
 
 function Discarded() {
   const { name, discarded } = useCategory();
@@ -25,22 +24,7 @@ function Discarded() {
         Discarded
       </Typography>
       {data ? (
-        <>
-          {data.length ? (
-            data.map((product) => (
-              <Product
-                className="border border-danger rounded bg-white"
-                key={`${product.id}`}
-                product={product}
-                menu={<DiscardedMenu product={product} />}
-              />
-            ))
-          ) : (
-            <Typography variant="body1" className="mx-3">
-              There are no discarded products
-            </Typography>
-          )}
-        </>
+        <ProductsGroup products={data} groupType={ProductGroupType.DISCARDED} />
       ) : (
         <Typography variant="body1" className="mx-3">
           Loading discarded products...

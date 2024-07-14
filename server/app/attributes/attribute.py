@@ -46,3 +46,11 @@ class CategoryAttributes(BaseModel):
         if include_price is False:
             _ = attributes.pop(AttributeName.PRICE, None)
         return attributes
+
+    def drop_unused(self, category_name: str) -> None:
+        from app.data_loader import DataLoader
+
+        products = DataLoader.load_products(category_name=category_name)
+        attributes_to_drop = products.columns[products.isna().all()]
+        for attribute in attributes_to_drop:
+            self.attributes.pop(attribute)
