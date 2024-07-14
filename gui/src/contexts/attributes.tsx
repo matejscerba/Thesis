@@ -49,7 +49,11 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     return null;
   }
 
-  const allGroups = attributes ? Object.values(attributes).map((attributes) => attributes.group) : undefined;
+  const allGroups = attributes
+    ? Object.values(attributes)
+        .map((attributes) => attributes.group)
+        .sort()
+    : undefined;
 
   return (
     <AttributesContext.Provider

@@ -43,7 +43,7 @@ function Product({ className, product, menu }: ProductProps) {
       <div className={`${className} product`}>
         <div className="product-header">
           <div className="product-image-wrapper">
-            <img className="product-image" alt={product.name} src={`media/products/${name}/${product.id}.jpeg`} />
+            <img className="product-image" alt={product.name} src={`/media/products/${name}/${product.id}.jpg`} />
           </div>
           <div className="product-main-info">
             <Typography variant="h6">{product.name}</Typography>

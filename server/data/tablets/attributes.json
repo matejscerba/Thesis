@@ -1,0 +1,475 @@
+[
+    {
+        "name": "name",
+        "id": 0,
+        "type": "categorical",
+        "full_name": "name"
+    },
+    {
+        "name": "Price",
+        "id": 1,
+        "type": "numerical",
+        "full_name": "Price [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Price without VAT",
+        "id": 2,
+        "type": "numerical",
+        "full_name": "Price without VAT [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Rating",
+        "id": 3,
+        "type": "numerical",
+        "full_name": "Rating",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Display size",
+        "id": 4,
+        "group": "Display",
+        "feature": "Display size [\"]",
+        "type": "numerical",
+        "full_name": "Display size [\"]",
+        "unit": "\"",
+        "continuous": true
+    },
+    {
+        "name": "Resolution",
+        "id": 5,
+        "group": "Display",
+        "feature": "Resolution",
+        "type": "categorical",
+        "full_name": "Resolution"
+    },
+    {
+        "name": "Display technology",
+        "id": 6,
+        "group": "Display",
+        "feature": "Display technology",
+        "type": "categorical",
+        "full_name": "Display technology"
+    },
+    {
+        "name": "Screen fineness",
+        "id": 7,
+        "group": "Display",
+        "feature": "Screen fineness [PPI]",
+        "type": "numerical",
+        "full_name": "Screen fineness [PPI]",
+        "unit": "PPI",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Computer memory (RAM) size",
+        "id": 8,
+        "group": "Storage",
+        "feature": "Computer memory (RAM) size [GB]",
+        "type": "numerical",
+        "full_name": "Computer memory (RAM) size [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Storage Capacity",
+        "id": 9,
+        "group": "Storage",
+        "feature": "Storage Capacity [GB]",
+        "type": "numerical",
+        "full_name": "Storage Capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Memory card type",
+        "id": 10,
+        "group": "Storage",
+        "feature": "Memory card type",
+        "type": "categorical",
+        "full_name": "Memory card type"
+    },
+    {
+        "name": "Max. memory card size",
+        "id": 11,
+        "group": "Storage",
+        "feature": "Max. memory card size [GB]",
+        "type": "numerical",
+        "full_name": "Max. memory card size [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Wireless technology",
+        "id": 12,
+        "group": "Communication and network",
+        "feature": "Wireless technology",
+        "type": "categorical",
+        "full_name": "Wireless technology"
+    },
+    {
+        "name": "Tablet connectors",
+        "id": 13,
+        "group": "Connectors and sensors",
+        "feature": "Tablet connectors",
+        "type": "categorical",
+        "full_name": "Tablet connectors"
+    },
+    {
+        "name": "Sensors",
+        "id": 14,
+        "group": "Connectors and sensors",
+        "feature": "Sensors",
+        "type": "categorical",
+        "full_name": "Sensors"
+    },
+    {
+        "name": "Main (rear) camera resolution",
+        "id": 15,
+        "group": "Camera",
+        "feature": "Main (rear) camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Main (rear) camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Front-facing (selfie) camera resolution",
+        "id": 16,
+        "group": "Camera",
+        "feature": "Front-facing (selfie) camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Front-facing (selfie) camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Maximum video resolution",
+        "id": 17,
+        "group": "Camera",
+        "feature": "Maximum video resolution",
+        "type": "categorical",
+        "full_name": "Maximum video resolution"
+    },
+    {
+        "name": "Supported resolutions and frame rates (FPS)",
+        "id": 18,
+        "group": "Camera",
+        "feature": "Supported resolutions and frame rates (FPS)",
+        "type": "categorical",
+        "full_name": "Supported resolutions and frame rates (FPS)"
+    },
+    {
+        "name": "Camera functions",
+        "id": 19,
+        "group": "Camera",
+        "feature": "Camera functions",
+        "type": "categorical",
+        "full_name": "Camera functions"
+    },
+    {
+        "name": "Battery capacity",
+        "id": 20,
+        "group": "Battery life and performance",
+        "feature": "Battery capacity [mAh]",
+        "type": "numerical",
+        "full_name": "Battery capacity [mAh]",
+        "unit": "mAh",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Charging performance",
+        "id": 21,
+        "group": "Battery life and performance",
+        "feature": "Charging performance [W]",
+        "type": "numerical",
+        "full_name": "Charging performance [W]",
+        "unit": "W",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Number of processor cores",
+        "id": 22,
+        "group": "Battery life and performance",
+        "feature": "Number of processor cores",
+        "type": "numerical",
+        "full_name": "Number of processor cores",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Processor frequency",
+        "id": 23,
+        "group": "Battery life and performance",
+        "feature": "Processor frequency [GHz]",
+        "type": "numerical",
+        "full_name": "Processor frequency [GHz]",
+        "unit": "GHz",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Processor model",
+        "id": 24,
+        "group": "Battery life and performance",
+        "feature": "Processor model",
+        "type": "categorical",
+        "full_name": "Processor model"
+    },
+    {
+        "name": "Functions",
+        "id": 25,
+        "group": "Features",
+        "feature": "Functions",
+        "type": "categorical",
+        "full_name": "Functions"
+    },
+    {
+        "name": "Operating system",
+        "id": 26,
+        "group": "Software",
+        "feature": "Operating system",
+        "type": "categorical",
+        "full_name": "Operating system"
+    },
+    {
+        "name": "Operating system version",
+        "id": 27,
+        "group": "Software",
+        "feature": "Operating system version",
+        "type": "categorical",
+        "full_name": "Operating system version"
+    },
+    {
+        "name": "Height",
+        "id": 28,
+        "group": "Construction",
+        "feature": "Height [mm]",
+        "type": "numerical",
+        "full_name": "Height [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Width",
+        "id": 29,
+        "group": "Construction",
+        "feature": "Width [mm]",
+        "type": "numerical",
+        "full_name": "Width [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Depth",
+        "id": 30,
+        "group": "Construction",
+        "feature": "Depth [mm]",
+        "type": "numerical",
+        "full_name": "Depth [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Weight",
+        "id": 31,
+        "group": "Construction",
+        "feature": "Weight [kg]",
+        "type": "numerical",
+        "full_name": "Weight [kg]",
+        "unit": "kg",
+        "continuous": true
+    },
+    {
+        "name": "Colour",
+        "id": 32,
+        "group": "Construction",
+        "feature": "Colour",
+        "type": "categorical",
+        "full_name": "Colour"
+    },
+    {
+        "name": "Package includes",
+        "id": 33,
+        "group": "Package contents",
+        "feature": "Package includes",
+        "type": "categorical",
+        "full_name": "Package includes"
+    },
+    {
+        "name": "Series",
+        "id": 34,
+        "group": "Series",
+        "feature": "Series",
+        "type": "categorical",
+        "full_name": "Series"
+    },
+    {
+        "name": "Country",
+        "id": 35,
+        "group": "Power outlet type",
+        "feature": "Country",
+        "type": "categorical",
+        "full_name": "Country"
+    },
+    {
+        "name": "Storage capacity",
+        "id": 36,
+        "group": "Storage",
+        "feature": "Storage capacity [GB]",
+        "type": "numerical",
+        "full_name": "Storage capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Main rear camera aperture",
+        "id": 37,
+        "group": "Camera",
+        "feature": "Main rear camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Main rear camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Front Camera Aperture",
+        "id": 38,
+        "group": "Camera",
+        "feature": "Front Camera Aperture [f/]",
+        "type": "numerical",
+        "full_name": "Front Camera Aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Degree of protection",
+        "id": 39,
+        "group": "Construction",
+        "feature": "Degree of protection",
+        "type": "categorical",
+        "full_name": "Degree of protection"
+    },
+    {
+        "name": "Graphics chip",
+        "id": 40,
+        "group": "Battery life and performance",
+        "feature": "Graphics chip",
+        "type": "categorical",
+        "full_name": "Graphics chip"
+    },
+    {
+        "name": "Supported cellular networks",
+        "id": 41,
+        "group": "Communication and network",
+        "feature": "Supported cellular networks",
+        "type": "categorical",
+        "full_name": "Supported cellular networks"
+    },
+    {
+        "name": "Primary SIM card type",
+        "id": 42,
+        "group": "Communication and network",
+        "feature": "Primary SIM card type",
+        "type": "categorical",
+        "full_name": "Primary SIM card type"
+    },
+    {
+        "name": "Secondary SIM Card Type",
+        "id": 43,
+        "group": "Communication and network",
+        "feature": "Secondary SIM Card Type",
+        "type": "categorical",
+        "full_name": "Secondary SIM Card Type"
+    },
+    {
+        "name": "Special event",
+        "id": 44,
+        "group": "Digital Student",
+        "feature": "Special event",
+        "type": "categorical",
+        "full_name": "Special event"
+    },
+    {
+        "name": "Supported formats",
+        "id": 45,
+        "group": "Supported formats",
+        "feature": "Supported formats",
+        "type": "categorical",
+        "full_name": "Supported formats"
+    },
+    {
+        "name": "User interface language",
+        "id": 46,
+        "group": "Language",
+        "feature": "User interface language",
+        "type": "categorical",
+        "full_name": "User interface language"
+    },
+    {
+        "name": "Equipment",
+        "id": 47,
+        "group": "Features",
+        "feature": "Equipment",
+        "type": "categorical",
+        "full_name": "Equipment"
+    },
+    {
+        "name": "Internal memory",
+        "id": 48,
+        "group": "Memory",
+        "feature": "Internal memory [GB]",
+        "type": "numerical",
+        "full_name": "Internal memory [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Suitable for",
+        "id": 49,
+        "group": "Use",
+        "feature": "Suitable for",
+        "type": "categorical",
+        "full_name": "Suitable for"
+    },
+    {
+        "name": "Usage",
+        "id": 50,
+        "group": "Use",
+        "feature": "Usage",
+        "type": "categorical",
+        "full_name": "Usage"
+    },
+    {
+        "name": "Must additionally purchase AA batteries",
+        "id": 51,
+        "group": "Batteries",
+        "feature": "Must additionally purchase AA batteries",
+        "type": "categorical",
+        "full_name": "Must additionally purchase AA batteries"
+    },
+    {
+        "name": "Battery type",
+        "id": 52,
+        "group": "Batteries",
+        "feature": "Battery type",
+        "type": "categorical",
+        "full_name": "Battery type"
+    }
+]

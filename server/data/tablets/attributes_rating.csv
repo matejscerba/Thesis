@@ -1,0 +1,999 @@
+attribute;value;rating;rating_count
+Resolution;1024 × 600 px;3.7124999999999995;8.0
+Resolution;1200 × 2000 px;4.530434782608696;23.0
+Resolution;1200 × 800 px;3.9;10.0
+Resolution;1280 × 800 px;3.8473214285714286;224.0
+Resolution;1340 × 800 px;4.598136645962733;161.0
+Resolution;1872 × 1404 px;3.8;5.0
+Resolution;1920 × 1080 px;;0.0
+Resolution;1920 × 1200 px;4.522627737226277;411.0
+Resolution;2000 × 1200 px;4.540591397849462;372.0
+Resolution;2048 × 1536 px;5.0;2.0
+Resolution;2160 × 1620 px;4.870588235294118;289.0
+Resolution;2224 × 1668 px;5.0;11.0
+Resolution;2266 × 1488 px;4.889285714285714;56.0
+Resolution;2304 × 1440 px;4.555555555555555;9.0
+Resolution;2360 × 1640 px;4.8766917293233085;266.0
+Resolution;2388 × 1668 px;4.971212121212122;66.0
+Resolution;2560 × 1536 px;4.2;21.0
+Resolution;2560 × 1600 px;4.619327731092437;119.0
+Resolution;2732 × 2048 px;5.0;31.0
+Resolution;2800 × 1752 px;5.0;34.0
+Resolution;2944 × 1840 px;4.5;11.0
+Resolution;2960 × 1848 px;5.0;6.0
+Resolution;3000x1876 px;;0.0
+Display technology;['AMOLED'];4.832558139534884;86.0
+Display technology;['E-ink'];3.8;5.0
+Display technology;['IPS', 'TFT'];5.0;3.0
+Display technology;['IPS'];4.583290978398984;1574.0
+Display technology;['LTPS'];4.5;11.0
+Display technology;['Liquid Retina XDR'];;0.0
+Display technology;['Liquid Retina'];;0.0
+Display technology;['OLED'];4.2;21.0
+Display technology;['Retina'];5.0;10.0
+Display technology;['TFT'];4.619565217391305;460.0
+Display technology;['TN'];1.0;1.0
+Screen fineness [PPI];149.0;3.7625;88.0
+Screen fineness [PPI];149.45;;0.0
+Screen fineness [PPI];149.5;4.4;8.0
+Screen fineness [PPI];179.0;4.633944954128441;109.0
+Screen fineness [PPI];188.0;4.4;5.0
+Screen fineness [PPI];189.0;3.9;10.0
+Screen fineness [PPI];195.0;4.4;11.0
+Screen fineness [PPI];203.0;4.7;12.0
+Screen fineness [PPI];212.0;4.7;39.0
+Screen fineness [PPI];213.0;;0.0
+Screen fineness [PPI];215.0;5.0;1.0
+Screen fineness [PPI];216.0;4.776785714285714;112.0
+Screen fineness [PPI];217.0;;0.0
+Screen fineness [PPI];220.0;4.375;12.0
+Screen fineness [PPI];224.0;4.540136054421769;147.0
+Screen fineness [PPI];225.0;4.397196261682243;107.0
+Screen fineness [PPI];227.0;3.8;5.0
+Screen fineness [PPI];240.0;4.7;10.0
+Screen fineness [PPI];243.0;4.380487804878048;41.0
+Screen fineness [PPI];244.0;4.8;5.0
+Screen fineness [PPI];249.0;4.555555555555555;9.0
+Screen fineness [PPI];260.0;;0.0
+Screen fineness [PPI];264.0;4.888906009244993;649.0
+Screen fineness [PPI];266.0;5.0;16.0
+Screen fineness [PPI];269.0;3.0;1.0
+Screen fineness [PPI];273.0;4.5;11.0
+Screen fineness [PPI];274.0;4.7631578947368425;19.0
+Screen fineness [PPI];275.0;4.788888888888888;18.0
+Screen fineness [PPI];276.0;;0.0
+Screen fineness [PPI];299.0;4.3;16.0
+Screen fineness [PPI];309.0;4.8;70.0
+Screen fineness [PPI];326.0;4.889285714285714;56.0
+Screen fineness [PPI];360.0;4.0;14.0
+Screen fineness [PPI];374.0;5.0;8.0
+Computer memory (RAM) size [GB];1.0;4.1;7.0
+Computer memory (RAM) size [GB];2.0;3.4672727272727273;55.0
+Computer memory (RAM) size [GB];3.0;4.564778761061947;565.0
+Computer memory (RAM) size [GB];4.0;4.525217391304348;690.0
+Computer memory (RAM) size [GB];6.0;4.708666666666667;150.0
+Computer memory (RAM) size [GB];8.0;4.652291666666667;480.0
+Computer memory (RAM) size [GB];12.0;4.964285714285714;28.0
+Computer memory (RAM) size [GB];16.0;5.0;3.0
+Storage Capacity [GB];16.0;4.1;7.0
+Storage Capacity [GB];32.0;4.162719298245614;228.0
+Storage Capacity [GB];64.0;4.59409282700422;711.0
+Storage Capacity [GB];128.0;4.420396600566573;353.0
+Storage Capacity [GB];256.0;4.665686274509804;204.0
+Storage Capacity [GB];512.0;5.0;17.0
+Storage Capacity [GB];1000.0;;0.0
+Memory card type;['Does not support'];4.876728110599078;434.0
+Memory card type;['Micro SD', 'Micro SDHC'];3.971428571428571;7.0
+Memory card type;['Micro SD', 'Micro SDXC', 'Micro SDHC', 'TF Card'];4.211111111111111;144.0
+Memory card type;['Micro SD', 'Micro SDXC', 'Micro SDHC'];4.6;105.0
+Memory card type;['Micro SD', 'Micro SDXC', 'TF Card'];;0.0
+Memory card type;['Micro SD', 'Micro SDXC'];4.221052631578948;19.0
+Memory card type;['Micro SD', 'TF Card'];4.115068493150685;73.0
+Memory card type;['Micro SD'];4.499678800856531;934.0
+Memory card type;['Micro SDXC', 'Micro SDHC'];1.0;1.0
+Memory card type;['Micro SDXC'];4.235087719298246;57.0
+Memory card type;['SD'];4.7;12.0
+Memory card type;['SDHC'];3.0;2.0
+Memory card type;['SDXC'];4.666666666666667;3.0
+Memory card type;['TF Card'];4.5512195121951216;41.0
+Max. memory card size [GB];125.0;4.0;2.0
+Max. memory card size [GB];128.0;4.009039548022599;177.0
+Max. memory card size [GB];256.0;4.283333333333333;60.0
+Max. memory card size [GB];400.0;4.5;2.0
+Max. memory card size [GB];512.0;4.67910447761194;67.0
+Max. memory card size [GB];976.56;4.618181818181818;44.0
+Max. memory card size [GB];1000.0;4.437573385518591;511.0
+Max. memory card size [GB];1024.0;4.500602409638554;332.0
+Max. memory card size [GB];2000.0;4.62872340425532;94.0
+Max. memory card size [GB];2048.0;4.269230769230769;13.0
+Wireless technology;['NFC', 'WiFi', 'Bluetooth', 'A-GPS'];5.0;3.0
+Wireless technology;['NFC', 'WiFi', 'Bluetooth', 'GPS', 'A-GPS', 'GLONASS'];;0.0
+Wireless technology;['NFC', 'WiFi', 'Bluetooth', 'GPS', 'GLONASS'];;0.0
+Wireless technology;['NFC', 'WiFi', 'Bluetooth', 'GPS'];4.5;20.0
+Wireless technology;['NFC', 'WiFi', 'Bluetooth'];4.935483870967742;31.0
+Wireless technology;['NFC', 'WiFi'];;0.0
+Wireless technology;['WiFi', 'Bluetooth', 'A-GPS'];3.933333333333333;9.0
+Wireless technology;['WiFi', 'Bluetooth', 'GPS', 'A-GPS', 'GLONASS'];;0.0
+Wireless technology;['WiFi', 'Bluetooth', 'GPS', 'A-GPS'];4.507333333333333;150.0
+Wireless technology;['WiFi', 'Bluetooth', 'GPS', 'GLONASS'];;0.0
+Wireless technology;['WiFi', 'Bluetooth', 'GPS', 'Infraport'];4.6;15.0
+Wireless technology;['WiFi', 'Bluetooth', 'GPS'];4.519007092198581;705.0
+Wireless technology;['WiFi', 'Bluetooth'];4.646275752773376;1262.0
+Wireless technology;['WiFi', 'GPS', 'GLONASS'];5.0;1.0
+Wireless technology;['WiFi', 'GPS'];4.545454545454546;11.0
+Tablet connectors;['Headphone output (3.5mm jack)'];;0.0
+Tablet connectors;['Lightning', 'Headphone output (3.5mm jack)'];4.876158940397351;302.0
+Tablet connectors;['USB-C', 'Docking connector', 'USB-C 3.2'];;0.0
+Tablet connectors;['USB-C', 'Docking connector'];4.208;25.0
+Tablet connectors;['USB-C', 'Headphone output (3.5mm jack)'];4.386454849498327;598.0
+Tablet connectors;['USB-C', 'USB 2.0'];;0.0
+Tablet connectors;['USB-C'];4.659936153232242;1253.0
+Tablet connectors;['micro USB 2.0', 'Headphone output (3.5mm jack)'];4.1;7.0
+Tablet connectors;['micro USB 2.0'];3.3863636363636362;22.0
+Sensors;['Digital compass', 'Gyroscope', 'G-sensor'];;0.0
+Sensors;['Digital compass', 'Gyroscope', 'Light sensor', 'G-sensor'];;0.0
+Sensors;['Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor', 'Fingerprint reader'];4.25;4.0
+Sensors;['Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor', 'TOF senzor'];;0.0
+Sensors;['Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor'];4.2;21.0
+Sensors;['Digital compass', 'Gyroscope', 'Light sensor'];4.566666666666666;159.0
+Sensors;['Digital compass', 'Light sensor', 'G-sensor', 'Fingerprint reader'];4.5;11.0
+Sensors;['Digital compass', 'Light sensor', 'G-sensor'];4.0;14.0
+Sensors;['Fingerprint reader'];;0.0
+Sensors;['G-sensor'];4.109615384615385;104.0
+Sensors;['Gyroscope', 'G-sensor'];4.466666666666667;33.0
+Sensors;['Gyroscope', 'Light sensor', 'Barometer'];4.9270588235294115;85.0
+Sensors;['Gyroscope', 'Light sensor', 'G-sensor'];4.548387096774194;31.0
+Sensors;['Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor'];4.437777777777778;45.0
+Sensors;['Gyroscope', 'Light sensor', 'Proximity sensor'];3.7000000000000006;3.0
+Sensors;['Gyroscope', 'Light sensor'];5.0;3.0
+Sensors;['Gyroscope'];4.557738095238095;168.0
+Sensors;['Light sensor', 'G-sensor'];4.496363636363637;110.0
+Sensors;['Light sensor', 'Proximity sensor', 'G-sensor'];4.654794520547944;73.0
+Sensors;['Light sensor'];3.933333333333333;9.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'G-sensor'];;0.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor', 'Fingerprint reader'];4.924324324324324;37.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor', 'G-sensor'];;0.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'Barometer', 'G-sensor'];;0.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor', 'Fingerprint reader'];;0.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor'];3.7047619047619045;21.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Light sensor'];4.860621761658031;193.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope', 'Proximity sensor'];;0.0
+Sensors;['Motion sensor', 'Digital compass', 'Gyroscope'];4.1684210526315795;38.0
+Sensors;['Motion sensor', 'Digital compass', 'Light sensor'];4.4;5.0
+Sensors;['Motion sensor', 'G-sensor'];4.0;26.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'Barometer'];4.911170212765957;188.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'G-sensor', 'Fingerprint reader'];4.642857142857143;14.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'G-sensor'];4.461538461538462;13.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'Fingerprint reader'];3.0;1.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'Proximity sensor', 'G-sensor'];4.5804347826086955;46.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor', 'Proximity sensor'];4.5;2.0
+Sensors;['Motion sensor', 'Gyroscope', 'Light sensor'];4.468965517241379;29.0
+Sensors;['Motion sensor', 'Gyroscope'];4.844827586206897;435.0
+Sensors;['Motion sensor', 'Light sensor', 'Fingerprint reader'];;0.0
+Sensors;['Motion sensor', 'Light sensor', 'G-sensor'];;0.0
+Sensors;['Motion sensor', 'Light sensor', 'Proximity sensor', 'G-sensor'];4.630645161290323;62.0
+Sensors;['Motion sensor', 'Light sensor', 'Proximity sensor'];4.394;50.0
+Sensors;['Motion sensor', 'Light sensor'];4.423809523809524;42.0
+Sensors;['Motion sensor'];4.167123287671233;73.0
+Sensors;['Proximity sensor', 'G-sensor'];;0.0
+Main (rear) camera resolution [Mpx];2.0;3.37906976744186;43.0
+Main (rear) camera resolution [Mpx];5.0;4.1327510917030565;229.0
+Main (rear) camera resolution [Mpx];8.0;4.664057672502575;971.0
+Main (rear) camera resolution [Mpx];12.0;4.902386634844868;419.0
+Main (rear) camera resolution [Mpx];13.0;4.565447154471545;492.0
+Main (rear) camera resolution [Mpx];16.0;4.017391304347826;23.0
+Main (rear) camera resolution [Mpx];20.0;4.533333333333333;24.0
+Main (rear) camera resolution [Mpx];48.0;;0.0
+Front-facing (selfie) camera resolution [Mpx];0.3;3.0999999999999996;18.0
+Front-facing (selfie) camera resolution [Mpx];1.2;5.0;2.0
+Front-facing (selfie) camera resolution [Mpx];2.0;4.263517060367454;381.0
+Front-facing (selfie) camera resolution [Mpx];3.0;3.8;5.0
+Front-facing (selfie) camera resolution [Mpx];5.0;4.606206896551725;435.0
+Front-facing (selfie) camera resolution [Mpx];7.0;5.0;14.0
+Front-facing (selfie) camera resolution [Mpx];8.0;4.483090909090909;550.0
+Front-facing (selfie) camera resolution [Mpx];10.0;;0.0
+Front-facing (selfie) camera resolution [Mpx];12.0;4.881223922114047;719.0
+Front-facing (selfie) camera resolution [Mpx];13.0;;0.0
+Front-facing (selfie) camera resolution [Mpx];16.0;4.083333333333333;12.0
+Front-facing (selfie) camera resolution [Mpx];32.0;;0.0
+Maximum video resolution;1080 × 540 px;3.0;2.0
+Maximum video resolution;1280 × 720 px;3.0;1.0
+Maximum video resolution;1560 × 720 px;4.0;1.0
+Maximum video resolution;1600 × 1200 px;2.0;1.0
+Maximum video resolution;1800 × 2880 px;4.8;70.0
+Maximum video resolution;1920 × 1080 px;4.60392506690455;1121.0
+Maximum video resolution;2048 × 1080 px;4.739130434782608;23.0
+Maximum video resolution;2560 × 1440 px;;0.0
+Maximum video resolution;3840 × 2160 px;4.896275071633237;349.0
+Maximum video resolution;640 × 480 px;3.875;8.0
+Maximum video resolution;720 × 480 px;4.5;2.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 30fps', '720p (HD) 120fps'];4.852209944751381;362.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 30fps', '720p (HD) 30fps', '480p (VGA)'];4.4;5.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 30fps', '720p (HD) 30fps'];4.1987499999999995;80.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 30fps'];4.567775831873905;571.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 60fps', '1080p (Full HD) 30fps', '720p (HD) 30fps'];;0.0
+Supported resolutions and frame rates (FPS);['1080p (Full HD) 60fps'];4.2;97.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 30fps', '1080p (Full HD) 30fps'];;0.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 30fps', '1080p (Full HD) 60fps'];4.8;70.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 30fps'];4.7727272727272725;22.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 60fps', '2160p (4K) 30fps', '1080p (Full HD) 30fps'];4.859322033898305;59.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 60fps', '2160p (4K) 30fps', '1080p (Full HD) 60fps', '1080p (Full HD) 30fps', '1080p (Full HD) 120fps', '1080p (Full HD) 240fps', '720p (HD) 30fps'];4.889285714285714;56.0
+Supported resolutions and frame rates (FPS);['2160p (4K) 60fps', '2160p (4K) 30fps', '2160p (4K) 24fps', '1080p (Full HD) 60fps', '1080p (Full HD) 30fps', '1080p (Full HD) 120fps', '1080p (Full HD) 240fps'];;0.0
+Supported resolutions and frame rates (FPS);['240p (QVGA)'];4.5;2.0
+Supported resolutions and frame rates (FPS);['4320p (8K) 30fps', '2160p (4K) 60fps', '2160p (4K) 24fps', '1080p (Full HD) 60fps', '1080p (Full HD) 30fps', '1080p (Full HD) 120fps', '1080p (Full HD) 240fps'];4.924090909090909;220.0
+Supported resolutions and frame rates (FPS);['480p (VGA)', '240p (QVGA)'];3.875;8.0
+Supported resolutions and frame rates (FPS);['720p (HD) 30fps', '480p (VGA)'];;0.0
+Supported resolutions and frame rates (FPS);['720p (HD) 30fps'];3.25;4.0
+Camera functions;['Flash function', 'Face Unlock'];;0.0
+Camera functions;['Flash function', 'Night Vision', 'Face Unlock'];;0.0
+Camera functions;['Flash function'];4.634813248766737;1419.0
+Camera functions;['Optical zoom', 'Flash function'];4.924324324324324;37.0
+Camera functions;['Optical zoom'];4.666666666666667;3.0
+Camera functions;['Swivel Camera'];4.5200000000000005;20.0
+Battery capacity [mAh];2580.0;3.7124999999999995;8.0
+Battery capacity [mAh];3500.0;3.5;21.0
+Battery capacity [mAh];3550.0;3.8;5.0
+Battery capacity [mAh];4000.0;2.890909090909091;22.0
+Battery capacity [mAh];4080.0;3.4;12.0
+Battery capacity [mAh];4870.0;2.0;1.0
+Battery capacity [mAh];5000.0;4.0815789473684205;76.0
+Battery capacity [mAh];5060.0;3.3333333333333335;3.0
+Battery capacity [mAh];5100.0;4.632244897959184;245.0
+Battery capacity [mAh];5124.0;4.889285714285714;56.0
+Battery capacity [mAh];5150.0;4.0;2.0
+Battery capacity [mAh];5500.0;5.0;4.0
+Battery capacity [mAh];5580.0;3.875;8.0
+Battery capacity [mAh];6000.0;4.131578947368421;95.0
+Battery capacity [mAh];6580.0;4.206569343065693;137.0
+Battery capacity [mAh];6600.0;3.6;5.0
+Battery capacity [mAh];7000.0;4.3;10.0
+Battery capacity [mAh];7040.0;4.7523560209424085;191.0
+Battery capacity [mAh];7200.0;;0.0
+Battery capacity [mAh];7250.0;4.556521739130435;23.0
+Battery capacity [mAh];7280.0;1.0;1.0
+Battery capacity [mAh];7500.0;4.257627118644067;59.0
+Battery capacity [mAh];7538.0;;0.0
+Battery capacity [mAh];7600.0;3.0;1.0
+Battery capacity [mAh];7650.0;4.4;5.0
+Battery capacity [mAh];7680.0;4.675;40.0
+Battery capacity [mAh];7700.0;4.601307189542483;153.0
+Battery capacity [mAh];8000.0;4.496428571428572;56.0
+Battery capacity [mAh];8250.0;;0.0
+Battery capacity [mAh];8280.0;5.0;1.0
+Battery capacity [mAh];8300.0;4.3500000000000005;24.0
+Battery capacity [mAh];8400.0;4.788888888888888;18.0
+Battery capacity [mAh];8580.0;5.0;8.0
+Battery capacity [mAh];8686.327077747988;4.504545454545454;22.0
+Battery capacity [mAh];8840.0;4.8;70.0
+Battery capacity [mAh];9070.0;;0.0
+Battery capacity [mAh];10000.0;4.0;11.0
+Battery capacity [mAh];10090.0;4.574193548387097;62.0
+Battery capacity [mAh];10200.0;4.433333333333334;15.0
+Battery capacity [mAh];10600.0;5.0;1.0
+Battery capacity [mAh];10758.0;5.0;2.0
+Battery capacity [mAh];10800.0;;0.0
+Battery capacity [mAh];11000.0;;0.0
+Battery capacity [mAh];11200.0;5.0;6.0
+Battery capacity [mAh];12300.0;;0.0
+Battery capacity [mAh];13000.0;5.0;1.0
+Battery capacity [mAh];15600.0;;0.0
+Battery capacity [mAh];18600.0;;0.0
+Battery capacity [mAh];20000.0;;0.0
+Battery capacity [mAh];22000.0;;0.0
+Battery capacity [mAh];32000.0;;0.0
+Battery capacity [mAh];76675.60321715818;4.8812500000000005;48.0
+Charging performance [W];5.0;3.875;8.0
+Charging performance [W];10.0;4.382758620689655;203.0
+Charging performance [W];15.0;4.702310231023102;303.0
+Charging performance [W];18.0;4.212068965517242;58.0
+Charging performance [W];20.0;4.874157303370787;267.0
+Charging performance [W];22.5;4.7;12.0
+Charging performance [W];27.0;5.0;8.0
+Charging performance [W];30.0;4.5;11.0
+Charging performance [W];33.0;4.802816901408451;71.0
+Charging performance [W];45.0;4.624369747899159;119.0
+Charging performance [W];68.0;;0.0
+Number of processor cores;4.0;3.8164556962025316;237.0
+Number of processor cores;8.0;4.582458888018794;1277.0
+Processor frequency [GHz];0.0;;0.0
+Processor frequency [GHz];1.3;3.525;20.0
+Processor frequency [GHz];1.5;3.448780487804878;41.0
+Processor frequency [GHz];1.6;4.15672514619883;171.0
+Processor frequency [GHz];1.8;4.1991735537190085;121.0
+Processor frequency [GHz];2.0;4.482242990654206;428.0
+Processor frequency [GHz];2.05;4.7;39.0
+Processor frequency [GHz];2.2;4.706666666666666;60.0
+Processor frequency [GHz];2.3;4.6706896551724135;116.0
+Processor frequency [GHz];2.4;4.506185567010309;97.0
+Processor frequency [GHz];2.6;4.303125;32.0
+Processor frequency [GHz];2.8;4.871428571428572;28.0
+Processor frequency [GHz];2.84;;0.0
+Processor frequency [GHz];2.85;;0.0
+Processor frequency [GHz];3.0;4.7631578947368425;19.0
+Processor frequency [GHz];3.05;;0.0
+Processor frequency [GHz];3.09;5.0;18.0
+Processor frequency [GHz];3.2;4.25;4.0
+Processor frequency [GHz];15.0;3.8;5.0
+Processor frequency [GHz];16.0;4.416666666666667;12.0
+Processor frequency [GHz];18.0;4.5;2.0
+Processor frequency [GHz];22.0;5.0;6.0
+Processor frequency [GHz];23.0;4.625;84.0
+Processor frequency [GHz];24.0;4.444444444444445;9.0
+Processor frequency [GHz];28.0;4.866666666666666;21.0
+Processor frequency [GHz];32.0;4.666666666666667;3.0
+Processor model;ARM Cortex A5;3.933333333333333;9.0
+Processor model;ARM Cortex A55;;0.0
+Processor model;Allwinner A133;3.3426229508196723;61.0
+Processor model;Apple A12 Bionic;5.0;15.0
+Processor model;Apple A12X;5.0;1.0
+Processor model;Apple A13 Bionic;4.869686411149826;287.0
+Processor model;Apple A14 Bionic;4.793589743589743;78.0
+Processor model;Apple A15 Bionic;4.889285714285714;56.0
+Processor model;Apple M1 with 8-core GPU;4.912105263157894;190.0
+Processor model;Apple M2 with 10-core GPU;4.979787234042553;94.0
+Processor model;Cortex A53;4.297058823529412;34.0
+Processor model;Exynos 9611;4.8;10.0
+Processor model;Exynos1380;4.642857142857143;14.0
+Processor model;Google Tensor G2;;0.0
+Processor model;Helio G85;1.0;1.0
+Processor model;Intel Celeron N3450;2.0;1.0
+Processor model;MT8167B;3.4;12.0
+Processor model;MT8788A;4.871428571428572;7.0
+Processor model;MediaTek Dimensity 7050;4.5;11.0
+Processor model;MediaTek Dimensity 9000;;0.0
+Processor model;MediaTek Helio A22;4.666666666666667;36.0
+Processor model;MediaTek Helio G25;4.4;5.0
+Processor model;MediaTek Helio G80;4.523076923076923;52.0
+Processor model;MediaTek Helio G90T;4.7;39.0
+Processor model;MediaTek Helio G99;4.710869565217391;46.0
+Processor model;MediaTek Helio P22T;4.321428571428571;14.0
+Processor model;MediaTek Kompanio 1300T;4.2;21.0
+Processor model;MediaTek MT6762;;0.0
+Processor model;MediaTek MT8167;3.7124999999999995;8.0
+Processor model;MediaTek MT8183;;0.0
+Processor model;MediaTek MT8385;4.0;2.0
+Processor model;MediaTek MT8766;;0.0
+Processor model;MediaTek MT8786;4.9;13.0
+Processor model;MediaTek MT8786, MediaTek MT8786;;0.0
+Processor model;MediaTek MTK8768;5.0;3.0
+Processor model;MediaTek MTK8768T;4.633944954128441;109.0
+Processor model;Qualcomm Snapdragon 662;4.618181818181818;44.0
+Processor model;Qualcomm Snapdragon 670;4.7;22.0
+Processor model;Qualcomm Snapdragon 685;4.7;12.0
+Processor model;Qualcomm Snapdragon 778G;4.347619047619047;42.0
+Processor model;Qualcomm Snapdragon 8 Gen 2;4.904999999999999;40.0
+Processor model;Qualcomm Snapdragon 8 Gen1;4.7631578947368425;19.0
+Processor model;Qualcomm Snapdragon 835;4.5;2.0
+Processor model;Qualcomm Snapdragon 865+;5.0;18.0
+Processor model;Qualcomm Snapdragon 870;4.77027027027027;74.0
+Processor model;Qualcomm Snapdragon 888 5G;;0.0
+Processor model;Qualcomm Snapdragon SDM680;4.495604395604396;91.0
+Processor model;Rockchip 3326;3.8685714285714288;35.0
+Processor model;Rockchip RK3562;4.28;15.0
+Processor model;Rockchip RK3566;4.0;33.0
+Processor model;SC9863A;4.516;50.0
+Processor model;Snapdragon 720G;4.705797101449275;69.0
+Processor model;T610;4.420833333333333;72.0
+Processor model;T616;3.812121212121212;33.0
+Processor model;UNISOC SC9863;3.875;16.0
+Processor model;Unisoc T606;4.260869565217392;23.0
+Processor model;Unisoc T616;3.885714285714286;7.0
+Processor model;Unisoc Tiger T618;4.66993006993007;143.0
+Processor model;Unisoc UMS9230;4.502298850574713;87.0
+Functions;['Gorilla Glass'];4.0;8.0
+Functions;['Image transmission to TV', 'Barcode reader', 'Quick charge', 'Water-resistant'];4.666666666666667;3.0
+Functions;['OTG', 'Gorilla Glass', 'Water-resistant'];4.0;2.0
+Functions;['OTG', 'Gorilla Glass'];4.7299999999999995;30.0
+Functions;['OTG', 'Image transmission to TV', 'Gorilla Glass'];4.2;21.0
+Functions;['OTG', 'Image transmission to TV', 'Quick charge'];4.5;2.0
+Functions;['OTG', 'Image transmission to TV', 'Quick charging', 'Gorilla Glass', 'Fingerprint reader'];;0.0
+Functions;['OTG', 'Image transmission to TV', 'Quick charging'];4.3;10.0
+Functions;['OTG', 'Image transmission to TV', 'Water-resistant'];3.0;1.0
+Functions;['OTG', 'Quick charge', 'Gorilla Glass', 'Water-resistant'];4.5;10.0
+Functions;['OTG', 'Quick charge', 'Gorilla Glass'];;0.0
+Functions;['OTG', 'Quick charge', 'Water-resistant'];5.0;6.0
+Functions;['OTG', 'Quick charge'];3.5;2.0
+Functions;['OTG', 'Quick charging', 'Gorilla Glass', 'Water-resistant'];5.0;5.0
+Functions;['OTG', 'Quick charging', 'Gorilla Glass'];4.35;8.0
+Functions;['OTG', 'Quick charging'];3.9262295081967213;61.0
+Functions;['OTG', 'Water-resistant'];4.083333333333333;12.0
+Functions;['OTG'];4.3133603238866405;247.0
+Functions;['Quick charge', 'Water-resistant'];4.866666666666666;21.0
+Functions;['Quick charge'];4.811522633744856;486.0
+Functions;['Quick charging', 'Gorilla Glass'];4.321428571428571;14.0
+Functions;['Quick charging', 'Water-resistant'];5.0;16.0
+Functions;['Quick charging'];4.554029850746268;335.0
+Functions;['VoLTE/GSM', 'OTG', 'Image transmission to TV', 'Quick charge'];5.0;1.0
+Functions;['VoLTE/GSM', 'OTG', 'Image transmission to TV', 'Quick charging', 'Gorilla Glass', 'Water-resistant'];;0.0
+Functions;['VoLTE/GSM', 'OTG', 'Quick charging', 'Gorilla Glass'];4.0;2.0
+Functions;['VoLTE/GSM', 'OTG', 'Quick charging', 'Water-resistant'];4.4;5.0
+Functions;['VoLTE/GSM', 'OTG', 'Quick charging'];4.6;15.0
+Functions;['VoLTE/GSM', 'OTG'];;0.0
+Functions;['VoLTE/GSM', 'Quick charge', 'Water-resistant', 'Fingerprint reader'];;0.0
+Functions;['VoLTE/GSM', 'Quick charging'];4.694117647058823;51.0
+Functions;['VoLTE/GSM'];3.0;1.0
+Functions;['Water-resistant'];;0.0
+Operating system;['Google Android'];4.454074074074074;1485.0
+Operating system;['Harmony OS'];;0.0
+Operating system;['Microsoft Windows'];2.0;1.0
+Operating system;['iPadOS'];4.891400832177531;721.0
+Operating system version;Android 10;4.528662420382165;157.0
+Operating system version;Android 10 (Go Edition);3.6333333333333333;21.0
+Operating system version;Android 11;4.54179104477612;402.0
+Operating system version;Android 12;4.380935875216638;577.0
+Operating system version;Android 12 (Go edition);1.0;1.0
+Operating system version;Android 13;4.5;298.0
+Operating system version;Android 9.0 Pie;4.683333333333334;24.0
+Operating system version;Android AOSP 11.0;3.8;5.0
+Operating system version;Windows 10 Pro;2.0;1.0
+Operating system version;iOS 12;5.0;14.0
+Height [mm];5.7;5.0;18.0
+Height [mm];6.3;4.3;30.0
+Height [mm];6.9;4.7;3.0
+Height [mm];7.15;;0.0
+Height [mm];7.4;4.35;8.0
+Height [mm];7.45;4.508620689655173;58.0
+Height [mm];7.8;5.0;1.0
+Height [mm];7.99;4.523076923076923;52.0
+Height [mm];8.0;4.633944954128441;109.0
+Height [mm];8.15;4.375;12.0
+Height [mm];8.6;;0.0
+Height [mm];8.8;4.6;36.0
+Height [mm];8.95;4.8;24.0
+Height [mm];9.92;4.0;2.0
+Height [mm];10.2;3.0;1.0
+Height [mm];11.7;2.0;1.0
+Height [mm];22.1;;0.0
+Height [mm];63.0;4.6;11.0
+Height [mm];83.0;5.0;6.0
+Height [mm];111.0;4.1;7.0
+Height [mm];137.0;4.0;2.0
+Height [mm];153.3;3.8;16.0
+Height [mm];153.4;;0.0
+Height [mm];154.7;;0.0
+Height [mm];155.5;3.7000000000000006;6.0
+Height [mm];155.6;3.933333333333333;9.0
+Height [mm];156.0;;0.0
+Height [mm];157.0;4.363636363636363;11.0
+Height [mm];157.4;4.7;40.0
+Height [mm];157.5;4.5375;32.0
+Height [mm];157.7;;0.0
+Height [mm];157.95;4.675;40.0
+Height [mm];158.18;5.0;1.0
+Height [mm];158.4;;0.0
+Height [mm];160.0;3.0;1.0
+Height [mm];160.1;3.0;2.0
+Height [mm];161.0;4.6;15.0
+Height [mm];161.1;3.6;5.0
+Height [mm];161.2;;0.0
+Height [mm];161.3;4.0;14.0
+Height [mm];161.51;;0.0
+Height [mm];162.0;;0.0
+Height [mm];162.2;3.738461538461539;39.0
+Height [mm];162.4;4.2;37.0
+Height [mm];163.0;3.882142857142857;56.0
+Height [mm];164.0;4.5;2.0
+Height [mm];164.7;;0.0
+Height [mm];165.0;3.0;1.0
+Height [mm];165.8;5.0;4.0
+Height [mm];166.0;4.0;14.0
+Height [mm];166.2;4.3;14.0
+Height [mm];166.67;4.2;21.0
+Height [mm];168.7;5.0;8.0
+Height [mm];169.0;4.7;22.0
+Height [mm];170.0;4.0;11.0
+Height [mm];174.0;;0.0
+Height [mm];174.1;4.870588235294118;289.0
+Height [mm];178.0;;0.0
+Height [mm];184.53;4.25;4.0
+Height [mm];185.4;5.0;1.0
+Height [mm];189.0;;0.0
+Height [mm];189.5;1.0;1.0
+Height [mm];190.5;4.4;5.0
+Height [mm];190.76;4.5;11.0
+Height [mm];195.4;4.889285714285714;56.0
+Height [mm];197.97;4.4;12.0
+Height [mm];203.2;5.0;2.0
+Height [mm];208.0;3.5;21.0
+Height [mm];210.0;2.890909090909091;22.0
+Height [mm];213.0;4.4;5.0
+Height [mm];214.9;5.0;2.0
+Height [mm];226.0;3.8;5.0
+Height [mm];234.3;3.971428571428571;7.0
+Height [mm];238.8;1.0;1.0
+Height [mm];239.84;4.654285714285715;35.0
+Height [mm];240.2;4.9;13.0
+Height [mm];240.8;;0.0
+Height [mm];241.3;4.316216216216216;37.0
+Height [mm];243.18;5.0;3.0
+Height [mm];244.0;3.0;2.0
+Height [mm];244.5;4.717721518987342;79.0
+Height [mm];244.9;4.7;22.0
+Height [mm];245.0;3.875;8.0
+Height [mm];245.3;;0.0
+Height [mm];246.4;;0.0
+Height [mm];246.8;4.8;10.0
+Height [mm];246.9;;0.0
+Height [mm];247.6;5.0;2.0
+Height [mm];247.8;5.0;3.0
+Height [mm];248.0;4.3;16.0
+Height [mm];249.3;4.5;2.0
+Height [mm];250.6;5.0;11.0
+Height [mm];251.2;4.55;24.0
+Height [mm];253.8;4.7631578947368425;19.0
+Height [mm];254.0;4.8;70.0
+Height [mm];256.8;4.7;17.0
+Height [mm];265.0;;0.0
+Height [mm];267.3;4.7;12.0
+Height [mm];269.1;4.7299999999999995;30.0
+Height [mm];273.5;3.128571428571429;7.0
+Height [mm];278.54;4.4;11.0
+Height [mm];278.8;;0.0
+Height [mm];280.6;;0.0
+Height [mm];285.4;5.0;16.0
+Height [mm];300.0;;0.0
+Height [mm];799.0;;0.0
+Height [mm];1563.0;;0.0
+Height [mm];1658.0;4.2;5.0
+Height [mm];1678.0;;0.0
+Height [mm];1685.0;;0.0
+Height [mm];1854.0;4.75;4.0
+Height [mm];2025.0;3.0;1.0
+Height [mm];2149.0;5.0;27.0
+Height [mm];2413.0;4.5;10.0
+Height [mm];2423.0;;0.0
+Height [mm];2453.0;3.5;2.0
+Height [mm];2468.0;4.7745098039215685;102.0
+Height [mm];2476.0;4.927058823529412;255.0
+Height [mm];2486.0;4.785333333333333;75.0
+Height [mm];2513.0;5.0;1.0
+Height [mm];2543.0;4.666666666666667;3.0
+Height [mm];2806.0;5.0;2.0
+Height [mm];3264.0;5.0;6.0
+Width [mm];111.0;1.0;1.0
+Width [mm];119.82;4.4;12.0
+Width [mm];123.0;3.4;14.0
+Width [mm];127.0;2.0;8.0
+Width [mm];128.8;4.4;5.0
+Width [mm];132.0;3.5;21.0
+Width [mm];134.8;4.893103448275863;58.0
+Width [mm];154.3;4.717721518987342;79.0
+Width [mm];156.7;;0.0
+Width [mm];157.0;4.3;16.0
+Width [mm];157.56;5.0;3.0
+Width [mm];157.6;1.0;1.0
+Width [mm];158.18;5.0;3.0
+Width [mm];158.62;4.654285714285715;35.0
+Width [mm];158.8;4.530434782608696;23.0
+Width [mm];159.0;4.9;13.0
+Width [mm];159.8;;0.0
+Width [mm];160.0;4.465217391304348;69.0
+Width [mm];161.5;;0.0
+Width [mm];161.64;4.7;3.0
+Width [mm];161.9;4.8;10.0
+Width [mm];162.0;3.971428571428571;7.0
+Width [mm];163.0;3.5;2.0
+Width [mm];163.3;;0.0
+Width [mm];164.3;4.5;2.0
+Width [mm];165.3;4.7631578947368425;19.0
+Width [mm];167.36;4.7;12.0
+Width [mm];167.4;;0.0
+Width [mm];168.0;3.875;8.0
+Width [mm];169.0;4.521052631578947;19.0
+Width [mm];169.4;4.7299999999999995;30.0
+Width [mm];170.2;5.0;1.0
+Width [mm];174.06;4.4;11.0
+Width [mm];174.1;5.0;11.0
+Width [mm];174.3;;0.0
+Width [mm];178.0;2.0;1.0
+Width [mm];178.5;5.0;2.0
+Width [mm];185.4;5.0;16.0
+Width [mm];186.0;;0.0
+Width [mm];189.5;4.1;7.0
+Width [mm];190.5;3.128571428571429;7.0
+Width [mm];195.0;3.8;5.0
+Width [mm];197.97;4.8;24.0
+Width [mm];200.0;;0.0
+Width [mm];209.0;4.0;2.0
+Width [mm];212.5;4.664;25.0
+Width [mm];214.9;;0.0
+Width [mm];215.43;4.523076923076923;52.0
+Width [mm];237.54;4.2;5.0
+Width [mm];238.4;;0.0
+Width [mm];238.7;4.6;27.0
+Width [mm];239.2;4.675;40.0
+Width [mm];241.2;3.0;2.0
+Width [mm];242.0;4.6;15.0
+Width [mm];242.3;3.6;5.0
+Width [mm];242.9;3.0;1.0
+Width [mm];243.18;5.0;1.0
+Width [mm];243.2;3.4;12.0
+Width [mm];243.5;4.6;36.0
+Width [mm];243.6;4.2;37.0
+Width [mm];244.75;;0.0
+Width [mm];244.8;4.038461538461538;39.0
+Width [mm];244.94;;0.0
+Width [mm];245.0;3.8;16.0
+Width [mm];245.8;3.8400000000000003;15.0
+Width [mm];246.0;4.666666666666667;3.0
+Width [mm];246.2;4.0;14.0
+Width [mm];246.4;;0.0
+Width [mm];246.5;3.882142857142857;56.0
+Width [mm];246.7;4.7;40.0
+Width [mm];247.0;;0.0
+Width [mm];247.2;5.0;1.0
+Width [mm];248.0;4.181818181818182;11.0
+Width [mm];250.6;4.870588235294118;289.0
+Width [mm];251.0;4.107692307692307;39.0
+Width [mm];251.2;4.508620689655173;58.0
+Width [mm];254.3;5.0;4.0
+Width [mm];255.0;3.0;1.0
+Width [mm];256.3;;0.0
+Width [mm];257.0;4.78;30.0
+Width [mm];258.0;;0.0
+Width [mm];259.0;4.0;2.0
+Width [mm];260.11;;0.0
+Width [mm];263.66;4.2;21.0
+Width [mm];269.1;4.35;8.0
+Width [mm];273.5;4.4;5.0
+Width [mm];280.6;5.0;2.0
+Width [mm];283.6;;0.0
+Width [mm];284.8;4.3;30.0
+Width [mm];285.0;5.0;18.0
+Width [mm];285.4;5.0;1.0
+Width [mm];285.61;4.25;4.0
+Width [mm];293.37;4.5;11.0
+Width [mm];327.8;;0.0
+Width [mm];1258.0;3.0;1.0
+Width [mm];1611.0;;0.0
+Width [mm];1619.0;4.7745098039215685;102.0
+Width [mm];1652.0;4.8;70.0
+Width [mm];1658.0;4.788888888888888;18.0
+Width [mm];1701.0;5.0;1.0
+Width [mm];1785.0;4.927058823529412;255.0
+Width [mm];1795.0;4.785333333333333;75.0
+Width [mm];2086.0;5.0;6.0
+Width [mm];2125.0;4.625;84.0
+Width [mm];2149.0;5.0;2.0
+Width [mm];2385.0;;0.0
+Width [mm];2465.0;;0.0
+Width [mm];2491.0;;0.0
+Width [mm];2512.0;;0.0
+Width [mm];2525.0;;0.0
+Width [mm];2543.0;4.2;5.0
+Width [mm];2778.0;;0.0
+Width [mm];2785.0;;0.0
+Width [mm];2806.0;5.0;27.0
+Width [mm];2848.0;4.6;11.0
+Width [mm];2854.0;4.75;4.0
+Width [mm];21543.0;;0.0
+Width [mm];25274.0;5.0;6.0
+Depth [mm];5.0;3.875;8.0
+Depth [mm];5.5;4.533333333333333;27.0
+Depth [mm];5.63;4.25;4.0
+Depth [mm];5.7;5.0;16.0
+Depth [mm];5.9;5.0;2.0
+Depth [mm];6.1;5.0;13.0
+Depth [mm];6.3;4.857333333333333;75.0
+Depth [mm];6.4;5.0;2.0
+Depth [mm];6.5;5.0;5.0
+Depth [mm];6.8;4.2;21.0
+Depth [mm];6.9;4.597727272727273;44.0
+Depth [mm];7.0;4.721904761904762;210.0
+Depth [mm];7.1;4.5;2.0
+Depth [mm];7.3;;0.0
+Depth [mm];7.35;4.6;27.0
+Depth [mm];7.4;4.497727272727272;44.0
+Depth [mm];7.45;4.530434782608696;23.0
+Depth [mm];7.5;4.840655737704918;305.0
+Depth [mm];7.55;4.9;13.0
+Depth [mm];7.6;4.729166666666667;48.0
+Depth [mm];7.65;5.0;3.0
+Depth [mm];7.7;1.0;1.0
+Depth [mm];7.85;;0.0
+Depth [mm];7.9;;0.0
+Depth [mm];8.0;4.607407407407408;27.0
+Depth [mm];8.1;;0.0
+Depth [mm];8.3;4.521052631578947;19.0
+Depth [mm];8.4;;0.0
+Depth [mm];8.5;4.420833333333333;72.0
+Depth [mm];8.6;;0.0
+Depth [mm];8.7;;0.0
+Depth [mm];8.9;4.316216216216216;37.0
+Depth [mm];8.95;4.4;12.0
+Depth [mm];9.0;3.871428571428571;49.0
+Depth [mm];9.15;3.7124999999999995;8.0
+Depth [mm];9.2;4.4;15.0
+Depth [mm];9.3;4.0588235294117645;17.0
+Depth [mm];9.55;3.4;12.0
+Depth [mm];9.9;3.882142857142857;56.0
+Depth [mm];10.0;3.4;14.0
+Depth [mm];10.2;;0.0
+Depth [mm];10.7;3.6736842105263157;19.0
+Depth [mm];10.8;3.8;16.0
+Depth [mm];11.0;2.0;8.0
+Depth [mm];14.0;4.111111111111111;18.0
+Depth [mm];15.0;;0.0
+Depth [mm];15.6;5.0;1.0
+Depth [mm];16.8;;0.0
+Depth [mm];29.5;3.6583333333333337;12.0
+Depth [mm];46.0;3.933333333333333;9.0
+Depth [mm];55.0;5.0;6.0
+Depth [mm];59.0;4.958571428571429;70.0
+Depth [mm];61.0;4.911170212765957;188.0
+Depth [mm];64.0;5.0;29.0
+Depth [mm];65.0;4.7594936708860756;79.0
+Depth [mm];69.0;4.7745098039215685;102.0
+Depth [mm];73.0;5.0;1.0
+Depth [mm];74.0;3.0;1.0
+Depth [mm];75.0;;0.0
+Depth [mm];76.0;;0.0
+Depth [mm];79.0;3.7000000000000006;6.0
+Depth [mm];84.0;3.6;5.0
+Depth [mm];85.0;;0.0
+Depth [mm];89.0;4.5;10.0
+Depth [mm];99.0;4.0;4.0
+Depth [mm];119.82;4.8;24.0
+Depth [mm];124.7;4.664;25.0
+Depth [mm];136.76;4.523076923076923;52.0
+Depth [mm];142.0;;0.0
+Depth [mm];149.0;5.0;1.0
+Depth [mm];153.9;4.375;12.0
+Depth [mm];155.0;;0.0
+Depth [mm];157.0;5.0;1.0
+Depth [mm];158.8;4.508620689655173;58.0
+Depth [mm];160.0;;0.0
+Depth [mm];164.0;4.6;36.0
+Depth [mm];169.0;4.0;2.0
+Depth [mm];169.4;4.35;8.0
+Depth [mm];170.2;3.0;1.0
+Depth [mm];173.0;;0.0
+Depth [mm];185.0;4.56949152542373;59.0
+Depth [mm];192.6;;0.0
+Depth [mm];198.0;;0.0
+Depth [mm];210.8;;0.0
+Depth [mm];257.04;4.7;3.0
+Depth [mm];290.0;2.0;1.0
+Depth [mm];1247.0;4.625;84.0
+Depth [mm];13676.0;;0.0
+Depth [mm];16034.0;5.0;6.0
+Weight [kg];0.2;;0.0
+Weight [kg];0.245;3.7124999999999995;8.0
+Weight [kg];0.293;4.889285714285714;56.0
+Weight [kg];0.308;5.0;2.0
+Weight [kg];0.32;4.181818181818182;44.0
+Weight [kg];0.33;3.0;1.0
+Weight [kg];0.3333;3.4;14.0
+Weight [kg];0.34;4.0;3.0
+Weight [kg];0.344;4.527272727272727;44.0
+Weight [kg];0.35;3.5576923076923075;26.0
+Weight [kg];0.366;4.625;84.0
+Weight [kg];0.371;4.664;25.0
+Weight [kg];0.399;4.7;22.0
+Weight [kg];0.408;3.8;5.0
+Weight [kg];0.421;4.2;5.0
+Weight [kg];0.425;;0.0
+Weight [kg];0.427;;0.0
+Weight [kg];0.429;4.2;37.0
+Weight [kg];0.43;;0.0
+Weight [kg];0.435;4.675;40.0
+Weight [kg];0.44;5.0;1.0
+Weight [kg];0.448;5.0;4.0
+Weight [kg];0.449;;0.0
+Weight [kg];0.45;3.215384615384615;13.0
+Weight [kg];0.458;4.911170212765957;188.0
+Weight [kg];0.46;4.651666666666667;60.0
+Weight [kg];0.462;4.7;3.0
+Weight [kg];0.464;5.0;11.0
+Weight [kg];0.465;4.554838709677419;124.0
+Weight [kg];0.466;;0.0
+Weight [kg];0.467;4.835897435897436;39.0
+Weight [kg];0.468;4.972463768115943;69.0
+Weight [kg];0.47;3.7000000000000006;6.0
+Weight [kg];0.472;4.618181818181818;44.0
+Weight [kg];0.477;4.785333333333333;75.0
+Weight [kg];0.478;3.933333333333333;9.0
+Weight [kg];0.48;4.19375;32.0
+Weight [kg];0.483;4.593103448275862;29.0
+Weight [kg];0.488;3.971428571428571;7.0
+Weight [kg];0.49;4.826525198938993;377.0
+Weight [kg];0.493;;0.0
+Weight [kg];0.495;4.742857142857143;14.0
+Weight [kg];0.499;;0.0
+Weight [kg];0.5;4.25;4.0
+Weight [kg];0.503;4.7631578947368425;19.0
+Weight [kg];0.504;;0.0
+Weight [kg];0.505;;0.0
+Weight [kg];0.508;4.776785714285714;112.0
+Weight [kg];0.51;4.3;16.0
+Weight [kg];0.511;;0.0
+Weight [kg];0.513;4.0;14.0
+Weight [kg];0.514;3.5;2.0
+Weight [kg];0.515;;0.0
+Weight [kg];0.52;4.651219512195122;41.0
+Weight [kg];0.5205;4.0;26.0
+Weight [kg];0.523;4.555555555555555;9.0
+Weight [kg];0.525;4.4;11.0
+Weight [kg];0.536;4.35531914893617;47.0
+Weight [kg];0.537;3.7800000000000002;30.0
+Weight [kg];0.538;4.0;2.0
+Weight [kg];0.539;5.0;8.0
+Weight [kg];0.543;3.711111111111111;18.0
+Weight [kg];0.55;3.0;2.0
+Weight [kg];0.558;;0.0
+Weight [kg];0.56;4.4;5.0
+Weight [kg];0.562;;0.0
+Weight [kg];0.5630000000000001;3.6;5.0
+Weight [kg];0.5650000000000001;4.25;4.0
+Weight [kg];0.5660000000000001;4.6;15.0
+Weight [kg];0.5680000000000001;;0.0
+Weight [kg];0.5700000000000001;3.6736842105263157;19.0
+Weight [kg];0.5750000000000001;4.6;36.0
+Weight [kg];0.5760000000000001;4.4;8.0
+Weight [kg];0.58;4.69375;32.0
+Weight [kg];0.581;5.0;4.0
+Weight [kg];0.586;5.0;12.0
+Weight [kg];0.595;4.0;2.0
+Weight [kg];0.608;4.380487804878048;41.0
+Weight [kg];0.627;4.8;5.0
+Weight [kg];0.63;4.5;11.0
+Weight [kg];0.631;;0.0
+Weight [kg];0.633;;0.0
+Weight [kg];0.65;4.7;17.0
+Weight [kg];0.653;;0.0
+Weight [kg];0.674;3.0;1.0
+Weight [kg];0.682;5.0;29.0
+Weight [kg];0.684;5.0;2.0
+Weight [kg];0.7000000000000001;4.7;22.0
+Weight [kg];0.728;;0.0
+Weight [kg];0.732;5.0;3.0
+Weight [kg];0.737;5.0;3.0
+Weight [kg];0.74;;0.0
+Weight [kg];0.78;;0.0
+Weight [kg];0.805;3.6583333333333337;12.0
+Weight [kg];0.8200000000000001;5.0;1.0
+Weight [kg];0.854;5.0;1.0
+Weight [kg];0.875;;0.0
+Weight [kg];0.9;3.8333333333333335;12.0
+Weight [kg];0.96;;0.0
+Weight [kg];0.976;;0.0
+Weight [kg];1.018;;0.0
+Weight [kg];1.03;;0.0
+Weight [kg];1.212;;0.0
+Colour;['Beige'];4.0;1.0
+Colour;['Black', 'Blue'];;0.0
+Colour;['Black', 'Orange'];;0.0
+Colour;['Black'];3.993069306930693;101.0
+Colour;['Blue'];4.349826989619377;289.0
+Colour;['Bronze'];5.0;2.0
+Colour;['Carbon'];4.82962962962963;27.0
+Colour;['Gold'];4.957894736842105;19.0
+Colour;['Grafite'];;0.0
+Colour;['Green'];4.377777777777777;27.0
+Colour;['Grey'];4.659801678108314;1311.0
+Colour;['Orange'];;0.0
+Colour;['Pink'];4.5687500000000005;32.0
+Colour;['Silver'];4.655555555555556;279.0
+Colour;['Turquoise'];4.5;10.0
+Colour;['Violet'];4.9772727272727275;44.0
+Colour;['White'];4.646341463414634;41.0
+Colour;['Yellow'];5.0;9.0
+Package includes;['Case', 'Stylus'];3.8;5.0
+Package includes;['Case'];;0.0
+Package includes;['Charger (adapter with cable)', '3.5mm jack adapter'];4.25;4.0
+Package includes;['Charger (adapter with cable)', 'Case', 'Detachable keyboard'];3.4;12.0
+Package includes;['Charger (adapter with cable)', 'Case', 'Screen Protector', 'Stylus'];4.675;40.0
+Package includes;['Charger (adapter with cable)', 'Case', 'Screen Protector'];4.127884615384615;104.0
+Package includes;['Charger (adapter with cable)', 'Case', 'Stylus'];4.464285714285714;28.0
+Package includes;['Charger (adapter with cable)', 'Case'];4.394;50.0
+Package includes;['Charger (adapter with cable)', 'Charging cable', 'Case', 'Screen Protector'];5.0;1.0
+Package includes;['Charger (adapter with cable)', 'Charging cable', 'Case'];3.8;5.0
+Package includes;['Charger (adapter with cable)', 'Charging cable', 'Screen Protector'];;0.0
+Package includes;['Charger (adapter with cable)', 'Charging cable', 'Stylus'];3.0;2.0
+Package includes;['Charger (adapter with cable)', 'Charging cable'];4.2;5.0
+Package includes;['Charger (adapter with cable)', 'Charging stand'];3.0;2.0
+Package includes;['Charger (adapter with cable)', 'Headphones'];4.6;36.0
+Package includes;['Charger (adapter with cable)', 'Screen Protector'];4.4;13.0
+Package includes;['Charger (adapter with cable)', 'Stylus'];4.445833333333334;24.0
+Package includes;['Charger (adapter with cable)'];4.65023102310231;1515.0
+Package includes;['Charging cable', 'Case', 'Screen Protector'];4.552941176470589;51.0
+Package includes;['Charging cable', 'Stylus'];4.904999999999999;40.0
+Package includes;['Charging cable'];4.528571428571429;14.0
+Package includes;['Charging stand'];;0.0
+Package includes;['Stylus'];;0.0
+Series;Acer Enduro;3.3333333333333335;3.0
+Series;Acer Iconia;5.0;1.0
+Series;Alcatel 1T;3.525;20.0
+Series;Apple iPad;4.891578947368421;665.0
+Series;Lenovo Tab;4.532333333333334;300.0
+Series;Lenovo Tab M;5.0;1.0
+Series;Lenovo Yoga Tablet;4.7;39.0
+Series;Samsung Galaxy Tab;4.70327868852459;366.0
+Series;Samsung Galaxy Tab S;4.705797101449275;69.0
+Series;UMAX Visionbook;3.6805555555555554;36.0
+Country;['Czechia', 'Slovakia', 'Hungary', 'Germany', 'Russia', 'Austria', 'Croatia', 'France', 'Poland', 'Romania', 'Slovenia'];4.512195121951219;1025.0
+Storage capacity [GB];32.0;4.6427272727272735;110.0
+Storage capacity [GB];64.0;4.833779264214047;299.0
+Storage capacity [GB];128.0;4.82;160.0
+Storage capacity [GB];256.0;4.852830188679245;106.0
+Storage capacity [GB];512.0;5.0;10.0
+Storage capacity [GB];1000.0;;0.0
+Storage capacity [GB];1024.0;5.0;2.0
+Storage capacity [GB];2000.0;;0.0
+Main rear camera aperture [f/];1.8;4.86984126984127;63.0
+Main rear camera aperture [f/];1.85;;0.0
+Main rear camera aperture [f/];1.9;4.666666666666667;6.0
+Main rear camera aperture [f/];2.0;4.319565217391305;138.0
+Main rear camera aperture [f/];2.2;4.458547008547009;234.0
+Main rear camera aperture [f/];2.4;4.786363636363636;308.0
+Main rear camera aperture [f/];2.8;4.0;3.0
+Main rear camera aperture [f/];18.0;4.923394495412844;218.0
+Main rear camera aperture [f/];19.0;4.444444444444445;9.0
+Main rear camera aperture [f/];22.0;4.781609195402299;87.0
+Main rear camera aperture [f/];24.0;4.785333333333333;75.0
+Main rear camera aperture [f/];28.0;3.8;5.0
+Main rear camera aperture [f/];179.0;;0.0
+Front Camera Aperture [f/];2.0;4.296638655462185;119.0
+Front Camera Aperture [f/];2.2;4.476881720430108;186.0
+Front Camera Aperture [f/];2.4;4.823357664233577;411.0
+Front Camera Aperture [f/];2.8;3.8000000000000003;33.0
+Front Camera Aperture [f/];22.0;4.8;70.0
+Front Camera Aperture [f/];24.0;4.87239263803681;326.0
+Front Camera Aperture [f/];28.0;3.8;5.0
+Degree of protection;['IP52', 'IP53'];4.6;17.0
+Degree of protection;['IP52', 'IP54'];4.9;13.0
+Degree of protection;['IP52'];4.624615384615385;65.0
+Degree of protection;['IP53'];4.0;2.0
+Degree of protection;['IP54'];3.4523809523809526;21.0
+Degree of protection;['IP68', 'IP69K'];4.2;20.0
+Degree of protection;['IP68'];4.8;40.0
+Degree of protection;['IP69K'];;0.0
+Graphics chip;ARM G710 MC10;;0.0
+Graphics chip;ARM G710 MP7;;0.0
+Graphics chip;ARM Mali G57 M1;;0.0
+Graphics chip;ARM Mali G57 MC2;;0.0
+Graphics chip;ARM Mali G68 MP5;4.58;25.0
+Graphics chip;ARM Mali-G52;4.231372549019608;102.0
+Graphics chip;ARM Mali-G52 MC2;4.022222222222222;9.0
+Graphics chip;ARM Mali-G57;4.408130081300813;123.0
+Graphics chip;ARM Mali-G77 MC9;4.2;21.0
+Graphics chip;Adreno 610;4.608247422680412;97.0
+Graphics chip;Adreno 615;;0.0
+Graphics chip;Adreno 650;4.77027027027027;74.0
+Graphics chip;Adreno 660;;0.0
+Graphics chip;Adreno 740;4.904999999999999;40.0
+Graphics chip;Arm Cortex A53;3.5;2.0
+Graphics chip;Exynos;5.0;18.0
+Graphics chip;IMG GE8300;3.4330000000000003;100.0
+Graphics chip;IMG GE8320;4.636440677966102;118.0
+Graphics chip;IMG GE8322;4.137499999999999;16.0
+Graphics chip;IMG PowerVR GE8320;4.6;36.0
+Graphics chip;IMG8322;4.0;14.0
+Graphics chip;Intel HD Graphics;2.0;1.0
+Graphics chip;Mali G31;3.7800000000000002;30.0
+Graphics chip;Mali G52;4.737704918032787;122.0
+Graphics chip;Mali-G52;4.468316831683168;101.0
+Graphics chip;Mali-G57;4.596;50.0
+Graphics chip;Mali-G72 MP3;4.857142857142857;14.0
+Graphics chip;Mali-G76;4.7;39.0
+Graphics chip;Mediatek;4.775;4.0
+Graphics chip;PowerVR GE8320;3.8200000000000003;5.0
+Graphics chip;Qualcomm Adreno 610;4.434;50.0
+Graphics chip;Qualcomm Adreno 619;4.459574468085107;47.0
+Supported cellular networks;['4G/LTE', '3G'];4.495309168443497;469.0
+Supported cellular networks;['4G/LTE'];4.171428571428571;42.0
+Supported cellular networks;['5G', '4G/LTE', '3G'];4.871875;96.0
+Supported cellular networks;['5G'];5.0;6.0
+Primary SIM card type;Micro SIM;4.110344827586206;29.0
+Primary SIM card type;Nano SIM;4.451454138702461;447.0
+Secondary SIM Card Type;Nano SIM;4.276;225.0
+Secondary SIM Card Type;eSIM;4.826666666666666;90.0
+Special event;Digital student SK;4.505070993914807;493.0
+Supported formats;['PDF', 'EPUB', 'DOC', 'DOCX'];3.8;5.0
+User interface language;Czech;3.8;5.0
+Equipment;['Touch display', 'Motion sensor', 'Microphone', 'Stylus'];3.8;5.0
+Internal memory [GB];64.0;3.8;5.0
+Suitable for;Children;;0.0
+Usage;Unisex;;0.0
+Must additionally purchase AA batteries;No;;0.0
+Battery type;CR2025;;0.0

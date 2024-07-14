@@ -1,0 +1,2141 @@
+attribute;value;rating;rating_count
+Resolution;1280 × 800 px;;0.0
+Resolution;1366 × 768 px;3.0;4.0
+Resolution;1920 x 1080 px;4.0;2.0
+Resolution;1920 × 1080 px;4.152475247524753;202.0
+Resolution;1920 × 1200 px;;0.0
+Resolution;2560 × 1440 px;4.0;2.0
+Resolution;3840 × 2160 px;1.0;2.0
+Resolution;4480 × 2520 px;4.0;3.0
+Resolution;5120 × 2880 px;5.0;6.0
+Panel type;IPS;4.132380952380952;210.0
+Panel type;LED;3.0;1.0
+Panel type;WVA;4.5;2.0
+Processor series;AMD Athlon;3.5384615384615383;13.0
+Processor series;AMD Ryzen;4.2;159.0
+Processor series;AMD Ryzen 3;4.831578947368421;19.0
+Processor series;AMD Ryzen 5;4.626190476190477;42.0
+Processor series;AMD Ryzen 7;4.023076923076923;13.0
+Processor series;AMD Ryzen 9;4.2;5.0
+Processor series;AMLogic;5.0;3.0
+Processor series;ARM;4.716666666666667;66.0
+Processor series;ARMv8;4.9;226.0
+Processor series;Apple Silicon;4.796825396825397;63.0
+Processor series;Intel Celeron;4.055;40.0
+Processor series;Intel Core i3;4.4546874999999995;64.0
+Processor series;Intel Core i5;4.574107142857143;224.0
+Processor series;Intel Core i7;4.248387096774193;124.0
+Processor series;Intel Core i9;3.4066666666666667;15.0
+Processor series;Intel N;4.0;1.0
+Processor series;Intel Pentium;4.324137931034483;29.0
+Processor series;Intel Xeon;3.0;1.0
+Processor series;Intel Xeon E;;0.0
+Processor series;Intel Xeon W;;0.0
+Processor series;Qualcomm;;0.0
+Processor series;Rockchip RK;5.0;1.0
+Processor model;AMD Athlon 300GE;;0.0
+Processor model;AMD Athlon Silver 3050U;3.5384615384615383;13.0
+Processor model;AMD RYZEN 5 3600;4.733333333333333;18.0
+Processor model;AMD RYZEN 7 3700X;5.0;1.0
+Processor model;AMD Ryzen 3 3250U;4.870588235294118;17.0
+Processor model;AMD Ryzen 3 5300G;5.0;1.0
+Processor model;AMD Ryzen 3 5300U;;0.0
+Processor model;AMD Ryzen 3 7320U;;0.0
+Processor model;AMD Ryzen 3 7330U;4.0;1.0
+Processor model;AMD Ryzen 3 PRO 4350G;;0.0
+Processor model;AMD Ryzen 3 PRO 5350G;;0.0
+Processor model;AMD Ryzen 5 3500U;;0.0
+Processor model;AMD Ryzen 5 4600G;5.0;2.0
+Processor model;AMD Ryzen 5 5500U;4.0;2.0
+Processor model;AMD Ryzen 5 5600;5.0;4.0
+Processor model;AMD Ryzen 5 5600G;4.2;5.0
+Processor model;AMD Ryzen 5 5600H;5.0;1.0
+Processor model;AMD Ryzen 5 5600X;;0.0
+Processor model;AMD Ryzen 5 6600H;;0.0
+Processor model;AMD Ryzen 5 7500F;4.025;4.0
+Processor model;AMD Ryzen 5 7520U;5.0;1.0
+Processor model;AMD Ryzen 5 7530U;4.0;1.0
+Processor model;AMD Ryzen 5 7535H;;0.0
+Processor model;AMD Ryzen 5 7600;5.0;1.0
+Processor model;AMD Ryzen 5 7600X;5.0;1.0
+Processor model;AMD Ryzen 5 PRO 3400G;;0.0
+Processor model;AMD Ryzen 5 PRO 4650G;;0.0
+Processor model;AMD Ryzen 5 PRO 5650G;;0.0
+Processor model;AMD Ryzen 5 PRO 5650GE;5.0;2.0
+Processor model;AMD Ryzen 7 2700x;;0.0
+Processor model;AMD Ryzen 7 5700G;;0.0
+Processor model;AMD Ryzen 7 5700U;;0.0
+Processor model;AMD Ryzen 7 5700X;;0.0
+Processor model;AMD Ryzen 7 5800H;5.0;1.0
+Processor model;AMD Ryzen 7 5800X;3.6999999999999997;9.0
+Processor model;AMD Ryzen 7 6800H;;0.0
+Processor model;AMD Ryzen 7 7700;;0.0
+Processor model;AMD Ryzen 7 7700X;;0.0
+Processor model;AMD Ryzen 7 7730U;;0.0
+Processor model;AMD Ryzen 7 7735H;;0.0
+Processor model;AMD Ryzen 7 7800X3D;4.5;2.0
+Processor model;AMD Ryzen 7 PRO 5750G;;0.0
+Processor model;AMD Ryzen 9 5900HX;1.0;1.0
+Processor model;AMD Ryzen 9 5900X;5.0;1.0
+Processor model;AMD Ryzen 9 5950X;5.0;1.0
+Processor model;AMD Ryzen 9 7900;;0.0
+Processor model;AMD Ryzen 9 7950X;5.0;1.0
+Processor model;AMD Ryzen 9 7950X3D;5.0;1.0
+Processor model;AMD Ryzen Z1 Extreme Processor;4.2;106.0
+Processor model;Apple M1;4.85;20.0
+Processor model;Apple M1 ULTRA;;0.0
+Processor model;Apple M2 (8-core);4.623076923076923;26.0
+Processor model;Apple M2 MAX (12-core);5.0;2.0
+Processor model;Apple M2 Pro (10-core);5.0;13.0
+Processor model;Apple M2 Pro (12-core);5.0;2.0
+Processor model;Apple M2 ULTRA (24-core);;0.0
+Processor model;Apple M3 (8jádrové);;0.0
+Processor model;Broadcom BCM2711;4.895161290322581;124.0
+Processor model;Broadcom Quad-Core BCM2837B0;4.905882352941177;102.0
+Processor model;Cortex-A53;3.0;2.0
+Processor model;Cortex-A55;5.0;3.0
+Processor model;Cortex-A7 Quad-Core;3.7142857142857144;7.0
+Processor model;Cortex-A72;4.9;57.0
+Processor model;Intel Celeron 5205U Comet Lake;1.0;2.0
+Processor model;Intel Celeron 6305 Tiger Lake;;0.0
+Processor model;Intel Celeron 7305;;0.0
+Processor model;Intel Celeron 7305 Alder Lake;;0.0
+Processor model;Intel Celeron J1900;;0.0
+Processor model;Intel Celeron J4025 Gemini Lake Refresh;5.0;2.0
+Processor model;Intel Celeron J4125;4.0;4.0
+Processor model;Intel Celeron N4500;4.0;4.0
+Processor model;Intel Celeron N4500 Jasper Lake;3.0;2.0
+Processor model;Intel Celeron N4505 Jasper Lake;3.6666666666666665;6.0
+Processor model;Intel Celeron N5100;4.8;4.0
+Processor model;Intel Celeron N5100 Jasper Lake;3.75;4.0
+Processor model;Intel Celeron N5105 Jasper Lake;4.545454545454546;11.0
+Processor model;Intel Core i3 1005G1 Ice Lake;;0.0
+Processor model;Intel Core i3 10100 Comet Lake;3.0;2.0
+Processor model;Intel Core i3 10100T Comet Lake;4.6;34.0
+Processor model;Intel Core i3 10105 Comet Lake;5.0;1.0
+Processor model;Intel Core i3 10105T Comet Lake;;0.0
+Processor model;Intel Core i3 10110U Comet Lake;3.8;11.0
+Processor model;Intel Core i3 11100B Tiger Lake;4.5;2.0
+Processor model;Intel Core i3 1115G4;;0.0
+Processor model;Intel Core i3 1115G4 Tiger Lake;4.3;3.0
+Processor model;Intel Core i3 12100 Alder Lake;5.0;7.0
+Processor model;Intel Core i3 12100F Alder Lake;;0.0
+Processor model;Intel Core i3 12100T Alder Lake;;0.0
+Processor model;Intel Core i3 1215U Alder Lake;5.0;1.0
+Processor model;Intel Core i3 1220P;;0.0
+Processor model;Intel Core i3 1220P Alder Lake;;0.0
+Processor model;Intel Core i3 1305U Raptor Lake;;0.0
+Processor model;Intel Core i3 13100 Raptor Lake;;0.0
+Processor model;Intel Core i3 13100T Raptor Lake;;0.0
+Processor model;Intel Core i3 1315U Raptor Lake;4.666666666666667;3.0
+Processor model;Intel Core i3 7100U Kaby Lake;;0.0
+Processor model;Intel Core i3 N300;;0.0
+Processor model;Intel Core i5 10210U Comet Lake;3.8;11.0
+Processor model;Intel Core i5 1035G1 Ice Lake;;0.0
+Processor model;Intel Core i5 10400F Comet Lake;4.688888888888889;9.0
+Processor model;Intel Core i5 10400T Comet Lake;;0.0
+Processor model;Intel Core i5 10500 Comet Lake;5.0;7.0
+Processor model;Intel Core i5 10500T Comet Lake;2.3;10.0
+Processor model;Intel Core i5 11320H;3.0;1.0
+Processor model;Intel Core i5 1135G7 Tiger Lake;4.800000000000001;9.0
+Processor model;Intel Core i5 11400 Rocket Lake;4.2;5.0
+Processor model;Intel Core i5 11400F Rocket Lake;5.0;3.0
+Processor model;Intel Core i5 11400T Rocket Lake;;0.0
+Processor model;Intel Core i5 1145G7E Tiger Lake;;0.0
+Processor model;Intel Core i5 11500B Tiger Lake;;0.0
+Processor model;Intel Core i5 1235U Alder Lake;4.5;2.0
+Processor model;Intel Core i5 12400 Alder Lake;4.746666666666667;15.0
+Processor model;Intel Core i5 12400F Alder Lake;4.67843137254902;51.0
+Processor model;Intel Core i5 12400T Alder Lake;5.0;3.0
+Processor model;Intel Core i5 1240P;5.0;2.0
+Processor model;Intel Core i5 1240P Alder Lake;;0.0
+Processor model;Intel Core i5 12500 Alder Lake;5.0;1.0
+Processor model;Intel Core i5 12500H;;0.0
+Processor model;Intel Core i5 12500H Alder Lake;3.0;1.0
+Processor model;Intel Core i5 12500T Alder Lake;4.0;1.0
+Processor model;Intel Core i5 12600K Alder Lake;;0.0
+Processor model;Intel Core i5 12600KF Alder Lake;;0.0
+Processor model;Intel Core i5 12600T Alder Lake;;0.0
+Processor model;Intel Core i5 1335U Raptor Lake;4.75;4.0
+Processor model;Intel Core i5 13400 Raptor Lake;4.666666666666667;3.0
+Processor model;Intel Core i5 13400F Raptor Lake;4.888235294117647;34.0
+Processor model;Intel Core i5 13400F Rocket Lake;5.0;5.0
+Processor model;Intel Core i5 13400T Raptor Lake;5.0;1.0
+Processor model;Intel Core i5 1340P Raptor Lake;4.0;7.0
+Processor model;Intel Core i5 13420H Raptor Lake;;0.0
+Processor model;Intel Core i5 13500 Raptor Lake;;0.0
+Processor model;Intel Core i5 13500H Raptor Lake;;0.0
+Processor model;Intel Core i5 13500T Raptor Lake;;0.0
+Processor model;Intel Core i5 13600K Raptor Lake;5.0;4.0
+Processor model;Intel Core i5 13600KF Raptor Lake;5.0;3.0
+Processor model;Intel Core i5 13600KF Rocket Lake;4.0;2.0
+Processor model;Intel Core i5 14600KF Raptor Lake Refresh;5.0;1.0
+Processor model;Intel Core i5 8365U Whiskey Lake;;0.0
+Processor model;Intel Core i5 8365UE Whiskey Lake;;0.0
+Processor model;Intel Core i5 8500B Coffee Lake;4.8;28.0
+Processor model;Intel Core i5 9400 Coffee Lake;5.0;1.0
+Processor model;Intel Core i7 10510U Comet Lake;;0.0
+Processor model;Intel Core i7 10700 Comet Lake;4.5;7.0
+Processor model;Intel Core i7 10700F;;0.0
+Processor model;Intel Core i7 10700F Comet Lake;3.9066666666666663;30.0
+Processor model;Intel Core i7 10700K Comet Lake;5.0;1.0
+Processor model;Intel Core i7 1165G7 Tiger Lake;5.0;22.0
+Processor model;Intel Core i7 11700 Rocket Lake;2.3;6.0
+Processor model;Intel Core i7 11700F Rocket Lake;;0.0
+Processor model;Intel Core i7 11700KF Rocket Lake;3.5;6.0
+Processor model;Intel Core i7 11700T Rocket lake;4.0;1.0
+Processor model;Intel Core i7 1260P;5.0;3.0
+Processor model;Intel Core i7 1260P Alder Lake;5.0;3.0
+Processor model;Intel Core i7 12700 Alder Lake;2.0;4.0
+Processor model;Intel Core i7 12700F Alder Lake;5.0;2.0
+Processor model;Intel Core i7 12700H;;0.0
+Processor model;Intel Core i7 12700H Alder Lake;5.0;5.0
+Processor model;Intel Core i7 12700K Alder Lake;5.0;1.0
+Processor model;Intel Core i7 12700KF Alder Lake;1.0;1.0
+Processor model;Intel Core i7 12700T Alder Lake;;0.0
+Processor model;Intel Core i7 1355U Raptor Lake;5.0;2.0
+Processor model;Intel Core i7 1360P Raptor Lake;;0.0
+Processor model;Intel Core i7 13620H Raptor Lake;;0.0
+Processor model;Intel Core i7 13700 Raptor Lake;4.0;1.0
+Processor model;Intel Core i7 13700F Raptor Lake;4.666666666666667;3.0
+Processor model;Intel Core i7 13700H Raptor Lake;;0.0
+Processor model;Intel Core i7 13700K Raptor Lake;;0.0
+Processor model;Intel Core i7 13700KF Raptor Lake;5.0;2.0
+Processor model;Intel Core i7 13700KF Rocket Lake;3.35;6.0
+Processor model;Intel Core i7 13700T Raptor Lake;;0.0
+Processor model;Intel Core i7 8665UE Whiskey Lake;;0.0
+Processor model;Intel Core i7 8700B Coffee Lake;4.8;14.0
+Processor model;Intel Core i7 9700F Coffee Lake;5.0;4.0
+Processor model;Intel Core i7 9700KF Coffee Lake;;0.0
+Processor model;Intel Core i9 10900 Comet Lake;;0.0
+Processor model;Intel Core i9 10900KF;;0.0
+Processor model;Intel Core i9 10900KF Comet Lake;;0.0
+Processor model;Intel Core i9 10910 Comet Lake;;0.0
+Processor model;Intel Core i9 10920X Cascade Lake;;0.0
+Processor model;Intel Core i9 10980XE Cascade Lake;;0.0
+Processor model;Intel Core i9 11900F Rocket Lake;3.0;6.0
+Processor model;Intel Core i9 11900KB Tiger Lake;;0.0
+Processor model;Intel Core i9 12900 Alder Lake;;0.0
+Processor model;Intel Core i9 12900K Alder Lake;3.7000000000000006;3.0
+Processor model;Intel Core i9 12900KF Alder Lake;5.0;3.0
+Processor model;Intel Core i9 13900 Raptor Lake;;0.0
+Processor model;Intel Core i9 13900H Raptor Lake;;0.0
+Processor model;Intel Core i9 13900K Raptor Lake;;0.0
+Processor model;Intel Core i9 13900KF Raptor Lake;2.3333333333333335;3.0
+Processor model;Intel Core i9 13900T Raptor Lake;;0.0
+Processor model;Intel Core i9 9900K Coffee Lake;;0.0
+Processor model;Intel Pentium 6405 Comet Lake;5.0;4.0
+Processor model;Intel Pentium Gold 8505;;0.0
+Processor model;Intel Pentium Gold G6400 Comet Lake;;0.0
+Processor model;Intel Pentium Gold G6405 Comet Lake;;0.0
+Processor model;Intel Pentium Gold G6405T Comet Lake;;0.0
+Processor model;Intel Pentium Gold G7400;;0.0
+Processor model;Intel Pentium N4505 Jasper Lake;5.0;1.0
+Processor model;Intel Pentium Silver J5005 Gemini Lake;4.2;12.0
+Processor model;Intel Pentium Silver N6000;1.0;1.0
+Processor model;Intel Pentium Silver N6000 Jasper Lake;5.0;1.0
+Processor model;Intel Pentium Silver N6005 Jasper Lake;4.545454545454546;11.0
+Processor model;Intel Processor N100;4.8;5.0
+Processor model;Intel Processor N200;;0.0
+Processor model;Intel Xeon E 2224G;3.0;1.0
+Processor model;Intel Xeon E 2224G Coffee Lake;;0.0
+Processor model;Intel Xeon E 2314 Rocket Lake;;0.0
+Processor model;Intel Xeon E 2324G;;0.0
+Processor model;Intel Xeon E 2334 Rocket Lake;;0.0
+Processor model;Intel Xeon E 2336 Rocket Lake;;0.0
+Processor model;Intel Xeon E 2356G;;0.0
+Processor model;Intel Xeon E 2374G;;0.0
+Processor model;Intel Xeon E 2388G;;0.0
+Processor model;Intel Xeon Silver 4314 Ice Lake;;0.0
+Processor model;Intel Xeon Silver 4410T;;0.0
+Processor model;Intel Xeon W;;0.0
+Processor model;Intel Xeon W 1270P;;0.0
+Processor model;Intel Xeon W3 2425;;0.0
+Processor model;Qualcomm QCS8250;;0.0
+Processor model;Rockchip RK3399-T;5.0;1.0
+Number of processor cores;2.0;4.055555555555555;63.0
+Number of processor cores;4.0;4.739729119638826;443.0
+Number of processor cores;5.0;;0.0
+Number of processor cores;6.0;4.595338983050848;236.0
+Number of processor cores;8.0;4.089451476793249;237.0
+Number of processor cores;10.0;4.906451612903226;62.0
+Number of processor cores;12.0;4.1875;32.0
+Number of processor cores;14.0;4.866666666666666;15.0
+Number of processor cores;16.0;4.247619047619048;21.0
+Number of processor cores;18.0;;0.0
+Number of processor cores;20.0;;0.0
+Number of processor cores;24.0;2.3333333333333335;3.0
+Cache processor [MB];4.0;3.0;4.0
+Cache processor [MB];6.0;4.6;34.0
+Cache processor [MB];8.0;5.0;2.0
+Cache processor [MB];10.0;;0.0
+Cache processor [MB];12.0;;0.0
+Cache processor [MB];16.0;;0.0
+Cache processor [MB];18.0;;0.0
+Cache processor [MB];20.0;;0.0
+Cache processor [MB];22.0;4.2;53.0
+Cache processor [MB];24.0;4.2;53.0
+Cache processor [MB];30.0;;0.0
+Cache processor [MB];36.0;;0.0
+Cache processor [MB];75.0;5.0;1.0
+Core boost frequency [GHz];0.0;;0.0
+Core boost frequency [GHz];1.6;3.5;4.0
+Core boost frequency [GHz];2.3;3.0;2.0
+Core boost frequency [GHz];2.6;;0.0
+Core boost frequency [GHz];2.7;4.0;4.0
+Core boost frequency [GHz];2.8;4.300000000000001;22.0
+Core boost frequency [GHz];2.9;4.35;20.0
+Core boost frequency [GHz];3.2;3.5714285714285716;14.0
+Core boost frequency [GHz];3.3;4.3076923076923075;13.0
+Core boost frequency [GHz];3.4;4.8;5.0
+Core boost frequency [GHz];3.5;4.870588235294118;17.0
+Core boost frequency [GHz];3.7;;0.0
+Core boost frequency [GHz];3.8;2.3;10.0
+Core boost frequency [GHz];3.9;;0.0
+Core boost frequency [GHz];4.0;4.0;2.0
+Core boost frequency [GHz];4.1;4.555319148936171;47.0
+Core boost frequency [GHz];4.2;4.53953488372093;43.0
+Core boost frequency [GHz];4.3;4.61;20.0
+Core boost frequency [GHz];4.4;4.675;96.0
+Core boost frequency [GHz];4.5;4.538461538461538;13.0
+Core boost frequency [GHz];4.55;;0.0
+Core boost frequency [GHz];4.6;4.7159420289855065;69.0
+Core boost frequency [GHz];4.7;4.708510638297873;47.0
+Core boost frequency [GHz];4.75;;0.0
+Core boost frequency [GHz];4.8;4.044736842105263;38.0
+Core boost frequency [GHz];4.9;2.9857142857142853;14.0
+Core boost frequency [GHz];5.0;3.8066666666666666;15.0
+Core boost frequency [GHz];5.1;4.30625;64.0
+Core boost frequency [GHz];5.2;3.88125;16.0
+Core boost frequency [GHz];5.3;5.0;2.0
+Core boost frequency [GHz];5.4;3.7625;8.0
+Core boost frequency [GHz];5.6;;0.0
+Core boost frequency [GHz];5.7;5.0;2.0
+Core boost frequency [GHz];5.8;2.3333333333333335;3.0
+Core boost frequency [GHz];28.0;3.0;4.0
+Core boost frequency [GHz];35.0;;0.0
+Core boost frequency [GHz];36.0;;0.0
+Core boost frequency [GHz];37.0;;0.0
+Core boost frequency [GHz];38.0;4.6;34.0
+Core boost frequency [GHz];39.0;;0.0
+Core boost frequency [GHz];42.0;5.0;2.0
+Core boost frequency [GHz];43.0;;0.0
+Core boost frequency [GHz];44.0;5.0;1.0
+Core boost frequency [GHz];45.0;;0.0
+Core boost frequency [GHz];46.0;;0.0
+Core boost frequency [GHz];48.0;;0.0
+Core boost frequency [GHz];49.0;4.2;53.0
+Core boost frequency [GHz];51.0;4.2;53.0
+Core boost frequency [GHz];52.0;;0.0
+Core boost frequency [GHz];54.0;;0.0
+Core boost frequency [GHz];58.0;;0.0
+Max TDP [W];6.0;3.894117647058824;17.0
+Max TDP [W];10.0;4.327659574468085;47.0
+Max TDP [W];15.0;3.972413793103448;58.0
+Max TDP [W];18.0;;0.0
+Max TDP [W];25.0;;0.0
+Max TDP [W];28.0;4.894594594594595;37.0
+Max TDP [W];30.0;4.2;159.0
+Max TDP [W];35.0;4.07391304347826;46.0
+Max TDP [W];45.0;;0.0
+Max TDP [W];46.0;;0.0
+Max TDP [W];54.0;3.6666666666666665;3.0
+Max TDP [W];55.0;4.7272727272727275;11.0
+Max TDP [W];58.0;5.0;4.0
+Max TDP [W];60.0;5.0;2.0
+Max TDP [W];64.0;4.416666666666667;12.0
+Max TDP [W];65.0;4.34496644295302;149.0
+Max TDP [W];69.0;;0.0
+Max TDP [W];71.0;3.0;1.0
+Max TDP [W];74.0;4.666666666666667;3.0
+Max TDP [W];80.0;;0.0
+Max TDP [W];85.0;;0.0
+Max TDP [W];89.0;5.0;5.0
+Max TDP [W];92.0;;0.0
+Max TDP [W];95.0;3.0;1.0
+Max TDP [W];99.0;;0.0
+Max TDP [W];105.0;4.0249999999999995;12.0
+Max TDP [W];106.0;;0.0
+Max TDP [W];110.0;;0.0
+Max TDP [W];115.0;5.0;5.0
+Max TDP [W];117.0;4.6716981132075475;53.0
+Max TDP [W];120.0;4.666666666666667;3.0
+Max TDP [W];125.0;4.105263157894737;19.0
+Max TDP [W];135.0;;0.0
+Max TDP [W];148.0;4.915151515151515;33.0
+Max TDP [W];150.0;;0.0
+Max TDP [W];154.0;5.0;2.0
+Max TDP [W];165.0;;0.0
+Max TDP [W];170.0;5.0;1.0
+Max TDP [W];180.0;1.0;3.0
+Max TDP [W];181.0;4.5;4.0
+Max TDP [W];190.0;;0.0
+Max TDP [W];202.0;;0.0
+Max TDP [W];219.0;4.5;2.0
+Max TDP [W];241.0;4.3500000000000005;6.0
+Max TDP [W];253.0;3.35;6.0
+Max TDP [W];2553.0;1.0;1.0
+Size of operational RAM [GB];0.5;4.571428571428571;7.0
+Size of operational RAM [GB];1.0;4.811538461538462;104.0
+Size of operational RAM [GB];2.0;4.9;57.0
+Size of operational RAM [GB];3.0;;0.0
+Size of operational RAM [GB];4.0;4.634375;96.0
+Size of operational RAM [GB];8.0;4.496934865900383;261.0
+Size of operational RAM [GB];12.0;4.0;2.0
+Size of operational RAM [GB];16.0;4.4108359133126935;323.0
+Size of operational RAM [GB];24.0;;0.0
+Size of operational RAM [GB];32.0;4.25177304964539;141.0
+Size of operational RAM [GB];64.0;4.434615384615385;26.0
+Size of operational RAM [GB];128.0;;0.0
+Memory type;DDR3;3.7142857142857144;7.0
+Memory type;DDR3L;;0.0
+Memory type;DDR4;4.3986813186813185;455.0
+Memory type;DDR5;3.964;25.0
+Memory type;LPDDR4;4.898918918918919;185.0
+Memory type;LPDDR5;4.209937888198758;161.0
+Memory type;no RAM;4.594444444444444;90.0
+Graphics card type;['Integrated'];4.2;159.0
+Boost clock [MHz];2700.0;4.2;106.0
+Graphics card brand;AMD Radeon;4.2306930693069305;202.0
+Graphics card brand;AMD Radeon Pro;5.0;6.0
+Graphics card brand;AMD Radeon RX;4.857142857142857;7.0
+Graphics card brand;ARM;3.875;8.0
+Graphics card brand;Apple;4.796825396825397;63.0
+Graphics card brand;Broadcom;4.0;4.0
+Graphics card brand;Intel;4.373214285714286;280.0
+Graphics card brand;Matrox;;0.0
+Graphics card brand;NVIDIA;;0.0
+Graphics card brand;NVIDIA GeForce;4.368724279835391;243.0
+Graphics card brand;NVIDIA Quadro;4.3;5.0
+Graphics card brand;Qualcomm;;0.0
+Graphics card brand;VideoCore;4.9;57.0
+Graphics card brand;Without graphics card;;0.0
+Model graphics cards;5300;5.0;6.0
+Model graphics cards;5500 XT;;0.0
+Model graphics cards;5700XT;;0.0
+Model graphics cards;580X;;0.0
+Model graphics cards;610M Graphics;;0.0
+Model graphics cards;6600;;0.0
+Model graphics cards;6600 XT;;0.0
+Model graphics cards;6600M;;0.0
+Model graphics cards;660M;;0.0
+Model graphics cards;6650 XT;;0.0
+Model graphics cards;6700 XT;5.0;3.0
+Model graphics cards;6800 XT;;0.0
+Model graphics cards;680M;;0.0
+Model graphics cards;680M Graphics;;0.0
+Model graphics cards;6900 XT;;0.0
+Model graphics cards;7600;5.0;1.0
+Model graphics cards;7700 XT;;0.0
+Model graphics cards;7800 XT;5.0;2.0
+Model graphics cards;7900 XTX;;0.0
+Model graphics cards;Adreno 650;;0.0
+Model graphics cards;Apple M2 60-core GPU;;0.0
+Model graphics cards;Apple M3 10-core GPU;;0.0
+Model graphics cards;Apple M3 8-core GPU;;0.0
+Model graphics cards;Arc A370M;3.0;1.0
+Model graphics cards;Arc A380;5.0;2.0
+Model graphics cards;Arc A750;;0.0
+Model graphics cards;Arc A770;4.5;4.0
+Model graphics cards;Arc A770M;5.0;5.0
+Model graphics cards;G200;;0.0
+Model graphics cards;GT 1030;5.0;1.0
+Model graphics cards;GTX 1650;5.0;3.0
+Model graphics cards;GTX 1650 SUPER;;0.0
+Model graphics cards;GTX 1660;5.0;1.0
+Model graphics cards;GTX 1660 SUPER;5.0;4.0
+Model graphics cards;GTX 1660 Ti;;0.0
+Model graphics cards;Graphics;4.223;200.0
+Model graphics cards;HD Graphics;1.0;3.0
+Model graphics cards;HD Graphics 620;;0.0
+Model graphics cards;HD Graphics 630;;0.0
+Model graphics cards;Iris Xe Graphics;4.612121212121211;33.0
+Model graphics cards;M1 8-core GPU;4.85;20.0
+Model graphics cards;M1 ULTRA 64-core GPU;;0.0
+Model graphics cards;M2 10-core GPU;4.623076923076923;26.0
+Model graphics cards;M2 MAX 30-core GPU;5.0;2.0
+Model graphics cards;M2 PRO 16-core GPU;5.0;13.0
+Model graphics cards;M2 PRO 19-core GPU;5.0;2.0
+Model graphics cards;M2 ULTRA 60-core GPU;;0.0
+Model graphics cards;MX450;;0.0
+Model graphics cards;MX550;5.0;2.0
+Model graphics cards;Mali 400;3.7142857142857144;7.0
+Model graphics cards;Mali T860MP4;5.0;1.0
+Model graphics cards;NVIDIA T1000;;0.0
+Model graphics cards;NVIDIA T400;;0.0
+Model graphics cards;NVIDIA T600;;0.0
+Model graphics cards;P1000;4.3;5.0
+Model graphics cards;P2200;;0.0
+Model graphics cards;RTX 2060;4.964864864864865;37.0
+Model graphics cards;RTX 2070 Super;;0.0
+Model graphics cards;RTX 2080 Ti;;0.0
+Model graphics cards;RTX 3050;4.8;5.0
+Model graphics cards;RTX 3050 Ti;;0.0
+Model graphics cards;RTX 3060;4.448571428571428;35.0
+Model graphics cards;RTX 3060 Ti;4.151515151515151;33.0
+Model graphics cards;RTX 3070;3.9054054054054053;37.0
+Model graphics cards;RTX 3070 LHR;;0.0
+Model graphics cards;RTX 3070 Ti;5.0;1.0
+Model graphics cards;RTX 3080;3.6;15.0
+Model graphics cards;RTX 3080 Ti;3.0250000000000004;4.0
+Model graphics cards;RTX 3090;4.333333333333333;6.0
+Model graphics cards;RTX 4000;;0.0
+Model graphics cards;RTX 4050;;0.0
+Model graphics cards;RTX 4060;4.763636363636364;11.0
+Model graphics cards;RTX 4060 Ti;4.594117647058823;17.0
+Model graphics cards;RTX 4070;5.0;14.0
+Model graphics cards;RTX 4070 Ti;4.42;5.0
+Model graphics cards;RTX 4080;3.75;8.0
+Model graphics cards;RTX 4090;3.0;4.0
+Model graphics cards;RTX A2000;;0.0
+Model graphics cards;RTX A4000;;0.0
+Model graphics cards;RTX A4500;;0.0
+Model graphics cards;RTX A5500;;0.0
+Model graphics cards;T1000;;0.0
+Model graphics cards;UHD 770;;0.0
+Model graphics cards;UHD Graphics;4.19375;80.0
+Model graphics cards;UHD Graphics 600;4.022222222222222;9.0
+Model graphics cards;UHD Graphics 605;4.2;12.0
+Model graphics cards;UHD Graphics 610;5.0;4.0
+Model graphics cards;UHD Graphics 620;;0.0
+Model graphics cards;UHD Graphics 630;4.436781609195402;87.0
+Model graphics cards;UHD Graphics 710;;0.0
+Model graphics cards;UHD Graphics 730;4.763636363636364;33.0
+Model graphics cards;UHD Graphics 750;;0.0
+Model graphics cards;UHD Graphics 770;4.166666666666667;6.0
+Model graphics cards;UHD Graphics P630;3.0;1.0
+Model graphics cards;UHD Graphics P750;;0.0
+Model graphics cards;VI 3D;4.9;57.0
+Model graphics cards;Vega 11;5.0;1.0
+Model graphics cards;Vega 3;5.0;1.0
+Model graphics cards;Vega 7;4.0;1.0
+Model graphics cards;Vega 8;;0.0
+Model graphics cards;VideoCore IV;4.0;4.0
+Model graphics cards;Without graphics card;;0.0
+Operating system;['Android 10'];;0.0
+Operating system;['FreeDOS'];3.875;16.0
+Operating system;['Google Android'];;0.0
+Operating system;['Google Chrome OS'];1.0;2.0
+Operating system;['Linux'];;0.0
+Operating system;['Raspbian'];4.84;10.0
+Operating system;['Unknown'];3.5;4.0
+Operating system;['Windows 10 Home'];4.442857142857143;49.0
+Operating system;['Windows 10 IoT Enterprise'];;0.0
+Operating system;['Windows 10 Pro Academic'];;0.0
+Operating system;['Windows 10 Pro'];3.4;37.0
+Operating system;['Windows 11 Home'];4.36656976744186;344.0
+Operating system;['Windows 11 IoT Enterprise'];;0.0
+Operating system;['Windows 11 Pro'];4.267768595041322;121.0
+Operating system;['Windows 11 S'];;0.0
+Operating system;['Without Operating System'];4.768915662650603;415.0
+Operating system;['macOS'];4.809009009009008;111.0
+Storage Type;['Flash', 'microSD'];5.0;3.0
+Storage Type;['Flash'];3.9;8.0
+Storage Type;['HDD'];2.9473684210526314;19.0
+Storage Type;['SSD', 'HDD'];3.991111111111111;45.0
+Storage Type;['SSD'];4.430122324159021;654.0
+Storage Type;['microSD'];5.0;2.0
+Storage Type;['no storage'];4.564516129032258;93.0
+SSD capacity [GB];0.0;;0.0
+SSD capacity [GB];0.25;;0.0
+SSD capacity [GB];1.0;;0.0
+SSD capacity [GB];1.9140625;;0.0
+SSD capacity [GB];32.0;;0.0
+SSD capacity [GB];128.0;3.857142857142857;14.0
+SSD capacity [GB];200.0;;0.0
+SSD capacity [GB];240.0;;0.0
+SSD capacity [GB];250.0;;0.0
+SSD capacity [GB];256.0;4.494915254237288;118.0
+SSD capacity [GB];480.0;;0.0
+SSD capacity [GB];500.0;4.75;4.0
+SSD capacity [GB];512.0;4.393818181818182;275.0
+SSD capacity [GB];960.0;;0.0
+SSD capacity [GB];1000.0;4.471818181818182;220.0
+SSD capacity [GB];1250.0;;0.0
+SSD capacity [GB];1500.0;;0.0
+SSD capacity [GB];1512.0;;0.0
+SSD capacity [GB];2000.0;3.95;52.0
+SSD capacity [GB];2048.0;5.0;2.0
+SSD capacity [GB];3000.0;5.0;1.0
+SSD capacity [GB];4000.0;;0.0
+Internal interface;['M.2 (NVMe)'];4.5036496350364965;137.0
+Internal interface;['M.2 (PCIe 3.0 2x NVMe)'];4.666666666666667;3.0
+Internal interface;['M.2 (PCIe 3.0 4x NVMe)', 'M.2 (PCIe 4.0 4x NVMe)'];4.0375;8.0
+Internal interface;['M.2 (PCIe 3.0 4x NVMe)'];4.447916666666667;144.0
+Internal interface;['M.2 (PCIe 4.0 4x NVMe)'];4.183181818181819;220.0
+Internal interface;['M.2 (SATA)'];4.2;11.0
+Internal interface;['PCIe 3.1 x4 NVMe'];;0.0
+Internal interface;['PCIe 4.0 4x NVMe'];;0.0
+Internal interface;['PCIe', 'M.2 (NVMe)'];;0.0
+Internal interface;['PCIe'];3.0;2.0
+Internal interface;['SAS'];;0.0
+Internal interface;['SATA III', 'M.2 (NVMe)'];;0.0
+Internal interface;['SATA III', 'M.2 (PCIe 3.0 4x NVMe)'];3.975;20.0
+Internal interface;['SATA III', 'M.2 (SATA)'];;0.0
+Internal interface;['SATA III', 'PCIe'];5.0;1.0
+Internal interface;['SATA III', 'SAS', 'M.2 (NVMe)'];;0.0
+Internal interface;['SATA III', 'SAS'];;0.0
+Internal interface;['SATA III'];3.2;15.0
+USB-C charging;Can be charged via USB-C;4.2;106.0
+Charging connector;USB-C;4.2;106.0
+Colour;['Black'];;0.0
+Colour;['White'];4.2;159.0
+Weight [kg];0.61;4.2;53.0
+Weight [kg];61.0;4.2;106.0
+USB 3.2 Gen 2;0.0;5.0;1.0
+USB 3.2 Gen 2;1.0;4.281090909090909;275.0
+USB 3.2 Gen 2;2.0;4.4633802816901404;142.0
+USB 3.2 Gen 2;3.0;4.493023255813953;43.0
+USB 3.2 Gen 2;4.0;4.076923076923077;13.0
+USB 3.2 Gen 2;5.0;5.0;20.0
+USB 3.2 Gen 2;6.0;4.909090909090909;11.0
+USB 3.2 Gen 2;7.0;;0.0
+USB 3.2 Gen 2;8.0;5.0;2.0
+USB-C;0.0;;0.0
+USB-C;1.0;4.45752508361204;598.0
+USB-C;2.0;4.560377358490566;106.0
+USB-C;3.0;2.3333333333333335;3.0
+USB-C;4.0;4.9125;32.0
+USB-C;6.0;5.0;1.0
+Graphical output ports;DVI, HDMI;5.0;4.0
+Graphical output ports;DVI, HDMI, DisplayPort;4.721052631578948;19.0
+Graphical output ports;DVI, HDMI, DisplayPort, USB-C;;0.0
+Graphical output ports;DVI, HDMI, USB-C;;0.0
+Graphical output ports;DVI-D, HDMI, DisplayPort;5.0;1.0
+Graphical output ports;DVI-D, VGA D-SUB, HDMI;;0.0
+Graphical output ports;DVI-D, VGA D-SUB, HDMI, DisplayPort;;0.0
+Graphical output ports;DisplayPort;3.0;1.0
+Graphical output ports;DisplayPort 1.4;;0.0
+Graphical output ports;DisplayPort 1.4, DisplayPort 2.1;;0.0
+Graphical output ports;DisplayPort 1.4, miniDisplayPort 1.4;;0.0
+Graphical output ports;DisplayPort 1.4a;;0.0
+Graphical output ports;DisplayPort, HDMI 2.0b;5.0;1.0
+Graphical output ports;DisplayPort, Thunderbolt;;0.0
+Graphical output ports;DisplayPort, USB-C;;0.0
+Graphical output ports;DisplayPort, USB-C, HDMI 2.0a;5.0;1.0
+Graphical output ports;DisplayPort, miniDisplayPort;4.3;5.0
+Graphical output ports;HDMI;4.650691244239631;217.0
+Graphical output ports;HDMI 2.0, DisplayPort 1.4;;0.0
+Graphical output ports;HDMI 2.0, DisplayPort 1.4, miniDisplayPort 1.4;;0.0
+Graphical output ports;HDMI 2.0, miniDisplayPort 1.4;5.0;1.0
+Graphical output ports;HDMI 2.0a;4.622222222222223;18.0
+Graphical output ports;HDMI 2.1, DisplayPort 1.4;4.678260869565218;23.0
+Graphical output ports;HDMI 2.1, DisplayPort 1.4a;4.2;16.0
+Graphical output ports;HDMI 2.1, DisplayPort 2.0;;0.0
+Graphical output ports;HDMI 2.1, DisplayPort 2.1;5.0;1.0
+Graphical output ports;HDMI, DisplayPort;4.281549815498154;271.0
+Graphical output ports;HDMI, DisplayPort 1.4;;0.0
+Graphical output ports;HDMI, DisplayPort, USB-C;4.0;4.0
+Graphical output ports;HDMI, DisplayPort, USB-C, HDMI 2.1, DisplayPort 1.4;;0.0
+Graphical output ports;HDMI, DisplayPort, miniDisplayPort;;0.0
+Graphical output ports;HDMI, HDMI 2.1, DisplayPort 1.4;4.0;1.0
+Graphical output ports;HDMI, Thunderbolt;;0.0
+Graphical output ports;HDMI, Thunderbolt 4;;0.0
+Graphical output ports;HDMI, USB-C;4.6499999999999995;6.0
+Graphical output ports;HDMI, USB-C, HDMI 2.0b;;0.0
+Graphical output ports;HDMI, USB-C, Thunderbolt;5.0;2.0
+Graphical output ports;HDMI, USB-C, Thunderbolt 4;4.78695652173913;46.0
+Graphical output ports;HDMI, miniDisplayPort;4.0;1.0
+Graphical output ports;HDMI, miniDisplayPort, USB-C;4.97037037037037;27.0
+Graphical output ports;Micro HDMI;4.84;10.0
+Graphical output ports;Thunderbolt 3;4.666666666666667;9.0
+Graphical output ports;Thunderbolt 4, HDMI 2.1;3.6666666666666665;6.0
+Graphical output ports;USB-C;;0.0
+Graphical output ports;USB-C, DisplayPort 1.4;4.2;159.0
+Graphical output ports;USB-C, HDMI 2.0, DisplayPort 1.4;;0.0
+Graphical output ports;USB-C, HDMI 2.1;4.222222222222222;9.0
+Graphical output ports;USB-C, Thunderbolt 4;;0.0
+Graphical output ports;USB-C, Thunderbolt 4, HDMI 2.1;;0.0
+Graphical output ports;VGA D-SUB;;0.0
+Graphical output ports;VGA D-SUB, DisplayPort;;0.0
+Graphical output ports;VGA D-SUB, DisplayPort, HDMI 2.0a;5.0;1.0
+Graphical output ports;VGA D-SUB, HDMI;4.328205128205129;39.0
+Graphical output ports;VGA D-SUB, HDMI 2.0;;0.0
+Graphical output ports;VGA D-SUB, HDMI 2.0a;4.8;4.0
+Graphical output ports;VGA D-SUB, HDMI 2.0b;;0.0
+Graphical output ports;VGA D-SUB, HDMI 2.0b, DisplayPort 1.4;4.0;1.0
+Graphical output ports;VGA D-SUB, HDMI 2.1, DisplayPort 1.4;;0.0
+Graphical output ports;VGA D-SUB, HDMI, DisplayPort;4.463636363636364;22.0
+Graphical output ports;VGA D-SUB, HDMI, DisplayPort, DisplayPort 1.2;;0.0
+Graphical output ports;VGA D-SUB, HDMI, DisplayPort, Thunderbolt;;0.0
+Graphical output ports;VGA D-SUB, HDMI, DisplayPort, USB-C;4.5;2.0
+Graphical output ports;VGA D-SUB, HDMI, USB-C;4.666666666666667;3.0
+Graphical output ports;VGA D-SUB, HDMI, miniDisplayPort;4.0;4.0
+Graphical output ports;miniDisplayPort;;0.0
+Graphical output ports;miniDisplayPort 1.4;;0.0
+Graphical output ports;miniDisplayPort, DisplayPort 1.4;;0.0
+Width [mm];30.0;4.0;3.0
+Width [mm];36.0;4.0;1.0
+Width [mm];36.5;;0.0
+Width [mm];37.0;;0.0
+Width [mm];37.5;;0.0
+Width [mm];54.0;5.0;1.0
+Width [mm];56.0;5.0;3.0
+Width [mm];63.0;4.0;4.0
+Width [mm];70.2;4.3;5.0
+Width [mm];71.8;;0.0
+Width [mm];72.0;1.0;1.0
+Width [mm];85.0;5.0;4.0
+Width [mm];85.6;4.902040816326531;98.0
+Width [mm];87.0;;0.0
+Width [mm];92.5;;0.0
+Width [mm];92.6;5.0;3.0
+Width [mm];92.71;;0.0
+Width [mm];93.0;;0.0
+Width [mm];94.6;5.0;1.0
+Width [mm];95.0;4.283333333333334;24.0
+Width [mm];98.0;;0.0
+Width [mm];100.0;3.75;4.0
+Width [mm];102.0;5.0;2.0
+Width [mm];102.5;;0.0
+Width [mm];112.0;3.0;1.0
+Width [mm];115.0;4.2700000000000005;20.0
+Width [mm];117.0;4.633333333333333;27.0
+Width [mm];120.0;3.6666666666666665;3.0
+Width [mm];122.0;;0.0
+Width [mm];124.0;3.8;22.0
+Width [mm];127.5;4.0;1.0
+Width [mm];128.0;5.0;1.0
+Width [mm];132.0;;0.0
+Width [mm];135.0;4.666666666666667;21.0
+Width [mm];140.0;4.84;5.0
+Width [mm];145.0;5.0;1.0
+Width [mm];148.5;1.0;2.0
+Width [mm];149.0;;0.0
+Width [mm];154.0;4.8;5.0
+Width [mm];155.0;4.85;20.0
+Width [mm];155.4;5.0;2.0
+Width [mm];160.0;2.5;2.0
+Width [mm];162.0;;0.0
+Width [mm];163.0;5.0;8.0
+Width [mm];165.0;5.0;1.0
+Width [mm];166.5;;0.0
+Width [mm];168.9;;0.0
+Width [mm];169.0;;0.0
+Width [mm];170.0;4.5;4.0
+Width [mm];170.9;;0.0
+Width [mm];173.0;;0.0
+Width [mm];173.8;4.333333333333333;3.0
+Width [mm];175.0;4.4714285714285715;28.0
+Width [mm];176.5;;0.0
+Width [mm];176.53;3.0;1.0
+Width [mm];176.6;;0.0
+Width [mm];177.0;4.594444444444444;36.0
+Width [mm];178.0;;0.0
+Width [mm];178.82;;0.0
+Width [mm];179.0;5.0;2.0
+Width [mm];180.0;3.527272727272727;11.0
+Width [mm];182.8;;0.0
+Width [mm];184.5;5.0;1.0
+Width [mm];185.0;;0.0
+Width [mm];186.0;;0.0
+Width [mm];186.3;;0.0
+Width [mm];192.0;;0.0
+Width [mm];193.0;;0.0
+Width [mm];195.0;5.0;1.0
+Width [mm];197.0;4.82156862745098;102.0
+Width [mm];200.0;;0.0
+Width [mm];202.0;;0.0
+Width [mm];204.0;4.911111111111111;9.0
+Width [mm];204.2;;0.0
+Width [mm];205.0;5.0;1.0
+Width [mm];208.0;4.730952380952381;42.0
+Width [mm];210.0;4.26;30.0
+Width [mm];211.0;1.0;1.0
+Width [mm];215.0;3.4444444444444446;9.0
+Width [mm];216.0;4.550000000000001;4.0
+Width [mm];219.0;;0.0
+Width [mm];220.0;4.493548387096775;31.0
+Width [mm];221.0;5.0;20.0
+Width [mm];222.8;;0.0
+Width [mm];225.0;5.0;5.0
+Width [mm];226.0;;0.0
+Width [mm];227.0;4.025;4.0
+Width [mm];230.0;4.458620689655173;29.0
+Width [mm];232.0;3.8;5.0
+Width [mm];233.0;4.0;9.0
+Width [mm];240.0;;0.0
+Width [mm];245.0;;0.0
+Width [mm];248.0;3.0;2.0
+Width [mm];249.0;;0.0
+Width [mm];250.0;5.0;1.0
+Width [mm];251.0;1.0;1.0
+Width [mm];270.0;;0.0
+Width [mm];272.0;3.7000000000000006;3.0
+Width [mm];279.0;;0.0
+Width [mm];280.0;4.2;159.0
+Width [mm];286.0;4.84;10.0
+Width [mm];297.0;;0.0
+Width [mm];297.3;5.0;1.0
+Width [mm];303.0;5.0;1.0
+Width [mm];308.0;;0.0
+Width [mm];309.0;3.9;7.0
+Width [mm];335.0;;0.0
+Width [mm];337.0;4.8;5.0
+Width [mm];338.0;;0.0
+Width [mm];340.0;;0.0
+Width [mm];356.0;;0.0
+Width [mm];366.0;3.0;2.0
+Width [mm];376.0;;0.0
+Width [mm];384.0;;0.0
+Width [mm];386.0;;0.0
+Width [mm];390.0;;0.0
+Width [mm];396.57;;0.0
+Width [mm];411.0;;0.0
+Width [mm];430.0;;0.0
+Width [mm];431.9;;0.0
+Width [mm];435.0;;0.0
+Width [mm];439.0;4.5;2.0
+Width [mm];450.9;4.0;2.0
+Width [mm];474.1;;0.0
+Width [mm];474.15;;0.0
+Width [mm];476.0;;0.0
+Width [mm];482.0;;0.0
+Width [mm];487.15;;0.0
+Width [mm];489.0;;0.0
+Width [mm];489.9;;0.0
+Width [mm];490.0;;0.0
+Width [mm];490.3;;0.0
+Width [mm];490.7;;0.0
+Width [mm];493.0;;0.0
+Width [mm];493.5;;0.0
+Width [mm];494.2;4.333333333333333;3.0
+Width [mm];523.9;;0.0
+Width [mm];539.0;;0.0
+Width [mm];539.3;2.5454545454545454;11.0
+Width [mm];539.6;;0.0
+Width [mm];539.9;;0.0
+Width [mm];540.0;1.0;1.0
+Width [mm];540.2;;0.0
+Width [mm];540.4;5.0;2.0
+Width [mm];540.5;4.75;8.0
+Width [mm];540.6;;0.0
+Width [mm];540.8;4.5;2.0
+Width [mm];541.0;4.25;8.0
+Width [mm];541.2;3.0;1.0
+Width [mm];541.4;;0.0
+Width [mm];541.9;;0.0
+Width [mm];542.0;;0.0
+Width [mm];542.1;;0.0
+Width [mm];542.7;4.0;1.0
+Width [mm];547.0;4.0;3.0
+Width [mm];551.3;;0.0
+Width [mm];552.3;;0.0
+Width [mm];612.5;5.0;4.0
+Width [mm];613.1;;0.0
+Width [mm];614.0;1.0;2.0
+Width [mm];614.1;5.0;1.0
+Width [mm];614.6;;0.0
+Width [mm];614.7;5.0;1.0
+Width [mm];614.8;;0.0
+Width [mm];615.3;;0.0
+Width [mm];650.0;5.0;6.0
+Width [mm];700.0;;0.0
+Width [mm];712.8;;0.0
+Width [mm];714.4;;0.0
+Width [mm];724.04;;0.0
+Width [mm];926.0;;0.0
+Width [mm];1104.9;;0.0
+Width [mm];5414.0;;0.0
+Maximum height [mm];32.0;4.2;53.0
+Maximum height [mm];110.0;4.2;106.0
+Depth [mm];7.5;4.333333333333333;3.0
+Depth [mm];11.0;3.0;1.0
+Depth [mm];13.0;;0.0
+Depth [mm];14.9;;0.0
+Depth [mm];15.0;;0.0
+Depth [mm];17.7;;0.0
+Depth [mm];30.0;4.0;3.0
+Depth [mm];32.0;4.2;106.0
+Depth [mm];34.48;;0.0
+Depth [mm];35.0;1.0;1.0
+Depth [mm];35.2;;0.0
+Depth [mm];36.0;;0.0
+Depth [mm];37.1;;0.0
+Depth [mm];37.3;5.0;3.0
+Depth [mm];38.26;;0.0
+Depth [mm];40.2;4.0;1.0
+Depth [mm];41.8;5.0;1.0
+Depth [mm];45.0;4.0;1.0
+Depth [mm];46.5;;0.0
+Depth [mm];47.0;5.0;1.0
+Depth [mm];52.6;;0.0
+Depth [mm];56.0;5.0;4.0
+Depth [mm];56.5;4.902040816326531;98.0
+Depth [mm];57.9;;0.0
+Depth [mm];58.0;;0.0
+Depth [mm];63.0;4.0;4.0
+Depth [mm];72.0;1.0;1.0
+Depth [mm];84.0;;0.0
+Depth [mm];85.0;5.0;4.0
+Depth [mm];89.0;;0.0
+Depth [mm];95.0;;0.0
+Depth [mm];111.0;4.223880597014926;67.0
+Depth [mm];112.0;4.633333333333333;27.0
+Depth [mm];115.0;4.555555555555555;27.0
+Depth [mm];118.0;;0.0
+Depth [mm];122.0;4.84;10.0
+Depth [mm];124.0;3.8;22.0
+Depth [mm];130.0;3.6666666666666665;3.0
+Depth [mm];132.0;4.0;1.0
+Depth [mm];137.06;;0.0
+Depth [mm];140.0;4.8;4.0
+Depth [mm];142.0;5.0;20.0
+Depth [mm];147.0;4.0;3.0
+Depth [mm];148.6;;0.0
+Depth [mm];149.0;;0.0
+Depth [mm];151.0;1.0;2.0
+Depth [mm];155.0;5.0;1.0
+Depth [mm];161.0;;0.0
+Depth [mm];165.0;;0.0
+Depth [mm];165.8;;0.0
+Depth [mm];169.0;;0.0
+Depth [mm];170.0;;0.0
+Depth [mm];171.2;;0.0
+Depth [mm];175.0;4.6054054054054046;37.0
+Depth [mm];177.0;;0.0
+Depth [mm];178.0;4.0;1.0
+Depth [mm];179.0;;0.0
+Depth [mm];182.9;5.0;1.0
+Depth [mm];183.0;5.0;1.0
+Depth [mm];183.7;;0.0
+Depth [mm];185.0;;0.0
+Depth [mm];185.34;4.285714285714286;7.0
+Depth [mm];186.2;4.818181818181818;11.0
+Depth [mm];186.3;;0.0
+Depth [mm];186.6;;0.0
+Depth [mm];187.57;3.0;1.0
+Depth [mm];188.1;4.3;5.0
+Depth [mm];194.86;;0.0
+Depth [mm];197.0;4.82156862745098;102.0
+Depth [mm];200.0;;0.0
+Depth [mm];200.71;;0.0
+Depth [mm];201.0;;0.0
+Depth [mm];203.0;5.0;6.0
+Depth [mm];204.0;;0.0
+Depth [mm];204.5;4.5;2.0
+Depth [mm];207.5;;0.0
+Depth [mm];207.57;;0.0
+Depth [mm];208.0;5.0;4.0
+Depth [mm];208.1;5.0;1.0
+Depth [mm];212.0;1.0;2.0
+Depth [mm];214.0;;0.0
+Depth [mm];216.32;;0.0
+Depth [mm];218.0;;0.0
+Depth [mm];220.0;;0.0
+Depth [mm];222.63;;0.0
+Depth [mm];223.0;;0.0
+Depth [mm];225.0;5.0;1.0
+Depth [mm];226.0;;0.0
+Depth [mm];227.9;;0.0
+Depth [mm];228.0;;0.0
+Depth [mm];230.0;5.0;5.0
+Depth [mm];232.7;;0.0
+Depth [mm];233.0;2.3;10.0
+Depth [mm];239.9;;0.0
+Depth [mm];242.0;;0.0
+Depth [mm];245.0;;0.0
+Depth [mm];248.0;3.0;2.0
+Depth [mm];253.02;;0.0
+Depth [mm];270.0;5.0;1.0
+Depth [mm];272.3;;0.0
+Depth [mm];273.0;;0.0
+Depth [mm];274.8;;0.0
+Depth [mm];291.0;;0.0
+Depth [mm];291.3;;0.0
+Depth [mm];292.0;4.75;4.0
+Depth [mm];292.2;5.0;1.0
+Depth [mm];292.6;5.0;1.0
+Depth [mm];292.8;5.0;1.0
+Depth [mm];292.86;5.0;2.0
+Depth [mm];293.0;;0.0
+Depth [mm];294.0;5.0;1.0
+Depth [mm];296.0;;0.0
+Depth [mm];297.3;4.8125;16.0
+Depth [mm];297.7;;0.0
+Depth [mm];298.0;;0.0
+Depth [mm];300.8;;0.0
+Depth [mm];303.0;4.385714285714286;28.0
+Depth [mm];304.0;4.5;4.0
+Depth [mm];305.08;5.0;1.0
+Depth [mm];305.8;5.0;1.0
+Depth [mm];306.0;1.0;1.0
+Depth [mm];307.0;5.0;1.0
+Depth [mm];307.7;;0.0
+Depth [mm];308.0;4.5;2.0
+Depth [mm];310.0;;0.0
+Depth [mm];313.0;;0.0
+Depth [mm];315.4;;0.0
+Depth [mm];318.0;5.0;4.0
+Depth [mm];323.0;;0.0
+Depth [mm];330.0;3.75;4.0
+Depth [mm];336.0;;0.0
+Depth [mm];338.0;;0.0
+Depth [mm];339.5;;0.0
+Depth [mm];340.0;;0.0
+Depth [mm];344.5;;0.0
+Depth [mm];345.0;;0.0
+Depth [mm];346.0;;0.0
+Depth [mm];348.0;5.0;1.0
+Depth [mm];350.0;4.888888888888889;9.0
+Depth [mm];357.0;;0.0
+Depth [mm];359.5;3.0;1.0
+Depth [mm];365.0;;0.0
+Depth [mm];366.0;3.0;2.0
+Depth [mm];367.9;;0.0
+Depth [mm];370.0;;0.0
+Depth [mm];372.0;;0.0
+Depth [mm];377.0;5.0;1.0
+Depth [mm];382.2;;0.0
+Depth [mm];386.0;4.555555555555555;9.0
+Depth [mm];390.0;5.0;1.0
+Depth [mm];396.1;;0.0
+Depth [mm];396.9;;0.0
+Depth [mm];400.0;4.759574468085106;47.0
+Depth [mm];405.5;4.8;4.0
+Depth [mm];410.0;4.364705882352942;17.0
+Depth [mm];413.0;4.550000000000001;4.0
+Depth [mm];415.0;4.426923076923076;26.0
+Depth [mm];416.0;5.0;1.0
+Depth [mm];420.2;;0.0
+Depth [mm];421.0;5.0;7.0
+Depth [mm];422.0;5.0;1.0
+Depth [mm];427.0;;0.0
+Depth [mm];428.0;3.9;17.0
+Depth [mm];429.6;4.0;4.0
+Depth [mm];430.0;2.3;6.0
+Depth [mm];431.9;;0.0
+Depth [mm];433.0;;0.0
+Depth [mm];435.19;4.0;2.0
+Depth [mm];440.0;4.3;5.0
+Depth [mm];442.0;;0.0
+Depth [mm];443.0;5.0;9.0
+Depth [mm];444.5;;0.0
+Depth [mm];445.0;3.7000000000000006;3.0
+Depth [mm];446.0;4.025;4.0
+Depth [mm];446.97;4.333333333333333;3.0
+Depth [mm];447.0;;0.0
+Depth [mm];450.0;4.25;8.0
+Depth [mm];453.0;3.9166666666666665;12.0
+Depth [mm];453.75;;0.0
+Depth [mm];464.0;1.0;1.0
+Depth [mm];466.0;4.4;3.0
+Depth [mm];467.0;5.0;1.0
+Depth [mm];469.0;5.0;1.0
+Depth [mm];470.0;;0.0
+Depth [mm];473.5;3.0;5.0
+Depth [mm];480.0;4.82;5.0
+Depth [mm];480.5;;0.0
+Depth [mm];481.6;;0.0
+Depth [mm];483.0;4.8;4.0
+Depth [mm];485.0;5.0;1.0
+Depth [mm];490.0;;0.0
+Depth [mm];498.0;;0.0
+Depth [mm];501.0;;0.0
+Depth [mm];504.8;;0.0
+Depth [mm];506.0;;0.0
+Depth [mm];514.8;;0.0
+Depth [mm];515.0;5.0;1.0
+Depth [mm];521.0;;0.0
+Depth [mm];529.0;;0.0
+Depth [mm];534.59;;0.0
+Depth [mm];538.0;3.5;6.0
+Depth [mm];541.0;4.033333333333333;9.0
+Depth [mm];542.0;;0.0
+Depth [mm];545.0;1.0;1.0
+Depth [mm];557.7;;0.0
+Depth [mm];581.12;;0.0
+Depth [mm];591.0;5.0;1.0
+Depth [mm];600.0;;0.0
+Depth [mm];680.5;;0.0
+Depth [mm];808.0;;0.0
+Depth [mm];1829.0;;0.0
+Depth [mm];2928.0;;0.0
+Depth [mm];19486.0;;0.0
+Height [mm];3.4;5.0;1.0
+Height [mm];17.0;4.905882352941177;102.0
+Height [mm];23.0;4.84;10.0
+Height [mm];24.92;4.0;2.0
+Height [mm];30.0;4.8;4.0
+Height [mm];33.2;;0.0
+Height [mm];33.5;;0.0
+Height [mm];34.0;4.594444444444444;36.0
+Height [mm];34.48;;0.0
+Height [mm];35.8;4.760975609756097;41.0
+Height [mm];36.0;4.8075;80.0
+Height [mm];36.2;;0.0
+Height [mm];36.5;5.0;1.0
+Height [mm];37.0;4.0;7.0
+Height [mm];37.5;;0.0
+Height [mm];38.0;4.92;10.0
+Height [mm];40.0;1.0;2.0
+Height [mm];42.0;5.0;20.0
+Height [mm];42.8;;0.0
+Height [mm];43.0;;0.0
+Height [mm];43.2;;0.0
+Height [mm];44.5;1.0;1.0
+Height [mm];45.9;;0.0
+Height [mm];47.8;;0.0
+Height [mm];49.0;4.166666666666667;6.0
+Height [mm];51.0;4.23888888888889;18.0
+Height [mm];52.0;;0.0
+Height [mm];53.0;;0.0
+Height [mm];54.0;4.12;30.0
+Height [mm];55.0;5.0;4.0
+Height [mm];57.6;4.0;1.0
+Height [mm];58.0;3.857142857142857;7.0
+Height [mm];60.0;4.625;8.0
+Height [mm];64.0;;0.0
+Height [mm];69.0;;0.0
+Height [mm];72.0;;0.0
+Height [mm];95.0;5.0;3.0
+Height [mm];97.0;;0.0
+Height [mm];100.0;;0.0
+Height [mm];110.0;4.2;159.0
+Height [mm];119.0;;0.0
+Height [mm];129.0;5.0;4.0
+Height [mm];140.0;5.0;1.0
+Height [mm];155.0;4.0;1.0
+Height [mm];176.6;;0.0
+Height [mm];178.65;4.3;5.0
+Height [mm];179.0;;0.0
+Height [mm];182.0;4.0;1.0
+Height [mm];185.3;;0.0
+Height [mm];186.0;;0.0
+Height [mm];189.0;;0.0
+Height [mm];190.0;3.0;4.0
+Height [mm];200.0;;0.0
+Height [mm];201.0;4.5;2.0
+Height [mm];202.0;;0.0
+Height [mm];204.3;;0.0
+Height [mm];222.8;;0.0
+Height [mm];244.0;5.0;1.0
+Height [mm];257.5;;0.0
+Height [mm];270.0;4.283333333333334;24.0
+Height [mm];274.8;;0.0
+Height [mm];286.90000000000003;;0.0
+Height [mm];290.0;5.0;3.0
+Height [mm];294.0;;0.0
+Height [mm];295.0;3.75;4.0
+Height [mm];296.0;;0.0
+Height [mm];297.7;;0.0
+Height [mm];297.85;;0.0
+Height [mm];298.2;4.333333333333333;3.0
+Height [mm];308.0;;0.0
+Height [mm];309.25;4.0;1.0
+Height [mm];312.8;;0.0
+Height [mm];320.0;1.0;1.0
+Height [mm];323.9;;0.0
+Height [mm];324.3;4.8;5.0
+Height [mm];326.26;;0.0
+Height [mm];330.0;5.0;2.0
+Height [mm];332.0;;0.0
+Height [mm];335.0;3.0;1.0
+Height [mm];337.0;4.857142857142857;21.0
+Height [mm];337.4;5.0;2.0
+Height [mm];339.5;;0.0
+Height [mm];339.6;5.0;1.0
+Height [mm];340.0;5.0;9.0
+Height [mm];341.8;;0.0
+Height [mm];344.0;;0.0
+Height [mm];346.0;;0.0
+Height [mm];348.0;1.0;1.0
+Height [mm];350.0;;0.0
+Height [mm];354.0;;0.0
+Height [mm];354.3;;0.0
+Height [mm];355.0;;0.0
+Height [mm];358.0;4.364705882352942;17.0
+Height [mm];358.5;4.0;1.0
+Height [mm];360.0;;0.0
+Height [mm];365.0;;0.0
+Height [mm];366.6;;0.0
+Height [mm];367.0;;0.0
+Height [mm];369.3;;0.0
+Height [mm];369.5;;0.0
+Height [mm];370.0;;0.0
+Height [mm];371.0;;0.0
+Height [mm];372.9;;0.0
+Height [mm];375.0;;0.0
+Height [mm];376.0;4.5;4.0
+Height [mm];376.8;;0.0
+Height [mm];379.0;;0.0
+Height [mm];379.4;5.0;1.0
+Height [mm];379.6;;0.0
+Height [mm];380.0;;0.0
+Height [mm];380.7;;0.0
+Height [mm];385.0;5.0;1.0
+Height [mm];386.1;;0.0
+Height [mm];392.0;4.555555555555555;9.0
+Height [mm];394.82;5.0;1.0
+Height [mm];395.0;;0.0
+Height [mm];402.0;;0.0
+Height [mm];403.2;2.3;10.0
+Height [mm];405.2;5.0;2.0
+Height [mm];405.24;;0.0
+Height [mm];405.39;;0.0
+Height [mm];406.0;;0.0
+Height [mm];407.14;4.0;2.0
+Height [mm];407.17;5.0;1.0
+Height [mm];409.0;4.75;8.0
+Height [mm];409.3;4.0;1.0
+Height [mm];409.4;5.0;1.0
+Height [mm];410.39;;0.0
+Height [mm];415.0;4.8;4.0
+Height [mm];419.0;;0.0
+Height [mm];420.0;;0.0
+Height [mm];421.0;;0.0
+Height [mm];423.0;;0.0
+Height [mm];425.5;;0.0
+Height [mm];425.9;;0.0
+Height [mm];427.8;;0.0
+Height [mm];428.0;2.3;6.0
+Height [mm];431.0;5.0;5.0
+Height [mm];432.9;;0.0
+Height [mm];433.0;5.0;1.0
+Height [mm];433.38;3.0;1.0
+Height [mm];433.56;4.285714285714286;7.0
+Height [mm];433.6;;0.0
+Height [mm];433.96;;0.0
+Height [mm];437.79;;0.0
+Height [mm];439.0;4.0;1.0
+Height [mm];440.0;5.0;2.0
+Height [mm];440.9;5.0;3.0
+Height [mm];443.31;;0.0
+Height [mm];445.0;;0.0
+Height [mm];445.5;5.0;1.0
+Height [mm];445.52;;0.0
+Height [mm];446.0;3.7000000000000006;3.0
+Height [mm];447.0;4.550000000000001;4.0
+Height [mm];448.0;;0.0
+Height [mm];450.0;;0.0
+Height [mm];453.0;4.4;3.0
+Height [mm];453.84;;0.0
+Height [mm];454.0;3.0;5.0
+Height [mm];455.3;4.8;4.0
+Height [mm];455.5;;0.0
+Height [mm];456.0;;0.0
+Height [mm];457.0;5.0;1.0
+Height [mm];458.0;4.730952380952381;42.0
+Height [mm];459.0;;0.0
+Height [mm];460.0;3.961111111111111;18.0
+Height [mm];461.0;4.0;3.0
+Height [mm];463.0;4.25;8.0
+Height [mm];464.0;4.025;4.0
+Height [mm];465.0;3.5;6.0
+Height [mm];466.0;4.0;13.0
+Height [mm];469.0;;0.0
+Height [mm];470.0;5.0;10.0
+Height [mm];471.3;5.0;1.0
+Height [mm];472.0;;0.0
+Height [mm];472.91;;0.0
+Height [mm];474.0;;0.0
+Height [mm];474.12;;0.0
+Height [mm];477.0;;0.0
+Height [mm];480.44;;0.0
+Height [mm];480.5;;0.0
+Height [mm];481.6;;0.0
+Height [mm];482.0;;0.0
+Height [mm];483.0;4.426923076923076;26.0
+Height [mm];485.0;4.3;5.0
+Height [mm];486.5;;0.0
+Height [mm];488.0;;0.0
+Height [mm];489.6;4.0;4.0
+Height [mm];492.0;1.0;1.0
+Height [mm];494.0;;0.0
+Height [mm];495.0;5.0;1.0
+Height [mm];498.0;;0.0
+Height [mm];499.0;5.0;6.0
+Height [mm];501.0;;0.0
+Height [mm];505.0;4.82;5.0
+Height [mm];507.0;1.0;2.0
+Height [mm];510.0;;0.0
+Height [mm];511.6;;0.0
+Height [mm];513.35;;0.0
+Height [mm];516.0;5.0;6.0
+Height [mm];534.92;;0.0
+Height [mm];542.0;3.9;7.0
+Height [mm];543.1;;0.0
+Height [mm];552.0;1.0;1.0
+Height [mm];552.9;;0.0
+Height [mm];555.0;;0.0
+Height [mm];565.0;5.0;1.0
+Height [mm];566.0;;0.0
+Height [mm];600.6;;0.0
+Height [mm];613.1;;0.0
+Height [mm];2748.0;;0.0
+Height [mm];3243.0;;0.0
+Height [mm];4255.0;;0.0
+Height [mm];5048.0;;0.0
+Height [mm];53492.0;;0.0
+Package includes;['Manual', 'Power adapter', 'Vertical stand'];1.0;1.0
+Package includes;['Mouse', 'Keyboard', 'PC'];5.0;1.0
+Package includes;['Mouse', 'Keyboard', 'Power cable'];5.0;4.0
+Package includes;['Mouse', 'Keyboard', 'Webcam'];;0.0
+Package includes;['Mouse', 'Keyboard'];4.6414634146341465;41.0
+Package includes;['Mouse'];;0.0
+Package includes;['Power adapter', 'Power cable', 'Quick start guide'];;0.0
+Package includes;['Power adapter', 'Power cable', 'USB-C cable'];2.0;1.0
+Package includes;['Power adapter'];4.416352201257862;159.0
+Package includes;['Power cable'];4.542168674698795;83.0
+Package includes;['Remote control', 'Power adapter'];;0.0
+Package includes;['VESA'];4.222222222222222;9.0
+Assembly type;['All-in-one PC'];3.9193548387096775;62.0
+Assembly type;['Configurable (Barebone)'];4.2;146.0
+Assembly type;['Gaming'];4.314;400.0
+Assembly type;['High-performance'];;0.0
+Assembly type;['Mini PC', 'Configurable (Barebone)'];4.8;14.0
+Assembly type;['Mini PC', 'Performance'];;0.0
+Assembly type;['Mini PC'];4.736363636363636;550.0
+Assembly type;['Office'];4.323943661971831;71.0
+Assembly type;['Performance'];4.590909090909091;11.0
+Assembly type;['Server'];3.0;1.0
+Basic equipment;['AMD Smart Access Memory'];5.0;2.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Opticl drive', 'More graphics cards', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Opticl drive', 'Webcam', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Opticl drive', 'Webcam', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Opticl drive', 'Wi-Fi', 'Speakers'];5.0;1.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Opticl drive', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Touch display', 'Webcam', 'Wi-Fi', 'Speakers'];5.0;1.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Touch display', 'Webcam', 'Wi-Fi'];3.0;2.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Touch display', 'Wi-Fi', 'Speakers'];4.2;159.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Touch display', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Webcam', 'Wi-Fi', 'Speakers'];1.0;2.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Webcam', 'Wi-Fi'];3.8;25.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Wi-Fi', 'AMD Smart Access Memory'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Wi-Fi', 'Possibility to control with a pen'];;0.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Wi-Fi', 'Speakers'];4.0;4.0
+Basic equipment;['Bluetooth', 'Memory Card Reader', 'Wi-Fi'];4.723691460055097;363.0
+Basic equipment;['Bluetooth', 'Opticl drive', 'Webcam', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Opticl drive', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Opticl drive', 'Wi-Fi'];4.5;2.0
+Basic equipment;['Bluetooth', 'RGB backlight', 'Wi-Fi', 'AMD Smart Access Memory'];;0.0
+Basic equipment;['Bluetooth', 'RGB backlight', 'Wi-Fi'];4.833333333333333;12.0
+Basic equipment;['Bluetooth', 'Touch display', 'Opticl drive', 'Webcam', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Touch display', 'Water cooling', 'RGB backlight', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Touch display', 'Webcam', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Touch display', 'Webcam', 'Wi-Fi'];3.0;2.0
+Basic equipment;['Bluetooth', 'Touch display', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Bluetooth', 'Touch display', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Water cooling', 'RGB backlight', 'Wi-Fi', 'AMD Smart Access Memory'];5.0;2.0
+Basic equipment;['Bluetooth', 'Water cooling', 'RGB backlight', 'Wi-Fi'];4.2;5.0
+Basic equipment;['Bluetooth', 'Water cooling', 'Wi-Fi'];;0.0
+Basic equipment;['Bluetooth', 'Webcam', 'Wi-Fi', 'Speakers'];4.3;10.0
+Basic equipment;['Bluetooth', 'Webcam', 'Wi-Fi'];2.0;1.0
+Basic equipment;['Bluetooth', 'Webcam'];4.0;2.0
+Basic equipment;['Bluetooth', 'Wi-Fi', 'AMD Smart Access Memory'];4.416666666666667;6.0
+Basic equipment;['Bluetooth', 'Wi-Fi', 'Speakers'];4.8;15.0
+Basic equipment;['Bluetooth', 'Wi-Fi'];4.493351063829787;376.0
+Basic equipment;['Bluetooth'];;0.0
+Basic equipment;['Memory Card Reader', 'Opticl drive', 'Speakers'];;0.0
+Basic equipment;['Memory Card Reader', 'Opticl drive'];;0.0
+Basic equipment;['Memory Card Reader', 'Speakers'];;0.0
+Basic equipment;['Memory Card Reader', 'Touch display', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Memory Card Reader', 'Wi-Fi', 'Speakers'];;0.0
+Basic equipment;['Memory Card Reader', 'Wi-Fi'];5.0;7.0
+Basic equipment;['Memory Card Reader'];4.666666666666667;3.0
+Basic equipment;['Opticl drive'];3.0;3.0
+Basic equipment;['RGB backlight'];4.82;10.0
+Basic equipment;['Speakers'];;0.0
+Basic equipment;['Touch display', 'Possibility to control with a pen'];;0.0
+Basic equipment;['Water cooling', 'RGB backlight'];;0.0
+Basic equipment;['Wi-Fi'];4.388;25.0
+PSU [W];24.0;4.4;8.0
+PSU [W];28.0;5.0;2.0
+PSU [W];40.0;4.688888888888889;9.0
+PSU [W];57.0;1.0;1.0
+PSU [W];65.0;4.2027972027972025;286.0
+PSU [W];90.0;3.5608695652173914;23.0
+PSU [W];95.0;;0.0
+PSU [W];120.0;5.0;5.0
+PSU [W];130.0;5.0;1.0
+PSU [W];135.0;4.333333333333333;3.0
+PSU [W];143.0;2.0;1.0
+PSU [W];150.0;4.733333333333333;18.0
+PSU [W];155.0;;0.0
+PSU [W];170.0;;0.0
+PSU [W];180.0;4.666666666666667;15.0
+PSU [W];210.0;5.0;1.0
+PSU [W];230.0;3.0;1.0
+PSU [W];240.0;4.3;5.0
+PSU [W];250.0;;0.0
+PSU [W];260.0;;0.0
+PSU [W];280.0;;0.0
+PSU [W];290.0;;0.0
+PSU [W];300.0;4.7272727272727275;11.0
+PSU [W];310.0;5.0;2.0
+PSU [W];330.0;3.857142857142857;7.0
+PSU [W];350.0;5.0;5.0
+PSU [W];380.0;4.666666666666667;3.0
+PSU [W];400.0;5.0;6.0
+PSU [W];450.0;;0.0
+PSU [W];500.0;4.186046511627907;43.0
+PSU [W];550.0;4.7814814814814826;27.0
+PSU [W];600.0;4.961538461538462;26.0
+PSU [W];650.0;4.2875;64.0
+PSU [W];680.0;;0.0
+PSU [W];700.0;;0.0
+PSU [W];750.0;4.540625;32.0
+PSU [W];760.0;3.0;6.0
+PSU [W];800.0;5.0;1.0
+PSU [W];850.0;4.064705882352941;17.0
+PSU [W];900.0;;0.0
+PSU [W];1000.0;3.711764705882353;17.0
+PSU [W];1125.0;;0.0
+PSU [W];1200.0;5.0;1.0
+PSU [W];1350.0;;0.0
+PSU [W];1650.0;;0.0
+PC series;ASUS ExpertCenter;3.75;8.0
+PC series;ASUS ROG;4.130909090909091;165.0
+PC series;Acer Aspire;4.588235294117647;17.0
+PC series;Acer ConceptD;;0.0
+PC series;Acer Nitro;4.555555555555555;9.0
+PC series;Acer Predator;5.0;1.0
+PC series;Acer Revo;;0.0
+PC series;Acer Veriton;3.75;4.0
+PC series;Alfa Gamer;;0.0
+PC series;Alza Battlebox;3.8125;48.0
+PC series;Alza GameBox;4.4750000000000005;88.0
+PC series;Alza Individual;;0.0
+PC series;Alza Studio;;0.0
+PC series;Alza TopOffice;4.364705882352942;17.0
+PC series;Apple Mac Mini;4.8180000000000005;100.0
+PC series;Apple Mac Pro;;0.0
+PC series;Apple Mac Studio;5.0;2.0
+PC series;Apple iMac;4.666666666666667;9.0
+PC series;Asus AiO;;0.0
+PC series;Dell Alienware;;0.0
+PC series;Dell Inspiron;4.666666666666667;3.0
+PC series;Dell Optiplex;4.5;2.0
+PC series;Dell PowerEdge;3.0;1.0
+PC series;Dell Precision;4.3;5.0
+PC series;Dell Vostro;4.833333333333333;6.0
+PC series;EliteWork;;0.0
+PC series;Enterprice;;0.0
+PC series;Fujitsu Celsius;;0.0
+PC series;Fujitsu Esprimo;;0.0
+PC series;Fujitsu Primergy;;0.0
+PC series;HP ENVY;1.0;2.0
+PC series;HP EliteDesk;;0.0
+PC series;HP EliteOne;;0.0
+PC series;HP OMEN;5.0;2.0
+PC series;HP Pavilion;5.0;2.0
+PC series;HP ProDesk;4.611428571428571;35.0
+PC series;HP ProLiant;;0.0
+PC series;HP ProOne;2.5454545454545454;11.0
+PC series;HP Slim;4.283333333333334;24.0
+PC series;HP Victus;5.0;2.0
+PC series;HP Z;4.0;1.0
+PC series;Intel NUC;4.966666666666667;24.0
+PC series;Lenovo Google Meet;;0.0
+PC series;Lenovo IdeaCentre;4.2;10.0
+PC series;Lenovo LOQ;5.0;1.0
+PC series;Lenovo Legion;3.0;2.0
+PC series;Lenovo ThinkCentre;5.0;3.0
+PC series;Lenovo ThinkSmart;;0.0
+PC series;Lenovo ThinkStation;;0.0
+PC series;Lenovo V series;;0.0
+PC series;Lenovo Yoga;;0.0
+PC series;Lenovo řady V;;0.0
+PC series;MEGA Gamer;4.550000000000001;4.0
+PC series;MSI Codex;5.0;1.0
+PC series;MSI Infinite;4.142857142857143;7.0
+PC series;MSI Modern;;0.0
+PC series;MSI Prestige;;0.0
+PC series;MSI Pro;3.9846153846153842;26.0
+PC series;MSI Trident;;0.0
+PC series;Master Gamer;5.0;7.0
+PC series;MČR 2023;5.0;4.0
+PC series;MČR Finale;5.0;7.0
+PC series;Online Gamer;5.0;5.0
+PC series;PowerWork;;0.0
+PC series;ProWork;;0.0
+PC series;UMAX U-Box;5.0;1.0
+PC series;UMAX U-One;1.0;1.0
+Storage size [GB];512.0;4.2;159.0
+Console type;['Handheld PC'];4.2;159.0
+Processor frequency [GHz];0.4;3.0;2.0
+Processor frequency [GHz];0.8;;0.0
+Processor frequency [GHz];0.9;5.0;2.0
+Processor frequency [GHz];1.0;4.571428571428571;7.0
+Processor frequency [GHz];1.1;4.183333333333334;12.0
+Processor frequency [GHz];1.2;4.75;28.0
+Processor frequency [GHz];1.3;4.75;4.0
+Processor frequency [GHz];1.4;4.905882352941177;102.0
+Processor frequency [GHz];1.5;4.854891304347826;184.0
+Processor frequency [GHz];1.6;3.8;11.0
+Processor frequency [GHz];1.7;4.58;5.0
+Processor frequency [GHz];1.8;4.885714285714286;14.0
+Processor frequency [GHz];1.9;3.3333333333333335;9.0
+Processor frequency [GHz];2.0;4.4;40.0
+Processor frequency [GHz];2.1;3.7304347826086954;23.0
+Processor frequency [GHz];2.2;;0.0
+Processor frequency [GHz];2.3;3.0416666666666665;24.0
+Processor frequency [GHz];2.4;4.9;8.0
+Processor frequency [GHz];2.5;4.5233333333333325;120.0
+Processor frequency [GHz];2.6;4.752000000000001;25.0
+Processor frequency [GHz];2.7;5.0;1.0
+Processor frequency [GHz];2.8;5.0;2.0
+Processor frequency [GHz];2.9;4.1680851063829785;47.0
+Processor frequency [GHz];3.0;4.611428571428571;70.0
+Processor frequency [GHz];3.1;5.0;7.0
+Processor frequency [GHz];3.2;4.6499999999999995;22.0
+Processor frequency [GHz];3.3;4.555555555555555;9.0
+Processor frequency [GHz];3.4;4.417647058823529;17.0
+Processor frequency [GHz];3.5;4.8;20.0
+Processor frequency [GHz];3.6;4.24;30.0
+Processor frequency [GHz];3.7;4.3500000000000005;6.0
+Processor frequency [GHz];3.8;3.936363636363636;11.0
+Processor frequency [GHz];3.9;4.2;5.0
+Processor frequency [GHz];4.0;5.0;1.0
+Processor frequency [GHz];4.1;5.0;4.0
+Processor frequency [GHz];4.2;4.666666666666667;3.0
+Processor frequency [GHz];4.4;;0.0
+Processor frequency [GHz];4.5;5.0;1.0
+Processor frequency [GHz];4.7;5.0;1.0
+Processor frequency [GHz];5.2;;0.0
+Processor frequency [GHz];11.0;3.0;4.0
+Processor frequency [GHz];15.0;;0.0
+Processor frequency [GHz];17.0;;0.0
+Processor frequency [GHz];18.0;;0.0
+Processor frequency [GHz];21.0;5.0;1.0
+Processor frequency [GHz];25.0;;0.0
+Processor frequency [GHz];26.0;;0.0
+Processor frequency [GHz];31.0;;0.0
+Processor frequency [GHz];33.0;;0.0
+Processor frequency [GHz];34.0;;0.0
+Processor frequency [GHz];37.0;5.0;2.0
+Processor frequency [GHz];38.0;;0.0
+Processor frequency [GHz];39.0;;0.0
+Processor cache [MB];2.0;3.0;9.0
+Processor cache [MB];2.3;;0.0
+Processor cache [MB];3.0;;0.0
+Processor cache [MB];4.0;4.285714285714286;91.0
+Processor cache [MB];5.0;;0.0
+Processor cache [MB];6.0;4.077272727272727;22.0
+Processor cache [MB];8.0;4.413333333333333;15.0
+Processor cache [MB];8.25;;0.0
+Processor cache [MB];9.0;4.806896551724138;29.0
+Processor cache [MB];10.0;4.75;4.0
+Processor cache [MB];12.0;4.504255319148936;94.0
+Processor cache [MB];15.0;;0.0
+Processor cache [MB];16.0;3.746153846153846;65.0
+Processor cache [MB];18.0;4.698701298701299;77.0
+Processor cache [MB];19.0;4.0;1.0
+Processor cache [MB];19.25;;0.0
+Processor cache [MB];20.0;4.888372093023255;43.0
+Processor cache [MB];24.0;4.327536231884058;69.0
+Processor cache [MB];24.75;;0.0
+Processor cache [MB];25.0;3.0;8.0
+Processor cache [MB];26.25;;0.0
+Processor cache [MB];30.0;4.129411764705883;17.0
+Processor cache [MB];32.0;4.463157894736842;38.0
+Processor cache [MB];33.75;;0.0
+Processor cache [MB];35.0;;0.0
+Processor cache [MB];36.0;2.3333333333333335;3.0
+Processor cache [MB];44.0;5.0;1.0
+Processor cache [MB];64.0;5.0;3.0
+Processor cache [MB];70.0;;0.0
+Processor cache [MB];96.0;4.5;2.0
+Processor cache [MB];128.0;5.0;1.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Low energy consumption', 'Virtualization Support'];4.6499999999999995;6.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Low energy consumption'];;0.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'No graphics chip'];4.222222222222222;9.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Virtualization Support', 'No graphics chip'];4.107692307692307;78.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Virtualization Support'];4.4165;200.0
+CPU features;['Automatic Overclocking', 'HyperThreading'];4.853846153846154;26.0
+CPU features;['Automatic Overclocking', 'Low energy consumption', 'Virtualization Support', 'Multi Threading'];5.0;5.0
+CPU features;['Automatic Overclocking', 'Low energy consumption', 'Virtualization Support'];4.555555555555555;27.0
+CPU features;['Automatic Overclocking', 'Low energy consumption'];3.742857142857143;7.0
+CPU features;['Automatic Overclocking', 'Multi Threading', 'No graphics chip'];5.0;1.0
+CPU features;['Automatic Overclocking', 'Multi Threading'];;0.0
+CPU features;['Automatic Overclocking', 'Virtualization Support', 'Multi Threading', 'No graphics chip'];4.431034482758621;29.0
+CPU features;['Automatic Overclocking', 'Virtualization Support', 'Multi Threading'];4.315789473684211;19.0
+CPU features;['Automatic Overclocking', 'Virtualization Support', 'No graphics chip'];5.0;4.0
+CPU features;['Automatic Overclocking', 'Virtualization Support'];4.565217391304348;23.0
+CPU features;['Automatic Overclocking'];3.814814814814815;27.0
+CPU features;['HyperThreading', 'Low energy consumption', 'Virtualization Support'];5.0;19.0
+CPU features;['HyperThreading', 'Low energy consumption'];;0.0
+CPU features;['HyperThreading', 'Virtualization Support', 'Multi Threading'];;0.0
+CPU features;['HyperThreading', 'Virtualization Support'];4.55625;32.0
+CPU features;['HyperThreading'];4.228571428571429;21.0
+CPU features;['Low energy consumption', 'Virtualization Support'];4.314285714285715;14.0
+CPU features;['Low energy consumption'];4.0;4.0
+CPU features;['Virtualization Support', 'Multi Threading'];;0.0
+CPU features;['Virtualization Support'];4.75;4.0
+Graphics card memory [GB];0.13;;0.0
+Graphics card memory [GB];2.0;5.0;3.0
+Graphics card memory [GB];4.0;4.633333333333334;15.0
+Graphics card memory [GB];5.0;;0.0
+Graphics card memory [GB];6.0;4.797826086956522;46.0
+Graphics card memory [GB];8.0;4.259615384615385;104.0
+Graphics card memory [GB];10.0;3.6;15.0
+Graphics card memory [GB];11.0;;0.0
+Graphics card memory [GB];12.0;4.647692307692308;65.0
+Graphics card memory [GB];16.0;4.363636363636363;22.0
+Graphics card memory [GB];20.0;;0.0
+Graphics card memory [GB];24.0;3.8;10.0
+Number of stream processors;6.0;;0.0
+Number of stream processors;11.0;;0.0
+Number of stream processors;12.0;;0.0
+Number of stream processors;16.0;;0.0
+Number of stream processors;20.0;;0.0
+Number of stream processors;24.0;4.0;1.0
+Number of stream processors;32.0;;0.0
+Number of stream processors;48.0;;0.0
+Number of stream processors;80.0;;0.0
+Number of stream processors;128.0;5.0;1.0
+Number of stream processors;384.0;5.0;1.0
+Number of stream processors;448.0;;0.0
+Number of stream processors;512.0;4.5;4.0
+Number of stream processors;640.0;;0.0
+Number of stream processors;896.0;;0.0
+Number of stream processors;1408.0;;0.0
+Number of stream processors;1920.0;4.962857142857143;35.0
+Number of stream processors;2048.0;;0.0
+Number of stream processors;2304.0;;0.0
+Number of stream processors;2560.0;5.0;3.0
+Number of stream processors;3072.0;4.8;4.0
+Number of stream processors;3584.0;4.679310344827586;29.0
+Number of stream processors;3840.0;5.0;1.0
+Number of stream processors;4352.0;4.6499999999999995;14.0
+Number of stream processors;4608.0;;0.0
+Number of stream processors;4864.0;4.680000000000001;15.0
+Number of stream processors;5120.0;;0.0
+Number of stream processors;5888.0;4.2625;56.0
+Number of stream processors;6144.0;;0.0
+Number of stream processors;7680.0;4.42;5.0
+Number of stream processors;8704.0;3.5;14.0
+Number of stream processors;8960.0;;0.0
+Number of stream processors;9728.0;3.0;5.0
+Number of stream processors;10240.0;3.0250000000000004;4.0
+Number of stream processors;10496.0;4.333333333333333;6.0
+Number of stream processors;16384.0;;0.0
+Special graphics card features;GeForce VR-Ready;4.392857142857143;56.0
+Special graphics card features;Nvidia DLSS 3.0;4.429411764705883;34.0
+Special graphics card features;Radeon VR-Ready;5.0;4.0
+Socket;AM4;5.0;3.0
+Socket;AMD AM4;4.5;33.0
+Socket;AMD AM5;4.51;10.0
+Socket;AMD FP6;4.0;2.0
+Socket;Integrated CPU;4.623711340206185;97.0
+Socket;Intel 1151;;0.0
+Socket;Intel 1151 Coffee Lake;5.0;4.0
+Socket;Intel 1200;3.75;26.0
+Socket;Intel 2066;;0.0
+Socket;Intel FCBGA1090;;0.0
+Socket;Intel FCBGA1338;3.2;5.0
+Socket;Intel FCBGA1528;4.188888888888889;36.0
+Socket;Intel FCBGA1744;5.0;5.0
+Socket;Intel FCBGA1787;4.0;1.0
+Socket;Intel FCLGA1200;4.097777777777777;45.0
+Socket;Intel FCLGA1700;5.0;2.0
+Socket;Intel FCLGA4189;;0.0
+Socket;Intel LGA1200;4.093548387096774;31.0
+Socket;Intel LGA1700;4.561016949152543;118.0
+Socket;LGA1200;4.65;10.0
+Slots for additional cards;['M.2', 'SATA III'];4.591176470588235;34.0
+Slots for additional cards;['M.2'];4.461818181818182;110.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x16', 'M.2', 'SATA III'];4.2;5.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x16', 'M.2'];4.317073170731708;82.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x16'];5.0;19.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x4', 'PCI Express x16', 'M.2', 'SATA III'];;0.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x4', 'PCI Express x16', 'M.2'];;0.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x4', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x4', 'PCI Express x8', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x1', 'PCI Express x8', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x1'];4.550000000000001;4.0
+Slots for additional cards;['PCI Express x16', 'M.2', 'SATA III'];;0.0
+Slots for additional cards;['PCI Express x16', 'M.2'];4.0;14.0
+Slots for additional cards;['PCI Express x16', 'SATA III'];;0.0
+Slots for additional cards;['PCI Express x16'];5.0;9.0
+Slots for additional cards;['PCI Express x4', 'M.2'];;0.0
+Slots for additional cards;['PCI Express x4', 'PCI Express x16', 'M.2'];5.0;1.0
+Slots for additional cards;['PCI Express x4', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x4', 'PCI Express x8', 'M.2'];;0.0
+Slots for additional cards;['PCI Express x4', 'PCI Express x8', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x4', 'PCI Express x8'];;0.0
+Slots for additional cards;['PCI Express x4'];5.0;1.0
+Slots for additional cards;['PCI Express x8', 'M.2'];;0.0
+Slots for additional cards;['PCI Express x8', 'PCI Express x16', 'M.2', 'SATA III'];;0.0
+Slots for additional cards;['PCI Express x8', 'PCI Express x16', 'M.2'];;0.0
+Slots for additional cards;['PCI Express x8', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI Express x8'];4.3;5.0
+Slots for additional cards;['PCI', 'PCI Express x1', 'PCI Express x16', 'M.2'];5.0;1.0
+Slots for additional cards;['PCI', 'PCI Express x1', 'PCI Express x16'];4.333333333333333;3.0
+Slots for additional cards;['PCI', 'PCI Express x16'];;0.0
+Slots for additional cards;['PCI', 'PCI Express x4', 'PCI Express x16'];3.0;1.0
+Slots for additional cards;['SATA III'];4.4;16.0
+"Number of occupied slots 2.5""";0.0;4.58;40.0
+"Number of occupied slots 2.5""";1.0;4.5;2.0
+"Number of occupied slots 2.5""";2.0;;0.0
+"Slots in total 2.5""";0.0;3.0;4.0
+"Slots in total 2.5""";1.0;4.1;10.0
+"Slots in total 2.5""";2.0;4.5;12.0
+"Slots in total 2.5""";3.0;5.0;9.0
+"Slots in total 2.5""";4.0;4.550000000000001;4.0
+"Slots in total 2.5""";5.0;5.0;6.0
+"Slots in total 2.5""";6.0;5.0;2.0
+"Slots in total 2.5""";8.0;;0.0
+"Number of occupied slots 3.5""";0.0;4.647619047619047;42.0
+"Number of occupied slots 3.5""";1.0;5.0;2.0
+"Number of occupied slots 3.5""";2.0;;0.0
+"Slots in total 3.5""";0.0;3.75;4.0
+"Slots in total 3.5""";1.0;4.723076923076923;26.0
+"Slots in total 3.5""";2.0;4.8;34.0
+"Slots in total 3.5""";3.0;;0.0
+"Slots in total 3.5""";4.0;;0.0
+"Slots in total 3.5""";8.0;;0.0
+Number of occupied slots M.2;0.0;3.75;4.0
+Number of occupied slots M.2;1.0;4.469411764705882;170.0
+Number of occupied slots M.2;2.0;5.0;1.0
+Slots in total M.2;1.0;4.17037037037037;54.0
+Slots in total M.2;2.0;4.629577464788732;71.0
+Slots in total M.2;3.0;4.8999999999999995;19.0
+Slots in total M.2;4.0;3.75;12.0
+Slots in total M.2;5.0;;0.0
+Wardrobe size;All In One;4.016666666666667;60.0
+Wardrobe size;Big Tower;3.85;28.0
+Wardrobe size;Desktop;4.620588235294117;68.0
+Wardrobe size;Micro Tower;4.763942307692307;208.0
+Wardrobe size;Midi Tower;4.401886792452831;212.0
+Wardrobe size;Mini ITX;4.274074074074075;54.0
+Wardrobe size;Mini Tower;4.582758620689655;58.0
+Wardrobe size;Rack;;0.0
+Front panel location;Front;4.460759493670886;158.0
+Front panel location;Side;4.6;5.0
+Front panel location;Top;4.48;110.0
+Sidewalls;Opaque;4.505333333333333;150.0
+Sidewalls;Transparent;4.458407079646018;113.0
+Side panel material;Acrylic;4.333333333333333;3.0
+Side panel material;Plastic;5.0;1.0
+Side panel material;Steel;4.61;20.0
+Side panel material;Tempered glass;4.635416666666667;96.0
+Memory frequency [MHz];1600.0;;0.0
+Memory frequency [MHz];1800.0;;0.0
+Memory frequency [MHz];2130.0;;0.0
+Memory frequency [MHz];2133.0;5.0;3.0
+Memory frequency [MHz];2300.0;;0.0
+Memory frequency [MHz];2400.0;4.207272727272727;55.0
+Memory frequency [MHz];2666.0;4.314285714285714;126.0
+Memory frequency [MHz];2933.0;4.06;30.0
+Memory frequency [MHz];3200.0;4.6464;250.0
+Memory frequency [MHz];3467.0;5.0;1.0
+Memory frequency [MHz];3600.0;3.81;20.0
+Memory frequency [MHz];3733.0;3.9;7.0
+Memory frequency [MHz];4000.0;1.0;2.0
+Memory frequency [MHz];4400.0;;0.0
+Memory frequency [MHz];4800.0;4.0;9.0
+Memory frequency [MHz];5200.0;;0.0
+Memory frequency [MHz];5500.0;5.0;1.0
+Memory frequency [MHz];5600.0;3.0;2.0
+Memory frequency [MHz];6000.0;4.591666666666667;12.0
+Memory frequency [MHz];6400.0;;0.0
+Maximum RAM capacity [GB];0.0;;0.0
+Maximum RAM capacity [GB];4.0;4.8;4.0
+Maximum RAM capacity [GB];8.0;4.356521739130435;23.0
+Maximum RAM capacity [GB];16.0;3.736842105263158;19.0
+Maximum RAM capacity [GB];32.0;4.7407407407407405;27.0
+Maximum RAM capacity [GB];64.0;4.34093567251462;171.0
+Maximum RAM capacity [GB];65.0;;0.0
+Maximum RAM capacity [GB];128.0;4.428813559322034;59.0
+Maximum RAM capacity [GB];192.0;;0.0
+Maximum RAM capacity [GB];256.0;;0.0
+Maximum RAM capacity [GB];512.0;;0.0
+Maximum RAM capacity [GB];1024.0;;0.0
+Maximum RAM capacity [GB];8192.0;;0.0
+Total number of slots;0.0;;0.0
+Total number of slots;1.0;4.260000000000001;30.0
+Total number of slots;2.0;4.47859649122807;285.0
+Total number of slots;3.0;1.0;1.0
+Total number of slots;4.0;4.229473684210526;190.0
+Total number of slots;6.0;;0.0
+Total number of slots;8.0;;0.0
+Total number of slots;16.0;;0.0
+Total number of slots;32.0;;0.0
+Number of installed slots;0.0;4.566666666666667;24.0
+Number of installed slots;1.0;4.333333333333333;183.0
+Number of installed slots;2.0;4.373423423423423;222.0
+Number of installed slots;4.0;4.087804878048781;41.0
+USB 2.0;0.0;5.0;1.0
+USB 2.0;1.0;4.756666666666666;60.0
+USB 2.0;2.0;4.541542288557214;402.0
+USB 2.0;3.0;3.8800000000000003;15.0
+USB 2.0;4.0;4.72128514056225;249.0
+USB 2.0;5.0;4.2;5.0
+USB 2.0;6.0;4.3;5.0
+USB 3.2 Gen 1 (USB 3.0);0.0;;0.0
+USB 3.2 Gen 1 (USB 3.0);1.0;3.962162162162162;37.0
+USB 3.2 Gen 1 (USB 3.0);2.0;4.736340852130326;399.0
+USB 3.2 Gen 1 (USB 3.0);3.0;4.378723404255319;94.0
+USB 3.2 Gen 1 (USB 3.0);4.0;4.038562091503268;153.0
+USB 3.2 Gen 1 (USB 3.0);5.0;4.3;29.0
+USB 3.2 Gen 1 (USB 3.0);6.0;4.0;2.0
+USB 3.2 Gen 1 (USB 3.0);7.0;5.0;6.0
+USB 3.2 Gen 1 (USB 3.0);8.0;;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Audio Jack 3.5mm', 'PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Combo Audio Jack', 'Kensington lock', 'S/PDIF optical output', 'WAN/LAN', 'Audio output (Line out)'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'LAN', 'S/PDIF optical output', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'LAN', 'S/PDIF optical output'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'Microphone input', 'WAN/LAN', 'Audio input (Line in)', 'Audio output (Line out)'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'PS/2', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];4.7;6.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];4.142857142857143;7.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'RJ-45 (LAN) 2.5Gbps', 'Headphone/Speaker output'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'RJ-45 (LAN) 2.5Gbps', 'S/PDIF optical output', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'PS2', 'S/PDIF optical output', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['7.1 Channel Audio(3 ports)', 'RJ-45 (LAN) 2.5Gbps', 'Headphone/Speaker output'];5.0;6.0
+Other;['7.1 Channel Audio(3 ports)', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'RJ-45 (LAN) 2.5Gbps', 'S/PDIF optical output', 'Audio input (Line in)', 'Audio output (Line out)'];5.0;1.0
+Other;['7.1 Channel Audio(3 ports)', 'RJ-45 (LAN) 2.5Gbps', 'S/PDIF optical output', 'Headphone/Speaker output'];5.0;10.0
+Other;['7.1 Channel Audio(3 ports)', 'S/PDIF optical output', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'Combo Audio Jack', 'Serial port', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'Kensington lock', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Audio Jack 3.5mm', 'Kensington lock', 'LAN'];;0.0
+Other;['Audio Jack 3.5mm', 'LAN', 'RJ-45 (LAN)'];4.5;2.0
+Other;['Audio Jack 3.5mm', 'LAN'];4.0;1.0
+Other;['Audio Jack 3.5mm', 'Microphone input', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];5.0;2.0
+Other;['Audio Jack 3.5mm', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output', 'Audio input (Line in)', 'Audio output (Line out)'];;0.0
+Other;['Audio Jack 3.5mm', 'RJ-45 (LAN) 2.5Gbps', 'S/PDIF optical output', 'Microphone input'];;0.0
+Other;['Audio Jack 3.5mm', 'RJ-45 (LAN) 2.5Gbps'];5.0;5.0
+Other;['Audio Jack 3.5mm', 'RJ-45 (LAN)'];5.0;2.0
+Other;['Audio Jack 3.5mm', 'Serial port', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm', 'Serial port', 'RJ-45 (LAN)'];;0.0
+Other;['Audio Jack 3.5mm'];5.0;2.0
+Other;['Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Audio input (Line in)', 'Audio output (Line out)'];4.5;2.0
+Other;['COM port', 'Combo Audio Jack', 'Kensington lock', 'RJ-45 (LAN) 1Gbps'];3.0;2.0
+Other;['COM port', 'Kensington lock', 'Microphone input', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['COM port', 'LAN', 'Microphone input', 'Headphone/Speaker output'];5.0;4.0
+Other;['COM port', 'LAN', 'PS/2', 'Headphone/Speaker output'];3.0;1.0
+Other;['COM port', 'LAN', 'PS/2', 'Microphone input', 'Headphone/Speaker output'];;0.0
+Other;['COM port', 'PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['COM port'];;0.0
+Other;['Combo Audio Jack', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'Audio input (Line in)', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'Audio output (Line out)', 'RJ-45 (LAN)'];4.833333333333333;6.0
+Other;['Combo Audio Jack', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'Headphone/Speaker output', 'WAN/LAN'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN', 'Padlock', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN', 'Padlock', 'Serial port', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN', 'Serial port', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Kensington lock', 'LAN'];4.0625;8.0
+Other;['Combo Audio Jack', 'Kensington lock', 'Microphone input', 'RJ-45 (LAN) 1Gbps'];4.445161290322581;31.0
+Other;['Combo Audio Jack', 'Kensington lock', 'RJ-45 (LAN) 1Gbps'];5.0;3.0
+Other;['Combo Audio Jack', 'Kensington lock', 'RJ-45 (LAN) 2.5Gbps'];5.0;1.0
+Other;['Combo Audio Jack', 'Kensington lock', 'RJ-45 (LAN)'];5.0;1.0
+Other;['Combo Audio Jack', 'Kensington lock', 'WAN/LAN'];;0.0
+Other;['Combo Audio Jack', 'LAN', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'LAN', 'Headphone/Speaker output'];;0.0
+Other;['Combo Audio Jack', 'LAN', 'Microphone input', 'Audio input (Line in)', 'Audio output (Line out)'];4.571428571428571;7.0
+Other;['Combo Audio Jack', 'LAN', 'Microphone input'];;0.0
+Other;['Combo Audio Jack', 'LAN', 'PS2', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];2.6857142857142855;7.0
+Other;['Combo Audio Jack', 'LAN', 'Padlock', 'Serial port', 'Microphone input', 'Headphone/Speaker output'];;0.0
+Other;['Combo Audio Jack', 'LAN', 'USB 3.1 Gen1', 'USB 3.1 Type-A', 'Microphone input'];5.0;1.0
+Other;['Combo Audio Jack', 'LAN'];4.087999999999999;50.0
+Other;['Combo Audio Jack', 'Microphone input', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];5.0;1.0
+Other;['Combo Audio Jack', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Microphone input', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Combo Audio Jack', 'Microphone input', 'RJ-45 (LAN)'];5.0;1.0
+Other;['Combo Audio Jack', 'PS/2', 'RJ-45 (LAN) 2.5Gbps'];;0.0
+Other;['Combo Audio Jack', 'RJ-45 (LAN) 10Gbps'];;0.0
+Other;['Combo Audio Jack', 'RJ-45 (LAN) 1Gbps'];4.825;16.0
+Other;['Combo Audio Jack', 'RJ-45 (LAN) 2.5Gbps', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Combo Audio Jack', 'RJ-45 (LAN)'];4.0;10.0
+Other;['Combo Audio Jack', 'S/PDIF optical output', 'Microphone input', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'Serial port', 'Microphone input', 'Audio output (Line out)'];;0.0
+Other;['Combo Audio Jack', 'Serial port', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'ThunderBolt', 'RJ-45 (LAN)'];;0.0
+Other;['Combo Audio Jack', 'USB 3.1 Type-A', 'USB-C'];;0.0
+Other;['Combo Audio Jack', 'USB-C', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Combo Audio Jack', 'WAN/LAN'];;0.0
+Other;['Combo Audio Jack'];;0.0
+Other;['DSI', 'CSI'];5.0;4.0
+Other;['Headphone input', 'RJ-45 (LAN)'];5.0;12.0
+Other;['Headphone input'];3.0;2.0
+Other;['Headphone/Speaker output'];2.0;1.0
+Other;['Kensington lock', 'Headphone input', 'RJ-45 (LAN)'];;0.0
+Other;['Kensington lock', 'Headphone/Speaker output', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Kensington lock', 'LAN', 'Headphone/Speaker output', 'ThunderBolt'];;0.0
+Other;['Kensington lock', 'LAN', 'S/PDIF'];5.0;19.0
+Other;['Kensington lock', 'LAN', 'ThunderBolt'];;0.0
+Other;['Kensington lock', 'LAN'];4.242857142857143;14.0
+Other;['Kensington lock', 'Microphone input', 'Headphone input', 'RJ-45 (LAN) 1Gbps'];4.666666666666667;21.0
+Other;['Kensington lock', 'RJ-45 (LAN) 1Gbps'];4.0;1.0
+Other;['Kensington lock', 'RJ-45 (LAN) 2.5Gbps', 'Jack', 'Thunderbolt 3'];4.9;8.0
+Other;['Kensington lock', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone input'];4.5;2.0
+Other;['Kensington lock', 'RJ-45 (LAN) 2.5Gbps'];4.58;5.0
+Other;['LAN', 'Audio input (Line in)', 'Audio output (Line out)'];;0.0
+Other;['LAN', 'Headphone/Speaker output', 'ThunderBolt'];4.8;14.0
+Other;['LAN', 'Headphone/Speaker output'];4.0;4.0
+Other;['LAN', 'MicroHDMI', 'Headphone/Speaker output'];4.9;57.0
+Other;['LAN', 'Microphone input', 'Audio output (Line out)'];5.0;1.0
+Other;['LAN', 'Microphone input', 'Headphone/Speaker output'];;0.0
+Other;['LAN', 'PS2', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['LAN', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['LAN', 'RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['LAN', 'S/PDIF optical output', 'USB-C'];;0.0
+Other;['LAN', 'ThunderBolt'];;0.0
+Other;['LAN', 'USB 3.1 Type-A'];5.0;2.0
+Other;['LAN', 'microUSB', 'Headphone/Speaker output', 'DSI', 'CSI'];4.9;96.0
+Other;['LAN'];4.375;16.0
+Other;['MicroHDMI', 'Headphone/Speaker output', 'DSI', 'CSI'];4.9;114.0
+Other;['Microphone input', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];5.0;1.0
+Other;['Microphone input', 'Headphone/Speaker output', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['Microphone input', 'Headphone/Speaker output', 'Audio output (Line out)', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];1.0;1.0
+Other;['Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];3.914285714285714;28.0
+Other;['Microphone input', 'Headphone/Speaker output'];1.0;1.0
+Other;['Microphone input', 'RJ-45 (LAN) 1Gbps'];1.0;1.0
+Other;['PS/2', 'Jack', 'RJ-45 (LAN) 1Gbps'];5.0;5.0
+Other;['PS/2', 'Microphone input', 'Headphone input', 'RJ-45 (LAN)'];4.2;5.0
+Other;['PS/2', 'RJ-45 (LAN) 2.5Gbps', 'Jack', 'S/PDIF'];;0.0
+Other;['PS/2', 'RJ-45 (LAN) 2.5Gbps', 'Jack'];4.717391304347826;23.0
+Other;['PS2', 'Audio input (Line in)', 'Audio output (Line out)', 'RJ-45 (LAN)'];;0.0
+Other;['PS2', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['RJ-45 (LAN) 1Gbps'];4.5;4.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Audio input (Line in)', 'Audio output (Line out)'];5.0;2.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Audio input (Line in)'];;0.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Headphone/Speaker output'];4.333333333333333;3.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Jack', 'RJ-45 (LAN) 10Gbps', 'Thunderbolt 4'];5.0;4.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Jack', 'RJ-45 (LAN) 1Gbps', 'S/PDIF'];;0.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Jack', 'S/PDIF'];3.81;10.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Jack', 'Thunderbolt 4'];5.0;4.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Jack'];4.190909090909091;22.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output', 'Audio input (Line in)', 'Audio output (Line out)'];5.0;1.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'Microphone input', 'Headphone/Speaker output'];5.0;2.0
+Other;['RJ-45 (LAN) 2.5Gbps', 'S/PDIF optical output', 'Headphone/Speaker output', 'RJ-45 (LAN) 1Gbps'];;0.0
+Other;['RJ-45 (LAN) 2.5Gbps'];4.0;5.0
+Other;['RJ-45 (LAN)'];4.666666666666667;3.0
+Other;['RS232', 'RJ-45 (LAN)'];;0.0
+Other;['S/PDIF optical output', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];;0.0
+Other;['Serial port', 'RJ-45 (LAN)'];;0.0
+Other;['USB-C', 'Microphone input', 'Headphone input', 'RJ-45 (LAN) 1Gbps'];5.0;1.0
+Other;['USB-C', 'Microphone input', 'Headphone/Speaker output', 'RJ-45 (LAN)'];5.0;1.0
+Other;['USB-C', 'Microphone input', 'Headphone/Speaker output'];5.0;1.0
+Other;['USB-C', 'RJ-45 (LAN)', 'Thunderbolt 4'];;0.0
+Other;['USB-C', 'RJ-45 (LAN)'];;0.0
+Other;['USB-C'];;0.0
+Other;['WAN/LAN'];1.0;2.0
+Other;['microUSB', 'mini HDMI'];4.0;3.0
+Optical drive;DVD;3.7837837837837838;37.0
+Optical drive;Without Optical Drive;4.567625;800.0
+Country;['Czechia', 'Slovakia', 'Hungary', 'Germany', 'Russia', 'Austria', 'Croatia', 'France', 'Poland', 'Romania', 'Slovenia'];4.346333333333334;300.0
+Extended warranty;['3-year warranty even for businesses'];4.253846153846154;39.0
+Extended warranty;['Extended Warranty'];4.735714285714286;42.0
+Extended warranty;['Next Business Day', 'Extended Warranty'];;0.0
+Extended warranty;['Next Business Day'];4.75;4.0
+Extended warranty;['No extended warranty'];4.099115044247788;113.0
+Extended warranty;['On-site', '3-year warranty even for businesses'];;0.0
+Extended warranty;['On-site', 'No extended warranty'];5.0;1.0
+Extended warranty;['On-site'];4.53125;16.0
+USB 3.2 Gen 2x2;0.0;4.0;4.0
+USB 3.2 Gen 2x2;1.0;4.407407407407407;54.0
+USB 3.2 Gen 2x2;2.0;5.0;4.0
+Battery capacity [Wh];40.0;4.2;53.0
+Standby time [h];7.0;4.2;53.0
+Maximum Graphic Power (TGP) [W];25.0;5.0;1.0
+Maximum Graphic Power (TGP) [W];60.0;1.0;2.0
+Maximum Graphic Power (TGP) [W];115.0;;0.0
+Maximum Graphic Power (TGP) [W];125.0;;0.0
+Maximum Graphic Power (TGP) [W];150.0;5.0;5.0
+Maximum Graphic Power (TGP) [W];160.0;;0.0
+Maximum Graphic Power (TGP) [W];165.0;;0.0
+Maximum Graphic Power (TGP) [W];170.0;5.0;3.0
+Maximum Graphic Power (TGP) [W];200.0;4.666666666666667;9.0
+Maximum Graphic Power (TGP) [W];230.0;5.0;2.0
+Maximum Graphic Power (TGP) [W];285.0;;0.0
+Maximum Graphic Power (TGP) [W];290.0;5.0;1.0
+Maximum Graphic Power (TGP) [W];300.0;;0.0
+Maximum Graphic Power (TGP) [W];320.0;;0.0
+Maximum Graphic Power (TGP) [W];350.0;;0.0
+Maximum Graphic Power (TGP) [W];450.0;;0.0
+Basic accessories;['Keyboard', 'Magic Mouse 2', 'Magic Trackpad 2'];;0.0
+Basic accessories;['Keyboard', 'Webcam'];;0.0
+Basic accessories;['Keyboard'];4.729411764705882;17.0
+Basic accessories;['Magic Keyboard with Touch ID'];5.0;2.0
+Basic accessories;['Magic Keyboard'];;0.0
+Basic accessories;['Magic Mouse 2', 'Magic Keyboard with Touch ID'];2.0;1.0
+Basic accessories;['Mouse', 'Keyboard', 'Webcam'];4.615384615384615;13.0
+Basic accessories;['Mouse', 'Keyboard'];4.371518987341772;158.0
+Basic accessories;['Mouse'];;0.0
+Basic accessories;['Remote Control'];;0.0
+Basic accessories;['Webcam'];4.333333333333333;6.0
+Certification;['TÜV Low Blue Light'];1.0;2.0
+Certification;['Windows 11 compatible'];4.439705882352941;136.0
+Platform;Banana Pi;4.0;3.0
+Platform;Raspberry Pi;4.887062937062937;286.0
+Supported resolution;['4K Ultra HD', 'Full HD', 'HD Ready'];;0.0
+Storage Capacity [GB];0.0;;0.0
+Storage Capacity [GB];0.25;;0.0
+Storage Capacity [GB];1.0;;0.0
+Storage Capacity [GB];16.0;;0.0
+Storage Capacity [GB];32.0;1.0;2.0
+Storage Capacity [GB];64.0;5.0;2.0
+Storage Capacity [GB];128.0;4.066666666666666;18.0
+Storage Capacity [GB];200.0;;0.0
+Storage Capacity [GB];240.0;;0.0
+Storage Capacity [GB];250.0;;0.0
+Storage Capacity [GB];256.0;4.482352941176471;102.0
+Storage Capacity [GB];500.0;4.75;4.0
+Storage Capacity [GB];501.0;;0.0
+Storage Capacity [GB];512.0;4.375190839694657;262.0
+Storage Capacity [GB];600.0;;0.0
+Storage Capacity [GB];960.0;;0.0
+Storage Capacity [GB];1000.0;4.461;200.0
+Storage Capacity [GB];1024.0;3.0;1.0
+Storage Capacity [GB];1250.0;;0.0
+Storage Capacity [GB];1256.0;5.0;2.0
+Storage Capacity [GB];1500.0;;0.0
+Storage Capacity [GB];1512.0;5.0;4.0
+Storage Capacity [GB];2000.0;3.779310344827586;58.0
+Storage Capacity [GB];2048.0;5.0;2.0
+Storage Capacity [GB];2250.0;;0.0
+Storage Capacity [GB];2512.0;5.0;1.0
+Storage Capacity [GB];3000.0;3.992857142857143;28.0
+Storage Capacity [GB];4000.0;;0.0
+Storage Capacity [GB];5000.0;4.8;5.0
+Storage Capacity [GB];8000.0;;0.0
+Storage Capacity [GB];18000.0;;0.0
+RAM memory [GB];2.0;;0.0
+Interface;['Audio output - analog', 'Digital optical output', 'Ethernet LAN', 'HDMI', 'HDMI 2.0', 'Composite video out', 'Optical output', 'USB 2.0', 'USB 3.0'];;0.0
+Connectivity;['Bluetooth', 'DLNA', 'Wi-Fi'];;0.0
+Number of USB slots;4.0;;0.0
+Supported audio formats;['AAC', 'ALAC', 'APE', 'Apple Lossless', 'ASF', 'FLAC', 'LPCM', 'MP3', 'MP4', 'OGG', 'WAV', 'WMA'];;0.0
+Supported video formats;['AVI', 'H.264', 'MP4', 'WMV'];;0.0
+Functions;['NAS support'];;0.0
+WiFi type;['WiFi 5 (802.11ac)'];;0.0
+WiFi type;['WiFi 5'];;0.0
+WiFi type;['WiFi 6 (802.11ax)'];;0.0
+WiFi type;['WiFi 6 802.11 ax/ac/a/b/g/n'];;0.0
+WiFi type;['WiFi 6 ax'];;0.0
+WiFi type;['WiFi 6'];5.0;19.0
+WiFi type;['WiFi 6E'];5.0;9.0
+WiFi type;['WiFi 6e'];;0.0
+WiFi type;['WiFi 802. 11ac'];3.6666666666666665;3.0
+WiFi type;['WiFi 802.11 a/b/g/n/ac'];5.0;3.0
+WiFi type;['WiFi 802.11 a/b/g/n/ac/ax'];4.5;2.0
+WiFi type;['WiFi 802.11 ac'];3.8181818181818183;11.0
+WiFi type;['WiFi 802.11 ax'];4.333333333333333;3.0
+WiFi type;['WiFi 802.11. ax'];;0.0
+WiFi type;['WiFi 802.11AC'];5.0;1.0
+WiFi type;['WiFi 802.11a/b/g/n/ac'];2.7857142857142856;14.0
+WiFi type;['WiFi 802.11a/b/g/n/ac/ax'];4.271428571428571;7.0
+WiFi type;['WiFi 802.11a/b/h/n/ac/ax 6GHz'];5.0;5.0
+WiFi type;['WiFi 802.11ac'];4.477777777777778;72.0
+WiFi type;['WiFi 802.11ax'];4.714285714285714;21.0
+WiFi type;['WiFi 802.11ax/ac/a/b/g/n'];1.0;2.0
+WiFi type;['WiFi 802.11b/g/n/ac'];5.0;2.0
+WiFi type;['WiFi ASUS PCE-N15'];4.9;13.0
+WiFi type;['WiFi GIGABYTE WBAX200'];3.9;7.0
+WiFi type;['WiFi Wi‑Fi 6 802.11ax'];5.0;2.0
+WiFi type;['WiFi W‑Fi 6E'];5.0;3.0
+WiFi type;['WiFi a/b/g/n/ac'];5.0;2.0
+WiFi type;['WiFi a/b/g/n/ac/ax'];;0.0
+WiFi type;['WiFi ac'];4.2;12.0
+Number of components in the package;1.0;;0.0
+Number of components in the package;5.0;5.0;2.0
+GPU Passmark;457.0;1.0;1.0
+GPU Passmark;1084.0;;0.0
+GPU Passmark;1358.0;;0.0
+GPU Passmark;1473.0;4.6;34.0
+GPU Passmark;1476.0;;0.0
+GPU Passmark;2619.0;5.0;1.0
+GPU Passmark;2755.0;4.9;8.0
+GPU Passmark;3657.0;;0.0
+GPU Passmark;12660.0;;0.0
+GPU Passmark;12759.0;;0.0
+GPU Passmark;13939.0;5.0;1.0
+GPU Passmark;17022.0;4.0;1.0
+GPU Passmark;20333.0;4.571428571428571;7.0
+GPU Passmark;21518.0;;0.0
+CPU Passmark;1968.0;3.0;2.0
+CPU Passmark;1997.0;3.0;2.0
+CPU Passmark;3936.0;;0.0
+CPU Passmark;6786.0;;0.0
+CPU Passmark;8720.0;;0.0
+CPU Passmark;10026.0;;0.0
+CPU Passmark;10075.0;4.9;8.0
+CPU Passmark;10603.0;;0.0
+CPU Passmark;10874.0;;0.0
+CPU Passmark;11357.0;4.5;2.0
+CPU Passmark;11830.0;5.0;1.0
+CPU Passmark;12840.0;;0.0
+CPU Passmark;12988.0;5.0;1.0
+CPU Passmark;13189.0;;0.0
+CPU Passmark;13642.0;;0.0
+CPU Passmark;13856.0;;0.0
+CPU Passmark;14086.0;;0.0
+CPU Passmark;14364.0;5.0;1.0
+CPU Passmark;14426.0;;0.0
+CPU Passmark;14495.0;;0.0
+CPU Passmark;15469.0;;0.0
+CPU Passmark;16443.0;;0.0
+CPU Passmark;17259.0;5.0;4.0
+CPU Passmark;17294.0;4.0;1.0
+CPU Passmark;17335.0;;0.0
+CPU Passmark;17374.0;5.0;2.0
+CPU Passmark;17535.0;;0.0
+CPU Passmark;17604.0;;0.0
+CPU Passmark;17773.0;4.9;13.0
+CPU Passmark;17801.0;;0.0
+CPU Passmark;17932.0;;0.0
+CPU Passmark;18058.0;;0.0
+CPU Passmark;19241.0;;0.0
+CPU Passmark;19515.0;;0.0
+CPU Passmark;19536.0;4.0;1.0
+CPU Passmark;19557.0;;0.0
+CPU Passmark;19563.0;5.0;1.0
+CPU Passmark;19831.0;4.0;1.0
+CPU Passmark;19833.0;5.0;1.0
+CPU Passmark;19837.0;5.0;1.0
+CPU Passmark;20341.0;5.0;1.0
+CPU Passmark;20388.0;;0.0
+CPU Passmark;20393.0;;0.0
+CPU Passmark;21684.0;;0.0
+CPU Passmark;23844.0;;0.0
+CPU Passmark;28158.0;;0.0
+CPU Passmark;31230.0;;0.0
+CPU Passmark;31414.0;;0.0
+CPU Passmark;34520.0;;0.0
+CPU Passmark;41510.0;;0.0
+Number of free slots;1.0;5.0;1.0
+Number of free slots;2.0;4.111111111111111;9.0
+Number of free slots;3.0;5.0;1.0
+Number of free slots;4.0;;0.0
+Number of free slots;5.0;;0.0
+LHR (Lite Hash Rate);No;3.6733333333333333;15.0
+LHR (Lite Hash Rate);Yes;4.1204081632653065;49.0
+HDD RPM Rate [RPM];5400.0;4.8;5.0
+HDD RPM Rate [RPM];7200.0;3.3976744186046512;43.0
+HDD RPM Rate [RPM];10000.0;;0.0
+HDD capacity [GB];0.0;;0.0
+HDD capacity [GB];0.001953125;;0.0
+HDD capacity [GB];3.90625;;0.0
+HDD capacity [GB];614.4;;0.0
+HDD capacity [GB];1024.0;3.242857142857143;28.0
+HDD capacity [GB];2048.0;3.992857142857143;28.0
+HDD capacity [GB];3072.0;;0.0
+HDD capacity [GB];4096.0;4.8;5.0
+HDD capacity [GB];6144.0;;0.0
+HDD capacity [GB];18432.0;;0.0
+Max. number of disks;1.0;;0.0
+Max. number of disks;3.0;;0.0
+Max. number of disks;4.0;;0.0
+"Disk size [""]";3.5;;0.0
+Hot Plug;Hot Plug;;0.0
+Hot Plug;Without Hot Plug;;0.0
+RAID interface;['SATA', 'SAS'];;0.0
+RAID interface;['SATA'];;0.0

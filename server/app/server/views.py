@@ -5,6 +5,11 @@ from app.products.simple import SimpleProductHandler, FilterValue
 from app.recommenders.set_based import SetBasedRecommender
 
 
+def view_categories() -> Response:
+    categories = DataLoader.load_categories()
+    return jsonify(categories)
+
+
 def view_category() -> Response:
     category_name = request.args.get("category_name")
     if category_name is None:

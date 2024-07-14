@@ -14,7 +14,7 @@ function Unseen() {
         Unseen
       </Typography>
       {unseen.attributes.map((stats) => (
-        <div key={stats.attribute.name} className="m-3 border border-secondary rounded">
+        <div key={stats.attribute.name} className="m-3 border border-secondary rounded bg-white">
           {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
             <CategoricalAttributeRange
               attribute={stats.attribute}

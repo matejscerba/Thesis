@@ -1,0 +1,814 @@
+[
+    {
+        "name": "name",
+        "id": 0,
+        "type": "categorical",
+        "full_name": "name"
+    },
+    {
+        "name": "Price",
+        "id": 1,
+        "type": "numerical",
+        "full_name": "Price [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Price without VAT",
+        "id": 2,
+        "type": "numerical",
+        "full_name": "Price without VAT [CZK]",
+        "unit": "CZK",
+        "order": "desc",
+        "continuous": true
+    },
+    {
+        "name": "Rating",
+        "id": 3,
+        "type": "numerical",
+        "full_name": "Rating",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Display size",
+        "id": 4,
+        "group": "Basic parameters",
+        "feature": "Display size [\"]",
+        "type": "numerical",
+        "full_name": "Display size [\"]",
+        "unit": "\"",
+        "continuous": true
+    },
+    {
+        "name": "Display resolution",
+        "id": 5,
+        "group": "Basic parameters",
+        "feature": "Display resolution",
+        "type": "categorical",
+        "full_name": "Display resolution"
+    },
+    {
+        "name": "Operating system",
+        "id": 6,
+        "group": "Basic parameters",
+        "feature": "Operating system",
+        "type": "categorical",
+        "full_name": "Operating system"
+    },
+    {
+        "name": "Configure cards",
+        "id": 7,
+        "group": "Basic parameters",
+        "feature": "Configure cards",
+        "type": "categorical",
+        "full_name": "Configure cards"
+    },
+    {
+        "name": "Memory card slot",
+        "id": 8,
+        "group": "Basic parameters",
+        "feature": "Memory card slot",
+        "type": "categorical",
+        "full_name": "Memory card slot"
+    },
+    {
+        "name": "Rear camera resolution",
+        "id": 9,
+        "group": "Basic parameters",
+        "feature": "Rear camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Rear camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Front camera resolution",
+        "id": 10,
+        "group": "Basic parameters",
+        "feature": "Front camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Front camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Launched",
+        "id": 11,
+        "group": "Basic parameters",
+        "feature": "Launched",
+        "type": "categorical",
+        "full_name": "Launched"
+    },
+    {
+        "name": "Functions",
+        "id": 12,
+        "group": "Features",
+        "feature": "Functions",
+        "type": "categorical",
+        "full_name": "Functions"
+    },
+    {
+        "name": "Country",
+        "id": 13,
+        "group": "Power outlet type",
+        "feature": "Country",
+        "type": "categorical",
+        "full_name": "Country"
+    },
+    {
+        "name": "Type",
+        "id": 14,
+        "group": "Construction",
+        "feature": "Type",
+        "type": "categorical",
+        "full_name": "Type"
+    },
+    {
+        "name": "Degree of protection",
+        "id": 15,
+        "group": "Construction",
+        "feature": "Degree of protection",
+        "type": "categorical",
+        "full_name": "Degree of protection"
+    },
+    {
+        "name": "Gorilla Glass version",
+        "id": 16,
+        "group": "Construction",
+        "feature": "Gorilla Glass version",
+        "type": "categorical",
+        "full_name": "Gorilla Glass version"
+    },
+    {
+        "name": "Height",
+        "id": 17,
+        "group": "Construction",
+        "feature": "Height [mm]",
+        "type": "numerical",
+        "full_name": "Height [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Width",
+        "id": 18,
+        "group": "Construction",
+        "feature": "Width [mm]",
+        "type": "numerical",
+        "full_name": "Width [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Depth",
+        "id": 19,
+        "group": "Construction",
+        "feature": "Depth [mm]",
+        "type": "numerical",
+        "full_name": "Depth [mm]",
+        "unit": "mm",
+        "continuous": true
+    },
+    {
+        "name": "Weight",
+        "id": 20,
+        "group": "Construction",
+        "feature": "Weight [kg]",
+        "type": "numerical",
+        "full_name": "Weight [kg]",
+        "unit": "kg",
+        "continuous": true
+    },
+    {
+        "name": "Colour",
+        "id": 21,
+        "group": "Construction",
+        "feature": "Colour",
+        "type": "categorical",
+        "full_name": "Colour"
+    },
+    {
+        "name": "Display type",
+        "id": 22,
+        "group": "Display",
+        "feature": "Display type",
+        "type": "categorical",
+        "full_name": "Display type"
+    },
+    {
+        "name": "Display properties",
+        "id": 23,
+        "group": "Display",
+        "feature": "Display properties",
+        "type": "categorical",
+        "full_name": "Display properties"
+    },
+    {
+        "name": "Display refresh rate",
+        "id": 24,
+        "group": "Display",
+        "feature": "Display refresh rate [Hz]",
+        "type": "numerical",
+        "full_name": "Display refresh rate [Hz]",
+        "unit": "Hz",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Screen fineness",
+        "id": 25,
+        "group": "Display",
+        "feature": "Screen fineness [PPI]",
+        "type": "numerical",
+        "full_name": "Screen fineness [PPI]",
+        "unit": "PPI",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Display brightness",
+        "id": 26,
+        "group": "Display",
+        "feature": "Display brightness [Nits]",
+        "type": "numerical",
+        "full_name": "Display brightness [Nits]",
+        "unit": "Nits",
+        "continuous": false
+    },
+    {
+        "name": "Shape of the cutout in the display",
+        "id": 27,
+        "group": "Display",
+        "feature": "Shape of the cutout in the display",
+        "type": "categorical",
+        "full_name": "Shape of the cutout in the display"
+    },
+    {
+        "name": "Camera type",
+        "id": 28,
+        "group": "Camera",
+        "feature": "Camera type",
+        "type": "categorical",
+        "full_name": "Camera type"
+    },
+    {
+        "name": "Number of rear camera lenses",
+        "id": 29,
+        "group": "Camera",
+        "feature": "Number of rear camera lenses",
+        "type": "numerical",
+        "full_name": "Number of rear camera lenses",
+        "continuous": false
+    },
+    {
+        "name": "Number of front camera lenses",
+        "id": 30,
+        "group": "Camera",
+        "feature": "Number of front camera lenses",
+        "type": "numerical",
+        "full_name": "Number of front camera lenses",
+        "continuous": false
+    },
+    {
+        "name": "Main rear camera resolution",
+        "id": 31,
+        "group": "Camera",
+        "feature": "Main rear camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Main rear camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Main rear camera aperture",
+        "id": 32,
+        "group": "Camera",
+        "feature": "Main rear camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Main rear camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Wide-angle lens camera resolution",
+        "id": 33,
+        "group": "Camera",
+        "feature": "Wide-angle lens camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Wide-angle lens camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Wide-angle lens camera aperture",
+        "id": 34,
+        "group": "Camera",
+        "feature": "Wide-angle lens camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Wide-angle lens camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Macro camera resolution",
+        "id": 35,
+        "group": "Camera",
+        "feature": "Macro camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Macro camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Macro camera aperture",
+        "id": 36,
+        "group": "Camera",
+        "feature": "Macro camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Macro camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Depth camera resolution",
+        "id": 37,
+        "group": "Camera",
+        "feature": "Depth camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Depth camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Depth camera aperture",
+        "id": 38,
+        "group": "Camera",
+        "feature": "Depth camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Depth camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Front Camera Resolution",
+        "id": 39,
+        "group": "Camera",
+        "feature": "Front Camera Resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Front Camera Resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Front Camera Aperture",
+        "id": 40,
+        "group": "Camera",
+        "feature": "Front Camera Aperture [f/]",
+        "type": "numerical",
+        "full_name": "Front Camera Aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Maximum Aperture",
+        "id": 41,
+        "group": "Camera",
+        "feature": "Maximum Aperture [f/]",
+        "type": "numerical",
+        "full_name": "Maximum Aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Maximum video resolution",
+        "id": 42,
+        "group": "Camera",
+        "feature": "Maximum video resolution",
+        "type": "categorical",
+        "full_name": "Maximum video resolution"
+    },
+    {
+        "name": "Supported resolutions and frame rates (FPS)",
+        "id": 43,
+        "group": "Camera",
+        "feature": "Supported resolutions and frame rates (FPS)",
+        "type": "categorical",
+        "full_name": "Supported resolutions and frame rates (FPS)"
+    },
+    {
+        "name": "Camera functions",
+        "id": 44,
+        "group": "Camera",
+        "feature": "Camera functions",
+        "type": "categorical",
+        "full_name": "Camera functions"
+    },
+    {
+        "name": "Battery capacity",
+        "id": 45,
+        "group": "Charging and battery life",
+        "feature": "Battery capacity [mAh]",
+        "type": "numerical",
+        "full_name": "Battery capacity [mAh]",
+        "unit": "mAh",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Charging performance",
+        "id": 46,
+        "group": "Charging and battery life",
+        "feature": "Charging performance [W]",
+        "type": "numerical",
+        "full_name": "Charging performance [W]",
+        "unit": "W",
+        "continuous": true
+    },
+    {
+        "name": "Replaceable battery",
+        "id": 47,
+        "group": "Charging and battery life",
+        "feature": "Replaceable battery",
+        "type": "categorical",
+        "full_name": "Replaceable battery"
+    },
+    {
+        "name": "Computer memory (RAM)",
+        "id": 48,
+        "group": "Memory and performance",
+        "feature": "Computer memory (RAM) [GB]",
+        "type": "numerical",
+        "full_name": "Computer memory (RAM) [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Internal memory",
+        "id": 49,
+        "group": "Memory and performance",
+        "feature": "Internal memory [GB]",
+        "type": "numerical",
+        "full_name": "Internal memory [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Memory card type",
+        "id": 50,
+        "group": "Memory and performance",
+        "feature": "Memory card type",
+        "type": "categorical",
+        "full_name": "Memory card type"
+    },
+    {
+        "name": "Maximum memory card capacity",
+        "id": 51,
+        "group": "Memory and performance",
+        "feature": "Maximum memory card capacity [GB]",
+        "type": "numerical",
+        "full_name": "Maximum memory card capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Processor brand",
+        "id": 52,
+        "group": "Memory and performance",
+        "feature": "Processor brand",
+        "type": "categorical",
+        "full_name": "Processor brand"
+    },
+    {
+        "name": "Number of processor cores",
+        "id": 53,
+        "group": "Memory and performance",
+        "feature": "Number of processor cores",
+        "type": "numerical",
+        "full_name": "Number of processor cores",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Processor frequency",
+        "id": 54,
+        "group": "Memory and performance",
+        "feature": "Processor frequency [GHz]",
+        "type": "numerical",
+        "full_name": "Processor frequency [GHz]",
+        "unit": "GHz",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Processor tag",
+        "id": 55,
+        "group": "Memory and performance",
+        "feature": "Processor tag",
+        "type": "categorical",
+        "full_name": "Processor tag"
+    },
+    {
+        "name": "Graphic accelerator",
+        "id": 56,
+        "group": "Memory and performance",
+        "feature": "Graphic accelerator",
+        "type": "categorical",
+        "full_name": "Graphic accelerator"
+    },
+    {
+        "name": "Wireless technology",
+        "id": 57,
+        "group": "Communication and network",
+        "feature": "Wireless technology",
+        "type": "categorical",
+        "full_name": "Wireless technology"
+    },
+    {
+        "name": "Data services",
+        "id": 58,
+        "group": "Communication and network",
+        "feature": "Data services",
+        "type": "categorical",
+        "full_name": "Data services"
+    },
+    {
+        "name": "Primary SIM card type",
+        "id": 59,
+        "group": "Communication and network",
+        "feature": "Primary SIM card type",
+        "type": "categorical",
+        "full_name": "Primary SIM card type"
+    },
+    {
+        "name": "Secondary SIM Card Type",
+        "id": 60,
+        "group": "Communication and network",
+        "feature": "Secondary SIM Card Type",
+        "type": "categorical",
+        "full_name": "Secondary SIM Card Type"
+    },
+    {
+        "name": "Bluetooth version",
+        "id": 61,
+        "group": "Communication and network",
+        "feature": "Bluetooth version",
+        "type": "categorical",
+        "full_name": "Bluetooth version"
+    },
+    {
+        "name": "Connectors",
+        "id": 62,
+        "group": "Connectors and sensors",
+        "feature": "Connectors",
+        "type": "categorical",
+        "full_name": "Connectors"
+    },
+    {
+        "name": "Sensors",
+        "id": 63,
+        "group": "Connectors and sensors",
+        "feature": "Sensors",
+        "type": "categorical",
+        "full_name": "Sensors"
+    },
+    {
+        "name": "Accessories Included",
+        "id": 64,
+        "group": "Package contents",
+        "feature": "Accessories Included",
+        "type": "categorical",
+        "full_name": "Accessories Included"
+    },
+    {
+        "name": "Operating system version",
+        "id": 65,
+        "group": "Software",
+        "feature": "Operating system version",
+        "type": "categorical",
+        "full_name": "Operating system version"
+    },
+    {
+        "name": "Extension",
+        "id": 66,
+        "group": "Software",
+        "feature": "Extension",
+        "type": "categorical",
+        "full_name": "Extension"
+    },
+    {
+        "name": "Remote Management (MDM)",
+        "id": 67,
+        "group": "Remote Management (MDM)",
+        "feature": "Remote Management (MDM)",
+        "type": "categorical",
+        "full_name": "Remote Management (MDM)"
+    },
+    {
+        "name": "Durability",
+        "id": 68,
+        "group": "Construction",
+        "feature": "Durability",
+        "type": "categorical",
+        "full_name": "Durability"
+    },
+    {
+        "name": "Image stabilization",
+        "id": 69,
+        "group": "Camera",
+        "feature": "Image stabilization",
+        "type": "categorical",
+        "full_name": "Image stabilization"
+    },
+    {
+        "name": "Optical zoom",
+        "id": 70,
+        "group": "Camera",
+        "feature": "Optical zoom",
+        "type": "numerical",
+        "full_name": "Optical zoom",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Max wireless charging performance",
+        "id": 71,
+        "group": "Charging and battery life",
+        "feature": "Max wireless charging performance [W]",
+        "type": "numerical",
+        "full_name": "Max wireless charging performance [W]",
+        "unit": "W",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Processor designation",
+        "id": 72,
+        "group": "Memory and performance",
+        "feature": "Processor designation",
+        "type": "categorical",
+        "full_name": "Processor designation"
+    },
+    {
+        "name": "Telephoto camera resolution",
+        "id": 73,
+        "group": "Camera",
+        "feature": "Telephoto camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Telephoto camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Telephoto camera aperture",
+        "id": 74,
+        "group": "Camera",
+        "feature": "Telephoto camera aperture [f/]",
+        "type": "numerical",
+        "full_name": "Telephoto camera aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Max. reverse charging power",
+        "id": 75,
+        "group": "Charging and battery life",
+        "feature": "Max. reverse charging power [W]",
+        "type": "numerical",
+        "full_name": "Max. reverse charging power [W]",
+        "unit": "W",
+        "continuous": true
+    },
+    {
+        "name": "Calls via Internet",
+        "id": 76,
+        "group": "Communication and network",
+        "feature": "Calls via Internet",
+        "type": "categorical",
+        "full_name": "Calls via Internet"
+    },
+    {
+        "name": "Virtual operating memory",
+        "id": 77,
+        "group": "Memory and performance",
+        "feature": "Virtual operating memory [GB]",
+        "type": "numerical",
+        "full_name": "Virtual operating memory [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
+        "name": "Second front camera resolution",
+        "id": 78,
+        "group": "Camera",
+        "feature": "Second front camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Second front camera resolution [Mpx]",
+        "unit": "Mpx",
+        "continuous": true
+    },
+    {
+        "name": "Secondary Front Camera Aperture",
+        "id": 79,
+        "group": "Camera",
+        "feature": "Secondary Front Camera Aperture [f/]",
+        "type": "numerical",
+        "full_name": "Secondary Front Camera Aperture [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Second camera resolution with telephoto lens",
+        "id": 80,
+        "group": "Camera",
+        "feature": "Second camera resolution with telephoto lens [Mpx]",
+        "type": "numerical",
+        "full_name": "Second camera resolution with telephoto lens [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Second camera aperture with telephoto lens",
+        "id": 81,
+        "group": "Camera",
+        "feature": "Second camera aperture with telephoto lens [f/]",
+        "type": "numerical",
+        "full_name": "Second camera aperture with telephoto lens [f/]",
+        "unit": "f/",
+        "continuous": true
+    },
+    {
+        "name": "Resistance against falls from max. height",
+        "id": 82,
+        "group": "Construction",
+        "feature": "Resistance against falls from max. height [m]",
+        "type": "numerical",
+        "full_name": "Resistance against falls from max. height [m]",
+        "unit": "m",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Night vision resolution",
+        "id": 83,
+        "group": "Camera",
+        "feature": "Night vision resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Night vision resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Night vision aperture",
+        "id": 84,
+        "group": "Camera",
+        "feature": "Night vision aperture [f/]",
+        "type": "numerical",
+        "full_name": "Night vision aperture [f/]",
+        "unit": "f/",
+        "order": "asc",
+        "continuous": true
+    },
+    {
+        "name": "Features",
+        "id": 85,
+        "group": "Features",
+        "feature": "Features",
+        "type": "categorical",
+        "full_name": "Features"
+    },
+    {
+        "name": "Processor model",
+        "id": 86,
+        "group": "Compatibility",
+        "feature": "Processor model",
+        "type": "categorical",
+        "full_name": "Processor model"
+    },
+    {
+        "name": "Third front camera resolution",
+        "id": 87,
+        "group": "Camera",
+        "feature": "Third front camera resolution [Mpx]",
+        "type": "numerical",
+        "full_name": "Third front camera resolution [Mpx]",
+        "unit": "Mpx",
+        "order": "asc",
+        "continuous": true
+    }
+]

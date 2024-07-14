@@ -18,7 +18,7 @@ class DataLoader:
         cls, category_name: str, usecols: Optional[List[str]] = None, userows: Optional[Set[int]] = None
     ) -> pd.DataFrame:
         filename = "products"
-        if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
+        if category_name == "laptops" and os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
             filename = "mac_large"
         data = pd.read_csv(
             f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
@@ -30,6 +30,11 @@ class DataLoader:
     @classmethod
     def load_product(cls, category_name: str, product_id: int, usecols: Optional[List[str]] = None) -> pd.Series:
         return cls.load_products(category_name=category_name, usecols=usecols, userows={product_id}).iloc[0]
+
+    @classmethod
+    def load_categories(cls) -> List[str]:
+        with open("data/categories.json", mode="r") as file:
+            return json.load(file)
 
     @classmethod
     def load_category(cls, category_name: str) -> UnorganizedCategory:
@@ -50,7 +55,7 @@ class DataLoader:
         df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";").replace({float("nan"): None})
         df = df[df["attribute"] == attribute_name]
         mapping = dict(zip(df["value"].astype(str), df["rating"]))
-        return pd.Series([mapping[str(value)] for value in values])
+        return pd.Series([mapping.get(str(value)) for value in values])
 
     @classmethod
     def load_rating(cls, category_name: str, attribute_name: str, value: Any) -> float:
