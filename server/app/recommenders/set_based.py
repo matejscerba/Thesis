@@ -95,26 +95,23 @@ class SetBasedRecommender:
                 return highest
             else:
                 return ProductAttributePosition.RELEVANT
-        else:
-            if attribute.type == AttributeType.CATEGORICAL:
-                if attribute.is_list:
-                    list_value = expand_list_value(value=value)
-                    all_values_values = expand_list_values(values=all_values.values.tolist())
-                    if not pd.isna(value) and len(set(list_value).intersection(set(all_values_values))) > 0:
-                        return ProductAttributePosition.RELEVANT
-                if value in all_values.values:
+        if attribute.type == AttributeType.CATEGORICAL:
+            if attribute.is_list:
+                list_value = expand_list_value(value=value)
+                all_values_values = expand_list_values(values=all_values.values.tolist())
+                if not pd.isna(value) and len(set(list_value).intersection(set(all_values_values))) > 0:
                     return ProductAttributePosition.RELEVANT
-            all_ratings = DataLoader.load_ratings(
-                category_name=category_name, attribute_name=attribute.full_name, values=all_values
-            )
-            rating = DataLoader.load_rating(
-                category_name=category_name, attribute_name=attribute.full_name, value=value
-            )
-            if rating is not None and all_ratings is not None:
-                if rating < all_ratings.min():
-                    return ProductAttributePosition.LOWER_RATED
-                if rating > all_ratings.max():
-                    return ProductAttributePosition.HIGHER_RATED
+            if value in all_values.values:
+                return ProductAttributePosition.RELEVANT
+        all_ratings = DataLoader.load_ratings(
+            category_name=category_name, attribute_name=attribute.full_name, values=all_values
+        )
+        rating = DataLoader.load_rating(category_name=category_name, attribute_name=attribute.full_name, value=value)
+        if rating is not None and all_ratings is not None:
+            if rating < all_ratings.min():
+                return ProductAttributePosition.LOWER_RATED
+            if rating > all_ratings.max():
+                return ProductAttributePosition.HIGHER_RATED
 
         return ProductAttributePosition.NEUTRAL
 
@@ -146,23 +143,20 @@ class SetBasedRecommender:
                     return lowest
                 if value == all_values.max():
                     return highest
-        else:
-            all_ratings = DataLoader.load_ratings(
-                category_name=category_name, attribute_name=attribute.full_name, values=all_values
-            )
-            rating = DataLoader.load_rating(
-                category_name=category_name, attribute_name=attribute.full_name, value=value
-            )
-            if rating is not None and all_ratings is not None:
-                unique_ratings = all_ratings.unique()
-                if len(unique_ratings) <= 1:
-                    return ProductAttributePosition.NEUTRAL
+        all_ratings = DataLoader.load_ratings(
+            category_name=category_name, attribute_name=attribute.full_name, values=all_values
+        )
+        rating = DataLoader.load_rating(category_name=category_name, attribute_name=attribute.full_name, value=value)
+        if rating is not None and all_ratings is not None:
+            unique_ratings = all_ratings.unique()
+            if len(unique_ratings) <= 1:
+                return ProductAttributePosition.NEUTRAL
 
-                if len(all_ratings[all_ratings == rating]) == 1:
-                    if rating == all_ratings.min():
-                        return ProductAttributePosition.LOWEST_RATED
-                    if rating == all_ratings.max():
-                        return ProductAttributePosition.HIGHEST_RATED
+            if len(all_ratings[all_ratings == rating]) == 1:
+                if rating == all_ratings.min():
+                    return ProductAttributePosition.LOWEST_RATED
+                if rating == all_ratings.max():
+                    return ProductAttributePosition.HIGHEST_RATED
 
         return ProductAttributePosition.NEUTRAL
 
@@ -274,6 +268,30 @@ class SetBasedRecommender:
         )
 
     @classmethod
+    def _get_neutral_explanation(
+        cls,
+        product: pd.Series,
+        all_attributes: CategoryAttributes,
+        important_attributes: List[str],
+    ) -> ProductExplanation:
+        attributes = []
+        for attribute_name in important_attributes:
+            attribute = all_attributes.attributes[attribute_name]
+            value = product[attribute_name]
+            if attribute.is_list:
+                value = expand_list_value(value)
+            attributes.append(
+                ProductAttributeExplanation(
+                    attribute=attribute, attribute_value=value, position=ProductAttributePosition.NEUTRAL
+                )
+            )
+        return ProductExplanation(
+            message=ProductExplanationMessage(code=ProductExplanationMessageCode.NONE),
+            attributes=attributes,
+            price_position=ProductAttributePosition.NEUTRAL,
+        )
+
+    @classmethod
     def explain(
         cls,
         category_name: str,
@@ -298,6 +316,12 @@ class SetBasedRecommender:
                 category_name=category_name,
                 product=product,
                 candidates=candidates,
+                all_attributes=all_attributes,
+                important_attributes=important_attributes,
+            )
+        if product_id in discarded_ids:
+            return cls._get_neutral_explanation(
+                product=product,
                 all_attributes=all_attributes,
                 important_attributes=important_attributes,
             )

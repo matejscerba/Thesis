@@ -11,6 +11,7 @@ function ImportantAttributesMenu() {
       <Typography variant="h5">Important attributes</Typography>
       {groups?.map((group) => (
         <div key={group}>
+          <hr className="my-1" />
           <Typography variant="body1">{group}</Typography>
           <div className="flex-wrapper">
             {attributes

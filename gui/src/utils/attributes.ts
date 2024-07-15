@@ -83,7 +83,6 @@ function getOrderText(position: string, order?: string) {
 
 export function getPositionText(position: string, override: string = "value", order?: string) {
   const orderText = getOrderText(position, order);
-  override = override.toLowerCase();
   switch (position) {
     case ProductAttributePosition.BETTER.valueOf():
       return `Better${orderText} ${override} than any candidate`;

@@ -24,7 +24,7 @@ function Categories() {
       <div className="mt-5 categories-wrapper">
         {categories?.map((category) => (
           <Link key={category} to={`/category/${category}`} className="categories-item text-decoration-none text-black">
-            <div className="border border-secondary rounded m-2 categories-inner">
+            <div className="border border-secondary rounded m-2 categories-inner bg-white">
               <div className="categories-image-wrapper">
                 <img alt={category} src={`/media/products/${category}/1.jpg`} className="categories-image" />
               </div>
