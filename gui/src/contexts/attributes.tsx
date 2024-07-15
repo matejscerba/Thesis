@@ -52,6 +52,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   const allGroups = attributes
     ? Object.values(attributes)
         .map((attributes) => attributes.group)
+        .filter((group) => group !== null)
         .sort()
     : undefined;
 

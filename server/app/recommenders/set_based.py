@@ -12,6 +12,7 @@ from app.products.explanations import (
     ProductExplanationMessage,
     ProductExplanationMessageCode,
 )
+from app.utils.attributes import expand_list_value, expand_list_values
 
 
 class SetBasedRecommender:
@@ -96,6 +97,11 @@ class SetBasedRecommender:
                 return ProductAttributePosition.RELEVANT
         else:
             if attribute.type == AttributeType.CATEGORICAL:
+                if attribute.is_list:
+                    list_value = expand_list_value(value=value)
+                    all_values_values = expand_list_values(values=all_values.values.tolist())
+                    if not pd.isna(value) and len(set(list_value).intersection(set(all_values_values))) > 0:
+                        return ProductAttributePosition.RELEVANT
                 if value in all_values.values:
                     return ProductAttributePosition.RELEVANT
             all_ratings = DataLoader.load_ratings(
@@ -173,6 +179,8 @@ class SetBasedRecommender:
         for attribute_name in important_attributes:
             attribute = all_attributes.attributes[attribute_name]
             value = product[attribute_name]
+            if attribute.is_list:
+                value = expand_list_value(value)
             position = cls.calculate_attribute_position_candidate(
                 category_name=category_name,
                 attribute=all_attributes.attributes[attribute_name],
@@ -241,6 +249,8 @@ class SetBasedRecommender:
         for attribute_name in important_attributes:
             attribute = all_attributes.attributes[attribute_name]
             value = product[attribute_name]
+            if attribute.is_list:
+                value = expand_list_value(value)
             position = cls.calculate_attribute_position_non_candidate(
                 category_name=category_name,
                 attribute=all_attributes.attributes[attribute_name],

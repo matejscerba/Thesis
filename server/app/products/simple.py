@@ -8,6 +8,7 @@ from app.products.category import Category, OrganizedCategory
 from app.products.product import Product
 from app.products.unseen_statistics import UnseenStatistics, AbstractAttributeStatistics
 from app.recommenders.set_based import SetBasedRecommender
+from app.utils.attributes import expand_list_value
 
 
 class FilterValue(BaseModel):
@@ -94,7 +95,17 @@ class SimpleProductHandler:
         products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
         options = value.options
         if options is not None:
-            products = products[products[attribute_name].apply(lambda x: x in options)]
+            attribute = DataLoader.load_attribute(category_name=category_name, attribute_name=attribute_name)
+            if attribute.is_list:
+                products = products[
+                    products[attribute_name].apply(
+                        lambda x: not pd.isna(x)
+                        and len(options) > 0
+                        and len(set(expand_list_value(x)).intersection(set(options))) > 0
+                    )
+                ]
+            else:
+                products = products[products[attribute_name].apply(lambda x: x in options)]
         elif value.lower_bound is not None or value.upper_bound is not None:
             if value.lower_bound is not None:
                 products = products[products[attribute_name] >= value.lower_bound]

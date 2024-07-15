@@ -4,6 +4,7 @@ import pandas as pd
 from pydantic import BaseModel
 
 from app.attributes.attribute import Attribute, AttributeType
+from app.utils.attributes import expand_list_values
 
 if TYPE_CHECKING:
     from app.products.simple import FilterValue
@@ -60,13 +61,16 @@ class AbstractAttributeStatistics(BaseModel):
                     candidate_ids=candidate_ids,
                     discarded_ids=discarded_ids,
                 ),
-                lower_bound_index=options.index(lower_bound),
-                upper_bound_index=options.index(upper_bound),
+                lower_bound_index=options.index(lower_bound) if not pd.isna(lower_bound) else 0,
+                upper_bound_index=options.index(upper_bound) if not pd.isna(upper_bound) else len(options) - 1,
                 options=options,
             )
         elif attribute.type == AttributeType.CATEGORICAL:
             selected_options = candidates[attribute.full_name].dropna().unique().tolist()
             selected_options.sort()
+            if attribute.is_list:
+                options = expand_list_values(options)
+                selected_options = expand_list_values(selected_options)
             available_options = [option for option in options if option not in selected_options]
             return CategoricalAttributeStatistics(
                 attribute=attribute,
@@ -80,7 +84,7 @@ class AbstractAttributeStatistics(BaseModel):
                 selected_options=selected_options,
                 available_options=available_options,
             )
-        raise ValueError(f"Unkown attribute type {attribute.type}")
+        raise ValueError(f"Unknown attribute type {attribute.type}")
 
 
 class NumericalAttributeStatistics(AbstractAttributeStatistics):

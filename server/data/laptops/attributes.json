@@ -101,7 +101,8 @@
         "group": "Display",
         "feature": "Colour coverage and certification",
         "type": "categorical",
-        "full_name": "Colour coverage and certification"
+        "full_name": "Colour coverage and certification",
+        "is_list": true
     },
     {
         "name": "Processor type",
@@ -186,7 +187,8 @@
         "group": "Processor",
         "feature": "CPU features",
         "type": "categorical",
-        "full_name": "CPU features"
+        "full_name": "CPU features",
+        "is_list": true
     },
     {
         "name": "Size of operational RAM",
@@ -244,7 +246,8 @@
         "group": "Graphics card",
         "feature": "Graphics card type",
         "type": "categorical",
-        "full_name": "Graphics card type"
+        "full_name": "Graphics card type",
+        "is_list": true
     },
     {
         "name": "Graphics card brand",
@@ -268,7 +271,8 @@
         "group": "Operating system",
         "feature": "Operating system",
         "type": "categorical",
-        "full_name": "Operating system"
+        "full_name": "Operating system",
+        "is_list": true
     },
     {
         "name": "Storage Type",
@@ -276,7 +280,8 @@
         "group": "Hard drive",
         "feature": "Storage Type",
         "type": "categorical",
-        "full_name": "Storage Type"
+        "full_name": "Storage Type",
+        "is_list": true
     },
     {
         "name": "Storage capacity",
@@ -334,7 +339,8 @@
         "group": "Equipment",
         "feature": "Equipment",
         "type": "categorical",
-        "full_name": "Equipment"
+        "full_name": "Equipment",
+        "is_list": true
     },
     {
         "name": "Webcam",
@@ -399,7 +405,8 @@
         "group": "Construction",
         "feature": "Construction material",
         "type": "categorical",
-        "full_name": "Construction material"
+        "full_name": "Construction material",
+        "is_list": true
     },
     {
         "name": "Convertibility",
@@ -415,7 +422,8 @@
         "group": "Colour",
         "feature": "Colour",
         "type": "categorical",
-        "full_name": "Colour"
+        "full_name": "Colour",
+        "is_list": true
     },
     {
         "name": "Weight",
@@ -440,10 +448,9 @@
         "id": 48,
         "group": "Interface",
         "feature": "Graphical output ports",
-        "type": "numerical",
+        "type": "categorical",
         "full_name": "Graphical output ports",
-        "order": "asc",
-        "continuous": false
+        "is_list": true
     },
     {
         "name": "Network",
@@ -451,7 +458,8 @@
         "group": "Interface",
         "feature": "Network",
         "type": "categorical",
-        "full_name": "Network"
+        "full_name": "Network",
+        "is_list": true
     },
     {
         "name": "Audio",
@@ -459,7 +467,8 @@
         "group": "Interface",
         "feature": "Audio",
         "type": "categorical",
-        "full_name": "Audio"
+        "full_name": "Audio",
+        "is_list": true
     },
     {
         "name": "USB-C",
@@ -549,7 +558,8 @@
         "group": "Keyboard layout",
         "feature": "Keyboard language",
         "type": "categorical",
-        "full_name": "Keyboard language"
+        "full_name": "Keyboard language",
+        "is_list": true
     },
     {
         "name": "Laptop Series",
@@ -565,7 +575,8 @@
         "group": "Certification",
         "feature": "Certification",
         "type": "categorical",
-        "full_name": "Certification"
+        "full_name": "Certification",
+        "is_list": true
     },
     {
         "name": "Extended warranty",
@@ -573,7 +584,8 @@
         "group": "Warranty",
         "feature": "Extended warranty",
         "type": "categorical",
-        "full_name": "Extended warranty"
+        "full_name": "Extended warranty",
+        "is_list": true
     },
     {
         "name": "Package includes",
@@ -581,7 +593,8 @@
         "group": "Package contents",
         "feature": "Package includes",
         "type": "categorical",
-        "full_name": "Package includes"
+        "full_name": "Package includes",
+        "is_list": true
     },
     {
         "name": "Country",
@@ -589,7 +602,8 @@
         "group": "Power outlet type",
         "feature": "Country",
         "type": "categorical",
-        "full_name": "Country"
+        "full_name": "Country",
+        "is_list": true
     },
     {
         "name": "Special event",
@@ -773,7 +787,8 @@
         "group": "Interface",
         "feature": "Other interfaces",
         "type": "categorical",
-        "full_name": "Other interfaces"
+        "full_name": "Other interfaces",
+        "is_list": true
     },
     {
         "name": "USB 3.2 Gen 2x2",

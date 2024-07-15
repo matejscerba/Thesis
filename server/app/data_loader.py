@@ -4,7 +4,7 @@ from typing import Dict, Set, List, Optional, Any
 
 import pandas as pd
 
-from app.attributes.attribute import CategoryAttributes, AttributeName
+from app.attributes.attribute import CategoryAttributes, AttributeName, Attribute
 from app.products.category import UnorganizedCategory
 
 
@@ -49,6 +49,11 @@ class DataLoader:
     def load_attributes(cls, category_name: str) -> CategoryAttributes:
         with open(f"data/{category_name}/attributes.json", mode="r") as file:
             return CategoryAttributes.from_data(json.load(file))
+
+    @classmethod
+    def load_attribute(cls, category_name: str, attribute_name: str) -> Attribute:
+        attributes = cls.load_attributes(category_name=category_name)
+        return attributes.attributes[attribute_name]
 
     @classmethod
     def load_ratings(cls, category_name: str, attribute_name: str, values: pd.Series) -> pd.Series:

@@ -28,6 +28,7 @@ class Attribute(BaseModel):
     type: AttributeType
     order: Optional[AttributeOrder] = Field(default=None)
     continuous: Optional[bool] = Field(default=None)
+    is_list: bool = Field(default=False)
 
 
 class CategoryAttributes(BaseModel):
