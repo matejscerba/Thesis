@@ -13,6 +13,9 @@ import Discarded from "../groups/Discarded";
 import { Modal } from "react-bootstrap";
 import Typography from "@mui/material/Typography";
 
+/**
+ * The default size of page
+ */
 const PAGE_SIZE = 20;
 
 interface ProductListResponse {
@@ -28,6 +31,12 @@ interface ProductListProps {
   name: string;
 }
 
+/**
+ * This component renders the contents of a category - its products.
+ *
+ * @param name then name of the category
+ * @constructor
+ */
 function ProductList({ name }: ProductListProps) {
   const { attributeNames } = useAttributes();
   const { show, modalBody, hideModal } = useModal();
@@ -38,6 +47,8 @@ function ProductList({ name }: ProductListProps) {
   const [discarded, setDiscarded] = useState<number[]>([]);
 
   useEffect(() => {
+    // Load the category contents as soon as candidates, discarded, limit or important attributes change - the
+    // organization of the product will likely change
     fetchPostJson<ProductListResponse>(
       "category",
       { candidates, discarded, important_attributes: attributeNames, limit },
@@ -49,12 +60,23 @@ function ProductList({ name }: ProductListProps) {
       .catch((e) => console.error(e));
   }, [candidates, discarded, limit, attributeNames]);
 
+  /**
+   * Moves product of given id to the discarded set.
+   *
+   * @param id id of the product to discard
+   */
   const onDiscard = (id: number) => {
     if (candidates.includes(id)) {
       setCandidates((prevState) => prevState.filter((candidate) => candidate !== id));
     }
     setDiscarded((prevState) => [...prevState, id]);
   };
+
+  /**
+   * Moves product of given id to the candidates set.
+   *
+   * @param id id of the product to move to candidates
+   */
   const onMarkCandidate = (id: number) => {
     if (discarded.includes(id)) {
       setDiscarded((prevState) => prevState.filter((discarded) => discarded !== id));

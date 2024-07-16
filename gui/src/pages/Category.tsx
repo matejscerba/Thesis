@@ -6,6 +6,11 @@ import CategorySidebar from "../components/CategorySidebar";
 import { AttributesContextProvider } from "../contexts/attributes";
 import { useParams } from "react-router-dom";
 
+/**
+ * This component loads the category page layout.
+ *
+ * @constructor
+ */
 function Category() {
   const { name } = useParams();
 

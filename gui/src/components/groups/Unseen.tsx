@@ -5,6 +5,11 @@ import CategoricalAttributeRange from "../attributes/CategoricalAttributeRange";
 import { AttributeType } from "../../types/attribute";
 import { useCategory } from "../../contexts/category";
 
+/**
+ * This component renders the section describing important attributes of the not yet seen products.
+ *
+ * @constructor
+ */
 function Unseen() {
   const { unseen } = useCategory();
 
@@ -13,29 +18,35 @@ function Unseen() {
       <Typography variant="h5" className="text-secondary mx-3">
         Unseen
       </Typography>
-      {unseen.attributes.map((stats) => (
-        <div key={stats.attribute.name} className="m-3 border border-secondary rounded bg-white">
-          {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
-            <CategoricalAttributeRange
-              attribute={stats.attribute}
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-              selectedOptions={stats.selected_options}
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-              availableOptions={stats.available_options}
-              numProductsInRange={stats.num_products}
-            />
-          )}
-          {stats.attribute.type === AttributeType.NUMERICAL.valueOf() && (
-            <NumericalAttributeRange
-              attribute={stats.attribute}
-              lowerBoundIndex={stats.lower_bound_index}
-              upperBoundIndex={stats.upper_bound_index}
-              options={stats.options}
-              numProductsInRange={stats.num_products}
-            />
-          )}
-        </div>
-      ))}
+      {unseen.attributes && unseen.attributes.length > 0 ? (
+        unseen.attributes.map((stats) => (
+          <div key={stats.attribute.name} className="m-3 border border-secondary rounded bg-white">
+            {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
+              <CategoricalAttributeRange
+                attribute={stats.attribute}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+                selectedOptions={stats.selected_options}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+                availableOptions={stats.available_options}
+                numProductsInRange={stats.num_products}
+              />
+            )}
+            {stats.attribute.type === AttributeType.NUMERICAL.valueOf() && (
+              <NumericalAttributeRange
+                attribute={stats.attribute}
+                lowerBoundIndex={stats.lower_bound_index}
+                upperBoundIndex={stats.upper_bound_index}
+                options={stats.options}
+                numProductsInRange={stats.num_products}
+              />
+            )}
+          </div>
+        ))
+      ) : (
+        <Typography>
+          You do not have any important attributes selected. Select some in the left menu to see statistics here.
+        </Typography>
+      )}
     </>
   );
 }

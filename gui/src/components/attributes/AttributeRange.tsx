@@ -15,6 +15,15 @@ interface AttributeRangeProps {
   children: React.ReactNode;
 }
 
+/**
+ * This component renders a range of an attribute.
+ *
+ * @param attribute attribute which range to render
+ * @param value specification of the range by means of value
+ * @param numProductsInRange number of products in the range defined by `value` parameter
+ * @param children react node to display inside this component
+ * @constructor
+ */
 function AttributeRange({ attribute, value, numProductsInRange, children }: AttributeRangeProps) {
   const { presentModal } = useModal();
 

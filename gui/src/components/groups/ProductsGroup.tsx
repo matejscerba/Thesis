@@ -9,6 +9,13 @@ interface ProductsGroupProps {
   groupType: ProductGroupType;
 }
 
+/**
+ * This component renders a group of products.
+ *
+ * @param products list of products in this group
+ * @param groupType type of the group
+ * @constructor
+ */
 function ProductsGroup({ products, groupType }: ProductsGroupProps) {
   return (
     <>

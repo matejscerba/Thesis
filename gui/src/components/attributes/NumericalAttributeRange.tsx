@@ -12,6 +12,16 @@ interface NumericalAttributeRangeProps {
   numProductsInRange: number;
 }
 
+/**
+ * This component renders a numerical attribute's range given by lower and upper bound.
+ *
+ * @param attribute the attribute which range to be rendered
+ * @param lowerBoundIndex the index of a lower bound (its position in options)
+ * @param upperBoundIndex the index of an upper bound (its position in options)
+ * @param options all options of this attribute
+ * @param numProductsInRange number of products with attribute value in the range given by lower and upper bound
+ * @constructor
+ */
 function NumericalAttributeRange({
   attribute,
   lowerBoundIndex,

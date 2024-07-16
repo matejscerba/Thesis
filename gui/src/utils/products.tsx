@@ -4,6 +4,12 @@ import React from "react";
 import CandidateMenu from "../components/menus/CandidateMenu";
 import DiscardedMenu from "../components/menus/DiscardedMenu";
 
+/**
+ * Gets explanation text and info of an explanation message.
+ *
+ * @param message the explanation message
+ * @return {object} text and info of the explanation message
+ */
 export function getProductExplanationMessageInfo(message: ProductExplanationMessage): { text: string; info: string } {
   switch (message?.code) {
     case ProductExplanationMessageCode.BETTER_THAN_ALL_CANDIDATES.valueOf():
@@ -16,7 +22,14 @@ export function getProductExplanationMessageInfo(message: ProductExplanationMess
   }
 }
 
-export function getMenuForProduct(product: Product, groupType: ProductGroupType) {
+/**
+ * Gets menu element for given product, based on the product's group type.
+ *
+ * @param product product for which to get menu
+ * @param groupType group type of the product
+ * @return {React.JSX.Element} menu element
+ */
+export function getMenuForProduct(product: Product, groupType: ProductGroupType): React.JSX.Element {
   switch (groupType) {
     case ProductGroupType.UNSEEN:
     case ProductGroupType.ALTERNATIVES:
@@ -30,7 +43,13 @@ export function getMenuForProduct(product: Product, groupType: ProductGroupType)
   }
 }
 
-export function getColor(groupType: ProductGroupType) {
+/**
+ * Gets bootstrap color name for given group type
+ *
+ * @param groupType group type for which to get bootstrap color
+ * @return {string} bootsrap color name for given group type
+ */
+export function getColor(groupType: ProductGroupType): string {
   switch (groupType) {
     case ProductGroupType.UNSEEN:
       return "secondary";
@@ -45,7 +64,13 @@ export function getColor(groupType: ProductGroupType) {
   }
 }
 
-export function getEmptyMessage(groupType: ProductGroupType) {
+/**
+ * Gets message saying "no products in this group".
+ *
+ * @param groupType group type for which to get message
+ * @return {string} message saying "no products in this group"
+ */
+export function getEmptyMessage(groupType: ProductGroupType): string {
   switch (groupType) {
     case ProductGroupType.UNSEEN:
       return "No products found";

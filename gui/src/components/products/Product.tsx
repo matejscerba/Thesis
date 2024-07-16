@@ -15,9 +15,16 @@ interface ProductProps {
   className?: string;
   product: ProductModel;
   menu: React.ReactNode;
-  showExplanation?: boolean;
 }
 
+/**
+ * This component renders a product.
+ *
+ * @param className a className to be passed to the outermost <div>
+ * @param product the product to be rendered
+ * @param menu the menu of the product to be displayed
+ * @constructor
+ */
 function Product({ className, product, menu }: ProductProps) {
   const { price, attributeNames } = useAttributes();
   const { name, candidateIds, discarded } = useCategory();
@@ -25,6 +32,7 @@ function Product({ className, product, menu }: ProductProps) {
   const [explanation, setExplanation] = useState<ProductExplanation>(undefined);
 
   useEffect(() => {
+    // Explain the product as soon as candidates, discarded or important attributes change
     fetchPostJson<ProductExplanation>(
       "explanation",
       { candidates: candidateIds, discarded, important_attributes: attributeNames },

@@ -7,6 +7,12 @@ interface AlternativeMenuProps {
   product: Product;
 }
 
+/**
+ * This component renders menu of an alternative product.
+ *
+ * @param product the product for which to display the menu
+ * @constructor
+ */
 function AlternativeMenu({ product }: AlternativeMenuProps) {
   const { onDiscard, onMarkCandidate } = useCategory();
 

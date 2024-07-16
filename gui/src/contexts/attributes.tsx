@@ -31,6 +31,13 @@ interface AttributesContextProviderProps {
   children: React.ReactNode;
 }
 
+/**
+ * This component wraps its children into context providing all information regarding the attributes.
+ *
+ * @param category the name of the category
+ * @param children the children (react node) to be wrapped into this provider
+ * @constructor
+ */
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
   const [importantAttributes, setImportantAttributes] = useState<string[]>([]);

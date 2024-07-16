@@ -10,6 +10,14 @@ interface ExplanationAttributeProps {
   position: string;
 }
 
+/**
+ * This component renders an attibute with its explanations.
+ *
+ * @param attribute attribute to be rendered
+ * @param value value of the attribute to be rendered
+ * @param position position of the attribute's value - the type of explanation
+ * @constructor
+ */
 function ExplanationAttribute({ attribute, value, position }: ExplanationAttributeProps) {
   const color = getColor(position);
   const bgColor = getBgColor(position);

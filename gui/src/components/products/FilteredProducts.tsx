@@ -18,12 +18,20 @@ interface FilteredProductsProps {
   };
 }
 
+/**
+ * This component filters the products based on the value provided.
+ *
+ * @param attribute attribute over which the filter is to be applied
+ * @param value the filter value - giving the range or possible options
+ * @constructor
+ */
 function FilteredProducts({ attribute, value }: FilteredProductsProps) {
   const { name, candidateIds, discarded } = useCategory();
 
   const [products, setProducts] = useState<ProductModel[]>(undefined);
 
   useEffect(() => {
+    // Filter the products as soon as candidates or discarded ids change
     fetchPostJson<ProductModel[]>(
       "category/filter",
       {

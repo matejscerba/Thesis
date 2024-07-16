@@ -28,6 +28,19 @@ interface CategoryContextProviderProps extends CategoryContextInterface {
   children: React.ReactNode;
 }
 
+/**
+ * This component wraps its children into context providing all information regarding the category and its organization.
+ *
+ * @param name the name of the category
+ * @param candidates the candidate products
+ * @param discarded the ids of the discarded products
+ * @param alternatives the alternative products
+ * @param unseen the statistics describing the not yet seen products
+ * @param children the children (react node) to be wrapped into this provider
+ * @param onDiscard the method of discarding product
+ * @param onMarkCandidate the method of moving product to candidates
+ * @constructor
+ */
 export function CategoryContextProvider({
   name,
   candidates,

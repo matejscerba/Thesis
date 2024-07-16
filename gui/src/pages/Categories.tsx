@@ -5,10 +5,16 @@ import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../utils/tools";
 
+/**
+ * This component renders the menu of categories.
+ *
+ * @constructor
+ */
 function Categories() {
   const [categories, setCategories] = useState<string[]>(undefined);
 
   useEffect(() => {
+    // Load the categories from server
     fetchJson<string[]>("categories", {})
       .then((response) => {
         setCategories(response);

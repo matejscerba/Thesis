@@ -3,6 +3,11 @@ import { useAttributes } from "../../contexts/attributes";
 import Typography from "@mui/material/Typography";
 import { Tooltip } from "@mui/material";
 
+/**
+ * This component renders the menu that can mark attributes as important.
+ *
+ * @constructor
+ */
 function ImportantAttributesMenu() {
   const { groups, attributes, restAttributes, addAttribute, removeAttribute } = useAttributes();
 
@@ -16,6 +21,7 @@ function ImportantAttributesMenu() {
           <div className="flex-wrapper">
             {attributes
               ?.filter((attribute) => attribute.group === group)
+              .sort()
               .map((attribute) => (
                 <Tooltip key={attribute.full_name} title="Remove from important attributes">
                   <div
@@ -30,6 +36,7 @@ function ImportantAttributesMenu() {
               ))}
             {restAttributes
               ?.filter((attribute) => attribute.group === group)
+              .sort()
               .map((attribute) => (
                 <Tooltip key={attribute.full_name} title="Add to important attributes">
                   <div

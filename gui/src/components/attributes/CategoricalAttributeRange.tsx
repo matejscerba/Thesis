@@ -10,6 +10,14 @@ interface CategoricalAttributeOptionProps {
   selected?: boolean;
 }
 
+/**
+ * This component renders an option of a categorical attribute.
+ *
+ * @param option the value of the option to render
+ * @param attribute the attribute to which the option belongs
+ * @param selected specifies whether the option is selected and should thus be highlighted
+ * @constructor
+ */
 function CategoricalAttributeOption({ option, attribute, selected }: CategoricalAttributeOptionProps) {
   const bgColor = selected ? "success" : "secondary";
   return (
@@ -26,6 +34,15 @@ interface CategoricalAttributeRangeProps {
   numProductsInRange: number;
 }
 
+/**
+ * This component renders the "range" of a categorical attribute - the selected and other available options.
+ *
+ * @param attribute the attribute which range should be rendered
+ * @param selectedOptions the selected options
+ * @param availableOptions the other available options
+ * @param numProductsInRange the number of products in the relevant range (with the selected attribute options)
+ * @constructor
+ */
 function CategoricalAttributeRange({
   attribute,
   selectedOptions,

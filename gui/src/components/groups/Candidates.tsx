@@ -4,6 +4,11 @@ import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
 import { ProductGroupType } from "../../types/product";
 
+/**
+ * This component renders the group of candidate products.
+ *
+ * @constructor
+ */
 function Candidates() {
   const { candidates } = useCategory();
 

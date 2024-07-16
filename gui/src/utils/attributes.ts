@@ -1,7 +1,14 @@
 import { Attribute, AttributeOrder, PRICE } from "../types/attribute";
 import { ProductAttributePosition } from "../types/product";
 
-export function valueToString(value: any, attribute: Attribute) {
+/**
+ * Converts value of an attribute to string. Typically adds a unit if attribute has any.
+ *
+ * @param value value of an attribute
+ * @param attribute the attribute to gather information about unit and format from
+ * @return {string} formatted value
+ */
+export function valueToString(value: any, attribute: Attribute): string {
   if (attribute.full_name === PRICE && value !== undefined && value !== null) {
     value = new Intl.NumberFormat("en-US", {
       maximumFractionDigits: 0,
@@ -10,7 +17,13 @@ export function valueToString(value: any, attribute: Attribute) {
   return `${value ?? "-"}${attribute?.unit ? " " + attribute.unit : ""}`;
 }
 
-export function getColor(position: string) {
+/**
+ * Gets bootstrap color name for given explanation position.
+ *
+ * @param position position (explanation) to get the value from
+ * @return {string} name of the bootstrap color compliant to the explanation position
+ */
+export function getColor(position: string): string {
   switch (position) {
     case ProductAttributePosition.BEST.valueOf():
     case ProductAttributePosition.BETTER.valueOf():
@@ -33,7 +46,13 @@ export function getColor(position: string) {
   }
 }
 
-export function getTextColor(position: string) {
+/**
+ * Gets bootstrap color name of text for given explanation position.
+ *
+ * @param position position (explanation) to get the value from
+ * @return {string} name of the bootstrap color compliant to the explanation position
+ */
+export function getTextColor(position: string): string {
   switch (position) {
     case ProductAttributePosition.NEUTRAL.valueOf():
     case ProductAttributePosition.RELEVANT.valueOf():
@@ -43,14 +62,27 @@ export function getTextColor(position: string) {
   }
 }
 
-export function getBgColor(position: string) {
+/**
+ * Gets bootstrap color name of background for given explanation position.
+ *
+ * @param position position (explanation) to get the value from
+ * @return {string} name of the bootstrap color compliant to the explanation position
+ */
+export function getBgColor(position: string): string {
   if (position === ProductAttributePosition.NEUTRAL.valueOf()) {
     return undefined;
   }
   return getColor(position);
 }
 
-function getOrderText(position: string, order?: string) {
+/**
+ * Gets textual representation of the given explanation position and the attribute's order.
+ *
+ * @param position position (explanation) to get the value from
+ * @param order order of the attribute (asc/desc)
+ * @return {string} textual representation of the explanation position
+ */
+function getOrderText(position: string, order?: string): string {
   const lowest = " (lowest)";
   const lower = " (lower)";
   const higher = " (higher)";
@@ -81,7 +113,16 @@ function getOrderText(position: string, order?: string) {
   return "";
 }
 
-export function getPositionText(position: string, override: string = "value", order?: string) {
+/**
+ * Gets textual representation of the given explanation position and the attribute's order with the name of the
+ * attribute given in `override` parameter.
+ *
+ * @param position position (explanation) to get the value from
+ * @param override the name of the attribute, default `"value"`
+ * @param order order of the attribute (asc/desc)
+ * @return {string} textual representation of the explanation position
+ */
+export function getPositionText(position: string, override: string = "value", order?: string): string {
   const orderText = getOrderText(position, order);
   switch (position) {
     case ProductAttributePosition.BETTER.valueOf():

@@ -14,6 +14,12 @@ const ModalContext = createContext<ModalContextInterface>({
   hideModal: () => {},
 });
 
+/**
+ * This component wraps its children into context providing modal operations.
+ *
+ * @param children the children (react node) to be wrapped into this provider
+ * @constructor
+ */
 export function ModalContextProvider({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
   const [modalBody, setModalBody] = useState<React.ReactNode>(undefined);
