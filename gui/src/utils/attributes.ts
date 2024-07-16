@@ -161,7 +161,12 @@ export function getFilterValueText(attribute: Attribute, value: FilterValue): st
       ? `one of ${value.options.map((val) => valueToString(val, attribute)).join(", ")}`
       : "-";
   }
-  return (value.lowerBound ?? -1) >= 0 && (value.upperBound ?? -1) >= 0
-    ? `between ${valueToString(value.lowerBound, attribute)} and ${valueToString(value.upperBound, attribute)}`
-    : "-";
+  if ((value.lowerBound ?? -1) >= 0 && (value.upperBound ?? -1) >= 0) {
+    if (value.lowerBound === value.upperBound) {
+      return valueToString(value.lowerBound, attribute);
+    } else {
+      return `between ${valueToString(value.lowerBound, attribute)} and ${valueToString(value.upperBound, attribute)}`;
+    }
+  }
+  return "-";
 }
