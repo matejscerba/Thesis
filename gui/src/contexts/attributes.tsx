@@ -2,13 +2,47 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { fetchPostJson } from "../utils/api";
 import { Attribute, PRICE } from "../types/attribute";
 
+/**
+ * Represents the attributes context interface.
+ */
 interface AttributesContextInterface {
+  /**
+   * Names of the attribute groups.
+   */
   groups: string[];
+
+  /**
+   * All attributes of the given category.
+   */
   attributes: Attribute[];
+
+  /**
+   * Names of the important attributes.
+   */
   attributeNames: string[];
+
+  /**
+   * Price attribute.
+   */
   price: Attribute;
+
+  /**
+   * Attributes that are not important and not Price.
+   */
   restAttributes: Attribute[];
+
+  /**
+   * Adds attribute to important.
+   *
+   * @param {string} attribute the name of the attribute to be added to important attributes
+   */
   addAttribute: (attribute: string) => void;
+
+  /**
+   * Removes attribute from important.
+   *
+   * @param {string} attribute the name of the attribute to be removed from important attributes
+   */
   removeAttribute: (attribute: string) => void;
 }
 
@@ -34,8 +68,8 @@ interface AttributesContextProviderProps {
 /**
  * This component wraps its children into context providing all information regarding the attributes.
  *
- * @param category the name of the category
- * @param children the children (react node) to be wrapped into this provider
+ * @param {string} category the name of the category
+ * @param {React.ReactNode} children the children (react node) to be wrapped into this provider
  * @constructor
  */
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
@@ -43,6 +77,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   const [importantAttributes, setImportantAttributes] = useState<string[]>([]);
 
   useEffect(() => {
+    // Fetch attributes if no attributes have been fetched before
     if (attributes === undefined) {
       fetchPostJson<AttributesResponse>("attributes", {}, { category_name: category })
         .then((response) => {
@@ -56,6 +91,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     return null;
   }
 
+  // Get names of groups of all attributes
   const allGroups = attributes
     ? Object.values(attributes)
         .map((attributes) => attributes.group)

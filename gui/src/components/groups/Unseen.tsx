@@ -43,8 +43,8 @@ function Unseen() {
           </div>
         ))
       ) : (
-        <Typography>
-          You do not have any important attributes selected. Select some in the left menu to see statistics here.
+        <Typography variant="body1" className="mx-3 my-2">
+          You do not have any important attributes selected. Select some in the left menu to see their statistics here.
         </Typography>
       )}
     </>

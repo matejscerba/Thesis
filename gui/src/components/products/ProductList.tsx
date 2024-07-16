@@ -34,7 +34,7 @@ interface ProductListProps {
 /**
  * This component renders the contents of a category - its products.
  *
- * @param name then name of the category
+ * @param {string} name then name of the category
  * @constructor
  */
 function ProductList({ name }: ProductListProps) {
@@ -63,7 +63,7 @@ function ProductList({ name }: ProductListProps) {
   /**
    * Moves product of given id to the discarded set.
    *
-   * @param id id of the product to discard
+   * @param {number} id id of the product to discard
    */
   const onDiscard = (id: number) => {
     if (candidates.includes(id)) {
@@ -75,7 +75,7 @@ function ProductList({ name }: ProductListProps) {
   /**
    * Moves product of given id to the candidates set.
    *
-   * @param id id of the product to move to candidates
+   * @param {number} id id of the product to move to candidates
    */
   const onMarkCandidate = (id: number) => {
     if (discarded.includes(id)) {

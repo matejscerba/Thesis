@@ -10,7 +10,7 @@ interface CandidateMenuProps {
 /**
  * This component renders menu of a candidate product.
  *
- * @param product the product for which to display the menu
+ * @param {Product} product the product for which to display the menu
  * @constructor
  */
 function CandidateMenu({ product }: CandidateMenuProps) {

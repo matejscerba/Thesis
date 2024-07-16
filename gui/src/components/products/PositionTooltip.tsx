@@ -14,9 +14,9 @@ interface PositionTooltipProps {
  * This component wraps a React element into position (explanation) tooltip. Hovering over it displays a text if the
  * explanation is not neutral.
  *
- * @param position the position (explanation) to be displayed
- * @param attribute the attribute which is explained
- * @param children the React element to be wrapped
+ * @param {string} position the position (explanation) to be displayed
+ * @param {Attribute} attribute the attribute which is explained
+ * @param {ReactElement<any, any>} children the React element to be wrapped
  * @constructor
  */
 function PositionTooltip({ position, attribute, children }: PositionTooltipProps) {

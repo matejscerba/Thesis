@@ -7,7 +7,7 @@ import DiscardedMenu from "../components/menus/DiscardedMenu";
 /**
  * Gets explanation text and info of an explanation message.
  *
- * @param message the explanation message
+ * @param {ProductExplanationMessage} message the explanation message
  * @return {object} text and info of the explanation message
  */
 export function getProductExplanationMessageInfo(message: ProductExplanationMessage): { text: string; info: string } {
@@ -17,6 +17,11 @@ export function getProductExplanationMessageInfo(message: ProductExplanationMess
         text: "Better than all candidates",
         info: "All important numerical attributes have better value than every candidate",
       };
+    case ProductExplanationMessageCode.WORSE_THAN_ALL_CANDIDATES.valueOf():
+      return {
+        text: "Worse than all candidates",
+        info: "All important numerical attributes have worse value than every candidate",
+      };
     default:
       return undefined;
   }
@@ -25,8 +30,8 @@ export function getProductExplanationMessageInfo(message: ProductExplanationMess
 /**
  * Gets menu element for given product, based on the product's group type.
  *
- * @param product product for which to get menu
- * @param groupType group type of the product
+ * @param {ProductExplanationMessage} product product for which to get menu
+ * @param {ProductGroupType} groupType group type of the product
  * @return {React.JSX.Element} menu element
  */
 export function getMenuForProduct(product: Product, groupType: ProductGroupType): React.JSX.Element {
@@ -46,7 +51,7 @@ export function getMenuForProduct(product: Product, groupType: ProductGroupType)
 /**
  * Gets bootstrap color name for given group type
  *
- * @param groupType group type for which to get bootstrap color
+ * @param {ProductGroupType} groupType group type for which to get bootstrap color
  * @return {string} bootsrap color name for given group type
  */
 export function getColor(groupType: ProductGroupType): string {
@@ -67,7 +72,7 @@ export function getColor(groupType: ProductGroupType): string {
 /**
  * Gets message saying "no products in this group".
  *
- * @param groupType group type for which to get message
+ * @param {ProductGroupType} groupType group type for which to get message
  * @return {string} message saying "no products in this group"
  */
 export function getEmptyMessage(groupType: ProductGroupType): string {

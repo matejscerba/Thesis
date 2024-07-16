@@ -5,24 +5,20 @@ import { fetchPostJson } from "../../utils/api";
 import { Product as ProductModel } from "../../types/product";
 import Product from "./Product";
 import Typography from "@mui/material/Typography";
-import { Attribute } from "../../types/attribute";
-import { valueToString } from "../../utils/attributes";
+import { Attribute, FilterValue } from "../../types/attribute";
+import { getFilterValueText } from "../../utils/attributes";
 import { useCategory } from "../../contexts/category";
 
 interface FilteredProductsProps {
   attribute: Attribute;
-  value: {
-    lowerBound?: number;
-    upperBound?: number;
-    options?: any[];
-  };
+  value: FilterValue;
 }
 
 /**
  * This component filters the products based on the value provided.
  *
- * @param attribute attribute over which the filter is to be applied
- * @param value the filter value - giving the range or possible options
+ * @param {Attribute} attribute attribute over which the filter is to be applied
+ * @param {FilterValue} value the filter value - giving the range or possible options
  * @constructor
  */
 function FilteredProducts({ attribute, value }: FilteredProductsProps) {
@@ -59,21 +55,24 @@ function FilteredProducts({ attribute, value }: FilteredProductsProps) {
   return (
     <>
       <Typography variant="h5" className="text-secondary mx-3">
-        Products with {attribute.name}{" "}
-        {value.options
-          ? `equal to ${value.options.map((val) => valueToString(val, attribute)).join(", ")}`
-          : `between ${valueToString(value.lowerBound, attribute)} and ${valueToString(value.upperBound, attribute)}`}
+        Products with {attribute.name} {getFilterValueText(attribute, value)}
       </Typography>
-      <List>
-        {products.map((product) => (
-          <Product
-            className="border border-secondary rounded bg-white"
-            key={`${product.id}`}
-            product={product}
-            menu={<AlternativeMenu product={product} />}
-          />
-        ))}
-      </List>
+      {products.length > 0 ? (
+        <List>
+          {products.map((product) => (
+            <Product
+              className="border border-secondary rounded bg-white"
+              key={`${product.id}`}
+              product={product}
+              menu={<AlternativeMenu product={product} />}
+            />
+          ))}
+        </List>
+      ) : (
+        <Typography variant="body1" className="m-2">
+          There are no products satisfying the filter mentioned above.
+        </Typography>
+      )}
     </>
   );
 }

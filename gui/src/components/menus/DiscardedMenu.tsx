@@ -10,7 +10,7 @@ interface DiscardedMenuProps {
 /**
  * This component renders menu of a discarded product.
  *
- * @param product the product for which to display the menu
+ * @param {Product} product the product for which to display the menu
  * @constructor
  */
 function DiscardedMenu({ product }: DiscardedMenuProps) {

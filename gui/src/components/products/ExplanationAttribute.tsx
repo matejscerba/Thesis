@@ -13,9 +13,9 @@ interface ExplanationAttributeProps {
 /**
  * This component renders an attibute with its explanations.
  *
- * @param attribute attribute to be rendered
- * @param value value of the attribute to be rendered
- * @param position position of the attribute's value - the type of explanation
+ * @param {Attribute} attribute attribute to be rendered
+ * @param {any} value value of the attribute to be rendered
+ * @param {string} position position of the attribute's value - the type of explanation
  * @constructor
  */
 function ExplanationAttribute({ attribute, value, position }: ExplanationAttributeProps) {

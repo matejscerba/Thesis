@@ -1,7 +1,7 @@
 /**
  * Capitalizes first letter of given string and replaces hyphens with spaces.
  *
- * @param value string to be capitalized
+ * @param {string} value string to be capitalized
  * @return {string} capitalized string
  */
 export function capitalizeFirstLetter(value: string): string {

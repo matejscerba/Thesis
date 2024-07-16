@@ -84,8 +84,8 @@ class AbstractAttributeStatistics(BaseModel):
                     candidate_ids=candidate_ids,
                     discarded_ids=discarded_ids,
                 ),
-                lower_bound_index=options.index(lower_bound) if not pd.isna(lower_bound) else 0,
-                upper_bound_index=options.index(upper_bound) if not pd.isna(upper_bound) else len(options) - 1,
+                lower_bound_index=options.index(lower_bound) if not pd.isna(lower_bound) else -1,
+                upper_bound_index=options.index(upper_bound) if not pd.isna(upper_bound) else -1,
                 options=options,
             )
         elif attribute.type == AttributeType.CATEGORICAL:

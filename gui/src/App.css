@@ -182,3 +182,7 @@ body {
   background-color: var(--bs-success-bg-subtle) !important;
   border-color: var(--bs-success) !important;
 }
+
+.hidden-thumb .MuiSlider-thumb, .hidden-thumb .MuiSlider-track {
+  display: none;
+}

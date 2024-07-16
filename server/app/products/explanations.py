@@ -26,6 +26,7 @@ class ProductExplanationMessageCode(str, Enum):
 
     NONE = "none"
     BETTER_THAN_ALL_CANDIDATES = "better_than_all_candidates"
+    WORSE_THAN_ALL_CANDIDATES = "worse_than_all_candidates"
 
 
 class ProductAttributeExplanation(BaseModel):

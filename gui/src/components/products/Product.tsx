@@ -20,9 +20,9 @@ interface ProductProps {
 /**
  * This component renders a product.
  *
- * @param className a className to be passed to the outermost <div>
- * @param product the product to be rendered
- * @param menu the menu of the product to be displayed
+ * @param {string} className a className to be passed to the outermost <div>
+ * @param {ProductModel} product the product to be rendered
+ * @param {React.ReactNode} menu the menu of the product to be displayed
  * @constructor
  */
 function Product({ className, product, menu }: ProductProps) {
@@ -71,6 +71,11 @@ function Product({ className, product, menu }: ProductProps) {
           </div>
           {menu}
         </div>
+        {(explanation?.attributes ?? []).length === 0 && (
+          <Typography variant="body1" className="mx-3 my-2">
+            You do not have any important attributes selected. Select some in the left menu to see their values here.
+          </Typography>
+        )}
         {explanation && (
           <>
             <div className="flex-wrapper py-2">

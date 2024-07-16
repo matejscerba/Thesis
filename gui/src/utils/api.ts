@@ -6,11 +6,11 @@ const SERVER_URL = "http://localhost:8086/";
 /**
  * Fetches data from a server.
  *
- * @param url relative url to be called
- * @param params GET params of the request - will be appended to the url
- * @param method request method
- * @param mimeType what type of response to accept - sets Accept header
- * @param json JSON content of the request
+ * @param {string} url relative url to be called
+ * @param {Object.<string, string>} params GET params of the request - will be appended to the url
+ * @param {string} method request method
+ * @param {string} mimeType what type of response to accept - sets Accept header
+ * @param {Object.<string, any>} json JSON content of the request
  */
 export function fetchFromServer(
   url: string,
@@ -40,10 +40,10 @@ export function fetchFromServer(
 /**
  * Fetches JSON data from the server
  *
- * @param url relative url to be called
- * @param params GET params of the request - will be appended to the url
- * @param method request method
- * @param json JSON content of the request
+ * @param {string} url relative url to be called
+ * @param {Object.<string, string>} params GET params of the request - will be appended to the url
+ * @param {string} method request method
+ * @param {Object.<string, any>} json JSON content of the request
  */
 export function fetchJson<T>(
   url: string,
@@ -57,9 +57,9 @@ export function fetchJson<T>(
 /**
  * Fetches JSON data from the server via POST method.
  *
- * @param url relative url to be called
- * @param data JSON content of the request
- * @param params GET params of the request - will be appended to the url
+ * @param {string} url relative url to be called
+ * @param {Object.<string, any>} data JSON content of the request
+ * @param {Object.<string, string>} params GET params of the request - will be appended to the url
  */
 export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string }) {
   return fetchJson<T>(url, params, "POST", data);

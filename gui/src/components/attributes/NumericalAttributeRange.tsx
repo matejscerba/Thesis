@@ -15,11 +15,11 @@ interface NumericalAttributeRangeProps {
 /**
  * This component renders a numerical attribute's range given by lower and upper bound.
  *
- * @param attribute the attribute which range to be rendered
- * @param lowerBoundIndex the index of a lower bound (its position in options)
- * @param upperBoundIndex the index of an upper bound (its position in options)
- * @param options all options of this attribute
- * @param numProductsInRange number of products with attribute value in the range given by lower and upper bound
+ * @param {Attribute} attribute the attribute which range to be rendered
+ * @param {number} lowerBoundIndex the index of a lower bound (its position in options)
+ * @param {number} upperBoundIndex the index of an upper bound (its position in options)
+ * @param {number[]} options all options of this attribute
+ * @param {number} numProductsInRange number of products with attribute value in the range given by lower and upper bound
  * @constructor
  */
 function NumericalAttributeRange({
@@ -35,6 +35,7 @@ function NumericalAttributeRange({
   return (
     <AttributeRange attribute={attribute} value={{ lowerBound, upperBound }} numProductsInRange={numProductsInRange}>
       <Slider
+        className={lowerBound === undefined && upperBound === undefined ? "hidden-thumb" : ""}
         value={[lowerBoundIndex, upperBoundIndex]}
         min={0}
         max={options.length - 1}

@@ -143,28 +143,37 @@ class ProductHandler:
         products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
         options = value.options
         if options is not None:
-            # Filter attribute by list of possible values of the attribute
-            attribute = DataLoader.load_attribute(category_name=category_name, attribute_name=attribute_name)
-            if attribute.is_list:
-                # Attribute value is list, all products having at least one of the given options satisfies the filter
-                products = products[
-                    products[attribute_name].apply(
-                        lambda x: not pd.isna(x)
-                        and len(options) > 0
-                        and len(set(expand_list_value(value=x)).intersection(options)) > 0
-                    )
-                ]
+            if len(options) == 0:
+                # Filter products with pd.isna value
+                products = products[pd.isna(products[attribute_name])]
             else:
-                # Apply filter checking whether product has its value in options
-                products = products[products[attribute_name].apply(lambda x: x in options)]
+                # Filter attribute by list of possible values of the attribute
+                attribute = DataLoader.load_attribute(category_name=category_name, attribute_name=attribute_name)
+                if attribute.is_list:
+                    # Attribute value is list, all products having at least one of the given options satisfies the
+                    # filter
+                    products = products[
+                        products[attribute_name].apply(
+                            lambda x: not pd.isna(x)
+                            and len(options) > 0
+                            and len(set(expand_list_value(value=x)).intersection(options)) > 0
+                        )
+                    ]
+                else:
+                    # Apply filter checking whether product has its value in options
+                    products = products[products[attribute_name].apply(lambda x: x in options)]
         elif value.lower_bound is not None or value.upper_bound is not None:
             # Apply lower bound and/or upper bound filter
-            if value.lower_bound is not None:
+            if pd.isna(value.lower_bound) and pd.isna(value.upper_bound):
+                # Filter products with pd.isna value
+                products = products[pd.isna(products[attribute_name])]
+            if not pd.isna(value.lower_bound):
                 products = products[products[attribute_name] >= value.lower_bound]
-            if value.upper_bound is not None:
+            if not pd.isna(value.upper_bound):
                 products = products[products[attribute_name] <= value.upper_bound]
         else:
-            raise Exception("options, lower bound and upper bound missing in filter.")
+            # Filter products with pd.isna value
+            products = products[pd.isna(products[attribute_name])]
 
         return products
 

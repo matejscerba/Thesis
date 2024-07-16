@@ -1,11 +1,11 @@
-import { Attribute, AttributeOrder, PRICE } from "../types/attribute";
+import { Attribute, AttributeOrder, FilterValue, PRICE } from "../types/attribute";
 import { ProductAttributePosition } from "../types/product";
 
 /**
  * Converts value of an attribute to string. Typically adds a unit if attribute has any.
  *
- * @param value value of an attribute
- * @param attribute the attribute to gather information about unit and format from
+ * @param {any} value value of an attribute
+ * @param {Attribute} attribute the attribute to gather information about unit and format from
  * @return {string} formatted value
  */
 export function valueToString(value: any, attribute: Attribute): string {
@@ -20,7 +20,7 @@ export function valueToString(value: any, attribute: Attribute): string {
 /**
  * Gets bootstrap color name for given explanation position.
  *
- * @param position position (explanation) to get the value from
+ * @param {string} position position (explanation) to get the value from
  * @return {string} name of the bootstrap color compliant to the explanation position
  */
 export function getColor(position: string): string {
@@ -49,7 +49,7 @@ export function getColor(position: string): string {
 /**
  * Gets bootstrap color name of text for given explanation position.
  *
- * @param position position (explanation) to get the value from
+ * @param {string} position position (explanation) to get the value from
  * @return {string} name of the bootstrap color compliant to the explanation position
  */
 export function getTextColor(position: string): string {
@@ -65,7 +65,7 @@ export function getTextColor(position: string): string {
 /**
  * Gets bootstrap color name of background for given explanation position.
  *
- * @param position position (explanation) to get the value from
+ * @param {string} position position (explanation) to get the value from
  * @return {string} name of the bootstrap color compliant to the explanation position
  */
 export function getBgColor(position: string): string {
@@ -78,8 +78,8 @@ export function getBgColor(position: string): string {
 /**
  * Gets textual representation of the given explanation position and the attribute's order.
  *
- * @param position position (explanation) to get the value from
- * @param order order of the attribute (asc/desc)
+ * @param {string} position position (explanation) to get the value from
+ * @param {string} order order of the attribute (asc/desc)
  * @return {string} textual representation of the explanation position
  */
 function getOrderText(position: string, order?: string): string {
@@ -117,9 +117,9 @@ function getOrderText(position: string, order?: string): string {
  * Gets textual representation of the given explanation position and the attribute's order with the name of the
  * attribute given in `override` parameter.
  *
- * @param position position (explanation) to get the value from
- * @param override the name of the attribute, default `"value"`
- * @param order order of the attribute (asc/desc)
+ * @param {string} position position (explanation) to get the value from
+ * @param {string} override the name of the attribute, default `"value"`
+ * @param {string} order order of the attribute (asc/desc)
  * @return {string} textual representation of the explanation position
  */
 export function getPositionText(position: string, override: string = "value", order?: string): string {
@@ -128,22 +128,40 @@ export function getPositionText(position: string, override: string = "value", or
     case ProductAttributePosition.BETTER.valueOf():
       return `Better${orderText} ${override} than any candidate`;
     case ProductAttributePosition.HIGHER_RATED.valueOf():
-      return `Higher-rated ${override} than any candidate`;
+      return `Users rated this ${override} higher than any candidate`;
     case ProductAttributePosition.BEST.valueOf():
       return `Best${orderText} ${override} of all candidates`;
     case ProductAttributePosition.HIGHEST_RATED.valueOf():
-      return `Highest-rated ${override} of all candidates`;
+      return `Users rated this ${override} highest of all candidates`;
     case ProductAttributePosition.RELEVANT.valueOf():
       return `Relevant ${override}`;
     case ProductAttributePosition.LOWEST_RATED.valueOf():
-      return `Lowest-rated ${override} of all candidates`;
+      return `Users rated this ${override} lowest of all candidates`;
     case ProductAttributePosition.WORST.valueOf():
       return `Worst${orderText} ${override} of all candidates`;
     case ProductAttributePosition.LOWER_RATED.valueOf():
-      return `Lower-rated ${override} than any candidate`;
+      return `Users rated this ${override} lower than any candidate`;
     case ProductAttributePosition.WORSE.valueOf():
       return `Worse${orderText} ${override} than any candidate`;
     default:
       return undefined;
   }
+}
+
+/**
+ * Gets text for filter value.
+ *
+ * @param {Attribute} attribute attribute over which filter is applied
+ * @param {FilterValue} value value of the filter to be described
+ * @return {string} textual representation of the filter
+ */
+export function getFilterValueText(attribute: Attribute, value: FilterValue): string {
+  if (value.options !== undefined && value.options !== null) {
+    return value.options.length > 0
+      ? `one of ${value.options.map((val) => valueToString(val, attribute)).join(", ")}`
+      : "-";
+  }
+  return (value.lowerBound ?? -1) >= 0 && (value.upperBound ?? -1) >= 0
+    ? `between ${valueToString(value.lowerBound, attribute)} and ${valueToString(value.upperBound, attribute)}`
+    : "-";
 }

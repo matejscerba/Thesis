@@ -124,7 +124,7 @@ class ContentBasedMixin:
         )
         rating = DataLoader.load_rating(category_name=category_name, attribute_name=attribute.full_name, value=value)
         if rating is not None and all_ratings is not None:
-            unique_ratings = all_ratings.unique()
+            unique_ratings = all_ratings.dropna().unique()
             if len(unique_ratings) <= 1:
                 return ProductAttributePosition.NEUTRAL
 
@@ -183,18 +183,19 @@ class ContentBasedMixin:
         )
 
     @classmethod
-    def _is_better_than_all_candidates(
+    def _get_message_code_non_candidate(
         cls,
         product: pd.Series,
         candidates: pd.DataFrame,
         all_attributes: CategoryAttributes,
-    ) -> bool:
-        """Checks whether all of product's numerical attributes are better than the ones of all candidates.
+    ) -> ProductExplanationMessageCode:
+        """Gets message code for a non-candidate product.
 
         :param pd.Series product: the product to be inspected
         :param pd.DataFrame candidates: pandas dataframe representing all candidates
         :param CategoryAttributes all_attributes: all attributes of a given category
-        :return:
+        :return: product explanation message code representing the product
+        :rtype: ProductExplanationMessageCode
         """
 
         # Find numerical attributes with order of a product and candidates
@@ -205,7 +206,7 @@ class ContentBasedMixin:
             if col in numerical_attributes and numerical_attributes[col].order is not None
         ]
         if len(numerical_columns) == 0:
-            return False
+            return ProductExplanationMessageCode.NONE
 
         # Assign map to columns - ascending attributes have value 1, descending -1 so that future comparison can be done
         # in one direction
@@ -216,10 +217,17 @@ class ContentBasedMixin:
             ]
         )
 
-        # Compare numerical attributes with order of given product with the best values among candidates.
+        # Compare numerical attributes with order of given product with the best and worst values among candidates.
         numerical_product = product[numerical_columns] * columns_map
         best_candidate = (candidates[numerical_columns] * columns_map).max(axis=0)
-        return (numerical_product > best_candidate).all()
+        worst_candidate = (candidates[numerical_columns] * columns_map).min(axis=0)
+
+        if (numerical_product > best_candidate).all():
+            return ProductExplanationMessageCode.BETTER_THAN_ALL_CANDIDATES
+
+        if (numerical_product < worst_candidate).all():
+            return ProductExplanationMessageCode.WORSE_THAN_ALL_CANDIDATES
+        return ProductExplanationMessageCode.NONE
 
     @classmethod
     def _generate_explanation_message_non_candidate(
@@ -236,10 +244,11 @@ class ContentBasedMixin:
         :return: explanation message for a given product
         :rtype: ProductExplanationMessage
         """
-        code = ProductExplanationMessageCode.NONE
-        if cls._is_better_than_all_candidates(product=product, candidates=candidates, all_attributes=all_attributes):
-            code = ProductExplanationMessageCode.BETTER_THAN_ALL_CANDIDATES
-        return ProductExplanationMessage(code=code)
+        return ProductExplanationMessage(
+            code=cls._get_message_code_non_candidate(
+                product=product, candidates=candidates, all_attributes=all_attributes
+            )
+        )
 
     @classmethod
     def _explain_non_candidate(
