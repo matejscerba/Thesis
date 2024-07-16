@@ -12,6 +12,17 @@ class DataLoader:
     """This class handles loading of all data used by the application."""
 
     @classmethod
+    def get_root_dir(cls) -> str:
+        """Gets the path to the root directory containing the data.
+
+        :return: the path to the root directory containing the data
+        :rtype: str
+        """
+        if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
+            return "data/test"
+        return "data/main"
+
+    @classmethod
     def load_products(
         cls, category_name: str, usecols: Optional[List[str]] = None, userows: Optional[Set[int]] = None
     ) -> pd.DataFrame:
@@ -24,11 +35,10 @@ class DataLoader:
         :return: dataframe containing the products of a given category
         :rtype: pd.DataFrame
         """
-        filename = "products"
-        if category_name == "laptops" and os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
-            filename = "mac_large"
         data = pd.read_csv(
-            f"data/{category_name}/{filename}.csv", sep=";", usecols=["id", *usecols] if usecols is not None else None
+            f"{cls.get_root_dir()}/{category_name}/products.csv",
+            sep=";",
+            usecols=["id", *usecols] if usecols is not None else None,
         ).replace({float("nan"): None})
         if userows is not None:
             data = data[data["id"].apply(lambda x: x in userows)]
@@ -57,8 +67,8 @@ class DataLoader:
         return sorted(
             [
                 name
-                for name in os.listdir("data")
-                if os.path.isdir(os.path.join("data", name)) and not name.startswith(".")
+                for name in os.listdir(cls.get_root_dir())
+                if os.path.isdir(os.path.join(cls.get_root_dir(), name)) and not name.startswith(".")
             ]
         )
 
@@ -85,7 +95,7 @@ class DataLoader:
         :return: attributes of the category
         :rtype: CategoryAttributes
         """
-        with open(f"data/{category_name}/attributes.json", mode="r") as file:
+        with open(f"{cls.get_root_dir()}/{category_name}/attributes.json", mode="r") as file:
             return CategoryAttributes.from_data(json.load(file))
 
     @classmethod
@@ -110,7 +120,9 @@ class DataLoader:
         :return: ratings of the given values
         :rtype: pd.Series
         """
-        df = pd.read_csv(f"data/{category_name}/attributes_rating.csv", sep=";").replace({float("nan"): None})
+        df = pd.read_csv(f"{cls.get_root_dir()}/{category_name}/attributes_rating.csv", sep=";").replace(
+            {float("nan"): None}
+        )
         df = df[df["attribute"] == attribute_name]
         mapping = dict(zip(df["value"].astype(str), df["rating"]))
         return pd.Series([mapping.get(str(value)) for value in values])

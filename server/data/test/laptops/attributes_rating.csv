@@ -1,0 +1,2861 @@
+attribute;value;rating;rating_count
+Display resolution;1366 × 768 px;3.803846153846154;52.0
+Display resolution;1366 × 912 px;;0.0
+Display resolution;1536 × 1024 px;;0.0
+Display resolution;1600 × 900 px;4.3;3.0
+Display resolution;1920 × 1080 px;4.374694873881205;1229.0
+Display resolution;1920 × 1200 px;4.341578947368421;190.0
+Display resolution;1920 × 1280 px;4.3999999999999995;17.0
+Display resolution;2000 × 1200 px;4.01;10.0
+Display resolution;2160 × 1350 px;;0.0
+Display resolution;2240 × 1400 px;4.568421052631579;19.0
+Display resolution;2256 × 1504 px;2.3333333333333335;3.0
+Display resolution;2400 × 1600 px;5.0;5.0
+Display resolution;2496 × 1664 px;;0.0
+Display resolution;2520 × 1680 px;;0.0
+Display resolution;2560 × 1440 px;4.262903225806451;62.0
+Display resolution;2560 × 1600 px;4.834569983136594;1186.0
+Display resolution;2560 × 1664 px;4.75679012345679;162.0
+Display resolution;2736 × 1824 px;5.0;1.0
+Display resolution;2880 × 1620 px;4.625;32.0
+Display resolution;2880 × 1800 px;4.47378640776699;103.0
+Display resolution;2880 × 1864 px;4.818181818181818;22.0
+Display resolution;2880 × 1920 px;4.3076923076923075;13.0
+Display resolution;2944 × 1840 px;5.0;1.0
+Display resolution;3000 × 2000 px;;0.0
+Display resolution;3024 × 1964 px;5.0;1.0
+Display resolution;3072 × 1920 px;4.613636363636363;44.0
+Display resolution;3200 × 2000 px;4.111111111111111;9.0
+Display resolution;3300 × 2200 px;;0.0
+Display resolution;3456 × 2160 px;;0.0
+Display resolution;3456 × 2234 px;4.647058823529412;17.0
+Display resolution;3840 × 2160 px;4.444444444444445;9.0
+Display resolution;3840 × 2400 px;4.0;4.0
+Panel type;IPS;4.585571587125416;2703.0
+Panel type;LED;3.2571428571428567;14.0
+Panel type;Liquid Retina XDR;4.647058823529412;17.0
+Panel type;Mini LED;4.5;16.0
+Panel type;OLED;4.46056338028169;213.0
+Panel type;TN;4.460240963855422;83.0
+Panel type;VA;4.56;35.0
+Panel type;WVA;4.381578947368421;76.0
+Display type;Anti-Glare;4.44305901911887;1203.0
+Display type;Glossy;4.757945736434109;1548.0
+Display type;Matte;4.201643192488263;426.0
+Aspect Ratio;15:9;3.7000000000000006;3.0
+Aspect Ratio;16:10;4.7340401146131805;1745.0
+Aspect Ratio;16:9;4.35436193222783;1387.0
+Aspect Ratio;3:2;4.302564102564103;39.0
+Display refresh rate [Hz];60.0;4.469118982742961;1101.0
+Display refresh rate [Hz];90.0;4.497674418604651;86.0
+Display refresh rate [Hz];120.0;4.354625550660793;227.0
+Display refresh rate [Hz];144.0;4.421387283236994;346.0
+Display refresh rate [Hz];165.0;4.422929936305732;157.0
+Display refresh rate [Hz];240.0;4.596907216494845;97.0
+Display refresh rate [Hz];250.0;;0.0
+Display refresh rate [Hz];300.0;4.5;9.0
+Display refresh rate [Hz];360.0;4.25;8.0
+Luminosity [Nits];200.0;1.0;1.0
+Luminosity [Nits];220.0;4.375;8.0
+Luminosity [Nits];250.0;4.483221476510067;596.0
+Luminosity [Nits];300.0;4.446380697050938;373.0
+Luminosity [Nits];320.0;4.7;3.0
+Luminosity [Nits];330.0;5.0;1.0
+Luminosity [Nits];340.0;;0.0
+Luminosity [Nits];350.0;4.348148148148148;54.0
+Luminosity [Nits];360.0;1.0;2.0
+Luminosity [Nits];400.0;4.685342789598109;423.0
+Luminosity [Nits];425.0;3.0;8.0
+Luminosity [Nits];430.0;3.0;1.0
+Luminosity [Nits];450.0;4.666666666666667;6.0
+Luminosity [Nits];470.0;;0.0
+Luminosity [Nits];500.0;4.747855530474041;443.0
+Luminosity [Nits];550.0;4.6;35.0
+Luminosity [Nits];600.0;4.1521739130434785;46.0
+Luminosity [Nits];800.0;;0.0
+Luminosity [Nits];1000.0;4.666666666666667;18.0
+Luminosity [Nits];1100.0;4.7;10.0
+Luminosity [Nits];1200.0;4.166666666666667;6.0
+Colour coverage and certification;['100% Adobe RGB', 'DisplayHDR'];;0.0
+Colour coverage and certification;['100% Adobe RGB'];;0.0
+Colour coverage and certification;['100% Adobe'];3.6666666666666665;3.0
+Colour coverage and certification;['100% DCI-P3', '100% Adobe RGB'];;0.0
+Colour coverage and certification;['100% DCI-P3', 'DisplayHDR', '125% sRGB'];5.0;1.0
+Colour coverage and certification;['100% DCI-P3', 'DisplayHDR'];4.788;75.0
+Colour coverage and certification;['100% DCI-P3'];4.468571428571429;140.0
+Colour coverage and certification;['100% sRGB', '100% DCI-P3', '100% Adobe RGB'];4.285714285714286;7.0
+Colour coverage and certification;['100% sRGB', '100% DCI-P3', '125% sRGB'];5.0;1.0
+Colour coverage and certification;['100% sRGB', '100% DCI-P3', 'DisplayHDR'];4.817142857142857;35.0
+Colour coverage and certification;['100% sRGB', '45% s RGB'];;0.0
+Colour coverage and certification;['100% sRGB', 'DisplayHDR'];;0.0
+Colour coverage and certification;['100% sRGB'];4.410891089108911;101.0
+Colour coverage and certification;['125% sRGB'];;0.0
+Colour coverage and certification;['45% NTSC'];4.386792452830188;424.0
+Colour coverage and certification;['45% s RGB'];4.523809523809524;21.0
+Colour coverage and certification;['50% NTSC'];4.8;4.0
+Colour coverage and certification;['70', '8% NTSC'];3.7000000000000006;3.0
+Colour coverage and certification;['72% NTSC'];4.0;18.0
+Colour coverage and certification;['72% s RGB'];3.0;1.0
+Colour coverage and certification;['90% DCI-P3'];;0.0
+Colour coverage and certification;['96% DCI-P3'];4.0;4.0
+Colour coverage and certification;['97', '5% DCI-P3'];4.142857142857143;7.0
+Processor type;AMD A12;;0.0
+Processor type;AMD Athlon;4.4;5.0
+Processor type;AMD Ryzen 3;4.6875;40.0
+Processor type;AMD Ryzen 5;4.440506329113925;237.0
+Processor type;AMD Ryzen 7;4.554545454545455;187.0
+Processor type;AMD Ryzen 9;4.047999999999999;25.0
+Processor type;Apple Silicon;4.884771573604061;985.0
+Processor type;Intel Celeron;4.0248120300751875;133.0
+Processor type;Intel Core i3;4.248550724637681;138.0
+Processor type;Intel Core i5;4.46626213592233;824.0
+Processor type;Intel Core i7;4.371428571428572;413.0
+Processor type;Intel Core i9;4.632692307692308;104.0
+Processor type;Intel N;4.557627118644067;59.0
+Processor type;Intel Pentium;4.716666666666667;18.0
+Processor type;MediaTek;4.009090909090909;11.0
+Processor type;Qualcomm;4.14;15.0
+AMD processor generation;Zen (2nd generation);;0.0
+AMD processor generation;Zen 2 (4th generation);4.69;90.0
+AMD processor generation;Zen 3 (5th generation);4.4205000000000005;200.0
+AMD processor generation;Zen 3+ (6th generation);4.584615384615384;65.0
+AMD processor generation;Zen 4 (7th generation);4.0;20.0
+AMD processor generation;Zen+ (3rd generation);4.3;3.0
+Processor model number;AMD 3015e;;0.0
+Processor model number;AMD A12 PRO 8830B;;0.0
+Processor model number;AMD Athlon Silver 7120U;4.4;5.0
+Processor model number;AMD Ryzen 3 3250U;4.3;3.0
+Processor model number;AMD Ryzen 3 5300U;4.833333333333333;6.0
+Processor model number;AMD Ryzen 3 5425U;4.0285714285714285;7.0
+Processor model number;AMD Ryzen 3 7320U;4.891666666666667;24.0
+Processor model number;AMD Ryzen 3 7330U;;0.0
+Processor model number;AMD Ryzen 3 PRO 5450U;;0.0
+Processor model number;AMD Ryzen 5 5500U;4.677777777777778;54.0
+Processor model number;AMD Ryzen 5 5600H;4.225454545454546;55.0
+Processor model number;AMD Ryzen 5 5625U;4.782608695652174;23.0
+Processor model number;AMD Ryzen 5 6600H;;0.0
+Processor model number;AMD Ryzen 5 6600HS;4.62;5.0
+Processor model number;AMD Ryzen 5 6600U;5.0;1.0
+Processor model number;AMD Ryzen 5 7520C;;0.0
+Processor model number;AMD Ryzen 5 7520U;3.938888888888889;18.0
+Processor model number;AMD Ryzen 5 7530U;4.375;64.0
+Processor model number;AMD Ryzen 5 7535HS;4.285714285714286;7.0
+Processor model number;AMD Ryzen 5 7535U;4.822222222222222;9.0
+Processor model number;AMD Ryzen 5 7540U;;0.0
+Processor model number;AMD Ryzen 5 7640HS;;0.0
+Processor model number;AMD Ryzen 5 7640S;;0.0
+Processor model number;AMD Ryzen 5 7640U;5.0;1.0
+Processor model number;AMD Ryzen 5 PRO 5650U;;0.0
+Processor model number;AMD Ryzen 5 PRO 5675U;;0.0
+Processor model number;AMD Ryzen 5 PRO 6650U;;0.0
+Processor model number;AMD Ryzen 7 4700U;4.7;3.0
+Processor model number;AMD Ryzen 7 4800H;5.0;2.0
+Processor model number;AMD Ryzen 7 4980U;;0.0
+Processor model number;AMD Ryzen 7 5700U;5.0;6.0
+Processor model number;AMD Ryzen 7 5800H;4.466666666666666;63.0
+Processor model number;AMD Ryzen 7 5825U;4.6454545454545455;11.0
+Processor model number;AMD Ryzen 7 6800H;4.442857142857143;7.0
+Processor model number;AMD Ryzen 7 6800HS;4.357142857142857;14.0
+Processor model number;AMD Ryzen 7 6800U;;0.0
+Processor model number;AMD Ryzen 7 7730U;4.193333333333333;15.0
+Processor model number;AMD Ryzen 7 7735HS;4.757777777777778;45.0
+Processor model number;AMD Ryzen 7 7735U;4.5;2.0
+Processor model number;AMD Ryzen 7 7745HX;5.0;1.0
+Processor model number;AMD Ryzen 7 7840HS;4.5;16.0
+Processor model number;AMD Ryzen 7 7840S;5.0;1.0
+Processor model number;AMD Ryzen 7 7840U;;0.0
+Processor model number;AMD Ryzen 7 PRO 5850U;;0.0
+Processor model number;AMD Ryzen 7 PRO 5875U;;0.0
+Processor model number;AMD Ryzen 7 PRO 6850H;;0.0
+Processor model number;AMD Ryzen 7 PRO 6850U;5.0;1.0
+Processor model number;AMD Ryzen 9 5900HX;;0.0
+Processor model number;AMD Ryzen 9 5980HS;;0.0
+Processor model number;AMD Ryzen 9 6900HX;;0.0
+Processor model number;AMD Ryzen 9 7845HX;3.5;12.0
+Processor model number;AMD Ryzen 9 7940HS;4.766666666666667;12.0
+Processor model number;AMD Ryzen 9 7945HX;2.0;1.0
+Processor model number;Apple M1;4.915435356200528;758.0
+Processor model number;Apple M1 MAX;5.0;1.0
+Processor model number;Apple M1 PRO;4.0;4.0
+Processor model number;Apple M2 (8-core);4.7923444976076555;209.0
+Processor model number;Apple M2 Max;;0.0
+Processor model number;Apple M2 Pro (10-core);;0.0
+Processor model number;Apple M2 Pro (12-core);4.833333333333333;12.0
+Processor model number;Apple M3 (8-core);;0.0
+Processor model number;Apple M3 Max (14-core);;0.0
+Processor model number;Apple M3 Max (16-core);;0.0
+Processor model number;Apple M3 Pro (11-core);;0.0
+Processor model number;Apple M3 Pro (12-core);5.0;1.0
+Processor model number;Intel Celeron N4020 Gemini Lake;3.8931818181818185;88.0
+Processor model number;Intel Celeron N4120 Gemini Lake;4.5;7.0
+Processor model number;Intel Celeron N4500 Jasper Lake;4.3999999999999995;14.0
+Processor model number;Intel Celeron N5100 Jasper Lake;4.076923076923077;13.0
+Processor model number;Intel Core i3 1005G1 Ice Lake;1.0;1.0
+Processor model number;Intel Core i3 10100Y Amber Lake;4.444444444444445;9.0
+Processor model number;Intel Core i3 10110U Comet Lake;5.0;6.0
+Processor model number;Intel Core i3 1110G4 Tiger Lake;5.0;2.0
+Processor model number;Intel Core i3 1115G4 Tiger Lake;4.1037037037037045;27.0
+Processor model number;Intel Core i3 1125G4 Tiger Lake;;0.0
+Processor model number;Intel Core i3 1215U Alder Lake;3.9955555555555557;45.0
+Processor model number;Intel Core i3 1220P Alder Lake;;0.0
+Processor model number;Intel Core i3 1305U Raptor Lake;3.0;1.0
+Processor model number;Intel Core i3 1315U Raptor Lake;4.538461538461538;13.0
+Processor model number;Intel Core i3 8130U Kaby Lake;;0.0
+Processor model number;Intel Core i3 N305 Alder Lake;4.491176470588235;34.0
+Processor model number;Intel Core i5 10210U Comet Lake;;0.0
+Processor model number;Intel Core i5 10300H Comet Lake;4.566666666666666;9.0
+Processor model number;Intel Core i5 1030NG7 Ice Lake;;0.0
+Processor model number;Intel Core i5 1035G1 Ice Lake;4.285714285714286;7.0
+Processor model number;Intel Core i5 1035G4 Ice Lake;;0.0
+Processor model number;Intel Core i5 1038NG7 Ice Lake;5.0;9.0
+Processor model number;Intel Core i5 10500H Comet Lake;5.0;1.0
+Processor model number;Intel Core i5 11260H Tiger Lake;3.7;4.0
+Processor model number;Intel Core i5 11300H Tiger Lake;5.0;2.0
+Processor model number;Intel Core i5 1130G7 Tiger Lake;1.0;1.0
+Processor model number;Intel Core i5 11320H Tiger Lake;4.696000000000001;25.0
+Processor model number;Intel Core i5 1135G7 Tiger Lake;4.272307692307692;65.0
+Processor model number;Intel Core i5 11400H Tiger Lake;4.332;75.0
+Processor model number;Intel Core i5 1145G7 Tiger Lake;;0.0
+Processor model number;Intel Core i5 1155G7 Tiger Lake;4.42;10.0
+Processor model number;Intel Core i5 1230U Alder Lake;;0.0
+Processor model number;Intel Core i5 1235U Alder Lake;4.362015503875968;129.0
+Processor model number;Intel Core i5 1240P Alder Lake;4.418333333333334;60.0
+Processor model number;Intel Core i5 12450H Alder Lake;4.456603773584906;53.0
+Processor model number;Intel Core i5 1245U Alder Lake;5.0;1.0
+Processor model number;Intel Core i5 12500H Alder Lake;4.436633663366337;101.0
+Processor model number;Intel Core i5 1250P Alder Lake;;0.0
+Processor model number;Intel Core i5 12600HX Alder Lake;;0.0
+Processor model number;Intel Core i5 1335U Raptor Lake;4.581818181818181;33.0
+Processor model number;Intel Core i5 1340P Raptor Lake;4.6;5.0
+Processor model number;Intel Core i5 13420H Raptor Lake;4.4;14.0
+Processor model number;Intel Core i5 13450HX Raptor Lake;5.0;1.0
+Processor model number;Intel Core i5 1345U Raptor Lake;3.0;2.0
+Processor model number;Intel Core i5 13500H Raptor Lake;4.327272727272727;22.0
+Processor model number;Intel Core i5 1350P Raptor Lake;;0.0
+Processor model number;Intel Core i5 7360U Kaby Lake;4.7;60.0
+Processor model number;Intel Core i5 8210Y Amber Lake;4.5;8.0
+Processor model number;Intel Core i5 8257U Coffe Lake;5.0;95.0
+Processor model number;Intel Core i5 8265U Whiskey Lake;5.0;1.0
+Processor model number;Intel Core i5 8279U Coffe Lake;;0.0
+Processor model number;Intel Core i5 9300H Coffee Lake;3.6129032258064515;31.0
+Processor model number;Intel Core i7 10510U Comet Lake;4.485714285714286;7.0
+Processor model number;Intel Core i7 1060NG7 Ice Lake;;0.0
+Processor model number;Intel Core i7 10610U Comet Lake;;0.0
+Processor model number;Intel Core i7 1065G7 Ice Lake;5.0;1.0
+Processor model number;Intel Core i7 1068NG7 Ice Lake;;0.0
+Processor model number;Intel Core i7 10710U Comet Lake;;0.0
+Processor model number;Intel Core i7 10750H Comet Lake;4.678571428571429;14.0
+Processor model number;Intel Core i7 10850H Comet Lake;;0.0
+Processor model number;Intel Core i7 10870H Comet Lake;;0.0
+Processor model number;Intel Core i7 10875H Comet Lake;4.0;2.0
+Processor model number;Intel Core i7 11370H Tiger Lake;5.0;3.0
+Processor model number;Intel Core i7 11390H Tiger Lake;;0.0
+Processor model number;Intel Core i7 11600H;;0.0
+Processor model number;Intel Core i7 1160G7 Tiger Lake;;0.0
+Processor model number;Intel Core i7 1165G7 Tiger Lake;4.5;14.0
+Processor model number;Intel Core i7 11800H Tiger Lake;4.2;5.0
+Processor model number;Intel Core i7 11850H Tiger Lake;;0.0
+Processor model number;Intel Core i7 1185G7 Tiger Lake;5.0;1.0
+Processor model number;Intel Core i7 1250U Alder Lake;;0.0
+Processor model number;Intel Core i7 1255U Alder Lake;4.28;45.0
+Processor model number;Intel Core i7 1260P Alder Lake;3.8;32.0
+Processor model number;Intel Core i7 12650H Alder Lake;4.36;65.0
+Processor model number;Intel Core i7 1265U Alder Lake;4.75;4.0
+Processor model number;Intel Core i7 12700H Alder Lake;4.359523809523809;84.0
+Processor model number;Intel Core i7 1270P Alder Lake;;0.0
+Processor model number;Intel Core i7 12800H Alder Lake;;0.0
+Processor model number;Intel Core i7 12800HX Alder Lake;4.0;1.0
+Processor model number;Intel Core i7 1280P Alder Lake;2.558333333333333;12.0
+Processor model number;Intel Core i7 12850HX Alder Lake;5.0;2.0
+Processor model number;Intel Core i7 1355U Raptor Lake;4.530769230769231;13.0
+Processor model number;Intel Core i7 1360P Raptor Lake;5.0;8.0
+Processor model number;Intel Core i7 13620H Raptor Lake;4.4;10.0
+Processor model number;Intel Core i7 13650HX Raptor Lake;4.5;6.0
+Processor model number;Intel Core i7 1365U Raptor Lake;5.0;2.0
+Processor model number;Intel Core i7 13700H Raptor Lake;4.616129032258065;31.0
+Processor model number;Intel Core i7 13700HX Raptor Lake;4.6;20.0
+Processor model number;Intel Core i7 13705H Raptor Lake;;0.0
+Processor model number;Intel Core i7 1370P Raptor Lake;;0.0
+Processor model number;Intel Core i7 13800H Raptor Lake;;0.0
+Processor model number;Intel Core i7 13850HX Raptor Lake;;0.0
+Processor model number;Intel Core i7 7560U Kaby Lake;1.0;1.0
+Processor model number;Intel Core i7 7660U Kaby Lake;5.0;1.0
+Processor model number;Intel Core i7 8565U Whiskey Lake;5.0;2.0
+Processor model number;Intel Core i7 8569U Coffee Lake;;0.0
+Processor model number;Intel Core i7 8705G Kaby Lake G;;0.0
+Processor model number;Intel Core i7 8850H Coffee Lake;5.0;2.0
+Processor model number;Intel Core i7 9750H Coffee Lake;4.92;25.0
+Processor model number;Intel Core i9 10885H Comet Lake;;0.0
+Processor model number;Intel Core i9 11900H Tiger Lake;5.0;2.0
+Processor model number;Intel Core i9 11950H Tiger Lake;;0.0
+Processor model number;Intel Core i9 11980HK Tiger Lake;5.0;3.0
+Processor model number;Intel Core i9 12900H Alder Lake;4.857142857142857;7.0
+Processor model number;Intel Core i9 12900HK Alder Lake;5.0;1.0
+Processor model number;Intel Core i9 12900HX Alder Lake;4.2;5.0
+Processor model number;Intel Core i9 12950HX Alder Lake;3.0;3.0
+Processor model number;Intel Core i9 13900H Raptor Lake;4.766666666666667;12.0
+Processor model number;Intel Core i9 13900HX Raptor Lake;4.941935483870967;31.0
+Processor model number;Intel Core i9 13905H Raptor Lake;3.75;4.0
+Processor model number;Intel Core i9 13950HX Raptor Lake;4.833333333333333;6.0
+Processor model number;Intel Core i9 13980HX Raptor Lake;4.257142857142857;21.0
+Processor model number;Intel Core i9 9880H Coffee Lake;4.8;5.0
+Processor model number;Intel Core i9 9980HK Coffee Lake;5.0;4.0
+Processor model number;Intel Pentium 6500Y Amber Lake Y;4.8;6.0
+Processor model number;Intel Pentium Gold 4425Y Amber Lake;5.0;1.0
+Processor model number;Intel Pentium Silver N5030 Gemini Lake;5.0;1.0
+Processor model number;Intel Pentium Silver N6000 Jasper Lake;4.61;10.0
+Processor model number;Intel Processor N100;4.561538461538461;65.0
+Processor model number;Intel Processor N200;3.8;5.0
+Processor model number;MediaTek Kompanio 1380;1.0;2.0
+Processor model number;MediaTek Kompanio 520;5.0;1.0
+Processor model number;MediaTek MT8183;4.775;4.0
+Processor model number;MediaTek MT8183C;4.5;4.0
+Processor model number;Microsoft SQ3;;0.0
+Processor model number;Qualcomm Kryo 468;;0.0
+Processor model number;Qualcomm Snapdragon 7c Gen 2;4.007692307692308;13.0
+Processor model number;Qualcomm Snapdragon 8cx;;0.0
+Processor model number;Qualcomm Snapdragon SC7180;5.0;2.0
+Number of processor cores;1.0;5.0;4.0
+Number of processor cores;2.0;4.261135371179039;229.0
+Number of processor cores;4.0;4.517687074829932;441.0
+Number of processor cores;5.0;3.0;1.0
+Number of processor cores;6.0;4.430904522613066;398.0
+Number of processor cores;8.0;4.78814078041316;1307.0
+Number of processor cores;10.0;4.385209003215434;311.0
+Number of processor cores;11.0;;0.0
+Number of processor cores;12.0;4.337301587301587;252.0
+Number of processor cores;14.0;4.301960784313726;153.0
+Number of processor cores;16.0;4.3125;32.0
+Number of processor cores;20.0;;0.0
+Number of processor cores;24.0;4.682758620689656;58.0
+Processor frequency [GHz];0.7;;0.0
+Processor frequency [GHz];0.8;4.9;8.0
+Processor frequency [GHz];0.9;4.489247311827957;93.0
+Processor frequency [GHz];1.0;4.341666666666667;24.0
+Processor frequency [GHz];1.1;4.090647482014389;139.0
+Processor frequency [GHz];1.2;4.048;50.0
+Processor frequency [GHz];1.3;4.424137931034482;58.0
+Processor frequency [GHz];1.4;4.97029702970297;101.0
+Processor frequency [GHz];1.5;4.443589743589744;39.0
+Processor frequency [GHz];1.6;4.545454545454546;22.0
+Processor frequency [GHz];1.7;4.077272727272727;44.0
+Processor frequency [GHz];1.8;4.4;105.0
+Processor frequency [GHz];1.9;4.378947368421053;19.0
+Processor frequency [GHz];2.0;4.4754385964912275;114.0
+Processor frequency [GHz];2.1;4.658426966292135;89.0
+Processor frequency [GHz];2.2;4.447887323943662;71.0
+Processor frequency [GHz];2.3;4.541666666666667;168.0
+Processor frequency [GHz];2.4;4.243571428571428;140.0
+Processor frequency [GHz];2.5;4.511607142857143;112.0
+Processor frequency [GHz];2.55;4.007692307692308;13.0
+Processor frequency [GHz];2.6;4.717808219178082;73.0
+Processor frequency [GHz];2.7;4.486301369863014;73.0
+Processor frequency [GHz];2.8;4.184375;32.0
+Processor frequency [GHz];2.9;4.866666666666666;12.0
+Processor frequency [GHz];3.0;3.7571428571428576;42.0
+Processor frequency [GHz];3.1;;0.0
+Processor frequency [GHz];3.2;4.545714285714285;140.0
+Processor frequency [GHz];3.3;4.287248322147651;149.0
+Processor frequency [GHz];3.4;3.9192307692307695;26.0
+Processor frequency [GHz];3.5;4.44375;16.0
+Processor frequency [GHz];3.6;3.888888888888889;9.0
+Processor frequency [GHz];3.7;4.2;10.0
+Processor frequency [GHz];3.8;4.85;20.0
+Processor frequency [GHz];3.9;5.0;8.0
+Processor frequency [GHz];4.0;4.707692307692307;13.0
+Processor frequency [GHz];4.1;;0.0
+Processor frequency [GHz];4.3;;0.0
+Processor frequency [GHz];4.4;4.0;2.0
+Processor frequency [GHz];4.7;;0.0
+Processor frequency [GHz];11.0;;0.0
+Processor frequency [GHz];12.0;5.0;1.0
+Processor frequency [GHz];13.0;5.0;4.0
+Processor frequency [GHz];15.0;;0.0
+Processor frequency [GHz];17.0;;0.0
+Processor frequency [GHz];18.0;;0.0
+Processor frequency [GHz];23.0;;0.0
+Processor frequency [GHz];24.0;;0.0
+Processor frequency [GHz];26.0;;0.0
+Processor frequency [GHz];27.0;;0.0
+Processor frequency [GHz];33.0;4.142857142857143;7.0
+Processor frequency [GHz];34.0;;0.0
+Processor frequency [GHz];35.0;5.0;1.0
+Processor frequency [GHz];39.0;5.0;1.0
+Core boost frequency [GHz];0.5;4.0;1.0
+Core boost frequency [GHz];2.0;4.585714285714286;7.0
+Core boost frequency [GHz];2.05;5.0;1.0
+Core boost frequency [GHz];2.3;;0.0
+Core boost frequency [GHz];2.4;4.092;25.0
+Core boost frequency [GHz];2.5;;0.0
+Core boost frequency [GHz];2.7;;0.0
+Core boost frequency [GHz];2.8;4.004040404040404;99.0
+Core boost frequency [GHz];3.1;5.0;1.0
+Core boost frequency [GHz];3.3;4.508333333333334;12.0
+Core boost frequency [GHz];3.4;4.531944444444444;72.0
+Core boost frequency [GHz];3.5;4.3625;8.0
+Core boost frequency [GHz];3.6;4.64;75.0
+Core boost frequency [GHz];3.7;3.8;5.0
+Core boost frequency [GHz];3.8;4.535416666666666;48.0
+Core boost frequency [GHz];3.9;4.951923076923077;104.0
+Core boost frequency [GHz];4.0;4.617857142857143;56.0
+Core boost frequency [GHz];4.1;4.209183673469388;98.0
+Core boost frequency [GHz];4.2;4.2631147540983605;122.0
+Core boost frequency [GHz];4.3;4.462666666666666;75.0
+Core boost frequency [GHz];4.4;4.353276353276353;351.0
+Core boost frequency [GHz];4.5;4.469512195121951;328.0
+Core boost frequency [GHz];4.55;4.672727272727273;11.0
+Core boost frequency [GHz];4.6;4.53;60.0
+Core boost frequency [GHz];4.7;4.344072948328267;329.0
+Core boost frequency [GHz];4.75;5.0;2.0
+Core boost frequency [GHz];4.8;3.803703703703704;27.0
+Core boost frequency [GHz];4.9;4.515384615384615;26.0
+Core boost frequency [GHz];5.0;4.625;108.0
+Core boost frequency [GHz];5.1;4.5;20.0
+Core boost frequency [GHz];5.2;4.199999999999999;26.0
+Core boost frequency [GHz];5.3;;0.0
+Core boost frequency [GHz];5.4;4.7375;48.0
+Core boost frequency [GHz];5.5;4.8;5.0
+Core boost frequency [GHz];5.6;4.257142857142857;21.0
+Core boost frequency [GHz];34.0;;0.0
+Core boost frequency [GHz];39.0;5.0;4.0
+Core boost frequency [GHz];41.0;;0.0
+Core boost frequency [GHz];42.0;;0.0
+Core boost frequency [GHz];43.0;;0.0
+Core boost frequency [GHz];44.0;4.75;4.0
+Core boost frequency [GHz];45.0;4.25;8.0
+Core boost frequency [GHz];46.0;;0.0
+Core boost frequency [GHz];47.0;5.0;1.0
+Core boost frequency [GHz];48.0;5.0;1.0
+Core boost frequency [GHz];54.0;5.0;1.0
+TDP [W];4.0;4.7;41.0
+TDP [W];5.0;4.557142857142857;14.0
+TDP [W];6.0;4.217156862745098;204.0
+TDP [W];7.0;4.555555555555555;9.0
+TDP [W];9.0;;0.0
+TDP [W];12.0;;0.0
+TDP [W];14.0;5.0;1.0
+TDP [W];15.0;4.504232804232805;567.0
+TDP [W];20.0;;0.0
+TDP [W];25.0;5.0;9.0
+TDP [W];28.0;4.2570135746606335;221.0
+TDP [W];29.0;5.0;1.0
+TDP [W];30.0;;0.0
+TDP [W];35.0;4.608759124087591;137.0
+TDP [W];45.0;4.390484429065744;578.0
+TDP [W];50.0;4.5;2.0
+TDP [W];54.0;4.369565217391305;23.0
+TDP [W];55.0;4.374226804123712;194.0
+TDP [W];64.0;4.476923076923077;13.0
+TDP [W];95.0;4.228125;32.0
+TDP [W];110.0;;0.0
+TDP [W];115.0;4.591176470588236;34.0
+TDP [W];157.0;4.75;16.0
+Cache processor [MB];1.0;;0.0
+Cache processor [MB];2.0;4.406666666666666;15.0
+Cache processor [MB];4.0;4.72548794489093;871.0
+Cache processor [MB];6.0;4.6460905349794235;243.0
+Cache processor [MB];8.0;4.361792452830189;212.0
+Cache processor [MB];9.0;5.0;2.0
+Cache processor [MB];10.0;4.241772151898735;79.0
+Cache processor [MB];12.0;4.43609958506224;482.0
+Cache processor [MB];15.0;4.62093023255814;43.0
+Cache processor [MB];16.0;4.499438202247191;356.0
+Cache processor [MB];18.0;4.328658536585365;164.0
+Cache processor [MB];19.0;4.0;4.0
+Cache processor [MB];20.0;4.475;4.0
+Cache processor [MB];24.0;4.345454545454545;242.0
+Cache processor [MB];25.0;4.666666666666667;3.0
+Cache processor [MB];30.0;4.357142857142857;28.0
+Cache processor [MB];32.0;4.5;2.0
+Cache processor [MB];36.0;4.6947368421052635;57.0
+Cache processor [MB];64.0;3.3846153846153846;13.0
+Cache processor [MB];128.0;;0.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Low energy consumption', 'Virtualization Support'];4.846503496503496;858.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Virtualization Support', 'Multi Threading', 'vPro'];;0.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Virtualization Support', 'Multi Threading'];5.0;3.0
+CPU features;['Automatic Overclocking', 'HyperThreading', 'Virtualization Support'];4.4066892464013545;1181.0
+CPU features;['Automatic Overclocking', 'HyperThreading'];4.81875;16.0
+CPU features;['Automatic Overclocking', 'Low energy consumption', 'Virtualization Support'];4.291351351351351;185.0
+CPU features;['Automatic Overclocking', 'Low energy consumption'];4.11;30.0
+CPU features;['Automatic Overclocking', 'Multi Threading'];;0.0
+CPU features;['Automatic Overclocking', 'Virtualization Support', 'Multi Threading'];4.7444444444444445;18.0
+CPU features;['Automatic Overclocking', 'Virtualization Support'];4.53343023255814;344.0
+CPU features;['Automatic Overclocking'];4.026717557251908;131.0
+CPU features;['HyperThreading', 'Low energy consumption'];5.0;2.0
+CPU features;['HyperThreading', 'Virtualization Support'];5.0;2.0
+CPU features;['HyperThreading'];3.4749999999999996;16.0
+CPU features;['Low energy consumption', 'Virtualization Support'];4.639024390243902;41.0
+CPU features;['Virtualization Support'];4.824999999999999;16.0
+Size of operational RAM [GB];4.0;4.22;185.0
+Size of operational RAM [GB];8.0;4.683309659090909;1408.0
+Size of operational RAM [GB];12.0;5.0;2.0
+Size of operational RAM [GB];16.0;4.4962196861626245;1402.0
+Size of operational RAM [GB];18.0;5.0;1.0
+Size of operational RAM [GB];24.0;3.6666666666666665;3.0
+Size of operational RAM [GB];32.0;4.507262569832402;179.0
+Size of operational RAM [GB];36.0;;0.0
+Size of operational RAM [GB];48.0;;0.0
+Size of operational RAM [GB];64.0;4.538461538461538;13.0
+Size of operational RAM [GB];96.0;;0.0
+Size of operational RAM [GB];128.0;;0.0
+Memory type;DDR3;4.55625;48.0
+Memory type;DDR4;4.388737511353315;1101.0
+Memory type;DDR5;4.498153034300792;379.0
+Memory type;LPDDR3;5.0;3.0
+Memory type;LPDDR4;4.054166666666666;120.0
+Memory type;LPDDR4X;4.421374045801527;131.0
+Memory type;LPDDR5;4.336397058823529;272.0
+Memory type;LPDDR5x;4.416666666666667;12.0
+Memory frequency [MHz];0.0;5.0;4.0
+Memory frequency [MHz];1600.0;;0.0
+Memory frequency [MHz];1866.0;3.0;2.0
+Memory frequency [MHz];1900.0;;0.0
+Memory frequency [MHz];2000.0;;0.0
+Memory frequency [MHz];2130.0;;0.0
+Memory frequency [MHz];2133.0;4.763978494623656;186.0
+Memory frequency [MHz];2200.0;;0.0
+Memory frequency [MHz];2400.0;4.09140625;128.0
+Memory frequency [MHz];2600.0;5.0;1.0
+Memory frequency [MHz];2666.0;4.7153846153846155;52.0
+Memory frequency [MHz];2933.0;4.446153846153846;26.0
+Memory frequency [MHz];3200.0;4.4465581977471835;799.0
+Memory frequency [MHz];3600.0;5.0;1.0
+Memory frequency [MHz];3733.0;4.904609929078014;282.0
+Memory frequency [MHz];4266.0;4.454545454545454;44.0
+Memory frequency [MHz];4267.0;;0.0
+Memory frequency [MHz];4800.0;4.360833333333334;360.0
+Memory frequency [MHz];5200.0;4.54390243902439;82.0
+Memory frequency [MHz];5500.0;4.6;15.0
+Memory frequency [MHz];5600.0;4.939130434782609;46.0
+Memory frequency [MHz];6000.0;5.0;1.0
+Memory frequency [MHz];6400.0;4.5638297872340425;47.0
+Memory frequency [MHz];7467.0;;0.0
+Memory frequency [MHz];7500.0;;0.0
+Memory frequency [MHz];48000.0;;0.0
+Number of installed slots;0.0;4.292934782608696;184.0
+Number of installed slots;1.0;4.406084656084656;378.0
+Number of installed slots;2.0;4.496511627906977;688.0
+Total number of slots;0.0;4.391818181818182;330.0
+Total number of slots;1.0;4.4296650717703345;209.0
+Total number of slots;2.0;4.441327124563446;859.0
+Total number of slots;3.0;4.625;16.0
+Total number of slots;4.0;4.333333333333333;6.0
+Graphics card type;['Dedicated', 'Integrated'];5.0;2.0
+Graphics card type;['Dedicated'];4.5114832535885165;418.0
+Graphics card type;['Gaming'];4.307780320366133;437.0
+Graphics card type;['Integrated'];4.62002567394095;2337.0
+Graphics card brand;AMD Radeon;4.523571428571429;280.0
+Graphics card brand;AMD Radeon Pro;4.958333333333333;24.0
+Graphics card brand;AMD Radeon RX;4.285714285714286;14.0
+Graphics card brand;ARM;4.009090909090909;11.0
+Graphics card brand;Apple;4.884771573604061;985.0
+Graphics card brand;Intel;4.391977077363896;1047.0
+Graphics card brand;NVIDIA;;0.0
+Graphics card brand;NVIDIA GeForce;4.414022140221402;813.0
+Graphics card brand;NVIDIA Quadro;5.0;5.0
+Graphics card brand;Qualcomm;4.14;15.0
+Model graphics cards;5300M;5.0;13.0
+Model graphics cards;5500M;4.923076923076923;13.0
+Model graphics cards;5600M;;0.0
+Model graphics cards;560X;;0.0
+Model graphics cards;610;3.8;5.0
+Model graphics cards;610M;4.5;2.0
+Model graphics cards;610M Graphics;4.595454545454545;22.0
+Model graphics cards;6600M;4.0;6.0
+Model graphics cards;6600S;;0.0
+Model graphics cards;660M Graphics;4.735294117647059;17.0
+Model graphics cards;6700M;;0.0
+Model graphics cards;6700S;4.0;4.0
+Model graphics cards;680M;;0.0
+Model graphics cards;680M Graphics;4.666666666666667;3.0
+Model graphics cards;740M;;0.0
+Model graphics cards;7600S;;0.0
+Model graphics cards;760M;;0.0
+Model graphics cards;780M;1.0;1.0
+Model graphics cards;A2000;;0.0
+Model graphics cards;Adreno 618;4.14;15.0
+Model graphics cards;Adreno 690;;0.0
+Model graphics cards;Adreno GPU;;0.0
+Model graphics cards;Arc A350M Graphics;2.0;2.0
+Model graphics cards;Arc A370M Graphics;3.976923076923077;13.0
+Model graphics cards;Arc Pro A30M Graphics;;0.0
+Model graphics cards;GTX 1650;4.29375;32.0
+Model graphics cards;GTX 1650 Max-Q;5.0;1.0
+Model graphics cards;GTX 1650 Ti;4.3;3.0
+Model graphics cards;GTX 1650 Ti Max-Q;;0.0
+Model graphics cards;GTX 1660 Ti;5.0;2.0
+Model graphics cards;GTX 1660 Ti Max-Q;5.0;1.0
+Model graphics cards;Graphics;4.551569506726457;223.0
+Model graphics cards;HD Graphics 615;5.0;1.0
+Model graphics cards;Iris Plus Graphics;5.0;10.0
+Model graphics cards;Iris Plus Graphics 640;4.645161290322581;62.0
+Model graphics cards;Iris Plus Graphics 645;5.0;95.0
+Model graphics cards;Iris Plus Graphics 655;;0.0
+Model graphics cards;Iris Pro Graphics 5200;;0.0
+Model graphics cards;Iris Xe Graphics;4.3426991150442475;452.0
+Model graphics cards;M1 7-core GPU;4.909682080924855;692.0
+Model graphics cards;M1 8-core GPU;4.975757575757576;66.0
+Model graphics cards;M1 MAX 32-core GPU;5.0;1.0
+Model graphics cards;M1 PRO 16-core GPU;4.0;4.0
+Model graphics cards;M2 10-core GPU;4.888172043010753;93.0
+Model graphics cards;M2 8-core GPU;4.7155172413793105;116.0
+Model graphics cards;M2 MAX 30-core GPU;;0.0
+Model graphics cards;M2 MAX 38-core GPU;;0.0
+Model graphics cards;M2 PRO 16-core GPU;;0.0
+Model graphics cards;M2 PRO 19-core GPU;4.833333333333333;12.0
+Model graphics cards;M3 10-core GPU;;0.0
+Model graphics cards;M3 MAX 30-core GPU;;0.0
+Model graphics cards;M3 MAX 40-core GPU;;0.0
+Model graphics cards;M3 PRO 14-core GPU;;0.0
+Model graphics cards;M3 PRO 18-core GPU;5.0;1.0
+Model graphics cards;MX150;5.0;2.0
+Model graphics cards;MX250;;0.0
+Model graphics cards;MX330;1.0;1.0
+Model graphics cards;MX350;4.0;1.0
+Model graphics cards;MX450;4.111111111111111;9.0
+Model graphics cards;MX550;4.33125;16.0
+Model graphics cards;MX570;5.0;2.0
+Model graphics cards;Mali-G52 2EE MC2;5.0;1.0
+Model graphics cards;Mali-G57 MC5;1.0;2.0
+Model graphics cards;Mali-G72 MP3;4.6375;8.0
+Model graphics cards;P520;;0.0
+Model graphics cards;R7;;0.0
+Model graphics cards;RTX 2000;;0.0
+Model graphics cards;RTX 2000 Ada Generation;;0.0
+Model graphics cards;RTX 2050;4.516883116883117;77.0
+Model graphics cards;RTX 2060;3.7636363636363637;33.0
+Model graphics cards;RTX 2060 Max-Q;;0.0
+Model graphics cards;RTX 2070 Max-Q;4.595238095238095;21.0
+Model graphics cards;RTX 2070 Super;5.0;1.0
+Model graphics cards;RTX 2070 Super Max-Q;;0.0
+Model graphics cards;RTX 2080 Max-Q;;0.0
+Model graphics cards;RTX 2080 Super;;0.0
+Model graphics cards;RTX 2080 Super Max-Q;;0.0
+Model graphics cards;RTX 3000;;0.0
+Model graphics cards;RTX 3000 Ada Generation;;0.0
+Model graphics cards;RTX 3050;4.357843137254902;102.0
+Model graphics cards;RTX 3050 Ti;4.285714285714286;7.0
+Model graphics cards;RTX 3060;4.243835616438355;73.0
+Model graphics cards;RTX 3070;4.20625;32.0
+Model graphics cards;RTX 3070 Ti;4.583333333333333;30.0
+Model graphics cards;RTX 3080;4.8;5.0
+Model graphics cards;RTX 3080 Ti;4.0;10.0
+Model graphics cards;RTX 3500;;0.0
+Model graphics cards;RTX 4050;4.527868852459016;61.0
+Model graphics cards;RTX 4060;4.508173076923077;208.0
+Model graphics cards;RTX 4070;4.796;50.0
+Model graphics cards;RTX 4080;4.375;16.0
+Model graphics cards;RTX 4090;4.082352941176471;17.0
+Model graphics cards;RTX 5000 Ada Generation;;0.0
+Model graphics cards;RTX A1000;;0.0
+Model graphics cards;RTX A2000;5.0;4.0
+Model graphics cards;RTX A3000;;0.0
+Model graphics cards;RTX A4500;;0.0
+Model graphics cards;RTX A500;5.0;1.0
+Model graphics cards;RTX A5500;;0.0
+Model graphics cards;SQ 2 Adreno 690;;0.0
+Model graphics cards;T1000 Max-Q;;0.0
+Model graphics cards;T1200;;0.0
+Model graphics cards;T500;;0.0
+Model graphics cards;T550;;0.0
+Model graphics cards;UHD Graphics;4.33956043956044;273.0
+Model graphics cards;UHD Graphics 600;4.020909090909091;110.0
+Model graphics cards;UHD Graphics 605;5.0;1.0
+Model graphics cards;UHD Graphics 615;4.586666666666667;15.0
+Model graphics cards;UHD Graphics 617;4.5;8.0
+Model graphics cards;UHD Graphics 620;5.0;1.0
+Model graphics cards;UHD Graphics 630;5.0;2.0
+Model graphics cards;Vega 7;4.0;8.0
+Model graphics cards;Vega 8;;0.0
+Model graphics cards;Vega M GL;;0.0
+Operating system;['FreeDOS'];;0.0
+Operating system;['Google Chrome OS'];4.2153846153846155;39.0
+Operating system;['Windows 10 Home'];4.183802816901409;142.0
+Operating system;['Windows 10 Pro Academic std'];;0.0
+Operating system;['Windows 10 Pro'];4.261702127659575;47.0
+Operating system;['Windows 10 S'];4.0;1.0
+Operating system;['Windows 11 Home'];4.44434628975265;1132.0
+Operating system;['Windows 11 Pro Academic'];4.6;25.0
+Operating system;['Windows 11 Pro', 'Windows 10 Professional'];3.0;2.0
+Operating system;['Windows 11 Pro'];4.151020408163265;245.0
+Operating system;['Windows 11 S'];4.480232558139535;86.0
+Operating system;['Without Operating System'];4.382534246575343;292.0
+Operating system;['macOS'];4.884615384615385;1183.0
+Storage Type;['Flash'];4.091772151898734;158.0
+Storage Type;['SSD', 'HDD'];4.0;6.0
+Storage Type;['SSD'];4.58826648989062;3017.0
+Storage Type;['UFS'];;0.0
+Storage capacity [GB];64.0;4.75;8.0
+Storage capacity [GB];128.0;4.472649572649573;351.0
+Storage capacity [GB];256.0;4.788843813387424;986.0
+Storage capacity [GB];500.0;;0.0
+Storage capacity [GB];512.0;4.502038834951457;1030.0
+Storage capacity [GB];1000.0;4.401456953642384;755.0
+Storage capacity [GB];1024.0;;0.0
+Storage capacity [GB];1256.0;5.0;2.0
+Storage capacity [GB];1512.0;5.0;3.0
+Storage capacity [GB];2000.0;4.311627906976744;43.0
+Storage capacity [GB];4000.0;5.0;1.0
+Storage capacity [GB];8000.0;;0.0
+Drive interfaces;M.2;4.359493670886076;79.0
+Drive interfaces;M.2 NVMe PCIe 4.0;4.476923076923077;26.0
+Drive interfaces;NVME;4.847084548104957;686.0
+Drive interfaces;PCIe;4.809883720930233;172.0
+Drive interfaces;PCIe NVMe;4.437459494491251;1543.0
+Drive interfaces;SATA III;;0.0
+Drive interfaces;eMMC;4.0188811188811195;143.0
+SSD capacity [GB];64.0;;0.0
+SSD capacity [GB];128.0;4.754017857142857;224.0
+SSD capacity [GB];256.0;4.795967741935484;992.0
+SSD capacity [GB];500.0;;0.0
+SSD capacity [GB];512.0;4.506389157792837;1033.0
+SSD capacity [GB];1000.0;4.395910290237467;758.0
+SSD capacity [GB];1024.0;;0.0
+SSD capacity [GB];1512.0;;0.0
+SSD capacity [GB];2000.0;4.41;40.0
+SSD capacity [GB];4000.0;5.0;1.0
+SSD capacity [GB];8000.0;;0.0
+Number of occupied slots M.2;0.0;4.013541666666667;96.0
+Number of occupied slots M.2;1.0;4.413014608233731;1506.0
+Number of occupied slots M.2;2.0;3.9499999999999997;12.0
+Slots in total M.2;0.0;4.238888888888889;18.0
+Slots in total M.2;1.0;4.332919954904171;887.0
+Slots in total M.2;2.0;4.452520325203253;615.0
+Slots in total M.2;3.0;;0.0
+Slots in total M.2;4.0;4.0;4.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'MUX Switch', 'TPM 2.0'];5.0;3.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0'];4.5;2.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'NumberPad'];5.0;2.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];4.44;35.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Smart card reader', 'SIM Card'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.5736842105263165;19.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.166666666666667;24.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint'];5.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];5.0;2.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system'];4.266666666666667;15.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];5.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0'];4.82;5.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Memory Card Reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'Smart card reader'];5.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.654545454545455;11.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0'];4.454545454545454;22.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello'];5.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'TrackPoint', 'TPM 2.0'];1.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'Windows Hello', 'Smart card reader', 'SIM Card'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];3.0;2.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Operating system'];4.899898063200816;981.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'TPM 2.0', 'NumberPad', 'Windows Hello'];4.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];3.0;1.0
+Equipment;['Backlit keyboard', 'Fingerprint Reader'];;0.0
+Equipment;['Backlit keyboard', 'MUX Switch', 'Nvidia G-SYNC'];5.0;2.0
+Equipment;['Backlit keyboard', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC'];;0.0
+Equipment;['Backlit keyboard', 'MUX Switch', 'TPM 2.0'];5.0;2.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'MUX Switch', 'TPM 2.0'];1.0;1.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello'];4.666666666666667;3.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];3.0;2.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Nvidia G-SYNC'];5.0;1.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.27906976744186;43.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.666666666666667;15.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'TrackPoint'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Operating system'];4.6;20.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'TPM 2.0', 'Nvidia G-SYNC'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'TPM 2.0', 'Windows Hello'];4.571428571428571;7.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Memory Card Reader', 'Windows Hello'];5.0;4.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];4.0;4.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0'];3.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'Windows Hello'];5.0;4.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Smart card reader'];5.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];1.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.496428571428571;28.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.607843137254902;51.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system'];4.411111111111111;18.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0'];3.6869565217391305;23.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader'];4.5;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader', 'SIM Card'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0'];4.430645161290323;62.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];4.333333333333333;3.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'Operating system'];4.145283018867924;53.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'TPM 2.0'];4.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Fingerprint Reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'MUX Switch', 'Nvidia G-SYNC'];4.4;3.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC'];3.2999999999999994;3.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];5.0;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'Nvidia G-SYNC'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'RGB backlit keyboard'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'ScreenPad'];5.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.3;8.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.1;32.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'Operating system'];4.5562499999999995;32.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello'];4.4;5.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Memory Card Reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'MUX Switch', 'TPM 2.0'];4.8;5.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'RGB backlit keyboard'];1.0;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'ScreenPad', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];3.0;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'TPM 2.0', 'Smart card reader'];5.0;1.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'TPM 2.0'];4.52741935483871;62.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Operating system'];4.614285714285715;21.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'TPM 2.0'];4.126086956521739;23.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];2.3;9.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];3.0;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'Windows Hello', 'Smart card reader'];5.0;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Memory Card Reader', 'Operating system'];5.0;5.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'MUX Switch', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Memory Card Reader', 'TPM 2.0', 'Windows Hello'];4.4;6.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Operating system', 'ScreenPad', 'NumberPad'];4.5;2.0
+Equipment;['Backlit keyboard', 'Numeric keyboard', 'Touch display', 'Stylus support', 'Operating system', 'TPM 2.0'];4.0;4.0
+Equipment;['Backlit keyboard', 'Numeric keyboard'];4.3076923076923075;39.0
+Equipment;['Backlit keyboard', 'Operating system', 'MUX Switch', 'Nvidia G-SYNC'];5.0;1.0
+Equipment;['Backlit keyboard', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Backlit keyboard', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'MUX Switch'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'NumberPad'];5.0;1.0
+Equipment;['Backlit keyboard', 'Operating system', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Backlit keyboard', 'Operating system', 'TPM 2.0', 'Nvidia G-SYNC'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.597499999999999;40.0
+Equipment;['Backlit keyboard', 'Operating system', 'TPM 2.0'];4.246153846153846;13.0
+Equipment;['Backlit keyboard', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Operating system'];4.629390681003584;279.0
+Equipment;['Backlit keyboard', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'TPM 2.0', 'Windows Hello'];5.0;2.0
+Equipment;['Backlit keyboard', 'TPM 2.0'];4.5;8.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];5.0;3.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];2.75;4.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'NumberPad', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];4.36;20.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system'];4.62;5.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'TPM 2.0'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Memory Card Reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'NumberPad', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'TPM 2.0'];2.3333333333333335;3.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system', 'Windows INK', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'NumberPad', 'Windows Hello', 'Smart card reader', 'MicroSIM Card'];4.0;3.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'NumberPad'];2.3333333333333335;3.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];5.0;4.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'TrackPoint', 'TPM 2.0', 'Windows Hello'];1.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'Operating system'];4.4;6.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'Stylus support', 'TPM 2.0', 'Windows Hello'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader', 'TPM 2.0', 'NumberPad', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Fingerprint Reader'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'NumberPad'];5.0;1.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'GPS', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0'];5.0;2.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'NumberPad'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'Smart card reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.5125;8.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.58;5.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Operating system'];4.12962962962963;27.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'MUX Switch', 'ScreenPad', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.7;10.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader', 'Stylus support', 'TPM 2.0', 'Windows Hello'];4.8;8.0
+Equipment;['Backlit keyboard', 'Touch display', 'Memory Card Reader'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.5;2.0
+Equipment;['Backlit keyboard', 'Touch display', 'Operating system'];5.0;2.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system', 'TPM 2.0', 'NumberPad', 'Windows Hello'];5.0;2.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system', 'TPM 2.0', 'NumberPad'];4.0;4.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.0;5.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system', 'Windows Hello'];5.0;3.0
+Equipment;['Backlit keyboard', 'Touch display', 'Stylus support', 'Operating system'];;0.0
+Equipment;['Backlit keyboard', 'Touch display', 'TPM 2.0'];;0.0
+Equipment;['Backlit keyboard'];3.5454545454545454;33.0
+Equipment;['Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'RGB backlit keyboard'];;0.0
+Equipment;['Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];;0.0
+Equipment;['Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Fingerprint Reader', 'Memory Card Reader', 'Operating system'];4.0;1.0
+Equipment;['Fingerprint Reader', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];;0.0
+Equipment;['Fingerprint Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];3.5;2.0
+Equipment;['Fingerprint Reader', 'Operating system', 'RGB backlit keyboard'];4.0;1.0
+Equipment;['Fingerprint Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];5.0;2.0
+Equipment;['Fingerprint Reader', 'Operating system', 'TPM 2.0'];4.0;5.0
+Equipment;['Fingerprint Reader', 'Operating system', 'TrackPoint', 'Windows Hello', 'Smart card reader', 'RGB backlit keyboard'];;0.0
+Equipment;['Fingerprint Reader', 'Operating system'];5.0;6.0
+Equipment;['Fingerprint Reader', 'RGB backlit keyboard'];;0.0
+Equipment;['MUX Switch', 'RGB backlit keyboard'];;0.0
+Equipment;['MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.445454545454545;11.0
+Equipment;['MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'NumberPad', 'RGB backlit keyboard'];2.0;1.0
+Equipment;['Memory Card Reader', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];5.0;3.0
+Equipment;['Memory Card Reader', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello', 'RGB backlit keyboard'];4.4;5.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.775;8.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];4.0;4.0
+Equipment;['Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Windows Hello', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Memory Card Reader', 'Operating system', 'RGB backlit keyboard'];5.0;3.0
+Equipment;['Memory Card Reader', 'Operating system', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];5.0;3.0
+Equipment;['Memory Card Reader', 'Operating system', 'TPM 2.0', 'ScreenPad', 'NumberPad', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system', 'TPM 2.0', 'Windows Hello', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Memory Card Reader', 'Operating system', 'TPM 2.0'];3.975;80.0
+Equipment;['Memory Card Reader', 'Operating system', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Memory Card Reader', 'Operating system'];4.5;6.0
+Equipment;['Memory Card Reader', 'TPM 2.0', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Memory Card Reader', 'TPM 2.0'];;0.0
+Equipment;['Memory Card Reader'];5.0;3.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];3.0;1.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];5.0;2.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'RGB backlit keyboard'];;0.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0'];4.5;4.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];4.0;1.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Operating system', 'TPM 2.0'];3.8181818181818183;11.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'Operating system'];4.0;2.0
+Equipment;['Numeric keyboard', 'Fingerprint Reader', 'TPM 2.0'];;0.0
+Equipment;['Numeric keyboard', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];;0.0
+Equipment;['Numeric keyboard', 'MUX Switch', 'RGB backlit keyboard'];4.571428571428571;7.0
+Equipment;['Numeric keyboard', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.479310344827587;58.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];;0.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];;0.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'RGB backlit keyboard'];5.0;11.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];3.0;1.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];4.497619047619047;42.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'Operating system'];4.75;16.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'RGB backlit keyboard'];4.3;7.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'TPM 2.0', 'RGB backlit keyboard'];4.373684210526315;19.0
+Equipment;['Numeric keyboard', 'Memory Card Reader', 'TPM 2.0'];4.5;2.0
+Equipment;['Numeric keyboard', 'Memory Card Reader'];;0.0
+Equipment;['Numeric keyboard', 'Operating system', '3D RealSense webcam'];;0.0
+Equipment;['Numeric keyboard', 'Operating system', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.5;2.0
+Equipment;['Numeric keyboard', 'Operating system', 'MUX Switch', 'RGB backlit keyboard'];4.734285714285714;35.0
+Equipment;['Numeric keyboard', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.570666666666667;75.0
+Equipment;['Numeric keyboard', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];4.811111111111111;45.0
+Equipment;['Numeric keyboard', 'Operating system', 'RGB backlit keyboard'];4.025;8.0
+Equipment;['Numeric keyboard', 'Operating system', 'TPM 2.0', 'RGB backlit keyboard'];4.6937500000000005;48.0
+Equipment;['Numeric keyboard', 'Operating system', 'TPM 2.0'];4.493617021276595;94.0
+Equipment;['Numeric keyboard', 'Operating system', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Numeric keyboard', 'Operating system'];4.2176470588235295;34.0
+Equipment;['Numeric keyboard', 'TPM 2.0', 'RGB backlit keyboard'];4.214285714285714;14.0
+Equipment;['Numeric keyboard', 'TPM 2.0'];4.0;4.0
+Equipment;['Numeric keyboard', 'Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];5.0;2.0
+Equipment;['Numeric keyboard'];3.9;15.0
+Equipment;['Operating system', 'MUX Switch', 'Nvidia G-SYNC', 'RGB backlit keyboard'];;0.0
+Equipment;['Operating system', 'MUX Switch', 'RGB backlit keyboard'];4.25;16.0
+Equipment;['Operating system', 'MUX Switch', 'TPM 2.0', 'NumberPad', 'RGB backlit keyboard'];;0.0
+Equipment;['Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'NumberPad', 'RGB backlit keyboard'];5.0;5.0
+Equipment;['Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.3;10.0
+Equipment;['Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];4.4;3.0
+Equipment;['Operating system', 'RGB backlit keyboard'];4.418181818181818;11.0
+Equipment;['Operating system', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Operating system', 'TPM 2.0', 'RGB backlit keyboard'];4.333333333333333;3.0
+Equipment;['Operating system', 'TPM 2.0'];4.398305084745763;59.0
+Equipment;['Operating system', 'Windows Hello', 'RGB backlit keyboard'];5.0;1.0
+Equipment;['Operating system'];4.553333333333333;30.0
+Equipment;['TPM 2.0', 'RGB backlit keyboard'];;0.0
+Equipment;['TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['TPM 2.0'];4.775;4.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];5.0;4.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'NumberPad', 'Windows Hello', 'RGB backlit keyboard'];;0.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];5.0;4.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Memory Card Reader', 'TPM 2.0', 'Smart card reader'];;0.0
+Equipment;['Touch display', 'Fingerprint Reader', 'Operating system', 'TPM 2.0', 'Windows Hello'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'Windows Hello'];5.0;2.0
+Equipment;['Touch display', 'Memory Card Reader', 'Operating system', 'TPM 2.0'];5.0;3.0
+Equipment;['Touch display', 'Memory Card Reader', 'Operating system', 'Windows Hello'];5.0;1.0
+Equipment;['Touch display', 'Memory Card Reader', 'Operating system'];5.0;3.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'MUX Switch', 'TPM 2.0', 'Nvidia G-SYNC', 'RGB backlit keyboard'];4.8;4.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'MUX Switch', 'TPM 2.0', 'RGB backlit keyboard'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'No stylus'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'ScreenPad'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0', 'ScreenPad', 'Windows Hello'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Touch display', 'Memory Card Reader', 'Stylus support', 'Operating system'];1.0;2.0
+Equipment;['Touch display', 'Memory Card Reader'];;0.0
+Equipment;['Touch display', 'Operating system', 'No stylus'];4.4363636363636365;11.0
+Equipment;['Touch display', 'Operating system', 'Optic drive'];5.0;1.0
+Equipment;['Touch display', 'Operating system', 'TPM 2.0'];;0.0
+Equipment;['Touch display', 'Operating system'];4.736363636363636;11.0
+Equipment;['Touch display', 'Stylus support', 'Operating system', 'No stylus'];5.0;2.0
+Equipment;['Touch display', 'Stylus support', 'Operating system', 'TPM 2.0', 'Windows Hello'];4.833333333333333;6.0
+Equipment;['Touch display', 'Stylus support', 'Operating system', 'TPM 2.0'];4.25;8.0
+Equipment;['Touch display', 'Stylus support', 'Operating system', 'Windows Hello'];;0.0
+Equipment;['Touch display', 'Stylus support', 'Operating system'];3.2583333333333333;12.0
+Equipment;['Touch display', 'Stylus support', 'TPM 2.0'];;0.0
+Equipment;['Touch display'];5.0;1.0
+Webcam;0.3 Mpx;4.2;7.0
+Webcam;1.3 Mpx;1.0;1.0
+Webcam;10 Mpx;;0.0
+Webcam;1080 p;4.450681536555142;807.0
+Webcam;1440 p;5.0;2.0
+Webcam;1920 p;4.75;8.0
+Webcam;2 Mpx;3.2;5.0
+Webcam;480 p;3.9333333333333336;12.0
+Webcam;5 Mpx;4.7375;8.0
+Webcam;720 p;4.636849132176235;2247.0
+Webcam;8 Mpx;3.6666666666666665;3.0
+Webcam;8 p;5.0;1.0
+USB-C charging;Can be charged via USB-C;4.652755905511811;2286.0
+USB-C charging;No charging via USB-C;4.349423963133641;868.0
+Charging connector;3,5/1,35 mm;4.011926605504588;109.0
+Charging connector;4,0/1,35 mm;4.2;5.0
+Charging connector;4,0/1,7 mm;;0.0
+Charging connector;4,5/2,9 mm;;0.0
+Charging connector;4,5/3,0 mm;4.380891719745223;157.0
+Charging connector;4.5/2.9mm;4.386046511627907;43.0
+Charging connector;5,5/2,5 mm;5.0;2.0
+Charging connector;6,00/3,00 mm;4.508108108108108;185.0
+Charging connector;7.4/5.1mm;4.35;8.0
+Charging connector;Apple MagSafe;5.0;4.0
+Charging connector;Lenovo Slim Tip;4.5625;224.0
+Charging connector;Lenovo Wall Adapter;4.539423076923077;104.0
+Charging connector;MS Surface 6-pin;4.53939393939394;33.0
+Charging connector;USB-C;4.585121107266436;578.0
+Charging connector;USB-C, Apple MagSafe;5.0;12.0
+Battery capacity [Wh];3.0;;0.0
+Battery capacity [Wh];26.8;4.8;6.0
+Battery capacity [Wh];27.0;4.2625;8.0
+Battery capacity [Wh];29.0;;0.0
+Battery capacity [Wh];30.0;3.898591549295775;71.0
+Battery capacity [Wh];35.6;4.142857142857143;7.0
+Battery capacity [Wh];36.0;3.9896551724137934;29.0
+Battery capacity [Wh];37.0;1.0;1.0
+Battery capacity [Wh];38.0;4.323880597014925;67.0
+Battery capacity [Wh];39.0;5.0;4.0
+Battery capacity [Wh];39.3;4.5;2.0
+Battery capacity [Wh];40.0;4.2625;16.0
+Battery capacity [Wh];41.0;4.440869565217391;115.0
+Battery capacity [Wh];42.0;4.3;158.0
+Battery capacity [Wh];43.0;4.0;1.0
+Battery capacity [Wh];44.5;;0.0
+Battery capacity [Wh];45.0;4.603478260869565;115.0
+Battery capacity [Wh];46.0;;0.0
+Battery capacity [Wh];47.0;4.621428571428571;28.0
+Battery capacity [Wh];47.4;;0.0
+Battery capacity [Wh];47.7;4.25;12.0
+Battery capacity [Wh];48.0;4.411926605504587;109.0
+Battery capacity [Wh];48.96;5.0;1.0
+Battery capacity [Wh];49.5;;0.0
+Battery capacity [Wh];49.9;5.0;33.0
+Battery capacity [Wh];50.0;4.829204693611473;767.0
+Battery capacity [Wh];50.3;4.5;8.0
+Battery capacity [Wh];51.0;3.935294117647059;17.0
+Battery capacity [Wh];52.0;4.5;2.0
+Battery capacity [Wh];52.4;3.3333333333333335;3.0
+Battery capacity [Wh];52.5;4.661538461538462;26.0
+Battery capacity [Wh];52.6;5.0;7.0
+Battery capacity [Wh];52.8;;0.0
+Battery capacity [Wh];53.0;4.721794871794872;156.0
+Battery capacity [Wh];53.5;4.470149253731344;67.0
+Battery capacity [Wh];54.0;4.504545454545454;44.0
+Battery capacity [Wh];54.7;;0.0
+Battery capacity [Wh];55.0;4.4;8.0
+Battery capacity [Wh];56.0;4.245098039215686;51.0
+Battery capacity [Wh];56.5;4.8;5.0
+Battery capacity [Wh];56.6;4.55;20.0
+Battery capacity [Wh];57.0;4.562666666666667;75.0
+Battery capacity [Wh];58.0;5.0;40.0
+Battery capacity [Wh];58.2;4.986324786324786;117.0
+Battery capacity [Wh];59.0;4.8;5.0
+Battery capacity [Wh];60.0;4.302;50.0
+Battery capacity [Wh];60.7;;0.0
+Battery capacity [Wh];61.0;4.5;14.0
+Battery capacity [Wh];62.0;;0.0
+Battery capacity [Wh];63.0;4.192592592592593;27.0
+Battery capacity [Wh];64.0;1.0;1.0
+Battery capacity [Wh];65.0;4.6;10.0
+Battery capacity [Wh];66.0;5.0;1.0
+Battery capacity [Wh];66.5;;0.0
+Battery capacity [Wh];67.0;;0.0
+Battery capacity [Wh];68.0;;0.0
+Battery capacity [Wh];69.0;;0.0
+Battery capacity [Wh];70.0;4.352777777777778;72.0
+Battery capacity [Wh];71.0;4.756521739130435;23.0
+Battery capacity [Wh];72.0;2.5;2.0
+Battery capacity [Wh];73.0;4.557142857142857;7.0
+Battery capacity [Wh];73.6;5.0;8.0
+Battery capacity [Wh];75.0;4.381111111111111;90.0
+Battery capacity [Wh];75.4;4.536363636363636;11.0
+Battery capacity [Wh];76.0;4.126666666666667;15.0
+Battery capacity [Wh];80.0;4.660169491525424;118.0
+Battery capacity [Wh];82.0;2.3;9.0
+Battery capacity [Wh];83.0;4.642857142857143;14.0
+Battery capacity [Wh];83.6;;0.0
+Battery capacity [Wh];84.0;5.0;2.0
+Battery capacity [Wh];86.0;3.888888888888889;9.0
+Battery capacity [Wh];87.0;;0.0
+Battery capacity [Wh];88.0;;0.0
+Battery capacity [Wh];90.0;4.436249999999999;160.0
+Battery capacity [Wh];91.7;5.0;1.0
+Battery capacity [Wh];92.0;4.5;2.0
+Battery capacity [Wh];93.0;;0.0
+Battery capacity [Wh];94.0;;0.0
+Battery capacity [Wh];95.0;;0.0
+Battery capacity [Wh];95.2;5.0;1.0
+Battery capacity [Wh];96.0;3.0;1.0
+Battery capacity [Wh];97.0;;0.0
+Battery capacity [Wh];99.0;4.714285714285714;7.0
+Battery capacity [Wh];99.9;4.5;14.0
+Battery capacity [Wh];99.99;4.4;5.0
+Battery capacity [Wh];100.0;4.916666666666667;36.0
+Battery capacity [Wh];268.0;5.0;4.0
+Battery capacity [Wh];393.0;4.166666666666667;6.0
+Battery capacity [Wh];525.0;;0.0
+Battery capacity [Wh];526.0;5.0;2.0
+Battery capacity [Wh];545.0;4.7;60.0
+Battery capacity [Wh];665.0;4.818181818181818;22.0
+Charging power [W];3.0;5.0;2.0
+Charging power [W];24.0;4.0814516129032254;124.0
+Charging power [W];30.0;4.853900709219858;141.0
+Charging power [W];33.0;5.0;1.0
+Charging power [W];35.0;4.826086956521739;23.0
+Charging power [W];39.0;;0.0
+Charging power [W];45.0;4.358516483516484;364.0
+Charging power [W];60.0;;0.0
+Charging power [W];61.0;4.9;16.0
+Charging power [W];63.0;5.0;2.0
+Charging power [W];64.0;5.0;1.0
+Charging power [W];65.0;4.40934393638171;503.0
+Charging power [W];67.0;5.0;3.0
+Charging power [W];70.0;5.0;2.0
+Charging power [W];90.0;4.32089552238806;67.0
+Charging power [W];95.0;4.8125;16.0
+Charging power [W];96.0;5.0;10.0
+Charging power [W];100.0;4.315555555555555;45.0
+Charging power [W];102.0;;0.0
+Charging power [W];110.0;;0.0
+Charging power [W];120.0;3.83265306122449;49.0
+Charging power [W];130.0;3.9200000000000004;10.0
+Charging power [W];135.0;4.3673913043478265;46.0
+Charging power [W];140.0;4.3545454545454545;11.0
+Charging power [W];150.0;4.384269662921348;89.0
+Charging power [W];165.0;;0.0
+Charging power [W];170.0;4.509615384615385;52.0
+Charging power [W];180.0;4.425;16.0
+Charging power [W];200.0;4.3125;72.0
+Charging power [W];230.0;4.667857142857143;56.0
+Charging power [W];240.0;4.655038759689923;129.0
+Charging power [W];280.0;4.2727272727272725;33.0
+Charging power [W];300.0;4.647368421052631;95.0
+Charging power [W];330.0;4.3;58.0
+Maximum battery capacity [h];0.0;4.666666666666667;3.0
+Maximum battery capacity [h];3.5;;0.0
+Maximum battery capacity [h];4.0;5.0;4.0
+Maximum battery capacity [h];4.5;4.6;5.0
+Maximum battery capacity [h];4.75;;0.0
+Maximum battery capacity [h];5.0;4.295454545454546;22.0
+Maximum battery capacity [h];5.25;5.0;1.0
+Maximum battery capacity [h];5.32;4.585714285714286;14.0
+Maximum battery capacity [h];5.5;4.666666666666667;6.0
+Maximum battery capacity [h];5.75;;0.0
+Maximum battery capacity [h];6.0;3.8264150943396227;53.0
+Maximum battery capacity [h];6.3;4.545454545454546;11.0
+Maximum battery capacity [h];6.5;4.865116279069767;43.0
+Maximum battery capacity [h];6.55;4.7592592592592595;27.0
+Maximum battery capacity [h];6.75;5.0;1.0
+Maximum battery capacity [h];6.8;5.0;1.0
+Maximum battery capacity [h];6.85;4.5;25.0
+Maximum battery capacity [h];7.0;4.231578947368422;19.0
+Maximum battery capacity [h];7.25;5.0;1.0
+Maximum battery capacity [h];7.5;4.384615384615385;39.0
+Maximum battery capacity [h];7.6;5.0;1.0
+Maximum battery capacity [h];7.7;4.2727272727272725;11.0
+Maximum battery capacity [h];7.75;4.5;2.0
+Maximum battery capacity [h];7.8;;0.0
+Maximum battery capacity [h];7.85;5.0;1.0
+Maximum battery capacity [h];7.9;1.0;1.0
+Maximum battery capacity [h];8.0;4.221134020618557;194.0
+Maximum battery capacity [h];8.02;3.9;24.0
+Maximum battery capacity [h];8.1;4.745454545454545;22.0
+Maximum battery capacity [h];8.25;4.0;1.0
+Maximum battery capacity [h];8.3;4.6;5.0
+Maximum battery capacity [h];8.33;5.0;4.0
+Maximum battery capacity [h];8.4;5.0;2.0
+Maximum battery capacity [h];8.5;5.0;1.0
+Maximum battery capacity [h];8.58;;0.0
+Maximum battery capacity [h];8.75;5.0;3.0
+Maximum battery capacity [h];8.9;4.800000000000001;9.0
+Maximum battery capacity [h];9.0;4.242424242424242;33.0
+Maximum battery capacity [h];9.1;3.0;1.0
+Maximum battery capacity [h];9.25;;0.0
+Maximum battery capacity [h];9.5;4.231578947368422;19.0
+Maximum battery capacity [h];9.6;;0.0
+Maximum battery capacity [h];9.65;;0.0
+Maximum battery capacity [h];9.7;5.0;1.0
+Maximum battery capacity [h];9.75;4.323076923076923;26.0
+Maximum battery capacity [h];9.8;4.0;1.0
+Maximum battery capacity [h];10.0;4.7386759581881535;287.0
+Maximum battery capacity [h];10.12;3.5;2.0
+Maximum battery capacity [h];10.22;;0.0
+Maximum battery capacity [h];10.25;;0.0
+Maximum battery capacity [h];10.4;4.777777777777778;9.0
+Maximum battery capacity [h];10.5;5.0;6.0
+Maximum battery capacity [h];10.6;;0.0
+Maximum battery capacity [h];10.75;4.333333333333333;9.0
+Maximum battery capacity [h];10.78;;0.0
+Maximum battery capacity [h];10.8;;0.0
+Maximum battery capacity [h];10.9;5.0;1.0
+Maximum battery capacity [h];11.0;4.558333333333334;48.0
+Maximum battery capacity [h];11.2;;0.0
+Maximum battery capacity [h];11.25;;0.0
+Maximum battery capacity [h];11.3;4.5;2.0
+Maximum battery capacity [h];11.5;4.5;34.0
+Maximum battery capacity [h];11.6;;0.0
+Maximum battery capacity [h];11.61;5.0;1.0
+Maximum battery capacity [h];11.7;4.63076923076923;13.0
+Maximum battery capacity [h];11.75;;0.0
+Maximum battery capacity [h];11.8;;0.0
+Maximum battery capacity [h];12.0;4.430555555555555;36.0
+Maximum battery capacity [h];12.06;;0.0
+Maximum battery capacity [h];12.1;;0.0
+Maximum battery capacity [h];12.2;5.0;1.0
+Maximum battery capacity [h];12.25;4.0;2.0
+Maximum battery capacity [h];12.4;;0.0
+Maximum battery capacity [h];12.42;1.0;1.0
+Maximum battery capacity [h];12.5;4.75;20.0
+Maximum battery capacity [h];12.8;4.166666666666667;9.0
+Maximum battery capacity [h];12.9;5.0;3.0
+Maximum battery capacity [h];13.0;4.333333333333333;15.0
+Maximum battery capacity [h];13.06;;0.0
+Maximum battery capacity [h];13.1;4.25;8.0
+Maximum battery capacity [h];13.2;;0.0
+Maximum battery capacity [h];13.25;;0.0
+Maximum battery capacity [h];13.34;3.8333333333333335;6.0
+Maximum battery capacity [h];13.5;5.0;3.0
+Maximum battery capacity [h];13.57;4.4;5.0
+Maximum battery capacity [h];13.6;4.7625;16.0
+Maximum battery capacity [h];13.78;;0.0
+Maximum battery capacity [h];14.0;4.413793103448276;29.0
+Maximum battery capacity [h];14.1;;0.0
+Maximum battery capacity [h];14.23;;0.0
+Maximum battery capacity [h];14.33;5.0;2.0
+Maximum battery capacity [h];14.4;4.2444444444444445;9.0
+Maximum battery capacity [h];14.43;;0.0
+Maximum battery capacity [h];14.5;3.0;2.0
+Maximum battery capacity [h];14.54;;0.0
+Maximum battery capacity [h];14.7;;0.0
+Maximum battery capacity [h];14.8;5.0;1.0
+Maximum battery capacity [h];15.0;4.295833333333333;24.0
+Maximum battery capacity [h];15.1;;0.0
+Maximum battery capacity [h];15.3;5.0;1.0
+Maximum battery capacity [h];15.33;;0.0
+Maximum battery capacity [h];15.4;;0.0
+Maximum battery capacity [h];15.5;4.352941176470588;17.0
+Maximum battery capacity [h];15.6;4.8;4.0
+Maximum battery capacity [h];15.8;;0.0
+Maximum battery capacity [h];15.85;5.0;1.0
+Maximum battery capacity [h];15.9;5.0;3.0
+Maximum battery capacity [h];16.0;4.616666666666666;18.0
+Maximum battery capacity [h];16.1;4.5;2.0
+Maximum battery capacity [h];16.25;;0.0
+Maximum battery capacity [h];16.5;4.25;4.0
+Maximum battery capacity [h];16.53;;0.0
+Maximum battery capacity [h];16.6;4.475;4.0
+Maximum battery capacity [h];16.67;;0.0
+Maximum battery capacity [h];16.75;;0.0
+Maximum battery capacity [h];16.8;;0.0
+Maximum battery capacity [h];16.9;;0.0
+Maximum battery capacity [h];17.0;5.0;5.0
+Maximum battery capacity [h];17.35;;0.0
+Maximum battery capacity [h];17.5;;0.0
+Maximum battery capacity [h];17.72;;0.0
+Maximum battery capacity [h];17.83;3.84;5.0
+Maximum battery capacity [h];17.9;;0.0
+Maximum battery capacity [h];18.0;4.903350083752094;597.0
+Maximum battery capacity [h];18.1;4.0;1.0
+Maximum battery capacity [h];18.25;5.0;1.0
+Maximum battery capacity [h];18.3;;0.0
+Maximum battery capacity [h];18.5;;0.0
+Maximum battery capacity [h];19.0;4.822222222222222;9.0
+Maximum battery capacity [h];19.1;5.0;1.0
+Maximum battery capacity [h];19.33;4.5;2.0
+Maximum battery capacity [h];19.4;;0.0
+Maximum battery capacity [h];19.5;4.3625;8.0
+Maximum battery capacity [h];19.56;;0.0
+Maximum battery capacity [h];19.9;1.0;1.0
+Maximum battery capacity [h];20.0;4.957894736842105;38.0
+Maximum battery capacity [h];20.22;;0.0
+Maximum battery capacity [h];20.28;;0.0
+Maximum battery capacity [h];20.5;4.6;5.0
+Maximum battery capacity [h];20.6;4.8;6.0
+Maximum battery capacity [h];21.0;4.333333333333333;6.0
+Maximum battery capacity [h];22.0;4.494736842105263;19.0
+Maximum battery capacity [h];22.9;;0.0
+Maximum battery capacity [h];22.97;4.7;3.0
+Maximum battery capacity [h];22.98;;0.0
+Maximum battery capacity [h];24.6;;0.0
+Maximum battery capacity [h];24.9;;0.0
+Maximum battery capacity [h];26.1;;0.0
+Maximum battery capacity [h];28.0;;0.0
+Maximum battery capacity [h];28.2;;0.0
+Maximum battery capacity [h];28.5;;0.0
+Construction material;['All-metal (unibody)'];4.792112676056338;1420.0
+Construction material;['Carbon fibres'];4.0;4.0
+Construction material;['Metal', 'Carbon fibres'];4.642857142857143;14.0
+Construction material;['Metal', 'Glass'];;0.0
+Construction material;['Metal', 'Magnesium'];4.194117647058825;17.0
+Construction material;['Metal', 'Plastic'];4.492009685230024;413.0
+Construction material;['Plastic', 'Carbon fibres'];;0.0
+Construction material;['Plastic', 'Glass'];1.0;1.0
+Construction material;['Plastic', 'Magnesium'];5.0;1.0
+Construction material;['Plastic'];4.451736745886654;547.0
+Convertibility;Detachable;4.33134328358209;67.0
+Convertibility;Reflexive;4.259722222222222;144.0
+Convertibility;Rigid (classic laptop);4.583204827355012;2983.0
+Colour;['Beige'];;0.0
+Colour;['Black'];4.3;617.0
+Colour;['Blue', 'Dark blue'];;0.0
+Colour;['Blue'];4.302857142857143;210.0
+Colour;['Carbon'];4.665217391304347;46.0
+Colour;['Dark blue'];4.731034482758621;87.0
+Colour;['Dark grey'];4.9;10.0
+Colour;['Gold'];4.827131782945737;129.0
+Colour;['Green'];4.1571428571428575;28.0
+Colour;['Grey'];4.6791452991453;1170.0
+Colour;['Pink'];;0.0
+Colour;['Red'];3.7000000000000006;9.0
+Colour;['Silver'];4.577905073649754;611.0
+Colour;['Violet'];;0.0
+Colour;['White'];4.9;10.0
+Colour;['Yellow'];3.1;7.0
+Weight [kg];0.5;;0.0
+Weight [kg];0.51;4.7;3.0
+Weight [kg];0.52;5.0;1.0
+Weight [kg];0.54;4.4363636363636365;11.0
+Weight [kg];0.59;;0.0
+Weight [kg];0.75;4.0;1.0
+Weight [kg];0.77;5.0;1.0
+Weight [kg];0.78;;0.0
+Weight [kg];0.88;4.8;5.0
+Weight [kg];0.89;5.0;1.0
+Weight [kg];0.9;3.857142857142857;7.0
+Weight [kg];0.91;5.0;1.0
+Weight [kg];0.95;3.7000000000000006;3.0
+Weight [kg];0.97;;0.0
+Weight [kg];0.99;4.5;2.0
+Weight [kg];1.0;3.7760000000000002;50.0
+Weight [kg];1.02;4.1;10.0
+Weight [kg];1.05;5.0;1.0
+Weight [kg];1.06;;0.0
+Weight [kg];1.09;5.0;2.0
+Weight [kg];1.1;3.4;5.0
+Weight [kg];1.11;;0.0
+Weight [kg];1.12;;0.0
+Weight [kg];1.13;5.0;2.0
+Weight [kg];1.14;4.142857142857143;7.0
+Weight [kg];1.15;;0.0
+Weight [kg];1.16;;0.0
+Weight [kg];1.17;;0.0
+Weight [kg];1.18;4.8;4.0
+Weight [kg];1.19;;0.0
+Weight [kg];1.2;4.564705882352941;34.0
+Weight [kg];1.21;1.0;1.0
+Weight [kg];1.23;3.0;4.0
+Weight [kg];1.24;4.767142857142857;140.0
+Weight [kg];1.25;4.9255186721991695;482.0
+Weight [kg];1.26;;0.0
+Weight [kg];1.27;;0.0
+Weight [kg];1.28;1.0;2.0
+Weight [kg];1.29;4.5;2.0
+Weight [kg];1.3;4.3500000000000005;48.0
+Weight [kg];1.31;;0.0
+Weight [kg];1.32;;0.0
+Weight [kg];1.33;;0.0
+Weight [kg];1.34;;0.0
+Weight [kg];1.35;3.8400000000000007;10.0
+Weight [kg];1.36;5.0;4.0
+Weight [kg];1.37;4.867777777777778;180.0
+Weight [kg];1.38;4.0;3.0
+Weight [kg];1.39;4.578571428571428;56.0
+Weight [kg];1.4;4.7250000000000005;56.0
+Weight [kg];1.41;4.5;6.0
+Weight [kg];1.42;5.0;1.0
+Weight [kg];1.43;5.0;1.0
+Weight [kg];1.44;5.0;1.0
+Weight [kg];1.45;4.333333333333333;6.0
+Weight [kg];1.46;4.466666666666667;15.0
+Weight [kg];1.47;;0.0
+Weight [kg];1.48;4.0;4.0
+Weight [kg];1.49;4.720833333333333;24.0
+Weight [kg];1.5;4.374137931034483;58.0
+Weight [kg];1.51;;0.0
+Weight [kg];1.52;4.651020408163265;49.0
+Weight [kg];1.53;4.166666666666667;6.0
+Weight [kg];1.54;5.0;3.0
+Weight [kg];1.55;4.659999999999999;20.0
+Weight [kg];1.56;5.0;1.0
+Weight [kg];1.57;5.0;1.0
+Weight [kg];1.58;5.0;1.0
+Weight [kg];1.59;4.664;25.0
+Weight [kg];1.6;3.7933333333333334;15.0
+Weight [kg];1.61;3.857142857142857;7.0
+Weight [kg];1.62;4.705882352941177;17.0
+Weight [kg];1.63;4.373684210526316;38.0
+Weight [kg];1.64;5.0;1.0
+Weight [kg];1.65;4.296153846153846;52.0
+Weight [kg];1.66;5.0;5.0
+Weight [kg];1.67;;0.0
+Weight [kg];1.68;3.9;8.0
+Weight [kg];1.69;3.736842105263158;19.0
+Weight [kg];1.7;4.346198830409357;171.0
+Weight [kg];1.71;;0.0
+Weight [kg];1.72;4.666666666666667;3.0
+Weight [kg];1.73;5.0;4.0
+Weight [kg];1.74;4.549122807017544;57.0
+Weight [kg];1.75;4.557142857142857;14.0
+Weight [kg];1.76;4.8;5.0
+Weight [kg];1.77;4.144444444444445;18.0
+Weight [kg];1.78;4.533333333333333;6.0
+Weight [kg];1.79;3.3625;8.0
+Weight [kg];1.8;4.363265306122449;49.0
+Weight [kg];1.81;5.0;1.0
+Weight [kg];1.82;5.0;2.0
+Weight [kg];1.83;4.466666666666667;18.0
+Weight [kg];1.84;;0.0
+Weight [kg];1.85;4.422727272727273;22.0
+Weight [kg];1.86;4.25;8.0
+Weight [kg];1.87;5.0;1.0
+Weight [kg];1.88;4.319230769230769;52.0
+Weight [kg];1.89;4.4739130434782615;23.0
+Weight [kg];1.9;3.8525423728813557;59.0
+Weight [kg];1.91;;0.0
+Weight [kg];1.92;4.7;3.0
+Weight [kg];1.93;4.0;1.0
+Weight [kg];1.94;4.4;3.0
+Weight [kg];1.95;4.230769230769231;13.0
+Weight [kg];1.96;;0.0
+Weight [kg];1.97;5.0;3.0
+Weight [kg];1.98;4.083333333333333;12.0
+Weight [kg];1.99;5.0;4.0
+Weight [kg];2.0;4.465853658536585;41.0
+Weight [kg];2.01;4.7;3.0
+Weight [kg];2.02;5.0;1.0
+Weight [kg];2.05;4.0;2.0
+Weight [kg];2.07;4.3;11.0
+Weight [kg];2.08;4.6000000000000005;9.0
+Weight [kg];2.09;;0.0
+Weight [kg];2.1;3.962162162162162;37.0
+Weight [kg];2.11;4.166666666666667;9.0
+Weight [kg];2.13;;0.0
+Weight [kg];2.14;3.8;5.0
+Weight [kg];2.15;4.833333333333333;12.0
+Weight [kg];2.16;;0.0
+Weight [kg];2.17;;0.0
+Weight [kg];2.18;;0.0
+Weight [kg];2.2;4.68404255319149;94.0
+Weight [kg];2.21;;0.0
+Weight [kg];2.22;;0.0
+Weight [kg];2.23;4.25;4.0
+Weight [kg];2.25;4.4222222222222225;72.0
+Weight [kg];2.28;;0.0
+Weight [kg];2.29;4.0;1.0
+Weight [kg];2.3;4.2377777777777785;90.0
+Weight [kg];2.31;4.2727272727272725;11.0
+Weight [kg];2.32;4.428571428571429;7.0
+Weight [kg];2.33;4.5;4.0
+Weight [kg];2.34;4.38;5.0
+Weight [kg];2.35;3.5;4.0
+Weight [kg];2.38;5.0;4.0
+Weight [kg];2.39;5.0;1.0
+Weight [kg];2.4;4.5587301587301585;63.0
+Weight [kg];2.41;;0.0
+Weight [kg];2.42;5.0;1.0
+Weight [kg];2.45;4.810526315789473;19.0
+Weight [kg];2.46;4.7;6.0
+Weight [kg];2.47;1.0;2.0
+Weight [kg];2.48;4.6;21.0
+Weight [kg];2.49;4.472727272727273;11.0
+Weight [kg];2.5;4.412000000000001;25.0
+Weight [kg];2.53;4.0;1.0
+Weight [kg];2.54;;0.0
+Weight [kg];2.55;4.807317073170732;41.0
+Weight [kg];2.57;;0.0
+Weight [kg];2.6;4.798214285714287;56.0
+Weight [kg];2.65;4.55;10.0
+Weight [kg];2.67;4.0;3.0
+Weight [kg];2.7;4.8;5.0
+Weight [kg];2.73;5.0;1.0
+Weight [kg];2.74;5.0;3.0
+Weight [kg];2.76;;0.0
+Weight [kg];2.78;5.0;2.0
+Weight [kg];2.8;3.727272727272727;11.0
+Weight [kg];2.81;3.96;5.0
+Weight [kg];2.87;5.0;1.0
+Weight [kg];2.9;5.0;7.0
+Weight [kg];2.95;;0.0
+Weight [kg];2.97;;0.0
+Weight [kg];2.98;1.0;1.0
+Weight [kg];2.99;;0.0
+Weight [kg];3.0;3.823529411764706;17.0
+Weight [kg];3.02;;0.0
+Weight [kg];3.1;4.2700000000000005;20.0
+Weight [kg];3.16;3.0;1.0
+Weight [kg];3.25;;0.0
+Weight [kg];3.29;;0.0
+Weight [kg];3.3;4.0;4.0
+Weight [kg];14.0;4.814814814814815;27.0
+Weight [kg];16.0;5.0;1.0
+Weight [kg];17.0;4.5;2.0
+Weight [kg];18.0;5.0;1.0
+Weight [kg];54.0;5.0;4.0
+Weight [kg];117.0;;0.0
+Weight [kg];124.0;4.690909090909091;22.0
+Weight [kg];125.0;4.857794676806084;263.0
+Weight [kg];137.0;;0.0
+Weight [kg];141.0;4.0;1.0
+Weight [kg];151.0;4.818181818181818;22.0
+Weight [kg];152.0;;0.0
+Weight [kg];173.0;;0.0
+Weight [kg];175.0;5.0;2.0
+Weight [kg];179.0;;0.0
+Weight [kg];181.0;;0.0
+Weight [kg];182.0;5.0;1.0
+Weight [kg];226.0;;0.0
+Weight [kg];242.0;;0.0
+Weight [kg];278.0;;0.0
+Weight [kg];316.0;5.0;1.0
+Data;Thunderbolt 3;4.908450704225352;355.0
+Data;Thunderbolt 4;4.438837209302326;430.0
+Data;USB-C;4.411929824561404;1140.0
+Data;USB-C, Thunderbolt 3;4.72;25.0
+Data;USB-C, Thunderbolt 4;4.55575221238938;226.0
+Graphical output ports;DisplayPort;4.5;4.0
+Graphical output ports;DisplayPort, USB-C;1.0;2.0
+Graphical output ports;HDMI;4.3811746987951805;664.0
+Graphical output ports;HDMI, DisplayPortDigital graphic output, suitable for transmission of uncompressed digital high-definition content. Supports up to 8-channel audio and 3D images. Not compatible with DVI and HDMI connectors.;4.206666666666667;60.0
+Graphical output ports;HDMI, DisplayPortDigital graphic output, suitable for transmission of uncompressed digital high-definition content. Supports up to 8-channel audio and 3D images. Not compatible with DVI and HDMI connectors., Mini DisplayPortA smaller version of the digital graphic output, suitable for transmitting uncompressed digital content.;;0.0
+Graphical output ports;HDMI, DisplayPortDigital graphic output, suitable for transmission of uncompressed digital high-definition content. Supports up to 8-channel audio and 3D images. Not compatible with DVI and HDMI connectors., USB-C;4.342857142857143;42.0
+Graphical output ports;HDMI, DisplayPortDigital graphic output, suitable for transmission of uncompressed digital high-definition content. Supports up to 8-channel audio and 3D images. Not compatible with DVI and HDMI connectors., VGAAnalog graphics output, which has been used since the 80s. This is the basic solution of linking graphics cards with other devices. Besides monitors (including older analog ones), VGA interface is used especially for projectors.;;0.0
+Graphical output ports;HDMI, DisplayPortDigitální grafický výstup, vhodný k přenosu nekomprimovaného digitálního obsahu ve vysokém rozlišení. Podporuje až 8kanálový zvuk a 3D obraz. S konektory DVI a HDMI není kompatibilní. Od verze 1.2 je schopný přenášet 4K obraz;4.166666666666667;6.0
+Graphical output ports;HDMI, DisplayPortDigitální grafický výstup, vhodný k přenosu nekomprimovaného digitálního obsahu ve vysokém rozlišení. Podporuje až 8kanálový zvuk a 3D obraz. S konektory DVI a HDMI není kompatibilní. Od verze 1.2 je schopný přenášet 4K obraz, USB-C;5.0;2.0
+Graphical output ports;HDMI, Micro HDMIHigh-Definition Multi-media Interface, digital output with integrated audio transmission at a reduced version., Mini DisplayPortA smaller version of the digital graphic output, suitable for transmitting uncompressed digital content.;4.0;3.0
+Graphical output ports;HDMI, Micro HDMIHigh-Definition Multi-media Interface, digital output with integrated audio transmission at a reduced version., USB-C;4.0;1.0
+Graphical output ports;HDMI, Mini DisplayPortA smaller version of the digital graphic output, suitable for transmitting uncompressed digital content.;4.493181818181818;44.0
+Graphical output ports;HDMI, Mini DisplayPortA smaller version of the digital graphic output, suitable for transmitting uncompressed digital content., USB-C;4.25;8.0
+Graphical output ports;HDMI, Mini DisplayPortZmenšená verze digitálně audio-vizuálního rozhraní DisplayPort. S vhodným adaptérem lze mini DisplayPort použít k připojení obrazovek s rozhraním VGA, DVI nebo HDMI. Výhodou je schopnost práce v rozlišení 4K(4096x2160), která je možná od verze 1.2.;;0.0
+Graphical output ports;HDMI, Mini DisplayPortZmenšená verze digitálně audio-vizuálního rozhraní DisplayPort. S vhodným adaptérem lze mini DisplayPort použít k připojení obrazovek s rozhraním VGA, DVI nebo HDMI. Výhodou je schopnost práce v rozlišení 4K(4096x2160), která je možná od verze 1.2., USB-C;;0.0
+Graphical output ports;HDMI, USB-C;4.425238600212089;943.0
+Graphical output ports;HDMI, VGAAnalog graphics output, which has been used since the 80s. This is the basic solution of linking graphics cards with other devices. Besides monitors (including older analog ones), VGA interface is used especially for projectors.;5.0;1.0
+Graphical output ports;HDMI, VGAAnalog graphics output, which has been used since the 80s. This is the basic solution of linking graphics cards with other devices. Besides monitors (including older analog ones), VGA interface is used especially for projectors., USB-C;5.0;2.0
+Graphical output ports;Micro HDMI;4.7;9.0
+Graphical output ports;Micro HDMI, USB-C;;0.0
+Graphical output ports;Mini DisplayPort;5.0;1.0
+Graphical output ports;Mini HDMI;3.9615384615384617;78.0
+Graphical output ports;USB-C;4.63972602739726;146.0
+Network;['4G/LTE modem'];5.0;2.0
+Network;['5G modem', '4G/LTE modem'];;0.0
+Network;['5G modem'];;0.0
+Network;['RJ-45 (LAN)', '4G/LTE modem'];5.0;1.0
+Network;['RJ-45 (LAN)', '5G modem'];;0.0
+Network;['RJ-45 (LAN)'];4.413698630136986;949.0
+Audio;['Combo Audio Jack', 'Headphone input'];;0.0
+Audio;['Combo Audio Jack', 'Microphone input'];3.0250000000000004;4.0
+Audio;['Combo Audio Jack'];4.517644135188867;2012.0
+Audio;['Headphone input', 'Microphone input'];4.345578231292516;147.0
+Audio;['Headphone input'];4.309589041095891;146.0
+USB-C;1.0;4.353818827708703;1126.0
+USB-C;2.0;4.738502319416833;1509.0
+USB-C;3.0;4.576595744680851;47.0
+USB-C;4.0;4.972972972972973;37.0
+USB 3.2 Gen 1 (USB 3.0);1.0;4.356512605042016;476.0
+USB 3.2 Gen 1 (USB 3.0);2.0;4.376033934252386;943.0
+USB 3.2 Gen 1 (USB 3.0);3.0;4.507291666666666;192.0
+USB 3.2 Gen 1 (USB 3.0);4.0;4.747058823529412;68.0
+Bluetooth;Bluetooth v4.0;3.0;2.0
+Bluetooth;Bluetooth v4.1;4.257575757575758;66.0
+Bluetooth;Bluetooth v4.2;4.3309392265193365;181.0
+Bluetooth;Bluetooth v5.0;4.750619699934768;1533.0
+Bluetooth;Bluetooth v5.1;4.468971061093248;622.0
+Bluetooth;Bluetooth v5.2;4.303096539162113;549.0
+Bluetooth;Bluetooth v5.3;4.535714285714286;182.0
+WiFi;['WiFi 802.11ac', 'WiFi 802.11ax'];5.0;30.0
+WiFi;['WiFi 802.11ac', 'WiFi 802.11n', 'WiFi 802.11g', 'WiFi 802.11b', 'WiFi 802.11a', 'WiFi 802.11ax'];4.856444444444445;675.0
+WiFi;['WiFi 802.11ac', 'WiFi 802.11n', 'WiFi 802.11g', 'WiFi 802.11b', 'WiFi 802.11a'];4.676470588235294;68.0
+WiFi;['WiFi 802.11ac'];4.545656192236598;541.0
+WiFi;['WiFi 802.11ax (6GHz)'];4.367937219730941;446.0
+WiFi;['WiFi 802.11ax'];4.504892512972573;1349.0
+WiFi;['WiFi 802.11n'];3.898591549295775;71.0
+WiFi version;WiFi 4;3.898591549295775;71.0
+WiFi version;WiFi 5;4.559618717504333;577.0
+WiFi version;WiFi 6;4.626796116504854;2060.0
+WiFi version;WiFi 6E;4.394343891402714;442.0
+Optical drive;Without Optical Drive;4.563337507827176;3194.0
+Width [mm];209.0;4.8;5.0
+Width [mm];244.0;5.0;1.0
+Width [mm];245.0;4.6125;16.0
+Width [mm];255.4;4.7;3.0
+Width [mm];256.4;;0.0
+Width [mm];258.04;3.7000000000000006;3.0
+Width [mm];260.3;;0.0
+Width [mm];271.3;4.142857142857143;7.0
+Width [mm];275.4;5.0;1.0
+Width [mm];278.0;;0.0
+Width [mm];278.18;;0.0
+Width [mm];280.0;3.691304347826087;46.0
+Width [mm];283.3;1.0;1.0
+Width [mm];284.0;4.8;4.0
+Width [mm];287.0;4.0;8.0
+Width [mm];288.3;4.0;4.0
+Width [mm];290.0;4.6;5.0
+Width [mm];291.0;5.0;1.0
+Width [mm];292.0;5.0;1.0
+Width [mm];292.8;;0.0
+Width [mm];293.3;;0.0
+Width [mm];294.4;;0.0
+Width [mm];295.3;;0.0
+Width [mm];295.4;;0.0
+Width [mm];296.0;;0.0
+Width [mm];296.2;5.0;2.0
+Width [mm];296.3;;0.0
+Width [mm];296.68;5.0;3.0
+Width [mm];296.7;;0.0
+Width [mm];297.0;5.0;1.0
+Width [mm];297.5;;0.0
+Width [mm];298.0;5.0;1.0
+Width [mm];298.3;;0.0
+Width [mm];298.7;;0.0
+Width [mm];299.0;;0.0
+Width [mm];300.0;2.3333333333333335;3.0
+Width [mm];300.1;;0.0
+Width [mm];300.2;;0.0
+Width [mm];300.6;;0.0
+Width [mm];301.0;1.0;1.0
+Width [mm];301.7;;0.0
+Width [mm];301.76;;0.0
+Width [mm];302.0;4.9;8.0
+Width [mm];304.0;4.857472826086957;736.0
+Width [mm];304.1;4.932044198895028;362.0
+Width [mm];305.0;3.8;16.0
+Width [mm];305.7;1.0;1.0
+Width [mm];305.8;;0.0
+Width [mm];305.86;4.1;10.0
+Width [mm];306.0;4.4;6.0
+Width [mm];306.8;;0.0
+Width [mm];308.0;5.0;2.0
+Width [mm];309.0;;0.0
+Width [mm];309.9;4.0;1.0
+Width [mm];310.0;5.0;2.0
+Width [mm];310.5;2.3333333333333335;3.0
+Width [mm];310.6;;0.0
+Width [mm];311.0;4.0;1.0
+Width [mm];311.2;3.4;5.0
+Width [mm];311.5;5.0;2.0
+Width [mm];312.0;4.391304347826087;23.0
+Width [mm];312.2;4.571428571428571;7.0
+Width [mm];312.4;4.655172413793103;29.0
+Width [mm];312.6;5.0;1.0
+Width [mm];312.9;4.720000000000001;10.0
+Width [mm];313.0;5.0;1.0
+Width [mm];313.1;4.745454545454546;11.0
+Width [mm];313.2;4.0;4.0
+Width [mm];313.4;;0.0
+Width [mm];313.5;3.0;2.0
+Width [mm];313.6;4.41;40.0
+Width [mm];314.0;3.875;8.0
+Width [mm];314.4;;0.0
+Width [mm];315.0;5.0;1.0
+Width [mm];315.5;;0.0
+Width [mm];315.6;;0.0
+Width [mm];316.66;;0.0
+Width [mm];317.5;;0.0
+Width [mm];317.6;;0.0
+Width [mm];317.7;3.6666666666666665;3.0
+Width [mm];317.87;4.814285714285715;14.0
+Width [mm];318.0;4.666666666666667;3.0
+Width [mm];318.2;4.0;1.0
+Width [mm];319.0;4.5;10.0
+Width [mm];319.5;;0.0
+Width [mm];319.8;5.0;2.0
+Width [mm];319.9;4.5;2.0
+Width [mm];320.0;4.111111111111111;9.0
+Width [mm];320.4;4.5;2.0
+Width [mm];320.6;;0.0
+Width [mm];321.0;4.82;5.0
+Width [mm];321.27;4.666666666666667;3.0
+Width [mm];321.35;5.0;1.0
+Width [mm];321.5;5.0;2.0
+Width [mm];321.57;4.0;3.0
+Width [mm];321.69;5.0;1.0
+Width [mm];321.71;3.8;5.0
+Width [mm];321.8;;0.0
+Width [mm];321.9;;0.0
+Width [mm];322.0;4.5625;8.0
+Width [mm];322.17;;0.0
+Width [mm];322.2;5.0;2.0
+Width [mm];322.79;4.0;1.0
+Width [mm];322.8;4.809523809523809;21.0
+Width [mm];323.0;4.2;5.0
+Width [mm];323.05;;0.0
+Width [mm];323.28;5.0;2.0
+Width [mm];323.4;4.7;6.0
+Width [mm];323.5;;0.0
+Width [mm];323.6;;0.0
+Width [mm];323.67;;0.0
+Width [mm];323.7;;0.0
+Width [mm];324.0;5.0;4.0
+Width [mm];324.2;5.0;2.0
+Width [mm];324.3;;0.0
+Width [mm];325.0;4.0;1.0
+Width [mm];325.3;;0.0
+Width [mm];325.4;4.0;1.0
+Width [mm];325.5;4.557142857142857;7.0
+Width [mm];325.87;5.0;1.0
+Width [mm];325.9;5.0;1.0
+Width [mm];326.0;;0.0
+Width [mm];326.5;;0.0
+Width [mm];326.9;;0.0
+Width [mm];326.95;3.5;2.0
+Width [mm];327.49;5.0;8.0
+Width [mm];327.5;;0.0
+Width [mm];328.0;;0.0
+Width [mm];328.1;;0.0
+Width [mm];328.2;4.333333333333333;6.0
+Width [mm];328.67;5.0;1.0
+Width [mm];329.0;3.0;4.0
+Width [mm];329.5;5.0;1.0
+Width [mm];330.0;4.28;25.0
+Width [mm];338.8;;0.0
+Width [mm];339.5;3.0;1.0
+Width [mm];340.2;;0.0
+Width [mm];340.4;;0.0
+Width [mm];344.4;1.0;1.0
+Width [mm];344.72;;0.0
+Width [mm];349.3;5.0;2.0
+Width [mm];350.0;4.571428571428571;7.0
+Width [mm];351.0;4.0;1.0
+Width [mm];353.68;;0.0
+Width [mm];354.0;4.66989247311828;93.0
+Width [mm];354.4;;0.0
+Width [mm];354.6;5.0;1.0
+Width [mm];355.0;4.4;10.0
+Width [mm];355.2;4.0;4.0
+Width [mm];355.3;3.0;1.0
+Width [mm];355.5;4.0;1.0
+Width [mm];355.7;4.647058823529412;17.0
+Width [mm];355.8;5.0;2.0
+Width [mm];356.0;4.519417475728155;103.0
+Width [mm];356.1;5.0;1.0
+Width [mm];356.3;3.6;3.0
+Width [mm];356.46;3.0;2.0
+Width [mm];356.5;5.0;1.0
+Width [mm];356.58;5.0;1.0
+Width [mm];356.6;5.0;1.0
+Width [mm];356.67;4.679166666666667;24.0
+Width [mm];356.7;4.0;2.0
+Width [mm];356.78;4.2;10.0
+Width [mm];356.8;;0.0
+Width [mm];356.81;4.6000000000000005;9.0
+Width [mm];356.98;5.0;2.0
+Width [mm];357.0;4.623255813953488;43.0
+Width [mm];357.26;4.133333333333334;6.0
+Width [mm];357.3;;0.0
+Width [mm];357.4;4.475;4.0
+Width [mm];357.55;5.0;1.0
+Width [mm];357.6;;0.0
+Width [mm];357.7;4.4;5.0
+Width [mm];357.78;5.0;2.0
+Width [mm];357.8;4.521739130434782;23.0
+Width [mm];357.9;4.92;25.0
+Width [mm];358.0;4.29672131147541;61.0
+Width [mm];358.1;4.0;1.0
+Width [mm];358.2;;0.0
+Width [mm];358.3;3.5;2.0
+Width [mm];358.5;4.235555555555555;45.0
+Width [mm];358.6;;0.0
+Width [mm];358.7;4.412820512820512;39.0
+Width [mm];358.9;3.9;15.0
+Width [mm];359.0;4.31764705882353;136.0
+Width [mm];359.2;4.372727272727273;22.0
+Width [mm];359.3;4.435714285714285;28.0
+Width [mm];359.34;4.0;2.0
+Width [mm];359.4;4.404545454545455;22.0
+Width [mm];359.5;;0.0
+Width [mm];359.6;4.46271186440678;59.0
+Width [mm];359.7;4.476785714285714;56.0
+Width [mm];359.8;4.4;84.0
+Width [mm];359.9;5.0;2.0
+Width [mm];360.0;4.4887500000000005;80.0
+Width [mm];360.1;4.888888888888889;9.0
+Width [mm];360.2;3.306666666666666;15.0
+Width [mm];360.3;4.3882352941176475;34.0
+Width [mm];360.4;4.461538461538462;13.0
+Width [mm];360.5;;0.0
+Width [mm];360.6;;0.0
+Width [mm];361.0;5.0;1.0
+Width [mm];361.6;3.3333333333333335;3.0
+Width [mm];361.8;;0.0
+Width [mm];361.9;2.0;1.0
+Width [mm];361.98;5.0;1.0
+Width [mm];362.0;;0.0
+Width [mm];362.16;4.6;5.0
+Width [mm];362.3;4.5;7.0
+Width [mm];362.44;4.0;2.0
+Width [mm];362.56;4.5;4.0
+Width [mm];362.9;4.126315789473685;38.0
+Width [mm];363.0;4.0;5.0
+Width [mm];363.06;4.340000000000001;10.0
+Width [mm];363.4;4.221848739495798;119.0
+Width [mm];364.0;;0.0
+Width [mm];364.46;4.5;9.0
+Width [mm];364.5;4.333333333333333;3.0
+Width [mm];365.0;4.8;14.0
+Width [mm];365.5;4.3;3.0
+Width [mm];365.8;;0.0
+Width [mm];366.4;3.5;4.0
+Width [mm];366.5;;0.0
+Width [mm];369.0;4.428571428571429;7.0
+Width [mm];370.0;4.6;21.0
+Width [mm];374.45;;0.0
+Width [mm];374.48;;0.0
+Width [mm];375.0;4.6;7.0
+Width [mm];375.4;;0.0
+Width [mm];379.0;;0.0
+Width [mm];380.0;5.0;1.0
+Width [mm];380.34;;0.0
+Width [mm];380.35;;0.0
+Width [mm];382.0;4.0;1.0
+Width [mm];383.0;5.0;2.0
+Width [mm];395.0;3.775;24.0
+Width [mm];396.0;5.0;1.0
+Width [mm];397.0;4.6923076923076925;13.0
+Width [mm];397.1;5.0;2.0
+Width [mm];398.0;4.9;19.0
+Width [mm];398.2;4.314285714285714;7.0
+Width [mm];398.4;;0.0
+Width [mm];398.6;1.0;1.0
+Width [mm];399.0;4.466666666666667;33.0
+Width [mm];399.23;;0.0
+Width [mm];399.3;3.5;2.0
+Width [mm];400.0;3.8;4.0
+Width [mm];400.2;5.0;2.0
+Width [mm];400.5;4.7272727272727275;11.0
+Width [mm];400.7;4.3;11.0
+Width [mm];402.1;3.75;8.0
+Width [mm];403.0;4.0;4.0
+Width [mm];403.5;4.11;10.0
+Width [mm];405.0;4.6;5.0
+Width [mm];406.0;;0.0
+Width [mm];2962.0;;0.0
+Width [mm];3041.0;5.0;23.0
+Width [mm];3177.0;;0.0
+Width [mm];3199.0;;0.0
+Width [mm];3404.0;4.818181818181818;22.0
+Width [mm];3561.0;;0.0
+Width [mm];3567.0;;0.0
+Width [mm];3593.0;5.0;1.0
+Width [mm];3597.0;4.0;1.0
+Width [mm];3602.0;;0.0
+Width [mm];3665.0;;0.0
+Width [mm];3971.0;;0.0
+Width [mm];32171.0;5.0;1.0
+Width [mm];32328.0;5.0;3.0
+Maximum height [mm];5.6;4.8;4.0
+Maximum height [mm];7.23;4.1;10.0
+Maximum height [mm];7.9;3.7750000000000004;4.0
+Maximum height [mm];8.0;4.7;3.0
+Maximum height [mm];8.3;4.483333333333333;12.0
+Maximum height [mm];8.5;5.0;1.0
+Maximum height [mm];8.95;4.142857142857143;7.0
+Maximum height [mm];9.0;;0.0
+Maximum height [mm];9.3;4.3076923076923075;13.0
+Maximum height [mm];9.45;4.0;4.0
+Maximum height [mm];11.09;;0.0
+Maximum height [mm];11.3;4.767142857142857;140.0
+Maximum height [mm];11.5;;0.0
+Maximum height [mm];11.63;;0.0
+Maximum height [mm];11.8;5.0;2.0
+Maximum height [mm];12.0;5.0;4.0
+Maximum height [mm];12.95;5.0;1.0
+Maximum height [mm];13.0;;0.0
+Maximum height [mm];13.15;;0.0
+Maximum height [mm];13.4;;0.0
+Maximum height [mm];13.9;5.0;1.0
+Maximum height [mm];13.95;;0.0
+Maximum height [mm];13.99;;0.0
+Maximum height [mm];14.5;1.0;1.0
+Maximum height [mm];14.6;4.275;8.0
+Maximum height [mm];14.7;;0.0
+Maximum height [mm];14.75;;0.0
+Maximum height [mm];14.8;;0.0
+Maximum height [mm];14.84;;0.0
+Maximum height [mm];14.9;4.872093023255814;172.0
+Maximum height [mm];14.95;2.3333333333333335;3.0
+Maximum height [mm];15.0;3.8957894736842107;95.0
+Maximum height [mm];15.1;;0.0
+Maximum height [mm];15.25;4.666666666666667;3.0
+Maximum height [mm];15.28;;0.0
+Maximum height [mm];15.36;;0.0
+Maximum height [mm];15.5;5.0;3.0
+Maximum height [mm];15.53;;0.0
+Maximum height [mm];15.55;5.0;2.0
+Maximum height [mm];15.6;4.948324022346369;358.0
+Maximum height [mm];15.65;5.0;3.0
+Maximum height [mm];15.69;;0.0
+Maximum height [mm];15.7;4.0;1.0
+Maximum height [mm];15.8;;0.0
+Maximum height [mm];15.9;4.428571428571429;28.0
+Maximum height [mm];15.95;4.771428571428571;21.0
+Maximum height [mm];15.99;4.5;4.0
+Maximum height [mm];16.0;5.0;3.0
+Maximum height [mm];16.1;4.894155844155844;154.0
+Maximum height [mm];16.14;;0.0
+Maximum height [mm];16.2;4.958333333333333;24.0
+Maximum height [mm];16.28;;0.0
+Maximum height [mm];16.3;1.0;2.0
+Maximum height [mm];16.4;;0.0
+Maximum height [mm];16.49;4.814285714285715;14.0
+Maximum height [mm];16.5;;0.0
+Maximum height [mm];16.7;;0.0
+Maximum height [mm];16.8;4.45;20.0
+Maximum height [mm];16.81;;0.0
+Maximum height [mm];16.85;;0.0
+Maximum height [mm];16.9;4.336912751677852;149.0
+Maximum height [mm];16.95;4.4;6.0
+Maximum height [mm];16.99;4.6;5.0
+Maximum height [mm];17.0;4.444444444444445;9.0
+Maximum height [mm];17.06;;0.0
+Maximum height [mm];17.23;;0.0
+Maximum height [mm];17.3;5.0;1.0
+Maximum height [mm];17.35;;0.0
+Maximum height [mm];17.36;5.0;1.0
+Maximum height [mm];17.4;4.82;10.0
+Maximum height [mm];17.45;5.0;2.0
+Maximum height [mm];17.47;5.0;1.0
+Maximum height [mm];17.5;4.5;6.0
+Maximum height [mm];17.6;3.5;2.0
+Maximum height [mm];17.7;;0.0
+Maximum height [mm];17.75;;0.0
+Maximum height [mm];17.8;4.6;5.0
+Maximum height [mm];17.9;4.261926605504588;218.0
+Maximum height [mm];17.91;;0.0
+Maximum height [mm];17.95;4.818181818181818;11.0
+Maximum height [mm];17.99;4.6;5.0
+Maximum height [mm];18.0;;0.0
+Maximum height [mm];18.05;;0.0
+Maximum height [mm];18.06;;0.0
+Maximum height [mm];18.1;5.0;5.0
+Maximum height [mm];18.16;4.0;2.0
+Maximum height [mm];18.2;4.0;1.0
+Maximum height [mm];18.21;;0.0
+Maximum height [mm];18.3;;0.0
+Maximum height [mm];18.37;5.0;2.0
+Maximum height [mm];18.4;4.225;16.0
+Maximum height [mm];18.44;1.0;1.0
+Maximum height [mm];18.5;4.0;4.0
+Maximum height [mm];18.52;;0.0
+Maximum height [mm];18.54;1.0;1.0
+Maximum height [mm];18.6;4.655405405405405;74.0
+Maximum height [mm];18.66;;0.0
+Maximum height [mm];18.7;4.5;12.0
+Maximum height [mm];18.8;4.6;5.0
+Maximum height [mm];18.87;1.0;1.0
+Maximum height [mm];18.89;;0.0
+Maximum height [mm];18.9;4.56078431372549;102.0
+Maximum height [mm];18.94;5.0;2.0
+Maximum height [mm];18.95;4.5;2.0
+Maximum height [mm];18.99;4.1466666666666665;15.0
+Maximum height [mm];19.0;4.552380952380952;21.0
+Maximum height [mm];19.1;5.0;1.0
+Maximum height [mm];19.2;4.0;4.0
+Maximum height [mm];19.25;3.0;2.0
+Maximum height [mm];19.33;;0.0
+Maximum height [mm];19.35;4.5;2.0
+Maximum height [mm];19.37;;0.0
+Maximum height [mm];19.4;4.666666666666667;3.0
+Maximum height [mm];19.48;4.666666666666667;3.0
+Maximum height [mm];19.5;3.2142857142857144;14.0
+Maximum height [mm];19.6;4.4;8.0
+Maximum height [mm];19.7;4.0;4.0
+Maximum height [mm];19.75;;0.0
+Maximum height [mm];19.8;4.0;3.0
+Maximum height [mm];19.83;4.0;1.0
+Maximum height [mm];19.85;5.0;1.0
+Maximum height [mm];19.9;4.34578313253012;249.0
+Maximum height [mm];19.93;;0.0
+Maximum height [mm];19.95;4.428571428571429;7.0
+Maximum height [mm];19.99;4.4;6.0
+Maximum height [mm];20.0;4.01;20.0
+Maximum height [mm];20.4;;0.0
+Maximum height [mm];20.5;3.6666666666666665;6.0
+Maximum height [mm];20.6;4.3;11.0
+Maximum height [mm];20.7;3.7249999999999996;4.0
+Maximum height [mm];20.8;;0.0
+Maximum height [mm];20.83;;0.0
+Maximum height [mm];20.9;4.742857142857143;7.0
+Maximum height [mm];20.95;;0.0
+Maximum height [mm];21.04;5.0;1.0
+Maximum height [mm];21.07;4.5;2.0
+Maximum height [mm];21.1;;0.0
+Maximum height [mm];21.29;5.0;8.0
+Maximum height [mm];21.3;5.0;1.0
+Maximum height [mm];21.4;;0.0
+Maximum height [mm];21.5;4.5;2.0
+Maximum height [mm];21.6;4.3;3.0
+Maximum height [mm];21.7;4.0;11.0
+Maximum height [mm];21.8;4.294117647058823;17.0
+Maximum height [mm];21.9;5.0;8.0
+Maximum height [mm];21.95;4.0;5.0
+Maximum height [mm];21.99;5.0;1.0
+Maximum height [mm];22.0;5.0;1.0
+Maximum height [mm];22.3;5.0;3.0
+Maximum height [mm];22.7;4.281818181818181;22.0
+Maximum height [mm];22.8;5.0;5.0
+Maximum height [mm];22.9;4.0;3.0
+Maximum height [mm];23.0;3.78;20.0
+Maximum height [mm];23.2;;0.0
+Maximum height [mm];23.27;;0.0
+Maximum height [mm];23.33;;0.0
+Maximum height [mm];23.4;5.0;4.0
+Maximum height [mm];23.5;4.386486486486487;37.0
+Maximum height [mm];23.57;;0.0
+Maximum height [mm];23.6;;0.0
+Maximum height [mm];23.9;4.5;6.0
+Maximum height [mm];23.95;3.0;2.0
+Maximum height [mm];24.05;;0.0
+Maximum height [mm];24.2;4.6571428571428575;35.0
+Maximum height [mm];24.5;4.5062500000000005;48.0
+Maximum height [mm];24.6;;0.0
+Maximum height [mm];24.66;;0.0
+Maximum height [mm];24.7;;0.0
+Maximum height [mm];24.8;5.0;9.0
+Maximum height [mm];24.86;;0.0
+Maximum height [mm];24.9;4.5975;120.0
+Maximum height [mm];25.0;5.0;2.0
+Maximum height [mm];25.2;4.688372093023256;43.0
+Maximum height [mm];25.33;3.96;5.0
+Maximum height [mm];25.4;4.4;9.0
+Maximum height [mm];25.5;5.0;1.0
+Maximum height [mm];25.75;4.5;4.0
+Maximum height [mm];25.8;5.0;1.0
+Maximum height [mm];25.9;4.083333333333333;48.0
+Maximum height [mm];26.1;4.340000000000001;10.0
+Maximum height [mm];26.15;5.0;1.0
+Maximum height [mm];26.17;;0.0
+Maximum height [mm];26.2;1.0;1.0
+Maximum height [mm];26.55;5.0;6.0
+Maximum height [mm];26.6;4.74;25.0
+Maximum height [mm];26.7;;0.0
+Maximum height [mm];26.75;4.847368421052631;38.0
+Maximum height [mm];26.8;;0.0
+Maximum height [mm];26.85;4.705263157894737;19.0
+Maximum height [mm];26.9;3.111111111111111;9.0
+Maximum height [mm];27.0;5.0;6.0
+Maximum height [mm];27.2;4.3500000000000005;6.0
+Maximum height [mm];27.7;;0.0
+Maximum height [mm];27.9;4.714285714285714;7.0
+Maximum height [mm];28.3;3.0;5.0
+Maximum height [mm];28.55;5.0;2.0
+Maximum height [mm];28.6;4.8;5.0
+Maximum height [mm];29.45;;0.0
+Maximum height [mm];29.7;2.0;1.0
+Maximum height [mm];30.0;;0.0
+Maximum height [mm];30.23;;0.0
+Maximum height [mm];30.25;;0.0
+Maximum height [mm];30.4;4.7272727272727275;11.0
+Maximum height [mm];30.8;3.6545454545454548;22.0
+Maximum height [mm];31.13;4.5;9.0
+Maximum height [mm];31.45;;0.0
+Maximum height [mm];32.4;;0.0
+Maximum height [mm];32.5;;0.0
+Maximum height [mm];83.0;5.0;4.0
+Maximum height [mm];113.0;4.690909090909091;22.0
+Maximum height [mm];115.0;4.818181818181818;22.0
+Maximum height [mm];118.0;;0.0
+Maximum height [mm];149.0;5.0;1.0
+Maximum height [mm];156.0;4.83;130.0
+Maximum height [mm];159.0;5.0;1.0
+Maximum height [mm];161.0;4.9;153.0
+Maximum height [mm];165.0;5.0;1.0
+Maximum height [mm];176.0;;0.0
+Maximum height [mm];179.0;5.0;1.0
+Maximum height [mm];199.0;4.0;1.0
+Maximum height [mm];227.0;;0.0
+Maximum height [mm];269.0;5.0;1.0
+Maximum height [mm];1395.0;;0.0
+Maximum height [mm];1799.0;;0.0
+Maximum height [mm];1894.0;5.0;3.0
+Maximum height [mm];1935.0;4.166666666666667;6.0
+Maximum height [mm];1985.0;;0.0
+Depth [mm];164.55;3.7000000000000006;3.0
+Depth [mm];167.2;4.7;3.0
+Depth [mm];168.2;;0.0
+Depth [mm];172.0;4.142857142857143;7.0
+Depth [mm];172.1;;0.0
+Depth [mm];175.0;4.6125;16.0
+Depth [mm];186.74;4.1;10.0
+Depth [mm];190.0;4.0;1.0
+Depth [mm];190.33;4.0;4.0
+Depth [mm];195.0;3.691304347826087;46.0
+Depth [mm];199.0;5.0;2.0
+Depth [mm];199.04;;0.0
+Depth [mm];199.24;;0.0
+Depth [mm];199.4;;0.0
+Depth [mm];199.5;5.0;1.0
+Depth [mm];199.6;;0.0
+Depth [mm];200.0;1.0;1.0
+Depth [mm];201.0;5.0;1.0
+Depth [mm];204.0;5.0;6.0
+Depth [mm];204.48;4.4;6.0
+Depth [mm];204.9;5.0;1.0
+Depth [mm];206.0;4.6;5.0
+Depth [mm];206.17;;0.0
+Depth [mm];206.4;;0.0
+Depth [mm];206.7;4.5;2.0
+Depth [mm];207.0;;0.0
+Depth [mm];207.5;1.0;1.0
+Depth [mm];207.7;;0.0
+Depth [mm];208.0;4.0;8.0
+Depth [mm];208.1;;0.0
+Depth [mm];208.18;;0.0
+Depth [mm];208.69;;0.0
+Depth [mm];209.0;5.0;1.0
+Depth [mm];209.4;5.0;2.0
+Depth [mm];209.7;5.0;2.0
+Depth [mm];210.0;3.909090909090909;22.0
+Depth [mm];210.35;;0.0
+Depth [mm];210.5;;0.0
+Depth [mm];210.6;;0.0
+Depth [mm];210.8;5.0;2.0
+Depth [mm];211.0;5.0;2.0
+Depth [mm];211.59;4.0;3.0
+Depth [mm];211.72;3.8;5.0
+Depth [mm];211.84;5.0;1.0
+Depth [mm];212.0;4.892857142857143;574.0
+Depth [mm];212.2;4.809523809523809;21.0
+Depth [mm];212.4;4.931476323119777;359.0
+Depth [mm];213.16;;0.0
+Depth [mm];213.3;2.3333333333333335;3.0
+Depth [mm];213.5;5.0;3.0
+Depth [mm];213.8;;0.0
+Depth [mm];213.9;;0.0
+Depth [mm];214.0;4.720000000000001;10.0
+Depth [mm];214.15;;0.0
+Depth [mm];214.4;5.0;1.0
+Depth [mm];214.5;;0.0
+Depth [mm];214.6;;0.0
+Depth [mm];214.7;;0.0
+Depth [mm];214.8;;0.0
+Depth [mm];214.9;;0.0
+Depth [mm];215.0;4.752147239263804;163.0
+Depth [mm];215.2;5.0;2.0
+Depth [mm];215.6;;0.0
+Depth [mm];215.8;;0.0
+Depth [mm];215.9;;0.0
+Depth [mm];216.0;;0.0
+Depth [mm];216.3;5.0;2.0
+Depth [mm];216.5;;0.0
+Depth [mm];216.7;;0.0
+Depth [mm];216.8;;0.0
+Depth [mm];217.0;4.0;1.0
+Depth [mm];217.5;4.7;3.0
+Depth [mm];217.56;;0.0
+Depth [mm];217.8;1.0;1.0
+Depth [mm];217.9;;0.0
+Depth [mm];218.0;4.5;8.0
+Depth [mm];218.2;3.4;5.0
+Depth [mm];218.9;4.7;6.0
+Depth [mm];219.0;4.5;2.0
+Depth [mm];219.3;5.0;1.0
+Depth [mm];219.43;;0.0
+Depth [mm];219.8;;0.0
+Depth [mm];220.0;4.4625;40.0
+Depth [mm];220.25;;0.0
+Depth [mm];220.26;4.666666666666667;3.0
+Depth [mm];220.4;5.0;1.0
+Depth [mm];220.6;4.41;40.0
+Depth [mm];220.7;5.0;1.0
+Depth [mm];220.8;;0.0
+Depth [mm];221.0;4.476190476190476;21.0
+Depth [mm];221.2;5.0;1.0
+Depth [mm];221.4;4.6;35.0
+Depth [mm];221.8;5.0;1.0
+Depth [mm];222.0;;0.0
+Depth [mm];222.25;;0.0
+Depth [mm];222.3;;0.0
+Depth [mm];222.5;4.814285714285715;14.0
+Depth [mm];222.66;5.0;1.0
+Depth [mm];222.75;;0.0
+Depth [mm];223.0;3.888888888888889;9.0
+Depth [mm];223.1;;0.0
+Depth [mm];223.4;5.0;2.0
+Depth [mm];223.54;3.5;2.0
+Depth [mm];223.57;5.0;1.0
+Depth [mm];223.9;2.3333333333333335;3.0
+Depth [mm];224.0;;0.0
+Depth [mm];224.2;3.0;2.0
+Depth [mm];224.3;;0.0
+Depth [mm];224.4;;0.0
+Depth [mm];224.53;;0.0
+Depth [mm];224.7;;0.0
+Depth [mm];224.9;4.745454545454546;11.0
+Depth [mm];225.0;;0.0
+Depth [mm];225.5;4.0;1.0
+Depth [mm];225.6;;0.0
+Depth [mm];226.0;4.833333333333333;6.0
+Depth [mm];226.49;4.557142857142857;7.0
+Depth [mm];226.5;;0.0
+Depth [mm];226.56;5.0;1.0
+Depth [mm];226.6;;0.0
+Depth [mm];226.9;3.6666666666666665;3.0
+Depth [mm];227.0;4.444444444444445;9.0
+Depth [mm];227.5;4.2;5.0
+Depth [mm];227.6;4.0;4.0
+Depth [mm];227.9;5.0;2.0
+Depth [mm];228.0;4.033333333333333;6.0
+Depth [mm];228.12;4.0;1.0
+Depth [mm];228.32;5.0;2.0
+Depth [mm];228.4;;0.0
+Depth [mm];228.7;;0.0
+Depth [mm];229.0;;0.0
+Depth [mm];229.2;;0.0
+Depth [mm];229.4;4.0;6.0
+Depth [mm];229.75;;0.0
+Depth [mm];229.9;4.545454545454546;11.0
+Depth [mm];230.0;4.6;5.0
+Depth [mm];230.1;1.0;1.0
+Depth [mm];230.14;;0.0
+Depth [mm];232.5;4.38076923076923;78.0
+Depth [mm];232.7;;0.0
+Depth [mm];232.9;4.6;30.0
+Depth [mm];233.0;3.3333333333333335;3.0
+Depth [mm];233.1;5.0;1.0
+Depth [mm];233.13;4.679166666666667;24.0
+Depth [mm];233.3;5.0;3.0
+Depth [mm];233.8;;0.0
+Depth [mm];233.9;4.404545454545455;22.0
+Depth [mm];234.0;;0.0
+Depth [mm];234.2;4.0;3.0
+Depth [mm];234.3;3.4;7.0
+Depth [mm];235.0;4.44;75.0
+Depth [mm];235.3;4.927272727272728;11.0
+Depth [mm];235.4;;0.0
+Depth [mm];235.56;4.41;20.0
+Depth [mm];235.6;4.490909090909091;11.0
+Depth [mm];235.65;3.0;2.0
+Depth [mm];235.8;4.2444444444444445;9.0
+Depth [mm];236.0;4.606060606060606;99.0
+Depth [mm];236.4;5.0;1.0
+Depth [mm];236.5;4.533333333333333;15.0
+Depth [mm];236.9;5.0;1.0
+Depth [mm];237.0;;0.0
+Depth [mm];237.4;;0.0
+Depth [mm];237.5;4.433333333333334;12.0
+Depth [mm];237.6;;0.0
+Depth [mm];237.8;4.33;20.0
+Depth [mm];238.0;4.209999999999999;20.0
+Depth [mm];238.4;4.242105263157895;19.0
+Depth [mm];238.5;3.985185185185185;27.0
+Depth [mm];239.6;2.3333333333333335;3.0
+Depth [mm];239.69;;0.0
+Depth [mm];239.7;3.6;3.0
+Depth [mm];239.89;4.5;7.0
+Depth [mm];239.9;3.0;1.0
+Depth [mm];240.0;4.8;4.0
+Depth [mm];240.27;;0.0
+Depth [mm];240.5;;0.0
+Depth [mm];240.7;5.0;2.0
+Depth [mm];240.95;;0.0
+Depth [mm];241.0;;0.0
+Depth [mm];241.26;3.3333333333333335;3.0
+Depth [mm];242.0;4.369090909090909;55.0
+Depth [mm];242.3;;0.0
+Depth [mm];242.5;;0.0
+Depth [mm];242.6;;0.0
+Depth [mm];243.0;4.666666666666667;9.0
+Depth [mm];243.5;3.1230769230769226;13.0
+Depth [mm];244.0;;0.0
+Depth [mm];244.2;3.5;4.0
+Depth [mm];244.82;4.0;2.0
+Depth [mm];245.0;4.0;1.0
+Depth [mm];245.3;4.7;3.0
+Depth [mm];245.7;;0.0
+Depth [mm];245.9;4.96;25.0
+Depth [mm];246.0;;0.0
+Depth [mm];247.3;4.333333333333333;3.0
+Depth [mm];247.42;4.6000000000000005;9.0
+Depth [mm];247.5;;0.0
+Depth [mm];247.7;5.0;1.0
+Depth [mm];247.9;;0.0
+Depth [mm];248.0;4.25;4.0
+Depth [mm];248.05;;0.0
+Depth [mm];248.08;;0.0
+Depth [mm];248.1;4.647058823529412;17.0
+Depth [mm];248.6;;0.0
+Depth [mm];248.7;4.0;2.0
+Depth [mm];249.0;;0.0
+Depth [mm];249.1;;0.0
+Depth [mm];249.17;3.0;1.0
+Depth [mm];249.2;4.5;2.0
+Depth [mm];249.5;4.2625;48.0
+Depth [mm];249.67;5.0;1.0
+Depth [mm];250.0;4.381818181818182;11.0
+Depth [mm];250.12;4.6;5.0
+Depth [mm];250.42;;0.0
+Depth [mm];250.5;4.222222222222222;9.0
+Depth [mm];250.6;;0.0
+Depth [mm];250.62;5.0;8.0
+Depth [mm];250.9;;0.0
+Depth [mm];251.0;4.548031496062992;127.0
+Depth [mm];251.7;;0.0
+Depth [mm];251.8;4.475;4.0
+Depth [mm];251.9;4.485714285714286;35.0
+Depth [mm];252.0;3.0;1.0
+Depth [mm];252.3;;0.0
+Depth [mm];252.4;4.0;4.0
+Depth [mm];253.0;5.0;1.0
+Depth [mm];253.3;3.3;10.0
+Depth [mm];253.5;;0.0
+Depth [mm];253.8;;0.0
+Depth [mm];253.9;4.333333333333333;9.0
+Depth [mm];254.0;4.2846153846153845;26.0
+Depth [mm];254.3;4.0;1.0
+Depth [mm];254.6;;0.0
+Depth [mm];254.9;;0.0
+Depth [mm];255.0;3.533333333333333;30.0
+Depth [mm];255.5;3.5;2.0
+Depth [mm];256.0;4.5062500000000005;48.0
+Depth [mm];256.5;;0.0
+Depth [mm];257.0;;0.0
+Depth [mm];257.8;4.3;11.0
+Depth [mm];257.85;5.0;1.0
+Depth [mm];257.9;3.3333333333333335;6.0
+Depth [mm];258.0;5.0;1.0
+Depth [mm];258.34;;0.0
+Depth [mm];258.55;;0.0
+Depth [mm];258.6;5.0;1.0
+Depth [mm];259.0;3.991891891891892;74.0
+Depth [mm];259.04;4.0;2.0
+Depth [mm];259.3;3.0;1.0
+Depth [mm];259.4;4.333333333333333;6.0
+Depth [mm];259.61;4.340000000000001;10.0
+Depth [mm];259.7;5.0;2.0
+Depth [mm];260.0;4.664864864864865;37.0
+Depth [mm];260.3;4.836363636363637;11.0
+Depth [mm];260.35;4.847368421052631;38.0
+Depth [mm];260.4;4.74;25.0
+Depth [mm];260.61;4.5;4.0
+Depth [mm];261.04;3.7000000000000006;6.0
+Depth [mm];261.2;;0.0
+Depth [mm];262.0;5.0;2.0
+Depth [mm];262.15;5.0;1.0
+Depth [mm];262.4;;0.0
+Depth [mm];263.5;4.0;1.0
+Depth [mm];263.55;;0.0
+Depth [mm];263.7;4.1375;8.0
+Depth [mm];264.0;4.4399999999999995;15.0
+Depth [mm];264.4;4.819999999999999;20.0
+Depth [mm];264.8;4.429411764705883;17.0
+Depth [mm];265.0;;0.0
+Depth [mm];265.02;;0.0
+Depth [mm];265.85;;0.0
+Depth [mm];266.0;2.0;1.0
+Depth [mm];266.4;4.294117647058823;17.0
+Depth [mm];267.0;5.0;4.0
+Depth [mm];267.1;;0.0
+Depth [mm];269.0;5.0;9.0
+Depth [mm];271.0;;0.0
+Depth [mm];271.09;4.636363636363637;11.0
+Depth [mm];271.1;4.0;4.0
+Depth [mm];272.0;5.0;3.0
+Depth [mm];272.1;;0.0
+Depth [mm];272.11;3.96;5.0
+Depth [mm];273.0;4.9;19.0
+Depth [mm];274.0;4.833333333333333;12.0
+Depth [mm];274.52;5.0;1.0
+Depth [mm];274.6;;0.0
+Depth [mm];275.0;5.0;1.0
+Depth [mm];276.0;;0.0
+Depth [mm];276.6;;0.0
+Depth [mm];277.7;5.0;2.0
+Depth [mm];278.74;5.0;2.0
+Depth [mm];279.4;;0.0
+Depth [mm];279.9;4.888888888888889;9.0
+Depth [mm];280.0;4.0;4.0
+Depth [mm];280.8;;0.0
+Depth [mm];282.0;3.6666666666666665;18.0
+Depth [mm];283.0;;0.0
+Depth [mm];284.0;5.0;7.0
+Depth [mm];284.05;5.0;2.0
+Depth [mm];287.0;4.8;5.0
+Depth [mm];288.73;5.0;2.0
+Depth [mm];290.0;1.0;1.0
+Depth [mm];293.0;;0.0
+Depth [mm];293.25;5.0;2.0
+Depth [mm];294.0;3.6999999999999997;12.0
+Depth [mm];294.48;4.666666666666667;6.0
+Depth [mm];294.5;4.8;5.0
+Depth [mm];295.5;3.0;1.0
+Depth [mm];297.97;;0.0
+Depth [mm];298.0;5.0;1.0
+Depth [mm];299.57;;0.0
+Depth [mm];300.0;4.571428571428571;7.0
+Depth [mm];311.61;3.0;1.0
+Depth [mm];330.0;4.0;4.0
+Depth [mm];349.5;5.0;2.0
+Depth [mm];350.0;3.8;4.0
+Depth [mm];355.0;5.0;1.0
+Depth [mm];399.9;5.0;1.0
+Depth [mm];2124.0;5.0;23.0
+Depth [mm];2163.0;;0.0
+Depth [mm];2166.0;4.0;1.0
+Depth [mm];2269.0;;0.0
+Depth [mm];2294.0;5.0;1.0
+Depth [mm];2299.0;;0.0
+Depth [mm];2346.0;;0.0
+Depth [mm];2376.0;4.818181818181818;22.0
+Depth [mm];2423.0;;0.0
+Depth [mm];2426.0;5.0;1.0
+Depth [mm];2477.0;;0.0
+Depth [mm];21172.0;5.0;1.0
+Depth [mm];22832.0;5.0;3.0
+Depth [mm];24525.0;4.0;1.0
+Depth [mm];31161.0;5.0;1.0
+Keyboard language;['CZ', 'SK', 'EN'];;0.0
+Keyboard language;['CZ', 'SK'];4.368890103881903;1829.0
+Keyboard language;['CZ'];4.8483380816714154;1053.0
+Keyboard language;['EN'];4.745161290322581;62.0
+Keyboard language;['GER'];;0.0
+Keyboard language;['HU'];;0.0
+Keyboard language;['RU'];5.0;1.0
+Keyboard language;['SK'];4.833701657458564;181.0
+Laptop Series;Acer Aspire;4.1258928571428575;112.0
+Laptop Series;Acer Chromebook;4.0;16.0
+Laptop Series;Acer ConceptD;;0.0
+Laptop Series;Acer Enduro;4.0;1.0
+Laptop Series;Acer Extensa;3.0;1.0
+Laptop Series;Acer Nitro;4.1521739130434785;69.0
+Laptop Series;Acer Predator;4.642857142857143;14.0
+Laptop Series;Acer Spin;3.875;8.0
+Laptop Series;Acer Swift;4.458181818181818;55.0
+Laptop Series;Acer TravelMate;4.0;6.0
+Laptop Series;Alza Gamebook;3.1230769230769226;13.0
+Laptop Series;Alza Ultrabook;;0.0
+Laptop Series;Apple MacBook Air;4.8801526717557255;917.0
+Laptop Series;Apple MacBook Pro;4.9;266.0
+Laptop Series;Asus Chromebook;;0.0
+Laptop Series;Asus ExpertBook;3.8333333333333335;18.0
+Laptop Series;Asus ROG;4.126666666666667;75.0
+Laptop Series;Asus StudioBook;;0.0
+Laptop Series;Asus TUF Gaming;4.661481481481482;135.0
+Laptop Series;Asus VivoBook;4.3069444444444445;216.0
+Laptop Series;Asus ZenBook;4.43921568627451;51.0
+Laptop Series;Dell Alienware;;0.0
+Laptop Series;Dell Inspiron;4.237037037037037;27.0
+Laptop Series;Dell Inspiron Gaming;4.344444444444445;18.0
+Laptop Series;Dell Latitude;4.0;4.0
+Laptop Series;Dell Precision;5.0;1.0
+Laptop Series;Dell Vostro;4.6230769230769235;26.0
+Laptop Series;Dell XPS;1.0;2.0
+Laptop Series;Fujitsu Lifebook E;5.0;1.0
+Laptop Series;Fujitsu Lifebook U7;5.0;1.0
+Laptop Series;Fujitsu Lifebook U9;;0.0
+Laptop Series;Gigabyte Aero;;0.0
+Laptop Series;Gigabyte Aorus;5.0;1.0
+Laptop Series;HP EliteBook;4.0;4.0
+Laptop Series;HP Envy;4.425;12.0
+Laptop Series;HP Omen;4.6;5.0
+Laptop Series;HP Pavilion;3.3333333333333335;3.0
+Laptop Series;HP Pavilion Gaming;5.0;3.0
+Laptop Series;HP ProBook;4.538461538461538;13.0
+Laptop Series;HP Spectre;4.775;4.0
+Laptop Series;HP Victus;4.561538461538461;26.0
+Laptop Series;HP ZBook;5.0;2.0
+Laptop Series;Lenovo Chromebook;4.078571428571428;14.0
+Laptop Series;Lenovo EDU;;0.0
+Laptop Series;Lenovo Flex;4.643750000000001;16.0
+Laptop Series;Lenovo IdeaPad;4.49748427672956;159.0
+Laptop Series;Lenovo IdeaPad Gaming;4.476190476190476;42.0
+Laptop Series;Lenovo Ideapad Duet;4.0;4.0
+Laptop Series;Lenovo LOQ;4.220000000000001;5.0
+Laptop Series;Lenovo Legion;4.675352112676056;142.0
+Laptop Series;Lenovo ThinkBook;4.579166666666667;48.0
+Laptop Series;Lenovo ThinkPad E;4.885714285714286;7.0
+Laptop Series;Lenovo ThinkPad L;4.0;1.0
+Laptop Series;Lenovo ThinkPad P;5.0;1.0
+Laptop Series;Lenovo ThinkPad T;3.6;5.0
+Laptop Series;Lenovo ThinkPad X;1.0;1.0
+Laptop Series;Lenovo ThinkPad Z;;0.0
+Laptop Series;Lenovo V series;4.480487804878049;41.0
+Laptop Series;Lenovo Yoga;4.566304347826088;92.0
+Laptop Series;MSI Alpha;4.0;4.0
+Laptop Series;MSI Creator;4.0;1.0
+Laptop Series;MSI Modern;4.545454545454546;11.0
+Laptop Series;MSI Prestige;4.333333333333333;3.0
+Laptop Series;MSI Stealth;5.0;2.0
+Laptop Series;MSI Summit;2.17;10.0
+Laptop Series;MSI series GE;5.0;6.0
+Laptop Series;MSI series GF;4.25;20.0
+Laptop Series;MSI series GP;5.0;8.0
+Laptop Series;MSI series GS;4.571428571428571;7.0
+Laptop Series;MSI series GT;4.0;4.0
+Laptop Series;Microsoft Surface;4.6869565217391305;23.0
+Laptop Series;Microsoft Surface Laptop;;0.0
+Laptop Series;Microsoft Surface Laptop Studio;5.0;5.0
+Laptop Series;Toshiba Tecra;;0.0
+Laptop Series;Umax VisionBook;4.011926605504588;109.0
+Certification;['Intel EVO', 'MIL-STD-810H'];4.464406779661017;59.0
+Certification;['Intel EVO', 'Windows 11 compatible', 'MIL-STD-810H'];4.9;10.0
+Certification;['Intel EVO', 'Windows 11 compatible'];3.889655172413793;58.0
+Certification;['Intel EVO'];4.338888888888889;36.0
+Certification;['MIL-STD-810H'];4.439664804469274;179.0
+Certification;['NVIDIA RTX Studio', 'MIL-STD-810H'];3.322222222222222;18.0
+Certification;['NVIDIA RTX Studio', 'Windows 11 compatible', 'MIL-STD-810H'];4.855555555555556;18.0
+Certification;['NVIDIA RTX Studio', 'Windows 11 compatible'];4.142857142857143;7.0
+Certification;['NVIDIA RTX Studio'];4.559523809523809;42.0
+Certification;['TÜV Low Blue Light', 'Intel EVO', 'MIL-STD-810H'];;0.0
+Certification;['TÜV Low Blue Light', 'Intel EVO', 'NVIDIA RTX Studio', 'Windows 11 compatible'];4.316666666666666;6.0
+Certification;['TÜV Low Blue Light', 'Intel EVO', 'NVIDIA RTX Studio'];3.5;2.0
+Certification;['TÜV Low Blue Light', 'Intel EVO', 'Windows 11 compatible', 'MIL-STD-810H'];3.5;4.0
+Certification;['TÜV Low Blue Light', 'Intel EVO', 'Windows 11 compatible'];4.0;5.0
+Certification;['TÜV Low Blue Light', 'Intel EVO'];4.6;5.0
+Certification;['TÜV Low Blue Light', 'MIL-STD-810H'];4.466037735849056;53.0
+Certification;['TÜV Low Blue Light', 'NVIDIA RTX Studio', 'Windows 11 compatible'];4.8;5.0
+Certification;['TÜV Low Blue Light', 'NVIDIA RTX Studio'];5.0;7.0
+Certification;['TÜV Low Blue Light', 'Windows 11 compatible', 'MIL-STD-810H'];4.508928571428571;56.0
+Certification;['TÜV Low Blue Light', 'Windows 11 compatible'];4.675182481751825;137.0
+Certification;['TÜV Low Blue Light'];4.392857142857143;56.0
+Certification;['Windows 11 compatible', 'MIL-STD-810H'];4.335365853658536;164.0
+Certification;['Windows 11 compatible'];4.362286689419795;586.0
+Extended warranty;['Extended Warranty', 'On-site', '3-year warranty even for businesses'];4.5;2.0
+Extended warranty;['Extended Warranty'];4.631578947368421;57.0
+Extended warranty;['Next Business Day', 'Extended Warranty', '3-year warranty even for businesses'];;0.0
+Extended warranty;['Next Business Day', 'Extended Warranty', 'On-site', '3-year warranty even for businesses'];5.0;3.0
+Extended warranty;['Next Business Day', 'Extended Warranty', 'On-site'];3.0;2.0
+Extended warranty;['Next Business Day', 'Extended Warranty'];2.0;1.0
+Extended warranty;['Next Business Day', 'On-site'];;0.0
+Extended warranty;['Next Business Day'];4.111428571428571;35.0
+Extended warranty;['No extended warranty'];4.4640986132511555;649.0
+Extended warranty;['On-site', '3-year warranty even for businesses'];;0.0
+Extended warranty;['On-site'];4.425657894736842;152.0
+Extended warranty;['Pick-up & Return'];4.462973760932944;343.0
+Package includes;['61W USB-C power adapter'];;0.0
+Package includes;['Bag', 'Mouse', 'Power adapter', 'Power cable', 'Stylus'];1.0;1.0
+Package includes;['Bag', 'Mouse', 'Power adapter', 'Power cable'];4.0;1.0
+Package includes;['Bag', 'Mouse', 'Power adapter', 'Stylus', 'Micro HDMI to LAN adapter'];4.0;3.0
+Package includes;['Bag', 'Mouse', 'Power adapter', 'Stylus'];;0.0
+Package includes;['Bag', 'Mouse', 'Power adapter'];5.0;2.0
+Package includes;['Bag', 'Mouse', 'Stylus'];;0.0
+Package includes;['Bag', 'Mouse'];;0.0
+Package includes;['Bag', 'Power adapter'];;0.0
+Package includes;['Case', 'Stylus'];;0.0
+Package includes;['Case'];4.5;2.0
+Package includes;['Keyboard', 'Power adapter', 'Power cable', 'Stylus'];3.8;5.0
+Package includes;['Keyboard', 'Power adapter', 'Stylus'];;0.0
+Package includes;['Keyboard', 'Power adapter'];5.0;2.0
+Package includes;['Mouse', 'Case'];5.0;1.0
+Package includes;['Mouse', 'Power adapter', 'Power cable'];5.0;4.0
+Package includes;['Mouse', 'Power adapter'];5.0;1.0
+Package includes;['Mouse'];3.0;3.0
+Package includes;['Power adapter', 'Case', 'Stylus'];4.666666666666667;3.0
+Package includes;['Power adapter', 'Case'];;0.0
+Package includes;['Power adapter', 'External graphics card RTX 3080'];;0.0
+Package includes;['Power adapter', 'Power adapter', 'Webcam'];;0.0
+Package includes;['Power adapter', 'Power cable', 'Armor Cap'];3.5999999999999996;9.0
+Package includes;['Power adapter', 'Power cable', 'Case', 'Stylus'];5.0;2.0
+Package includes;['Power adapter', 'Power cable', 'Case'];4.0;1.0
+Package includes;['Power adapter', 'Power cable', 'Stylus', 'Micro HDMI to LAN adapter'];;0.0
+Package includes;['Power adapter', 'Power cable', 'Stylus'];4.653333333333333;30.0
+Package includes;['Power adapter', 'Power cable'];4.519281914893617;752.0
+Package includes;['Power adapter', 'Stylus', 'External graphics card RTX 3080'];5.0;4.0
+Package includes;['Power adapter', 'Stylus'];4.124242424242424;33.0
+Package includes;['Power adapter', 'USB-A to RJ45 adapter', 'USB-C adapter to audio jack'];;0.0
+Package includes;['Power adapter', 'USB-C to USB-A adapter'];;0.0
+Package includes;['Power adapter'];4.362920168067227;952.0
+Package includes;['Stylus'];4.275;8.0
+Package includes;['USB-C to HDMI adapter'];;0.0
+Package includes;['USB-C to RJ45 adapter', 'Power adapter'];;0.0
+Country;['Czechia', 'Slovakia', 'Hungary', 'Germany', 'Russia', 'Austria', 'Croatia', 'France', 'Poland', 'Romania', 'Slovenia'];4.438382899628253;2152.0
+Country;['Czechia', 'Slovakia'];;0.0
+Special event;Digital student SK;4.436371760500447;1119.0
+Intel processor generation;Alder Lake (12th generation);4.316666666666666;720.0
+Intel processor generation;Amber Lake (10th generation);5.0;4.0
+Intel processor generation;Amber Lake (8th generation);4.5;8.0
+Intel processor generation;Coffee Lake (8th generation);5.0;97.0
+Intel processor generation;Coffee Lake (9th generation);4.292307692307692;65.0
+Intel processor generation;Comet Lake (10th generation);4.621621621621622;37.0
+Intel processor generation;Gemini Lake (8th generation);3.898591549295775;71.0
+Intel processor generation;Ice Lake (10th generation);4.55;20.0
+Intel processor generation;Kaby Lake (7th generation);4.645161290322581;62.0
+Intel processor generation;Kaby Lake G (8th generation);;0.0
+Intel processor generation;Kaby Lake Refresh (8th generation);;0.0
+Intel processor generation;Raptor Lake (13th generation);4.561570247933885;242.0
+Intel processor generation;Tiger Lake (11th generation);4.350627615062761;239.0
+Intel processor generation;Whiskey Lake (8th generation);5.0;3.0
+Graphics card memory [GB];0.01;;0.0
+Graphics card memory [GB];2.0;4.182758620689655;29.0
+Graphics card memory [GB];4.0;4.3987951807228916;249.0
+Graphics card memory [GB];6.0;4.293922651933702;181.0
+Graphics card memory [GB];8.0;4.537057220708447;367.0
+Graphics card memory [GB];10.0;;0.0
+Graphics card memory [GB];12.0;4.375;16.0
+Graphics card memory [GB];16.0;4.051851851851852;27.0
+Maximum Graphic Power (TGP) [W];15.0;;0.0
+Maximum Graphic Power (TGP) [W];25.0;4.24;5.0
+Maximum Graphic Power (TGP) [W];28.0;;0.0
+Maximum Graphic Power (TGP) [W];35.0;5.0;2.0
+Maximum Graphic Power (TGP) [W];40.0;4.8;10.0
+Maximum Graphic Power (TGP) [W];45.0;3.8125;16.0
+Maximum Graphic Power (TGP) [W];50.0;4.938461538461539;13.0
+Maximum Graphic Power (TGP) [W];60.0;3.5;6.0
+Maximum Graphic Power (TGP) [W];65.0;4.4399999999999995;5.0
+Maximum Graphic Power (TGP) [W];70.0;4.484;50.0
+Maximum Graphic Power (TGP) [W];75.0;4.455172413793103;29.0
+Maximum Graphic Power (TGP) [W];80.0;4.833333333333333;6.0
+Maximum Graphic Power (TGP) [W];85.0;4.25;16.0
+Maximum Graphic Power (TGP) [W];90.0;4.583333333333333;36.0
+Maximum Graphic Power (TGP) [W];95.0;4.623529411764705;17.0
+Maximum Graphic Power (TGP) [W];100.0;4.5;8.0
+Maximum Graphic Power (TGP) [W];105.0;4.472;75.0
+Maximum Graphic Power (TGP) [W];110.0;4.666666666666667;3.0
+Maximum Graphic Power (TGP) [W];115.0;3.8677419354838714;31.0
+Maximum Graphic Power (TGP) [W];120.0;4.615384615384615;13.0
+Maximum Graphic Power (TGP) [W];125.0;4.7846153846153845;13.0
+Maximum Graphic Power (TGP) [W];130.0;3.2399999999999998;5.0
+Maximum Graphic Power (TGP) [W];140.0;4.626600985221675;203.0
+Maximum Graphic Power (TGP) [W];145.0;4.2;5.0
+Maximum Graphic Power (TGP) [W];150.0;4.648148148148148;27.0
+Maximum Graphic Power (TGP) [W];165.0;4.0;3.0
+Maximum Graphic Power (TGP) [W];175.0;4.2153846153846155;39.0
+Maximum Graphic Power (TGP) [W];1750.0;;0.0
+Maximum Graphic Power (TGP) [W];2370.0;;0.0
+Boost clock [MHz];0.0;4.15;28.0
+Boost clock [MHz];1.37;;0.0
+Boost clock [MHz];115.0;;0.0
+Boost clock [MHz];1057.5;4.927272727272728;11.0
+Boost clock [MHz];1058.0;5.0;1.0
+Boost clock [MHz];1107.5;5.0;4.0
+Boost clock [MHz];1150.0;5.0;2.0
+Boost clock [MHz];1170.0;;0.0
+Boost clock [MHz];1245.0;;0.0
+Boost clock [MHz];1255.0;;0.0
+Boost clock [MHz];1282.0;;0.0
+Boost clock [MHz];1300.0;3.5;2.0
+Boost clock [MHz];1320.0;;0.0
+Boost clock [MHz];1345.0;5.0;2.0
+Boost clock [MHz];1350.0;;0.0
+Boost clock [MHz];1375.0;;0.0
+Boost clock [MHz];1380.0;;0.0
+Boost clock [MHz];1382.0;;0.0
+Boost clock [MHz];1410.0;5.0;1.0
+Boost clock [MHz];1440.0;;0.0
+Boost clock [MHz];1445.0;;0.0
+Boost clock [MHz];1452.0;3.2999999999999994;3.0
+Boost clock [MHz];1460.0;;0.0
+Boost clock [MHz];1470.0;2.3333333333333335;3.0
+Boost clock [MHz];1477.0;4.333333333333333;3.0
+Boost clock [MHz];1485.0;4.533333333333334;12.0
+Boost clock [MHz];1492.0;4.0;1.0
+Boost clock [MHz];1500.0;4.220000000000001;5.0
+Boost clock [MHz];1525.0;4.0;1.0
+Boost clock [MHz];1545.0;;0.0
+Boost clock [MHz];1550.0;;0.0
+Boost clock [MHz];1560.0;3.5;4.0
+Boost clock [MHz];1580.0;;0.0
+Boost clock [MHz];1585.0;5.0;6.0
+Boost clock [MHz];1590.0;;0.0
+Boost clock [MHz];1600.0;5.0;1.0
+Boost clock [MHz];1605.0;;0.0
+Boost clock [MHz];1620.0;4.5249999999999995;24.0
+Boost clock [MHz];1625.0;4.7239130434782615;46.0
+Boost clock [MHz];1652.0;;0.0
+Boost clock [MHz];1656.0;5.0;2.0
+Boost clock [MHz];1660.0;;0.0
+Boost clock [MHz];1678.0;;0.0
+Boost clock [MHz];1681.0;4.666666666666667;3.0
+Boost clock [MHz];1687.0;5.0;2.0
+Boost clock [MHz];1695.0;4.5;2.0
+Boost clock [MHz];1702.0;4.355555555555556;9.0
+Boost clock [MHz];1710.0;;0.0
+Boost clock [MHz];1720.0;5.0;3.0
+Boost clock [MHz];1732.0;5.0;1.0
+Boost clock [MHz];1740.0;4.545454545454546;22.0
+Boost clock [MHz];1750.0;;0.0
+Boost clock [MHz];1752.0;4.3500000000000005;6.0
+Boost clock [MHz];1770.0;;0.0
+Boost clock [MHz];1790.0;4.4;9.0
+Boost clock [MHz];1810.0;5.0;2.0
+Boost clock [MHz];1815.0;;0.0
+Boost clock [MHz];1865.0;;0.0
+Boost clock [MHz];1930.0;;0.0
+Boost clock [MHz];1980.0;5.0;2.0
+Boost clock [MHz];2000.0;;0.0
+Boost clock [MHz];2010.0;4.3;17.0
+Boost clock [MHz];2030.0;5.0;4.0
+Boost clock [MHz];2040.0;5.0;3.0
+Boost clock [MHz];2080.0;5.0;3.0
+Boost clock [MHz];2090.0;3.44;10.0
+Boost clock [MHz];2100.0;;0.0
+Boost clock [MHz];2115.0;;0.0
+Boost clock [MHz];2130.0;;0.0
+Boost clock [MHz];2175.0;4.928571428571429;14.0
+Boost clock [MHz];2225.0;4.819999999999999;10.0
+Boost clock [MHz];2250.0;4.9;19.0
+Boost clock [MHz];2280.0;4.375;8.0
+Boost clock [MHz];2300.0;4.8;5.0
+Boost clock [MHz];2350.0;4.428571428571429;7.0
+Boost clock [MHz];2370.0;4.672727272727273;88.0
+Boost clock [MHz];2405.0;5.0;1.0
+Boost clock [MHz];2420.0;4.616666666666666;30.0
+Boost clock [MHz];2455.0;4.7;10.0
+Boost clock [MHz];2500.0;;0.0
+Boost clock [MHz];2505.0;4.0;2.0
+"Number of occupied slots 2.5""";0.0;4.442162162162162;740.0
+"Slots in total 2.5""";0.0;4.47801652892562;605.0
+"Slots in total 2.5""";1.0;4.274857142857143;175.0
+Number of cells;2.0;4.247058823529412;51.0
+Number of cells;3.0;4.364857881136951;774.0
+Number of cells;4.0;4.282079646017699;452.0
+Number of cells;6.0;4.346153846153846;26.0
+Number of cells;8.0;4.666666666666667;3.0
+Number of cells;41.0;;0.0
+Thunderbolt / USB 4;1.0;4.457182320441989;362.0
+Thunderbolt / USB 4;2.0;4.639819004524887;442.0
+Thunderbolt / USB 4;3.0;4.846153846153846;13.0
+Thunderbolt / USB 4;4.0;;0.0
+USB 3.2 Gen 2;1.0;4.398630136986302;73.0
+USB 3.2 Gen 2;2.0;4.383006535947713;153.0
+USB 3.2 Gen 2;3.0;4.26;20.0
+USB 3.2 Gen 2;4.0;;0.0
+Standby time [h];5.0;5.0;1.0
+Standby time [h];9.0;4.5;2.0
+Standby time [h];10.0;5.0;3.0
+Standby time [h];11.0;5.0;4.0
+Standby time [h];14.0;;0.0
+Standby time [h];15.0;5.0;2.0
+Standby time [h];18.0;4.8409240924092405;303.0
+Standby time [h];19.0;5.0;2.0
+Standby time [h];20.0;5.0;21.0
+Standby time [h];65.0;;0.0
+Standby time [h];75.0;;0.0
+Standby time [h];85.0;;0.0
+Standby time [h];95.0;;0.0
+Standby time [h];675.0;;0.0
+Standby time [h];1025.0;4.0;1.0
+Lease;No;4.8;10.0
+Lease;Yes;4.8621584699453555;732.0
+Processor model;M1;4.915435356200528;758.0
+Processor model;M1 MAX;5.0;1.0
+Processor model;M1 PRO;4.0;4.0
+Processor model;M2;4.7923444976076555;209.0
+Processor model;M3;;0.0
+Processor model;M3 MAX;;0.0
+Processor model;M3 PRO;5.0;1.0
+USB 2.0;1.0;4.236896551724138;580.0
+USB 2.0;2.0;4.141538461538461;65.0
+USB 2.0;3.0;5.0;2.0
+Number of free slots;1.0;4.5;2.0
+Number of stream processors;24.0;4.833333333333333;6.0
+Number of stream processors;48.0;;0.0
+Number of stream processors;80.0;5.0;2.0
+Number of stream processors;384.0;;0.0
+Number of stream processors;896.0;;0.0
+Number of stream processors;1024.0;4.3;3.0
+Number of stream processors;1408.0;5.0;2.0
+Number of stream processors;1536.0;5.0;5.0
+Number of stream processors;1920.0;4.742857142857143;7.0
+Number of stream processors;2304.0;4.5;9.0
+Number of stream processors;2560.0;;0.0
+Number of stream processors;3072.0;5.0;1.0
+Number of stream processors;3840.0;4.04;5.0
+Number of stream processors;4608.0;;0.0
+Number of stream processors;5120.0;3.885714285714286;7.0
+Number of stream processors;6144.0;;0.0
+Number of stream processors;7424.0;;0.0
+Number of stream processors;9728.0;5.0;1.0
+GPU Passmark;760.0;5.0;1.0
+GPU Passmark;1054.0;;0.0
+GPU Passmark;1077.0;;0.0
+GPU Passmark;1078.0;4.8;5.0
+GPU Passmark;2192.0;;0.0
+GPU Passmark;2580.0;;0.0
+GPU Passmark;3015.0;4.7;3.0
+GPU Passmark;3153.0;3.9;24.0
+GPU Passmark;3166.0;5.0;2.0
+GPU Passmark;5882.0;5.0;2.0
+GPU Passmark;6118.0;;0.0
+GPU Passmark;6459.0;5.0;3.0
+GPU Passmark;6492.0;;0.0
+GPU Passmark;6689.0;;0.0
+GPU Passmark;6946.0;;0.0
+GPU Passmark;7796.0;4.3;3.0
+GPU Passmark;12369.0;5.0;2.0
+GPU Passmark;12444.0;4.5;9.0
+GPU Passmark;13987.0;5.0;1.0
+GPU Passmark;14200.0;4.7;6.0
+GPU Passmark;14732.0;;0.0
+GPU Passmark;18114.0;;0.0
+GPU Passmark;18123.0;;0.0
+HDD capacity [GB];1024.0;4.25;8.0
+Other interfaces;['Docking connector', 'SIM Card'];;0.0
+Other interfaces;['Docking connector'];4.1571428571428575;7.0
+Other interfaces;['Gyroscope'];;0.0
+Other interfaces;['SIM Card'];;0.0
+USB 3.2 Gen 2x2;2.0;;0.0
+Intel Optane [GB];32.0;;0.0
