@@ -5,6 +5,12 @@ from pydantic import BaseModel
 
 
 def json_default(data: Any) -> Any:
+    """Converts `data` to JSON-serializable instance.
+
+    :param Any data: data to be serialized
+    :return: JSON-serializable data
+    :rtype: Any
+    """
     if isinstance(data, list):
         return [json_default(item) for item in data]
     if isinstance(data, dict):

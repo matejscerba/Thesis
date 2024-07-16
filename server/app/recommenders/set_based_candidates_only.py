@@ -8,14 +8,16 @@ from app.recommenders.abstract import AbstractRecommender, RecommenderModel
 from app.recommenders.mixins.set_based_mixin import SetBasedMixin
 
 
-class SetBasedRecommender(AbstractRecommender, SetBasedMixin):
+class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
     """This class implements a simplified version of the recommender system based on
     https://www.researchgate.net/publication/334584513_Transparent_Scrutable_and_Explainable_User_Models_for_Personalized_Recommendation
+
+    Only candidates are considered when building user model.
 
     :param ClassVar[RecommenderModel] model: the model of this recommender system
     """
 
-    model: ClassVar[RecommenderModel] = RecommenderModel.SET_BASED
+    model: ClassVar[RecommenderModel] = RecommenderModel.SET_BASED_CANDIDATES_ONLY
 
     @classmethod
     def predict(
@@ -41,14 +43,11 @@ class SetBasedRecommender(AbstractRecommender, SetBasedMixin):
         )
 
         # Compute user model, each candidate supports the preference with `1/(len(candidates_ids)+len(discarded_ids)) at
-        # the position of attribute value a candidate has, discarded deducts the same value from the user model, only
-        # important attributes are considered
+        # the position of attribute value a candidate has, only important attributes are considered
         user_model = np.zeros(num_columns)
         for _, row in products.iterrows():
             if row["id"] in candidate_ids:
                 rating = 1
-            elif row["id"] in discarded_ids:
-                rating = -1
             else:
                 continue
             for attribute in important_attributes:

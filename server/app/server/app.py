@@ -6,6 +6,11 @@ from app.server.routes import add_routes
 
 
 def create_app() -> Flask:
+    """Creates and configures Flask application.
+
+    :return: Flask application
+    :rtype: Flask
+    """
     app = Flask("Server")
     CORS(app)
     app.config["CORS_HEADERS"] = ["Content-Type", "Access-Control-Allow-Origin"]
