@@ -22,10 +22,9 @@ them. These products are marked as candidates by clicking the heart icon in the 
 Recommender system guides the browsing by offering alternatives to the currently selected candidate products and the
 unseen section displays statistics about the rest of the products and allows users to filter products based on important
 attributes. After the user browsed through all relevant products, an alert appears and tells the user that now might be
-the time to move to phase 2.
+the time to move to phase 2. The red message "No products with relevant value" serves as this alert at this moment.
 
-If the user wants to inspect more products, he/she certainly can. Recommender system still offers alternatives and the
-unseen section shows products based on important attributes, but this time outside of the relevant range of values.
+If the user wants to inspect more products, he/she certainly can. Recommender system still offers alternatives.
 
 ### Phase 2: Selection of the best candidate
 
