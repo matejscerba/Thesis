@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import { ModalContextProvider } from "./contexts/modal";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Category from "./pages/Category";
 import Categories from "./pages/Categories";
@@ -22,11 +21,7 @@ function App() {
     },
   ]);
 
-  return (
-    <ModalContextProvider>
-      <RouterProvider router={router} />
-    </ModalContextProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

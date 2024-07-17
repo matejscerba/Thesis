@@ -1,7 +1,7 @@
 /**
  * Url of the server. Ending with slash.
  */
-const SERVER_URL = "http://localhost:8086/";
+const SERVER_URL = `${process.env.REACT_APP_SERVER_URL}${process.env.REACT_APP_SERVER_URL.endsWith("/") ? "" : "/"}`;
 
 /**
  * Fetches data from a server.
@@ -38,7 +38,7 @@ export function fetchFromServer(
 }
 
 /**
- * Fetches JSON data from the server
+ * Fetches JSON data from the server.
  *
  * @param {string} url relative url to be called
  * @param {Object.<string, string>} params GET params of the request - will be appended to the url
