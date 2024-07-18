@@ -88,6 +88,13 @@ body {
   flex: 1;
 }
 
+.home-link {
+  position: absolute;
+  top: 3rem;
+  left: calc(15% + 1rem);
+  color: black;
+}
+
 .category-layout {
   display: flex;
 }

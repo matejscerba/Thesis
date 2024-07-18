@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from "../utils/tools";
 import ProductList from "../components/products/ProductList";
 import CategorySidebar from "../components/CategorySidebar";
 import { AttributesContextProvider } from "../contexts/attributes";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 /**
  * This component loads the category page layout.
@@ -29,6 +29,9 @@ function Category() {
           </div>
         </div>
       </div>
+      <NavLink to="/">
+        <i className="bi bi-house home-link" />
+      </NavLink>
     </AttributesContextProvider>
   );
 }
