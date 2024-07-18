@@ -20,7 +20,9 @@ jobs:
         with:
           node-version: "22.x"
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install --only=dev
       - name: Lint
         run: npm run eslint
       - name: Build
