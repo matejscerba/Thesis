@@ -50,23 +50,21 @@ This will build docker container for `server` and `gui` apps and run both of the
 `8086` (unless specified differently) and `gui` at port `3000`. You can access the app at
 `http://localhost:3000`.
 
+More information regarding each application is located in their folders, `/server` and `/gui`.
+
 ### Configuration
 
-Both the `gui` and `server` apps can be configured.
-
-#### Gui
-
-Gui app can not be configured.
+Only the `server` app can be configured.
 
 #### Server
 
 Server is a Flask app with multiple configurable environment variables:
 
-- `SERVER_HOST` - specifies the host where the Flask app will run (value `"0.0.0.0"` is recommended)
-- `SERVER_PORT` - specifies the port where the Flask app will run (value `8086` is recommended)
+- `SERVER_HOST` - specifies the host where the Flask app will run (value `"0.0.0.0"` is default - not required)
+- `SERVER_PORT` - specifies the port where the Flask app will run (value `8086` is default - not required)
 - `RECOMMENDER_MODEL` - specifies the recommender system model, described more below
 - `EXPLANATIONS_MODEL` - specifies the explanations model, described more below
-- `TEST_DATA` - specifies whether to use a test version of the data, described more below
+- `TEST_DATA` - specifies whether to use a test version of the data, described more below (not required)
 
 You can edit these variables in the file `server/.env`.
 
@@ -197,11 +195,19 @@ The project uses code checking software and GitHub actions.
 
 The code checks include the following:
 
-- `black` (server)
-- `flake8` (server)
-- `mypy` (server)
-- `eslint` (gui)
-- `prettier` (gui)
+- `black` (Server)
+- `flake8` (Server)
+- `mypy` (Server)
+- `eslint` (GUI)
+- `prettier` (GUI)
 
 After a change has been made and pushed to the GitHub repository, all these checks are performed and docker compose is
 tried as well to check if the container can be built properly.
+
+## Deployment
+
+Building the image to be deployed uses different version of Dockerfile than the default `gui/Dockerfile` and
+`server/Dockerfile`. There is a second version of both of those files with filename `deploy.Dockerfile`, which should be
+used when building Docker images to be deployed. The GUI image to be deployed uses [nginx engine](https://nginx.org) to
+serve the application, and both of the images to be deployed are prepared to be built for `linux/amd64` architecture.
+After these images are built, tagged and pushed to Docker repository, they can be deployed on cloud.

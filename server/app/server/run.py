@@ -7,8 +7,8 @@ def run_server() -> None:
     """Creates and runs the Flask app.
     :return: None
     """
-    host = os.environ["SERVER_HOST"]
-    port = int(os.environ["SERVER_PORT"])
+    host = os.environ.get("SERVER_HOST", "0.0.0.0")
+    port = int(os.environ.get("SERVER_PORT", 8086))
     debug = os.environ.get("SERVER_DEBUG", "False").upper() == "TRUE"
 
     app = create_app()

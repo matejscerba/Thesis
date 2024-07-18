@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# GUI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Development
 
-## Available Scripts
+The GUI is a [React](https://react.dev) app written in [TypeScript](https://www.typescriptlang.org), it is documented
+using [JSDoc](https://jsdoc.app) format.
 
-In the project directory, you can run:
+Dependencies and local serving is managed by [npm](https://www.npmjs.com), which you need to have installed.
 
-### `npm start`
+Run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```shell
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+to install the dependencies.
 
-### `npm test`
+To run the application locally, you can run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```shell
+npm start
+```
 
-### `npm run build`
+The code is statically checked using [Eslint and Prettier with support for TypeScript](https://typescript-eslint.io),
+both of these tools can be run locally with the following commands:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+npm run eslint
+npm run prettier:check
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configuration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is only a `PORT` environment variable that can be edited and affects the location of the GUI on your local
+machine.
 
-### `npm run eject`
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Building the image to be deployed uses different version of Dockerfile than the default `gui/Dockerfile` and
+`server/Dockerfile`. There is a second version of both of those files with filename `deploy.Dockerfile`, which should be
+used when building Docker images to be deployed. The GUI image to be deployed uses [nginx engine](https://nginx.org) to
+serve the application, and both of the images to be deployed are prepared to be built for `linux/amd64` architecture.
+After these images are built, tagged and pushed to Docker repository, they can be deployed on cloud.
