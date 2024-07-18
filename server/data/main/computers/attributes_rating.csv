@@ -267,6 +267,7 @@ Number of processor cores;20.0;;0.0
 Number of processor cores;24.0;2.3333333333333335;3.0
 Cache processor [MB];4.0;3.0;4.0
 Cache processor [MB];6.0;4.6;34.0
+Cache processor [MB];7.5;5.0;1.0
 Cache processor [MB];8.0;5.0;2.0
 Cache processor [MB];10.0;;0.0
 Cache processor [MB];12.0;;0.0
@@ -277,58 +278,42 @@ Cache processor [MB];22.0;4.2;53.0
 Cache processor [MB];24.0;4.2;53.0
 Cache processor [MB];30.0;;0.0
 Cache processor [MB];36.0;;0.0
-Cache processor [MB];75.0;5.0;1.0
 Core boost frequency [GHz];0.0;;0.0
 Core boost frequency [GHz];1.6;3.5;4.0
 Core boost frequency [GHz];2.3;3.0;2.0
 Core boost frequency [GHz];2.6;;0.0
 Core boost frequency [GHz];2.7;4.0;4.0
-Core boost frequency [GHz];2.8;4.300000000000001;22.0
+Core boost frequency [GHz];2.8;4.1000000000000005;26.0
 Core boost frequency [GHz];2.9;4.35;20.0
 Core boost frequency [GHz];3.2;3.5714285714285716;14.0
 Core boost frequency [GHz];3.3;4.3076923076923075;13.0
 Core boost frequency [GHz];3.4;4.8;5.0
 Core boost frequency [GHz];3.5;4.870588235294118;17.0
+Core boost frequency [GHz];3.6;;0.0
 Core boost frequency [GHz];3.7;;0.0
-Core boost frequency [GHz];3.8;2.3;10.0
+Core boost frequency [GHz];3.8;4.077272727272727;44.0
 Core boost frequency [GHz];3.9;;0.0
 Core boost frequency [GHz];4.0;4.0;2.0
 Core boost frequency [GHz];4.1;4.555319148936171;47.0
-Core boost frequency [GHz];4.2;4.53953488372093;43.0
+Core boost frequency [GHz];4.2;4.56;45.0
 Core boost frequency [GHz];4.3;4.61;20.0
-Core boost frequency [GHz];4.4;4.675;96.0
+Core boost frequency [GHz];4.4;4.678350515463918;97.0
 Core boost frequency [GHz];4.5;4.538461538461538;13.0
 Core boost frequency [GHz];4.55;;0.0
 Core boost frequency [GHz];4.6;4.7159420289855065;69.0
 Core boost frequency [GHz];4.7;4.708510638297873;47.0
 Core boost frequency [GHz];4.75;;0.0
 Core boost frequency [GHz];4.8;4.044736842105263;38.0
-Core boost frequency [GHz];4.9;2.9857142857142853;14.0
+Core boost frequency [GHz];4.9;3.9462686567164185;67.0
 Core boost frequency [GHz];5.0;3.8066666666666666;15.0
-Core boost frequency [GHz];5.1;4.30625;64.0
+Core boost frequency [GHz];5.1;4.258119658119658;117.0
 Core boost frequency [GHz];5.2;3.88125;16.0
 Core boost frequency [GHz];5.3;5.0;2.0
 Core boost frequency [GHz];5.4;3.7625;8.0
 Core boost frequency [GHz];5.6;;0.0
 Core boost frequency [GHz];5.7;5.0;2.0
 Core boost frequency [GHz];5.8;2.3333333333333335;3.0
-Core boost frequency [GHz];28.0;3.0;4.0
-Core boost frequency [GHz];35.0;;0.0
-Core boost frequency [GHz];36.0;;0.0
-Core boost frequency [GHz];37.0;;0.0
-Core boost frequency [GHz];38.0;4.6;34.0
-Core boost frequency [GHz];39.0;;0.0
-Core boost frequency [GHz];42.0;5.0;2.0
-Core boost frequency [GHz];43.0;;0.0
-Core boost frequency [GHz];44.0;5.0;1.0
-Core boost frequency [GHz];45.0;;0.0
-Core boost frequency [GHz];46.0;;0.0
-Core boost frequency [GHz];48.0;;0.0
-Core boost frequency [GHz];49.0;4.2;53.0
-Core boost frequency [GHz];51.0;4.2;53.0
-Core boost frequency [GHz];52.0;;0.0
-Core boost frequency [GHz];54.0;;0.0
-Core boost frequency [GHz];58.0;;0.0
+Max TDP [W];2.553;1.0;1.0
 Max TDP [W];6.0;3.894117647058824;17.0
 Max TDP [W];10.0;4.327659574468085;47.0
 Max TDP [W];15.0;3.972413793103448;58.0
@@ -374,7 +359,6 @@ Max TDP [W];202.0;;0.0
 Max TDP [W];219.0;4.5;2.0
 Max TDP [W];241.0;4.3500000000000005;6.0
 Max TDP [W];253.0;3.35;6.0
-Max TDP [W];2553.0;1.0;1.0
 Size of operational RAM [GB];0.5;4.571428571428571;7.0
 Size of operational RAM [GB];1.0;4.811538461538462;104.0
 Size of operational RAM [GB];2.0;4.9;57.0
@@ -395,7 +379,8 @@ Memory type;LPDDR4;4.898918918918919;185.0
 Memory type;LPDDR5;4.209937888198758;161.0
 Memory type;no RAM;4.594444444444444;90.0
 Graphics card type;['Integrated'];4.2;159.0
-Boost clock [MHz];2700.0;4.2;106.0
+Boost clock [MHz];2.7;4.2;53.0
+Boost clock [MHz];2700.0;4.2;53.0
 Graphics card brand;AMD Radeon;4.2306930693069305;202.0
 Graphics card brand;AMD Radeon Pro;5.0;6.0
 Graphics card brand;AMD Radeon RX;4.857142857142857;7.0
@@ -536,10 +521,51 @@ Storage Type;['SSD', 'HDD'];3.991111111111111;45.0
 Storage Type;['SSD'];4.430122324159021;654.0
 Storage Type;['microSD'];5.0;2.0
 Storage Type;['no storage'];4.564516129032258;93.0
+Storage capacity [GB];0.0;;0.0
+Storage capacity [GB];0.00484375;;0.0
+Storage capacity [GB];0.25;;0.0
+Storage capacity [GB];1.0;4.452791878172589;197.0
+Storage capacity [GB];2.0;3.779310344827586;58.0
+Storage capacity [GB];3.0;3.992857142857143;28.0
+Storage capacity [GB];4.0;;0.0
+Storage capacity [GB];5.0;4.8;5.0
+Storage capacity [GB];8.0;;0.0
+Storage capacity [GB];16.0;;0.0
+Storage capacity [GB];18.0;;0.0
+Storage capacity [GB];32.0;1.0;2.0
+Storage capacity [GB];64.0;5.0;2.0
+Storage capacity [GB];128.0;4.066666666666666;18.0
+Storage capacity [GB];200.0;;0.0
+Storage capacity [GB];240.0;;0.0
+Storage capacity [GB];250.0;;0.0
+Storage capacity [GB];256.0;4.482352941176471;102.0
+Storage capacity [GB];480.0;;0.0
+Storage capacity [GB];500.0;4.75;4.0
+Storage capacity [GB];512.0;4.375190839694657;262.0
+Storage capacity [GB];600.0;;0.0
+Storage capacity [GB];960.0;;0.0
+Storage capacity [GB];1000.0;5.0;3.0
+Storage capacity [GB];1024.0;3.0;1.0
+Storage capacity [GB];1250.0;;0.0
+Storage capacity [GB];1256.0;5.0;2.0
+Storage capacity [GB];1500.0;;0.0
+Storage capacity [GB];1512.0;5.0;4.0
+Storage capacity [GB];2000.0;;0.0
+Storage capacity [GB];2048.0;5.0;2.0
+Storage capacity [GB];2250.0;;0.0
+Storage capacity [GB];2512.0;5.0;1.0
+Storage capacity [GB];3072.0;;0.0
+Storage capacity [GB];4096.0;;0.0
+Storage capacity [GB];5000.0;;0.0
+Storage capacity [GB];6144.0;;0.0
+Storage capacity [GB];8192.0;;0.0
 SSD capacity [GB];0.0;;0.0
+SSD capacity [GB];0.0019140625;;0.0
 SSD capacity [GB];0.25;;0.0
-SSD capacity [GB];1.0;;0.0
-SSD capacity [GB];1.9140625;;0.0
+SSD capacity [GB];1.0;4.4645161290322575;217.0
+SSD capacity [GB];2.0;3.95;52.0
+SSD capacity [GB];3.0;5.0;1.0
+SSD capacity [GB];4.0;;0.0
 SSD capacity [GB];32.0;;0.0
 SSD capacity [GB];128.0;3.857142857142857;14.0
 SSD capacity [GB];200.0;;0.0
@@ -550,14 +576,12 @@ SSD capacity [GB];480.0;;0.0
 SSD capacity [GB];500.0;4.75;4.0
 SSD capacity [GB];512.0;4.393818181818182;275.0
 SSD capacity [GB];960.0;;0.0
-SSD capacity [GB];1000.0;4.471818181818182;220.0
+SSD capacity [GB];1000.0;5.0;3.0
 SSD capacity [GB];1250.0;;0.0
 SSD capacity [GB];1500.0;;0.0
 SSD capacity [GB];1512.0;;0.0
-SSD capacity [GB];2000.0;3.95;52.0
+SSD capacity [GB];2000.0;;0.0
 SSD capacity [GB];2048.0;5.0;2.0
-SSD capacity [GB];3000.0;5.0;1.0
-SSD capacity [GB];4000.0;;0.0
 Internal interface;['M.2 (NVMe)'];4.5036496350364965;137.0
 Internal interface;['M.2 (PCIe 3.0 2x NVMe)'];4.666666666666667;3.0
 Internal interface;['M.2 (PCIe 3.0 4x NVMe)', 'M.2 (PCIe 4.0 4x NVMe)'];4.0375;8.0
@@ -580,8 +604,7 @@ USB-C charging;Can be charged via USB-C;4.2;106.0
 Charging connector;USB-C;4.2;106.0
 Colour;['Black'];;0.0
 Colour;['White'];4.2;159.0
-Weight [kg];0.61;4.2;53.0
-Weight [kg];61.0;4.2;106.0
+Weight [kg];0.61;4.2;159.0
 USB 3.2 Gen 2;0.0;5.0;1.0
 USB 3.2 Gen 2;1.0;4.281090909090909;275.0
 USB 3.2 Gen 2;2.0;4.4633802816901404;142.0
@@ -834,10 +857,8 @@ Width [mm];700.0;;0.0
 Width [mm];712.8;;0.0
 Width [mm];714.4;;0.0
 Width [mm];724.04;;0.0
-Width [mm];926.0;;0.0
 Width [mm];1104.9;;0.0
-Width [mm];5414.0;;0.0
-Maximum height [mm];32.0;4.2;53.0
+Maximum height [mm];3.2;4.2;53.0
 Maximum height [mm];110.0;4.2;106.0
 Depth [mm];7.5;4.333333333333333;3.0
 Depth [mm];11.0;3.0;1.0
@@ -1049,9 +1070,6 @@ Depth [mm];591.0;5.0;1.0
 Depth [mm];600.0;;0.0
 Depth [mm];680.5;;0.0
 Depth [mm];808.0;;0.0
-Depth [mm];1829.0;;0.0
-Depth [mm];2928.0;;0.0
-Depth [mm];19486.0;;0.0
 Height [mm];3.4;5.0;1.0
 Height [mm];17.0;4.905882352941177;102.0
 Height [mm];23.0;4.84;10.0
@@ -1147,7 +1165,6 @@ Height [mm];355.0;;0.0
 Height [mm];358.0;4.364705882352942;17.0
 Height [mm];358.5;4.0;1.0
 Height [mm];360.0;;0.0
-Height [mm];365.0;;0.0
 Height [mm];366.6;;0.0
 Height [mm];367.0;;0.0
 Height [mm];369.3;;0.0
@@ -1246,6 +1263,7 @@ Height [mm];495.0;5.0;1.0
 Height [mm];498.0;;0.0
 Height [mm];499.0;5.0;6.0
 Height [mm];501.0;;0.0
+Height [mm];504.8;;0.0
 Height [mm];505.0;4.82;5.0
 Height [mm];507.0;1.0;2.0
 Height [mm];510.0;;0.0
@@ -1262,11 +1280,6 @@ Height [mm];565.0;5.0;1.0
 Height [mm];566.0;;0.0
 Height [mm];600.6;;0.0
 Height [mm];613.1;;0.0
-Height [mm];2748.0;;0.0
-Height [mm];3243.0;;0.0
-Height [mm];4255.0;;0.0
-Height [mm];5048.0;;0.0
-Height [mm];53492.0;;0.0
 Package includes;['Manual', 'Power adapter', 'Vertical stand'];1.0;1.0
 Package includes;['Mouse', 'Keyboard', 'PC'];5.0;1.0
 Package includes;['Mouse', 'Keyboard', 'Power cable'];5.0;4.0
@@ -1339,6 +1352,11 @@ Basic equipment;['Speakers'];;0.0
 Basic equipment;['Touch display', 'Possibility to control with a pen'];;0.0
 Basic equipment;['Water cooling', 'RGB backlight'];;0.0
 Basic equipment;['Wi-Fi'];4.388;25.0
+PSU [W];1.0;3.711764705882353;17.0
+PSU [W];1.125;;0.0
+PSU [W];1.2;5.0;1.0
+PSU [W];1.35;;0.0
+PSU [W];1.65;;0.0
 PSU [W];24.0;4.4;8.0
 PSU [W];28.0;5.0;2.0
 PSU [W];40.0;4.688888888888889;9.0
@@ -1379,11 +1397,8 @@ PSU [W];760.0;3.0;6.0
 PSU [W];800.0;5.0;1.0
 PSU [W];850.0;4.064705882352941;17.0
 PSU [W];900.0;;0.0
-PSU [W];1000.0;3.711764705882353;17.0
-PSU [W];1125.0;;0.0
-PSU [W];1200.0;5.0;1.0
-PSU [W];1350.0;;0.0
-PSU [W];1650.0;;0.0
+PSU [W];1000.0;;0.0
+PSU [W];1200.0;;0.0
 PC series;ASUS ExpertCenter;3.75;8.0
 PC series;ASUS ROG;4.130909090909091;165.0
 PC series;Acer Aspire;4.588235294117647;17.0
@@ -1457,7 +1472,7 @@ Processor frequency [GHz];0.4;3.0;2.0
 Processor frequency [GHz];0.8;;0.0
 Processor frequency [GHz];0.9;5.0;2.0
 Processor frequency [GHz];1.0;4.571428571428571;7.0
-Processor frequency [GHz];1.1;4.183333333333334;12.0
+Processor frequency [GHz];1.1;3.8875;16.0
 Processor frequency [GHz];1.2;4.75;28.0
 Processor frequency [GHz];1.3;4.75;4.0
 Processor frequency [GHz];1.4;4.905882352941177;102.0
@@ -1467,7 +1482,7 @@ Processor frequency [GHz];1.7;4.58;5.0
 Processor frequency [GHz];1.8;4.885714285714286;14.0
 Processor frequency [GHz];1.9;3.3333333333333335;9.0
 Processor frequency [GHz];2.0;4.4;40.0
-Processor frequency [GHz];2.1;3.7304347826086954;23.0
+Processor frequency [GHz];2.1;3.783333333333333;24.0
 Processor frequency [GHz];2.2;;0.0
 Processor frequency [GHz];2.3;3.0416666666666665;24.0
 Processor frequency [GHz];2.4;4.9;8.0
@@ -1483,7 +1498,7 @@ Processor frequency [GHz];3.3;4.555555555555555;9.0
 Processor frequency [GHz];3.4;4.417647058823529;17.0
 Processor frequency [GHz];3.5;4.8;20.0
 Processor frequency [GHz];3.6;4.24;30.0
-Processor frequency [GHz];3.7;4.3500000000000005;6.0
+Processor frequency [GHz];3.7;4.5125;8.0
 Processor frequency [GHz];3.8;3.936363636363636;11.0
 Processor frequency [GHz];3.9;4.2;5.0
 Processor frequency [GHz];4.0;5.0;1.0
@@ -1493,19 +1508,6 @@ Processor frequency [GHz];4.4;;0.0
 Processor frequency [GHz];4.5;5.0;1.0
 Processor frequency [GHz];4.7;5.0;1.0
 Processor frequency [GHz];5.2;;0.0
-Processor frequency [GHz];11.0;3.0;4.0
-Processor frequency [GHz];15.0;;0.0
-Processor frequency [GHz];17.0;;0.0
-Processor frequency [GHz];18.0;;0.0
-Processor frequency [GHz];21.0;5.0;1.0
-Processor frequency [GHz];25.0;;0.0
-Processor frequency [GHz];26.0;;0.0
-Processor frequency [GHz];31.0;;0.0
-Processor frequency [GHz];33.0;;0.0
-Processor frequency [GHz];34.0;;0.0
-Processor frequency [GHz];37.0;5.0;2.0
-Processor frequency [GHz];38.0;;0.0
-Processor frequency [GHz];39.0;;0.0
 Processor cache [MB];2.0;3.0;9.0
 Processor cache [MB];2.3;;0.0
 Processor cache [MB];3.0;;0.0
@@ -1574,10 +1576,30 @@ Graphics card memory [GB];12.0;4.647692307692308;65.0
 Graphics card memory [GB];16.0;4.363636363636363;22.0
 Graphics card memory [GB];20.0;;0.0
 Graphics card memory [GB];24.0;3.8;10.0
+Number of stream processors;1.408;;0.0
+Number of stream processors;1.92;4.962857142857143;35.0
+Number of stream processors;2.048;;0.0
+Number of stream processors;2.56;5.0;3.0
+Number of stream processors;3.072;4.8;4.0
+Number of stream processors;3.584;4.679310344827586;29.0
+Number of stream processors;3.84;5.0;1.0
+Number of stream processors;4.352;4.6499999999999995;14.0
+Number of stream processors;4.608;;0.0
+Number of stream processors;4.864;4.680000000000001;15.0
+Number of stream processors;5.12;;0.0
+Number of stream processors;5.888;4.2625;56.0
 Number of stream processors;6.0;;0.0
+Number of stream processors;6.144;;0.0
+Number of stream processors;7.68;4.42;5.0
+Number of stream processors;8.704;3.5;14.0
+Number of stream processors;8.96;;0.0
+Number of stream processors;9.728;3.0;5.0
+Number of stream processors;10.24;3.0250000000000004;4.0
+Number of stream processors;10.496;4.333333333333333;6.0
 Number of stream processors;11.0;;0.0
 Number of stream processors;12.0;;0.0
 Number of stream processors;16.0;;0.0
+Number of stream processors;16.384;;0.0
 Number of stream processors;20.0;;0.0
 Number of stream processors;24.0;4.0;1.0
 Number of stream processors;32.0;;0.0
@@ -1589,26 +1611,11 @@ Number of stream processors;448.0;;0.0
 Number of stream processors;512.0;4.5;4.0
 Number of stream processors;640.0;;0.0
 Number of stream processors;896.0;;0.0
-Number of stream processors;1408.0;;0.0
-Number of stream processors;1920.0;4.962857142857143;35.0
-Number of stream processors;2048.0;;0.0
 Number of stream processors;2304.0;;0.0
-Number of stream processors;2560.0;5.0;3.0
-Number of stream processors;3072.0;4.8;4.0
-Number of stream processors;3584.0;4.679310344827586;29.0
-Number of stream processors;3840.0;5.0;1.0
-Number of stream processors;4352.0;4.6499999999999995;14.0
-Number of stream processors;4608.0;;0.0
-Number of stream processors;4864.0;4.680000000000001;15.0
-Number of stream processors;5120.0;;0.0
-Number of stream processors;5888.0;4.2625;56.0
-Number of stream processors;6144.0;;0.0
-Number of stream processors;7680.0;4.42;5.0
-Number of stream processors;8704.0;3.5;14.0
-Number of stream processors;8960.0;;0.0
-Number of stream processors;9728.0;3.0;5.0
-Number of stream processors;10240.0;3.0250000000000004;4.0
-Number of stream processors;10496.0;4.333333333333333;6.0
+Number of stream processors;4352.0;;0.0
+Number of stream processors;4864.0;;0.0
+Number of stream processors;5888.0;;0.0
+Number of stream processors;9728.0;;0.0
 Number of stream processors;16384.0;;0.0
 Special graphics card features;GeForce VR-Ready;4.392857142857143;56.0
 Special graphics card features;Nvidia DLSS 3.0;4.429411764705883;34.0
@@ -1710,29 +1717,36 @@ Side panel material;Acrylic;4.333333333333333;3.0
 Side panel material;Plastic;5.0;1.0
 Side panel material;Steel;4.61;20.0
 Side panel material;Tempered glass;4.635416666666667;96.0
-Memory frequency [MHz];1600.0;;0.0
-Memory frequency [MHz];1800.0;;0.0
-Memory frequency [MHz];2130.0;;0.0
-Memory frequency [MHz];2133.0;5.0;3.0
-Memory frequency [MHz];2300.0;;0.0
-Memory frequency [MHz];2400.0;4.207272727272727;55.0
-Memory frequency [MHz];2666.0;4.314285714285714;126.0
-Memory frequency [MHz];2933.0;4.06;30.0
-Memory frequency [MHz];3200.0;4.6464;250.0
-Memory frequency [MHz];3467.0;5.0;1.0
-Memory frequency [MHz];3600.0;3.81;20.0
-Memory frequency [MHz];3733.0;3.9;7.0
-Memory frequency [MHz];4000.0;1.0;2.0
-Memory frequency [MHz];4400.0;;0.0
-Memory frequency [MHz];4800.0;4.0;9.0
-Memory frequency [MHz];5200.0;;0.0
-Memory frequency [MHz];5500.0;5.0;1.0
-Memory frequency [MHz];5600.0;3.0;2.0
-Memory frequency [MHz];6000.0;4.591666666666667;12.0
-Memory frequency [MHz];6400.0;;0.0
+Memory frequency [MHz];1.6;;0.0
+Memory frequency [MHz];1.8;;0.0
+Memory frequency [MHz];2.13;;0.0
+Memory frequency [MHz];2.133;5.0;3.0
+Memory frequency [MHz];2.3;;0.0
+Memory frequency [MHz];2.4;4.207272727272727;55.0
+Memory frequency [MHz];2.666;4.208695652173913;92.0
+Memory frequency [MHz];2.933;4.06;30.0
+Memory frequency [MHz];3.2;4.643548387096774;248.0
+Memory frequency [MHz];3.467;5.0;1.0
+Memory frequency [MHz];3.6;3.81;20.0
+Memory frequency [MHz];3.733;3.9;7.0
+Memory frequency [MHz];4.0;1.0;2.0
+Memory frequency [MHz];4.4;;0.0
+Memory frequency [MHz];4.8;4.0;9.0
+Memory frequency [MHz];5.2;;0.0
+Memory frequency [MHz];5.5;5.0;1.0
+Memory frequency [MHz];5.6;3.0;2.0
+Memory frequency [MHz];6.0;4.591666666666667;12.0
+Memory frequency [MHz];6.4;;0.0
+Memory frequency [MHz];2400.0;;0.0
+Memory frequency [MHz];2666.0;4.6;34.0
+Memory frequency [MHz];3200.0;5.0;2.0
+Memory frequency [MHz];3600.0;;0.0
+Memory frequency [MHz];4800.0;;0.0
 Maximum RAM capacity [GB];0.0;;0.0
+Maximum RAM capacity [GB];1.024;;0.0
 Maximum RAM capacity [GB];4.0;4.8;4.0
 Maximum RAM capacity [GB];8.0;4.356521739130435;23.0
+Maximum RAM capacity [GB];8.192;;0.0
 Maximum RAM capacity [GB];16.0;3.736842105263158;19.0
 Maximum RAM capacity [GB];32.0;4.7407407407407405;27.0
 Maximum RAM capacity [GB];64.0;4.34093567251462;171.0
@@ -1741,8 +1755,6 @@ Maximum RAM capacity [GB];128.0;4.428813559322034;59.0
 Maximum RAM capacity [GB];192.0;;0.0
 Maximum RAM capacity [GB];256.0;;0.0
 Maximum RAM capacity [GB];512.0;;0.0
-Maximum RAM capacity [GB];1024.0;;0.0
-Maximum RAM capacity [GB];8192.0;;0.0
 Total number of slots;0.0;;0.0
 Total number of slots;1.0;4.260000000000001;30.0
 Total number of slots;2.0;4.47859649122807;285.0
@@ -1978,37 +1990,7 @@ Certification;['Windows 11 compatible'];4.439705882352941;136.0
 Platform;Banana Pi;4.0;3.0
 Platform;Raspberry Pi;4.887062937062937;286.0
 Supported resolution;['4K Ultra HD', 'Full HD', 'HD Ready'];;0.0
-Storage Capacity [GB];0.0;;0.0
-Storage Capacity [GB];0.25;;0.0
-Storage Capacity [GB];1.0;;0.0
 Storage Capacity [GB];16.0;;0.0
-Storage Capacity [GB];32.0;1.0;2.0
-Storage Capacity [GB];64.0;5.0;2.0
-Storage Capacity [GB];128.0;4.066666666666666;18.0
-Storage Capacity [GB];200.0;;0.0
-Storage Capacity [GB];240.0;;0.0
-Storage Capacity [GB];250.0;;0.0
-Storage Capacity [GB];256.0;4.482352941176471;102.0
-Storage Capacity [GB];500.0;4.75;4.0
-Storage Capacity [GB];501.0;;0.0
-Storage Capacity [GB];512.0;4.375190839694657;262.0
-Storage Capacity [GB];600.0;;0.0
-Storage Capacity [GB];960.0;;0.0
-Storage Capacity [GB];1000.0;4.461;200.0
-Storage Capacity [GB];1024.0;3.0;1.0
-Storage Capacity [GB];1250.0;;0.0
-Storage Capacity [GB];1256.0;5.0;2.0
-Storage Capacity [GB];1500.0;;0.0
-Storage Capacity [GB];1512.0;5.0;4.0
-Storage Capacity [GB];2000.0;3.779310344827586;58.0
-Storage Capacity [GB];2048.0;5.0;2.0
-Storage Capacity [GB];2250.0;;0.0
-Storage Capacity [GB];2512.0;5.0;1.0
-Storage Capacity [GB];3000.0;3.992857142857143;28.0
-Storage Capacity [GB];4000.0;;0.0
-Storage Capacity [GB];5000.0;4.8;5.0
-Storage Capacity [GB];8000.0;;0.0
-Storage Capacity [GB];18000.0;;0.0
 RAM memory [GB];2.0;;0.0
 Interface;['Audio output - analog', 'Digital optical output', 'Ethernet LAN', 'HDMI', 'HDMI 2.0', 'Composite video out', 'Optical output', 'USB 2.0', 'USB 3.0'];;0.0
 Connectivity;['Bluetooth', 'DLNA', 'Wi-Fi'];;0.0
@@ -2047,70 +2029,70 @@ WiFi type;['WiFi a/b/g/n/ac/ax'];;0.0
 WiFi type;['WiFi ac'];4.2;12.0
 Number of components in the package;1.0;;0.0
 Number of components in the package;5.0;5.0;2.0
+GPU Passmark;1.084;;0.0
+GPU Passmark;1.358;;0.0
+GPU Passmark;2.619;5.0;1.0
+GPU Passmark;2.755;4.9;8.0
+GPU Passmark;3.657;;0.0
+GPU Passmark;12.66;;0.0
+GPU Passmark;12.759;;0.0
+GPU Passmark;13.939;5.0;1.0
+GPU Passmark;17.022;4.0;1.0
+GPU Passmark;20.333;4.571428571428571;7.0
+GPU Passmark;21.518;;0.0
 GPU Passmark;457.0;1.0;1.0
-GPU Passmark;1084.0;;0.0
-GPU Passmark;1358.0;;0.0
 GPU Passmark;1473.0;4.6;34.0
 GPU Passmark;1476.0;;0.0
-GPU Passmark;2619.0;5.0;1.0
-GPU Passmark;2755.0;4.9;8.0
-GPU Passmark;3657.0;;0.0
-GPU Passmark;12660.0;;0.0
-GPU Passmark;12759.0;;0.0
-GPU Passmark;13939.0;5.0;1.0
-GPU Passmark;17022.0;4.0;1.0
-GPU Passmark;20333.0;4.571428571428571;7.0
-GPU Passmark;21518.0;;0.0
+CPU Passmark;3.936;;0.0
+CPU Passmark;6.786;;0.0
+CPU Passmark;8.72;;0.0
+CPU Passmark;10.026;;0.0
+CPU Passmark;10.075;4.9;8.0
+CPU Passmark;10.603;;0.0
+CPU Passmark;10.874;;0.0
+CPU Passmark;11.357;4.5;2.0
+CPU Passmark;11.83;5.0;1.0
+CPU Passmark;12.84;;0.0
+CPU Passmark;12.988;5.0;1.0
+CPU Passmark;13.189;;0.0
+CPU Passmark;13.642;;0.0
+CPU Passmark;13.856;;0.0
+CPU Passmark;14.086;;0.0
+CPU Passmark;14.364;5.0;1.0
+CPU Passmark;14.426;;0.0
+CPU Passmark;14.495;;0.0
+CPU Passmark;15.469;;0.0
+CPU Passmark;16.443;;0.0
+CPU Passmark;17.259;5.0;4.0
+CPU Passmark;17.294;4.0;1.0
+CPU Passmark;17.374;5.0;2.0
+CPU Passmark;17.535;;0.0
+CPU Passmark;17.604;;0.0
+CPU Passmark;17.773;4.9;13.0
+CPU Passmark;17.801;;0.0
+CPU Passmark;17.932;;0.0
+CPU Passmark;18.058;;0.0
+CPU Passmark;19.241;;0.0
+CPU Passmark;19.515;;0.0
+CPU Passmark;19.536;4.0;1.0
+CPU Passmark;19.557;;0.0
+CPU Passmark;19.563;5.0;1.0
+CPU Passmark;19.831;4.0;1.0
+CPU Passmark;19.833;5.0;1.0
+CPU Passmark;19.837;5.0;1.0
+CPU Passmark;20.341;5.0;1.0
+CPU Passmark;20.388;;0.0
+CPU Passmark;20.393;;0.0
+CPU Passmark;21.684;;0.0
+CPU Passmark;23.844;;0.0
+CPU Passmark;28.158;;0.0
+CPU Passmark;31.23;;0.0
+CPU Passmark;31.414;;0.0
+CPU Passmark;34.52;;0.0
+CPU Passmark;41.51;;0.0
 CPU Passmark;1968.0;3.0;2.0
 CPU Passmark;1997.0;3.0;2.0
-CPU Passmark;3936.0;;0.0
-CPU Passmark;6786.0;;0.0
-CPU Passmark;8720.0;;0.0
-CPU Passmark;10026.0;;0.0
-CPU Passmark;10075.0;4.9;8.0
-CPU Passmark;10603.0;;0.0
-CPU Passmark;10874.0;;0.0
-CPU Passmark;11357.0;4.5;2.0
-CPU Passmark;11830.0;5.0;1.0
-CPU Passmark;12840.0;;0.0
-CPU Passmark;12988.0;5.0;1.0
-CPU Passmark;13189.0;;0.0
-CPU Passmark;13642.0;;0.0
-CPU Passmark;13856.0;;0.0
-CPU Passmark;14086.0;;0.0
-CPU Passmark;14364.0;5.0;1.0
-CPU Passmark;14426.0;;0.0
-CPU Passmark;14495.0;;0.0
-CPU Passmark;15469.0;;0.0
-CPU Passmark;16443.0;;0.0
-CPU Passmark;17259.0;5.0;4.0
-CPU Passmark;17294.0;4.0;1.0
 CPU Passmark;17335.0;;0.0
-CPU Passmark;17374.0;5.0;2.0
-CPU Passmark;17535.0;;0.0
-CPU Passmark;17604.0;;0.0
-CPU Passmark;17773.0;4.9;13.0
-CPU Passmark;17801.0;;0.0
-CPU Passmark;17932.0;;0.0
-CPU Passmark;18058.0;;0.0
-CPU Passmark;19241.0;;0.0
-CPU Passmark;19515.0;;0.0
-CPU Passmark;19536.0;4.0;1.0
-CPU Passmark;19557.0;;0.0
-CPU Passmark;19563.0;5.0;1.0
-CPU Passmark;19831.0;4.0;1.0
-CPU Passmark;19833.0;5.0;1.0
-CPU Passmark;19837.0;5.0;1.0
-CPU Passmark;20341.0;5.0;1.0
-CPU Passmark;20388.0;;0.0
-CPU Passmark;20393.0;;0.0
-CPU Passmark;21684.0;;0.0
-CPU Passmark;23844.0;;0.0
-CPU Passmark;28158.0;;0.0
-CPU Passmark;31230.0;;0.0
-CPU Passmark;31414.0;;0.0
-CPU Passmark;34520.0;;0.0
-CPU Passmark;41510.0;;0.0
 Number of free slots;1.0;5.0;1.0
 Number of free slots;2.0;4.111111111111111;9.0
 Number of free slots;3.0;5.0;1.0
@@ -2123,7 +2105,7 @@ HDD RPM Rate [RPM];7200.0;3.3976744186046512;43.0
 HDD RPM Rate [RPM];10000.0;;0.0
 HDD capacity [GB];0.0;;0.0
 HDD capacity [GB];0.001953125;;0.0
-HDD capacity [GB];3.90625;;0.0
+HDD capacity [GB];0.00390625;;0.0
 HDD capacity [GB];614.4;;0.0
 HDD capacity [GB];1024.0;3.242857142857143;28.0
 HDD capacity [GB];2048.0;3.992857142857143;28.0
@@ -2139,3 +2121,6 @@ Hot Plug;Hot Plug;;0.0
 Hot Plug;Without Hot Plug;;0.0
 RAID interface;['SATA', 'SAS'];;0.0
 RAID interface;['SATA'];;0.0
+Capacity [GB];501.0;;0.0
+Capacity [GB];1024.0;3.0;1.0
+Capacity [GB];2048.0;5.0;1.0

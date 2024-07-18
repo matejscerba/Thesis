@@ -186,6 +186,17 @@
         "full_name": "Storage Type"
     },
     {
+        "name": "Storage capacity",
+        "id": 21,
+        "group": "Hard drive",
+        "feature": "Storage capacity [GB]",
+        "type": "numerical",
+        "full_name": "Storage capacity [GB]",
+        "unit": "GB",
+        "order": "asc",
+        "continuous": false
+    },
+    {
         "name": "SSD capacity",
         "id": 22,
         "group": "Hard drive",
@@ -692,7 +703,7 @@
     {
         "name": "Storage Capacity",
         "id": 78,
-        "group": "Hard drive",
+        "group": "Basic parameters",
         "feature": "Storage Capacity [GB]",
         "type": "numerical",
         "full_name": "Storage Capacity [GB]",
@@ -869,5 +880,15 @@
         "feature": "RAID interface",
         "type": "categorical",
         "full_name": "RAID interface"
+    },
+    {
+        "name": "Capacity",
+        "id": 98,
+        "group": "Hard drive",
+        "feature": "Capacity [GB]",
+        "type": "numerical",
+        "full_name": "Capacity [GB]",
+        "unit": "GB",
+        "continuous": false
     }
 ]
