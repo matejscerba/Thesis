@@ -158,7 +158,7 @@ export function getPositionText(position: string, override: string = "value", or
 export function getFilterValueText(attribute: Attribute, value: FilterValue): string {
   if (value.options !== undefined && value.options !== null) {
     return value.options.length > 0
-      ? `one of ${value.options.map((val) => valueToString(val, attribute)).join(", ")}`
+      ? `${value.options.length > 1 ? "one of " : ""}${value.options.map((val) => valueToString(val, attribute)).join(", ")}`
       : "-";
   }
   if ((value.lowerBound ?? -1) >= 0 && (value.upperBound ?? -1) >= 0) {

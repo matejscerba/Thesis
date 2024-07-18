@@ -64,9 +64,9 @@ class AbstractAttributeStatistics(BaseModel):
         :param pd.DataFrame products: products to be considered
         :param Set[int] candidate_ids: ids of the candidate products
         :param Set[int] discarded_ids: ids of the discarded products
-        :raise ValueError: if attribute has unknown attribute type
         :return: statistics describing the given attribute based on the given products
         :rtype: AttributeStatistics
+        :raise ValueError: if attribute has unknown attribute type
         """
         options = products[attribute.full_name].dropna().unique().tolist()
         candidates = products[products["id"].apply(lambda x: x in candidate_ids)]

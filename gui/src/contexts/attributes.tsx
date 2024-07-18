@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { fetchPostJson } from "../utils/api";
+import { fetchJson } from "../utils/api";
 import { Attribute, PRICE } from "../types/attribute";
 
 /**
@@ -79,7 +79,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   useEffect(() => {
     // Fetch attributes if no attributes have been fetched before
     if (attributes === undefined) {
-      fetchPostJson<AttributesResponse>("attributes", {}, { category_name: category })
+      fetchJson<AttributesResponse>("attributes", { category_name: category })
         .then((response) => {
           setAttributes(response.attributes);
         })

@@ -47,7 +47,7 @@ docker compose up
 ```
 
 This will build docker container for `server` and `gui` apps and run both of them. `server` will be available at port
-`8086` (unless specified differently) and `gui` at port `3000` (unless specified differently). You can access the app at
+`8086` (unless specified differently) and `gui` at port `3000`. You can access the app at
 `http://localhost:3000`.
 
 ### Configuration
@@ -56,18 +56,14 @@ Both the `gui` and `server` apps can be configured.
 
 #### Gui
 
-Gui is a React app with a single configurable environment variable:
-
-- `PORT` - specifies the port where the app runs.
-
-You can edit this variable in the file `gui/.env`.
+Gui app can not be configured.
 
 #### Server
 
 Server is a Flask app with multiple configurable environment variables:
 
 - `SERVER_HOST` - specifies the host where the Flask app will run (value `"0.0.0.0"` is recommended)
-- `SERVER_PORT` - specifies the port where the Flask app will run
+- `SERVER_PORT` - specifies the port where the Flask app will run (value `8086` is recommended)
 - `RECOMMENDER_MODEL` - specifies the recommender system model, described more below
 - `EXPLANATIONS_MODEL` - specifies the explanations model, described more below
 - `TEST_DATA` - specifies whether to use a test version of the data, described more below

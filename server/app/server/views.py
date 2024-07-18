@@ -25,9 +25,9 @@ def view_category() -> Response:
     `important_attributes`: names of the important attributes, expected type `List[str]`
     `limit`: maximum number of products to return if the category is not organized, return all if `None`
 
-    :raise Exception: if required argument or body contents are missing
     :return: JSON response containing the requested category
     :rtype: Response
+    :raise Exception: if required argument or body contents are missing
     """
     category_name = request.args.get("category_name")
     if category_name is None:
@@ -60,9 +60,9 @@ def view_category_filter() -> Response:
     `candidates`: list of ids of candidate products, expected type `List[int]`
     `discarded`: list of ids of discarded products, expected type `List[int]`
 
-    :raise Exception: if required argument or body contents are missing
     :return: JSON response containing the list of filtered products
     :rtype: Response
+    :raise Exception: if required argument or body contents are missing
     """
     category_name = request.args.get("category_name")
     if category_name is None:
@@ -96,9 +96,9 @@ def view_attributes() -> Response:
 
     The request has one argument `category_name`, stating the name of the category.
 
-    :raise Exception: if required argument are missing
     :return: JSON response containing attributes used in the given category
     :rtype: Response
+    :raise Exception: if required argument are missing
     """
     category_name = request.args.get("category_name")
     if category_name is None:
@@ -116,9 +116,9 @@ def view_discarded() -> Response:
     The body of the request is expected to be JSON containing the following items:
     `discarded`: list of ids of discarded products, expected type `List[int]`
 
-    :raise Exception: if required argument or body contents are missing
     :return: JSON response containing the discarded products
     :rtype: Response
+    :raise Exception: if required argument or body contents are missing
     """
     category_name = request.args.get("category_name")
     request_json = request.json or {}
@@ -162,7 +162,7 @@ def view_explanation() -> Response:
     discarded_ids = request_json.get("discarded", [])
     important_attributes = request_json.get("important_attributes", [])
 
-    explanation = ProductHandler.explain(
+    explanation = ProductHandler.explain_product(
         category_name=category_name,
         product_id=int(product_id),
         candidate_ids=set(candidate_ids),

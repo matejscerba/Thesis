@@ -42,12 +42,12 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
             products=products, important_attributes=important_attributes
         )
 
-        # Compute user model, each candidate supports the preference with `1/(len(candidates_ids)+len(discarded_ids)) at
-        # the position of attribute value a candidate has, only important attributes are considered
+        # Compute user model, each candidate supports the preference with `1/len(candidates_ids) at the position of
+        # attribute value a candidate has, only important attributes are considered
         user_model = np.zeros(num_columns)
         for _, row in products.iterrows():
             if row["id"] in candidate_ids:
-                rating = 1
+                rating = 1 / len(candidate_ids)
             else:
                 continue
             for attribute in important_attributes:
@@ -55,9 +55,6 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
                     continue
                 column_idx = column_mapping[attribute][row[attribute]]
                 user_model[column_idx] += rating
-
-        if len(candidate_ids) > 0 or len(discarded_ids) > 0:
-            user_model = user_model / (len(candidate_ids) + len(discarded_ids))
 
         scores = cls._compute_scores(
             products=products,

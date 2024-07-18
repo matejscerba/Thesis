@@ -133,9 +133,9 @@ class ProductHandler:
         :param FilterValue value: the value of the filter to be used
         :param Set[int] candidate_ids: ids of the candidate products
         :param Set[int] discarded_ids: ids of the discarded products
-        :raise Exception: Exception is raised if value does not contain any filter
         :return: dataframe containing products satisfying the filter
         :rtype: pd.DataFrame
+        :raise Exception: Exception is raised if value does not contain any filter
         """
         products = DataLoader.load_products(category_name=category_name, usecols=[attribute_name])
 
@@ -208,7 +208,7 @@ class ProductHandler:
         return [category.pop(id) for id in products["id"]]
 
     @classmethod
-    def explain(
+    def explain_product(
         cls,
         category_name: str,
         product_id: int,

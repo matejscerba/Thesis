@@ -63,11 +63,9 @@ function Product({ className, product, menu }: ProductProps) {
                 {valueToString(product.price, price)}
               </Typography>
             </PositionTooltip>
-            {product.rating !== undefined && product.rating !== null && (
-              <Typography variant="body1" className="fit-content d-inline-block" sx={{ float: "right" }}>
-                {product.rating} <i className="bi bi-star-fill text-warning" />
-              </Typography>
-            )}
+            <Typography variant="body1" className="fit-content d-inline-block" sx={{ float: "right" }}>
+              {product.rating ?? "-"} <i className="bi bi-star-fill text-warning" />
+            </Typography>
           </div>
           {menu}
         </div>
