@@ -1,12 +1,12 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
-import { Attribute } from "../../types/attribute";
+import { Attribute, FilterValue } from "../../types/attribute";
 import { getBgColor, getColor, valueToString } from "../../utils/attributes";
 import PositionTooltip from "./PositionTooltip";
 
 interface ExplanationAttributeProps {
   attribute: Attribute;
-  value: any;
+  filter: FilterValue;
   position: string;
 }
 
@@ -18,7 +18,7 @@ interface ExplanationAttributeProps {
  * @param {string} position position of the attribute's value - the type of explanation
  * @constructor
  */
-function ExplanationAttribute({ attribute, value, position }: ExplanationAttributeProps) {
+function ExplanationAttribute({ attribute, filter, position }: ExplanationAttributeProps) {
   const color = getColor(position);
   const bgColor = getBgColor(position);
 
@@ -29,7 +29,7 @@ function ExplanationAttribute({ attribute, value, position }: ExplanationAttribu
           <Typography variant="body1">{attribute.name}</Typography>
         </div>
         <div className="value">
-          <Typography variant="body1">{valueToString(value, attribute)}</Typography>
+          <Typography variant="body1">{valueToString(filter.options[0], attribute)}</Typography>
         </div>
       </div>
     </PositionTooltip>

@@ -3,7 +3,7 @@ from typing import List, Union, Set, Any
 import pandas as pd
 from pydantic import BaseModel
 
-from app.attributes.attribute import Attribute, AttributeType, FilterValue
+from app.attributes.attribute import Attribute, AttributeType, FilterValue, MultiFilterItem
 from app.utils.attributes import expand_list_values
 
 
@@ -16,37 +16,6 @@ class AbstractAttributeStatistics(BaseModel):
 
     attribute: Attribute
     num_products: int
-
-    @classmethod
-    def _count_products(
-        cls,
-        category_name: str,
-        attribute: Attribute,
-        value: FilterValue,
-        candidate_ids: Set[int],
-        discarded_ids: Set[int],
-    ) -> int:
-        """Counts the number of products satisfying the given filter.
-
-        :param str category_name: the name of the category
-        :param Attribute attribute: the attribute to be filtered
-        :param FilterValue value: the value of the filter to be used
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
-        :return: number of products satisfying given filter
-        :rtype: int
-        """
-        from app.products.handler import ProductHandler
-
-        return len(
-            ProductHandler.filter_products(
-                category_name=category_name,
-                attribute_name=attribute.full_name,
-                value=value,
-                candidate_ids=candidate_ids,
-                discarded_ids=discarded_ids,
-            )
-        )
 
     @classmethod
     def from_products(
@@ -68,6 +37,8 @@ class AbstractAttributeStatistics(BaseModel):
         :rtype: AttributeStatistics
         :raise ValueError: if attribute has unknown attribute type
         """
+        from app.products.handler import ProductHandler
+
         options = products[attribute.full_name].dropna().unique().tolist()
         candidates = products[products["id"].apply(lambda x: x in candidate_ids)]
         if attribute.type == AttributeType.NUMERICAL:
@@ -77,10 +48,14 @@ class AbstractAttributeStatistics(BaseModel):
             upper_bound = candidates[attribute.full_name].max()
             return NumericalAttributeStatistics(
                 attribute=attribute,
-                num_products=cls._count_products(
+                num_products=ProductHandler.count_products(
                     category_name=category_name,
-                    attribute=attribute,
-                    value=FilterValue(lower_bound=lower_bound, upper_bound=upper_bound),
+                    filter=[
+                        MultiFilterItem(
+                            attribute_name=attribute.full_name,
+                            filter=FilterValue(lower_bound=lower_bound, upper_bound=upper_bound),
+                        )
+                    ],
                     candidate_ids=candidate_ids,
                     discarded_ids=discarded_ids,
                 ),
@@ -101,10 +76,13 @@ class AbstractAttributeStatistics(BaseModel):
             available_options.sort()
             return CategoricalAttributeStatistics(
                 attribute=attribute,
-                num_products=cls._count_products(
+                num_products=ProductHandler.count_products(
                     category_name=category_name,
-                    attribute=attribute,
-                    value=FilterValue(options=selected_options),
+                    filter=[
+                        MultiFilterItem(
+                            attribute_name=attribute.full_name, filter=FilterValue(options=selected_options)
+                        )
+                    ],
                     candidate_ids=candidate_ids,
                     discarded_ids=discarded_ids,
                 ),

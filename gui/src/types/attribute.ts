@@ -58,6 +58,19 @@ export interface FilterValue {
   options?: any[];
 }
 
+export interface FilterValueResponse {
+  lower_bound?: number;
+  upper_bound?: number;
+  options?: any[];
+}
+
+export interface MultiFilterItem {
+  attribute: Attribute;
+  filter: FilterValue;
+}
+
+export type MultiFilter = MultiFilterItem[];
+
 export enum AttributeType {
   CATEGORICAL = "categorical",
   NUMERICAL = "numerical",

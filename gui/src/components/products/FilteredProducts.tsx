@@ -5,13 +5,12 @@ import { fetchPostJson } from "../../utils/api";
 import { Product as ProductModel } from "../../types/product";
 import Product from "./Product";
 import Typography from "@mui/material/Typography";
-import { Attribute, FilterValue } from "../../types/attribute";
-import { getFilterValueText } from "../../utils/attributes";
+import { MultiFilter } from "../../types/attribute";
 import { useCategory } from "../../contexts/category";
+import { getFilterText } from "../../utils/attributes";
 
 interface FilteredProductsProps {
-  attribute: Attribute;
-  value: FilterValue;
+  filter: MultiFilter;
 }
 
 /**
@@ -21,7 +20,7 @@ interface FilteredProductsProps {
  * @param {FilterValue} value the filter value - giving the range or possible options
  * @constructor
  */
-function FilteredProducts({ attribute, value }: FilteredProductsProps) {
+function FilteredProducts({ filter }: FilteredProductsProps) {
   const { name, candidateIds, discarded } = useCategory();
 
   const [products, setProducts] = useState<ProductModel[]>(undefined);
@@ -31,12 +30,14 @@ function FilteredProducts({ attribute, value }: FilteredProductsProps) {
     fetchPostJson<ProductModel[]>(
       "category/filter",
       {
-        attribute: attribute.full_name,
-        value: {
-          lower_bound: value.lowerBound,
-          upper_bound: value.upperBound,
-          options: value.options,
-        },
+        filter: filter.map((item) => ({
+          attribute_name: item.attribute.full_name,
+          filter: {
+            lower_bound: item.filter.lowerBound,
+            upper_bound: item.filter.upperBound,
+            options: item.filter.options,
+          },
+        })),
         candidates: candidateIds,
         discarded,
       },
@@ -55,7 +56,7 @@ function FilteredProducts({ attribute, value }: FilteredProductsProps) {
   return (
     <>
       <Typography variant="h5" className="text-secondary mx-3">
-        Products with {attribute.name} {getFilterValueText(attribute, value)}
+        Products with {getFilterText(filter)}
       </Typography>
       {products.length > 0 ? (
         <List>

@@ -12,6 +12,7 @@ import Alternatives from "../groups/Alternatives";
 import Discarded from "../groups/Discarded";
 import Typography from "@mui/material/Typography";
 import CategoryModal from "../CategoryModal";
+import StoppingCriteria from "../stoppingCriteria/StoppingCriteria";
 
 /**
  * The default size of page
@@ -104,6 +105,9 @@ function ProductList({ name }: ProductListProps) {
             <>
               <div className="mb-3">
                 <Candidates />
+              </div>
+              <div className="mb-3">
+                <StoppingCriteria />
               </div>
               <div className="mb-3">
                 <Unseen />

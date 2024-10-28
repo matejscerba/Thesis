@@ -7,6 +7,7 @@ from app.server.views import (
     view_discarded,
     view_explanation,
     view_categories,
+    view_stopping_criteria,
 )
 
 
@@ -22,3 +23,4 @@ def add_routes(app: Flask) -> None:
     app.add_url_rule("/attributes", view_func=view_attributes, methods=["GET"])
     app.add_url_rule("/discarded", view_func=view_discarded, methods=["POST"])
     app.add_url_rule("/explanation", view_func=view_explanation, methods=["POST"])
+    app.add_url_rule("/stopping_criteria", view_func=view_stopping_criteria, methods=["POST"])

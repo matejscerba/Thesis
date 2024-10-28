@@ -24,6 +24,13 @@ interface AttributeRangeProps {
 function AttributeRange({ attribute, value, numProductsInRange, children }: AttributeRangeProps) {
   const { presentModal } = useModal();
 
+  const filter = [
+    {
+      attribute,
+      filter: value,
+    },
+  ];
+
   return (
     <div className="px-3 py-2 attribute-range">
       <Typography variant="h6" className="text-center">
@@ -34,7 +41,7 @@ function AttributeRange({ attribute, value, numProductsInRange, children }: Attr
           className="text-center text-success clickable"
           variant="body1"
           onClick={() => {
-            presentModal(<FilteredProducts attribute={attribute} value={value} />);
+            presentModal(<FilteredProducts filter={filter} />);
           }}
         >
           {numProductsInRange} more products with relevant value ({getFilterValueText(attribute, value)})

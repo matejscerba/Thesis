@@ -74,7 +74,13 @@ interface AttributesContextProviderProps {
  */
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
-  const [importantAttributes, setImportantAttributes] = useState<string[]>([]);
+  const [importantAttributes, setImportantAttributes] = useState<string[]>([
+    "SSD capacity [GB]",
+    'Display size ["]',
+    "Size of operational RAM [GB]",
+    "Number of processor cores",
+    "Weight [kg]",
+  ]);
 
   useEffect(() => {
     // Fetch attributes if no attributes have been fetched before

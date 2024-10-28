@@ -39,6 +39,11 @@ class FilterValue(BaseModel):
     options: Optional[Set[Any]] = Field(default=None)
 
 
+class MultiFilterItem(BaseModel):
+    attribute_name: str
+    filter: FilterValue
+
+
 class Attribute(BaseModel):
     """This class represents an attribute of a product.
 

@@ -1,6 +1,6 @@
 from flask import request, Response, jsonify
 
-from app.attributes.attribute import FilterValue
+from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
 from app.products.handler import ProductHandler
 
@@ -69,21 +69,16 @@ def view_category_filter() -> Response:
         raise Exception("Category name not set.")
 
     request_json = request.json or {}
-    attribute = request_json.get("attribute")
-    if attribute is None:
-        raise Exception("Attribute for filter not set.")
-
-    value = request_json.get("value")
-    if value is None:
-        raise Exception("Value for filter not set.")
+    filter_items = request_json.get("filter")
+    if filter_items is None:
+        raise Exception("Filter items for filter not set.")
 
     candidate_ids = request_json.get("candidates", [])
     discarded_ids = request_json.get("discarded", [])
 
     products = ProductHandler.filter_category(
         category_name=category_name,
-        attribute_name=attribute,
-        value=FilterValue.model_validate(value),
+        filter=[MultiFilterItem.model_validate(item) for item in filter_items],
         candidate_ids=set(candidate_ids),
         discarded_ids=set(discarded_ids),
     )
@@ -171,3 +166,23 @@ def view_explanation() -> Response:
     )
 
     return jsonify(explanation)
+
+
+def view_stopping_criteria() -> Response:
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
+    request_json = request.json or {}
+    candidate_ids = request_json.get("candidates", [])
+    discarded_ids = request_json.get("discarded", [])
+    important_attributes = request_json.get("important_attributes", [])
+
+    stopping_criteria = ProductHandler.generate_stopping_criteria(
+        category_name=category_name,
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
+        important_attributes=important_attributes,
+    )
+
+    return jsonify(stopping_criteria)

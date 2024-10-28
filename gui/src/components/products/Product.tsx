@@ -81,8 +81,7 @@ function Product({ className, product, menu }: ProductProps) {
                 <ExplanationAttribute
                   key={attribute.attribute.name}
                   attribute={attribute.attribute}
-                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-                  value={attribute.attribute_value}
+                  filter={{ options: [attribute.attribute_value] }}
                   position={attribute.position}
                 />
               ))}

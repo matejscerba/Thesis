@@ -1,4 +1,4 @@
-import { Attribute, AttributeOrder, FilterValue, PRICE } from "../types/attribute";
+import { Attribute, AttributeOrder, FilterValue, MultiFilter, PRICE } from "../types/attribute";
 import { ProductAttributePosition } from "../types/product";
 
 /**
@@ -167,6 +167,20 @@ export function getFilterValueText(attribute: Attribute, value: FilterValue): st
     } else {
       return `between ${valueToString(value.lowerBound, attribute)} and ${valueToString(value.upperBound, attribute)}`;
     }
+  }
+  return "-";
+}
+
+export function getFilterText(filter: MultiFilter): string {
+  const validItems = filter.filter(
+    (item) =>
+      (item.filter.options !== undefined && item.filter.options !== null && item.filter.options.length > 0) ||
+      ((item.filter.lowerBound ?? -1) >= 0 && (item.filter.upperBound ?? -1) >= 0),
+  );
+  if (validItems.length > 0) {
+    return validItems
+      .map((item) => `${item.attribute.name} ${getFilterValueText(item.attribute, item.filter)}`)
+      .join(" and ");
   }
   return "-";
 }

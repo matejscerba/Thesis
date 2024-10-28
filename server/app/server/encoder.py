@@ -11,6 +11,10 @@ def json_default(data: Any) -> Any:
     :return: JSON-serializable data
     :rtype: Any
     """
+    if isinstance(data, (int, float, bool, str)):
+        return data
+    if isinstance(data, set):
+        return [json_default(item) for item in data]
     if isinstance(data, list):
         return [json_default(item) for item in data]
     if isinstance(data, dict):

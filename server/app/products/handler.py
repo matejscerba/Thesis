@@ -3,14 +3,16 @@ from typing import List, ClassVar, Optional, Set
 
 import pandas as pd
 
-from app.attributes.attribute import FilterValue
+from app.attributes.attribute import MultiFilterItem
 from app.data_loader import DataLoader
 from app.explanations.selector import ExplanationsSelector
 from app.products.category import Category, OrganizedCategory
 from app.products.explanations import ProductExplanation
 from app.products.product import Product
+from app.products.stopping_criteria import StoppingCriteria
 from app.products.unseen_statistics import UnseenStatistics, AbstractAttributeStatistics
 from app.recommenders.selector import RecommenderSelector
+from app.stopping_criteria.selector import StoppingCriteriaSelector
 from app.utils.attributes import expand_list_value
 
 
@@ -21,6 +23,42 @@ class ProductHandler:
     """
 
     _alternatives_size: ClassVar[int] = int(os.environ.get("ALTERNATIVES_SIZE", 10))
+
+    @classmethod
+    def count_products(
+        cls,
+        category_name: str,
+        filter: List[MultiFilterItem],
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+    ) -> int:
+        """Counts the number of products satisfying the given filter.
+
+        :param str category_name: the name of the category
+        :param Attribute attribute: the attribute to be filtered
+        :param FilterValue value: the value of the filter to be used
+        :param Set[int] candidate_ids: ids of the candidate products
+        :param Set[int] discarded_ids: ids of the discarded products
+        :return: number of products satisfying given filter
+        :rtype: int
+        """
+        return len(
+            cls.filter_products(
+                category_name=category_name,
+                filter=filter,
+                candidate_ids=candidate_ids,
+                discarded_ids=discarded_ids,
+            )
+        )
+
+    @classmethod
+    def count_products_in_set(
+        cls,
+        category_name: str,
+        filter: List[MultiFilterItem],
+        ids: Set[int],
+    ) -> int:
+        return len(cls.filter_products_in_set(category_name=category_name, filter=filter, ids=ids))
 
     @classmethod
     def get_categories(cls) -> List[str]:
@@ -120,8 +158,7 @@ class ProductHandler:
     def filter_products(
         cls,
         category_name: str,
-        attribute_name: str,
-        value: FilterValue,
+        filter: List[MultiFilterItem],
         candidate_ids: Set[int],
         discarded_ids: Set[int],
     ) -> pd.DataFrame:
@@ -137,52 +174,71 @@ class ProductHandler:
         :rtype: pd.DataFrame
         :raise Exception: Exception is raised if value does not contain any filter
         """
-        products = DataLoader.load_products(category_name=category_name, usecols=[attribute_name])
+        products = DataLoader.load_products(
+            category_name=category_name, usecols=[item.attribute_name for item in filter]
+        )
 
         # Drop candidate and discarded rows
         products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
-        options = value.options
-        if options is not None:
-            if len(options) == 0:
-                # Filter products with pd.isna value
-                products = products[pd.isna(products[attribute_name])]
-            else:
-                # Filter attribute by list of possible values of the attribute
-                attribute = DataLoader.load_attribute(category_name=category_name, attribute_name=attribute_name)
-                if attribute.is_list:
-                    # Attribute value is list, all products having at least one of the given options satisfies the
-                    # filter
-                    products = products[
-                        products[attribute_name].apply(
-                            lambda x: not pd.isna(x)
-                            and len(options) > 0
-                            and len(set(expand_list_value(value=x)).intersection(options)) > 0
-                        )
-                    ]
+        for item in filter:
+            options = item.filter.options
+            if options is not None:
+                if len(options) == 0:
+                    # Filter products with pd.isna value
+                    products = products[pd.isna(products[item.attribute_name])]
                 else:
-                    # Apply filter checking whether product has its value in options
-                    products = products[products[attribute_name].apply(lambda x: x in options)]
-        elif value.lower_bound is not None or value.upper_bound is not None:
-            # Apply lower bound and/or upper bound filter
-            if pd.isna(value.lower_bound) and pd.isna(value.upper_bound):
+                    # Filter attribute by list of possible values of the attribute
+                    attribute = DataLoader.load_attribute(
+                        category_name=category_name, attribute_name=item.attribute_name
+                    )
+                    if attribute.is_list:
+                        # Attribute value is list, all products having at least one of the given options satisfies the
+                        # filter
+                        products = products[
+                            products[item.attribute_name].apply(
+                                lambda x: not pd.isna(x)
+                                and len(options) > 0
+                                and len(set(expand_list_value(value=x)).intersection(options)) > 0
+                            )
+                        ]
+                    else:
+                        # Apply filter checking whether product has its value in options
+                        products = products[products[item.attribute_name].apply(lambda x: x in options)]
+            elif item.filter.lower_bound is not None or item.filter.upper_bound is not None:
+                # Apply lower bound and/or upper bound filter
+                if pd.isna(item.filter.lower_bound) and pd.isna(item.filter.upper_bound):
+                    # Filter products with pd.isna value
+                    products = products[pd.isna(products[item.attribute_name])]
+                if not pd.isna(item.filter.lower_bound):
+                    products = products[products[item.attribute_name] >= item.filter.lower_bound]
+                if not pd.isna(item.filter.upper_bound):
+                    products = products[products[item.attribute_name] <= item.filter.upper_bound]
+            else:
                 # Filter products with pd.isna value
-                products = products[pd.isna(products[attribute_name])]
-            if not pd.isna(value.lower_bound):
-                products = products[products[attribute_name] >= value.lower_bound]
-            if not pd.isna(value.upper_bound):
-                products = products[products[attribute_name] <= value.upper_bound]
-        else:
-            # Filter products with pd.isna value
-            products = products[pd.isna(products[attribute_name])]
+                products = products[pd.isna(products[item.attribute_name])]
 
         return products
+
+    @classmethod
+    def filter_products_in_set(
+        cls,
+        category_name: str,
+        filter: List[MultiFilterItem],
+        ids: Set[int],
+    ) -> pd.DataFrame:
+        products = cls.filter_products(
+            category_name=category_name,
+            filter=filter,
+            candidate_ids=set(),
+            discarded_ids=set(),
+        )
+        return products[products["id"].apply(lambda id: id in ids)]
 
     @classmethod
     def filter_category(
         cls,
         category_name: str,
-        attribute_name: str,
-        value: FilterValue,
+        filter: List[MultiFilterItem],
         candidate_ids: Set[int],
         discarded_ids: Set[int],
     ) -> List[Product]:
@@ -199,8 +255,7 @@ class ProductHandler:
         """
         products = cls.filter_products(
             category_name=category_name,
-            attribute_name=attribute_name,
-            value=value,
+            filter=filter,
             candidate_ids=candidate_ids,
             discarded_ids=discarded_ids,
         )
@@ -229,6 +284,21 @@ class ProductHandler:
         return ExplanationsSelector.get_generator().explain(
             category_name=category_name,
             product_id=product_id,
+            candidate_ids=candidate_ids,
+            discarded_ids=discarded_ids,
+            important_attributes=important_attributes,
+        )
+
+    @classmethod
+    def generate_stopping_criteria(
+        cls,
+        category_name: str,
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+        important_attributes: List[str],
+    ) -> StoppingCriteria:
+        return StoppingCriteriaSelector.get_generator().generate(
+            category_name=category_name,
             candidate_ids=candidate_ids,
             discarded_ids=discarded_ids,
             important_attributes=important_attributes,
