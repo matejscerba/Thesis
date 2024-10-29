@@ -7,7 +7,7 @@ from app.attributes.attribute import MultiFilterItem
 
 class StoppingCriterionItem(BaseModel):
     support_set: List[MultiFilterItem]
-    attribute_value: MultiFilterItem
+    attribute_value: List[MultiFilterItem]
     num_products: int
     metric: float
     candidate_ids: str = Field(default=..., exclude=True)

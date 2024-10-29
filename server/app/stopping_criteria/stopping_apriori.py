@@ -52,9 +52,20 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
                                 for item in S
                             ]
                             a_filter = MultiFilterItem(attribute_name=a[0], filter=FilterValue(options={a[1]}))
+                            try:
+                                filtered_candidate_ids = {
+                                    id
+                                    for id in ProductHandler.filter_products_in_set(
+                                        category_name=category_name,
+                                        filter=[*S_filter, a_filter],
+                                        ids=candidate_ids,
+                                    )["id"].values
+                                }
+                            except KeyError:
+                                filtered_candidate_ids = set()
                             item = StoppingCriterionItem(
                                 support_set=S_filter,
-                                attribute_value=a_filter,
+                                attribute_value=[a_filter],
                                 num_products=ProductHandler.count_products(
                                     category_name=category_name,
                                     filter=[*S_filter, a_filter],
@@ -73,17 +84,76 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
                                     ),
                                 ),
                                 candidate_ids=StoppingCriterionItem.encode_candidate_ids(
-                                    candidate_ids={
-                                        id
-                                        for id in ProductHandler.filter_products_in_set(
-                                            category_name=category_name,
-                                            filter=[*S_filter, a_filter],
-                                            ids=candidate_ids,
-                                        )["id"].values
-                                    }
+                                    candidate_ids=filtered_candidate_ids
                                 ),
                             )
                             items.append(item)
+        return items
+
+    @classmethod
+    def post_process(cls, initial_items: List[StoppingCriterionItem]) -> List[StoppingCriterionItem]:
+        items = [item for item in initial_items if item.num_products > 0]
+
+        grouped_items: Dict[str, List[StoppingCriterionItem]] = {}
+        # Each grouped item value contains list of items with the same metric and the same length (both maximum)
+        for item in items:
+            if item.candidate_ids not in grouped_items or len(grouped_items[item.candidate_ids]) == 0:
+                grouped_items[item.candidate_ids] = [item]
+            elif item.metric > grouped_items[item.candidate_ids][0].metric:
+                grouped_items[item.candidate_ids] = [item]
+            elif item.metric == grouped_items[item.candidate_ids][0].metric:
+                if len(item.support_set) > len(grouped_items[item.candidate_ids][0].support_set):
+                    grouped_items[item.candidate_ids] = [item]
+                elif len(item.support_set) == len(grouped_items[item.candidate_ids][0].support_set):
+                    grouped_items[item.candidate_ids].append(item)
+
+        items = []
+        for values in grouped_items.values():
+            attribute_values: Dict[str, MultiFilterItem] = {}
+            support_attributes = set()
+            for item in values:
+                assert len(item.attribute_value) == 1
+                support_attributes.update(set([attribute.attribute_name for attribute in item.support_set]))
+                attribute_name = item.attribute_value[0].attribute_name
+                attribute_item = item.attribute_value[0]
+                attribute_values_filter = attribute_values[attribute_name].filter
+                if attribute_name not in attribute_values:
+                    attribute_values[attribute_name] = attribute_item
+                else:
+                    if (
+                        attribute_item.filter.lower_bound is not None
+                        and attribute_values_filter.lower_bound is not None
+                        and attribute_item.filter.lower_bound <= attribute_values_filter.lower_bound
+                        and attribute_item.filter.upper_bound is not None
+                        and attribute_values_filter.upper_bound is not None
+                        and attribute_item.filter.upper_bound >= attribute_values_filter.upper_bound
+                    ):
+                        attribute_values[attribute_name] = attribute_item
+                    if (
+                        attribute_item.filter.options is not None
+                        and attribute_values_filter.options is not None
+                        and attribute_values_filter.options <= attribute_item.filter.options
+                    ):
+                        attribute_values[attribute_name] = attribute_item
+
+            if support_attributes == set(attribute_values.keys()):
+                items.append(
+                    StoppingCriterionItem(
+                        support_set=[],
+                        attribute_value=list(attribute_values.values()),
+                        num_products=values[0].num_products,
+                        metric=values[0].metric,
+                        candidate_ids=values[0].candidate_ids,
+                    )
+                )
+            else:
+                items.extend(values)
+
+        items.sort(key=lambda item: item.metric, reverse=True)
+
+        # if len(items) > 5:
+        #     items = items[:5]
+
         return items
 
     @classmethod
@@ -101,25 +171,8 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
             important_attributes=important_attributes,
         )
 
+        items = cls.post_process(initial_items=items)
+
         preference_detected = len([item.metric >= cls.preference_threshold for item in items]) > 0
-
-        # Filter items so that only the
-        items = [item for item in items if item.num_products > 0]
-
-        grouped_items: Dict[str, StoppingCriterionItem] = {}
-        for item in items:
-            if item.candidate_ids not in grouped_items:
-                grouped_items[item.candidate_ids] = item
-            elif item.metric > grouped_items[item.candidate_ids].metric:
-                grouped_items[item.candidate_ids] = item
-            elif item.metric == grouped_items[item.candidate_ids].metric and len(item.support_set) > len(
-                grouped_items[item.candidate_ids].support_set
-            ):
-                grouped_items[item.candidate_ids] = item
-
-        items = sorted(list(grouped_items.values()), key=lambda item: item.metric, reverse=True)
-
-        if len(items) > 5:
-            items = items[:5]
 
         return StoppingCriteria(preference_detected=preference_detected, reached=len(items) == 0, items=items)
