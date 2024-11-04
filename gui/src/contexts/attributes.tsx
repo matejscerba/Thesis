@@ -75,6 +75,7 @@ interface AttributesContextProviderProps {
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
   const [importantAttributes, setImportantAttributes] = useState<string[]>([
+    PRICE,
     "SSD capacity [GB]",
     'Display size ["]',
     "Size of operational RAM [GB]",

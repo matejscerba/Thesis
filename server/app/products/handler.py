@@ -179,13 +179,13 @@ class ProductHandler:
         )
 
         # Drop candidate and discarded rows
-        products = products[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
+        products = products.loc[products["id"].apply(lambda id: id not in candidate_ids and id not in discarded_ids)]
         for item in filter:
             options = item.filter.options
             if options is not None:
                 if len(options) == 0:
                     # Filter products with pd.isna value
-                    products = products[pd.isna(products[item.attribute_name])]
+                    products = products.loc[pd.isna(products[item.attribute_name])]
                 else:
                     # Filter attribute by list of possible values of the attribute
                     attribute = DataLoader.load_attribute(
@@ -194,7 +194,7 @@ class ProductHandler:
                     if attribute.is_list:
                         # Attribute value is list, all products having at least one of the given options satisfies the
                         # filter
-                        products = products[
+                        products = products.loc[
                             products[item.attribute_name].apply(
                                 lambda x: not pd.isna(x)
                                 and len(options) > 0
@@ -203,19 +203,19 @@ class ProductHandler:
                         ]
                     else:
                         # Apply filter checking whether product has its value in options
-                        products = products[products[item.attribute_name].apply(lambda x: x in options)]
+                        products = products.loc[products[item.attribute_name].apply(lambda x: x in options)]
             elif item.filter.lower_bound is not None or item.filter.upper_bound is not None:
                 # Apply lower bound and/or upper bound filter
                 if pd.isna(item.filter.lower_bound) and pd.isna(item.filter.upper_bound):
                     # Filter products with pd.isna value
-                    products = products[pd.isna(products[item.attribute_name])]
+                    products = products.loc[pd.isna(products[item.attribute_name])]
                 if not pd.isna(item.filter.lower_bound):
-                    products = products[products[item.attribute_name] >= item.filter.lower_bound]
+                    products = products.loc[products[item.attribute_name] >= item.filter.lower_bound]
                 if not pd.isna(item.filter.upper_bound):
-                    products = products[products[item.attribute_name] <= item.filter.upper_bound]
+                    products = products.loc[products[item.attribute_name] <= item.filter.upper_bound]
             else:
                 # Filter products with pd.isna value
-                products = products[pd.isna(products[item.attribute_name])]
+                products = products.loc[pd.isna(products[item.attribute_name])]
 
         return products
 

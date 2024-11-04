@@ -1,5 +1,6 @@
 from typing import Any
 
+import numpy as np
 from flask.json.provider import _default
 from pydantic import BaseModel
 
@@ -13,6 +14,8 @@ def json_default(data: Any) -> Any:
     """
     if isinstance(data, (int, float, bool, str)):
         return data
+    if isinstance(data, np.int64):
+        return int(data)
     if isinstance(data, set):
         return [json_default(item) for item in data]
     if isinstance(data, list):
