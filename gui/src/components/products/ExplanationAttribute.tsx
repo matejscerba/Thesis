@@ -40,14 +40,10 @@ function ExplanationAttribute({ attribute, filter, position }: ExplanationAttrib
           ) : (
             <>
               {filter.lowerBound !== null && (
-                <Typography variant="body1">
-                  {`>=`} {valueToString(filter.lowerBound, attribute)}
-                </Typography>
+                <Typography variant="body1">from {valueToString(filter.lowerBound, attribute)}</Typography>
               )}
               {filter.upperBound !== null && (
-                <Typography variant="body1">
-                  {`<=`} {valueToString(filter.upperBound, attribute)}
-                </Typography>
+                <Typography variant="body1">up to {valueToString(filter.upperBound, attribute)}</Typography>
               )}
               {filter.lowerBound === null && filter.upperBound === null && <Typography variant="body1">Any</Typography>}
             </>
