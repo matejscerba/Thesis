@@ -2,6 +2,7 @@ import os
 from typing import Type, ClassVar, Optional
 
 from app.stopping_criteria.abstract import StoppingCriteriaModel, AbstractStoppingCriteria
+from app.utils.selector import get_all_subclasses
 
 
 class StoppingCriteriaSelector:
@@ -13,7 +14,7 @@ class StoppingCriteriaSelector:
         if cls._generator is not None:
             return cls._generator
 
-        generators = AbstractStoppingCriteria.__subclasses__()
+        generators = get_all_subclasses(AbstractStoppingCriteria)
         for generator in generators:
             if generator.model == cls.model:
                 cls._generator = generator

@@ -7,6 +7,7 @@ from app.products.stopping_criteria import StoppingCriteria
 
 class StoppingCriteriaModel(str, Enum):
     STOPPING_APRIORI = "stopping_apriori"
+    STOPPING_APRIORI_WITH_NUMERICAL = "stopping_apriori_with_numerical"
 
 
 class AbstractStoppingCriteria(ABC):

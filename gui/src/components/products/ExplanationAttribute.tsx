@@ -29,7 +29,29 @@ function ExplanationAttribute({ attribute, filter, position }: ExplanationAttrib
           <Typography variant="body1">{attribute.name}</Typography>
         </div>
         <div className="value">
-          <Typography variant="body1">{valueToString(filter.options[0], attribute)}</Typography>
+          {filter.options ? (
+            filter.options.length === 1 ? (
+              <Typography variant="body1">{valueToString(filter.options[0], attribute)}</Typography>
+            ) : (
+              <Typography variant="body1">
+                {filter.options.map((option) => valueToString(option, attribute)).join(", ")}
+              </Typography>
+            )
+          ) : (
+            <>
+              {filter.lowerBound !== null && (
+                <Typography variant="body1">
+                  {`>=`} {valueToString(filter.lowerBound, attribute)}
+                </Typography>
+              )}
+              {filter.upperBound !== null && (
+                <Typography variant="body1">
+                  {`<=`} {valueToString(filter.upperBound, attribute)}
+                </Typography>
+              )}
+              {filter.lowerBound === null && filter.upperBound === null && <Typography variant="body1">Any</Typography>}
+            </>
+          )}
         </div>
       </div>
     </PositionTooltip>

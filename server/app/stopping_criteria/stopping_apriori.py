@@ -116,10 +116,10 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
                 support_attributes.update(set([attribute.attribute_name for attribute in item.support_set]))
                 attribute_name = item.attribute_value[0].attribute_name
                 attribute_item = item.attribute_value[0]
-                attribute_values_filter = attribute_values[attribute_name].filter
                 if attribute_name not in attribute_values:
                     attribute_values[attribute_name] = attribute_item
                 else:
+                    attribute_values_filter = attribute_values[attribute_name].filter
                     if (
                         attribute_item.filter.lower_bound is not None
                         and attribute_values_filter.lower_bound is not None

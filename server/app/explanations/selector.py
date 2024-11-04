@@ -2,6 +2,7 @@ import os
 from typing import Type, ClassVar, Optional
 
 from app.explanations.abstract import AbstractExplanations, ExplanationsModel
+from app.utils.selector import get_all_subclasses
 
 
 class ExplanationsSelector:
@@ -24,7 +25,7 @@ class ExplanationsSelector:
         if cls._generator is not None:
             return cls._generator
 
-        generators = AbstractExplanations.__subclasses__()
+        generators = get_all_subclasses(AbstractExplanations)
         for generator in generators:
             if generator.model == cls.model:
                 cls._generator = generator

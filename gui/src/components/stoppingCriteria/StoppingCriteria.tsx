@@ -27,14 +27,14 @@ function StoppingCriteria() {
           items: criteria.items.map((item) => ({
             ...item,
             numProducts: item.num_products,
-            attributeValue: {
-              attribute: attributes.find((attr) => attr.full_name === item.attribute_value.attribute_name),
+            attributeValue: item.attribute_value.map((attribute) => ({
+              attribute: attributes.find((attr) => attr.full_name === attribute.attribute_name),
               filter: {
-                ...item.attribute_value.filter,
-                lowerBound: item.attribute_value.filter.lower_bound,
-                upperBound: item.attribute_value.filter.upper_bound,
+                ...attribute.filter,
+                lowerBound: attribute.filter.lower_bound,
+                upperBound: attribute.filter.upper_bound,
               },
-            },
+            })),
             supportSet: item.support_set.map((attribute) => ({
               ...attribute,
               attribute: attributes.find((attr) => attr.full_name === attribute.attribute_name),

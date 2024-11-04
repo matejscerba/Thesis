@@ -2,6 +2,7 @@ import os
 from typing import Type, ClassVar, Optional
 
 from app.recommenders.abstract import AbstractRecommender, RecommenderModel
+from app.utils.selector import get_all_subclasses
 
 
 class RecommenderSelector:
@@ -24,7 +25,7 @@ class RecommenderSelector:
         if cls._recommender is not None:
             return cls._recommender
 
-        recommenders = AbstractRecommender.__subclasses__()
+        recommenders = get_all_subclasses(AbstractRecommender)
         for recommender in recommenders:
             if recommender.model == cls.model:
                 cls._recommender = recommender

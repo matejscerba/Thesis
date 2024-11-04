@@ -1,4 +1,4 @@
-import { FilterValueResponse, MultiFilter, MultiFilterItem } from "./attribute";
+import { FilterValueResponse, MultiFilter } from "./attribute";
 
 interface StoppingCriterionAttributeResponse {
   attribute_name: string;
@@ -7,14 +7,14 @@ interface StoppingCriterionAttributeResponse {
 
 export interface StoppingCriterionItem {
   supportSet: MultiFilter;
-  attributeValue: MultiFilterItem;
+  attributeValue: MultiFilter;
   numProducts: number;
   metric: number;
 }
 
 export interface StoppingCriterionItemResponse {
   support_set: StoppingCriterionAttributeResponse[];
-  attribute_value: StoppingCriterionAttributeResponse;
+  attribute_value: StoppingCriterionAttributeResponse[];
   num_products: number;
   metric: number;
 }

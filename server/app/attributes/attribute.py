@@ -1,7 +1,14 @@
+import json
+import logging
 from enum import Enum
 from typing import Optional, Dict, Any, List, Set
 
+import pandas as pd
 from pydantic import BaseModel, Field
+
+from app.server.encoder import json_default
+
+logger = logging.getLogger()
 
 
 class AttributeType(str, Enum):
@@ -43,6 +50,9 @@ class MultiFilterItem(BaseModel):
     attribute_name: str
     filter: FilterValue
 
+    def __hash__(self) -> int:
+        return hash(json.dumps(self.model_dump(), sort_keys=True, default=json_default))
+
 
 class Attribute(BaseModel):
     """This class represents an attribute of a product.
@@ -64,7 +74,19 @@ class Attribute(BaseModel):
     type: AttributeType
     order: Optional[AttributeOrder] = Field(default=None)
     continuous: Optional[bool] = Field(default=None)
+    step: Optional[float] = Field(default=None)
     is_list: bool = Field(default=False)
+
+    def get_range_filter_value(self, value: float) -> FilterValue:
+        if self.type != AttributeType.NUMERICAL and not self.continuous:
+            raise ValueError(f"Attribute {self.full_name} is numerical or not continuous.")
+        if self.step is None:
+            logger.warning(f"Attribute {self.full_name} has no step defined.")
+            return FilterValue(options={value})
+        if pd.isna(value):
+            return FilterValue(options={value})
+        lower_bound = value // self.step * self.step
+        return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
 
 
 class CategoryAttributes(BaseModel):

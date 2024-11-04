@@ -13,7 +13,7 @@ interface StoppingCriterionProps {
 function StoppingCriterion({ criterion }: StoppingCriterionProps) {
   const { presentModal } = useModal();
 
-  const filter = [...criterion.supportSet, criterion.attributeValue];
+  const filter = [...criterion.supportSet, ...criterion.attributeValue];
 
   return (
     <div className="m-3 py-3 px-2 border border-dark rounded bg-white">
@@ -38,12 +38,14 @@ function StoppingCriterion({ criterion }: StoppingCriterionProps) {
         You prefer products with
       </Typography>
       <div className="flex-wrapper py-2 justify-content-center">
-        <ExplanationAttribute
-          key={criterion.attributeValue.attribute.name}
-          attribute={criterion.attributeValue.attribute}
-          filter={criterion.attributeValue.filter}
-          position={ProductAttributePosition.NEUTRAL}
-        />
+        {criterion.attributeValue.map((item) => (
+          <ExplanationAttribute
+            key={item.attribute.name}
+            attribute={item.attribute}
+            filter={item.filter}
+            position={ProductAttributePosition.NEUTRAL}
+          />
+        ))}
       </div>
       <Typography
         variant="body1"
