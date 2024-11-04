@@ -171,8 +171,9 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
             important_attributes=important_attributes,
         )
 
-        items = cls.post_process(initial_items=items)
+        items = [item for item in items if item.metric > cls.preference_threshold]
+        preference_detected = len(items) > 0
 
-        preference_detected = len([item.metric >= cls.preference_threshold for item in items]) > 0
+        items = cls.post_process(initial_items=items)
 
         return StoppingCriteria(preference_detected=preference_detected, reached=len(items) == 0, items=items)
