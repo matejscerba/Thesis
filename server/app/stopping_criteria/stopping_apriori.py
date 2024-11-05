@@ -149,11 +149,6 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
             else:
                 items.extend(values)
 
-        items.sort(key=lambda item: item.metric, reverse=True)
-
-        # if len(items) > 5:
-        #     items = items[:5]
-
         return items
 
     @classmethod
@@ -175,5 +170,10 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
         preference_detected = len(items) > 0
 
         items = cls.post_process(initial_items=items)
+
+        items.sort(key=lambda item: item.metric, reverse=True)
+
+        # if len(items) > 5:
+        #     items = items[:5]
 
         return StoppingCriteria(preference_detected=preference_detected, reached=len(items) == 0, items=items)

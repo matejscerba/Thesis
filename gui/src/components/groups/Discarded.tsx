@@ -4,6 +4,15 @@ import { Product as ProductModel, ProductGroupType } from "../../types/product";
 import { fetchPostJson } from "../../utils/api";
 import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
+import CategorySkeleton from "../CategorySkeleton";
+
+export function DiscardedTitle() {
+  return (
+    <Typography variant="h5" className="text-danger mx-3">
+      Discarded
+    </Typography>
+  );
+}
 
 /**
  * This component renders the group of discarded products.
@@ -14,28 +23,31 @@ function Discarded() {
   const { name, discarded } = useCategory();
 
   const [data, setData] = useState<ProductModel[]>(undefined);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     // Load the list of products as soon as the discarded products ids change
     fetchPostJson<ProductModel[]>("discarded", { discarded }, { category_name: name })
       .then((products) => {
+        setLoading(false);
         setData(products);
       })
-      .catch((e) => console.error(e));
+      .catch((e) => {
+        setLoading(false);
+        console.error(e);
+      });
   }, [discarded]);
+
+  if (!data || loading) {
+    return <CategorySkeleton title={<DiscardedTitle />} />;
+  }
 
   return (
     <>
-      <Typography variant="h5" className="text-danger mx-3">
-        Discarded
-      </Typography>
-      {data ? (
-        <ProductsGroup products={data} groupType={ProductGroupType.DISCARDED} />
-      ) : (
-        <Typography variant="body1" className="mx-3">
-          Loading discarded products...
-        </Typography>
-      )}
+      <DiscardedTitle />
+      <ProductsGroup products={data} groupType={ProductGroupType.DISCARDED} />
     </>
   );
 }

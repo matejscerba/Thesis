@@ -23,6 +23,11 @@ class StoppingCriterionItem(BaseModel):
         except ZeroDivisionError:
             return 0
 
+    def get_attributes_hash(self) -> int:
+        attributes = [*self.support_set, *self.attribute_value]
+        attributes.sort(key=lambda item: item.attribute_name)
+        return hash(tuple(attributes))
+
 
 class StoppingCriteria(BaseModel):
     preference_detected: bool

@@ -6,21 +6,32 @@ import { useCategory } from "../../contexts/category";
 import React from "react";
 import Typography from "@mui/material/Typography";
 import StoppingCriterion from "./StoppingCriterion";
+import CategorySkeleton from "../CategorySkeleton";
+
+export function StoppingCriteriaTitle() {
+  return (
+    <Typography variant="h5" className="text-dark mx-3">
+      Stopping criteria
+    </Typography>
+  );
+}
 
 function StoppingCriteria() {
   const { attributes, attributeNames } = useAttributes();
   const { name, candidateIds, discarded } = useCategory();
 
   const [data, setData] = useState<StoppingCriteriaModel>(undefined);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     fetchPostJson<StoppingCriteriaResponse>(
       "stopping_criteria",
       { candidates: candidateIds, discarded, important_attributes: attributeNames },
       { category_name: name },
     )
       .then((criteria) => {
-        console.warn(criteria);
+        setLoading(false);
         setData({
           ...criteria,
           preferenceDetected: criteria.preference_detected,
@@ -47,18 +58,19 @@ function StoppingCriteria() {
           })),
         } as StoppingCriteriaModel);
       })
-      .catch((e) => console.error(e));
+      .catch((e) => {
+        setLoading(false);
+        console.error(e);
+      });
   }, [candidateIds, discarded, attributeNames]);
 
-  if (!data) {
-    return <pre>Loading...</pre>;
+  if (!data || loading) {
+    return <CategorySkeleton title={<StoppingCriteriaTitle />} />;
   }
 
   return (
     <>
-      <Typography variant="h5" className="text-dark mx-3">
-        Stopping criteria
-      </Typography>
+      <StoppingCriteriaTitle />
       {data.items && data.items.length > 0 ? (
         data.items.map((criterion, idx) => <StoppingCriterion key={`${idx}`} criterion={criterion} />)
       ) : (

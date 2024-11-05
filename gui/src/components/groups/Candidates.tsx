@@ -4,6 +4,14 @@ import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
 import { ProductGroupType } from "../../types/product";
 
+export function CandidatesTitle() {
+  return (
+    <Typography variant="h5" className="text-success mx-3">
+      Candidates
+    </Typography>
+  );
+}
+
 /**
  * This component renders the group of candidate products.
  *
@@ -14,9 +22,7 @@ function Candidates() {
 
   return (
     <>
-      <Typography variant="h5" className="text-success mx-3">
-        Candidates
-      </Typography>
+      <CandidatesTitle />
       <ProductsGroup products={candidates} groupType={ProductGroupType.CANDIDATES} />
     </>
   );

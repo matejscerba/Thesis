@@ -1,5 +1,5 @@
 import itertools
-from typing import List, Set, ClassVar, Tuple
+from typing import List, Set, ClassVar, Tuple, Dict
 
 import pandas as pd
 
@@ -12,6 +12,8 @@ from app.stopping_criteria.abstract import StoppingCriteriaModel
 
 class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriteria):
     model: ClassVar[StoppingCriteriaModel] = StoppingCriteriaModel.STOPPING_APRIORI_WITH_NUMERICAL
+
+    repeat_penalty: ClassVar[float] = 0.8
 
     @classmethod
     def _create_multi_filter_item(cls, attribute: Attribute, product: pd.Series) -> MultiFilterItem:
@@ -98,4 +100,19 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                                 ),
                             )
                             items.append(item)
+        return items
+
+    @classmethod
+    def post_process(cls, initial_items: List[StoppingCriterionItem]) -> List[StoppingCriterionItem]:
+        items = super().post_process(initial_items=initial_items)
+
+        penalties: Dict[int, float] = {}
+        for item in items:
+            item_hash = item.get_attributes_hash()
+            if item_hash not in penalties:
+                penalties[item_hash] = cls.repeat_penalty
+            else:
+                item.metric *= penalties[item_hash]
+                penalties[item_hash] *= cls.repeat_penalty
+
         return items

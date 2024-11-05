@@ -6,13 +6,14 @@ import { UnseenStatistics } from "../../types/statistics";
 import { ModalContextProvider } from "../../contexts/modal";
 import ProductsGroup from "../groups/ProductsGroup";
 import { CategoryContextProvider } from "../../contexts/category";
-import Candidates from "../groups/Candidates";
-import Unseen from "../groups/Unseen";
-import Alternatives from "../groups/Alternatives";
-import Discarded from "../groups/Discarded";
+import Candidates, { CandidatesTitle } from "../groups/Candidates";
+import Unseen, { UnseenTitle } from "../groups/Unseen";
+import Alternatives, { AlternativesTitle } from "../groups/Alternatives";
+import Discarded, { DiscardedTitle } from "../groups/Discarded";
 import Typography from "@mui/material/Typography";
 import CategoryModal from "../CategoryModal";
-import StoppingCriteria from "../stoppingCriteria/StoppingCriteria";
+import StoppingCriteria, { StoppingCriteriaTitle } from "../stoppingCriteria/StoppingCriteria";
+import CategorySkeleton from "../CategorySkeleton";
 
 /**
  * The default size of page
@@ -43,10 +44,12 @@ function ProductList({ name }: ProductListProps) {
 
   const [limit, setLimit] = useState<number>(PAGE_SIZE);
   const [data, setData] = useState<ProductListResponse>(undefined);
+  const [loading, setLoading] = useState<boolean>(false);
   const [candidates, setCandidates] = useState<number[]>([]);
   const [discarded, setDiscarded] = useState<number[]>([]);
 
   useEffect(() => {
+    setLoading(true);
     // Load the category contents as soon as candidates, discarded, limit or important attributes change - the
     // organization of the product will likely change
     fetchPostJson<ProductListResponse>(
@@ -55,9 +58,13 @@ function ProductList({ name }: ProductListProps) {
       { category_name: name },
     )
       .then((category) => {
+        setLoading(false);
         setData(category);
       })
-      .catch((e) => console.error(e));
+      .catch((e) => {
+        setLoading(false);
+        console.error(e);
+      });
   }, [candidates, discarded, limit, attributeNames]);
 
   /**
@@ -84,8 +91,21 @@ function ProductList({ name }: ProductListProps) {
     setCandidates((prevState) => [...prevState, id]);
   };
 
-  if (!data) {
-    return <pre>Loading...</pre>;
+  if (!data || loading) {
+    console.warn(candidates, discarded);
+    if (candidates.length > 0) {
+      return (
+        <>
+          <CategorySkeleton title={<CandidatesTitle />} />
+          <CategorySkeleton title={<StoppingCriteriaTitle />} />
+          <CategorySkeleton title={<UnseenTitle />} />
+          <CategorySkeleton title={<AlternativesTitle />} numItems={10} />
+          <CategorySkeleton title={<DiscardedTitle />} />
+        </>
+      );
+    } else {
+      return <CategorySkeleton numItems={PAGE_SIZE} />;
+    }
   }
 
   return (

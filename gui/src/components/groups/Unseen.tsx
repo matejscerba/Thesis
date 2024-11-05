@@ -5,6 +5,14 @@ import CategoricalAttributeRange from "../attributes/CategoricalAttributeRange";
 import { AttributeType } from "../../types/attribute";
 import { useCategory } from "../../contexts/category";
 
+export function UnseenTitle() {
+  return (
+    <Typography variant="h5" className="text-secondary mx-3">
+      Unseen
+    </Typography>
+  );
+}
+
 /**
  * This component renders the section describing important attributes of the not yet seen products.
  *
@@ -15,9 +23,7 @@ function Unseen() {
 
   return (
     <>
-      <Typography variant="h5" className="text-secondary mx-3">
-        Unseen
-      </Typography>
+      <UnseenTitle />
       {unseen.attributes && unseen.attributes.length > 0 ? (
         unseen.attributes.map((stats) => (
           <div key={stats.attribute.name} className="m-3 border border-secondary rounded bg-white">
