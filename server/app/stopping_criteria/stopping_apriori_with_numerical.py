@@ -1,5 +1,5 @@
 import itertools
-from typing import List, Set, ClassVar, Tuple, Dict
+from typing import List, Set, ClassVar, Tuple, Optional
 
 import pandas as pd
 
@@ -102,17 +102,50 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                             items.append(item)
         return items
 
+    # @classmethod
+    # def post_process(cls, initial_items: List[StoppingCriterionItem]) -> List[StoppingCriterionItem]:
+    #     items = super().post_process(initial_items=initial_items)
+    #
+    #     penalties: Dict[int, float] = {}
+    #     for item in items:
+    #         item_hash = item.get_attributes_hash()
+    #         if item_hash not in penalties:
+    #             penalties[item_hash] = cls.repeat_penalty
+    #         else:
+    #             item.metric *= penalties[item_hash]
+    #             penalties[item_hash] *= cls.repeat_penalty
+    #
+    #     return items
+
+    @classmethod
+    def _compute_max_similarity(cls, item: StoppingCriterionItem, items: List[StoppingCriterionItem]) -> float:
+        max_similarity = 0.0
+        for rhs in items:
+            similarity = item.similarity(rhs=rhs)
+            if similarity > max_similarity:
+                max_similarity = similarity
+        return max_similarity
+
     @classmethod
     def post_process(cls, initial_items: List[StoppingCriterionItem]) -> List[StoppingCriterionItem]:
-        items = super().post_process(initial_items=initial_items)
+        result = []
 
-        penalties: Dict[int, float] = {}
-        for item in items:
-            item_hash = item.get_attributes_hash()
-            if item_hash not in penalties:
-                penalties[item_hash] = cls.repeat_penalty
-            else:
-                item.metric *= penalties[item_hash]
-                penalties[item_hash] *= cls.repeat_penalty
+        if len(initial_items) > 0:
+            for _ in range(5):
+                best_item: Optional[Tuple[StoppingCriterionItem, float]] = None
+                for item in initial_items:
+                    if best_item is not None:
+                        if item.metric < best_item[1]:
+                            # Item's metric is lower than best item's reduced metric, we can only reduce its metric, so
+                            # there is no need to continue (all subsequent items have lower metric)
+                            result.append(best_item[0])
+                            break
+                    similarity = cls._compute_max_similarity(item=item, items=result)
+                    updated_metric = item.metric * (1 - similarity)
+                    if best_item is None:
+                        best_item = item, updated_metric
+                    else:
+                        if updated_metric > best_item[1]:
+                            best_item = item, updated_metric
 
-        return items
+        return result

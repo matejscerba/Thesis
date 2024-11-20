@@ -1,4 +1,5 @@
 import itertools
+import operator
 from typing import List, Set, ClassVar, Optional, Tuple, Any, Dict
 
 import pandas as pd
@@ -169,9 +170,9 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
         items = [item for item in items if item.metric > cls.preference_threshold]
         preference_detected = len(items) > 0
 
-        items = cls.post_process(initial_items=items)
+        items.sort(key=operator.attrgetter("metric_with_complexity"), reverse=True)
 
-        items.sort(key=lambda item: item.metric, reverse=True)
+        items = cls.post_process(initial_items=items)
 
         # if len(items) > 5:
         #     items = items[:5]
