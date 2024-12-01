@@ -72,14 +72,6 @@ class Context:
         session["discarded"] = value
 
     @property
-    def product_id(self) -> int:
-        return session["product_id"]
-
-    @product_id.setter
-    def product_id(self, value: int) -> None:
-        session["product_id"] = value
-
-    @property
     def filter(self) -> Optional[List["MultiFilterItem"]]:
         return session.get("filter")
 

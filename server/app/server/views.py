@@ -151,12 +151,10 @@ def view_explanation() -> Response:
     if product_id is None:
         raise Exception("Product id not set.")
 
-    context.product_id = int(product_id)
-
     return jsonify(
         ProductHandler.explain_product(
             category_name=context.category_name,
-            product_id=context.product_id,
+            product_id=int(product_id),
             candidate_ids=context.candidates,
             discarded_ids=context.discarded,
             important_attributes=context.important_attributes,
