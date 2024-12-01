@@ -3,6 +3,7 @@ from typing import List, ClassVar, Optional, Set
 
 import pandas as pd
 
+from app.app_flow import UIType
 from app.attributes.attribute import MultiFilterItem
 from app.data_loader import DataLoader
 from app.explanations.selector import ExplanationsSelector
@@ -12,6 +13,7 @@ from app.products.product import Product
 from app.products.stopping_criteria import StoppingCriteria
 from app.products.unseen_statistics import UnseenStatistics, AbstractAttributeStatistics
 from app.recommenders.selector import RecommenderSelector
+from app.server.context import context
 from app.stopping_criteria.selector import StoppingCriteriaSelector
 from app.utils.attributes import expand_list_value
 
@@ -116,25 +118,26 @@ class ProductHandler:
             alternative_ids = alternative_ids[: cls._alternatives_size]
         alternatives = [category.pop(alternative_id) for alternative_id in alternative_ids]
 
-        # Compute statistics for the unseen products (the rest that remained in the category)
-        attribute_statistics = []
-        attributes = DataLoader.load_attributes(category_name=category_name)
-        for attribute_id in important_attributes:
-            attribute = attributes.attributes[attribute_id]
-            attribute_statistics.append(
-                AbstractAttributeStatistics.from_products(
-                    category_name=category_name,
-                    attribute=attribute,
-                    products=DataLoader.load_products(
+        unseen: Optional[UnseenStatistics] = None
+        if context.ui_type == UIType.UNSEEN_STATISTICS:
+            # Compute statistics for the unseen products (the rest that remained in the category)
+            attribute_statistics = []
+            attributes = DataLoader.load_attributes(category_name=category_name)
+            for attribute_id in important_attributes:
+                attribute = attributes.attributes[attribute_id]
+                attribute_statistics.append(
+                    AbstractAttributeStatistics.from_products(
                         category_name=category_name,
-                        usecols=important_attributes,
-                    ),
-                    candidate_ids=candidate_ids,
-                    discarded_ids=discarded_ids,
+                        attribute=attribute,
+                        products=DataLoader.load_products(
+                            category_name=category_name,
+                            usecols=important_attributes,
+                        ),
+                        candidate_ids=candidate_ids,
+                        discarded_ids=discarded_ids,
+                    )
                 )
-            )
-
-        unseen = UnseenStatistics(attributes=attribute_statistics)
+            unseen = UnseenStatistics(attributes=attribute_statistics)
 
         return OrganizedCategory(
             candidates=candidates,

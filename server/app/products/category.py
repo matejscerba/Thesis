@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 import pandas as pd
 from pydantic import BaseModel, model_serializer
@@ -99,4 +99,4 @@ class OrganizedCategory(Category):
     organized: bool = True
     candidates: List[Product]
     alternatives: List[Product]
-    unseen: UnseenStatistics
+    unseen: Optional[UnseenStatistics]

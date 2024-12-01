@@ -21,10 +21,10 @@ function Alternatives() {
   const { alternatives } = useCategory();
 
   return (
-    <>
+    <div className="mb-3">
       <AlternativesTitle />
       <ProductsGroup products={alternatives} groupType={ProductGroupType.ALTERNATIVES} />
-    </>
+    </div>
   );
 }
 

@@ -21,10 +21,10 @@ function Candidates() {
   const { candidates } = useCategory();
 
   return (
-    <>
+    <div className="mb-3">
       <CandidatesTitle />
       <ProductsGroup products={candidates} groupType={ProductGroupType.CANDIDATES} />
-    </>
+    </div>
   );
 }
 

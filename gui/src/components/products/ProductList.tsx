@@ -7,13 +7,13 @@ import { ModalContextProvider } from "../../contexts/modal";
 import ProductsGroup from "../groups/ProductsGroup";
 import { CategoryContextProvider } from "../../contexts/category";
 import Candidates, { CandidatesTitle } from "../groups/Candidates";
-import Unseen, { UnseenTitle } from "../groups/Unseen";
 import Alternatives, { AlternativesTitle } from "../groups/Alternatives";
 import Discarded, { DiscardedTitle } from "../groups/Discarded";
 import Typography from "@mui/material/Typography";
 import CategoryModal from "../CategoryModal";
-import StoppingCriteria, { StoppingCriteriaTitle } from "../stoppingCriteria/StoppingCriteria";
 import CategorySkeleton from "../CategorySkeleton";
+import StoppingCriteriaWrapper from "../groups/StoppingCriteriaWrapper";
+import StoppingCriteriaTitleWrapper from "../groups/StoppingCriteriaTitleWrapper";
 
 /**
  * The default size of page
@@ -96,8 +96,7 @@ function ProductList({ name }: ProductListProps) {
       return (
         <>
           <CategorySkeleton title={<CandidatesTitle />} />
-          <CategorySkeleton title={<StoppingCriteriaTitle />} />
-          <CategorySkeleton title={<UnseenTitle />} />
+          <CategorySkeleton title={<StoppingCriteriaTitleWrapper />} />
           <CategorySkeleton title={<AlternativesTitle />} numItems={10} />
           <CategorySkeleton title={<DiscardedTitle />} />
         </>
@@ -122,18 +121,9 @@ function ProductList({ name }: ProductListProps) {
         <ModalContextProvider>
           {data.organized ? (
             <>
-              <div className="mb-3">
-                <Candidates />
-              </div>
-              <div className="mb-3">
-                <StoppingCriteria />
-              </div>
-              <div className="mb-3">
-                <Unseen />
-              </div>
-              <div className="mb-3">
-                <Alternatives />
-              </div>
+              <Candidates />
+              <StoppingCriteriaWrapper />
+              <Alternatives />
             </>
           ) : (
             <>

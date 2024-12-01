@@ -69,7 +69,7 @@ function StoppingCriteria() {
   }
 
   return (
-    <>
+    <div className="mb-3">
       <StoppingCriteriaTitle />
       {data.items && data.items.length > 0 ? (
         data.items.map((criterion, idx) => <StoppingCriterion key={`${idx}`} criterion={criterion} />)
@@ -78,7 +78,7 @@ function StoppingCriteria() {
           No stopping criteria detected. Make sure you have some candidate products and important attributes selected.
         </Typography>
       )}
-    </>
+    </div>
   );
 }
 

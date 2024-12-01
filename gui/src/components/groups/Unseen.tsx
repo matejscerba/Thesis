@@ -22,7 +22,7 @@ function Unseen() {
   const { unseen } = useCategory();
 
   return (
-    <>
+    <div className="mb-3">
       <UnseenTitle />
       {unseen.attributes && unseen.attributes.length > 0 ? (
         unseen.attributes.map((stats) => (
@@ -53,7 +53,7 @@ function Unseen() {
           You do not have any important attributes selected. Select some in the left menu to see their statistics here.
         </Typography>
       )}
-    </>
+    </div>
   );
 }
 

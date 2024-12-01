@@ -2,6 +2,7 @@ from typing import cast
 
 from flask import request, Response, jsonify
 
+from app.app_flow import UIType
 from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
 from app.event_logger import EventLogger, Event
@@ -179,23 +180,25 @@ def view_explanation() -> Response:
 
 
 def view_stopping_criteria() -> Response:
-    category_name = request.args.get("category_name")
-    if category_name is None:
-        raise Exception("Category name not set.")
+    if context.ui_type == UIType.STOPPING_CRITERIA:
+        category_name = request.args.get("category_name")
+        if category_name is None:
+            raise Exception("Category name not set.")
 
-    request_json = request.json or {}
-    candidate_ids = set(request_json.get("candidates", []))
-    discarded_ids = set(request_json.get("discarded", []))
-    important_attributes = request_json.get("important_attributes", [])
+        request_json = request.json or {}
+        candidate_ids = set(request_json.get("candidates", []))
+        discarded_ids = set(request_json.get("discarded", []))
+        important_attributes = request_json.get("important_attributes", [])
 
-    return jsonify(
-        ProductHandler.generate_stopping_criteria(
-            category_name=category_name,
-            candidate_ids=candidate_ids,
-            discarded_ids=discarded_ids,
-            important_attributes=important_attributes,
+        return jsonify(
+            ProductHandler.generate_stopping_criteria(
+                category_name=category_name,
+                candidate_ids=candidate_ids,
+                discarded_ids=discarded_ids,
+                important_attributes=important_attributes,
+            )
         )
-    )
+    return jsonify(None)
 
 
 def view_log_event() -> Response:
