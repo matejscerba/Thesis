@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from flask_cors import CORS
-from flask_session import Session  # type:ignore[attr-defined,import-untyped]
+from flask_session import Session  # type: ignore[attr-defined,import-untyped]
 
 from app.server.encoder import json_default
 from app.server.routes import add_routes

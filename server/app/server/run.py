@@ -1,5 +1,6 @@
 import os
 
+from app.event_logger import EventLogger
 from app.server.app import create_app
 
 
@@ -12,4 +13,5 @@ def run_server() -> None:
     debug = os.environ.get("SERVER_DEBUG", "False").upper() == "TRUE"
 
     app = create_app()
+    EventLogger().setup()
     app.run(host=host, port=port, debug=debug, load_dotenv=False)

@@ -1,12 +1,36 @@
-from typing import Set, List, TYPE_CHECKING, Optional
+from typing import Set, List, TYPE_CHECKING, Optional, Dict, Any
 
 from flask import session
 
+from app.app_flow import AppFlow, UIType
+
 if TYPE_CHECKING:
     from app.attributes.attribute import MultiFilterItem
+    from app.products.stopping_criteria import StoppingCriteria
+    from app.products.unseen_statistics import UnseenStatistics
 
 
 class Context:
+    @property
+    def app_flow(self) -> AppFlow:
+        return session["app_flow"]
+
+    @app_flow.setter
+    def app_flow(self, value: AppFlow) -> None:
+        session["app_flow"] = value
+
+    @property
+    def ui_type(self) -> UIType:
+        return session["ui_type"]
+
+    @ui_type.setter
+    def ui_type(self, value: UIType) -> None:
+        session["ui_type"] = value
+
+    @property
+    def session_id(self) -> str:
+        return session.sid  # type: ignore[attr-defined]
+
     @property
     def category_name(self) -> str:
         return session["category_name"]
@@ -30,6 +54,14 @@ class Context:
     @candidates.setter
     def candidates(self, value: Set[int]) -> None:
         session["candidates"] = value
+
+    @property
+    def alternatives(self) -> List[int]:
+        return session["alternatives"]
+
+    @alternatives.setter
+    def alternatives(self, value: List[int]) -> None:
+        session["alternatives"] = value
 
     @property
     def discarded(self) -> Set[int]:
@@ -63,5 +95,32 @@ class Context:
     def limit(self, value: Optional[int]) -> None:
         session["limit"] = value
 
+    @property
+    def stopping_criteria(self) -> Optional["StoppingCriteria"]:
+        return session["stopping_criteria"]
 
-context = Context()
+    @stopping_criteria.setter
+    def stopping_criteria(self, value: Optional["StoppingCriteria"]) -> None:
+        session["stopping_criteria"] = value
+
+    @property
+    def unseen_statistics(self) -> Optional["UnseenStatistics"]:
+        return session["unseen_statistics"]
+
+    @unseen_statistics.setter
+    def unseen_statistics(self, value: Optional["UnseenStatistics"]) -> None:
+        session["unseen_statistics"] = value
+
+    @property
+    def state(self) -> Dict[str, Any]:
+        return {
+            "candidates": list(self.candidates),
+            "discarded": list(self.discarded),
+            "alternatives": self.alternatives,
+            "important_attributes": self.important_attributes,
+            "stopping_criteria": self.stopping_criteria,
+            "unseen_statistics": self.unseen_statistics,
+        }
+
+
+context: Context = Context()

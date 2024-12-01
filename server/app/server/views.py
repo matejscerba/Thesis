@@ -4,6 +4,7 @@ from flask import request, Response, jsonify
 
 from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
+from app.event_logger import EventLogger, Event
 from app.products.handler import ProductHandler
 from app.server.context import context
 
@@ -213,3 +214,13 @@ def view_stopping_criteria() -> Response:
             important_attributes=context.important_attributes,
         )
     )
+
+
+def log_event() -> Response:
+    event = request.args.get("event")
+    if event is None:
+        raise Exception("Log event not set.")
+
+    EventLogger().log(event=Event[event])
+
+    return jsonify({"status": "OK"})
