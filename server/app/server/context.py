@@ -14,8 +14,12 @@ if TYPE_CHECKING:
 class Context:
     @property
     def app_flow(self) -> AppFlow:
-        if AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()] == AppFlowType.PRODUCTION:
+        flow_type = AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()]
+        if flow_type == AppFlowType.PRODUCTION:
             return AppFlow.production()
+        if flow_type == AppFlowType.USER_STUDY:
+            if "app_flow" not in session:
+                session["app_flow"] = AppFlow.user_study()
         return session["app_flow"]
 
     @app_flow.setter

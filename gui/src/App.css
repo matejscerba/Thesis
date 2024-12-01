@@ -64,25 +64,37 @@ body {
   flex: 1 0 50%;
 }
 
+.step-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .categories-inner {
   display: flex;
   align-items: center;
 }
 
-.categories-image-wrapper {
+.step-inner {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.categories-image-wrapper, .step-image-wrapper {
   width: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.categories-image {
+.categories-image, .step-image {
   height: 70px;
   width: auto;
   display: block;
 }
 
-.categories-name {
+.categories-name, .step-category-name {
   display: block;
   padding: 20px;
   flex: 1;

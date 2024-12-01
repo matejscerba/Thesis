@@ -2,13 +2,17 @@ from typing import cast
 
 from flask import request, Response, jsonify
 
-from app.app_flow import UIType
+from app.app_flow import UIType, AppFlowType
 from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
 from app.event_logger import EventLogger, Event
 from app.products.category import OrganizedCategory
 from app.products.handler import ProductHandler
 from app.server.context import context
+
+
+def view_config() -> Response:
+    return jsonify({"app_flow_type": context.app_flow.type})
 
 
 def view_categories() -> Response:
@@ -211,3 +215,10 @@ def view_log_event() -> Response:
     EventLogger().log(event=Event[event], data=data)
 
     return jsonify({"success": True})
+
+
+def view_user_study_steps() -> Response:
+    assert context.app_flow.type == AppFlowType.USER_STUDY
+    assert context.app_flow.setup is not None
+
+    return jsonify(context.app_flow.setup.steps)

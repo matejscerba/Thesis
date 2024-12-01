@@ -23,7 +23,6 @@ function Discarded() {
   const { name, discarded } = useCategory();
 
   const [data, setData] = useState<ProductModel[]>(undefined);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
