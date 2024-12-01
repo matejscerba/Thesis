@@ -15,7 +15,7 @@ function Categories() {
 
   useEffect(() => {
     // Load the categories from server
-    fetchJson<string[]>("categories", {})
+    fetchJson<string[]>("categories")
       .then((response) => {
         setCategories(response);
       })

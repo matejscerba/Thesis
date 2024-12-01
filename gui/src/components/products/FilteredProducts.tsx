@@ -21,28 +21,22 @@ interface FilteredProductsProps {
  * @constructor
  */
 function FilteredProducts({ filter }: FilteredProductsProps) {
-  const { name, candidateIds, discarded } = useCategory();
+  const { candidateIds, discarded } = useCategory();
 
   const [products, setProducts] = useState<ProductModel[]>(undefined);
 
   useEffect(() => {
     // Filter the products as soon as candidates or discarded ids change
-    fetchPostJson<ProductModel[]>(
-      "category/filter",
-      {
-        filter: filter.map((item) => ({
-          attribute_name: item.attribute.full_name,
-          filter: {
-            lower_bound: item.filter.lowerBound,
-            upper_bound: item.filter.upperBound,
-            options: item.filter.options,
-          },
-        })),
-        candidates: candidateIds,
-        discarded,
-      },
-      { category_name: name },
-    )
+    fetchPostJson<ProductModel[]>("category/filter", {
+      filter: filter.map((item) => ({
+        attribute_name: item.attribute.full_name,
+        filter: {
+          lower_bound: item.filter.lowerBound,
+          upper_bound: item.filter.upperBound,
+          options: item.filter.options,
+        },
+      })),
+    })
       .then((response) => {
         setProducts(response);
       })

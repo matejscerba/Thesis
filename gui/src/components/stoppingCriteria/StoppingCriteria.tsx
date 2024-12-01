@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchPostJson } from "../../utils/api";
+import { fetchJson } from "../../utils/api";
 import { StoppingCriteria as StoppingCriteriaModel, StoppingCriteriaResponse } from "../../types/stoppingCriteria";
 import { useAttributes } from "../../contexts/attributes";
 import { useCategory } from "../../contexts/category";
@@ -18,18 +18,14 @@ export function StoppingCriteriaTitle() {
 
 function StoppingCriteria() {
   const { attributes, attributeNames } = useAttributes();
-  const { name, candidateIds, discarded } = useCategory();
+  const { candidateIds, discarded } = useCategory();
 
   const [data, setData] = useState<StoppingCriteriaModel>(undefined);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(true);
-    fetchPostJson<StoppingCriteriaResponse>(
-      "stopping_criteria",
-      { candidates: candidateIds, discarded, important_attributes: attributeNames },
-      { category_name: name },
-    )
+    fetchJson<StoppingCriteriaResponse>("stopping_criteria")
       .then((criteria) => {
         setLoading(false);
         setData({

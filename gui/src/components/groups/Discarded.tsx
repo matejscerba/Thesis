@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import React, { useEffect, useState } from "react";
 import { Product as ProductModel, ProductGroupType } from "../../types/product";
-import { fetchPostJson } from "../../utils/api";
+import { fetchJson } from "../../utils/api";
 import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
 import CategorySkeleton from "../CategorySkeleton";
@@ -20,7 +20,7 @@ export function DiscardedTitle() {
  * @constructor
  */
 function Discarded() {
-  const { name, discarded } = useCategory();
+  const { discarded } = useCategory();
 
   const [data, setData] = useState<ProductModel[]>(undefined);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -29,7 +29,7 @@ function Discarded() {
   useEffect(() => {
     setLoading(true);
     // Load the list of products as soon as the discarded products ids change
-    fetchPostJson<ProductModel[]>("discarded", { discarded }, { category_name: name })
+    fetchJson<ProductModel[]>("discarded")
       .then((products) => {
         setLoading(false);
         setData(products);

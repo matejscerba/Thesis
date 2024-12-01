@@ -62,6 +62,6 @@ export function fetchJson<T>(
  * @param {Object.<string, any>} data JSON content of the request
  * @param {Object.<string, string>} params GET params of the request - will be appended to the url
  */
-export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string }) {
+export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string } = {}) {
   return fetchJson<T>(url, params, "POST", data);
 }

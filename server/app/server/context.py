@@ -56,11 +56,11 @@ class Context:
         session["candidates"] = value
 
     @property
-    def alternatives(self) -> List[int]:
-        return session["alternatives"]
+    def alternatives(self) -> Optional[List[int]]:
+        return session.get("alternatives")
 
     @alternatives.setter
-    def alternatives(self, value: List[int]) -> None:
+    def alternatives(self, value: Optional[List[int]]) -> None:
         session["alternatives"] = value
 
     @property
@@ -80,16 +80,16 @@ class Context:
         session["product_id"] = value
 
     @property
-    def filter(self) -> List["MultiFilterItem"]:
-        return session["filter"]
+    def filter(self) -> Optional[List["MultiFilterItem"]]:
+        return session.get("filter")
 
     @filter.setter
-    def filter(self, value: List["MultiFilterItem"]) -> None:
+    def filter(self, value: Optional[List["MultiFilterItem"]]) -> None:
         session["filter"] = value
 
     @property
     def limit(self) -> Optional[int]:
-        return session["limit"]
+        return session.get("limit")
 
     @limit.setter
     def limit(self, value: Optional[int]) -> None:
@@ -97,7 +97,7 @@ class Context:
 
     @property
     def stopping_criteria(self) -> Optional["StoppingCriteria"]:
-        return session["stopping_criteria"]
+        return session.get("stopping_criteria")
 
     @stopping_criteria.setter
     def stopping_criteria(self, value: Optional["StoppingCriteria"]) -> None:
@@ -105,7 +105,7 @@ class Context:
 
     @property
     def unseen_statistics(self) -> Optional["UnseenStatistics"]:
-        return session["unseen_statistics"]
+        return session.get("unseen_statistics")
 
     @unseen_statistics.setter
     def unseen_statistics(self, value: Optional["UnseenStatistics"]) -> None:
