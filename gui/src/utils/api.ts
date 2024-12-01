@@ -32,6 +32,7 @@ export function fetchFromServer(
   }
   return fetch(`${SERVER_URL}${url}${paramsPath ? "?" : ""}${paramsPath}`, {
     method,
+    credentials: "include",
     headers: headers,
     body,
   });

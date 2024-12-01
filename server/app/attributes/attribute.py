@@ -1,5 +1,6 @@
 import json
 import logging
+import math
 from enum import Enum
 from typing import Optional, Dict, Any, List, Set
 
@@ -75,18 +76,33 @@ class Attribute(BaseModel):
     order: Optional[AttributeOrder] = Field(default=None)
     continuous: Optional[bool] = Field(default=None)
     step: Optional[float] = Field(default=None)
+    round_decimals: Optional[int] = Field(default=None)
     is_list: bool = Field(default=False)
 
-    def get_range_filter_value(self, value: float) -> FilterValue:
+    def get_range_filter_value(self, value: float, initial_value: float, products: pd.DataFrame) -> FilterValue:
+        from app.attributes.handler import AttributeHandler
+
         if self.type != AttributeType.NUMERICAL and not self.continuous:
             raise ValueError(f"Attribute {self.full_name} is numerical or not continuous.")
-        if self.step is None:
-            logger.warning(f"Attribute {self.full_name} has no step defined.")
-            return FilterValue(options={value})
         if pd.isna(value):
             return FilterValue(options={value})
-        lower_bound = value // self.step * self.step
-        return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
+        lower_bound, upper_bound = AttributeHandler.get_filter_value_bounds(
+            attribute_name=self.full_name,
+            value=value,
+            initial_value=initial_value,
+            products=products,
+        )
+        if self.round_decimals is not None:
+            base = 10.0**-self.round_decimals
+            lower_bound = int(math.floor(lower_bound / base)) * base
+            upper_bound = int(math.ceil(upper_bound / base)) * base
+        return FilterValue(lower_bound=lower_bound, upper_bound=upper_bound)
+
+        # if self.step is None:
+        #     logger.warning(f"Attribute {self.full_name} has no step defined.")
+        #     return FilterValue(options={value})
+        # lower_bound = value // self.step * self.step
+        # return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
 
 
 class CategoryAttributes(BaseModel):

@@ -92,7 +92,6 @@ function ProductList({ name }: ProductListProps) {
   };
 
   if (!data || loading) {
-    console.warn(candidates, discarded);
     if (candidates.length > 0) {
       return (
         <>

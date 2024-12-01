@@ -16,11 +16,23 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
     repeat_penalty: ClassVar[float] = 0.8
 
     @classmethod
-    def _create_multi_filter_item(cls, attribute: Attribute, product: pd.Series) -> MultiFilterItem:
+    def _create_multi_filter_item(
+        cls, category_name: str, attribute: Attribute, product: pd.Series, candidate_ids: Set[int]
+    ) -> MultiFilterItem:
+        from app.data_loader import DataLoader
+
         if attribute.type == AttributeType.NUMERICAL and attribute.continuous:
+            candidates = DataLoader.load_products(
+                category_name=category_name, usecols=[attribute.full_name], userows=candidate_ids
+            )
+            products = DataLoader.load_products(category_name=category_name, usecols=[attribute.full_name])
             return MultiFilterItem(
                 attribute_name=attribute.full_name,
-                filter=attribute.get_range_filter_value(value=product[attribute.full_name]),
+                filter=attribute.get_range_filter_value(
+                    value=product[attribute.full_name],
+                    initial_value=candidates[attribute.full_name].median(),
+                    products=products,
+                ),
             )
         else:
             return MultiFilterItem(
@@ -54,27 +66,24 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                         S_all.add(
                             tuple(
                                 cls._create_multi_filter_item(
-                                    attribute=all_attributes.attributes[attribute_name], product=row
+                                    category_name=category_name,
+                                    attribute=all_attributes.attributes[attribute_name],
+                                    product=row,
+                                    candidate_ids=candidate_ids,
                                 )
                                 for attribute_name in S_attributes
                             )
                         )
                         a_all.add(
-                            cls._create_multi_filter_item(attribute=all_attributes.attributes[a_attribute], product=row)
+                            cls._create_multi_filter_item(
+                                category_name=category_name,
+                                attribute=all_attributes.attributes[a_attribute],
+                                product=row,
+                                candidate_ids=candidate_ids,
+                            )
                         )
                     for S in S_all:
                         for a in a_all:
-                            try:
-                                filtered_candidate_ids = {
-                                    id
-                                    for id in ProductHandler.filter_products_in_set(
-                                        category_name=category_name,
-                                        filter=[*S, a],
-                                        ids=candidate_ids,
-                                    )["id"].values
-                                }
-                            except KeyError:
-                                filtered_candidate_ids = set()
                             item = StoppingCriterionItem(
                                 support_set=list(S),
                                 attribute_value=[a],
@@ -95,9 +104,7 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                                         category_name=category_name, filter=[*S, a], ids=discarded_ids
                                     ),
                                 ),
-                                candidate_ids=StoppingCriterionItem.encode_candidate_ids(
-                                    candidate_ids=filtered_candidate_ids
-                                ),
+                                candidate_ids="",
                             )
                             items.append(item)
         return items

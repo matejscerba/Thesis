@@ -1,8 +1,11 @@
+from typing import cast
+
 from flask import request, Response, jsonify
 
 from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
 from app.products.handler import ProductHandler
+from app.server.context import context
 
 
 def view_categories() -> Response:
@@ -34,20 +37,26 @@ def view_category() -> Response:
         raise Exception("Category name not set.")
 
     request_json = request.json or {}
-    candidate_ids = request_json.get("candidates", [])
-    discarded_ids = request_json.get("discarded", [])
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
     important_attributes = request_json.get("important_attributes", [])
-    limit = request_json.get("limit")
+    limit = int(cast(str, request_json.get("limit"))) if request_json.get("limit") is not None else None
 
-    data = ProductHandler.organize_category(
-        category_name=category_name,
-        candidate_ids=set(candidate_ids),
-        discarded_ids=set(discarded_ids),
-        important_attributes=important_attributes,
-        limit=limit,
+    context.category_name = category_name
+    context.candidates = candidate_ids
+    context.discarded = discarded_ids
+    context.important_attributes = important_attributes
+    context.limit = limit
+
+    return jsonify(
+        ProductHandler.organize_category(
+            category_name=context.category_name,
+            candidate_ids=context.candidates,
+            discarded_ids=context.discarded,
+            important_attributes=context.important_attributes,
+            limit=context.limit,
+        )
     )
-
-    return jsonify(data)
 
 
 def view_category_filter() -> Response:
@@ -72,18 +81,24 @@ def view_category_filter() -> Response:
     filter_items = request_json.get("filter")
     if filter_items is None:
         raise Exception("Filter items for filter not set.")
+    filter = [MultiFilterItem.model_validate(item) for item in filter_items]
 
-    candidate_ids = request_json.get("candidates", [])
-    discarded_ids = request_json.get("discarded", [])
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
 
-    products = ProductHandler.filter_category(
-        category_name=category_name,
-        filter=[MultiFilterItem.model_validate(item) for item in filter_items],
-        candidate_ids=set(candidate_ids),
-        discarded_ids=set(discarded_ids),
+    context.category_name = category_name
+    context.candidates = candidate_ids
+    context.discarded = discarded_ids
+    context.filter = filter
+
+    return jsonify(
+        ProductHandler.filter_category(
+            category_name=context.category_name,
+            candidate_ids=context.candidates,
+            discarded_ids=context.discarded,
+            filter=context.filter,
+        )
     )
-
-    return jsonify(products)
 
 
 def view_attributes() -> Response:
@@ -99,9 +114,9 @@ def view_attributes() -> Response:
     if category_name is None:
         raise Exception("Category name not set.")
 
-    data = AttributeHandler.get_attributes(category_name=category_name)
+    context.category_name = category_name
 
-    return jsonify(data)
+    return jsonify(AttributeHandler.get_attributes(category_name=context.category_name))
 
 
 def view_discarded() -> Response:
@@ -125,9 +140,10 @@ def view_discarded() -> Response:
     if discarded_ids is None:
         raise Exception("Discarded products ids not set.")
 
-    products = ProductHandler.get_products(category_name=category_name, ids=discarded_ids)
+    context.category_name = category_name
+    context.discarded = set(discarded_ids)
 
-    return jsonify(products)
+    return jsonify(ProductHandler.get_products(category_name=context.category_name, ids=discarded_ids))
 
 
 def view_explanation() -> Response:
@@ -153,19 +169,25 @@ def view_explanation() -> Response:
         raise Exception("Product id not set.")
 
     request_json = request.json or {}
-    candidate_ids = request_json.get("candidates", [])
-    discarded_ids = request_json.get("discarded", [])
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
     important_attributes = request_json.get("important_attributes", [])
 
-    explanation = ProductHandler.explain_product(
-        category_name=category_name,
-        product_id=int(product_id),
-        candidate_ids=set(candidate_ids),
-        discarded_ids=set(discarded_ids),
-        important_attributes=important_attributes,
-    )
+    context.category_name = category_name
+    context.product_id = int(product_id)
+    context.candidates = candidate_ids
+    context.discarded = discarded_ids
+    context.important_attributes = important_attributes
 
-    return jsonify(explanation)
+    return jsonify(
+        ProductHandler.explain_product(
+            category_name=context.category_name,
+            product_id=context.product_id,
+            candidate_ids=context.candidates,
+            discarded_ids=context.discarded,
+            important_attributes=context.important_attributes,
+        )
+    )
 
 
 def view_stopping_criteria() -> Response:
@@ -174,15 +196,20 @@ def view_stopping_criteria() -> Response:
         raise Exception("Category name not set.")
 
     request_json = request.json or {}
-    candidate_ids = request_json.get("candidates", [])
-    discarded_ids = request_json.get("discarded", [])
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
     important_attributes = request_json.get("important_attributes", [])
 
-    stopping_criteria = ProductHandler.generate_stopping_criteria(
-        category_name=category_name,
-        candidate_ids=candidate_ids,
-        discarded_ids=discarded_ids,
-        important_attributes=important_attributes,
-    )
+    context.category_name = category_name
+    context.candidates = candidate_ids
+    context.discarded = discarded_ids
+    context.important_attributes = important_attributes
 
-    return jsonify(stopping_criteria)
+    return jsonify(
+        ProductHandler.generate_stopping_criteria(
+            category_name=context.category_name,
+            candidate_ids=context.candidates,
+            discarded_ids=context.discarded,
+            important_attributes=context.important_attributes,
+        )
+    )

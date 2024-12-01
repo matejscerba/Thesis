@@ -13,7 +13,8 @@
         "unit": "CZK",
         "order": "desc",
         "continuous": true,
-        "step": 5000
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Price without VAT",
@@ -23,7 +24,8 @@
         "unit": "CZK",
         "order": "desc",
         "continuous": true,
-        "step": 5000
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Rating",
@@ -32,7 +34,8 @@
         "full_name": "Rating",
         "order": "asc",
         "continuous": true,
-        "step": 0.5
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Display size",
@@ -150,7 +153,8 @@
         "unit": "GHz",
         "order": "asc",
         "continuous": true,
-        "step": 500
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Core boost frequency",
@@ -162,7 +166,8 @@
         "unit": "GHz",
         "order": "asc",
         "continuous": true,
-        "step": 500
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "TDP",
@@ -431,7 +436,8 @@
         "full_name": "Weight [kg]",
         "unit": "kg",
         "continuous": true,
-        "step": 0.5
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Data",
@@ -528,7 +534,8 @@
         "full_name": "Width [mm]",
         "unit": "mm",
         "continuous": true,
-        "step": 10
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Maximum height",
@@ -539,7 +546,8 @@
         "full_name": "Maximum height [mm]",
         "unit": "mm",
         "continuous": true,
-        "step": 5
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Depth",
@@ -550,7 +558,8 @@
         "full_name": "Depth [mm]",
         "unit": "mm",
         "continuous": true,
-        "step": 10
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Keyboard language",
@@ -636,7 +645,8 @@
         "full_name": "Maximum Graphic Power (TGP) [W]",
         "unit": "W",
         "continuous": true,
-        "step": 5
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Boost clock",
@@ -648,7 +658,8 @@
         "unit": "MHz",
         "order": "asc",
         "continuous": true,
-        "step": 500
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Number of occupied slots 2.5\"",
@@ -766,7 +777,8 @@
         "full_name": "GPU Passmark",
         "order": "asc",
         "continuous": true,
-        "step": 500
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "HDD capacity",
