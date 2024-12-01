@@ -1,8 +1,9 @@
+import os
 from typing import Set, List, TYPE_CHECKING, Optional, Dict, Any
 
 from flask import session
 
-from app.app_flow import AppFlow, UIType
+from app.app_flow import AppFlow, UIType, AppFlowType
 
 if TYPE_CHECKING:
     from app.attributes.attribute import MultiFilterItem
@@ -13,6 +14,8 @@ if TYPE_CHECKING:
 class Context:
     @property
     def app_flow(self) -> AppFlow:
+        if AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()] == AppFlowType.PRODUCTION:
+            return AppFlow.production()
         return session["app_flow"]
 
     @app_flow.setter
@@ -21,6 +24,8 @@ class Context:
 
     @property
     def ui_type(self) -> UIType:
+        if AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()] == AppFlowType.PRODUCTION:
+            return UIType[os.environ.get("PRODUCTION_UI_TYPE", "STOPPING_CRITERIA").upper()]
         return session["ui_type"]
 
     @ui_type.setter
@@ -110,8 +115,8 @@ class Context:
             "discarded": list(self.discarded),
             "alternatives": self.alternatives,
             "important_attributes": self.important_attributes,
-            "stopping_criteria": self.stopping_criteria,
-            "unseen_statistics": self.unseen_statistics,
+            "stopping_criteria": self.stopping_criteria.model_dump() if self.stopping_criteria is not None else None,
+            "unseen_statistics": self.unseen_statistics.model_dump() if self.unseen_statistics is not None else None,
         }
 
 

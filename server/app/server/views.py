@@ -49,7 +49,6 @@ def view_category() -> Response:
     context.discarded = discarded_ids
     context.important_attributes = important_attributes
     context.limit = limit
-    context.filter = None
 
     category = ProductHandler.organize_category(
         category_name=context.category_name,
@@ -89,13 +88,11 @@ def view_category_filter() -> Response:
         raise Exception("Filter items for filter not set.")
     filter = [MultiFilterItem.model_validate(item) for item in filter_items]
 
-    context.filter = filter
-
     category = ProductHandler.filter_category(
         category_name=context.category_name,
         candidate_ids=context.candidates,
         discarded_ids=context.discarded,
-        filter=context.filter,
+        filter=filter,
     )
 
     return jsonify(category)
@@ -130,7 +127,17 @@ def view_discarded() -> Response:
     :rtype: Response
     :raise Exception: if required argument or body contents are missing
     """
-    return jsonify(ProductHandler.get_products(category_name=context.category_name, ids=list(context.discarded)))
+    category_name = request.args.get("category_name")
+    request_json = request.json or {}
+    discarded_ids = request_json.get("discarded")
+
+    if category_name is None:
+        raise Exception("Category name not set.")
+
+    if discarded_ids is None:
+        raise Exception("Discarded products ids not set.")
+
+    return jsonify(ProductHandler.get_products(category_name=category_name, ids=discarded_ids))
 
 
 def view_explanation() -> Response:
@@ -147,37 +154,57 @@ def view_explanation() -> Response:
     :return: JSON response containing the explanation of the given product
     :rtype: Response
     """
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
     product_id = request.args.get("product_id")
     if product_id is None:
         raise Exception("Product id not set.")
 
+    request_json = request.json or {}
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
+    important_attributes = request_json.get("important_attributes", [])
+
     return jsonify(
         ProductHandler.explain_product(
-            category_name=context.category_name,
+            category_name=category_name,
             product_id=int(product_id),
-            candidate_ids=context.candidates,
-            discarded_ids=context.discarded,
-            important_attributes=context.important_attributes,
+            candidate_ids=candidate_ids,
+            discarded_ids=discarded_ids,
+            important_attributes=important_attributes,
         )
     )
 
 
 def view_stopping_criteria() -> Response:
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
+    request_json = request.json or {}
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
+    important_attributes = request_json.get("important_attributes", [])
+
     return jsonify(
         ProductHandler.generate_stopping_criteria(
-            category_name=context.category_name,
-            candidate_ids=context.candidates,
-            discarded_ids=context.discarded,
-            important_attributes=context.important_attributes,
+            category_name=category_name,
+            candidate_ids=candidate_ids,
+            discarded_ids=discarded_ids,
+            important_attributes=important_attributes,
         )
     )
 
 
-def log_event() -> Response:
+def view_log_event() -> Response:
     event = request.args.get("event")
     if event is None:
         raise Exception("Log event not set.")
 
-    EventLogger().log(event=Event[event])
+    data = request.json
 
-    return jsonify({"status": "OK"})
+    EventLogger().log(event=Event[event], data=data)
+
+    return jsonify({"success": True})

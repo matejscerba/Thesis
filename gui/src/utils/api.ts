@@ -1,3 +1,5 @@
+import { Event } from "../types/event";
+
 /**
  * Url of the server. Ending with slash.
  */
@@ -64,4 +66,14 @@ export function fetchJson<T>(
  */
 export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string } = {}) {
   return fetchJson<T>(url, params, "POST", data);
+}
+
+export function logEvent(event: Event, data: { [key: string]: any }) {
+  fetchPostJson<{ success: boolean }>("log_event", data, { event: event.valueOf() })
+    .then((response) => {
+      console.log(`Logging event ${event.valueOf()} finished with success: ${response.success}`);
+    })
+    .catch((e) => {
+      console.error(e);
+    });
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { Product } from "../../types/product";
 import { Tooltip } from "@mui/material";
 import { useCategory } from "../../contexts/category";
+import { logEvent } from "../../utils/api";
+import { Event } from "../../types/event";
 
 interface CandidateMenuProps {
   product: Product;
@@ -23,6 +25,7 @@ function CandidateMenu({ product }: CandidateMenuProps) {
           type="button"
           className="btn btn-sm btn-outline-danger"
           onClick={() => {
+            logEvent(Event.CANDIDATE_DISCARDED, { product_id: product.id });
             onDiscard(product.id);
           }}
         >

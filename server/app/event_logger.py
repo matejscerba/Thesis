@@ -4,7 +4,7 @@ import sqlite3
 import uuid
 from enum import Enum
 from sqlite3 import Connection
-from typing import ClassVar
+from typing import ClassVar, Optional, Dict, Any
 
 from app.server.context import context
 
@@ -34,16 +34,17 @@ class EventLogger:
                     CREATE TABLE IF NOT EXISTS events (
                         id TEXT PRIMARY KEY NOT NULL,
                         session_id TEXT NOT NULL,
+                        app_flow_type TEXT NOT NULL,
                         user_study_setup TEXT NULL,
                         ui_type TEXT NOT NULL,
                         event TEXT NOT NULL,
-                        active_filter TEXT NULL,
-                        state TEXT NOT NULL
+                        state TEXT NOT NULL,
+                        data TEXT NULL
                     )
                 """
             )
 
-    def log(self, event: Event) -> None:
+    def log(self, event: Event, data: Optional[Dict[str, Any]]) -> None:
         with self.get_connection() as connection:
             cursor = connection.cursor()
             cursor.execute(
@@ -51,21 +52,23 @@ class EventLogger:
                     INSERT INTO events (
                         id,
                         session_id,
+                        app_flow_type,
                         user_study_setup,
                         ui_type,
                         event,
-                        active_filter,
-                        state
+                        state,
+                        data
                     )
-                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
-                    uuid.uuid4(),
+                    str(uuid.uuid4()),
                     context.session_id,
+                    context.app_flow.type,
                     json.dumps(context.app_flow.setup.model_dump()) if context.app_flow.setup is not None else None,
                     context.ui_type,
                     event,
-                    json.dumps([item.model_dump() for item in context.filter]) if context.filter is not None else None,
                     json.dumps(context.state),
+                    json.dumps(data) if data is not None else None,
                 ),
             )

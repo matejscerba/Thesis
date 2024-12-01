@@ -26,3 +26,7 @@ class UserStudySetup(BaseModel):
 class AppFlow(BaseModel):
     type: AppFlowType
     setup: Optional[UserStudySetup] = None
+
+    @classmethod
+    def production(cls) -> "AppFlow":
+        return AppFlow(type=AppFlowType.PRODUCTION)

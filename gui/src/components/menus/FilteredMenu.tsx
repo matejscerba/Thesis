@@ -4,18 +4,20 @@ import { Tooltip } from "@mui/material";
 import { useCategory } from "../../contexts/category";
 import { logEvent } from "../../utils/api";
 import { Event } from "../../types/event";
+import { MultiFilter } from "../../types/attribute";
 
-interface AlternativeMenuProps {
+interface FilteredMenuProps {
   product: Product;
+  filter: MultiFilter;
 }
 
 /**
- * This component renders menu of an alternative product.
+ * This component renders menu of a filtered product.
  *
  * @param {Product} product the product for which to display the menu
  * @constructor
  */
-function AlternativeMenu({ product }: AlternativeMenuProps) {
+function FilteredMenu({ product, filter }: FilteredMenuProps) {
   const { onDiscard, onMarkCandidate } = useCategory();
 
   return (
@@ -25,7 +27,7 @@ function AlternativeMenu({ product }: AlternativeMenuProps) {
           type="button"
           className="btn btn-sm btn-outline-success me-2"
           onClick={() => {
-            logEvent(Event.ALTERNATIVE_ADDED_TO_CANDIDATES, { product_id: product.id });
+            logEvent(Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES, { product_id: product.id, filter });
             onMarkCandidate(product.id);
           }}
         >
@@ -37,7 +39,7 @@ function AlternativeMenu({ product }: AlternativeMenuProps) {
           type="button"
           className="btn btn-sm btn-outline-danger"
           onClick={() => {
-            logEvent(Event.ALTERNATIVE_DISCARDED, { product_id: product.id });
+            logEvent(Event.FILTERED_PRODUCT_DISCARDED, { product_id: product.id, filter });
             onDiscard(product.id);
           }}
         >
@@ -48,4 +50,4 @@ function AlternativeMenu({ product }: AlternativeMenuProps) {
   );
 }
 
-export default AlternativeMenu;
+export default FilteredMenu;

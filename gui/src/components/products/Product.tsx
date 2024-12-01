@@ -6,10 +6,10 @@ import { useAttributes } from "../../contexts/attributes";
 import { useCategory } from "../../contexts/category";
 import { getTextColor, valueToString } from "../../utils/attributes";
 import ExplanationAttribute from "./ExplanationAttribute";
-import { fetchJson } from "../../utils/api";
 import PositionTooltip from "./PositionTooltip";
 import { getProductExplanationMessageInfo } from "../../utils/products";
 import { Tooltip } from "@mui/material";
+import { fetchPostJson } from "../../utils/api";
 
 interface ProductProps {
   className?: string;
@@ -33,7 +33,11 @@ function Product({ className, product, menu }: ProductProps) {
 
   useEffect(() => {
     // Explain the product as soon as candidates, discarded or important attributes change
-    fetchJson<ProductExplanation>("explanation", { product_id: `${product.id}` })
+    fetchPostJson<ProductExplanation>(
+      "explanation",
+      { candidates: candidateIds, discarded, important_attributes: attributeNames },
+      { category_name: name, product_id: `${product.id}` },
+    )
       .then((result) => {
         setExplanation(result);
       })
