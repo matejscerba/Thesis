@@ -1,12 +1,8 @@
 import React from "react";
 import { Product } from "../../types/product";
-import { Tooltip } from "@mui/material";
-import { useCategory } from "../../contexts/category";
-import { logEvent } from "../../utils/api";
 import { Event } from "../../types/event";
 import { MultiFilter } from "../../types/attribute";
-import { generatePath, useNavigate, useParams } from "react-router-dom";
-import { userStudyStepQuestionnairePattern } from "../../routes";
+import { DiscardProductButton, FinalChoiceSelectedButton, MoveToCandidatesButton } from "./Buttons";
 
 interface FilteredMenuProps {
   product: Product;
@@ -20,47 +16,19 @@ interface FilteredMenuProps {
  * @constructor
  */
 function FilteredMenu({ product, filter }: FilteredMenuProps) {
-  const { onDiscard, onMarkCandidate } = useCategory();
-  const navigate = useNavigate();
-  const { step } = useParams();
-
   return (
     <>
-      {step !== undefined && (
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-secondary me-2"
-          onClick={() => {
-            navigate(generatePath(userStudyStepQuestionnairePattern, { step }));
-          }}
-        >
-          My final choice
-        </button>
-      )}
-      <Tooltip title="Move to candidates">
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-success me-2"
-          onClick={() => {
-            logEvent(Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES, { product_id: product.id, filter });
-            onMarkCandidate(product.id);
-          }}
-        >
-          <i className="bi bi-heart-fill" />
-        </button>
-      </Tooltip>
-      <Tooltip title="Discard">
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-danger"
-          onClick={() => {
-            logEvent(Event.FILTERED_PRODUCT_DISCARDED, { product_id: product.id, filter });
-            onDiscard(product.id);
-          }}
-        >
-          <i className="bi bi-trash-fill" />
-        </button>
-      </Tooltip>
+      <FinalChoiceSelectedButton
+        productId={product.id}
+        event={Event.FILTERED_FINAL_CHOICE_SELECTED}
+        data={{ filter }}
+      />
+      <MoveToCandidatesButton
+        productId={product.id}
+        event={Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES}
+        data={{ filter }}
+      />
+      <DiscardProductButton productId={product.id} event={Event.FILTERED_PRODUCT_DISCARDED} data={{ filter }} />
     </>
   );
 }

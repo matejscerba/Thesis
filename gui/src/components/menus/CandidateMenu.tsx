@@ -1,11 +1,7 @@
 import React from "react";
 import { Product } from "../../types/product";
-import { Tooltip } from "@mui/material";
-import { useCategory } from "../../contexts/category";
-import { logEvent } from "../../utils/api";
 import { Event } from "../../types/event";
-import { generatePath, useNavigate, useParams } from "react-router-dom";
-import { userStudyStepQuestionnairePattern } from "../../routes";
+import { DiscardProductButton, FinalChoiceSelectedButton } from "./Buttons";
 
 interface CandidateMenuProps {
   product: Product;
@@ -18,35 +14,10 @@ interface CandidateMenuProps {
  * @constructor
  */
 function CandidateMenu({ product }: CandidateMenuProps) {
-  const { onDiscard } = useCategory();
-  const navigate = useNavigate();
-  const { step } = useParams();
-
   return (
     <>
-      {step !== undefined && (
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-secondary me-2"
-          onClick={() => {
-            navigate(generatePath(userStudyStepQuestionnairePattern, { step }));
-          }}
-        >
-          My final choice
-        </button>
-      )}
-      <Tooltip title="Discard">
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-danger"
-          onClick={() => {
-            logEvent(Event.CANDIDATE_DISCARDED, { product_id: product.id });
-            onDiscard(product.id);
-          }}
-        >
-          <i className="bi bi-trash-fill" />
-        </button>
-      </Tooltip>
+      <FinalChoiceSelectedButton productId={product.id} event={Event.CANDIDATE_FINAL_CHOICE_SELECTED} />
+      <DiscardProductButton productId={product.id} event={Event.CANDIDATE_DISCARDED} />
     </>
   );
 }

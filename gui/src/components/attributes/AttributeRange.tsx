@@ -4,6 +4,8 @@ import { useModal } from "../../contexts/modal";
 import FilteredProducts from "../products/FilteredProducts";
 import { Attribute, FilterValue } from "../../types/attribute";
 import { getFilterValueText } from "../../utils/attributes";
+import { logEvent } from "../../utils/api";
+import { Event } from "../../types/event";
 
 interface AttributeRangeProps {
   attribute: Attribute;
@@ -41,6 +43,7 @@ function AttributeRange({ attribute, value, numProductsInRange, children }: Attr
           className="text-center text-success clickable"
           variant="body1"
           onClick={() => {
+            logEvent(Event.UNSEEN_STATISTIC_OPENED, { filter });
             presentModal(<FilteredProducts filter={filter} />);
           }}
         >

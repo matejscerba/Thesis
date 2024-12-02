@@ -2,6 +2,8 @@ import React from "react";
 import { useAttributes } from "../../contexts/attributes";
 import Typography from "@mui/material/Typography";
 import { Tooltip } from "@mui/material";
+import { logEvent } from "../../utils/api";
+import { Event } from "../../types/event";
 
 /**
  * This component renders the menu that can mark attributes as important.
@@ -27,6 +29,7 @@ function ImportantAttributesMenu() {
                   <div
                     className="removable flex-item border border-info rounded bg-info-subtle m-1 px-2"
                     onClick={() => {
+                      logEvent(Event.ATTRIBUTE_REMOVED_FROM_IMPORTANT, { attribute: attribute.full_name });
                       removeAttribute(attribute.full_name);
                     }}
                   >
@@ -42,6 +45,7 @@ function ImportantAttributesMenu() {
                   <div
                     className="addable flex-item border border-secondary rounded bg-secondary-subtle m-1 px-2"
                     onClick={() => {
+                      logEvent(Event.ATTRIBUTE_ADDED_TO_IMPORTANT, { attribute: attribute.full_name });
                       addAttribute(attribute.full_name);
                     }}
                   >

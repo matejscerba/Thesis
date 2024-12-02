@@ -54,10 +54,16 @@ function ProductList({ name }: ProductListProps) {
     setLoading(true);
     // Load the category contents as soon as candidates, discarded, limit or important attributes change - the
     // organization of the product will likely change
+    const params = {
+      category_name: name,
+    };
+    if (step !== undefined) {
+      params["step"] = step;
+    }
     fetchPostJson<ProductListResponse>(
       "category",
       { candidates, discarded, important_attributes: attributeNames, limit },
-      { category_name: name, step },
+      params,
     )
       .then((category) => {
         setLoading(false);

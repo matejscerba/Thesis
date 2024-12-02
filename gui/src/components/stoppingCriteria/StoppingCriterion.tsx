@@ -5,6 +5,8 @@ import FilteredProducts from "../products/FilteredProducts";
 import { useModal } from "../../contexts/modal";
 import ExplanationAttribute from "../products/ExplanationAttribute";
 import { ProductAttributePosition } from "../../types/product";
+import { logEvent } from "../../utils/api";
+import { Event } from "../../types/event";
 
 interface StoppingCriterionProps {
   criterion: StoppingCriterionItem;
@@ -51,6 +53,7 @@ function StoppingCriterion({ criterion }: StoppingCriterionProps) {
         variant="body1"
         className="text-center clickable"
         onClick={() => {
+          logEvent(Event.STOPPING_CRITERION_OPENED, { criterion });
           presentModal(<FilteredProducts filter={filter} />);
         }}
       >

@@ -21,11 +21,8 @@ function UserStudyIntro() {
 
   return (
     <div className="mt-5">
-      <Typography variant="h2" className="text-center">
+      <Typography variant="h2" className="text-center mb-3">
         User study
-      </Typography>
-      <Typography variant="h4" className="text-center mt-3">
-        Steps
       </Typography>
       {data ? (
         data.map((step) => (
