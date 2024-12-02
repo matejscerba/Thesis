@@ -14,6 +14,7 @@ import CategoryModal from "../CategoryModal";
 import CategorySkeleton from "../CategorySkeleton";
 import StoppingCriteriaWrapper from "../groups/StoppingCriteriaWrapper";
 import StoppingCriteriaTitleWrapper from "../groups/StoppingCriteriaTitleWrapper";
+import { useParams } from "react-router-dom";
 
 /**
  * The default size of page
@@ -41,6 +42,7 @@ interface ProductListProps {
  */
 function ProductList({ name }: ProductListProps) {
   const { attributeNames } = useAttributes();
+  const { step } = useParams();
 
   const [limit, setLimit] = useState<number>(PAGE_SIZE);
   const [data, setData] = useState<ProductListResponse>(undefined);
@@ -55,7 +57,7 @@ function ProductList({ name }: ProductListProps) {
     fetchPostJson<ProductListResponse>(
       "category",
       { candidates, discarded, important_attributes: attributeNames, limit },
-      { category_name: name },
+      { category_name: name, step },
     )
       .then((category) => {
         setLoading(false);

@@ -12,6 +12,8 @@ if TYPE_CHECKING:
 
 
 class Context:
+    _user_study_step: Optional[int] = None
+
     @property
     def app_flow(self) -> AppFlow:
         flow_type = AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()]
@@ -25,6 +27,19 @@ class Context:
     @app_flow.setter
     def app_flow(self, value: AppFlow) -> None:
         session["app_flow"] = value
+
+    @property
+    def user_study_step(self) -> Optional[int]:
+        return self._user_study_step
+
+    @user_study_step.setter
+    def user_study_step(self, value: Optional[int]) -> None:
+        self._user_study_step = value
+        if value is not None:
+            assert self.app_flow.setup is not None
+            self.ui_type = self.app_flow.setup.steps[value - 1].ui_type
+        else:
+            self.ui_type = UIType[os.environ.get("PRODUCTION_UI_TYPE", "STOPPING_CRITERIA").upper()]
 
     @property
     def ui_type(self) -> UIType:

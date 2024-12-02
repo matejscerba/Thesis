@@ -37,6 +37,7 @@ class EventLogger:
                 """
                     CREATE TABLE IF NOT EXISTS events (
                         id TEXT PRIMARY KEY NOT NULL,
+                        created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                         session_id TEXT NOT NULL,
                         app_flow_type TEXT NOT NULL,
                         user_study_setup TEXT NULL,

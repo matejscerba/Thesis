@@ -43,6 +43,9 @@ def view_category() -> Response:
     if category_name is None:
         raise Exception("Category name not set.")
 
+    step_str = request.args.get("step")
+    step = int(step_str) if step_str is not None else None
+
     request_json = request.json or {}
     candidate_ids = set(request_json.get("candidates", []))
     discarded_ids = set(request_json.get("discarded", []))
@@ -54,6 +57,7 @@ def view_category() -> Response:
     context.discarded = discarded_ids
     context.important_attributes = important_attributes
     context.limit = limit
+    context.user_study_step = step
 
     category = ProductHandler.organize_category(
         category_name=context.category_name,
