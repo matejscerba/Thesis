@@ -6,6 +6,15 @@ import Categories from "./pages/Categories";
 import { fetchJson } from "./utils/api";
 import { AppConfig, AppFlowType } from "./types/config";
 import UserStudyIntro from "./pages/UserStudyIntro";
+import Questionnaire from "./pages/Questionnaire";
+import {
+  categoryPattern,
+  indexPattern,
+  userStudyQuestionnairePattern,
+  userStudyStepCategoryPattern,
+  userStudyStepQuestionnairePattern,
+} from "./routes";
+import OverallQuestionnaire from "./pages/OverallQuestionnaire";
 
 /**
  * This component renders the app and uses React router to navigate through pages.
@@ -37,20 +46,31 @@ export function App() {
     data.app_flow_type === AppFlowType.PRODUCTION
       ? [
           {
-            path: "/",
+            path: indexPattern,
             element: <Categories />,
           },
           {
-            path: "/category/:name",
+            path: categoryPattern,
             element: <Category />,
           },
         ]
       : [
           {
-            path: "/",
+            path: indexPattern,
             element: <UserStudyIntro />,
           },
-          { path: "/user_study/step/:step/category/:name", element: <Category /> },
+          {
+            path: userStudyStepCategoryPattern,
+            element: <Category />,
+          },
+          {
+            path: userStudyStepQuestionnairePattern,
+            element: <Questionnaire />,
+          },
+          {
+            path: userStudyQuestionnairePattern,
+            element: <OverallQuestionnaire />,
+          },
         ];
 
   const router = createBrowserRouter(routes);

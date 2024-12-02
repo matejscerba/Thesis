@@ -3,7 +3,8 @@ import { getUITypeText, UserStudySetupStep } from "../types/config";
 import { fetchJson } from "../utils/api";
 import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../utils/tools";
-import { Link } from "react-router-dom";
+import { generatePath, Link } from "react-router-dom";
+import { userStudyStepCategoryPattern } from "../routes";
 
 function UserStudyIntro() {
   const [data, setData] = useState<UserStudySetupStep[]>(undefined);
@@ -67,7 +68,7 @@ function UserStudyIntro() {
       </div>
       {data && (
         <div className="d-flex justify-content-center align-items-center mt-5">
-          <Link to={`/user_study/step/1/category/${data[0].category_name}`}>
+          <Link to={generatePath(userStudyStepCategoryPattern, { step: "1", name: data[0].category_name })}>
             <button type="button" className="btn btn-lg btn-primary mx-auto">
               Start
             </button>

@@ -4,6 +4,8 @@ import { Tooltip } from "@mui/material";
 import { useCategory } from "../../contexts/category";
 import { logEvent } from "../../utils/api";
 import { Event } from "../../types/event";
+import { generatePath, useNavigate, useParams } from "react-router-dom";
+import { userStudyStepQuestionnairePattern } from "../../routes";
 
 interface CandidateMenuProps {
   product: Product;
@@ -17,9 +19,22 @@ interface CandidateMenuProps {
  */
 function CandidateMenu({ product }: CandidateMenuProps) {
   const { onDiscard } = useCategory();
+  const navigate = useNavigate();
+  const { step } = useParams();
 
   return (
     <>
+      {step !== undefined && (
+        <button
+          type="button"
+          className="btn btn-sm btn-outline-secondary me-2"
+          onClick={() => {
+            navigate(generatePath(userStudyStepQuestionnairePattern, { step }));
+          }}
+        >
+          My final choice
+        </button>
+      )}
       <Tooltip title="Discard">
         <button
           type="button"

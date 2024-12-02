@@ -11,6 +11,7 @@ from app.server.views import (
     view_log_event,
     view_config,
     view_user_study_steps,
+    view_user_study_submit_questionnaire,
 )
 
 
@@ -30,3 +31,6 @@ def add_routes(app: Flask) -> None:
     app.add_url_rule(rule="/stopping_criteria", view_func=view_stopping_criteria, methods=["POST"])
     app.add_url_rule(rule="/log_event", view_func=view_log_event, methods=["POST"])
     app.add_url_rule(rule="/user_study/steps", view_func=view_user_study_steps, methods=["GET"])
+    app.add_url_rule(
+        rule="/user_study/submit_questionnaire", view_func=view_user_study_submit_questionnaire, methods=["POST"]
+    )
