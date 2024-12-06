@@ -12,7 +12,7 @@ from app.server.context import context
 
 
 def view_config() -> Response:
-    return jsonify({"app_flow_type": context.app_flow.type})
+    return jsonify({"app_flow": context.app_flow, "production_ui_type": context.production_ui_type})
 
 
 def view_categories() -> Response:

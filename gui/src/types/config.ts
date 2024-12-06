@@ -19,8 +19,18 @@ export function getUITypeText(uiType: UIType): string {
   }
 }
 
+interface UserStudySetup {
+  steps: UserStudySetupStep[];
+}
+
+interface AppFlow {
+  type: AppFlowType;
+  setup?: UserStudySetup;
+}
+
 export interface AppConfig {
-  app_flow_type: AppFlowType;
+  app_flow: AppFlow;
+  production_ui_type: UIType;
 }
 
 export interface UserStudySetupStep {
