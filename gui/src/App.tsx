@@ -12,9 +12,11 @@ import {
   userStudyQuestionnairePattern,
   userStudyStepCategoryPattern,
   userStudyStepQuestionnairePattern,
+  userStudyTutorialPattern,
 } from "./routes";
 import OverallQuestionnaire from "./pages/OverallQuestionnaire";
 import { useConfig } from "./contexts/config";
+import UserStudyTutorial from "./pages/UserStudyTutorial";
 
 /**
  * This component renders the app and uses React router to navigate through pages.
@@ -40,6 +42,10 @@ export function App() {
           {
             path: indexPattern,
             element: <UserStudyIntro />,
+          },
+          {
+            path: userStudyTutorialPattern,
+            element: <UserStudyTutorial />,
           },
           {
             path: userStudyStepCategoryPattern,

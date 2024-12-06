@@ -4,7 +4,7 @@ import { fetchJson } from "../utils/api";
 import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../utils/tools";
 import { generatePath, Link } from "react-router-dom";
-import { userStudyStepCategoryPattern } from "../routes";
+import { userStudyTutorialPattern } from "../routes";
 
 function UserStudyIntro() {
   const [data, setData] = useState<UserStudySetupStep[]>(undefined);
@@ -24,6 +24,18 @@ function UserStudyIntro() {
       <Typography variant="h2" className="text-center mb-3">
         User study
       </Typography>
+      <div className="step-item">
+        <div className="border border-secondary rounded m-2 step-inner bg-white">
+          <Typography variant="h5" className="step-category-name">
+            Tutorial
+          </Typography>
+        </div>
+      </div>
+      <div>
+        <Typography variant="h3" className="text-center">
+          <i className="bi bi-arrow-down-short" />
+        </Typography>
+      </div>
       {data ? (
         data.map((step) => (
           <div key={step.category_name}>
@@ -54,20 +66,18 @@ function UserStudyIntro() {
       ) : (
         <p>Loading...</p> // TODO: Steps skeleton
       )}
-      <div>
-        <div className="step-item">
-          <div className="border border-secondary rounded m-2 step-inner bg-white">
-            <Typography variant="h5" className="step-category-name">
-              Overall&nbsp;questionnaire
-            </Typography>
-          </div>
+      <div className="step-item">
+        <div className="border border-secondary rounded m-2 step-inner bg-white">
+          <Typography variant="h5" className="step-category-name">
+            Overall&nbsp;questionnaire
+          </Typography>
         </div>
       </div>
       {data && (
         <div className="d-flex justify-content-center align-items-center mt-5">
-          <Link to={generatePath(userStudyStepCategoryPattern, { step: "1", name: data[0].category_name })}>
+          <Link to={generatePath(userStudyTutorialPattern, { firstCategoryName: data[0].category_name })}>
             <button type="button" className="btn btn-lg btn-primary mx-auto">
-              Start
+              Go to tutorial
             </button>
           </Link>
         </div>
