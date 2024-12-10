@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { fetchJson } from "../utils/api";
+import { fetchJson, updateAttributesState } from "../utils/api";
 import { Attribute, PRICE } from "../types/attribute";
 
 /**
@@ -76,12 +76,28 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
   const [importantAttributes, setImportantAttributes] = useState<string[]>([
     PRICE,
-    // "SSD capacity [GB]",
-    // 'Display size ["]',
-    // "Size of operational RAM [GB]",
-    // "Number of processor cores",
-    // "Weight [kg]",
+    "SSD capacity [GB]",
+    'Display size ["]',
+    "Size of operational RAM [GB]",
+    "Number of processor cores",
+    "Weight [kg]",
   ]);
+
+  const addAttribute = (attribute: string) => {
+    setImportantAttributes((prevState) => {
+      const nextState = [...prevState, attribute];
+      updateAttributesState(nextState);
+      return nextState;
+    });
+  };
+
+  const removeAttribute = (attribute: string) => {
+    setImportantAttributes((prevState) => {
+      const nextState = prevState.filter((attr) => attr !== attribute);
+      updateAttributesState(nextState);
+      return nextState;
+    });
+  };
 
   useEffect(() => {
     // Fetch attributes if no attributes have been fetched before
@@ -116,12 +132,8 @@ export function AttributesContextProvider({ category, children }: AttributesCont
         restAttributes: Object.values(attributes ?? {})
           .filter((attr) => !importantAttributes.includes(attr.full_name) && attr.full_name !== PRICE)
           .sort(),
-        addAttribute: (attribute) => {
-          setImportantAttributes((prevState) => [...prevState, attribute]);
-        },
-        removeAttribute: (attribute) => {
-          setImportantAttributes((prevState) => prevState.filter((attr) => attr !== attribute));
-        },
+        addAttribute,
+        removeAttribute,
       }}
     >
       {children}

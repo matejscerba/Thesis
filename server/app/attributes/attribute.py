@@ -104,6 +104,9 @@ class Attribute(BaseModel):
         # lower_bound = value // self.step * self.step
         # return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
 
+    def __hash__(self) -> int:
+        return hash(json.dumps(self.model_dump(), sort_keys=True, default=json_default))
+
 
 class CategoryAttributes(BaseModel):
     """This class represents attributes of a category.

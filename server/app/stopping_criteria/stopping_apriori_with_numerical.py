@@ -1,5 +1,8 @@
+import functools
 import itertools
-from typing import List, Set, ClassVar, Tuple, Optional
+import logging
+import time
+from typing import List, Set, ClassVar, Tuple, Optional, Any
 
 import pandas as pd
 
@@ -9,6 +12,8 @@ from app.products.stopping_criteria import StoppingCriterionItem
 from app.stopping_criteria import StoppingAprioriStoppingCriteria
 from app.stopping_criteria.abstract import StoppingCriteriaModel
 
+logger = logging.getLogger()
+
 
 class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriteria):
     model: ClassVar[StoppingCriteriaModel] = StoppingCriteriaModel.STOPPING_APRIORI_WITH_NUMERICAL
@@ -16,10 +21,13 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
     repeat_penalty: ClassVar[float] = 0.8
 
     @classmethod
+    @functools.lru_cache(maxsize=1000)
     def _create_multi_filter_item(
-        cls, category_name: str, attribute: Attribute, product: pd.Series, candidate_ids: Set[int]
+        cls, category_name: str, attribute: Attribute, value: Any, candidate_ids_encoded: str
     ) -> MultiFilterItem:
         from app.data_loader import DataLoader
+
+        candidate_ids = {int(id_str) for id_str in candidate_ids_encoded.split("_")}
 
         if attribute.type == AttributeType.NUMERICAL and attribute.continuous:
             candidates = DataLoader.load_products(
@@ -29,15 +37,13 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
             return MultiFilterItem(
                 attribute_name=attribute.full_name,
                 filter=attribute.get_range_filter_value(
-                    value=product[attribute.full_name],
+                    value=value,
                     initial_value=candidates[attribute.full_name].median(),
                     products=products,
                 ),
             )
         else:
-            return MultiFilterItem(
-                attribute_name=attribute.full_name, filter=FilterValue(options={product[attribute.full_name]})
-            )
+            return MultiFilterItem(attribute_name=attribute.full_name, filter=FilterValue(options={value}))
 
     @classmethod
     def _generate_items(
@@ -45,21 +51,27 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
     ) -> List[StoppingCriterionItem]:
         from app.products.handler import ProductHandler
 
+        start = time.monotonic()
         candidates = DataLoader.load_products(
             category_name=category_name,
             usecols=[AttributeName.PRICE.value, *important_attributes],
             userows=candidate_ids,
         )
+        candidate_ids_encoded = "_".join([f"{id}" for id in sorted(candidate_ids)])
         all_attributes = DataLoader.load_attributes(category_name=category_name)
+        logger.warning(f"loading: {time.monotonic() - start}")
 
         items = []
+        loops = 0
         for S_size in range(1, 4):
             for attribute_names in itertools.combinations(important_attributes, S_size):
                 for a_index in range(len(attribute_names)):
+                    loops += 1
                     S_attributes = list(attribute_names)
                     a_attribute = S_attributes.pop(a_index)
                     S_all: Set[Tuple[MultiFilterItem, ...]] = set()
                     a_all: Set[MultiFilterItem] = set()
+                    start = time.monotonic()
                     for _, row in candidates.iterrows():
                         if pd.isna([row[attribute_name] for attribute_name in attribute_names]).any():
                             continue
@@ -68,8 +80,8 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                                 cls._create_multi_filter_item(
                                     category_name=category_name,
                                     attribute=all_attributes.attributes[attribute_name],
-                                    product=row,
-                                    candidate_ids=candidate_ids,
+                                    value=row[attribute_name],
+                                    candidate_ids_encoded=candidate_ids_encoded,
                                 )
                                 for attribute_name in S_attributes
                             )
@@ -78,10 +90,12 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                             cls._create_multi_filter_item(
                                 category_name=category_name,
                                 attribute=all_attributes.attributes[a_attribute],
-                                product=row,
-                                candidate_ids=candidate_ids,
+                                value=row[a_attribute],
+                                candidate_ids_encoded=candidate_ids_encoded,
                             )
                         )
+                    logger.warning(f"all: {time.monotonic() - start}")
+                    start = time.monotonic()
                     for S in S_all:
                         for a in a_all:
                             item = StoppingCriterionItem(
@@ -107,6 +121,8 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                                 candidate_ids="",
                             )
                             items.append(item)
+                    logger.warning(f"items: {time.monotonic() - start}")
+        logger.warning(f"loops {loops}")
         return items
 
     # @classmethod

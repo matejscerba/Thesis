@@ -1,5 +1,7 @@
 import itertools
+import logging
 import operator
+import time
 from typing import List, Set, ClassVar, Optional, Tuple, Any, Dict
 
 import pandas as pd
@@ -8,6 +10,8 @@ from app.attributes.attribute import AttributeName, Attribute, FilterValue, Mult
 from app.data_loader import DataLoader
 from app.products.stopping_criteria import StoppingCriteria, StoppingCriterionItem
 from app.stopping_criteria.abstract import AbstractStoppingCriteria, StoppingCriteriaModel
+
+logger = logging.getLogger()
 
 
 class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
@@ -160,19 +164,25 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
         discarded_ids: Set[int],
         important_attributes: List[str],
     ) -> StoppingCriteria:
+        start = time.monotonic()
         items = cls._generate_items(
             category_name=category_name,
             candidate_ids=candidate_ids,
             discarded_ids=discarded_ids,
             important_attributes=important_attributes,
         )
+        logger.warning(f"generating items: {time.monotonic() - start}")
 
+        start = time.monotonic()
         items = [item for item in items if item.metric > cls.preference_threshold]
         preference_detected = len(items) > 0
 
         items.sort(key=operator.attrgetter("metric_with_complexity"), reverse=True)
+        logger.warning(f"filtering and sorting: {time.monotonic() - start}")
 
+        start = time.monotonic()
         items = cls.post_process(initial_items=items)
+        logger.warning(f"post processing: {time.monotonic() - start}")
 
         # if len(items) > 5:
         #     items = items[:5]

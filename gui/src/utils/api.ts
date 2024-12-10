@@ -77,3 +77,15 @@ export function logEvent(event: Event, data: { [key: string]: any }) {
       console.error(e);
     });
 }
+
+export function updateAttributesState(attributes: string[]) {
+  fetchPostJson<{ success: boolean }>("update_attributes_state", { attributes })
+    .then((response) => {
+      console.log(
+        `Updating attributes state to ${JSON.stringify(attributes)} finished with success: ${response.success}`,
+      );
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+}

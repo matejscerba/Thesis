@@ -221,6 +221,18 @@ def view_log_event() -> Response:
     return jsonify({"success": True})
 
 
+def view_update_attributes_state() -> Response:
+    if request.json is None:
+        raise Exception("No attributes provided")
+    attributes = request.json.get("attributes")
+    if attributes is None:
+        raise Exception("No attributes provided")
+
+    context.important_attributes = attributes
+
+    return jsonify({"success": True})
+
+
 def view_user_study_steps() -> Response:
     assert context.app_flow.type == AppFlowType.USER_STUDY
     assert context.app_flow.setup is not None
