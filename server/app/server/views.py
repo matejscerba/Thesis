@@ -1,6 +1,6 @@
 from typing import cast
 
-from flask import request, Response, jsonify
+from flask import request, Response, jsonify, send_from_directory
 
 from app.app_flow import UIType, AppFlowType
 from app.attributes.attribute import MultiFilterItem
@@ -240,3 +240,7 @@ def view_user_study_steps() -> Response:
     assert context.app_flow.setup is not None
 
     return jsonify(context.app_flow.setup.steps)
+
+
+def view_download_events() -> Response:
+    return send_from_directory(directory=EventLogger.SQLITE_DIR_PATH, path=EventLogger.DB_FILENAME)

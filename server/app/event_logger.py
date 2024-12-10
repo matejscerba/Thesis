@@ -30,11 +30,11 @@ class Event(str, Enum):
 
 class EventLogger:
     SQLITE_DIR_PATH: ClassVar[str] = "data/sqlite"
-    DB_NAME: ClassVar[str] = "event_logger.db"
+    DB_FILENAME: ClassVar[str] = "event_logger.db"
 
     def get_connection(self) -> Connection:
         os.makedirs(self.SQLITE_DIR_PATH, exist_ok=True)
-        return sqlite3.connect(os.path.join(self.SQLITE_DIR_PATH, self.DB_NAME))
+        return sqlite3.connect(os.path.join(self.SQLITE_DIR_PATH, self.DB_FILENAME))
 
     def setup(self) -> None:
         with self.get_connection() as connection:

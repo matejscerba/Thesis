@@ -12,6 +12,7 @@ from app.server.views import (
     view_update_attributes_state,
     view_config,
     view_user_study_steps,
+    view_download_events,
 )
 
 
@@ -32,3 +33,4 @@ def add_routes(app: Flask) -> None:
     app.add_url_rule(rule="/log_event", view_func=view_log_event, methods=["POST"])
     app.add_url_rule(rule="/update_attributes_state", view_func=view_update_attributes_state, methods=["POST"])
     app.add_url_rule(rule="/user_study/steps", view_func=view_user_study_steps, methods=["GET"])
+    app.add_url_rule(rule="/download_events", view_func=view_download_events, methods=["GET"])
