@@ -3,7 +3,7 @@ from typing import List, Any
 import numpy as np
 import pandas as pd
 
-from app.attributes.attribute import CategoryAttributes, AttributeName, AttributeOrder, AttributeType, Attribute
+from app.attributes.attribute import CategoryAttributes, AttributeOrder, AttributeType, Attribute
 from app.data_loader import DataLoader
 from app.products.explanations import (
     ProductExplanation,
@@ -174,12 +174,6 @@ class ContentBasedMixin:
         return ProductExplanation(
             message=ProductExplanationMessage(code=ProductExplanationMessageCode.NONE),
             attributes=attributes,
-            price_position=cls._calculate_attribute_position_candidate(
-                category_name=category_name,
-                attribute=all_attributes.attributes[AttributeName.PRICE.value],
-                value=product[AttributeName.PRICE.value],
-                candidates=candidates,
-            ),
         )
 
     @classmethod
@@ -290,12 +284,6 @@ class ContentBasedMixin:
                 product=product, candidates=candidates, all_attributes=all_attributes
             ),
             attributes=attributes,
-            price_position=cls._calculate_attribute_position_non_candidate(
-                category_name=category_name,
-                attribute=all_attributes.attributes[AttributeName.PRICE.value],
-                value=product[AttributeName.PRICE.value],
-                candidates=candidates,
-            ),
         )
 
     @classmethod
@@ -327,5 +315,4 @@ class ContentBasedMixin:
         return ProductExplanation(
             message=ProductExplanationMessage(code=ProductExplanationMessageCode.NONE),
             attributes=attributes,
-            price_position=ProductAttributePosition.NEUTRAL,
         )

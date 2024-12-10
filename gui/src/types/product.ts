@@ -123,11 +123,6 @@ export interface ProductExplanation {
    * Explanations of several attributes. Typically the important ones.
    */
   attributes: ProductAttributeExplanation[];
-
-  /**
-   * Position (explanation) of the price of the product. Value of `ProductAttributePosition` enum.
-   */
-  price_position: string;
 }
 
 /**

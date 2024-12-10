@@ -56,9 +56,7 @@ class ProductExplanation(BaseModel):
 
     :param ProductExplanationMessage message: attribute which this explanation is about
     :param List[ProductAttributeExplanation] attributes: explanations of the attributes of a product
-    :param ProductAttributePosition price_position: position of the price attribute
     """
 
     message: ProductExplanationMessage
     attributes: List[ProductAttributeExplanation]
-    price_position: ProductAttributePosition

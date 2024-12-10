@@ -31,6 +31,7 @@ interface AppFlow {
 export interface AppConfig {
   app_flow: AppFlow;
   production_ui_type: UIType;
+  debug: boolean;
 }
 
 export interface UserStudySetupStep {

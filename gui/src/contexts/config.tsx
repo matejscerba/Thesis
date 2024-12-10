@@ -5,11 +5,13 @@ import { fetchJson } from "../utils/api";
 interface ConfigContextInterface {
   appFlowType: AppFlowType;
   getUIType: (stepParam: string | undefined) => UIType;
+  debug: boolean;
 }
 
 const ConfigContext = createContext<ConfigContextInterface>({
   appFlowType: AppFlowType.PRODUCTION,
   getUIType: () => UIType.STOPPING_CRITERIA,
+  debug: false,
 });
 
 interface ConfigContextProviderProps {
@@ -49,6 +51,7 @@ export function ConfigContextProvider({ children }: ConfigContextProviderProps) 
       value={{
         appFlowType: data.app_flow.type,
         getUIType,
+        debug: data.debug,
       }}
     >
       {children}

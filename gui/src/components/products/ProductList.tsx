@@ -103,10 +103,10 @@ function ProductList({ name }: ProductListProps) {
     if (candidates.length > 0) {
       return (
         <>
-          <CategorySkeleton title={<CandidatesTitle />} />
+          <CategorySkeleton title={<CandidatesTitle />} numItems={candidates.length} />
           <CategorySkeleton title={<StoppingCriteriaTitleWrapper />} />
           <CategorySkeleton title={<AlternativesTitle />} numItems={10} />
-          <CategorySkeleton title={<DiscardedTitle />} />
+          <CategorySkeleton title={<DiscardedTitle />} numItems={discarded.length} />
         </>
       );
     } else {

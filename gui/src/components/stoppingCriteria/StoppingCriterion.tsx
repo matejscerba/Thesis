@@ -7,6 +7,7 @@ import ExplanationAttribute from "../products/ExplanationAttribute";
 import { ProductAttributePosition } from "../../types/product";
 import { logEvent } from "../../utils/api";
 import { Event } from "../../types/event";
+import { useConfig } from "../../contexts/config";
 
 interface StoppingCriterionProps {
   criterion: StoppingCriterionItem;
@@ -14,6 +15,7 @@ interface StoppingCriterionProps {
 
 function StoppingCriterion({ criterion }: StoppingCriterionProps) {
   const { presentModal } = useModal();
+  const { debug } = useConfig();
 
   const filter = [...criterion.supportSet, ...criterion.attributeValue];
 
@@ -59,9 +61,11 @@ function StoppingCriterion({ criterion }: StoppingCriterionProps) {
       >
         {criterion.numProducts} more products with these properties found.
       </Typography>
-      <Typography variant="body1" className="text-end">
-        {criterion.metric}
-      </Typography>
+      {debug && (
+        <Typography variant="body1" className="text-end">
+          {criterion.metric}
+        </Typography>
+      )}
     </div>
   );
 }

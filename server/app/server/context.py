@@ -15,6 +15,10 @@ class Context:
     _user_study_step: Optional[int] = None
 
     @property
+    def debug(self) -> bool:
+        return os.environ.get("SERVER_DEBUG", "FALSE").upper() == "TRUE"
+
+    @property
     def app_flow(self) -> AppFlow:
         flow_type = AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()]
         if flow_type == AppFlowType.PRODUCTION:
