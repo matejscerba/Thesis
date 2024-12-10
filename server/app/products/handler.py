@@ -54,6 +54,26 @@ class ProductHandler:
         )
 
     @classmethod
+    def get_product_ids(
+        cls,
+        category_name: str,
+        filter: List[MultiFilterItem],
+        candidate_ids: Set[int],
+        discarded_ids: Set[int],
+    ) -> Set[int]:
+        try:
+            return set(
+                cls.filter_products(
+                    category_name=category_name,
+                    filter=filter,
+                    candidate_ids=candidate_ids,
+                    discarded_ids=discarded_ids,
+                )["id"]
+            )
+        except KeyError:
+            return set()
+
+    @classmethod
     def count_products_in_set(
         cls,
         category_name: str,
@@ -61,6 +81,18 @@ class ProductHandler:
         ids: Set[int],
     ) -> int:
         return len(cls.filter_products_in_set(category_name=category_name, filter=filter, ids=ids))
+
+    @classmethod
+    def get_product_ids_in_set(
+        cls,
+        category_name: str,
+        filter: List[MultiFilterItem],
+        ids: Set[int],
+    ) -> Set[int]:
+        try:
+            return set(cls.filter_products_in_set(category_name=category_name, filter=filter, ids=ids)["id"])
+        except KeyError:
+            return set()
 
     @classmethod
     def get_categories(cls) -> List[str]:

@@ -1,8 +1,6 @@
-import functools
 import itertools
 import logging
-import time
-from typing import List, Set, ClassVar, Tuple, Optional, Any
+from typing import List, Set, ClassVar, Tuple, Optional, Dict, Any
 
 import pandas as pd
 
@@ -21,13 +19,10 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
     repeat_penalty: ClassVar[float] = 0.8
 
     @classmethod
-    @functools.lru_cache(maxsize=1000)
     def _create_multi_filter_item(
-        cls, category_name: str, attribute: Attribute, value: Any, candidate_ids_encoded: str
+        cls, category_name: str, attribute: Attribute, product: pd.Series, candidate_ids: Set[int]
     ) -> MultiFilterItem:
         from app.data_loader import DataLoader
-
-        candidate_ids = {int(id_str) for id_str in candidate_ids_encoded.split("_")}
 
         if attribute.type == AttributeType.NUMERICAL and attribute.continuous:
             candidates = DataLoader.load_products(
@@ -37,13 +32,15 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
             return MultiFilterItem(
                 attribute_name=attribute.full_name,
                 filter=attribute.get_range_filter_value(
-                    value=value,
+                    value=product[attribute.full_name],
                     initial_value=candidates[attribute.full_name].median(),
                     products=products,
                 ),
             )
         else:
-            return MultiFilterItem(attribute_name=attribute.full_name, filter=FilterValue(options={value}))
+            return MultiFilterItem(
+                attribute_name=attribute.full_name, filter=FilterValue(options={product[attribute.full_name]})
+            )
 
     @classmethod
     def _generate_items(
@@ -51,15 +48,46 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
     ) -> List[StoppingCriterionItem]:
         from app.products.handler import ProductHandler
 
-        start = time.monotonic()
         candidates = DataLoader.load_products(
             category_name=category_name,
             usecols=[AttributeName.PRICE.value, *important_attributes],
             userows=candidate_ids,
         )
-        candidate_ids_encoded = "_".join([f"{id}" for id in sorted(candidate_ids)])
         all_attributes = DataLoader.load_attributes(category_name=category_name)
-        logger.warning(f"loading: {time.monotonic() - start}")
+
+        multi_filter_items: Dict[Tuple[str, Any], MultiFilterItem] = {}
+        filter_ids_products: Dict[MultiFilterItem, Set[int]] = {}
+        filter_ids_candidates: Dict[MultiFilterItem, Set[int]] = {}
+        filter_ids_discarded: Dict[MultiFilterItem, Set[int]] = {}
+
+        for attribute_name in important_attributes:
+            for _, row in candidates.iterrows():
+                attribute_value = row[attribute_name]
+                if (attribute_name, attribute_value) in multi_filter_items:
+                    # Multi filter item is already computed for this attribute and its value
+                    continue
+                if pd.isna(attribute_value):
+                    # Value is not valid, skip it
+                    continue
+                multi_filter_item = cls._create_multi_filter_item(
+                    category_name=category_name,
+                    attribute=all_attributes.attributes[attribute_name],
+                    product=row,
+                    candidate_ids=candidate_ids,
+                )
+                multi_filter_items[attribute_name, attribute_value] = multi_filter_item
+                filter_ids_products[multi_filter_item] = ProductHandler.get_product_ids(
+                    category_name=category_name,
+                    filter=[multi_filter_item],
+                    candidate_ids=candidate_ids,
+                    discarded_ids=discarded_ids,
+                )
+                filter_ids_candidates[multi_filter_item] = ProductHandler.get_product_ids_in_set(
+                    category_name=category_name, filter=[multi_filter_item], ids=candidate_ids
+                )
+                filter_ids_discarded[multi_filter_item] = ProductHandler.get_product_ids_in_set(
+                    category_name=category_name, filter=[multi_filter_item], ids=discarded_ids
+                )
 
         items = []
         loops = 0
@@ -71,58 +99,50 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                     a_attribute = S_attributes.pop(a_index)
                     S_all: Set[Tuple[MultiFilterItem, ...]] = set()
                     a_all: Set[MultiFilterItem] = set()
-                    start = time.monotonic()
                     for _, row in candidates.iterrows():
-                        if pd.isna([row[attribute_name] for attribute_name in attribute_names]).any():
+                        skip = False
+                        for attribute_name in attribute_names:
+                            if (attribute_name, row[attribute_name]) not in multi_filter_items:
+                                skip = True
+                        if skip:
                             continue
                         S_all.add(
                             tuple(
-                                cls._create_multi_filter_item(
-                                    category_name=category_name,
-                                    attribute=all_attributes.attributes[attribute_name],
-                                    value=row[attribute_name],
-                                    candidate_ids_encoded=candidate_ids_encoded,
-                                )
+                                multi_filter_items[attribute_name, row[attribute_name]]
                                 for attribute_name in S_attributes
                             )
                         )
-                        a_all.add(
-                            cls._create_multi_filter_item(
-                                category_name=category_name,
-                                attribute=all_attributes.attributes[a_attribute],
-                                value=row[a_attribute],
-                                candidate_ids_encoded=candidate_ids_encoded,
-                            )
-                        )
-                    logger.warning(f"all: {time.monotonic() - start}")
-                    start = time.monotonic()
+                        a_all.add(multi_filter_items[a_attribute, row[a_attribute]])
                     for S in S_all:
                         for a in a_all:
                             item = StoppingCriterionItem(
                                 support_set=list(S),
                                 attribute_value=[a],
-                                num_products=ProductHandler.count_products(
-                                    category_name=category_name,
-                                    filter=[*S, a],
-                                    candidate_ids=candidate_ids,
-                                    discarded_ids=discarded_ids,
+                                num_products=len(
+                                    set.intersection(*[filter_ids_products[filter_item] for filter_item in [*S, a]])
                                 ),
                                 metric=StoppingCriterionItem.compute_metric(
-                                    num_support_candidates=ProductHandler.count_products_in_set(
-                                        category_name=category_name, filter=list(S), ids=candidate_ids
+                                    num_support_candidates=(
+                                        len(
+                                            set.intersection(*[filter_ids_candidates[filter_item] for filter_item in S])
+                                        )
+                                        if len(S) > 0
+                                        else len(candidate_ids)
                                     ),
-                                    num_all_candidates=ProductHandler.count_products_in_set(
-                                        category_name=category_name, filter=[*S, a], ids=candidate_ids
+                                    num_all_candidates=len(
+                                        set.intersection(
+                                            *[filter_ids_candidates[filter_item] for filter_item in [*S, a]]
+                                        )
                                     ),
-                                    num_all_discarded=ProductHandler.count_products_in_set(
-                                        category_name=category_name, filter=[*S, a], ids=discarded_ids
+                                    num_all_discarded=len(
+                                        set.intersection(
+                                            *[filter_ids_discarded[filter_item] for filter_item in [*S, a]]
+                                        )
                                     ),
                                 ),
                                 candidate_ids="",
                             )
                             items.append(item)
-                    logger.warning(f"items: {time.monotonic() - start}")
-        logger.warning(f"loops {loops}")
         return items
 
     # @classmethod
