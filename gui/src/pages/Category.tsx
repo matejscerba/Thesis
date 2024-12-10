@@ -5,6 +5,9 @@ import ProductList from "../components/products/ProductList";
 import CategorySidebar from "../components/CategorySidebar";
 import { AttributesContextProvider } from "../contexts/attributes";
 import { NavLink, useParams } from "react-router-dom";
+import { indexPattern } from "../routes";
+import { useConfig } from "../contexts/config";
+import { AppFlowType } from "../types/config";
 
 /**
  * This component loads the category page layout.
@@ -13,6 +16,7 @@ import { NavLink, useParams } from "react-router-dom";
  */
 function Category() {
   const { name } = useParams();
+  const { appFlowType } = useConfig();
 
   return (
     <AttributesContextProvider category={name}>
@@ -29,9 +33,11 @@ function Category() {
           </div>
         </div>
       </div>
-      <NavLink to="/">
-        <i className="bi bi-house home-link" />
-      </NavLink>
+      {appFlowType === AppFlowType.PRODUCTION && (
+        <NavLink to={indexPattern}>
+          <i className="bi bi-house home-link" />
+        </NavLink>
+      )}
     </AttributesContextProvider>
   );
 }

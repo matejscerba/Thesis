@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Box, Button, Typography } from "@mui/material";
-import { generatePath, useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Box, Button } from "@mui/material";
+import { generatePath, useNavigate } from "react-router-dom";
 import { userStudyStepCategoryPattern } from "../routes";
+import UserStudySteps from "./userStudy/UserStudySteps";
+import { UserStudySetupStep } from "../types/config";
+import { fetchJson } from "../utils/api";
 
 function UserStudyTutorialCarousel() {
   const navigate = useNavigate();
-  const { firstCategoryName } = useParams();
+
+  const [data, setData] = useState<UserStudySetupStep[]>(undefined);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [
-    { id: 1, title: "Slide 1", description: "Description for Slide 1" },
-    { id: 2, title: "Slide 2", description: "Description for Slide 2" },
-    { id: 3, title: "Slide 3", description: "Description for Slide 3" },
-  ];
+  const items = [<p>Slide 1</p>, <p>Slide 2</p>, <UserStudySteps steps={data} />];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -22,25 +22,38 @@ function UserStudyTutorialCarousel() {
     setCurrentIndex((prevIndex) => prevIndex - 1);
   };
 
+  useEffect(() => {
+    fetchJson<UserStudySetupStep[]>("user_study/steps")
+      .then((steps) => {
+        setData(steps);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  }, []);
+
   return (
-    <Box sx={{ position: "relative", width: "80%", margin: "auto", mt: 4 }}>
+    <>
       <Box
         sx={{
-          height: 200,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          border: "1px solid #ccc",
-          borderRadius: 2,
         }}
       >
-        <Box textAlign="center">
-          <Typography variant="h5">{items[currentIndex].title}</Typography>
-          <Typography>{items[currentIndex].description}</Typography>
-        </Box>
+        <Box textAlign="center">{items[currentIndex]}</Box>
       </Box>
 
-      <Box sx={{ mt: 2, display: "flex", justifyContent: "space-between" }}>
+      <Box
+        sx={{
+          pb: 4,
+          display: "flex",
+          justifyContent: "space-between",
+          position: "absolute",
+          bottom: 0,
+          width: "70%",
+        }}
+      >
         <Button variant="contained" disabled={currentIndex === 0} onClick={prevSlide}>
           Previous
         </Button>
@@ -48,7 +61,7 @@ function UserStudyTutorialCarousel() {
           <Button
             variant="contained"
             onClick={() => {
-              navigate(generatePath(userStudyStepCategoryPattern, { step: "1", name: firstCategoryName }));
+              navigate(generatePath(userStudyStepCategoryPattern, { step: "1", name: data?.[0].category_name }));
             }}
           >
             Go to step 1
@@ -59,7 +72,7 @@ function UserStudyTutorialCarousel() {
           </Button>
         )}
       </Box>
-    </Box>
+    </>
   );
 }
 

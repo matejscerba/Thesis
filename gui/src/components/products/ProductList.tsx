@@ -47,7 +47,7 @@ function ProductList({ name }: ProductListProps) {
   const [limit, setLimit] = useState<number>(PAGE_SIZE);
   const [data, setData] = useState<ProductListResponse>(undefined);
   const [loading, setLoading] = useState<boolean>(false);
-  const [candidates, setCandidates] = useState<number[]>([0, 1793, 2355]);
+  const [candidates, setCandidates] = useState<number[]>([]);
   const [discarded, setDiscarded] = useState<number[]>([]);
 
   useEffect(() => {

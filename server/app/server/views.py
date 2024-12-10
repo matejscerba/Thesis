@@ -240,17 +240,3 @@ def view_user_study_steps() -> Response:
     assert context.app_flow.setup is not None
 
     return jsonify(context.app_flow.setup.steps)
-
-
-def view_user_study_submit_questionnaire() -> Response:
-    assert context.app_flow.type == AppFlowType.USER_STUDY
-
-    step_str = request.args.get("step")
-    if step_str is not None:
-        step = int(step_str)
-    else:
-        step = None
-
-    EventLogger().log(event=Event.QUESTIONNAIRE_SUBMITTED, data={"step": step, "data": request.json})
-
-    return jsonify({"success": True})

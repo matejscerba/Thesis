@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Category from "./pages/Category";
 import Categories from "./pages/Categories";
 import { AppFlowType } from "./types/config";
-import UserStudyIntro from "./pages/UserStudyIntro";
 import Questionnaire from "./pages/Questionnaire";
 import {
   categoryPattern,
@@ -12,11 +11,10 @@ import {
   userStudyQuestionnairePattern,
   userStudyStepCategoryPattern,
   userStudyStepQuestionnairePattern,
-  userStudyTutorialPattern,
 } from "./routes";
 import OverallQuestionnaire from "./pages/OverallQuestionnaire";
 import { useConfig } from "./contexts/config";
-import UserStudyTutorial from "./pages/UserStudyTutorial";
+import UserStudyIntro from "./pages/UserStudyIntro";
 
 /**
  * This component renders the app and uses React router to navigate through pages.
@@ -42,10 +40,6 @@ export function App() {
           {
             path: indexPattern,
             element: <UserStudyIntro />,
-          },
-          {
-            path: userStudyTutorialPattern,
-            element: <UserStudyTutorial />,
           },
           {
             path: userStudyStepCategoryPattern,
