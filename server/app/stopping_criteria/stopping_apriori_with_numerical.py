@@ -29,11 +29,16 @@ class StoppingAprioriWithNumericalStoppingCriteria(StoppingAprioriStoppingCriter
                 category_name=category_name, usecols=[attribute.full_name], userows=candidate_ids
             )
             products = DataLoader.load_products(category_name=category_name, usecols=[attribute.full_name])
+            values = candidates[attribute.full_name].sort_values().reset_index(drop=True)
+
+            assert len(values) > 0
+
+            median = values.iloc[(len(values) - 1) // 2]
             return MultiFilterItem(
                 attribute_name=attribute.full_name,
                 filter=attribute.get_range_filter_value(
                     value=product[attribute.full_name],
-                    initial_value=candidates[attribute.full_name].median(),
+                    initial_value=median,
                     products=products,
                 ),
             )

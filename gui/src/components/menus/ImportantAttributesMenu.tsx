@@ -20,7 +20,7 @@ function ImportantAttributesMenu() {
         <div key={group}>
           <hr className="my-1" />
           <Typography variant="body1">{group}</Typography>
-          <div className="flex-wrapper">
+          <div className="flex-wrapper important-attributes-menu">
             {attributes
               ?.filter((attribute) => attribute.group === group)
               .sort()

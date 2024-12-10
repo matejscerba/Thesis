@@ -184,6 +184,13 @@ body {
   white-space: nowrap;
 }
 
+.flex-wrapper.important-attributes-menu .flex-item {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
+}
+
 .fit-content {
   width: fit-content;
 }

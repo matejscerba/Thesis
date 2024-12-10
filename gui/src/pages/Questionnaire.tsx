@@ -4,8 +4,8 @@ import { fetchJson, logEvent } from "../utils/api";
 import { generatePath, useNavigate, useParams } from "react-router-dom";
 import { userStudyQuestionnairePattern, userStudyStepCategoryPattern } from "../routes";
 import { Event } from "../types/event";
-import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 import { QuestionType } from "../types/questionnaire";
+import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 
 function Questionnaire() {
   const navigate = useNavigate();

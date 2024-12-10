@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { indexPattern } from "../routes";
 import { logEvent } from "../utils/api";
 import { Event } from "../types/event";
-import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 import { QuestionType } from "../types/questionnaire";
+import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 
 function OverallQuestionnaire() {
   const navigate = useNavigate();
