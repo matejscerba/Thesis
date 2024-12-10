@@ -2,7 +2,7 @@ from typing import cast
 
 from flask import request, Response, jsonify, send_from_directory
 
-from app.app_flow import UIType, AppFlowType
+from app.app_flow import UIType
 from app.attributes.attribute import MultiFilterItem
 from app.attributes.handler import AttributeHandler
 from app.event_logger import EventLogger, Event
@@ -233,13 +233,6 @@ def view_update_attributes_state() -> Response:
     context.important_attributes = attributes
 
     return jsonify({"success": True})
-
-
-def view_user_study_steps() -> Response:
-    assert context.app_flow.type == AppFlowType.USER_STUDY
-    assert context.app_flow.setup is not None
-
-    return jsonify(context.app_flow.setup.steps)
 
 
 def view_download_events() -> Response:

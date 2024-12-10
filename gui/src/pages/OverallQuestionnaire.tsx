@@ -10,8 +10,14 @@ function OverallQuestionnaire() {
   const navigate = useNavigate();
 
   const questions = [
-    { title: "Scale question", type: QuestionType.SCALE },
-    { title: "Open question", type: QuestionType.OPEN },
+    { title: "Which UI variant was more helpful in finding more candidates.", type: QuestionType.UI_TYPE_COMPARISON },
+    { title: "Which UI variant was easier to understand.", type: QuestionType.UI_TYPE_COMPARISON },
+    { title: "In your opinion, what makes one UI variant better than the other?", type: QuestionType.OPEN },
+    { title: "Working with the system was smooth and intuitive.", type: QuestionType.YES_NO },
+    {
+      title: "In your opinion, what other product domains could benefit from similar interfaces?",
+      type: QuestionType.OPEN,
+    },
   ];
 
   return (

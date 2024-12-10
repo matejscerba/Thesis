@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Box, Button } from "@mui/material";
-import { generatePath, useNavigate } from "react-router-dom";
-import { userStudyStepCategoryPattern } from "../routes";
+import { useNavigate } from "react-router-dom";
+import { userStudyInitialQuestionnairePattern } from "../routes";
 import UserStudySteps from "./userStudy/UserStudySteps";
-import { UserStudySetupStep } from "../types/config";
-import { fetchJson } from "../utils/api";
 
 function UserStudyTutorialCarousel() {
   const navigate = useNavigate();
 
-  const [data, setData] = useState<UserStudySetupStep[]>(undefined);
-
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [<p>Slide 1</p>, <p>Slide 2</p>, <UserStudySteps steps={data} />];
+  const items = [<p>Slide 1</p>, <p>Slide 2</p>, <UserStudySteps />];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -21,16 +17,6 @@ function UserStudyTutorialCarousel() {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => prevIndex - 1);
   };
-
-  useEffect(() => {
-    fetchJson<UserStudySetupStep[]>("user_study/steps")
-      .then((steps) => {
-        setData(steps);
-      })
-      .catch((e) => {
-        console.error(e);
-      });
-  }, []);
 
   return (
     <>
@@ -61,10 +47,10 @@ function UserStudyTutorialCarousel() {
           <Button
             variant="contained"
             onClick={() => {
-              navigate(generatePath(userStudyStepCategoryPattern, { step: "1", name: data?.[0].category_name }));
+              navigate(userStudyInitialQuestionnairePattern);
             }}
           >
-            Go to step 1
+            Go to initial questionnaire
           </Button>
         ) : (
           <Button variant="contained" onClick={nextSlide}>

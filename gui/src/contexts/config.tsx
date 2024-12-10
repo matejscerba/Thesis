@@ -1,16 +1,20 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { AppConfig, AppFlowType, UIType } from "../types/config";
+import { AppConfig, AppFlowType, UIType, UserStudySetupStep } from "../types/config";
 import { fetchJson } from "../utils/api";
 
 interface ConfigContextInterface {
   appFlowType: AppFlowType;
+  userStudySteps: UserStudySetupStep[] | undefined;
   getUIType: (stepParam: string | undefined) => UIType;
+  getCategoryName: (stepParam: string | undefined) => string | undefined;
   debug: boolean;
 }
 
 const ConfigContext = createContext<ConfigContextInterface>({
   appFlowType: AppFlowType.PRODUCTION,
+  userStudySteps: undefined,
   getUIType: () => UIType.STOPPING_CRITERIA,
+  getCategoryName: () => undefined,
   debug: false,
 });
 
@@ -42,6 +46,13 @@ export function ConfigContextProvider({ children }: ConfigContextProviderProps) 
     return data.app_flow.setup.steps[Number.parseInt(stepParam) - 1].ui_type;
   };
 
+  const getCategoryName = (stepParam: string | undefined) => {
+    if (stepParam === undefined) {
+      return undefined;
+    }
+    return data.app_flow.setup.steps[Number.parseInt(stepParam) - 1].category_name;
+  };
+
   if (!data || loading) {
     return <p>Loading...</p>;
   }
@@ -50,7 +61,9 @@ export function ConfigContextProvider({ children }: ConfigContextProviderProps) 
     <ConfigContext.Provider
       value={{
         appFlowType: data.app_flow.type,
+        userStudySteps: data.app_flow.setup.steps,
         getUIType,
+        getCategoryName,
         debug: data.debug,
       }}
     >

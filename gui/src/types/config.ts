@@ -19,6 +19,17 @@ export function getUITypeText(uiType: UIType): string {
   }
 }
 
+export function getUITypeImageFilename(uiType: UIType): string {
+  switch (uiType) {
+    case UIType.STOPPING_CRITERIA:
+      return "stopping_criteria.png";
+    case UIType.UNSEEN_STATISTICS:
+      return "unseen_statistics.png";
+    default:
+      return "";
+  }
+}
+
 interface UserStudySetup {
   steps: UserStudySetupStep[];
 }

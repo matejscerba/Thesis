@@ -1,6 +1,9 @@
 export enum QuestionType {
-  SCALE = "SCALE",
+  LIKERT = "LIKERT",
   OPEN = "OPEN",
+  YES_NO = "YES_NO",
+  UI_TYPE_COMPARISON = "UI_TYPE_COMPARISON",
+  GENDER = "GENDER",
 }
 
 export interface Question {
@@ -8,6 +11,12 @@ export interface Question {
   type: QuestionType;
 }
 
+export interface Response {
+  response: string;
+  whyResponse?: string;
+}
+
 export interface QuestionWithResponse extends Question {
-  response: string | number;
+  response: string;
+  why_response: string;
 }

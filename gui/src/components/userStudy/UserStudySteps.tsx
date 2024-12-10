@@ -1,21 +1,32 @@
 import React from "react";
-import { getUITypeText, UserStudySetupStep } from "../../types/config";
+import { getUITypeText } from "../../types/config";
 import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../../utils/tools";
 import { Skeleton } from "@mui/material";
+import { useConfig } from "../../contexts/config";
 
-interface UserStudyStepsProps {
-  steps: UserStudySetupStep[] | undefined;
-}
+function UserStudySteps() {
+  const { userStudySteps } = useConfig();
 
-function UserStudySteps({ steps }: UserStudyStepsProps) {
   return (
     <>
       <Typography variant="h2" className="text-center mb-3">
         Steps
       </Typography>
-      {steps ? (
-        steps.map((step) => (
+      <div className="step-item">
+        <div className="border border-secondary rounded m-2 step-inner bg-white">
+          <Typography variant="h5" className="step-category-name">
+            Initial&nbsp;questionnaire
+          </Typography>
+        </div>
+      </div>
+      <div>
+        <Typography variant="h3" className="text-center">
+          <i className="bi bi-arrow-down-short" />
+        </Typography>
+      </div>
+      {userStudySteps ? (
+        userStudySteps.map((step) => (
           <div key={step.category_name}>
             <div className="step-item">
               <div className="border border-secondary rounded m-2 px-3 step-inner bg-white">

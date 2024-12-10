@@ -69,13 +69,17 @@ function Product({ className, product, menu }: ProductProps) {
             </div>
             {menu}
           </div>
-          {}
-          {(explanation?.attributes ?? []).length === 0 && explanationLoading ? (
-            <ExplanationAttributesSkeleton />
-          ) : (
-            <Typography variant="body1" className="mx-3 my-2">
-              You do not have any important attributes selected. Select some in the left menu to see their values here.
-            </Typography>
+          {(explanation?.attributes ?? []).length === 0 && (
+            <>
+              {explanationLoading ? (
+                <ExplanationAttributesSkeleton />
+              ) : (
+                <Typography variant="body1" className="mx-3 my-2">
+                  You do not have any important attributes selected. Select some in the left menu to see their values
+                  here.
+                </Typography>
+              )}
+            </>
           )}
           {explanation && (
             <>

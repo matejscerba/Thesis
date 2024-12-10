@@ -7,7 +7,7 @@ import { useCategory } from "../../contexts/category";
 
 export function UnseenTitle() {
   return (
-    <Typography variant="h5" className="text-secondary mx-3">
+    <Typography variant="h5" className="text-dark mx-3">
       Unseen
     </Typography>
   );
@@ -26,7 +26,7 @@ function Unseen() {
       <UnseenTitle />
       {unseen.attributes && unseen.attributes.length > 0 ? (
         unseen.attributes.map((stats) => (
-          <div key={stats.attribute.name} className="m-3 border border-secondary rounded bg-white">
+          <div key={stats.attribute.name} className="m-3 border border-dark rounded bg-white">
             {stats.attribute.type === AttributeType.CATEGORICAL.valueOf() && (
               <CategoricalAttributeRange
                 attribute={stats.attribute}

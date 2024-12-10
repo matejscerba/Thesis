@@ -4,17 +4,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Category from "./pages/Category";
 import Categories from "./pages/Categories";
 import { AppFlowType } from "./types/config";
-import Questionnaire from "./pages/Questionnaire";
+import StepQuestionnaire from "./pages/StepQuestionnaire";
 import {
   categoryPattern,
   indexPattern,
-  userStudyQuestionnairePattern,
+  userStudyInitialQuestionnairePattern,
+  userStudyOverallQuestionnairePattern,
   userStudyStepCategoryPattern,
   userStudyStepQuestionnairePattern,
 } from "./routes";
 import OverallQuestionnaire from "./pages/OverallQuestionnaire";
 import { useConfig } from "./contexts/config";
 import UserStudyIntro from "./pages/UserStudyIntro";
+import InitialQuestionnaire from "./pages/InitialQuestionnaire";
 
 /**
  * This component renders the app and uses React router to navigate through pages.
@@ -42,15 +44,19 @@ export function App() {
             element: <UserStudyIntro />,
           },
           {
+            path: userStudyInitialQuestionnairePattern,
+            element: <InitialQuestionnaire />,
+          },
+          {
             path: userStudyStepCategoryPattern,
             element: <Category />,
           },
           {
             path: userStudyStepQuestionnairePattern,
-            element: <Questionnaire />,
+            element: <StepQuestionnaire />,
           },
           {
-            path: userStudyQuestionnairePattern,
+            path: userStudyOverallQuestionnairePattern,
             element: <OverallQuestionnaire />,
           },
         ];
