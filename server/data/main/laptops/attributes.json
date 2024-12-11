@@ -723,14 +723,6 @@
         "continuous": false
     },
     {
-        "name": "Lease",
-        "id": 77,
-        "group": "Lease",
-        "feature": "Lease",
-        "type": "categorical",
-        "full_name": "Lease"
-    },
-    {
         "name": "Processor model",
         "id": 78,
         "group": "Processor model",
@@ -745,16 +737,6 @@
         "feature": "USB 2.0",
         "type": "numerical",
         "full_name": "USB 2.0",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "Number of free slots",
-        "id": 80,
-        "group": "Hard drive",
-        "feature": "Number of free slots",
-        "type": "numerical",
-        "full_name": "Number of free slots",
         "order": "asc",
         "continuous": false
     },
@@ -787,35 +769,6 @@
         "feature": "HDD capacity [GB]",
         "type": "numerical",
         "full_name": "HDD capacity [GB]",
-        "unit": "GB",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "Other interfaces",
-        "id": 84,
-        "group": "Interface",
-        "feature": "Other interfaces",
-        "type": "categorical",
-        "full_name": "Other interfaces"
-    },
-    {
-        "name": "USB 3.2 Gen 2x2",
-        "id": 85,
-        "group": "Interface",
-        "feature": "USB 3.2 Gen 2x2",
-        "type": "numerical",
-        "full_name": "USB 3.2 Gen 2x2",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "Intel Optane",
-        "id": 86,
-        "group": "Memory",
-        "feature": "Intel Optane [GB]",
-        "type": "numerical",
-        "full_name": "Intel Optane [GB]",
         "unit": "GB",
         "order": "asc",
         "continuous": false

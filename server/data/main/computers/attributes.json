@@ -135,25 +135,6 @@
         "full_name": "Memory type"
     },
     {
-        "name": "Graphics card type",
-        "id": 15,
-        "group": "Graphics card",
-        "feature": "Graphics card type",
-        "type": "categorical",
-        "full_name": "Graphics card type"
-    },
-    {
-        "name": "Boost clock",
-        "id": 16,
-        "group": "Graphics card",
-        "feature": "Boost clock [MHz]",
-        "type": "numerical",
-        "full_name": "Boost clock [MHz]",
-        "unit": "MHz",
-        "order": "asc",
-        "continuous": true
-    },
-    {
         "name": "Graphics card brand",
         "id": 17,
         "group": "GPU brand/model",
@@ -357,25 +338,6 @@
         "feature": "PC series",
         "type": "categorical",
         "full_name": "PC series"
-    },
-    {
-        "name": "Storage size",
-        "id": 40,
-        "group": "Capacity",
-        "feature": "Storage size [GB]",
-        "type": "numerical",
-        "full_name": "Storage size [GB]",
-        "unit": "GB",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "Console type",
-        "id": 41,
-        "group": "Features",
-        "feature": "Console type",
-        "type": "categorical",
-        "full_name": "Console type"
     },
     {
         "name": "Processor frequency",
@@ -637,28 +599,6 @@
         "continuous": false
     },
     {
-        "name": "Battery capacity",
-        "id": 71,
-        "group": "Battery",
-        "feature": "Battery capacity [Wh]",
-        "type": "numerical",
-        "full_name": "Battery capacity [Wh]",
-        "unit": "Wh",
-        "order": "asc",
-        "continuous": true
-    },
-    {
-        "name": "Standby time",
-        "id": 72,
-        "group": "Battery",
-        "feature": "Standby time [h]",
-        "type": "numerical",
-        "full_name": "Standby time [h]",
-        "unit": "h",
-        "order": "asc",
-        "continuous": true
-    },
-    {
         "name": "Maximum Graphic Power (TGP)",
         "id": 73,
         "group": "Graphics card",
@@ -685,108 +625,12 @@
         "full_name": "Certification"
     },
     {
-        "name": "Platform",
-        "id": 76,
-        "group": "Features",
-        "feature": "Platform",
-        "type": "categorical",
-        "full_name": "Platform"
-    },
-    {
-        "name": "Supported resolution",
-        "id": 77,
-        "group": "Basic parameters",
-        "feature": "Supported resolution",
-        "type": "categorical",
-        "full_name": "Supported resolution"
-    },
-    {
-        "name": "Storage Capacity",
-        "id": 78,
-        "group": "Basic parameters",
-        "feature": "Storage Capacity [GB]",
-        "type": "numerical",
-        "full_name": "Storage Capacity [GB]",
-        "unit": "GB",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "RAM memory",
-        "id": 79,
-        "group": "Basic parameters",
-        "feature": "RAM memory [GB]",
-        "type": "numerical",
-        "full_name": "RAM memory [GB]",
-        "unit": "GB",
-        "order": "asc",
-        "continuous": false
-    },
-    {
-        "name": "Interface",
-        "id": 80,
-        "group": "Connection and playback",
-        "feature": "Interface",
-        "type": "categorical",
-        "full_name": "Interface"
-    },
-    {
-        "name": "Connectivity",
-        "id": 81,
-        "group": "Connection and playback",
-        "feature": "Connectivity",
-        "type": "categorical",
-        "full_name": "Connectivity"
-    },
-    {
-        "name": "Number of USB slots",
-        "id": 82,
-        "group": "Connection and playback",
-        "feature": "Number of USB slots",
-        "type": "numerical",
-        "full_name": "Number of USB slots",
-        "continuous": false
-    },
-    {
-        "name": "Supported audio formats",
-        "id": 83,
-        "group": "Connection and playback",
-        "feature": "Supported audio formats",
-        "type": "categorical",
-        "full_name": "Supported audio formats"
-    },
-    {
-        "name": "Supported video formats",
-        "id": 84,
-        "group": "Connection and playback",
-        "feature": "Supported video formats",
-        "type": "categorical",
-        "full_name": "Supported video formats"
-    },
-    {
-        "name": "Functions",
-        "id": 85,
-        "group": "Features",
-        "feature": "Functions",
-        "type": "categorical",
-        "full_name": "Functions"
-    },
-    {
         "name": "WiFi type",
         "id": 86,
         "group": "Equipment",
         "feature": "WiFi type",
         "type": "categorical",
         "full_name": "WiFi type"
-    },
-    {
-        "name": "Number of components in the package",
-        "id": 87,
-        "group": "Features",
-        "feature": "Number of components in the package",
-        "type": "numerical",
-        "full_name": "Number of components in the package",
-        "continuous": false
     },
     {
         "name": "GPU Passmark",
@@ -847,15 +691,6 @@
         "continuous": false
     },
     {
-        "name": "Max. number of disks",
-        "id": 94,
-        "group": "Hard drive",
-        "feature": "Max. number of disks",
-        "type": "numerical",
-        "full_name": "Max. number of disks",
-        "continuous": false
-    },
-    {
         "name": "Disk size",
         "id": 95,
         "group": "Hard drive",
@@ -863,32 +698,6 @@
         "type": "numerical",
         "full_name": "Disk size [\"]",
         "unit": "\"",
-        "continuous": false
-    },
-    {
-        "name": "Hot Plug",
-        "id": 96,
-        "group": "Hard drive",
-        "feature": "Hot Plug",
-        "type": "categorical",
-        "full_name": "Hot Plug"
-    },
-    {
-        "name": "RAID interface",
-        "id": 97,
-        "group": "Hard drive",
-        "feature": "RAID interface",
-        "type": "categorical",
-        "full_name": "RAID interface"
-    },
-    {
-        "name": "Capacity",
-        "id": 98,
-        "group": "Hard drive",
-        "feature": "Capacity [GB]",
-        "type": "numerical",
-        "full_name": "Capacity [GB]",
-        "unit": "GB",
         "continuous": false
     }
 ]
