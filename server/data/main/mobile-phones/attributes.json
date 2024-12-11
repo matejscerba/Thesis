@@ -12,7 +12,9 @@
         "full_name": "Price [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Price without VAT",
@@ -21,7 +23,9 @@
         "full_name": "Price without VAT [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Rating",
@@ -29,7 +33,9 @@
         "type": "numerical",
         "full_name": "Rating",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Display size",
@@ -39,7 +45,9 @@
         "type": "numerical",
         "full_name": "Display size [\"]",
         "unit": "\"",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Display resolution",
@@ -82,7 +90,9 @@
         "full_name": "Rear camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Front camera resolution",
@@ -93,7 +103,9 @@
         "full_name": "Front camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Launched",
@@ -151,7 +163,9 @@
         "type": "numerical",
         "full_name": "Height [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Width",
@@ -161,7 +175,9 @@
         "type": "numerical",
         "full_name": "Width [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Depth",
@@ -171,7 +187,9 @@
         "type": "numerical",
         "full_name": "Depth [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Weight",
@@ -181,7 +199,9 @@
         "type": "numerical",
         "full_name": "Weight [kg]",
         "unit": "kg",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Colour",
@@ -227,7 +247,9 @@
         "full_name": "Screen fineness [PPI]",
         "unit": "PPI",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": -1
     },
     {
         "name": "Display brightness",
@@ -282,7 +304,9 @@
         "full_name": "Main rear camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Main rear camera aperture",
@@ -292,7 +316,9 @@
         "type": "numerical",
         "full_name": "Main rear camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Wide-angle lens camera resolution",
@@ -303,7 +329,9 @@
         "full_name": "Wide-angle lens camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Wide-angle lens camera aperture",
@@ -313,7 +341,9 @@
         "type": "numerical",
         "full_name": "Wide-angle lens camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Macro camera resolution",
@@ -324,7 +354,9 @@
         "full_name": "Macro camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Macro camera aperture",
@@ -334,7 +366,9 @@
         "type": "numerical",
         "full_name": "Macro camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Depth camera resolution",
@@ -345,7 +379,9 @@
         "full_name": "Depth camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Depth camera aperture",
@@ -355,7 +391,9 @@
         "type": "numerical",
         "full_name": "Depth camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Front Camera Resolution",
@@ -366,7 +404,9 @@
         "full_name": "Front Camera Resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Front Camera Aperture",
@@ -376,7 +416,9 @@
         "type": "numerical",
         "full_name": "Front Camera Aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Maximum Aperture",
@@ -386,7 +428,9 @@
         "type": "numerical",
         "full_name": "Maximum Aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Maximum video resolution",
@@ -421,7 +465,9 @@
         "full_name": "Battery capacity [mAh]",
         "unit": "mAh",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Charging performance",
@@ -431,7 +477,9 @@
         "type": "numerical",
         "full_name": "Charging performance [W]",
         "unit": "W",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Replaceable battery",
@@ -509,7 +557,9 @@
         "full_name": "Processor frequency [GHz]",
         "unit": "GHz",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Processor tag",
@@ -650,7 +700,9 @@
         "full_name": "Max wireless charging performance [W]",
         "unit": "W",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Processor designation",
@@ -669,7 +721,9 @@
         "full_name": "Telephoto camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Telephoto camera aperture",
@@ -679,7 +733,9 @@
         "type": "numerical",
         "full_name": "Telephoto camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Max. reverse charging power",
@@ -689,7 +745,9 @@
         "type": "numerical",
         "full_name": "Max. reverse charging power [W]",
         "unit": "W",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Calls via Internet",
@@ -718,7 +776,9 @@
         "type": "numerical",
         "full_name": "Second front camera resolution [Mpx]",
         "unit": "Mpx",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Secondary Front Camera Aperture",
@@ -728,7 +788,9 @@
         "type": "numerical",
         "full_name": "Secondary Front Camera Aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Second camera resolution with telephoto lens",
@@ -739,7 +801,9 @@
         "full_name": "Second camera resolution with telephoto lens [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Second camera aperture with telephoto lens",
@@ -749,7 +813,9 @@
         "type": "numerical",
         "full_name": "Second camera aperture with telephoto lens [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Resistance against falls from max. height",
@@ -760,7 +826,9 @@
         "full_name": "Resistance against falls from max. height [m]",
         "unit": "m",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Night vision resolution",
@@ -771,7 +839,9 @@
         "full_name": "Night vision resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Night vision aperture",
@@ -782,7 +852,9 @@
         "full_name": "Night vision aperture [f/]",
         "unit": "f/",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Features",
@@ -809,6 +881,8 @@
         "full_name": "Third front camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     }
 ]

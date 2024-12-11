@@ -379,7 +379,9 @@
         "full_name": "Battery capacity [Wh]",
         "unit": "Wh",
         "order": "asc",
-        "continuous": false
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Charging power",

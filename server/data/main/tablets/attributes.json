@@ -12,7 +12,9 @@
         "full_name": "Price [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Price without VAT",
@@ -21,7 +23,9 @@
         "full_name": "Price without VAT [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Rating",
@@ -29,7 +33,9 @@
         "type": "numerical",
         "full_name": "Rating",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Display size",
@@ -39,7 +45,9 @@
         "type": "numerical",
         "full_name": "Display size [\"]",
         "unit": "\"",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Resolution",
@@ -66,7 +74,9 @@
         "full_name": "Screen fineness [PPI]",
         "unit": "PPI",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": -1
     },
     {
         "name": "Computer memory (RAM) size",
@@ -142,7 +152,9 @@
         "full_name": "Main (rear) camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Front-facing (selfie) camera resolution",
@@ -153,7 +165,9 @@
         "full_name": "Front-facing (selfie) camera resolution [Mpx]",
         "unit": "Mpx",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Maximum video resolution",
@@ -188,7 +202,9 @@
         "full_name": "Battery capacity [mAh]",
         "unit": "mAh",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Charging performance",
@@ -199,7 +215,9 @@
         "full_name": "Charging performance [W]",
         "unit": "W",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Number of processor cores",
@@ -220,7 +238,9 @@
         "full_name": "Processor frequency [GHz]",
         "unit": "GHz",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Processor model",
@@ -262,7 +282,9 @@
         "type": "numerical",
         "full_name": "Height [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 20,
+        "round_decimals": -1
     },
     {
         "name": "Width",
@@ -272,7 +294,9 @@
         "type": "numerical",
         "full_name": "Width [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 20,
+        "round_decimals": -1
     },
     {
         "name": "Depth",
@@ -282,7 +306,9 @@
         "type": "numerical",
         "full_name": "Depth [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Weight",
@@ -292,7 +318,9 @@
         "type": "numerical",
         "full_name": "Weight [kg]",
         "unit": "kg",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Colour",
@@ -345,7 +373,9 @@
         "type": "numerical",
         "full_name": "Main rear camera aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Front Camera Aperture",
@@ -355,7 +385,9 @@
         "type": "numerical",
         "full_name": "Front Camera Aperture [f/]",
         "unit": "f/",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Degree of protection",
