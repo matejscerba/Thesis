@@ -12,7 +12,9 @@
         "full_name": "Price [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Price without VAT",
@@ -21,7 +23,9 @@
         "full_name": "Price without VAT [CZK]",
         "unit": "CZK",
         "order": "desc",
-        "continuous": true
+        "continuous": true,
+        "step": 5000,
+        "round_decimals": -3
     },
     {
         "name": "Rating",
@@ -29,7 +33,9 @@
         "type": "numerical",
         "full_name": "Rating",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Display size",
@@ -146,7 +152,9 @@
         "full_name": "Processor frequency [GHz]",
         "unit": "GHz",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Core boost frequency",
@@ -157,7 +165,9 @@
         "full_name": "Core boost frequency [GHz]",
         "unit": "GHz",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "TDP",
@@ -425,7 +435,9 @@
         "type": "numerical",
         "full_name": "Weight [kg]",
         "unit": "kg",
-        "continuous": true
+        "continuous": true,
+        "step": 0.5,
+        "round_decimals": 1
     },
     {
         "name": "Data",
@@ -521,7 +533,9 @@
         "type": "numerical",
         "full_name": "Width [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Maximum height",
@@ -531,7 +545,9 @@
         "type": "numerical",
         "full_name": "Maximum height [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Depth",
@@ -541,7 +557,9 @@
         "type": "numerical",
         "full_name": "Depth [mm]",
         "unit": "mm",
-        "continuous": true
+        "continuous": true,
+        "step": 10,
+        "round_decimals": 0
     },
     {
         "name": "Keyboard language",
@@ -626,7 +644,9 @@
         "type": "numerical",
         "full_name": "Maximum Graphic Power (TGP) [W]",
         "unit": "W",
-        "continuous": true
+        "continuous": true,
+        "step": 5,
+        "round_decimals": 0
     },
     {
         "name": "Boost clock",
@@ -637,7 +657,9 @@
         "full_name": "Boost clock [MHz]",
         "unit": "MHz",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "Number of occupied slots 2.5\"",
@@ -754,7 +776,9 @@
         "type": "numerical",
         "full_name": "GPU Passmark",
         "order": "asc",
-        "continuous": true
+        "continuous": true,
+        "step": 500,
+        "round_decimals": -2
     },
     {
         "name": "HDD capacity",
