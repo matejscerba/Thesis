@@ -137,14 +137,21 @@ class Context:
 
     @property
     def state(self) -> Dict[str, Any]:
-        return {
-            "candidates": list(self.candidates),
-            "discarded": list(self.discarded),
-            "alternatives": self.alternatives,
-            "important_attributes": self.important_attributes,
-            "stopping_criteria": self.stopping_criteria.model_dump() if self.stopping_criteria is not None else None,
-            "unseen_statistics": self.unseen_statistics.model_dump() if self.unseen_statistics is not None else None,
-        }
+        try:
+            return {
+                "candidates": list(self.candidates),
+                "discarded": list(self.discarded),
+                "alternatives": self.alternatives,
+                "important_attributes": self.important_attributes,
+                "stopping_criteria": (
+                    self.stopping_criteria.model_dump() if self.stopping_criteria is not None else None
+                ),
+                "unseen_statistics": (
+                    self.unseen_statistics.model_dump() if self.unseen_statistics is not None else None
+                ),
+            }
+        except KeyError:
+            return {}
 
 
 context: Context = Context()
