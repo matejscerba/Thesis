@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 node:22 as build
+FROM --platform=linux/arm64 node:22 AS build
 # Platform used because of slow `npm run build` on arm mac chip, change platform if neccessary
 
 WORKDIR /gui/app

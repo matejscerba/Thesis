@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3.12 as build
+FROM --platform=linux/amd64 python:3.12 AS build
 
 WORKDIR /server/app
 

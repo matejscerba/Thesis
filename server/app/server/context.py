@@ -50,10 +50,10 @@ class Context:
         return UIType[os.environ.get("PRODUCTION_UI_TYPE", "STOPPING_CRITERIA").upper()]
 
     @property
-    def ui_type(self) -> UIType:
+    def ui_type(self) -> Optional[UIType]:
         if AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()] == AppFlowType.PRODUCTION:
             return self.production_ui_type
-        return session["ui_type"]
+        return session.get("ui_type")
 
     @ui_type.setter
     def ui_type(self, value: UIType) -> None:

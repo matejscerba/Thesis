@@ -48,7 +48,7 @@ class EventLogger:
                         session_id TEXT NOT NULL,
                         app_flow_type TEXT NOT NULL,
                         user_study_setup TEXT NULL,
-                        ui_type TEXT NOT NULL,
+                        ui_type TEXT NULL,
                         event TEXT NOT NULL,
                         state TEXT NOT NULL,
                         data TEXT NULL
