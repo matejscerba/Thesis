@@ -45,6 +45,50 @@ body {
   padding: 20px 15%;
 }
 
+.tutorial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  overflow: scroll;
+  width: 70%;
+}
+
+.tutorial-carousel-content {
+  padding-bottom: 5rem;
+}
+
+.tutorial-carousel-content h3 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.tutorial-carousel-content h4 {
+  margin: 1rem 0;
+}
+
+.tutorial-carousel-content p {
+    margin: 1rem 0;
+}
+
+.tutorial-carousel-content img {
+  max-width: 70%;
+  max-height: 500px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.tutorial-carousel-footer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 70%;
+  background-color: #f8f9faee;
+}
+
 .categories-wrapper {
   display: flex;
   flex-wrap: wrap;

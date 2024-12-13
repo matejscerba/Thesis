@@ -8,7 +8,7 @@ import { useCategory } from "../../contexts/category";
 export function UnseenTitle() {
   return (
     <Typography variant="h5" className="text-dark mx-3">
-      Unseen
+      Unseen statistics
     </Typography>
   );
 }

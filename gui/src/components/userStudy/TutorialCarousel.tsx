@@ -23,26 +23,11 @@ function TutorialCarousel() {
 
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Box textAlign="center">{items[currentIndex]}</Box>
+      <Box className="tutorial-carousel">
+        <Box className="tutorial-carousel-content">{items[currentIndex]}</Box>
       </Box>
 
-      <Box
-        sx={{
-          pb: 4,
-          display: "flex",
-          justifyContent: "space-between",
-          position: "absolute",
-          bottom: 0,
-          width: "70%",
-        }}
-      >
+      <Box className="tutorial-carousel-footer">
         <Button variant="contained" disabled={currentIndex === 0} onClick={prevSlide}>
           Previous step
         </Button>

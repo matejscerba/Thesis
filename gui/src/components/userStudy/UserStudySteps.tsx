@@ -10,9 +10,7 @@ function UserStudySteps() {
 
   return (
     <>
-      <Typography variant="h2" className="text-center mb-3">
-        Steps
-      </Typography>
+      <Typography variant="h3">Steps</Typography>
       <div className="step-item">
         <div className="border border-secondary rounded m-2 step-inner bg-white">
           <Typography variant="h5" className="step-category-name">
@@ -21,7 +19,7 @@ function UserStudySteps() {
         </div>
       </div>
       <div>
-        <Typography variant="h3" className="text-center">
+        <Typography variant="h3">
           <i className="bi bi-arrow-down-short" />
         </Typography>
       </div>
@@ -46,7 +44,7 @@ function UserStudySteps() {
               </div>
             </div>
             <div>
-              <Typography variant="h3" className="text-center">
+              <Typography variant="h3">
                 <i className="bi bi-arrow-down-short" />
               </Typography>
             </div>
@@ -58,7 +56,7 @@ function UserStudySteps() {
             <Skeleton className="step-inner" sx={{ width: "30%", height: "150px" }} />
           </div>
           <div>
-            <Typography variant="h3" className="text-center">
+            <Typography variant="h3">
               <i className="bi bi-arrow-down-short" />
             </Typography>
           </div>
@@ -66,7 +64,7 @@ function UserStudySteps() {
             <Skeleton className="step-inner" sx={{ width: "30%", height: "150px" }} />
           </div>
           <div>
-            <Typography variant="h3" className="text-center">
+            <Typography variant="h3">
               <i className="bi bi-arrow-down-short" />
             </Typography>
           </div>
