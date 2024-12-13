@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { userStudyInitialQuestionnairePattern } from "../routes";
-import UserStudySteps from "./userStudy/UserStudySteps";
+import { userStudyInitialQuestionnairePattern } from "../../routes";
+import UserStudySteps from "./UserStudySteps";
+import TutorialIntro from "./TutorialIntro";
+import AttributesIntro from "./AttributesIntro";
+import ProductsIntro from "./ProductsIntro";
 
-function UserStudyTutorialCarousel() {
+function TutorialCarousel() {
   const navigate = useNavigate();
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [<p>Slide 1</p>, <p>Slide 2</p>, <UserStudySteps />];
+  const items = [<TutorialIntro />, <AttributesIntro />, <ProductsIntro />, <UserStudySteps />];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
@@ -41,7 +44,7 @@ function UserStudyTutorialCarousel() {
         }}
       >
         <Button variant="contained" disabled={currentIndex === 0} onClick={prevSlide}>
-          Previous
+          Previous step
         </Button>
         {currentIndex === items.length - 1 ? (
           <Button
@@ -54,7 +57,7 @@ function UserStudyTutorialCarousel() {
           </Button>
         ) : (
           <Button variant="contained" onClick={nextSlide}>
-            Next
+            Next step
           </Button>
         )}
       </Box>
@@ -62,4 +65,4 @@ function UserStudyTutorialCarousel() {
   );
 }
 
-export default UserStudyTutorialCarousel;
+export default TutorialCarousel;

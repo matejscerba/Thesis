@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { useProductsQueue } from "./productsQueue";
 
 /**
  * Represents the modal context interface.
@@ -43,6 +44,7 @@ const ModalContext = createContext<ModalContextInterface>({
 export function ModalContextProvider({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
   const [modalBody, setModalBody] = useState<React.ReactNode>(undefined);
+  const { apply } = useProductsQueue();
 
   return (
     <ModalContext.Provider
@@ -54,6 +56,9 @@ export function ModalContextProvider({ children }: { children: React.ReactNode }
           setShow(true);
         },
         hideModal: () => {
+          if (apply) {
+            apply();
+          }
           setModalBody(undefined);
           setShow(false);
         },

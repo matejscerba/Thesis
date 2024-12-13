@@ -3,7 +3,7 @@ import { Product } from "../types/product";
 import { UnseenStatistics } from "../types/statistics";
 
 /**
- * Represents the category context inteface.
+ * Represents the category context interface.
  */
 interface CategoryContextInterface {
   /**
@@ -41,14 +41,14 @@ interface CategoryContextInterface {
    *
    * @param {number} id id of the product to be discarded
    */
-  onDiscard: (id: number) => void;
+  onDiscard: (ids: number[]) => void;
 
   /**
    * Marks a product as candidate.
    *
    * @param {number} id id of the product to be marked as candidate
    */
-  onMarkCandidate: (id: number) => void;
+  onMarkCandidate: (ids: number[]) => void;
 }
 
 const CategoryContext = createContext<CategoryContextInterface>({

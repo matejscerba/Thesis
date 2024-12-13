@@ -7,6 +7,10 @@ import { DiscardProductButton, FinalChoiceSelectedButton, MoveToCandidatesButton
 interface FilteredMenuProps {
   product: Product;
   filter: MultiFilter;
+  onMarkCandidate: (productId: number) => void;
+  onDiscard: (productId: number) => void;
+  isCandidate?: boolean;
+  isDiscarded?: boolean;
 }
 
 /**
@@ -15,7 +19,7 @@ interface FilteredMenuProps {
  * @param {Product} product the product for which to display the menu
  * @constructor
  */
-function FilteredMenu({ product, filter }: FilteredMenuProps) {
+function FilteredMenu({ product, filter, onMarkCandidate, onDiscard, isCandidate, isDiscarded }: FilteredMenuProps) {
   return (
     <>
       <FinalChoiceSelectedButton
@@ -27,8 +31,16 @@ function FilteredMenu({ product, filter }: FilteredMenuProps) {
         productId={product.id}
         event={Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES}
         data={{ filter }}
+        onMarkCandidate={onMarkCandidate}
+        isActive={isCandidate}
       />
-      <DiscardProductButton productId={product.id} event={Event.FILTERED_PRODUCT_DISCARDED} data={{ filter }} />
+      <DiscardProductButton
+        productId={product.id}
+        event={Event.FILTERED_PRODUCT_DISCARDED}
+        data={{ filter }}
+        onDiscard={onDiscard}
+        isActive={isDiscarded}
+      />
     </>
   );
 }

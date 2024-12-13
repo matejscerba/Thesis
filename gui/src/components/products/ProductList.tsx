@@ -15,6 +15,7 @@ import CategorySkeleton from "../CategorySkeleton";
 import StoppingCriteriaWrapper from "../groups/StoppingCriteriaWrapper";
 import StoppingCriteriaTitleWrapper from "../groups/StoppingCriteriaTitleWrapper";
 import { useParams } from "react-router-dom";
+import { ProductsQueueContextProvider } from "../../contexts/productsQueue";
 
 /**
  * The default size of page
@@ -49,6 +50,8 @@ function ProductList({ name }: ProductListProps) {
   const [loading, setLoading] = useState<boolean>(false);
   const [candidates, setCandidates] = useState<number[]>([]);
   const [discarded, setDiscarded] = useState<number[]>([]);
+  const [queuedCandidates, setQueuedCandidates] = useState<number[]>([]);
+  const [queuedDiscarded, setQueuedDiscarded] = useState<number[]>([]);
 
   useEffect(() => {
     setLoading(true);
@@ -80,11 +83,9 @@ function ProductList({ name }: ProductListProps) {
    *
    * @param {number} id id of the product to discard
    */
-  const onDiscard = (id: number) => {
-    if (candidates.includes(id)) {
-      setCandidates((prevState) => prevState.filter((candidate) => candidate !== id));
-    }
-    setDiscarded((prevState) => [...prevState, id]);
+  const onDiscard = (ids: number[]) => {
+    setCandidates((prevState) => prevState.filter((candidate) => !ids.includes(candidate)));
+    setDiscarded((prevState) => [...prevState, ...ids]);
   };
 
   /**
@@ -92,11 +93,9 @@ function ProductList({ name }: ProductListProps) {
    *
    * @param {number} id id of the product to move to candidates
    */
-  const onMarkCandidate = (id: number) => {
-    if (discarded.includes(id)) {
-      setDiscarded((prevState) => prevState.filter((discarded) => discarded !== id));
-    }
-    setCandidates((prevState) => [...prevState, id]);
+  const onMarkCandidate = (ids: number[]) => {
+    setDiscarded((prevState) => prevState.filter((discarded) => !ids.includes(discarded)));
+    setCandidates((prevState) => [...prevState, ...ids]);
   };
 
   if (!data || loading) {
@@ -116,50 +115,67 @@ function ProductList({ name }: ProductListProps) {
 
   return (
     <div>
-      <CategoryContextProvider
-        name={name}
-        candidates={data.candidates}
-        candidateIds={candidates}
-        discarded={discarded}
-        alternatives={data.alternatives}
-        unseen={data.unseen}
-        onDiscard={onDiscard}
-        onMarkCandidate={onMarkCandidate}
+      <ProductsQueueContextProvider
+        queuedCandidates={queuedCandidates}
+        queuedDiscarded={queuedDiscarded}
+        onQueueCandidate={(productId) => {
+          setQueuedDiscarded((prevState) => prevState.filter((discarded) => discarded !== productId));
+          setQueuedCandidates((prevState) => [...prevState.filter((candidate) => candidate !== productId), productId]);
+        }}
+        onQueueDiscarded={(productId) => {
+          setQueuedCandidates((prevState) => prevState.filter((candidate) => candidate !== productId));
+          setQueuedDiscarded((prevState) => [...prevState.filter((discarded) => discarded !== productId), productId]);
+        }}
+        apply={() => {
+          onMarkCandidate(queuedCandidates);
+          onDiscard(queuedDiscarded);
+        }}
       >
-        <ModalContextProvider>
-          {data.organized ? (
-            <>
-              <Candidates />
-              <StoppingCriteriaWrapper />
-              <Alternatives />
-            </>
-          ) : (
-            <>
-              <ProductsGroup products={data.products} groupType={ProductGroupType.UNSEEN} />
-              {(data.remaining ?? 0) > 0 && (
-                <div style={{ textAlign: "center" }}>
-                  <Typography variant="body1">
-                    Showing {limit} of {limit + data.remaining} products
-                  </Typography>
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-outline-primary"
-                    onClick={() => {
-                      setLimit((prevState) => prevState + PAGE_SIZE);
-                    }}
-                  >
-                    Show {Math.min(PAGE_SIZE, data.remaining)} more products...
-                  </button>
-                </div>
-              )}
-            </>
-          )}
-          <div className="mb-3">
-            <Discarded />
-          </div>
-          <CategoryModal />
-        </ModalContextProvider>
-      </CategoryContextProvider>
+        <CategoryContextProvider
+          name={name}
+          candidates={data.candidates}
+          candidateIds={candidates}
+          discarded={discarded}
+          alternatives={data.alternatives}
+          unseen={data.unseen}
+          onDiscard={onDiscard}
+          onMarkCandidate={onMarkCandidate}
+        >
+          <ModalContextProvider>
+            {data.organized ? (
+              <>
+                <Candidates />
+                <StoppingCriteriaWrapper />
+                <Alternatives />
+              </>
+            ) : (
+              <>
+                <ProductsGroup products={data.products} groupType={ProductGroupType.UNSEEN} />
+                {(data.remaining ?? 0) > 0 && (
+                  <div style={{ textAlign: "center" }}>
+                    <Typography variant="body1">
+                      Showing {limit} of {limit + data.remaining} products
+                    </Typography>
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-outline-primary"
+                      onClick={() => {
+                        setLimit((prevState) => prevState + PAGE_SIZE);
+                      }}
+                    >
+                      Show {Math.min(PAGE_SIZE, data.remaining)} more products...
+                    </button>
+                  </div>
+                )}
+              </>
+            )}
+            <div className="mb-3">
+              <Discarded />
+            </div>
+            <CategoryModal />
+          </ModalContextProvider>
+        </CategoryContextProvider>
+      </ProductsQueueContextProvider>
     </div>
   );
 }

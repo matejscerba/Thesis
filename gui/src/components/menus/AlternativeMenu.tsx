@@ -2,6 +2,7 @@ import React from "react";
 import { Product } from "../../types/product";
 import { DiscardProductButton, FinalChoiceSelectedButton, MoveToCandidatesButton } from "./Buttons";
 import { Event } from "../../types/event";
+import { useCategory } from "../../contexts/category";
 
 interface AlternativeMenuProps {
   product: Product;
@@ -14,11 +15,25 @@ interface AlternativeMenuProps {
  * @constructor
  */
 function AlternativeMenu({ product }: AlternativeMenuProps) {
+  const { onMarkCandidate, onDiscard } = useCategory();
+
   return (
     <>
       <FinalChoiceSelectedButton productId={product.id} event={Event.ALTERNATIVE_FINAL_CHOICE_SELECTED} />
-      <MoveToCandidatesButton productId={product.id} event={Event.ALTERNATIVE_ADDED_TO_CANDIDATES} />
-      <DiscardProductButton productId={product.id} event={Event.ALTERNATIVE_DISCARDED} />
+      <MoveToCandidatesButton
+        productId={product.id}
+        event={Event.ALTERNATIVE_ADDED_TO_CANDIDATES}
+        onMarkCandidate={(productId) => {
+          onMarkCandidate([productId]);
+        }}
+      />
+      <DiscardProductButton
+        productId={product.id}
+        event={Event.ALTERNATIVE_DISCARDED}
+        onDiscard={(productId) => {
+          onDiscard([productId]);
+        }}
+      />
     </>
   );
 }

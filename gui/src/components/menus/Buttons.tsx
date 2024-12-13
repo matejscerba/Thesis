@@ -4,12 +4,12 @@ import { generatePath, useNavigate, useParams } from "react-router-dom";
 import { userStudyStepQuestionnairePattern } from "../../routes";
 import React from "react";
 import { Tooltip } from "@mui/material";
-import { useCategory } from "../../contexts/category";
 
 interface ButtonProps {
   productId: number;
   event: Event;
   data?: { [key: string]: any };
+  isActive?: boolean;
 }
 
 export function FinalChoiceSelectedButton({ productId, event, data }: ButtonProps) {
@@ -32,14 +32,22 @@ export function FinalChoiceSelectedButton({ productId, event, data }: ButtonProp
   );
 }
 
-export function MoveToCandidatesButton({ productId, event, data }: ButtonProps) {
-  const { onMarkCandidate } = useCategory();
+interface MoveToCandidatesButtonProps extends ButtonProps {
+  onMarkCandidate: (productId: number) => void;
+}
 
+export function MoveToCandidatesButton({
+  productId,
+  event,
+  data,
+  onMarkCandidate,
+  isActive,
+}: MoveToCandidatesButtonProps) {
   return (
     <Tooltip title="Move to candidates">
       <button
         type="button"
-        className="btn btn-sm btn-outline-success me-2"
+        className={`btn btn-sm ${isActive ? "btn-success" : "btn-outline-success"} me-2`}
         onClick={() => {
           logEvent(event, { product_id: productId, ...(data ?? {}) });
           onMarkCandidate(productId);
@@ -51,14 +59,16 @@ export function MoveToCandidatesButton({ productId, event, data }: ButtonProps) 
   );
 }
 
-export function DiscardProductButton({ productId, event, data }: ButtonProps) {
-  const { onDiscard } = useCategory();
+interface DiscardProductButtonProps extends ButtonProps {
+  onDiscard: (productId: number) => void;
+}
 
+export function DiscardProductButton({ productId, event, data, onDiscard, isActive }: DiscardProductButtonProps) {
   return (
     <Tooltip title="Discard">
       <button
         type="button"
-        className="btn btn-sm btn-outline-danger"
+        className={`btn btn-sm ${isActive ? "btn-danger" : "btn-outline-danger"}`}
         onClick={() => {
           logEvent(event, { product_id: productId, ...(data ?? {}) });
           onDiscard(productId);

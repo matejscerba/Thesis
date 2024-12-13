@@ -10,7 +10,7 @@ import { useInViewport } from "react-in-viewport";
 export function DiscardedTitle() {
   return (
     <Typography variant="h5" className="text-danger mx-3">
-      Discarded
+      Discarded products
     </Typography>
   );
 }

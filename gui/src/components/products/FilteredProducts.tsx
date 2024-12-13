@@ -8,6 +8,7 @@ import { MultiFilter } from "../../types/attribute";
 import { useCategory } from "../../contexts/category";
 import { getFilterText } from "../../utils/attributes";
 import FilteredMenu from "../menus/FilteredMenu";
+import { useProductsQueue } from "../../contexts/productsQueue";
 
 interface FilteredProductsProps {
   filter: MultiFilter;
@@ -21,6 +22,7 @@ interface FilteredProductsProps {
  * @constructor
  */
 function FilteredProducts({ filter }: FilteredProductsProps) {
+  const { queuedCandidates, queuedDiscarded, onQueueCandidate, onQueueDiscarded } = useProductsQueue();
   const { name, candidateIds, discarded } = useCategory();
 
   const [products, setProducts] = useState<ProductModel[]>(undefined);
@@ -65,7 +67,16 @@ function FilteredProducts({ filter }: FilteredProductsProps) {
               className="border border-secondary rounded bg-white"
               key={`${product.id}`}
               product={product}
-              menu={<FilteredMenu product={product} filter={filter} />}
+              menu={
+                <FilteredMenu
+                  product={product}
+                  filter={filter}
+                  onMarkCandidate={onQueueCandidate}
+                  onDiscard={onQueueDiscarded}
+                  isCandidate={queuedCandidates.includes(product.id)}
+                  isDiscarded={queuedDiscarded.includes(product.id)}
+                />
+              }
             />
           ))}
         </List>

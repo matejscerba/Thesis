@@ -22,9 +22,9 @@ export function getUITypeText(uiType: UIType): string {
 export function getUITypeImageFilename(uiType: UIType): string {
   switch (uiType) {
     case UIType.STOPPING_CRITERIA:
-      return "stopping_criteria.png";
+      return "stopping_criteria_questionnaire.png";
     case UIType.UNSEEN_STATISTICS:
-      return "unseen_statistics.png";
+      return "unseen_statistics_questionnaire.png";
     default:
       return "";
   }
