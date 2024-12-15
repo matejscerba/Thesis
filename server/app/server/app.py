@@ -25,6 +25,8 @@ def create_app() -> Flask:
     app.config["SESSION_TYPE"] = "filesystem"
     app.config["SESSION_FILE_DIR"] = session_file_dir
     app.config["SECRET_KEY"] = os.environ["SESSION_SECRET_KEY"]
+    app.config["SESSION_COOKIE_SAMESITE"] = "None"
+    app.config["SESSION_COOKIE_SECURE"] = True
 
     # Set up json encoder
     app.json.default = json_default  # type: ignore[attr-defined]
