@@ -9,7 +9,7 @@ function ProductsIntro() {
         The products are organized in a single list when you open a category, you can perform three actions with each
         product by clicking a button in the right part of the product's box:
         <ul>
-          <li>Select it as your final choice and go to a questionnaire</li>
+          <li>Select it as your final choice and go to the next step</li>
           <li>Move it to Candidates</li>
           <li>Discard it</li>
         </ul>

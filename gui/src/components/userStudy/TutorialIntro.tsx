@@ -10,7 +10,10 @@ function TutorialIntro() {
       <Typography variant="h4" className="mb-3">
         User study
       </Typography>
-      <Typography variant="body1">Lorem ipsum</Typography>
+      <Typography variant="body1">
+        The purpose of this system is to gather user data and evaluate two different interfaces that can be used in
+        e-shops.
+      </Typography>
     </div>
   );
 }
