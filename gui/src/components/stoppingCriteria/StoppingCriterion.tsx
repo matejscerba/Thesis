@@ -13,6 +13,13 @@ interface StoppingCriterionProps {
   criterion: StoppingCriterionItem;
 }
 
+/**
+ * This component renders a single stopping criterion.
+ *
+ * @param {StoppingCriterionProps} props
+ * @param {StoppingCriterionItem} props.criterion the stopping criterion to be rendered
+ * @constructor
+ */
 function StoppingCriterion({ criterion }: StoppingCriterionProps) {
   const { presentModal } = useModal();
   const { debug } = useConfig();

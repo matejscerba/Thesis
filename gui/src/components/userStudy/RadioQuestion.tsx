@@ -6,6 +6,14 @@ interface RadioQuestionProps {
   onChange: (response: string) => void;
 }
 
+/**
+ * This component renders a radio question.
+ *
+ * @param {RadioQuestionProps} props
+ * @param {string[]} props.options the options from which one can be selected
+ * @param {(response: string) => void} props.onChange action to perform when response is changed
+ * @constructor
+ */
 function RadioQuestion({ options, onChange }: RadioQuestionProps) {
   const [response, setResponse] = useState<string | null>(null);
 
@@ -17,7 +25,7 @@ function RadioQuestion({ options, onChange }: RadioQuestionProps) {
         setResponse(event.target.value);
         onChange(options[Number.parseInt(event.target.value) - 1]);
       }}
-      sx={{ justifyContent: "center", mt: "16px" }}
+      className="mt-2 justify-content-center"
     >
       {options.map((label, index) => (
         <FormControlLabel
@@ -26,7 +34,7 @@ function RadioQuestion({ options, onChange }: RadioQuestionProps) {
           control={<Radio />}
           label={label}
           labelPlacement="top"
-          sx={{ margin: "0 8px" }}
+          className="me-1"
         />
       ))}
     </RadioGroup>

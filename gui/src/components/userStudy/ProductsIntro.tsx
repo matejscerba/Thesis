@@ -1,6 +1,11 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
 
+/**
+ * This component renders a tutorial introduction for products.
+ *
+ * @constructor
+ */
 function ProductsIntro() {
   return (
     <div>

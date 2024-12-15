@@ -20,9 +20,10 @@ interface ProductProps {
 /**
  * This component renders a product.
  *
- * @param {string} className a className to be passed to the outermost <div>
- * @param {ProductModel} product the product to be rendered
- * @param {React.ReactNode} menu the menu of the product to be displayed
+ * @param{ProductProps} props
+ * @param {string} props.className a className to be passed to the outermost <div>
+ * @param {ProductModel} props.product the product to be rendered
+ * @param {React.ReactNode} props.menu the menu of the product to be displayed
  * @constructor
  */
 function Product({ className, product, menu }: ProductProps) {
@@ -63,7 +64,7 @@ function Product({ className, product, menu }: ProductProps) {
             </div>
             <div className="product-main-info">
               <Typography variant="h6">{product.name}</Typography>
-              <Typography variant="body1" className="fit-content d-inline-block" sx={{ float: "right" }}>
+              <Typography variant="body1" className="fit-content d-inline-block float-end">
                 {product.rating ?? "-"} <i className="bi bi-star-fill text-warning" />
               </Typography>
             </div>

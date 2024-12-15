@@ -15,10 +15,10 @@ interface FilteredProductsProps {
 }
 
 /**
- * This component filters the products based on the value provided.
+ * This component filters the products based on the filter provided.
  *
- * @param {Attribute} attribute attribute over which the filter is to be applied
- * @param {FilterValue} value the filter value - giving the range or possible options
+ * @param {FilteredProductsProps} props
+ * @param {MultiFilter} props.filter the filter to be applied
  * @constructor
  */
 function FilteredProducts({ filter }: FilteredProductsProps) {

@@ -7,6 +7,11 @@ import TutorialIntro from "./TutorialIntro";
 import AttributesIntro from "./AttributesIntro";
 import ProductsIntro from "./ProductsIntro";
 
+/**
+ * This component renders a carousel that shows the tutorial for the whole system.
+ *
+ * @constructor
+ */
 function TutorialCarousel() {
   const navigate = useNavigate();
 

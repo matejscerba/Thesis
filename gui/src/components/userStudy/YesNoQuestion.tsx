@@ -6,6 +6,13 @@ interface YesNoQuestionProps {
   onChange: (response: string, whyResponse: string | null | undefined) => void;
 }
 
+/**
+ * This component renders a yes/no question. If the answer is "No", then a "Why?" open-end text field is rendered.
+ *
+ * @param {YesNoQuestionProps} props
+ * @param {(response: string, whyResponse: string | null | undefined) => void} props.onChange action to perform when response is changed
+ * @constructor
+ */
 function YesNoQuestion({ onChange }: YesNoQuestionProps) {
   const yesNoResponses = ["Yes", "No"];
 

@@ -11,11 +11,12 @@ interface ExplanationAttributeProps {
 }
 
 /**
- * This component renders an attibute with its explanations.
+ * This component renders an attribute with its explanations.
  *
- * @param {Attribute} attribute attribute to be rendered
- * @param {any} value value of the attribute to be rendered
- * @param {string} position position of the attribute's value - the type of explanation
+ * @param {ExplanationAttributeProps} props
+ * @param {Attribute} props.attribute attribute to be rendered
+ * @param {FilterValue} props.filter filter of the attribute to be rendered
+ * @param {string} props.position position of the attribute's value - the type of explanation
  * @constructor
  */
 function ExplanationAttribute({ attribute, filter, position }: ExplanationAttributeProps) {

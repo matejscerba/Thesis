@@ -10,7 +10,7 @@ import { useConfig } from "../contexts/config";
 import { AppFlowType } from "../types/config";
 
 /**
- * This component loads the category page layout.
+ * This component renders the category page.
  *
  * @constructor
  */

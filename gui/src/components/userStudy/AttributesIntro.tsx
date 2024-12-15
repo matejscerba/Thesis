@@ -1,6 +1,11 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 
+/**
+ * This component renders a tutorial introduction for attributes.
+ *
+ * @constructor
+ */
 function AttributesIntro() {
   return (
     <div>

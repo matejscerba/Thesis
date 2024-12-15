@@ -10,11 +10,12 @@ interface AttributeOptionProps {
 }
 
 /**
- * This component renders an option of a attribute.
+ * This component renders an option of an attribute.
  *
- * @param {any} option the value of the option to render
- * @param {Attribute} attribute the attribute to which the option belongs
- * @param {boolean} selected specifies whether the option is selected and should thus be highlighted
+ * @param {AttributeOptionProps} props
+ * @param {any} props.option the value of the option to render
+ * @param {Attribute} props.attribute the attribute to which the option belongs
+ * @param {boolean} props.selected specifies whether the option is selected and should thus be highlighted
  * @constructor
  */
 function AttributeOption({ option, attribute, selected }: AttributeOptionProps) {

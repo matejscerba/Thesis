@@ -45,7 +45,7 @@ export interface AttributeStatistics {
  */
 export interface UnseenStatistics {
   /**
-   * Statistics of several attributes. Typically the important ones.
+   * Statistics of several attributes. Typically, the important ones.
    */
   attributes: AttributeStatistics[];
 }

@@ -11,7 +11,8 @@ interface AlternativeMenuProps {
 /**
  * This component renders menu of an alternative product.
  *
- * @param {Product} product the product for which to display the menu
+ * @param {AlternativeMenuProps} props
+ * @param {Product} props.product the product for which to display the menu
  * @constructor
  */
 function AlternativeMenu({ product }: AlternativeMenuProps) {

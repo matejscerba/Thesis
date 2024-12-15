@@ -1,7 +1,7 @@
 import RadioQuestion from "./RadioQuestion";
 import Typography from "@mui/material/Typography";
 import React from "react";
-import { getUITypeImageFilename, getUITypeText } from "../../types/config";
+import { getUITypeImageFilename, getUITypeText } from "../../utils/config";
 import { capitalizeFirstLetter } from "../../utils/tools";
 import { useConfig } from "../../contexts/config";
 
@@ -9,6 +9,13 @@ interface UITypeComparisonQuestionProps {
   onChange: (response: string) => void;
 }
 
+/**
+ * This component renders a UI type comparison question.
+ *
+ * @param {UITypeComparisonQuestionProps} props
+ * @param {(response: string) => void} props.onChange action to perform when response is changed
+ * @constructor
+ */
 function UITypeComparisonQuestion({ onChange }: UITypeComparisonQuestionProps) {
   const { getUIType } = useConfig();
 
@@ -33,17 +40,17 @@ function UITypeComparisonQuestion({ onChange }: UITypeComparisonQuestionProps) {
     <>
       <RadioQuestion options={uiTypeComparisonResponses} onChange={onChange} />
       <div className="d-flex justify-content-between align-items-center px-4 py-2">
-        <div style={{ maxWidth: "40%" }}>
+        <div className="ui-type-comparison-item">
           <Typography variant="body1" className="text-center">
             {firstUITypeTextCapitalized}
           </Typography>
-          <img style={{ maxWidth: "100%" }} src={`/media/images/${firstUITypeImageFilename}`} alt={firstUITypeText} />
+          <img src={`/media/images/${firstUITypeImageFilename}`} alt={firstUITypeText} />
         </div>
-        <div style={{ maxWidth: "40%" }}>
+        <div className="ui-type-comparison-item">
           <Typography variant="body1" className="text-center">
             {secondUITypeTextCapitalized}
           </Typography>
-          <img style={{ maxWidth: "100%" }} src={`/media/images/${secondUITypeImageFilename}`} alt={secondUITypeText} />
+          <img src={`/media/images/${secondUITypeImageFilename}`} alt={secondUITypeText} />
         </div>
       </div>
     </>

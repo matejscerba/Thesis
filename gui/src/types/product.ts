@@ -5,7 +5,7 @@ import { Attribute } from "./attribute";
  */
 export interface Product {
   /**
-   * Id of the product.
+   * ID of the product.
    */
   id: number;
 
@@ -80,13 +80,22 @@ export enum ProductAttributePosition {
   LOWER_RATED = "lower_rated",
 }
 
+/**
+ * Represents the message code of a product explanation.
+ */
 export enum ProductExplanationMessageCode {
   NONE = "none",
   BETTER_THAN_ALL_CANDIDATES = "better_than_all_candidates",
   WORSE_THAN_ALL_CANDIDATES = "worse_than_all_candidates",
 }
 
+/**
+ * Represents the message of a product explanation.
+ */
 export interface ProductExplanationMessage {
+  /**
+   * The code of the message.
+   */
   code: string;
 }
 
@@ -120,13 +129,13 @@ export interface ProductExplanation {
   message: ProductExplanationMessage;
 
   /**
-   * Explanations of several attributes. Typically the important ones.
+   * Explanations of several attributes. Typically, the important ones.
    */
   attributes: ProductAttributeExplanation[];
 }
 
 /**
- * Represents type of a product group.
+ * Represents type of product group.
  */
 export enum ProductGroupType {
   CANDIDATES = "candidates",

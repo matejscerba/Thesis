@@ -12,6 +12,15 @@ interface ButtonProps {
   isActive?: boolean;
 }
 
+/**
+ * This component renders a button that handles selecting a product as a final choice.
+ *
+ * @param {ButtonProps} props
+ * @param {number} props.productId the ID of the product for which to render this button
+ * @param {Event} props.event the event that is triggered when this button is clicked
+ * @param {{ [key: string]: any }} props.data the data of the event
+ * @constructor
+ */
 export function FinalChoiceSelectedButton({ productId, event, data }: ButtonProps) {
   const { step } = useParams();
   const navigate = useNavigate();
@@ -36,6 +45,17 @@ interface MoveToCandidatesButtonProps extends ButtonProps {
   onMarkCandidate: (productId: number) => void;
 }
 
+/**
+ * This component renders a button that handles moving a product to candidates.
+ *
+ * @param {ButtonProps} props
+ * @param {number} props.productId the ID of the product for which to render this button
+ * @param {Event} props.event the event that is triggered when this button is clicked
+ * @param {{ [key: string]: any }} props.data the data of the event
+ * @param {(productId: number) => void} props.onMarkCandidate the action to perform when this button is clicked
+ * @param {boolean} props.isActive whether the button is active (clicked)
+ * @constructor
+ */
 export function MoveToCandidatesButton({
   productId,
   event,
@@ -63,6 +83,17 @@ interface DiscardProductButtonProps extends ButtonProps {
   onDiscard: (productId: number) => void;
 }
 
+/**
+ * This component renders a button that handles discarding a product.
+ *
+ * @param {ButtonProps} props
+ * @param {number} props.productId the ID of the product for which to render this button
+ * @param {Event} props.event the event that is triggered when this button is clicked
+ * @param {{ [key: string]: any }} props.data the data of the event
+ * @param {(productId: number) => void} props.onDiscard the action to perform when this button is clicked
+ * @param {boolean} props.isActive whether the button is active (clicked)
+ * @constructor
+ */
 export function DiscardProductButton({ productId, event, data, onDiscard, isActive }: DiscardProductButtonProps) {
   return (
     <Tooltip title="Discard">

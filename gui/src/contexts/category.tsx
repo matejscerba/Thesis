@@ -37,16 +37,16 @@ interface CategoryContextInterface {
   unseen: UnseenStatistics;
 
   /**
-   * Discards a product.
+   * Discards products.
    *
-   * @param {number} id id of the product to be discarded
+   * @param {number[]} ids ids of the products to be discarded
    */
   onDiscard: (ids: number[]) => void;
 
   /**
-   * Marks a product as candidate.
+   * Marks products as candidates.
    *
-   * @param {number} id id of the product to be marked as candidate
+   * @param {number[]} ids ids of the products to be marked as candidates
    */
   onMarkCandidate: (ids: number[]) => void;
 }
@@ -69,14 +69,15 @@ interface CategoryContextProviderProps extends CategoryContextInterface {
 /**
  * This component wraps its children into context providing all information regarding the category and its organization.
  *
- * @param {string} name the name of the category
- * @param {Product[]} candidates the candidate products
- * @param {number[]} discarded the ids of the discarded products
- * @param {Product[]} alternatives the alternative products
- * @param {UnseenStatistics} unseen the statistics describing the not yet seen products
- * @param {React.ReactNode} children the children (react node) to be wrapped into this provider
- * @param {function(number): void} onDiscard the method of discarding product
- * @param {function(number): void} onMarkCandidate the method of moving product to candidates
+ * @param {CategoryContextProviderProps} props
+ * @param {string} props.name the name of the category
+ * @param {Product[]} props.candidates the candidate products
+ * @param {number[]} props.discarded the ids of the discarded products
+ * @param {Product[]} props.alternatives the alternative products
+ * @param {UnseenStatistics} props.unseen the statistics describing not yet seen products
+ * @param {React.ReactNode} props.children the children (react node) to be wrapped into this provider
+ * @param {(ids: number[]) => void} props.onDiscard the method of discarding products
+ * @param {(ids: number[]) => void} props.onMarkCandidate the method of moving products to candidates
  * @constructor
  */
 export function CategoryContextProvider({

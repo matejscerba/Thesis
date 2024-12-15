@@ -6,6 +6,14 @@ interface OpenQuestionProps {
   label?: string;
 }
 
+/**
+ * This component renders an open-end question.
+ *
+ * @param {OpenQuestionProps} props
+ * @param {(response: string) => void} props.onChange action to perform when response is changed
+ * @param {string} props.label label of the question, default is "Response"
+ * @constructor
+ */
 function OpenQuestion({ onChange, label = "Response" }: OpenQuestionProps) {
   const [response, setResponse] = useState<string | null>("");
 
@@ -14,7 +22,7 @@ function OpenQuestion({ onChange, label = "Response" }: OpenQuestionProps) {
       <TextField
         multiline
         rows={3}
-        sx={{ width: "50%" }}
+        className="w-50"
         label={label}
         value={response}
         onChange={(event) => {

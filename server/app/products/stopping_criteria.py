@@ -45,6 +45,4 @@ class StoppingCriterionItem(BaseModel):
 
 
 class StoppingCriteria(BaseModel):
-    preference_detected: bool
-    reached: bool
     items: List[StoppingCriterionItem]

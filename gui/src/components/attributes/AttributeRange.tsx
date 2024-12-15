@@ -17,10 +17,11 @@ interface AttributeRangeProps {
 /**
  * This component renders a range of an attribute.
  *
- * @param {Attribute} attribute attribute which range to render
- * @param {FilterValue} value specification of the range by means of value
- * @param {number} numProductsInRange number of products in the range defined by `value` parameter
- * @param {React.ReactNode} children react node to display inside this component
+ * @param {AttributeRangeProps} props
+ * @param {Attribute} props.attribute attribute which range to render
+ * @param {FilterValue} props.value specification of the range by means of value
+ * @param {number} props.numProductsInRange number of products in the range defined by `value` parameter
+ * @param {React.ReactNode} props.children react node to display inside this component
  * @constructor
  */
 function AttributeRange({ attribute, value, numProductsInRange, children }: AttributeRangeProps) {

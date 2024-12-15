@@ -5,6 +5,11 @@ import CategoricalAttributeRange from "../attributes/CategoricalAttributeRange";
 import { AttributeType } from "../../types/attribute";
 import { useCategory } from "../../contexts/category";
 
+/**
+ * This component renders title of the section describing important attributes of not yet seen products.
+ *
+ * @constructor
+ */
 export function UnseenTitle() {
   return (
     <Typography variant="h5" className="text-dark mx-3">
@@ -14,7 +19,7 @@ export function UnseenTitle() {
 }
 
 /**
- * This component renders the section describing important attributes of the not yet seen products.
+ * This component renders the section describing important attributes of not yet seen products.
  *
  * @constructor
  */

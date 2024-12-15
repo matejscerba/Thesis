@@ -1,6 +1,11 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
 
+/**
+ * This component renders a tutorial introduction for the whole user study.
+ *
+ * @constructor
+ */
 function TutorialIntro() {
   return (
     <div>

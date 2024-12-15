@@ -6,6 +6,11 @@ import { Event } from "../types/event";
 import { QuestionType } from "../types/questionnaire";
 import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 
+/**
+ * This component renders the overall user study questionnaire.
+ *
+ * @constructor
+ */
 function OverallQuestionnaire() {
   const navigate = useNavigate();
 

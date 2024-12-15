@@ -171,13 +171,9 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteria):
         )
 
         items = [item for item in items if item.metric > cls.preference_threshold]
-        preference_detected = len(items) > 0
 
         items.sort(key=operator.attrgetter("metric_with_complexity"), reverse=True)
 
         items = cls.post_process(initial_items=items)
 
-        # if len(items) > 5:
-        #     items = items[:5]
-
-        return StoppingCriteria(preference_detected=preference_detected, reached=len(items) == 0, items=items)
+        return StoppingCriteria(items=items)

@@ -5,7 +5,12 @@ import { useParams } from "react-router-dom";
 import { UIType } from "../../types/config";
 import { UnseenTitle } from "./Unseen";
 
-function StoppingCriteriaTitleWrapper() {
+/**
+ * This component renders the title of the UI type (Stopping criteria or Unseen statistics).
+ *
+ * @constructor
+ */
+function UITypeTitle() {
   const { getUIType } = useConfig();
   const { step } = useParams();
 
@@ -19,4 +24,4 @@ function StoppingCriteriaTitleWrapper() {
   }
 }
 
-export default StoppingCriteriaTitleWrapper;
+export default UITypeTitle;

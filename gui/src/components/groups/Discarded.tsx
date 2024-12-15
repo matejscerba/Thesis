@@ -7,6 +7,11 @@ import ProductsGroup from "./ProductsGroup";
 import CategorySkeleton from "../CategorySkeleton";
 import { useInViewport } from "react-in-viewport";
 
+/**
+ * This component renders the title of discarded products.
+ *
+ * @constructor
+ */
 export function DiscardedTitle() {
   return (
     <Typography variant="h5" className="text-danger mx-3">

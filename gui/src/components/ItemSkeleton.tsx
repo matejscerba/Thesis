@@ -1,17 +1,15 @@
 import React from "react";
 import { Skeleton } from "@mui/material";
 
+/**
+ * This component renders skeleton of a category section item.
+ *
+ * @constructor
+ */
 function ItemSkeleton() {
   return (
-    <div className="m-3" style={{ height: 190 }}>
-      <Skeleton
-        height={190}
-        style={{
-          transform: "scale(1, 1)",
-          borderRadius: "var(--bs-border-radius) !important",
-        }}
-        component="div"
-      />
+    <div className="m-3 item-skeleton-wrapper">
+      <Skeleton className="item-skeleton border-radius" component="div" />
     </div>
   );
 }

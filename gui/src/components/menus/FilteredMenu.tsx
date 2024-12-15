@@ -16,7 +16,13 @@ interface FilteredMenuProps {
 /**
  * This component renders menu of a filtered product.
  *
- * @param {Product} product the product for which to display the menu
+ * @param {FilteredMenuProps} props
+ * @param {Product} props.product the product for which to display the menu
+ * @param {MultiFilter} props.filter the filter that is applied
+ * @param {(productId: number) => void} props.onMarkCandidate action to perform when product is marked as candidate
+ * @param {(productId: number) => void} props.onDiscard action to perform when product is discarded
+ * @param {boolean} props.isCandidate whether product is candidate
+ * @param {boolean} props.isDiscarded whether product is discarded
  * @constructor
  */
 function FilteredMenu({ product, filter, onMarkCandidate, onDiscard, isCandidate, isDiscarded }: FilteredMenuProps) {

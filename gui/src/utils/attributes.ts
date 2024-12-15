@@ -2,7 +2,7 @@ import { Attribute, AttributeOrder, FilterValue, MultiFilter, PRICE } from "../t
 import { ProductAttributePosition } from "../types/product";
 
 /**
- * Converts value of an attribute to string. Typically adds a unit if attribute has any.
+ * Converts value of an attribute to string. Typically, adds a unit if attribute has any.
  *
  * @param {any} value value of an attribute
  * @param {Attribute} attribute the attribute to gather information about unit and format from
@@ -43,22 +43,6 @@ export function getColor(position: string): string {
       return "danger";
     default:
       return undefined;
-  }
-}
-
-/**
- * Gets bootstrap color name of text for given explanation position.
- *
- * @param {string} position position (explanation) to get the value from
- * @return {string} name of the bootstrap color compliant to the explanation position
- */
-export function getTextColor(position: string): string {
-  switch (position) {
-    case ProductAttributePosition.NEUTRAL.valueOf():
-    case ProductAttributePosition.RELEVANT.valueOf():
-      return "dark";
-    default:
-      return getColor(position);
   }
 }
 
@@ -153,7 +137,7 @@ export function getPositionText(position: string, override: string = "value", or
  *
  * @param {Attribute} attribute attribute over which filter is applied
  * @param {FilterValue} value value of the filter to be described
- * @return {string} textual representation of the filter
+ * @return {string} textual representation of the filter value
  */
 export function getFilterValueText(attribute: Attribute, value: FilterValue): string {
   if (value.options !== undefined && value.options !== null) {
@@ -171,6 +155,12 @@ export function getFilterValueText(attribute: Attribute, value: FilterValue): st
   return "-";
 }
 
+/**
+ * Gets text for filter.
+ *
+ * @param {MultiFilter} filter filter for which to get the textual representation
+ * @return {string} textual representation of the filter
+ */
 export function getFilterText(filter: MultiFilter): string {
   const validItems = filter.filter(
     (item) =>

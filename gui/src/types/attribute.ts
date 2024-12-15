@@ -1,9 +1,9 @@
 /**
- * Represents a attribute.
+ * Represents as attribute.
  */
 export interface Attribute {
   /**
-   * Full name of the attribute. Typically contains unit in square brackets.
+   * Full name of the attribute. Typically, contains unit in square brackets.
    */
   full_name: string;
 
@@ -58,24 +58,57 @@ export interface FilterValue {
   options?: any[];
 }
 
+/**
+ * Represents filter of an attribute's values as returned by the server.
+ */
 export interface FilterValueResponse {
+  /**
+   * The lower bound of a numerical attribute.
+   */
   lower_bound?: number;
+
+  /**
+   * The upper bound of a numerical attribute.
+   */
   upper_bound?: number;
+
+  /**
+   * Values of the attribute to be filtered.
+   */
   options?: any[];
 }
 
+/**
+ * Represents filter of an attribute's values.
+ */
 export interface MultiFilterItem {
+  /**
+   * The attribute which values are filtered.
+   */
   attribute: Attribute;
+
+  /**
+   * The filter of the attribute's values.
+   */
   filter: FilterValue;
 }
 
+/**
+ * Represents filter of multiple attributes' values.
+ */
 export type MultiFilter = MultiFilterItem[];
 
+/**
+ * Represents the type of attribute.
+ */
 export enum AttributeType {
   CATEGORICAL = "categorical",
   NUMERICAL = "numerical",
 }
 
+/**
+ * Represents the order of attribute.
+ */
 export enum AttributeOrder {
   ASCENDING = "asc",
   DESCENDING = "desc",

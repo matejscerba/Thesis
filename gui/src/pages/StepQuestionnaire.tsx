@@ -1,5 +1,5 @@
 import React from "react";
-import { getUITypeText } from "../types/config";
+import { getUITypeText } from "../utils/config";
 import { logEvent } from "../utils/api";
 import { generatePath, useNavigate, useParams } from "react-router-dom";
 import { userStudyOverallQuestionnairePattern, userStudyStepCategoryPattern } from "../routes";
@@ -8,6 +8,11 @@ import { QuestionType } from "../types/questionnaire";
 import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 import { useConfig } from "../contexts/config";
 
+/**
+ * This component renders the questionnaire after a user study step.
+ *
+ * @constructor
+ */
 function StepQuestionnaire() {
   const navigate = useNavigate();
   const { step } = useParams();

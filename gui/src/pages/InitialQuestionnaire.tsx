@@ -7,6 +7,11 @@ import { QuestionType } from "../types/questionnaire";
 import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
 import { useConfig } from "../contexts/config";
 
+/**
+ * This component renders the initial user study questionnaire.
+ *
+ * @constructor
+ */
 function InitialQuestionnaire() {
   const navigate = useNavigate();
   const { getCategoryName } = useConfig();

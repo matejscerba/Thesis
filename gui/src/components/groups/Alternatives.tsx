@@ -4,6 +4,11 @@ import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
 import { ProductGroupType } from "../../types/product";
 
+/**
+ * This component renders the title of alternative products.
+ *
+ * @constructor
+ */
 export function AlternativesTitle() {
   return (
     <Typography variant="h5" className="text-primary mx-3">

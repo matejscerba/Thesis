@@ -11,6 +11,14 @@ interface QuestionProps {
   onChange: (response: Response) => void;
 }
 
+/**
+ * This component renders a question.
+ *
+ * @param {QuestionProps} props
+ * @param {QuestionInterface} props.question the question to be rendered
+ * @param {(response: Response) => void} props.onChange action to perform when response is changed
+ * @constructor
+ */
 function Question({ question, onChange }: QuestionProps) {
   const likertResponses = [
     "Strongly Disagree",

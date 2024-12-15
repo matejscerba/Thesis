@@ -12,8 +12,8 @@ import Discarded, { DiscardedTitle } from "../groups/Discarded";
 import Typography from "@mui/material/Typography";
 import CategoryModal from "../CategoryModal";
 import CategorySkeleton from "../CategorySkeleton";
-import StoppingCriteriaWrapper from "../groups/StoppingCriteriaWrapper";
-import StoppingCriteriaTitleWrapper from "../groups/StoppingCriteriaTitleWrapper";
+import UITypeContent from "../groups/UITypeContent";
+import UITypeTitle from "../groups/UITypeTitle";
 import { useParams } from "react-router-dom";
 import { ProductsQueueContextProvider } from "../../contexts/productsQueue";
 
@@ -38,7 +38,8 @@ interface ProductListProps {
 /**
  * This component renders the contents of a category - its products.
  *
- * @param {string} name then name of the category
+ * @param {ProductListProps} props
+ * @param {string} props.name then name of the category
  * @constructor
  */
 function ProductList({ name }: ProductListProps) {
@@ -79,9 +80,9 @@ function ProductList({ name }: ProductListProps) {
   }, [candidates, discarded, limit, attributeNames]);
 
   /**
-   * Moves product of given id to the discarded set.
+   * Moves products of given ids to the discarded set.
    *
-   * @param {number} id id of the product to discard
+   * @param {number[]} ids ids of the products to discard
    */
   const onDiscard = (ids: number[]) => {
     setCandidates((prevState) => prevState.filter((candidate) => !ids.includes(candidate)));
@@ -89,21 +90,22 @@ function ProductList({ name }: ProductListProps) {
   };
 
   /**
-   * Moves product of given id to the candidates set.
+   * Moves products of given ids to the candidates set.
    *
-   * @param {number} id id of the product to move to candidates
+   * @param {number[]} ids ids of the products to move to candidates
    */
   const onMarkCandidate = (ids: number[]) => {
     setDiscarded((prevState) => prevState.filter((discarded) => !ids.includes(discarded)));
     setCandidates((prevState) => [...prevState, ...ids]);
   };
 
+  // Render skeletons if data is not loaded yet
   if (!data || loading) {
     if (candidates.length > 0) {
       return (
         <>
           <CategorySkeleton title={<CandidatesTitle />} numItems={candidates.length} />
-          <CategorySkeleton title={<StoppingCriteriaTitleWrapper />} />
+          <CategorySkeleton title={<UITypeTitle />} />
           <CategorySkeleton title={<AlternativesTitle />} numItems={10} />
           <CategorySkeleton title={<DiscardedTitle />} numItems={discarded.length} />
         </>
@@ -145,14 +147,14 @@ function ProductList({ name }: ProductListProps) {
             {data.organized ? (
               <>
                 <Candidates />
-                <StoppingCriteriaWrapper />
+                <UITypeContent />
                 <Alternatives />
               </>
             ) : (
               <>
                 <ProductsGroup products={data.products} groupType={ProductGroupType.UNSEEN} />
                 {(data.remaining ?? 0) > 0 && (
-                  <div style={{ textAlign: "center" }}>
+                  <div className="text-center">
                     <Typography variant="body1">
                       Showing {limit} of {limit + data.remaining} products
                     </Typography>

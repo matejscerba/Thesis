@@ -4,6 +4,11 @@ import { useCategory } from "../../contexts/category";
 import ProductsGroup from "./ProductsGroup";
 import { ProductGroupType } from "../../types/product";
 
+/**
+ * This component renders the title of candidate products.
+ *
+ * @constructor
+ */
 export function CandidatesTitle() {
   return (
     <Typography variant="h5" className="text-success mx-3">

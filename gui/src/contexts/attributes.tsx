@@ -68,21 +68,22 @@ interface AttributesContextProviderProps {
 /**
  * This component wraps its children into context providing all information regarding the attributes.
  *
- * @param {string} category the name of the category
- * @param {React.ReactNode} children the children (react node) to be wrapped into this provider
+ * @param {AttributesContextProviderProps} props
+ * @param {string} props.category the name of the category
+ * @param {React.ReactNode} props.children the children (react node) to be wrapped into this provider
  * @constructor
  */
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
   const [importantAttributes, setImportantAttributes] = useState<string[]>([
-    PRICE,
-    // "SSD capacity [GB]",
-    // 'Display size ["]',
-    // "Size of operational RAM [GB]",
-    // "Number of processor cores",
-    // "Weight [kg]",
+    PRICE, // Set price as an important attribute by default
   ]);
 
+  /**
+   * Adds an attribute to important attributes.
+   *
+   * @param {string} attribute the name of the attribute to be added to important attributes
+   */
   const addAttribute = (attribute: string) => {
     setImportantAttributes((prevState) => {
       const nextState = [...prevState, attribute];
@@ -91,6 +92,11 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     });
   };
 
+  /**
+   * Removes an attribute from important attributes.
+   *
+   * @param {string} attribute the name of the attribute to be removed from important attributes
+   */
   const removeAttribute = (attribute: string) => {
     setImportantAttributes((prevState) => {
       const nextState = prevState.filter((attr) => attr !== attribute);
@@ -110,6 +116,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
     }
   }, []);
 
+  // Render nothing if attributes are not defined
   if (attributes === undefined) {
     return null;
   }

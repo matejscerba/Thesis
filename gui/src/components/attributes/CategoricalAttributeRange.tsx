@@ -14,10 +14,11 @@ interface CategoricalAttributeRangeProps {
 /**
  * This component renders the "range" of a categorical attribute - the selected and other available options.
  *
- * @param {Attribute} attribute the attribute which range should be rendered
- * @param {any[]} selectedOptions the selected options
- * @param {any[]} availableOptions the other available options
- * @param {number} numProductsInRange the number of products in the relevant range (with the selected attribute options)
+ * @param {CategoricalAttributeRangeProps} props
+ * @param {Attribute} props.attribute the attribute which range should be rendered
+ * @param {any[]} props.selectedOptions the selected options
+ * @param {any[]} props.availableOptions the other available options
+ * @param {number} props.numProductsInRange the number of products in the relevant range (with the selected attribute options)
  * @constructor
  */
 function CategoricalAttributeRange({

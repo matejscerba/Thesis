@@ -1,10 +1,15 @@
 import React from "react";
-import { getUITypeText } from "../../types/config";
+import { getUITypeText } from "../../utils/config";
 import Typography from "@mui/material/Typography";
 import { capitalizeFirstLetter } from "../../utils/tools";
 import { Skeleton } from "@mui/material";
 import { useConfig } from "../../contexts/config";
 
+/**
+ * This component renders the steps of the user study.
+ *
+ * @constructor
+ */
 function UserStudySteps() {
   const { userStudySteps } = useConfig();
 
@@ -53,7 +58,7 @@ function UserStudySteps() {
       ) : (
         <div>
           <div className="step-item">
-            <Skeleton className="step-inner" sx={{ width: "30%", height: "150px" }} />
+            <Skeleton className="step-inner step-inner-skeleton" />
           </div>
           <div>
             <Typography variant="h3">
@@ -61,7 +66,7 @@ function UserStudySteps() {
             </Typography>
           </div>
           <div className="step-item">
-            <Skeleton className="step-inner" sx={{ width: "30%", height: "150px" }} />
+            <Skeleton className="step-inner step-inner-skeleton" />
           </div>
           <div>
             <Typography variant="h3">

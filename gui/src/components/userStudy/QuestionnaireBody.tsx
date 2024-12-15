@@ -10,6 +10,16 @@ interface QuestionnaireBodyProps {
   onSubmit: (data: QuestionWithResponse[]) => void;
 }
 
+/**
+ * This component renders a body of a questionnaire.
+ *
+ * @param {QuestionnaireBodyProps} props
+ * @param {string} props.title the title of the questionnaire
+ * @param {QuestionInterface[]} props.questions the questions to be rendered inside the questionnaire
+ * @param {string} props.submitButtonTitle the title of the submit button
+ * @param {(data: QuestionWithResponse[]) => void} props.onSubmit the action to perform when questionnaire is submitted
+ * @constructor
+ */
 function QuestionnaireBody({ title, questions, submitButtonTitle, onSubmit }: QuestionnaireBodyProps) {
   const [responses, setResponses] = useState<(Response | null)[]>(questions.map(() => null));
 

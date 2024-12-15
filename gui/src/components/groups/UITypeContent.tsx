@@ -5,7 +5,12 @@ import { useParams } from "react-router-dom";
 import { UIType } from "../../types/config";
 import Unseen from "./Unseen";
 
-function StoppingCriteriaWrapper() {
+/**
+ * This component renders the content the UI type (Stopping criteria or Unseen statistics).
+ *
+ * @constructor
+ */
+function UITypeContent() {
   const { getUIType } = useConfig();
   const { step } = useParams();
 
@@ -19,4 +24,4 @@ function StoppingCriteriaWrapper() {
   }
 }
 
-export default StoppingCriteriaWrapper;
+export default UITypeContent;

@@ -26,6 +26,7 @@ import InitialQuestionnaire from "./pages/InitialQuestionnaire";
 export function App() {
   const { appFlowType } = useConfig();
 
+  // Assign routes based on appFlowType
   const routes =
     appFlowType === AppFlowType.PRODUCTION
       ? [

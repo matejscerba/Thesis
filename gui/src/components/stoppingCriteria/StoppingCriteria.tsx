@@ -8,6 +8,11 @@ import Typography from "@mui/material/Typography";
 import StoppingCriterion from "./StoppingCriterion";
 import CategorySkeleton from "../CategorySkeleton";
 
+/**
+ * This component renders title of the section containing stopping criteria.
+ *
+ * @constructor
+ */
 export function StoppingCriteriaTitle() {
   return (
     <Typography variant="h5" className="text-dark mx-3">
@@ -16,6 +21,11 @@ export function StoppingCriteriaTitle() {
   );
 }
 
+/**
+ * This component renders the section containing stopping criteria.
+ *
+ * @constructor
+ */
 function StoppingCriteria() {
   const { attributes, attributeNames } = useAttributes();
   const { name, candidateIds, discarded } = useCategory();
@@ -25,6 +35,7 @@ function StoppingCriteria() {
 
   useEffect(() => {
     setLoading(true);
+    // Load the stopping criteria as soon as the candidates, discarded products ids or important attributes change
     fetchPostJson<StoppingCriteriaResponse>(
       "stopping_criteria",
       { candidates: candidateIds, discarded, important_attributes: attributeNames },
@@ -34,7 +45,6 @@ function StoppingCriteria() {
         setLoading(false);
         setData({
           ...criteria,
-          preferenceDetected: criteria.preference_detected,
           items: criteria.items.map((item) => ({
             ...item,
             numProducts: item.num_products,
@@ -75,7 +85,7 @@ function StoppingCriteria() {
         data.items.map((criterion, idx) => <StoppingCriterion key={`${idx}`} criterion={criterion} />)
       ) : (
         <Typography variant="body1" className="mx-3 my-2">
-          No stopping criteria detected. Make sure you have some candidate products and important attributes selected.
+          No strong enough stopping criteria detected based on Candidates, Discarded products and Important attributes.
         </Typography>
       )}
     </div>

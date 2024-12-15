@@ -9,18 +9,19 @@ const SERVER_URL = "http://localhost:8086/";
  * Fetches data from a server.
  *
  * @param {string} url relative url to be called
- * @param {Object.<string, string>} params GET params of the request - will be appended to the url
+ * @param {{ [key: string]: string }} params GET params of the request - will be appended to the url
  * @param {string} method request method
  * @param {string} mimeType what type of response to accept - sets Accept header
- * @param {Object.<string, any>} json JSON content of the request
+ * @param {{ [key: string]: any }} json JSON content of the request
+ * @return {Promise<Response>} the response of the server
  */
 export function fetchFromServer(
   url: string,
   params: { [key: string]: string } = {},
-  method = "GET",
+  method: string = "GET",
   mimeType: string,
   json?: { [key: string]: any },
-) {
+): Promise<Response> {
   const headers = new Headers({
     Accept: mimeType,
   });
@@ -44,16 +45,18 @@ export function fetchFromServer(
  * Fetches JSON data from the server.
  *
  * @param {string} url relative url to be called
- * @param {Object.<string, string>} params GET params of the request - will be appended to the url
+ * @param {{ [key: string]: string }} params GET params of the request - will be appended to the url
  * @param {string} method request method
- * @param {Object.<string, any>} json JSON content of the request
+ * @param {{ [key: string]: any }} json JSON content of the request
+ * @return {Promise<T>} the response of the server
+ * @template T
  */
 export function fetchJson<T>(
   url: string,
   params: { [key: string]: string } = {},
-  method = "GET",
+  method: string = "GET",
   json?: { [key: string]: any },
-) {
+): Promise<T> {
   return fetchFromServer(url, params, method, "application/json", json).then((response) => response.json() as T);
 }
 
@@ -61,13 +64,25 @@ export function fetchJson<T>(
  * Fetches JSON data from the server via POST method.
  *
  * @param {string} url relative url to be called
- * @param {Object.<string, any>} data JSON content of the request
- * @param {Object.<string, string>} params GET params of the request - will be appended to the url
+ * @param {{ [key: string]: any }} data JSON content of the request
+ * @param {{ [key: string]: string }} params GET params of the request - will be appended to the url
+ * @return {Promise<T>} the response of the server
+ * @template T
  */
-export function fetchPostJson<T>(url: string, data: { [key: string]: any }, params: { [key: string]: string } = {}) {
+export function fetchPostJson<T>(
+  url: string,
+  data: { [key: string]: any },
+  params: { [key: string]: string } = {},
+): Promise<T> {
   return fetchJson<T>(url, params, "POST", data);
 }
 
+/**
+ * Logs event in the server via POST HTTP request.
+ *
+ * @param {Event} event event to be logged
+ * @param {{ [key: string]: any }} data data of the event to be logged
+ */
 export function logEvent(event: Event, data: { [key: string]: any }) {
   fetchPostJson<{ success: boolean }>("log_event", data, { event: event.valueOf() })
     .then((response) => {
@@ -78,6 +93,11 @@ export function logEvent(event: Event, data: { [key: string]: any }) {
     });
 }
 
+/**
+ * Updates the state of the important attributes in the server via POST HTTP request.
+ *
+ * @param {string[]} attributes names of the current important attributes
+ */
 export function updateAttributesState(attributes: string[]) {
   fetchPostJson<{ success: boolean }>("update_attributes_state", { attributes })
     .then((response) => {
