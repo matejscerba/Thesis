@@ -13,21 +13,23 @@ function ProductsIntro() {
       <Typography variant="body1">
         The products are organized in a single list when you open a category, you can perform three actions with each
         product by clicking a button in the right part of the product's box:
-        <ul>
-          <li>Select it as your final choice and go to the next step</li>
-          <li>Move it to Candidates</li>
-          <li>Discard it</li>
-        </ul>
       </Typography>
+      <ul>
+        <li>Select it as your final choice and go to the next step</li>
+        <li>Move it to Candidates</li>
+        <li>Discard it</li>
+      </ul>
       <img src="/media/images/product.png" alt="Product" />
       <Typography variant="body1">
         After you select at least a Candidate, the category of products is divided into 4 groups:
-        <ul>
-          <li>Candidates</li>
-          <li>Unseen statistics or Stopping criteria (based on the current interface)</li>
-          <li>Alternatives</li>
-          <li>Discarded products</li>
-        </ul>
+      </Typography>
+      <ul>
+        <li>Candidates</li>
+        <li>Unseen statistics or Stopping criteria (based on the current interface)</li>
+        <li>Alternatives</li>
+        <li>Discarded products</li>
+      </ul>
+      <Typography variant="body1">
         Each Important attribute of each product is enhanced with colour-coded explanation of its value.
       </Typography>
       <Typography variant="h4">Candidates</Typography>
