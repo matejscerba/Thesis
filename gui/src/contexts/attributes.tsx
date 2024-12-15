@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { fetchJson, updateAttributesState } from "../utils/api";
 import { Attribute, PRICE } from "../types/attribute";
+import { useCategory } from "./category";
 
 /**
  * Represents the attributes context interface.
@@ -74,6 +75,7 @@ interface AttributesContextProviderProps {
  * @constructor
  */
 export function AttributesContextProvider({ category, children }: AttributesContextProviderProps) {
+  const { name } = useCategory();
   const [attributes, setAttributes] = useState<{ [key: string]: Attribute }>(undefined);
   const [importantAttributes, setImportantAttributes] = useState<string[]>([
     PRICE, // Set price as an important attribute by default
@@ -87,7 +89,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   const addAttribute = (attribute: string) => {
     setImportantAttributes((prevState) => {
       const nextState = [...prevState, attribute];
-      updateAttributesState(nextState);
+      updateAttributesState(name, nextState);
       return nextState;
     });
   };
@@ -100,7 +102,7 @@ export function AttributesContextProvider({ category, children }: AttributesCont
   const removeAttribute = (attribute: string) => {
     setImportantAttributes((prevState) => {
       const nextState = prevState.filter((attr) => attr !== attribute);
-      updateAttributesState(nextState);
+      updateAttributesState(name, nextState);
       return nextState;
     });
   };

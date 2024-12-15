@@ -12,6 +12,11 @@ from app.server.context import context
 
 
 def view_config() -> Response:
+    """HTTP view method returning the configuration of the application.
+
+    :return: JSON response containing the configuration info
+    :rtype: Response
+    """
     return jsonify(
         {"app_flow": context.app_flow, "production_ui_type": context.production_ui_type, "debug": context.debug}
     )
@@ -32,14 +37,18 @@ def view_category() -> Response:
 
     The request has one argument `category_name`, stating the name of the category.
     The body of the request is expected to be JSON containing the following items:
-    `candidates`: list of ids of candidate products, expected type `List[int]`
-    `discarded`: list of ids of discarded products, expected type `List[int]`
+    `candidates`: list of IDs of candidate products, expected type `List[int]`
+    `discarded`: list of IDs of discarded products, expected type `List[int]`
     `important_attributes`: names of the important attributes, expected type `List[str]`
     `limit`: maximum number of products to return if the category is not organized, return all if `None`
+    `step`: the step of user study, can be `None`
+
+    This view modifies the context instance of the application - saves the information about the state to the session
+    storage.
 
     :return: JSON response containing the requested category
     :rtype: Response
-    :raise Exception: if required argument or body contents are missing
+    :raise Exception: if required argument is missing
     """
     category_name = request.args.get("category_name")
     if category_name is None:
@@ -62,11 +71,11 @@ def view_category() -> Response:
     context.user_study_step = step
 
     category = ProductHandler.organize_category(
-        category_name=context.category_name,
-        candidate_ids=context.candidates,
-        discarded_ids=context.discarded,
-        important_attributes=context.important_attributes,
-        limit=context.limit,
+        category_name=category_name,
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
+        important_attributes=important_attributes,
+        limit=limit,
     )
 
     if category.organized:
@@ -84,25 +93,30 @@ def view_category_filter() -> Response:
 
     The request has one argument `category_name`, stating the name of the category.
     The body of the request is expected to be JSON containing the following items:
-    `attribute`: name of the attribute to be filtered, expected type `str`
-    `value`: filter value as a `dict` that can be parsed as `FilterValue`
+    `filter`: JSON serialized list of `MultiFilterItems` to be applied
     `candidates`: list of ids of candidate products, expected type `List[int]`
     `discarded`: list of ids of discarded products, expected type `List[int]`
 
     :return: JSON response containing the list of filtered products
     :rtype: Response
-    :raise Exception: if required argument or body contents are missing
+    :raise Exception: if required argument is missing
     """
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
     request_json = request.json or {}
     filter_items = request_json.get("filter")
     if filter_items is None:
         raise Exception("Filter items for filter not set.")
     filter = [MultiFilterItem.model_validate(item) for item in filter_items]
+    request_json = request.json or {}
+    candidate_ids = set(request_json.get("candidates", []))
+    discarded_ids = set(request_json.get("discarded", []))
 
     category = ProductHandler.filter_category(
-        category_name=context.category_name,
-        candidate_ids=context.candidates,
-        discarded_ids=context.discarded,
+        category_name=category_name,
+        candidate_ids=candidate_ids,
+        discarded_ids=discarded_ids,
         filter=filter,
     )
 
@@ -124,7 +138,7 @@ def view_attributes() -> Response:
 
     context.category_name = category_name
 
-    return jsonify(AttributeHandler.get_attributes(category_name=context.category_name))
+    return jsonify(AttributeHandler.get_attributes(category_name=category_name))
 
 
 def view_discarded() -> Response:
@@ -132,7 +146,7 @@ def view_discarded() -> Response:
 
     The request has one argument `category_name`, stating the name of the category.
     The body of the request is expected to be JSON containing the following items:
-    `discarded`: list of ids of discarded products, expected type `List[int]`
+    `discarded`: list of IDs of discarded products, expected type `List[int]`
 
     :return: JSON response containing the discarded products
     :rtype: Response
@@ -146,7 +160,7 @@ def view_discarded() -> Response:
         raise Exception("Category name not set.")
 
     if discarded_ids is None:
-        raise Exception("Discarded products ids not set.")
+        raise Exception("Discarded products IDs not set.")
 
     return jsonify(ProductHandler.get_products(category_name=category_name, ids=discarded_ids))
 
@@ -156,14 +170,15 @@ def view_explanation() -> Response:
 
     The request has two arguments:
     `category_name`: name of the category
-    `product_id`: id of the product
+    `product_id`: ID of the product
     The body of the request is expected to be JSON containing the following items:
-    `candidates`: list of ids of candidate products, expected type `List[int]`
-    `discarded`: list of ids of discarded products, expected type `List[int]`
+    `candidates`: list of IDs of candidate products, expected type `List[int]`
+    `discarded`: list of IDs of discarded products, expected type `List[int]`
     `important_attributes`: names of the important attributes, expected type `List[str]`
 
     :return: JSON response containing the explanation of the given product
     :rtype: Response
+    :raise Exception: if required argument is missing
     """
     category_name = request.args.get("category_name")
     if category_name is None:
@@ -171,7 +186,7 @@ def view_explanation() -> Response:
 
     product_id = request.args.get("product_id")
     if product_id is None:
-        raise Exception("Product id not set.")
+        raise Exception("Product ID not set.")
 
     request_json = request.json or {}
     candidate_ids = set(request_json.get("candidates", []))
@@ -190,6 +205,20 @@ def view_explanation() -> Response:
 
 
 def view_stopping_criteria() -> Response:
+    """HTTP view method providing stopping criteria for a given application state.
+
+    This view returns valid data only if the current UI type is stopping criteria.
+
+    The request has one argument `category_name`, stating the name of the category.
+    The body of the request is expected to be JSON containing the following items:
+    `candidates`: list of IDs of candidate products, expected type `List[int]`
+    `discarded`: list of IDs of discarded products, expected type `List[int]`
+    `important_attributes`: names of the important attributes, expected type `List[str]`
+
+    :return: JSON response containing the stopping criteria
+    :rtype: Response
+    :raise Exception: if required argument is missing
+    """
     if context.ui_type == UIType.STOPPING_CRITERIA:
         category_name = request.args.get("category_name")
         if category_name is None:
@@ -212,6 +241,15 @@ def view_stopping_criteria() -> Response:
 
 
 def view_log_event() -> Response:
+    """HTTP view method logging a given event.
+
+    The request has one argument `event`, stating the event.
+    The body of the request contains the data to be logged alongside the event.
+
+    :return: JSON response containing the success state
+    :rtype: Response
+    :raise Exception: if required argument is missing
+    """
     event = request.args.get("event")
     if event is None:
         raise Exception("Log event not set.")
@@ -224,6 +262,20 @@ def view_log_event() -> Response:
 
 
 def view_update_attributes_state() -> Response:
+    """HTTP view method updating the state of important attributes.
+
+    The request has one argument `category_name`, stating the name of the category.
+    The body of the request is expected to be JSON containing the following items:
+    `attributes`: list of important attributes, expected type `List[str]`
+
+    :return: JSON response containing the success state
+    :rtype: Response
+    :raise Exception: if required argument or body contents are missing
+    """
+    category_name = request.args.get("category_name")
+    if category_name is None:
+        raise Exception("Category name not set.")
+
     if request.json is None:
         raise Exception("No attributes provided")
     attributes = request.json.get("attributes")
@@ -236,4 +288,9 @@ def view_update_attributes_state() -> Response:
 
 
 def view_download_events() -> Response:
+    """HTTP view method downloading the database file.
+
+    :return: response sending the database file
+    :rtype: Response
+    """
     return send_from_directory(directory=EventLogger.SQLITE_DIR_PATH, path=EventLogger.DB_FILENAME)

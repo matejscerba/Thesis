@@ -32,11 +32,18 @@ This project uses type hints checked by Mypy and the code is documented in the
 
 Server is a Flask app with multiple configurable environment variables:
 
-- `SERVER_HOST` - specifies the host where the Flask app will run (value `"0.0.0.0"` is default - not required)
-- `SERVER_PORT` - specifies the port where the Flask app will run (value `8086` is default - not required)
+- `SERVER_HOST` - specifies the host where the Flask app will run (`"0.0.0.0"` is default - not required)
+- `SERVER_PORT` - specifies the port where the Flask app will run (`8086` is default - not required)
+- `SERVER_DEBUG` - specifies whether to run the Flask app in debug mode (`TRUE`/`FALSE`, `FALSE` is default - not required)
+- `SESSION_SECRET_KEY` - specifies the secret key for Flask session functionality
+- `APP_FLOW_TYPE` - specifies the flow type of the application (`PRODUCTION`/`USER_STUDY`, `PRODUCTION` is default - not required)
+- `PRODUCTION_UI_TYPE` - specifies the default UI type (`UNSEEN_STATISTICS`/`STOPPING_CRITERIA`, `STOPPING_CRITERIA` is default - not required)
 - `RECOMMENDER_MODEL` - specifies the recommender system model, described more below
 - `EXPLANATIONS_MODEL` - specifies the explanations model, described more below
-- `TEST_DATA` - specifies whether to use a test version of the data, described more below (not required)
+- `STOPPING_CRITERIA_MODEL` - specifies the stopping criteria model, described more below
+- `ALTERNATIVES_SIZE` - specifies the number of alternatives to be provided by the recommender system, (`10` is default - not required)
+- `CDF_STEP` - specifies the size of the portion of products which should be contained in a continuous numerical attribute range, (`0.05` is default - not required, the final number of products in range is twice as large)
+- `STOPPING_CRITERIA_PREFERENCE_THRESHOLD` - specifies the minimum metric value of stopping criteria presented to the user, (`0.0` is default - not required)
 
 You can edit these variables in the file `server/.env`.
 
@@ -61,7 +68,7 @@ How to add a new recommender model:
 If you want to change the recommender model that is used, change the environment variable `RECOMMENDER_MODEL` to a
 different value of the `RecommenderModel` enum representing the model you want to use.
 
-### Explanations model
+### Explanations generator model
 
 The explanations model provides explanations of products and their attributes to the user.
 
@@ -75,26 +82,36 @@ Their description is provided directly in the code (file
 
 How to add a new explanations model:
 
-1. Add a new value to `ExplanationsModel` enum (file `server/app/explanations/abstract.py`).
-2. Implement a subclass of `AbstractExplanations` (file `server/app/explanations/abstract.py`). Implement its `explain` method and set its `model` attribute to the value defined in the previous step.
+1. Add a new value to `ExplanationsGeneratorModel` enum (file `server/app/explanations/abstract.py`).
+2. Implement a subclass of `AbstractExplanationsGenerator` (file `server/app/explanations/abstract.py`). Implement its `explain` method and set its `model` attribute to the value defined in the previous step.
 3. Import your class in `server/app/explanations/__init__.py`.
 
 If you want to change the explanations model that is used, change the environment variable `EXPLANATIONS_MODEL` to a
-different value of the `ExplanationsModel` enum representing the model you want to use.
+different value of the `ExplanationsGeneratorModel` enum representing the model you want to use.
+
+##### Stopping criteria generator model
+
+The stopping criteria model provides stopping criteria based on products and attributes to the user.
+
+The currently developed stopping criteria models are:
+
+- `stopping_apriori`
+
+Their description is provided directly in the code (file
+`server/app/stopping_criteria/stopping_apriori.py`).
+
+How to add a new stopping criteria model:
+
+1. Add a new value to `StoppingCriteriaGeneratorModel` enum (file `server/app/stopping_criteria/abstract.py`).
+2. Implement a subclass of `AbstractStoppingCriteriaGenerator` (file `server/app/stopping_criteria/abstract.py`). Implement its `generate` method and set its `model` attribute to the value defined in the previous step.
+3. Import your class in `server/app/stopping_criteria/__init__.py`.
+
+If you want to change the stopping criteria model that is used, change the environment variable `STOPPING_CRITERIA_MODEL` to a
+different value of the `StoppingCriteriaGeneratorModel` enum representing the model you want to use.
 
 ### Data
 
-The data used by this program are organized into folders located in `server/data`.
-
-There are two versions:
-
-- `main` and
-- `test`
-
-The `test` folder contains a testing version of the data, typically reduced number of products to check properties of
-recommender system and explanations before trying them on more products.
-
-Currently, the testing version of the data contains large silver macbooks in the `laptops` category.
+The data used by this program are located in `server/data/main`.
 
 Each category of the data needs to load images. These are stored in the `gui` app for simplicity. The exact location is
 `gui/public/media/products`.

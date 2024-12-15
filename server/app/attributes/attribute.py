@@ -48,10 +48,22 @@ class FilterValue(BaseModel):
 
 
 class MultiFilterItem(BaseModel):
+    """This class represents a filter of attribute's values.
+
+    :param str attribute_name: the name of the attribute
+    :param FilterValue filter: the filter of the attribute's values
+    """
+
     attribute_name: str
     filter: FilterValue
 
     def __hash__(self) -> int:
+        """
+        Computes a hash of this MultiFilterItem instance.
+
+        :return: hash of this MultiFilterItem instance
+        :rtype: int
+        """
         return hash(json.dumps(self.model_dump(), sort_keys=True, default=json_default))
 
 
@@ -65,6 +77,9 @@ class Attribute(BaseModel):
     :param AttributeType type: type of the attribute
     :param Optional[AttributeOrder] order: order of the attribute, default `None`
     :param Optional[bool] continuous: specifies whether the values of this attribute are continuous, default `None`
+    :param Optional[float] step: specifies what steps to use when generating filter values, default `None`
+    :param Optional[int] round_decimals: specifies what precision to round values to when generating filter values,
+    default `None`
     :param bool is_list: specifies whether this attribute has list values, default `False`
     """
 
@@ -79,32 +94,51 @@ class Attribute(BaseModel):
     round_decimals: Optional[int] = Field(default=None)
     is_list: bool = Field(default=False)
 
-    def get_range_filter_value(self, value: float, initial_value: float, products: pd.DataFrame) -> FilterValue:
+    def get_range_filter_value(
+        self, value: float, products: pd.DataFrame, initial_value: Optional[float] = None
+    ) -> FilterValue:
+        """
+        Gets a FilterValue instance for given value.
+
+        :param float value: the value of this attribute
+        :param pd.DataFrame products: the products in the current category
+        :param Optional[float] initial_value: the initial value used for rounding
+        :return: filter value of this attribute based on the given value
+        :rtype: FilterValue
+        """
         from app.attributes.handler import AttributeHandler
 
         if self.type != AttributeType.NUMERICAL and not self.continuous:
             raise ValueError(f"Attribute {self.full_name} is numerical or not continuous.")
         if pd.isna(value):
             return FilterValue(options={value})
-        lower_bound, upper_bound = AttributeHandler.get_filter_value_bounds(
-            attribute_name=self.full_name,
-            value=value,
-            initial_value=initial_value,
-            products=products,
-        )
-        if self.round_decimals is not None:
+
+        if self.round_decimals is not None and initial_value is not None:
+            lower_bound, upper_bound = AttributeHandler.get_filter_value_bounds(
+                attribute_name=self.full_name,
+                value=value,
+                initial_value=initial_value,
+                products=products,
+            )
             base = 10.0**-self.round_decimals
             lower_bound = int(math.floor(lower_bound / base)) * base
             upper_bound = int(math.ceil(upper_bound / base)) * base
-        return FilterValue(lower_bound=lower_bound, upper_bound=upper_bound)
+            return FilterValue(lower_bound=lower_bound, upper_bound=upper_bound)
 
-        # if self.step is None:
-        #     logger.warning(f"Attribute {self.full_name} has no step defined.")
-        #     return FilterValue(options={value})
-        # lower_bound = value // self.step * self.step
-        # return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
+        if self.step is not None:
+            lower_bound = value // self.step * self.step
+            return FilterValue(lower_bound=lower_bound, upper_bound=lower_bound + self.step)
+
+        logger.warning(f"Attribute {self.full_name} has no step or round attributes defined.")
+        return FilterValue(options={value})
 
     def __hash__(self) -> int:
+        """
+        Computes a hash of this Attributes instance.
+
+        :return: hash of this Attribute instance
+        :rtype: int
+        """
         return hash(json.dumps(self.model_dump(), sort_keys=True, default=json_default))
 
 

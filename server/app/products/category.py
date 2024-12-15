@@ -22,7 +22,7 @@ class UnorganizedCategory(Category):
 
     :param bool organized: whether the category is organized, default `False`
     :param Dict[str, Product] data: the products inside this category, keys are the string representations of the
-    product ids
+    product IDs
     :param int remaining: number of remaining products if limit has been applied, default `0`
     """
 
@@ -52,9 +52,9 @@ class UnorganizedCategory(Category):
         return list(self.data.values())
 
     def pop(self, product_id: int) -> Product:
-        """Pop (remove and return) product of a give id.
+        """Pop (remove and return) product of a given ID.
 
-        :param int product_id: id of the product to pop from this category
+        :param int product_id: ID of the product to pop from this category
         :return: popped product
         :rtype: Product
         """

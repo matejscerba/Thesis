@@ -30,10 +30,10 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
         """Predicts alternative products based on candidates and discarded products.
 
         :param str category_name:
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes
-        :return: ids of the alternative products
+        :return: IDs of the alternative products
         :rtype: List[int]
         """
         products = DataLoader.load_products(category_name=category_name, usecols=important_attributes)

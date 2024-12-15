@@ -96,10 +96,11 @@ export function logEvent(event: Event, data: { [key: string]: any }) {
 /**
  * Updates the state of the important attributes in the server via POST HTTP request.
  *
+ * @param {string} categoryName name of the category
  * @param {string[]} attributes names of the current important attributes
  */
-export function updateAttributesState(attributes: string[]) {
-  fetchPostJson<{ success: boolean }>("update_attributes_state", { attributes })
+export function updateAttributesState(categoryName: string, attributes: string[]) {
+  fetchPostJson<{ success: boolean }>("update_attributes_state", { attributes }, { category_name: categoryName })
     .then((response) => {
       console.log(
         `Updating attributes state to ${JSON.stringify(attributes)} finished with success: ${response.success}`,

@@ -9,7 +9,7 @@ from app.attributes.attribute import AttributeName
 class Product(BaseModel):
     """This class represents a product.
 
-    :param int id: id of the product
+    :param int id: ID of the product
     :param str name: name of the product
     :param float price: price of the product
     :param Optional[float] rating: rating of the product
@@ -24,7 +24,7 @@ class Product(BaseModel):
     def from_dataframe_row(cls, id: int, row: pd.Series) -> "Product":
         """Loads the product from a dataframe row.
 
-        :param int id: id of the product
+        :param int id: ID of the product
         :param pd.Series row: row of a dataframe representing the product
         :return: parsed product
         :rtype: Product

@@ -21,10 +21,10 @@ from app.utils.attributes import expand_list_value
 class ProductHandler:
     """This class handles operations with the products.
 
-    :param ClassVar[int] _alternatives_size: number of alternatives to be displayed
+    :param ClassVar[int] ALTERNATIVES_SIZE: the maximum number of alternatives to be displayed
     """
 
-    _alternatives_size: ClassVar[int] = int(os.environ.get("ALTERNATIVES_SIZE", 10))
+    ALTERNATIVES_SIZE: ClassVar[int] = int(os.environ.get("ALTERNATIVES_SIZE", "10"))
 
     @classmethod
     def count_products(
@@ -37,10 +37,9 @@ class ProductHandler:
         """Counts the number of products satisfying the given filter.
 
         :param str category_name: the name of the category
-        :param Attribute attribute: the attribute to be filtered
-        :param FilterValue value: the value of the filter to be used
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param List[MultiFilterItem] filter: the filter to be applied before counting products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :return: number of products satisfying given filter
         :rtype: int
         """
@@ -61,6 +60,15 @@ class ProductHandler:
         candidate_ids: Set[int],
         discarded_ids: Set[int],
     ) -> Set[int]:
+        """Gets IDs of products satisfying given filter.
+
+        :param str category_name: the name of the category
+        :param List[MultiFilterItem] filter: the filter to be applied before counting products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
+        :return: IDs of products satisfying given filter
+        :rtype: Set[int]
+        """
         try:
             return set(
                 cls.filter_products(
@@ -80,6 +88,14 @@ class ProductHandler:
         filter: List[MultiFilterItem],
         ids: Set[int],
     ) -> int:
+        """Counts the number of products satisfying the given filter that are among given product IDs.
+
+        :param str category_name: the name of the category
+        :param List[MultiFilterItem] filter: the filter to be applied before counting products
+        :param Set[int] ids: IDs of products to consider
+        :return: number of products among given product IDs satisfying given filter
+        :rtype: int
+        """
         return len(cls.filter_products_in_set(category_name=category_name, filter=filter, ids=ids))
 
     @classmethod
@@ -89,6 +105,14 @@ class ProductHandler:
         filter: List[MultiFilterItem],
         ids: Set[int],
     ) -> Set[int]:
+        """Gets IDs of products satisfying the given filter that are among given product IDs.
+
+        :param str category_name: the name of the category
+        :param List[MultiFilterItem] filter: the filter to be applied before counting products
+        :param Set[int] ids: IDs of products to consider
+        :return: IDs of products among given product IDs satisfying given filter
+        :rtype: Set[int]
+        """
         try:
             return set(cls.filter_products_in_set(category_name=category_name, filter=filter, ids=ids)["id"])
         except KeyError:
@@ -115,8 +139,8 @@ class ProductHandler:
         """Organizes the category based on candidates and discarded products.
 
         :param str category_name: the name of the category
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes
         :param Optional[int] limit: number of products to display if the category is not organized (if no candidate
         product is given)
@@ -146,8 +170,8 @@ class ProductHandler:
             category.pop(discarded_id)
 
         # Pop alternatives from the category, no more than `cls._alternatives_size`
-        if len(alternative_ids) >= cls._alternatives_size:
-            alternative_ids = alternative_ids[: cls._alternatives_size]
+        if len(alternative_ids) >= cls.ALTERNATIVES_SIZE:
+            alternative_ids = alternative_ids[: cls.ALTERNATIVES_SIZE]
         alternatives = [category.pop(alternative_id) for alternative_id in alternative_ids]
 
         unseen: Optional[UnseenStatistics] = None
@@ -179,10 +203,10 @@ class ProductHandler:
 
     @classmethod
     def get_products(cls, category_name: str, ids: List[int]) -> List[Product]:
-        """Gets list of product objects of the given category with the given ids.
+        """Gets list of product objects of the given category with the given IDs.
 
         :param str category_name: the name of the category
-        :param List[int] ids: ids of the products to load
+        :param List[int] ids: IDs of the products to load
         :return: product objects
         :rtype: List[Product]
         """
@@ -201,10 +225,9 @@ class ProductHandler:
         and discarded products).
 
         :param str category_name: the name of the category
-        :param str attribute_name: name of the attribute
-        :param FilterValue value: the value of the filter to be used
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param List[MultiFilterItem] filter: filter to be applied
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :return: dataframe containing products satisfying the filter
         :rtype: pd.DataFrame
         :raise Exception: Exception is raised if value does not contain any filter
@@ -261,6 +284,15 @@ class ProductHandler:
         filter: List[MultiFilterItem],
         ids: Set[int],
     ) -> pd.DataFrame:
+        """Filters products and returns a dataframe containing products satisfying the filter that are among given
+        product IDs.
+
+        :param str category_name: the name of the category
+        :param List[MultiFilterItem] filter: filter to be applied
+        :param Set[int] ids: IDs of considered products
+        :return: dataframe containing products satisfying the filter that are among given product IDs
+        :rtype: pd.DataFrame
+        """
         products = cls.filter_products(
             category_name=category_name,
             filter=filter,
@@ -281,10 +313,9 @@ class ProductHandler:
         products).
 
         :param str category_name: the name of the category
-        :param str attribute_name: name of the attribute
-        :param FilterValue value: the value of the filter to be used
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param str filter: filter to be applied
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :return: dataframe containing products satisfying the filter
         :rtype: pd.DataFrame
         """
@@ -310,8 +341,8 @@ class ProductHandler:
 
         :param str category_name:
         :param int product_id:
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes
         :return: explanation of a given product
         :rtype: ProductExplanation
@@ -332,6 +363,15 @@ class ProductHandler:
         discarded_ids: Set[int],
         important_attributes: List[str],
     ) -> StoppingCriteria:
+        """Generates stopping criteria for given category, candidates, discarded products and important attributes.
+
+        :param str category_name: name of the category
+        :param Set[int] candidate_ids: IDs of candidate products
+        :param Set[int] discarded_ids: IDs of discarded products
+        :param List[str] important_attributes: names of important attributes
+        :return: stopping criteria
+        :rtype: StoppingCriteria
+        """
         return StoppingCriteriaSelector.get_generator().generate(
             category_name=category_name,
             candidate_ids=candidate_ids,

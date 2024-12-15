@@ -18,8 +18,6 @@ class DataLoader:
         :return: the path to the root directory containing the data
         :rtype: str
         """
-        if os.environ.get("TEST_DATA", "FALSE").upper() == "TRUE":
-            return "data/test"
         return "data/main"
 
     @classmethod
@@ -31,7 +29,7 @@ class DataLoader:
         :param str category_name: name of the category to be loaded
         :param Optional[List[str]] usecols: names of columns (attributes) to be included, all included if `None`,
         default `None`
-        :param Optional[Set[int]] userows: ids of products to be included, all loaded if `None`, default `None`
+        :param Optional[Set[int]] userows: IDs of products to be included, all loaded if `None`, default `None`
         :return: dataframe containing the products of a given category
         :rtype: pd.DataFrame
         """
@@ -49,7 +47,7 @@ class DataLoader:
         """Loads product of a given category, can select columns (attributes).
 
         :param str category_name: name of the category to consider
-        :param int product_id: id of the product to load
+        :param int product_id: ID of the product to load
         :param Optional[List[str]] usecols: names of columns (attributes) to be included, all included if `None`,
         default `None`
         :return: series representing a product

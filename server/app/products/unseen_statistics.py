@@ -31,8 +31,8 @@ class AbstractAttributeStatistics(BaseModel):
         :param str category_name: the name of the category
         :param Attribute attribute: the attribute to be described
         :param pd.DataFrame products: products to be considered
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :return: statistics describing the given attribute based on the given products
         :rtype: AttributeStatistics
         :raise ValueError: if attribute has unknown attribute type

@@ -2,18 +2,18 @@ from typing import List, Set, ClassVar
 
 from app.attributes.attribute import AttributeName
 from app.data_loader import DataLoader
-from app.explanations.abstract import AbstractExplanations, ExplanationsModel
+from app.explanations.abstract import AbstractExplanationsGenerator, ExplanationsGeneratorModel
 from app.explanations.mixins.content_based import ContentBasedMixin
 from app.products.explanations import ProductExplanation
 
 
-class ContentBasedExplanations(AbstractExplanations, ContentBasedMixin):
+class ContentBasedExplanations(AbstractExplanationsGenerator, ContentBasedMixin):
     """This class holds the implementation of a content based explanations generator.
 
     :param ClassVar[ExplanationsModel] model: the model of this explanations generator
     """
 
-    model: ClassVar[ExplanationsModel] = ExplanationsModel.CONTENT_BASED
+    model: ClassVar[ExplanationsGeneratorModel] = ExplanationsGeneratorModel.CONTENT_BASED
 
     @classmethod
     def explain(
@@ -30,8 +30,8 @@ class ContentBasedExplanations(AbstractExplanations, ContentBasedMixin):
 
         :param str category_name:
         :param int product_id:
-        :param Set[int] candidate_ids: ids of the candidate products
-        :param Set[int] discarded_ids: ids of the discarded products
+        :param Set[int] candidate_ids: IDs of the candidate products
+        :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes
         :return: explanation of a given product
         :rtype: ProductExplanation

@@ -10,6 +10,8 @@ from app.server.context import context
 
 
 class Event(str, Enum):
+    """This enum represents a type of event."""
+
     ATTRIBUTE_ADDED_TO_IMPORTANT = "ATTRIBUTE_ADDED_TO_IMPORTANT"
     ATTRIBUTE_REMOVED_FROM_IMPORTANT = "ATTRIBUTE_REMOVED_FROM_IMPORTANT"
     UNSEEN_STATISTIC_OPENED = "UNSEEN_STATISTIC_OPENED"
@@ -30,14 +32,26 @@ class Event(str, Enum):
 
 
 class EventLogger:
+    """This class handles the logging of events into a SQLite storage.
+
+    :param ClassVar[str] SQLITE_DIR_PATH: path to the directory containing SQLite DBs
+    :param ClassVar[str] DB_FILENAME: filename of the event logger database
+    """
+
     SQLITE_DIR_PATH: ClassVar[str] = "data/sqlite"
     DB_FILENAME: ClassVar[str] = "event_logger.db"
 
     def get_connection(self) -> Connection:
+        """Gets a SQLite connection.
+
+        :return: SQLite connection
+        :rtype: Connection
+        """
         os.makedirs(self.SQLITE_DIR_PATH, exist_ok=True)
         return sqlite3.connect(os.path.join(self.SQLITE_DIR_PATH, self.DB_FILENAME))
 
     def setup(self) -> None:
+        """Sets up the database (creates the events table)."""
         with self.get_connection() as connection:
             cursor = connection.cursor()
             cursor.execute(
@@ -57,6 +71,11 @@ class EventLogger:
             )
 
     def log(self, event: Event, data: Optional[Dict[str, Any]]) -> None:
+        """Logs a given event to the storage.
+
+        :param Event event: event to be logged
+        :param Optional[Dict[str, Any]] data: the data to be logged with the event
+        """
         with self.get_connection() as connection:
             cursor = connection.cursor()
             cursor.execute(
