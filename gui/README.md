@@ -34,6 +34,10 @@ npm run prettier:check
 There is only a `PORT` environment variable that can be edited and affects the location of the GUI on your local
 machine.
 
+The url of the server is hardcoded in the source code (file `src/utils/api.ts`, line 6 - variable `SERVER_URL`).
+If you want to run the server and gui on separate urls, you need to modify this variable accordingly and build the
+Docker image afterwards.
+
 ## Deployment
 
 Building the image to be deployed uses different version of Dockerfile than the default `gui/Dockerfile` and
