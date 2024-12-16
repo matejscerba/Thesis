@@ -58,16 +58,22 @@ function StoppingCriterion({ criterion }: StoppingCriterionProps) {
           />
         ))}
       </div>
-      <Typography
-        variant="body1"
-        className="text-center clickable"
-        onClick={() => {
-          logEvent(Event.STOPPING_CRITERION_OPENED, { criterion });
-          presentModal(<FilteredProducts filter={filter} />);
-        }}
-      >
-        {criterion.numProducts} more products with these properties found.
-      </Typography>
+      {criterion.numProducts > 0 ? (
+        <Typography
+          className="text-center text-success clickable"
+          variant="body1"
+          onClick={() => {
+            logEvent(Event.STOPPING_CRITERION_OPENED, { criterion });
+            presentModal(<FilteredProducts filter={filter} />);
+          }}
+        >
+          {criterion.numProducts} more products with these properties
+        </Typography>
+      ) : (
+        <Typography className="text-center text-danger" variant="body1">
+          No more products with these properties
+        </Typography>
+      )}
       {debug && (
         <Typography variant="body1" className="text-end">
           {criterion.metric}
