@@ -12,6 +12,14 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Thesis App</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.body.innerHTML = "<h1>This page is not accessible on mobile devices.</h1>";
+            }
+        });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
