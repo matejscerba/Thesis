@@ -147,3 +147,15 @@ Building the image to be deployed uses different version of Dockerfile than the 
 used when building Docker images to be deployed. The GUI image to be deployed uses [nginx engine](https://nginx.org) to
 serve the application, and both of the images to be deployed are prepared to be built for `linux/amd64` architecture.
 After these images are built, tagged and pushed to Docker repository, they can be deployed on cloud.
+
+Command for building the image:
+
+```shell
+docker build -t [tag_name] -f deploy.Dockerfile .
+```
+
+Command for pushing the image to docker hub:
+
+```shell
+docker push [tag_name]
+```
