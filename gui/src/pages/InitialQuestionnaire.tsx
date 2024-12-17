@@ -17,7 +17,7 @@ function InitialQuestionnaire() {
   const { getCategoryName } = useConfig();
 
   const questions = [
-    { title: "How old are you?", type: QuestionType.OPEN },
+    { title: "How old are you?", type: QuestionType.AGE },
     { title: "What is your gender?", type: QuestionType.GENDER },
     { title: "What is your current occupation?", type: QuestionType.OPEN },
   ];

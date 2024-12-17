@@ -6,6 +6,7 @@ export enum QuestionType {
   OPEN = "OPEN",
   YES_NO = "YES_NO",
   UI_TYPE_COMPARISON = "UI_TYPE_COMPARISON",
+  AGE = "AGE",
   GENDER = "GENDER",
 }
 

@@ -32,6 +32,8 @@ function Question({ question, onChange }: QuestionProps) {
 
   const genderResponses = ["Male", "Female", "Other"];
 
+  const ageResponses = ["0-20", "21-30", "31-40", "41-50", "51-60", "60+"];
+
   return (
     <div className="my-3">
       <Typography variant="h4" className="text-center">
@@ -61,6 +63,14 @@ function Question({ question, onChange }: QuestionProps) {
       )}
       {question.type === QuestionType.OPEN && (
         <OpenQuestion
+          onChange={(response) => {
+            onChange({ response });
+          }}
+        />
+      )}
+      {question.type === QuestionType.AGE && (
+        <RadioQuestion
+          options={ageResponses}
           onChange={(response) => {
             onChange({ response });
           }}
