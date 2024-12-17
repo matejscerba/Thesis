@@ -20,17 +20,21 @@ function AlternativeMenu({ product }: AlternativeMenuProps) {
 
   return (
     <>
-      <FinalChoiceSelectedButton productId={product.id} event={Event.ALTERNATIVE_FINAL_CHOICE_SELECTED} />
+      <FinalChoiceSelectedButton
+        product={product}
+        clickEvent={Event.ALTERNATIVE_FINAL_CHOICE_SELECTED}
+        confirmEvent={Event.ALTERNATIVE_FINAL_CHOICE_CONFIRMED}
+      />
       <MoveToCandidatesButton
-        productId={product.id}
-        event={Event.ALTERNATIVE_ADDED_TO_CANDIDATES}
+        product={product}
+        clickEvent={Event.ALTERNATIVE_ADDED_TO_CANDIDATES}
         onMarkCandidate={(productId) => {
           onMarkCandidate([productId]);
         }}
       />
       <DiscardProductButton
-        productId={product.id}
-        event={Event.ALTERNATIVE_DISCARDED}
+        product={product}
+        clickEvent={Event.ALTERNATIVE_DISCARDED}
         onDiscard={(productId) => {
           onDiscard([productId]);
         }}

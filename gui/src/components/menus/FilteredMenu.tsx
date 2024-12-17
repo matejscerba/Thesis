@@ -29,20 +29,21 @@ function FilteredMenu({ product, filter, onMarkCandidate, onDiscard, isCandidate
   return (
     <>
       <FinalChoiceSelectedButton
-        productId={product.id}
-        event={Event.FILTERED_FINAL_CHOICE_SELECTED}
+        product={product}
+        clickEvent={Event.FILTERED_FINAL_CHOICE_SELECTED}
+        confirmEvent={Event.FILTERED_FINAL_CHOICE_CONFIRMED}
         data={{ filter }}
       />
       <MoveToCandidatesButton
-        productId={product.id}
-        event={Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES}
+        product={product}
+        clickEvent={Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES}
         data={{ filter }}
         onMarkCandidate={onMarkCandidate}
         isActive={isCandidate}
       />
       <DiscardProductButton
-        productId={product.id}
-        event={Event.FILTERED_PRODUCT_DISCARDED}
+        product={product}
+        clickEvent={Event.FILTERED_PRODUCT_DISCARDED}
         data={{ filter }}
         onDiscard={onDiscard}
         isActive={isDiscarded}

@@ -20,10 +20,14 @@ function DiscardedMenu({ product }: DiscardedMenuProps) {
 
   return (
     <>
-      <FinalChoiceSelectedButton productId={product.id} event={Event.DISCARDED_FINAL_CHOICE_SELECTED} />
+      <FinalChoiceSelectedButton
+        product={product}
+        clickEvent={Event.DISCARDED_FINAL_CHOICE_SELECTED}
+        confirmEvent={Event.DISCARDED_FINAL_CHOICE_CONFIRMED}
+      />
       <MoveToCandidatesButton
-        productId={product.id}
-        event={Event.DISCARDED_ADDED_TO_CANDIDATES}
+        product={product}
+        clickEvent={Event.DISCARDED_ADDED_TO_CANDIDATES}
         onMarkCandidate={(productId) => {
           onMarkCandidate([productId]);
         }}
