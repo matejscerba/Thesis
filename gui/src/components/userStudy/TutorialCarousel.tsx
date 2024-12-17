@@ -6,6 +6,7 @@ import UserStudySteps from "./UserStudySteps";
 import TutorialIntro from "./TutorialIntro";
 import AttributesIntro from "./AttributesIntro";
 import ProductsIntro from "./ProductsIntro";
+import GoalIntro from "./GoalIntro";
 
 /**
  * This component renders a carousel that shows the tutorial for the whole system.
@@ -16,7 +17,7 @@ function TutorialCarousel() {
   const navigate = useNavigate();
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [<TutorialIntro />, <AttributesIntro />, <ProductsIntro />, <UserStudySteps />];
+  const items = [<TutorialIntro />, <AttributesIntro />, <ProductsIntro />, <GoalIntro />, <UserStudySteps />];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);

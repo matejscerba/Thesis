@@ -20,6 +20,14 @@ function InitialQuestionnaire() {
     { title: "How old are you?", type: QuestionType.AGE },
     { title: "What is your gender?", type: QuestionType.GENDER },
     { title: "What is your current occupation?", type: QuestionType.OPEN },
+    {
+      title: `You are familiar with the product domain of the first step (${getCategoryName("1")})`,
+      type: QuestionType.LIKERT,
+    },
+    {
+      title: `You are familiar with the product domain of the second step (${getCategoryName("2")})`,
+      type: QuestionType.LIKERT,
+    },
   ];
 
   return (

@@ -6,3 +6,4 @@ export const userStudyStepPattern = `${userStudyPattern}step/:step/`;
 export const userStudyStepCategoryPattern = `${userStudyStepPattern}category/:name/`;
 export const userStudyStepQuestionnairePattern = `${userStudyStepPattern}questionnaire/`;
 export const userStudyOverallQuestionnairePattern = `${userStudyPattern}overall_questionnaire/`;
+export const userStudyOutroPattern = `${userStudyPattern}outro/`;

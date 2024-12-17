@@ -40,12 +40,15 @@ function UserStudySteps() {
                     className="step-image"
                   />
                 </div>
-                <Typography variant="h5" className="step-category-name">
-                  {capitalizeFirstLetter(step.category_name).replace(/ /g, "\u00a0")}&nbsp;with&nbsp;
-                  {getUITypeText(step.ui_type).replace(/ /g, "\u00a0")}
-                  <br />
-                  <span className="small">Product&nbsp;selection&nbsp;and&nbsp;questionnaire</span>
-                </Typography>
+                <div className="step-category-name">
+                  <Typography variant="h5">
+                    {capitalizeFirstLetter(step.category_name).replace(/ /g, "\u00a0")}&nbsp;with&nbsp;
+                    {getUITypeText(step.ui_type).replace(/ /g, "\u00a0")}
+                  </Typography>
+                  <Typography variant="body1" className="mt-0">
+                    Select the best product for you and fill out a short questionnaire
+                  </Typography>
+                </div>
               </div>
             </div>
             <div>

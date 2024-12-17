@@ -21,11 +21,19 @@ function StepQuestionnaire() {
   const currentUITypeText = getUITypeText(getUIType(step));
 
   const questions = [
-    { title: "The final product was easy to find.", type: QuestionType.LIKERT },
-    { title: "The system helped me decide when to stop searching for better products.", type: QuestionType.LIKERT },
-    { title: `I found ${currentUITypeText} useful.`, type: QuestionType.LIKERT },
     {
-      title: `I would like to see ${currentUITypeText} on production systems (other e-shops).`,
+      title: "You are confident that the product you selected was the best possible option for you.",
+      type: QuestionType.LIKERT,
+    },
+    { title: "The final product was easy to find.", type: QuestionType.LIKERT },
+    {
+      title: "The system helped you decide when to stop searching for better products.",
+      type: QuestionType.LIKERT,
+    },
+    { title: "Working with the system was easy.", type: QuestionType.LIKERT },
+    { title: `You found ${currentUITypeText} useful.`, type: QuestionType.LIKERT },
+    {
+      title: `You would like to see ${currentUITypeText} on production systems (other e-shops).`,
       type: QuestionType.LIKERT,
     },
   ];

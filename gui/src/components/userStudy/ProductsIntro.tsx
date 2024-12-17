@@ -21,7 +21,7 @@ function ProductsIntro() {
       </ul>
       <img src="/media/images/product.png" alt="Product" />
       <Typography variant="body1">
-        After you select at least a Candidate, the category of products is divided into 4 groups:
+        After you select at least one Candidate, the category of products is divided into 4 groups:
       </Typography>
       <ul>
         <li>Candidates</li>

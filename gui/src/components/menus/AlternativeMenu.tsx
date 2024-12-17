@@ -1,6 +1,6 @@
 import React from "react";
 import { Product } from "../../types/product";
-import { DiscardProductButton, FinalChoiceSelectedButton, MoveToCandidatesButton } from "./Buttons";
+import { DiscardProductButton, MoveToCandidatesButton } from "./Buttons";
 import { Event } from "../../types/event";
 import { useCategory } from "../../contexts/category";
 
@@ -20,11 +20,6 @@ function AlternativeMenu({ product }: AlternativeMenuProps) {
 
   return (
     <>
-      <FinalChoiceSelectedButton
-        product={product}
-        clickEvent={Event.ALTERNATIVE_FINAL_CHOICE_SELECTED}
-        confirmEvent={Event.ALTERNATIVE_FINAL_CHOICE_CONFIRMED}
-      />
       <MoveToCandidatesButton
         product={product}
         clickEvent={Event.ALTERNATIVE_ADDED_TO_CANDIDATES}

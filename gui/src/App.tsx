@@ -9,6 +9,7 @@ import {
   categoryPattern,
   indexPattern,
   userStudyInitialQuestionnairePattern,
+  userStudyOutroPattern,
   userStudyOverallQuestionnairePattern,
   userStudyStepCategoryPattern,
   userStudyStepQuestionnairePattern,
@@ -17,6 +18,7 @@ import OverallQuestionnaire from "./pages/OverallQuestionnaire";
 import { useConfig } from "./contexts/config";
 import UserStudyIntro from "./pages/UserStudyIntro";
 import InitialQuestionnaire from "./pages/InitialQuestionnaire";
+import UserStudyOutro from "./pages/UserStudyOutro";
 
 /**
  * This component renders the app and uses React router to navigate through pages.
@@ -59,6 +61,10 @@ export function App() {
           {
             path: userStudyOverallQuestionnairePattern,
             element: <OverallQuestionnaire />,
+          },
+          {
+            path: userStudyOutroPattern,
+            element: <UserStudyOutro />,
           },
         ];
 

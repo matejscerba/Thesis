@@ -2,7 +2,7 @@ import React from "react";
 import { Product } from "../../types/product";
 import { Event } from "../../types/event";
 import { MultiFilter } from "../../types/attribute";
-import { DiscardProductButton, FinalChoiceSelectedButton, MoveToCandidatesButton } from "./Buttons";
+import { DiscardProductButton, MoveToCandidatesButton } from "./Buttons";
 
 interface FilteredMenuProps {
   product: Product;
@@ -28,12 +28,6 @@ interface FilteredMenuProps {
 function FilteredMenu({ product, filter, onMarkCandidate, onDiscard, isCandidate, isDiscarded }: FilteredMenuProps) {
   return (
     <>
-      <FinalChoiceSelectedButton
-        product={product}
-        clickEvent={Event.FILTERED_FINAL_CHOICE_SELECTED}
-        confirmEvent={Event.FILTERED_FINAL_CHOICE_CONFIRMED}
-        data={{ filter }}
-      />
       <MoveToCandidatesButton
         product={product}
         clickEvent={Event.FILTERED_PRODUCT_ADDED_TO_CANDIDATES}
