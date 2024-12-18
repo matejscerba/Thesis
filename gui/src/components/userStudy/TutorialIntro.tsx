@@ -21,7 +21,7 @@ function TutorialIntro() {
         You will be presented with two different product categories with different UI variant, where you will try to
         find the best product which you would like to buy (do not worry, we will not charge you anything). The UI is not
         equipped with search functionality, it is aimed at browsing the catalog with the help of a recommender system.
-        You will be asked to fill 4 short questionnaires (total of 15 questions).
+        You will be asked to fill 4 short questionnaires (total of 17 questions).
       </Typography>
     </div>
   );
