@@ -22,18 +22,18 @@ function StepQuestionnaire() {
 
   const questions = [
     {
-      title: "You are confident that the product you selected was the best possible option for you.",
+      title: "I am confident that the product I selected was the best possible option for me.",
       type: QuestionType.LIKERT,
     },
     { title: "The final product was easy to find.", type: QuestionType.LIKERT },
     {
-      title: "The system helped you decide when to stop searching for better products.",
+      title: "The system helped me decide when to stop searching for better products.",
       type: QuestionType.LIKERT,
     },
     { title: "Working with the system was easy.", type: QuestionType.LIKERT },
-    { title: `You found ${currentUITypeText} useful.`, type: QuestionType.LIKERT },
+    { title: `I found ${currentUITypeText} useful.`, type: QuestionType.LIKERT },
     {
-      title: `You would like to see ${currentUITypeText} on production systems (other e-shops).`,
+      title: `I would like to see ${currentUITypeText} on production systems (other e-shops).`,
       type: QuestionType.LIKERT,
     },
   ];

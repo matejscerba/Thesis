@@ -8,6 +8,7 @@ export enum QuestionType {
   UI_TYPE_COMPARISON = "UI_TYPE_COMPARISON",
   AGE = "AGE",
   GENDER = "GENDER",
+  LAST_TIME = "LAST_TIME",
 }
 
 /**

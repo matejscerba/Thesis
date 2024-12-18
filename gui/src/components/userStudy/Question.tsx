@@ -34,6 +34,14 @@ function Question({ question, onChange }: QuestionProps) {
 
   const ageResponses = ["0-20", "21-30", "31-40", "41-50", "51-60", "60+"];
 
+  const lastTimeResponses = [
+    "Several days ago",
+    "Several weeks ago",
+    "Several months ago",
+    "Several years ago",
+    "Never",
+  ];
+
   return (
     <div className="my-3">
       <Typography variant="h4" className="text-center">
@@ -79,6 +87,14 @@ function Question({ question, onChange }: QuestionProps) {
       {question.type === QuestionType.GENDER && (
         <RadioQuestion
           options={genderResponses}
+          onChange={(response) => {
+            onChange({ response });
+          }}
+        />
+      )}
+      {question.type === QuestionType.LAST_TIME && (
+        <RadioQuestion
+          options={lastTimeResponses}
           onChange={(response) => {
             onChange({ response });
           }}

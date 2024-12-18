@@ -16,17 +16,34 @@ function InitialQuestionnaire() {
   const navigate = useNavigate();
   const { getCategoryName } = useConfig();
 
+  const firstCategoryName = getCategoryName("1").replace("-", " ");
+  const firstCategoryItemName = firstCategoryName.endsWith("s")
+    ? firstCategoryName.slice(0, firstCategoryName.length - 1)
+    : firstCategoryName;
+  const secondCategoryName = getCategoryName("2").replace("-", " ");
+  const secondCategoryItemName = secondCategoryName.endsWith("s")
+    ? secondCategoryName.slice(0, secondCategoryName.length - 1)
+    : secondCategoryName;
+
   const questions = [
-    { title: "How old are you?", type: QuestionType.AGE },
-    { title: "What is your gender?", type: QuestionType.GENDER },
-    { title: "What is your current occupation?", type: QuestionType.OPEN },
+    { title: "My age:", type: QuestionType.AGE },
+    { title: "My gender:", type: QuestionType.GENDER },
+    { title: "My occupation:", type: QuestionType.OPEN },
     {
-      title: `You are familiar with the product domain of the first step (${getCategoryName("1")})`,
+      title: `I am familiar with the domain of ${firstCategoryName}.`,
       type: QuestionType.LIKERT,
     },
     {
-      title: `You are familiar with the product domain of the second step (${getCategoryName("2")})`,
+      title: `Last time I bought a ${firstCategoryItemName} was:`,
+      type: QuestionType.LAST_TIME,
+    },
+    {
+      title: `I am familiar with the domain of ${secondCategoryName}.`,
       type: QuestionType.LIKERT,
+    },
+    {
+      title: `Last time I bought a ${secondCategoryItemName} was:`,
+      type: QuestionType.LAST_TIME,
     },
   ];
 
