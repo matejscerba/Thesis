@@ -193,7 +193,7 @@ class ContentBasedMixin:
         """
 
         # Find numerical attributes with order of a product and candidates
-        numerical_attributes = all_attributes.get_numerical_attributes(include_price=False)
+        numerical_attributes = all_attributes.get_numerical_attributes()
         numerical_columns = [
             col
             for col in candidates.columns

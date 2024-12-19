@@ -162,6 +162,7 @@ class ProductHandler:
             candidate_ids=candidate_ids,
             discarded_ids=discarded_ids,
             important_attributes=important_attributes,
+            limit=cls.ALTERNATIVES_SIZE,
         )
 
         # Pop candidates and discarded products from the category
@@ -169,9 +170,7 @@ class ProductHandler:
         for discarded_id in discarded_ids:
             category.pop(discarded_id)
 
-        # Pop alternatives from the category, no more than `cls._alternatives_size`
-        if len(alternative_ids) >= cls.ALTERNATIVES_SIZE:
-            alternative_ids = alternative_ids[: cls.ALTERNATIVES_SIZE]
+        # Pop alternatives from the category
         alternatives = [category.pop(alternative_id) for alternative_id in alternative_ids]
 
         unseen: Optional[UnseenStatistics] = None
@@ -339,8 +338,8 @@ class ProductHandler:
     ) -> ProductExplanation:
         """Explains the given product and its attributes.
 
-        :param str category_name:
-        :param int product_id:
+        :param str category_name: the name of the category
+        :param int product_id: the ID of the product to be explained
         :param Set[int] candidate_ids: IDs of the candidate products
         :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes

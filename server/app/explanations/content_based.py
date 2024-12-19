@@ -28,8 +28,8 @@ class ContentBasedExplanations(AbstractExplanationsGenerator, ContentBasedMixin)
 
         Generates explanation based on the attributes of given product and current candidates.
 
-        :param str category_name:
-        :param int product_id:
+        :param str category_name: the name of the category
+        :param int product_id: the ID of the product to be explained
         :param Set[int] candidate_ids: IDs of the candidate products
         :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes

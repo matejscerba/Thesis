@@ -213,6 +213,9 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteriaGenerator):
             for _ in range(cls.STOPPING_CRITERIA_SIZE):
                 best_item: Optional[Tuple[StoppingCriterionItem, float]] = None
                 for item in initial_items:
+                    if item in result:
+                        # Item is already selected, skip it
+                        continue
                     if best_item is not None:
                         if item.metric < best_item[1]:
                             # Item's metric is lower than the best item's reduced metric, we can only reduce its metric,

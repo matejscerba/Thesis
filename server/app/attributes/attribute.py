@@ -164,25 +164,22 @@ class CategoryAttributes(BaseModel):
             attributes={attribute["full_name"]: Attribute.model_validate(attribute) for attribute in data}
         )
 
-    def get_numerical_attributes(self, include_price: bool) -> Dict[str, Attribute]:
+    def get_numerical_attributes(self) -> Dict[str, Attribute]:
         """Filters numerical attributes and returns them.
 
-        :param bool include_price: whether to include price attribute
         :return: subset of attributes that are numerical
         :rtype: Dict[str, Attribute]
         """
         attributes = {
             key: attribute for key, attribute in self.attributes.items() if attribute.type == AttributeType.NUMERICAL
         }
-        if include_price is False:
-            _ = attributes.pop(AttributeName.PRICE, None)
         return attributes
 
     def drop_unused(self, category_name: str) -> None:
         """Drops unused attributes. If all products of a category do not have valid value of a attribute, then the
         attribute is unused.
 
-        :param str category_name: name of the category
+        :param str category_name: the name of the category
         :return: None
         """
         from app.data_loader import DataLoader

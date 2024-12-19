@@ -1,4 +1,4 @@
-from typing import List, Set, ClassVar
+from typing import List, Set, ClassVar, Tuple
 
 import numpy as np
 import pandas as pd
@@ -20,21 +20,36 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
     model: ClassVar[RecommenderModel] = RecommenderModel.SET_BASED_CANDIDATES_ONLY
 
     @classmethod
-    def predict(
+    def _post_process(
+        cls,
+        items: List[Tuple[int, float]],
+        limit: int,
+    ) -> List[int]:
+        """Post processes items with their scores.
+
+        :param List[Tuple[int, float]] items: items to be post processed (ID, score)
+        :param str category_name: the name of the category
+        :return: IDs of the alternative products and their scores
+        :rtype: List[Tuple[int, float]]
+        """
+        return [item[0] for item in items][:limit]
+
+    @classmethod
+    def _predict_impl(
         cls,
         category_name: str,
         candidate_ids: Set[int],
         discarded_ids: Set[int],
         important_attributes: List[str],
-    ) -> List[int]:
+    ) -> List[Tuple[int, float]]:
         """Predicts alternative products based on candidates and discarded products.
 
-        :param str category_name:
+        :param str category_name: the name of the category
         :param Set[int] candidate_ids: IDs of the candidate products
         :param Set[int] discarded_ids: IDs of the discarded products
         :param List[str] important_attributes: names of the important attributes
-        :return: IDs of the alternative products
-        :rtype: List[int]
+        :return: IDs of the alternative products and their scores
+        :rtype: List[Tuple[int, float]]
         """
         products = DataLoader.load_products(category_name=category_name, usecols=important_attributes)
 
@@ -67,7 +82,7 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
 
         # Return ordered ids of products, exclude candidates and discarded products
         return [
-            id
-            for id in products["id"].to_numpy()[order].tolist()
+            (id, scores[order[index]].item())
+            for index, id in enumerate(products["id"].to_numpy()[order].tolist())
             if id not in candidate_ids and id not in discarded_ids
         ]
