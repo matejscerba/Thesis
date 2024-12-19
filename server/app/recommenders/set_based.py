@@ -18,21 +18,6 @@ class SetBasedRecommender(AbstractRecommender, SetBasedMixin):
     model: ClassVar[RecommenderModel] = RecommenderModel.SET_BASED
 
     @classmethod
-    def _post_process(
-        cls,
-        items: List[Tuple[int, float]],
-        limit: int,
-    ) -> List[int]:
-        """Post processes items with their scores.
-
-        :param List[Tuple[int, float]] items: items to be post processed (ID, score)
-        :param int limit: maximum number of items to be returned
-        :return: IDs of the alternative products and their scores
-        :rtype: List[Tuple[int, float]]
-        """
-        return [item[0] for item in items][:limit]
-
-    @classmethod
     def _predict_impl(
         cls,
         category_name: str,
@@ -40,7 +25,7 @@ class SetBasedRecommender(AbstractRecommender, SetBasedMixin):
         discarded_ids: Set[int],
         important_attributes: List[str],
     ) -> List[Tuple[int, float]]:
-        """Predicts alternative products based on candidates and discarded products.
+        """Scores products and orders all except candidates and discarded by their score, which is returned as well.
 
         :param str category_name: the name of the category
         :param Set[int] candidate_ids: IDs of the candidate products

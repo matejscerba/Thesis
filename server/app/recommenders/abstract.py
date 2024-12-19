@@ -1,5 +1,7 @@
+import math
 from abc import ABC, abstractmethod
 from enum import Enum
+import random
 from typing import Set, List, ClassVar, Tuple
 
 
@@ -8,7 +10,6 @@ class RecommenderModel(str, Enum):
 
     SET_BASED = "set_based"
     SET_BASED_CANDIDATES_ONLY = "set_based_candidates_only"
-    SET_BASED_WITH_DIVERSITY = "set_based_with_diversity"
 
 
 class AbstractRecommender(ABC):
@@ -20,7 +21,6 @@ class AbstractRecommender(ABC):
     model: ClassVar[RecommenderModel]
 
     @classmethod
-    @abstractmethod
     def _post_process(
         cls,
         items: List[Tuple[int, float]],
@@ -30,10 +30,41 @@ class AbstractRecommender(ABC):
 
         :param List[Tuple[int, float]] items: items to be post processed (ID, score)
         :param int limit: maximum number of items to be returned
-        :return: IDs of the alternative products and their scores
-        :rtype: List[Tuple[int, float]]
+        :return: IDs of the alternative products
+        :rtype: List[int]
         """
-        raise NotImplementedError()
+        result = []
+
+        if len(items) > 0:
+            # Return the item with the best score
+            result.append(items[0][0])
+
+            # Add other items "randomly"
+            num_randomized_items = limit - 1
+            for _ in range(num_randomized_items):
+                # Generate set of score options (upper bounds of bins - 1 unit wide)
+                bin_upper_bounds = set()
+                for item in items:
+                    if item[0] in result:
+                        continue
+                    bin_upper_bounds.add(math.ceil(item[1]))
+                if len(bin_upper_bounds) > 0:
+                    upper_bounds = list(bin_upper_bounds)
+                    min_upper_bound = min(upper_bounds)
+                    # Set weights so that the lowest upper bound has weight 1, higher-scored bins are preferred
+                    upper_bounds_weights = [bound - min_upper_bound + 1 for bound in upper_bounds]
+                    upper_bound = random.choices(population=upper_bounds, weights=upper_bounds_weights, k=1)[0]
+
+                    # We selected bin with upper bound `upper_bound`, now select product from this bin uniformly
+                    # randomly
+                    bin_items = [
+                        item[0]
+                        for item in items
+                        if item[0] not in result and item[1] > upper_bound - 1 and item[1] <= upper_bound
+                    ]
+                    result.append(random.choice(bin_items))
+
+        return result
 
     @classmethod
     @abstractmethod
@@ -44,7 +75,7 @@ class AbstractRecommender(ABC):
         discarded_ids: Set[int],
         important_attributes: List[str],
     ) -> List[Tuple[int, float]]:
-        """Predicts alternative products based on candidates and discarded products.
+        """Scores products and orders all except candidates and discarded by their score, which is returned as well.
 
         :param str category_name: name of the category
         :param Set[int] candidate_ids: IDs of the candidate products
