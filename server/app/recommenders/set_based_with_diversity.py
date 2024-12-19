@@ -49,9 +49,13 @@ class SetBasedRecommenderWithDiversity(SetBasedRecommender, SetBasedMixin):
                 score_options = list(set([item[1] for item in items if item[0] not in result]))
                 if len(score_options) == 0:
                     break
-                current_score = random.choices(
-                    population=score_options, weights=[option**2 for option in score_options], k=1
-                )[0]
+                try:
+                    current_score = random.choices(
+                        population=score_options, weights=[option**2 for option in score_options], k=1
+                    )[0]
+                except ValueError:
+                    # Probably sum(weights) == 0 (all score options are 0), take the first option
+                    current_score = score_options[0]
                 for item in items:
                     if item[0] in result:
                         # Item is already selected, skip it
