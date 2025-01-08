@@ -44,6 +44,13 @@ Server is a Flask app with multiple configurable environment variables:
 - `ALTERNATIVES_SIZE` - specifies the number of alternatives to be provided by the recommender system, (`10` is default - not required)
 - `CDF_STEP` - specifies the size of the portion of products which should be contained in a continuous numerical attribute range, (`0.05` is default - not required, the final number of products in range is twice as large)
 - `STOPPING_CRITERIA_PREFERENCE_THRESHOLD` - specifies the minimum metric value of stopping criteria presented to the user, (`0.0` is default - not required)
+- `PROLIFIC_STUDY_ID` - user study ID if a Prolific study is running (not required)
+- `DB_HOST` - DB host (required)
+- `DB_PORT` - DB port (required)
+- `DB_NAME` - DB name (required)
+- `DB_USER` - DB username (required)
+- `DB_PASSWORD` - DB user password (required)
+- `REDIS_HOST` - DB host (required)
 
 You can edit these variables in the file `server/.env`.
 
