@@ -2,6 +2,10 @@
 
 This repository contains a demo implementation of a system helping customers select a product from an eshop.
 
+## Running instance
+
+We have an active instance running [here](https://thesis-1030288866907.us-central1.run.app/).
+
 ## Description of the system
 
 Users can select a category containing sample data and find the best product for their needs. They do so by organizing
