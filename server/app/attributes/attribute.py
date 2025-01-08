@@ -109,7 +109,7 @@ class Attribute(BaseModel):
         from app.attributes.handler import AttributeHandler
 
         if self.type != AttributeType.NUMERICAL and not self.continuous:
-            raise ValueError(f"Attribute {self.full_name} is numerical or not continuous.")
+            raise ValueError(f"Attribute {self.full_name} is not numerical and not continuous.")
         if pd.isna(value):
             return FilterValue(options={value})
 

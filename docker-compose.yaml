@@ -16,3 +16,25 @@ services:
       - ./gui/.env
     ports:
       - 3000:3000
+  redis:
+    image: redis:6.2-alpine
+    restart: unless-stopped
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6379:6379
+      - 8001:8001
+  db:
+    image: postgres:15-bookworm
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: thesis
+      POSTGRES_PASSWORD:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - ./init_postgres.sql:/docker-entrypoint-initdb.d/init_postgres.sql
+    command: ["postgres"]
+#    command: ["postgres", "-c", "log_statement=all", "-c", "log_duration=on", "-c", "log_destination=csvlog", "-c", "logging_collector=on"]
+

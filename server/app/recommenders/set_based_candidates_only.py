@@ -1,4 +1,4 @@
-from typing import List, Set, ClassVar, Tuple
+from typing import List, Set, ClassVar, Tuple, cast
 
 import numpy as np
 import pandas as pd
@@ -67,7 +67,7 @@ class SetBasedCandidatesOnlyRecommender(AbstractRecommender, SetBasedMixin):
 
         # Return ordered ids of products, exclude candidates and discarded products
         return [
-            (id, scores[order[index]].item())
+            (cast(int, id), scores[order[index]].item())
             for index, id in enumerate(products["id"].to_numpy()[order].tolist())
             if id not in candidate_ids and id not in discarded_ids
         ]

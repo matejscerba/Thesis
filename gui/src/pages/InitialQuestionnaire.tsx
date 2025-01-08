@@ -45,6 +45,7 @@ function InitialQuestionnaire() {
       title: `Last time I bought a ${secondCategoryItemName} was:`,
       type: QuestionType.LAST_TIME,
     },
+    { title: "There are 7 days in a week.", type: QuestionType.LIKERT },
   ];
 
   return (

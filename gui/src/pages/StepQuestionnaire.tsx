@@ -19,6 +19,7 @@ function StepQuestionnaire() {
   const { getUIType, getCategoryName } = useConfig();
 
   const currentUITypeText = getUITypeText(getUIType(step));
+  const nonsenseCategory = step ? ["skates", "hotel rooms"][Number.parseInt(step) - 1] : "shoes";
 
   const questions = [
     {
@@ -28,6 +29,10 @@ function StepQuestionnaire() {
     { title: "The final product was easy to find.", type: QuestionType.LIKERT },
     {
       title: "The system helped me decide when to stop searching for better products.",
+      type: QuestionType.LIKERT,
+    },
+    {
+      title: `I got a lot of recommendations for ${nonsenseCategory} on the previous page.`,
       type: QuestionType.LIKERT,
     },
     { title: "Working with the system was easy.", type: QuestionType.LIKERT },

@@ -16,6 +16,8 @@ pandas-stubs = {version = "*", source = "pypi"}
 types-flask-cors = {version = "*", source = "pypi"}
 pydantic = {version = "*", source = "pypi"}
 flask-session = {version = "*", source = "pypi"}
+redis = {version = "*", source = "pypi"}
+psycopg2-binary = {version = "*", source = "pypi"}
 
 [tool.poetry.dev-dependencies]
 flake8 = {version = "*", source = "pypi"}
@@ -23,6 +25,7 @@ flake8-pyproject = {version = "*", source = "pypi"}
 black = {version = "*", source = "pypi"}
 mypy = {version = "*", source = "pypi"}
 pre-commit = {version = "*", source = "pypi"}
+types-psycopg2 = {version = "*", source = "pypi"}
 
 [build-system]
 requires = ["poetry-core"]

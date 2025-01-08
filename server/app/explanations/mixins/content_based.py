@@ -1,4 +1,4 @@
-from typing import List, Any
+from typing import List, Any, cast
 
 import numpy as np
 import pandas as pd
@@ -60,7 +60,7 @@ class ContentBasedMixin:
             # Check whether categorical attribute's value is among relevant values (defined by candidates)
             if attribute.is_list:
                 list_value = expand_list_value(value=value)
-                all_values_values = expand_list_values(values=all_values.values.tolist())
+                all_values_values = expand_list_values(values=cast(List[str], all_values.values.tolist()))
                 if not pd.isna(value) and len(set(list_value).intersection(set(all_values_values))) > 0:
                     return ProductAttributePosition.RELEVANT
             if value in all_values.values:

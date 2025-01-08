@@ -25,12 +25,12 @@ class Context:
             return AppFlow.production()
         if flow_type == AppFlowType.USER_STUDY:
             if "app_flow" not in session:
-                session["app_flow"] = AppFlow.user_study()
-        return session["app_flow"]
+                session["app_flow"] = AppFlow.user_study().model_dump()
+        return AppFlow.model_validate(session["app_flow"])
 
     @app_flow.setter
     def app_flow(self, value: AppFlow) -> None:
-        session["app_flow"] = value
+        session["app_flow"] = value.model_dump()
 
     @property
     def user_study_step(self) -> Optional[int]:
@@ -53,7 +53,8 @@ class Context:
     def ui_type(self) -> Optional[UIType]:
         if AppFlowType[os.environ.get("APP_FLOW_TYPE", "PRODUCTION").upper()] == AppFlowType.PRODUCTION:
             return self.production_ui_type
-        return session.get("ui_type")
+        ui_type = session.get("ui_type")
+        return UIType[ui_type] if ui_type is not None else None
 
     @ui_type.setter
     def ui_type(self, value: UIType) -> None:
@@ -105,11 +106,14 @@ class Context:
 
     @property
     def filter(self) -> Optional[List["MultiFilterItem"]]:
-        return session.get("filter")
+        from app.attributes.attribute import MultiFilterItem
+
+        filter = session.get("filter")
+        return [MultiFilterItem.model_validate(item) for item in filter] if filter is not None else None
 
     @filter.setter
     def filter(self, value: Optional[List["MultiFilterItem"]]) -> None:
-        session["filter"] = value
+        session["filter"] = [item.model_dump() for item in value] if value is not None else None
 
     @property
     def limit(self) -> Optional[int]:
@@ -121,19 +125,25 @@ class Context:
 
     @property
     def stopping_criteria(self) -> Optional["StoppingCriteria"]:
-        return session.get("stopping_criteria")
+        from app.products.stopping_criteria import StoppingCriteria
+
+        criteria = session.get("stopping_criteria")
+        return StoppingCriteria.model_validate(criteria) if criteria is not None else None
 
     @stopping_criteria.setter
     def stopping_criteria(self, value: Optional["StoppingCriteria"]) -> None:
-        session["stopping_criteria"] = value
+        session["stopping_criteria"] = value.model_dump() if value is not None else None
 
     @property
     def unseen_statistics(self) -> Optional["UnseenStatistics"]:
-        return session.get("unseen_statistics")
+        from app.products.unseen_statistics import UnseenStatistics
+
+        statistics = session.get("unseen_statistics")
+        return UnseenStatistics.model_validate(statistics) if statistics is not None else None
 
     @unseen_statistics.setter
     def unseen_statistics(self, value: Optional["UnseenStatistics"]) -> None:
-        session["unseen_statistics"] = value
+        session["unseen_statistics"] = value.model_dump() if value is not None else None
 
     @property
     def state(self) -> Dict[str, Any]:
@@ -152,6 +162,10 @@ class Context:
             }
         except KeyError:
             return {}
+
+    @property
+    def study_id(self) -> Optional[str]:
+        return os.environ.get("PROLIFIC_STUDY_ID")
 
 
 context: Context = Context()

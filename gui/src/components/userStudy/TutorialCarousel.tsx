@@ -48,7 +48,7 @@ function TutorialCarousel() {
           </Button>
         ) : (
           <Button variant="contained" onClick={nextSlide}>
-            Next step
+            {currentIndex === 0 ? "Agree and proceed to Tutorial" : "Next step"}
           </Button>
         )}
       </Box>

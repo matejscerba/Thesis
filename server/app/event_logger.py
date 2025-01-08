@@ -1,10 +1,11 @@
 import json
 import os
-import sqlite3
+import psycopg2
 import uuid
 from enum import Enum
-from sqlite3 import Connection
-from typing import ClassVar, Optional, Dict, Any
+from typing import Optional, Dict, Any
+
+from psycopg2._psycopg import connection
 
 from app.server.context import context
 
@@ -36,43 +37,21 @@ class Event(str, Enum):
 
 
 class EventLogger:
-    """This class handles the logging of events into a SQLite storage.
+    """This class handles the logging of events into a DB."""
 
-    :param ClassVar[str] SQLITE_DIR_PATH: path to the directory containing SQLite DBs
-    :param ClassVar[str] DB_FILENAME: filename of the event logger database
-    """
+    def get_connection(self) -> connection:
+        """Gets a DB connection.
 
-    SQLITE_DIR_PATH: ClassVar[str] = "data/sqlite"
-    DB_FILENAME: ClassVar[str] = "event_logger.db"
-
-    def get_connection(self) -> Connection:
-        """Gets a SQLite connection.
-
-        :return: SQLite connection
-        :rtype: Connection
+        :return: DB connection
+        :rtype: connection
         """
-        os.makedirs(self.SQLITE_DIR_PATH, exist_ok=True)
-        return sqlite3.connect(os.path.join(self.SQLITE_DIR_PATH, self.DB_FILENAME))
-
-    def setup(self) -> None:
-        """Sets up the database (creates the events table)."""
-        with self.get_connection() as connection:
-            cursor = connection.cursor()
-            cursor.execute(
-                """
-                    CREATE TABLE IF NOT EXISTS events (
-                        id TEXT PRIMARY KEY NOT NULL,
-                        created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                        session_id TEXT NOT NULL,
-                        app_flow_type TEXT NOT NULL,
-                        user_study_setup TEXT NULL,
-                        ui_type TEXT NULL,
-                        event TEXT NOT NULL,
-                        state TEXT NOT NULL,
-                        data TEXT NULL
-                    )
-                """
-            )
+        return psycopg2.connect(
+            dbname=os.environ["DB_NAME"],
+            user=os.environ["DB_USER"],
+            password=os.environ["DB_PASSWORD"],
+            host=os.environ["DB_HOST"],
+            port=os.environ["DB_PORT"],
+        )
 
     def log(self, event: Event, data: Optional[Dict[str, Any]]) -> None:
         """Logs a given event to the storage.
@@ -94,7 +73,7 @@ class EventLogger:
                         state,
                         data
                     )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 """,
                 (
                     str(uuid.uuid4()),
@@ -107,3 +86,52 @@ class EventLogger:
                     json.dumps(data) if data is not None else None,
                 ),
             )
+
+    def set_prolific_id(self, prolific_id: str) -> None:
+        """Sets a prolific ID in the DB to the current session.
+
+        :param str prolific_id: ID to be stored to the DB
+        """
+        try:
+            with self.get_connection() as connection:
+                cursor = connection.cursor()
+                cursor.execute(
+                    """
+                        INSERT INTO prolific (
+                            prolific_id,
+                            session_id
+                        )
+                        VALUES (%s, %s)
+                    """,
+                    (
+                        prolific_id,
+                        context.session_id,
+                    ),
+                )
+        except psycopg2.errors.UniqueViolation:
+            with self.get_connection() as connection:
+                cursor = connection.cursor()
+                cursor.execute(
+                    """
+                        SELECT * FROM prolific WHERE session_id=%s and prolific_id=%s
+                    """,
+                    (context.session_id, prolific_id),
+                )
+                if len(cursor.fetchall()) == 0:
+                    raise Exception("Overwriting Prolific ID of a different session")
+
+    def check_prolific_id(self) -> bool:
+        """Checks whether the current session has a prolific ID set.
+
+        :return: whether the current session has a prolific ID in the DB
+        :rtype: bool
+        """
+        with self.get_connection() as connection:
+            cursor = connection.cursor()
+            cursor.execute(
+                """
+                    SELECT * FROM prolific WHERE session_id=%s
+                """,
+                (context.session_id,),
+            )
+            return len(cursor.fetchall()) > 0

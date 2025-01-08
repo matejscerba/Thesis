@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 function GoalIntro() {
   return (
     <div>
-      <Typography variant="h3">Your goal</Typography>
+      <Typography variant="h3">Tutorial - Your goal</Typography>
       <Typography variant="body1">
         Your goal is to select a product you would like to buy by{" "}
         <strong>

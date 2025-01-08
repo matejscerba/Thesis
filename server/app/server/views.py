@@ -1,6 +1,6 @@
 from typing import cast
 
-from flask import request, Response, jsonify, send_from_directory
+from flask import request, Response, jsonify
 
 from app.app_flow import UIType
 from app.attributes.attribute import MultiFilterItem
@@ -18,7 +18,12 @@ def view_config() -> Response:
     :rtype: Response
     """
     return jsonify(
-        {"app_flow": context.app_flow, "production_ui_type": context.production_ui_type, "debug": context.debug}
+        {
+            "app_flow": context.app_flow,
+            "production_ui_type": context.production_ui_type,
+            "debug": context.debug,
+            "study_id": context.study_id,
+        }
     )
 
 
@@ -261,6 +266,27 @@ def view_log_event() -> Response:
     return jsonify({"success": True})
 
 
+def view_set_prolific_id() -> Response:
+    """HTTP view method setting a Prolific ID."""
+    data = request.json
+    if data is None:
+        raise Exception("Request content not set.")
+    prolific_id = data.get("prolific_id")
+    if prolific_id is None:
+        raise Exception("Prolific ID not set.")
+
+    EventLogger().set_prolific_id(prolific_id=prolific_id)
+
+    return jsonify({"success": True})
+
+
+def view_check_prolific_id() -> Response:
+    """HTTP view method checking a Prolific ID."""
+    ok = EventLogger().check_prolific_id()
+
+    return jsonify({"success": ok, "study_id": context.study_id})
+
+
 def view_update_attributes_state() -> Response:
     """HTTP view method updating the state of important attributes.
 
@@ -285,12 +311,3 @@ def view_update_attributes_state() -> Response:
     context.important_attributes = attributes
 
     return jsonify({"success": True})
-
-
-def view_download_events() -> Response:
-    """HTTP view method downloading the database file.
-
-    :return: response sending the database file
-    :rtype: Response
-    """
-    return send_from_directory(directory=EventLogger.SQLITE_DIR_PATH, path=EventLogger.DB_FILENAME)

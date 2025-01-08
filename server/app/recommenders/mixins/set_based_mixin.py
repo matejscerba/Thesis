@@ -1,4 +1,4 @@
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any, List, Tuple, cast
 
 import numpy as np
 import pandas as pd
@@ -58,6 +58,6 @@ class SetBasedMixin:
                 if pd.isna(row[attribute]):
                     continue
                 column_idx = column_mapping[attribute][row[attribute]]
-                items[idx, column_idx] = 1
+                items[cast(int, idx), column_idx] = 1
 
         return np.sum(items * user_model, axis=-1)

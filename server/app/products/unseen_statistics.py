@@ -1,10 +1,9 @@
-from typing import List, Union, Set, Any
+from typing import List, Union, Set, Any, cast
 
 import pandas as pd
 from pydantic import BaseModel
 
 from app.attributes.attribute import Attribute, AttributeType, FilterValue, MultiFilterItem
-from app.utils.attributes import expand_list_values
 
 
 class AbstractAttributeStatistics(BaseModel):
@@ -39,7 +38,7 @@ class AbstractAttributeStatistics(BaseModel):
         """
         from app.products.handler import ProductHandler
 
-        options = products[attribute.full_name].dropna().unique().tolist()
+        options = cast(List[float], products[attribute.full_name].dropna().unique().tolist())
         candidates = products[products["id"].apply(lambda x: x in candidate_ids)]
         if attribute.type == AttributeType.NUMERICAL:
             # Attribute is numerical, generate NumericalAttributeStatistics - based on lower and upper bound
@@ -66,11 +65,7 @@ class AbstractAttributeStatistics(BaseModel):
         elif attribute.type == AttributeType.CATEGORICAL:
             # Attribute is categorical, generate CategoricalAttributeStatistics - based on selected and available
             # options
-            selected_options = candidates[attribute.full_name].dropna().unique().tolist()
-            if attribute.is_list:
-                # Expand values to single list
-                options = expand_list_values(values=options)
-                selected_options = expand_list_values(values=selected_options)
+            selected_options = cast(List[str], candidates[attribute.full_name].dropna().unique().tolist())
             available_options = [option for option in options if option not in selected_options]
             selected_options.sort()
             available_options.sort()
@@ -80,7 +75,7 @@ class AbstractAttributeStatistics(BaseModel):
                     category_name=category_name,
                     filter=[
                         MultiFilterItem(
-                            attribute_name=attribute.full_name, filter=FilterValue(options=selected_options)
+                            attribute_name=attribute.full_name, filter=FilterValue(options=set(selected_options))
                         )
                     ],
                     candidate_ids=candidate_ids,

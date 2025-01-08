@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { userStudyOutroPattern } from "../routes";
 import { logEvent } from "../utils/api";
 import { Event } from "../types/event";
 import { QuestionType } from "../types/questionnaire";
 import QuestionnaireBody from "../components/userStudy/QuestionnaireBody";
+import { userStudyOutroPattern } from "../routes";
 
 /**
  * This component renders the overall user study questionnaire.
@@ -20,6 +20,7 @@ function OverallQuestionnaire() {
       type: QuestionType.UI_TYPE_COMPARISON,
     },
     { title: "Which UI variant was easier to understand.", type: QuestionType.UI_TYPE_COMPARISON },
+    { title: "The color of the clear sky is grey.", type: QuestionType.LIKERT },
     { title: "What makes one UI variant better than the other?", type: QuestionType.OPEN },
     {
       title: "What other product domains could benefit from similar interfaces?",

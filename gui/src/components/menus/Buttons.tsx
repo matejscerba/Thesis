@@ -49,6 +49,15 @@ export function FinalChoiceSelectedButton({ product, clickEvent, confirmEvent, d
               <div className="d-flex justify-content-between">
                 <button
                   type="button"
+                  className="btn btn-sm btn-outline-secondary"
+                  onClick={() => {
+                    hideModal();
+                  }}
+                >
+                  No
+                </button>
+                <button
+                  type="button"
                   className="btn btn-sm btn-outline-success"
                   onClick={() => {
                     logEvent(confirmEvent, { product_id: product.id, ...(data ?? {}) });
@@ -56,15 +65,6 @@ export function FinalChoiceSelectedButton({ product, clickEvent, confirmEvent, d
                   }}
                 >
                   Yes
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-sm btn-outline-secondary"
-                  onClick={() => {
-                    hideModal();
-                  }}
-                >
-                  No
                 </button>
               </div>
             </div>,

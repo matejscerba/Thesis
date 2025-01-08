@@ -9,7 +9,7 @@ import React from "react";
 function ProductsIntro() {
   return (
     <div>
-      <Typography variant="h3">Products</Typography>
+      <Typography variant="h3">Tutorial - Products</Typography>
       <Typography variant="body1">
         The products are organized in a single list when you open a category, you can perform three actions with each
         product by clicking a button in the right part of the product's box:

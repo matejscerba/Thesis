@@ -15,7 +15,7 @@ function UserStudySteps() {
 
   return (
     <>
-      <Typography variant="h3">Steps</Typography>
+      <Typography variant="h3">Tutorial - Steps</Typography>
       <div className="step-item">
         <div className="border border-secondary rounded m-2 step-inner bg-white">
           <Typography variant="h5" className="step-category-name">
