@@ -1,7 +1,9 @@
 name: thesis
 services:
   server:
-    container_name: server
+    container_name: thesis_server
+    networks:
+      - thesis
     build:
       context: ./server
     env_file:
@@ -9,7 +11,9 @@ services:
     ports:
       - 8086:8086
   gui:
-    container_name: gui
+    container_name: thesis_gui
+    networks:
+      - thesis
     build:
       context: ./gui
     env_file:
@@ -17,16 +21,22 @@ services:
     ports:
       - 3000:3000
   redis:
+    container_name: thesis_redis
     image: redis:6.2-alpine
     restart: unless-stopped
+    networks:
+      - thesis
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - 6379:6379
       - 8001:8001
   db:
+    container_name: thesis_db
     image: postgres:15-bookworm
     restart: unless-stopped
+    networks:
+      - thesis
     ports:
       - 5432:5432
     environment:
@@ -38,3 +48,6 @@ services:
     command: ["postgres"]
 #    command: ["postgres", "-c", "log_statement=all", "-c", "log_duration=on", "-c", "log_destination=csvlog", "-c", "logging_collector=on"]
 
+networks:
+  thesis:
+    driver: bridge

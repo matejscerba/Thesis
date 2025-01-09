@@ -111,7 +111,7 @@ export function ConfigContextProvider({ children }: ConfigContextProviderProps) 
     <ConfigContext.Provider
       value={{
         appFlowType: data.app_flow.type,
-        userStudySteps: data.app_flow.setup.steps,
+        userStudySteps: data.app_flow.setup?.steps,
         getUIType,
         getCategoryName,
         debug: data.debug,

@@ -75,7 +75,7 @@ export function App() {
 
   return (
     <>
-      {!warningDismissed && (
+      {appFlowType === AppFlowType.USER_STUDY && !warningDismissed && (
         <div className="bg-warning-subtle d-flex justify-content-between">
           <Typography variant="body1" className="m-2 p-0">
             There is a problem with some browsers. If some section of the page is not loading or you encounter an error
