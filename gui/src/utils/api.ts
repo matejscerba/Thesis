@@ -3,7 +3,7 @@ import { Event } from "../types/event";
 /**
  * Url of the server. Ending with slash.
  */
-const SERVER_URL = "http://localhost:8086/";
+const SERVER_URL = process.env.REACT_APP_SERVER_URL ?? "http://localhost:8086/";
 
 /**
  * Fetches data from a server.
