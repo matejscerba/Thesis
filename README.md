@@ -1,10 +1,10 @@
-# Explaining Recommender Systems in Content-rich Domains
+# It's Time to Let Go: Stopping Criteria Recommendations in Content-rich Domains
 
 This repository contains a demo implementation of a system helping customers select a product from an eshop.
 
 ## Running instance
 
-We have an active instance running [here](https://thesis-1030288866907.us-central1.run.app/).
+We have an active instance running [here](https://bit.ly/4hEjaH5).
 
 ## Description of the system
 
