@@ -53,6 +53,11 @@ body {
   top: 100px;
   overflow: scroll;
   width: 70%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tutorial-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .tutorial-carousel-content {

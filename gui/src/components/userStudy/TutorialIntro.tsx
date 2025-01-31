@@ -11,7 +11,7 @@ function TutorialIntro() {
   return (
     <div>
       <Typography variant="h3" className="mb-4">
-        Explaining recommender systems in content-rich domains
+        It's Time to Let Go: Stopping Criteria Recommendations in Content-rich Domains
       </Typography>
       <Typography variant="body1">
         The application before you is a proposed improvement of interaction with recommender systems on eshops in
