@@ -212,6 +212,7 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteriaGenerator):
         if len(initial_items) > 0:
             for _ in range(cls.STOPPING_CRITERIA_SIZE):
                 best_item: Optional[Tuple[StoppingCriterionItem, float]] = None
+                added = False
                 for item in initial_items:
                     if item in result:
                         # Item is already selected, skip it
@@ -221,6 +222,7 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteriaGenerator):
                             # Item's metric is lower than the best item's reduced metric, we can only reduce its metric,
                             # so there is no need to continue (all subsequent items have lower metric)
                             result.append(best_item[0])
+                            added = True
                             break
                     similarity = cls._compute_max_similarity(item=item, items=result)
                     updated_metric = item.metric * (1 - similarity)
@@ -229,6 +231,10 @@ class StoppingAprioriStoppingCriteria(AbstractStoppingCriteriaGenerator):
                     else:
                         if updated_metric > best_item[1]:
                             best_item = item, updated_metric
+
+                # Add best item if none was added in the for loop
+                if not added and best_item is not None:
+                    result.append(best_item[0])
 
         return result
 
